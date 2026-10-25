@@ -521,14 +521,14 @@ object LearningRepository {
                         ),
                         Exercise(
                             id = "ex1_2",
-                            type = ExerciseType.TONE_DRILL,
-                            prompt = "Listen to the audio and identify the tone of 谢 (xiè):",
-                            targetHanzi = "谢",
-                            targetPinyin = "xiè",
-                            targetTranslation = "To thank",
-                            options = listOf("Tone 1 (Flat ¯)", "Tone 2 (Rising ˊ)", "Tone 3 (Dip ˇ)", "Tone 4 (Falling ˋ)"),
-                            correctAnswer = "Tone 4 (Falling ˋ)",
-                            audioToSpeak = "谢"
+                            type = ExerciseType.MULTIPLE_CHOICE,
+                            prompt = "What does '谢谢 (xièxie)' mean?",
+                            targetHanzi = "谢谢",
+                            targetPinyin = "xièxie",
+                            targetTranslation = "Thank you",
+                            options = listOf("Thank you", "Goodbye", "Hello", "Sorry"),
+                            correctAnswer = "Thank you",
+                            audioToSpeak = "谢谢"
                         ),
                         Exercise(
                             id = "ex1_3",

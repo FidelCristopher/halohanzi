@@ -53,7 +53,6 @@ data class Word(
 enum class ExerciseType {
     SENTENCE_BUILDER,
     MULTIPLE_CHOICE,
-    TONE_DRILL,
     LISTENING
 }
 

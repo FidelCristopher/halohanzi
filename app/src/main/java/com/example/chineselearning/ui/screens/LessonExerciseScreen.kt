@@ -204,7 +204,6 @@ fun LessonExerciseScreen(
                     Text(
                         text = when (exercise.type) {
                             ExerciseType.SENTENCE_BUILDER -> "Sentence Builder"
-                            ExerciseType.TONE_DRILL -> "Tone Drill"
                             ExerciseType.LISTENING -> "Listening Practice"
                             ExerciseType.MULTIPLE_CHOICE -> "Multiple Choice"
                         },
@@ -391,7 +390,7 @@ fun LessonExerciseScreen(
                         }
                     }
 
-                    ExerciseType.TONE_DRILL, ExerciseType.MULTIPLE_CHOICE, ExerciseType.LISTENING -> {
+                    ExerciseType.MULTIPLE_CHOICE, ExerciseType.LISTENING -> {
                         exercise.options.forEach { opt ->
                             val isSelected = selectedOption == opt
                             val isThisCorrect = opt == exercise.correctAnswer

@@ -27,8 +27,7 @@ Every graded story is built with a controlled vocabulary corresponding strictly 
 
 ### 2. Structured Micro-Lessons
 - **Grammar Essentials:** Concise, digestible breakdowns of sentence order, negation rules, and question patterns.
-- **Interactive Sentence Builder:** Construct natural Mandarin sentences using interactive draggable word blocks.
-- **Tone Discrimination Drills:** Practice distinguishing between the 4 Mandarin tones with immediate audio feedback.
+- **Interactive Sentence Builder:** Construct natural Mandarin sentences using interactive draggable word blocks with Pinyin and Hanzi.
 - **Listening & Comprehension:** Audio-based comprehension exercises to train your ear for native conversational rhythms.
 
 ### 3. Offline Native Text-to-Speech (TTS)
@@ -61,7 +60,7 @@ com.example.chineselearning/
 │   │   ├── HomeScreen.kt           # Course units & learning roadmap
 │   │   ├── StoryListScreen.kt      # Graded reader library
 │   │   ├── StoryReaderScreen.kt    # Interactive reading environment
-│   │   ├── LessonExerciseScreen.kt # Drills (sentence builder, tone drill)
+│   │   ├── LessonExerciseScreen.kt # Interactive exercises (sentence builder, listening)
 │   │   ├── SavedVocabScreen.kt     # Personal vocabulary review
 │   │   └── MainAppContainer.kt     # Bottom navigation & screen orchestrator
 │   └── theme/
