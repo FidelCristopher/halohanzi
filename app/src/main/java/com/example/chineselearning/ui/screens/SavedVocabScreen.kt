@@ -6,14 +6,15 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.VolumeUp
 import androidx.compose.material.icons.filled.BookmarkRemove
-import androidx.compose.material.icons.filled.VolumeUp
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.chineselearning.audio.TtsManager
@@ -39,29 +40,24 @@ fun SavedVocabScreen(
                 colors = CardDefaults.cardColors(containerColor = SoftAmber),
                 modifier = Modifier.fillMaxWidth()
             ) {
-                Row(
+                Column(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .padding(18.dp),
-                    verticalAlignment = Alignment.CenterVertically
+                        .padding(18.dp)
                 ) {
-                    Column(modifier = Modifier.weight(1f)) {
-                        Text(
-                            text = "Bank Kosakata Pribadi",
-                            fontSize = 18.sp,
-                            fontWeight = FontWeight.Bold,
-                            color = Color(0xFF7A4B00)
-                        )
-                        Spacer(modifier = Modifier.height(4.dp))
-                        Text(
-                            text = "Kata-kata yang Anda simpan saat membaca cerita akan tersimpan rapi di sini untuk diulang kapan saja.",
-                            fontSize = 12.sp,
-                            color = DeepNavy,
-                            lineHeight = 17.sp
-                        )
-                    }
-                    Spacer(modifier = Modifier.width(8.dp))
-                    Text(text = "⭐", fontSize = 36.sp)
+                    Text(
+                        text = "Personal Vocabulary Bank",
+                        fontSize = 18.sp,
+                        fontWeight = FontWeight.Bold,
+                        color = Color(0xFF7A4B00)
+                    )
+                    Spacer(modifier = Modifier.height(4.dp))
+                    Text(
+                        text = "Words you bookmark while reading stories are stored here for convenient review and pronunciation practice anytime.",
+                        fontSize = 12.sp,
+                        color = DeepNavy,
+                        lineHeight = 17.sp
+                    )
                 }
             }
         }
@@ -74,20 +70,18 @@ fun SavedVocabScreen(
                         .padding(top = 40.dp),
                     horizontalAlignment = Alignment.CenterHorizontally
                 ) {
-                    Text(text = "📖", fontSize = 48.sp)
-                    Spacer(modifier = Modifier.height(12.dp))
                     Text(
-                        text = "Belum Ada Kata Tersimpan",
+                        text = "No Saved Words Yet",
                         fontSize = 16.sp,
                         fontWeight = FontWeight.Bold,
                         color = DeepNavy
                     )
                     Spacer(modifier = Modifier.height(6.dp))
                     Text(
-                        text = "Buka menu Cerita, ketuk kata Hanzi yang menarik, lalu klik tombol 'Simpan Kata' untuk menambahkannya ke sini.",
+                        text = "Open any graded story, tap a Hanzi word you want to learn, and tap 'Save Word' to collect it here.",
                         fontSize = 13.sp,
                         color = SlateGray,
-                        textAlign = androidx.compose.ui.text.style.TextAlign.Center,
+                        textAlign = TextAlign.Center,
                         modifier = Modifier.padding(horizontal = 24.dp)
                     )
                 }
@@ -95,7 +89,7 @@ fun SavedVocabScreen(
         } else {
             item {
                 Text(
-                    text = "Daftar Kata Tersimpan (${savedWords.size}):",
+                    text = "Saved Words (${savedWords.size}):",
                     fontSize = 14.sp,
                     fontWeight = FontWeight.Bold,
                     color = DeepNavy
@@ -143,8 +137,8 @@ fun SavedVocabScreen(
                         Row {
                             IconButton(onClick = { ttsManager?.speak(word.hanzi) }) {
                                 Icon(
-                                    imageVector = Icons.Default.VolumeUp,
-                                    contentDescription = "Dengar",
+                                    imageVector = Icons.AutoMirrored.Filled.VolumeUp,
+                                    contentDescription = "Pronounce",
                                     tint = JadeGreen
                                 )
                             }
@@ -157,7 +151,7 @@ fun SavedVocabScreen(
                             ) {
                                 Icon(
                                     imageVector = Icons.Default.BookmarkRemove,
-                                    contentDescription = "Hapus",
+                                    contentDescription = "Remove",
                                     tint = SlateGray
                                 )
                             }

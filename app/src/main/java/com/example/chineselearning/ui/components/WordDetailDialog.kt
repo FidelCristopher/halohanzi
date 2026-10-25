@@ -1,20 +1,18 @@
 package com.example.chineselearning.ui.components
 
 import androidx.compose.foundation.background
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.VolumeUp
 import androidx.compose.material.icons.filled.Bookmark
 import androidx.compose.material.icons.filled.BookmarkBorder
 import androidx.compose.material.icons.filled.Close
-import androidx.compose.material.icons.filled.VolumeUp
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -58,13 +56,12 @@ fun WordDetailDialog(
                     horizontalArrangement = Arrangement.SpaceBetween,
                     verticalAlignment = Alignment.CenterVertically
                 ) {
-                    // Tag HSK / Tingkat
                     Surface(
                         color = SoftMint,
                         shape = RoundedCornerShape(12.dp)
                     ) {
                         Text(
-                            text = "Kamus Cepat",
+                            text = "Quick Dictionary",
                             color = DarkJade,
                             fontSize = 12.sp,
                             fontWeight = FontWeight.Bold,
@@ -73,14 +70,13 @@ fun WordDetailDialog(
                     }
 
                     Row {
-                        // Bookmark button
                         IconButton(onClick = {
                             val wordObj = Word(
                                 id = "saved_${token.hanzi}",
                                 hanzi = token.hanzi,
                                 pinyin = token.pinyin,
                                 translation = token.meaning,
-                                partOfSpeech = "Kosakata",
+                                partOfSpeech = "Vocabulary",
                                 exampleHanzi = token.hanzi,
                                 examplePinyin = token.pinyin,
                                 exampleTranslation = token.meaning
@@ -89,7 +85,7 @@ fun WordDetailDialog(
                         }) {
                             Icon(
                                 imageVector = if (isSaved) Icons.Default.Bookmark else Icons.Default.BookmarkBorder,
-                                contentDescription = "Simpan Kosakata",
+                                contentDescription = "Bookmark Word",
                                 tint = if (isSaved) WarmAmber else SlateGray
                             )
                         }
@@ -97,7 +93,7 @@ fun WordDetailDialog(
                         IconButton(onClick = onDismiss) {
                             Icon(
                                 imageVector = Icons.Default.Close,
-                                contentDescription = "Tutup",
+                                contentDescription = "Close",
                                 tint = SlateGray
                             )
                         }
@@ -106,7 +102,7 @@ fun WordDetailDialog(
 
                 Spacer(modifier = Modifier.height(12.dp))
 
-                // Hanzi Karakter Besar
+                // Hanzi Large Character
                 Text(
                     text = token.hanzi,
                     fontSize = 44.sp,
@@ -114,7 +110,7 @@ fun WordDetailDialog(
                     color = HanziColor
                 )
 
-                // Pinyin dengan nada
+                // Pinyin
                 if (token.pinyin.isNotBlank()) {
                     Text(
                         text = token.pinyin,
@@ -126,7 +122,7 @@ fun WordDetailDialog(
 
                 Spacer(modifier = Modifier.height(8.dp))
 
-                // Tombol Dengar Audio TTS
+                // Native Audio Button
                 Button(
                     onClick = {
                         ttsManager?.speak(token.hanzi, speedRate = 0.8f)
@@ -139,19 +135,19 @@ fun WordDetailDialog(
                     contentPadding = PaddingValues(horizontal = 16.dp, vertical = 6.dp)
                 ) {
                     Icon(
-                        imageVector = Icons.Default.VolumeUp,
-                        contentDescription = "Dengarkan",
+                        imageVector = Icons.AutoMirrored.Filled.VolumeUp,
+                        contentDescription = "Listen",
                         modifier = Modifier.size(20.dp)
                     )
                     Spacer(modifier = Modifier.width(6.dp))
-                    Text(text = "Dengarkan", fontWeight = FontWeight.Bold, fontSize = 14.sp)
+                    Text(text = "Pronounce", fontWeight = FontWeight.Bold, fontSize = 14.sp)
                 }
 
                 Spacer(modifier = Modifier.height(16.dp))
                 HorizontalDivider(color = LightSlate, thickness = 1.dp)
                 Spacer(modifier = Modifier.height(16.dp))
 
-                // Definisi & Arti
+                // Definition Card
                 Column(
                     modifier = Modifier
                         .fillMaxWidth()
@@ -160,7 +156,7 @@ fun WordDetailDialog(
                         .padding(14.dp)
                 ) {
                     Text(
-                        text = "Arti dalam Bahasa Indonesia:",
+                        text = "Definition:",
                         fontSize = 12.sp,
                         color = SlateGray,
                         fontWeight = FontWeight.Medium
@@ -186,7 +182,7 @@ fun WordDetailDialog(
 
                 Spacer(modifier = Modifier.height(16.dp))
 
-                // Tombol aksi bawah
+                // Action Buttons
                 Row(
                     modifier = Modifier.fillMaxWidth(),
                     horizontalArrangement = Arrangement.spacedBy(8.dp)
@@ -196,7 +192,7 @@ fun WordDetailDialog(
                         modifier = Modifier.weight(1f),
                         shape = RoundedCornerShape(14.dp)
                     ) {
-                        Text(text = "Tutup")
+                        Text(text = "Close")
                     }
 
                     Button(
@@ -206,7 +202,7 @@ fun WordDetailDialog(
                                 hanzi = token.hanzi,
                                 pinyin = token.pinyin,
                                 translation = token.meaning,
-                                partOfSpeech = "Kosakata",
+                                partOfSpeech = "Vocabulary",
                                 exampleHanzi = token.hanzi,
                                 examplePinyin = token.pinyin,
                                 exampleTranslation = token.meaning
@@ -220,7 +216,7 @@ fun WordDetailDialog(
                         )
                     ) {
                         Text(
-                            text = if (isSaved) "Tersimpan ★" else "+ Simpan Kata",
+                            text = if (isSaved) "Saved ★" else "+ Save Word",
                             fontWeight = FontWeight.Bold
                         )
                     }

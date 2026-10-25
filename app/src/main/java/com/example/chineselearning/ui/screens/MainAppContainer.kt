@@ -4,13 +4,12 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.MenuBook
+import androidx.compose.material.icons.automirrored.filled.MenuBook
+import androidx.compose.material.icons.filled.Bookmark
 import androidx.compose.material.icons.filled.School
-import androidx.compose.material.icons.filled.Star
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -18,7 +17,6 @@ import com.example.chineselearning.audio.TtsManager
 import com.example.chineselearning.data.model.Lesson
 import com.example.chineselearning.data.model.Story
 import com.example.chineselearning.ui.theme.DarkJade
-import com.example.chineselearning.ui.theme.JadeGreen
 import com.example.chineselearning.ui.theme.SoftMint
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -30,7 +28,7 @@ fun MainAppContainer(
     var activeStory by remember { mutableStateOf<Story?>(null) }
     var activeLesson by remember { mutableStateOf<Lesson?>(null) }
 
-    // Jika sedang di dalam mode Baca Cerita
+    // Graded Story Reader Mode
     if (activeStory != null) {
         StoryReaderScreen(
             story = activeStory!!,
@@ -42,7 +40,7 @@ fun MainAppContainer(
         return
     }
 
-    // Jika sedang di dalam mode Pelajaran / Latihan
+    // Lesson / Exercise Mode
     if (activeLesson != null) {
         LessonExerciseScreen(
             lesson = activeLesson!!,
@@ -63,9 +61,9 @@ fun MainAppContainer(
                 title = {
                     Text(
                         text = when (selectedTab) {
-                            0 -> "Belajar Mandarin"
-                            1 -> "Cerita Berjenjang"
-                            else -> "Kosakata Saya"
+                            0 -> "HaloHanzi"
+                            1 -> "Graded Stories"
+                            else -> "My Vocabulary"
                         },
                         fontWeight = FontWeight.Bold,
                         fontSize = 20.sp
@@ -84,8 +82,8 @@ fun MainAppContainer(
                 NavigationBarItem(
                     selected = selectedTab == 0,
                     onClick = { selectedTab = 0 },
-                    icon = { Icon(imageVector = Icons.Default.School, contentDescription = "Kursus") },
-                    label = { Text("Kursus", fontWeight = if (selectedTab == 0) FontWeight.Bold else FontWeight.Normal) },
+                    icon = { Icon(imageVector = Icons.Default.School, contentDescription = "Learn") },
+                    label = { Text("Learn", fontWeight = if (selectedTab == 0) FontWeight.Bold else FontWeight.Normal) },
                     colors = NavigationBarItemDefaults.colors(
                         selectedIconColor = DarkJade,
                         selectedTextColor = DarkJade,
@@ -96,8 +94,8 @@ fun MainAppContainer(
                 NavigationBarItem(
                     selected = selectedTab == 1,
                     onClick = { selectedTab = 1 },
-                    icon = { Icon(imageVector = Icons.Default.MenuBook, contentDescription = "Cerita") },
-                    label = { Text("Cerita", fontWeight = if (selectedTab == 1) FontWeight.Bold else FontWeight.Normal) },
+                    icon = { Icon(imageVector = Icons.AutoMirrored.Filled.MenuBook, contentDescription = "Stories") },
+                    label = { Text("Stories", fontWeight = if (selectedTab == 1) FontWeight.Bold else FontWeight.Normal) },
                     colors = NavigationBarItemDefaults.colors(
                         selectedIconColor = DarkJade,
                         selectedTextColor = DarkJade,
@@ -108,8 +106,8 @@ fun MainAppContainer(
                 NavigationBarItem(
                     selected = selectedTab == 2,
                     onClick = { selectedTab = 2 },
-                    icon = { Icon(imageVector = Icons.Default.Star, contentDescription = "Kosakata") },
-                    label = { Text("Kosakata", fontWeight = if (selectedTab == 2) FontWeight.Bold else FontWeight.Normal) },
+                    icon = { Icon(imageVector = Icons.Default.Bookmark, contentDescription = "Vocabulary") },
+                    label = { Text("Saved", fontWeight = if (selectedTab == 2) FontWeight.Bold else FontWeight.Normal) },
                     colors = NavigationBarItemDefaults.colors(
                         selectedIconColor = DarkJade,
                         selectedTextColor = DarkJade,

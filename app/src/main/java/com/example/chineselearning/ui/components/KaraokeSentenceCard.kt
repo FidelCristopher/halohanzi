@@ -6,8 +6,7 @@ import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.PlayArrow
-import androidx.compose.material.icons.filled.VolumeUp
+import androidx.compose.material.icons.automirrored.filled.VolumeUp
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
@@ -48,7 +47,7 @@ fun KaraokeSentenceCard(
                 .fillMaxWidth()
                 .padding(14.dp)
         ) {
-            // Header baris: nomor kalimat & tombol play audio kalimat
+            // Header: sentence number & play button
             Row(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.SpaceBetween,
@@ -73,7 +72,7 @@ fun KaraokeSentenceCard(
                     if (isActive) {
                         Spacer(modifier = Modifier.width(8.dp))
                         Text(
-                            text = "Sedang dibaca...",
+                            text = "Now reading...",
                             fontSize = 11.sp,
                             fontWeight = FontWeight.SemiBold,
                             color = DarkJade
@@ -81,7 +80,7 @@ fun KaraokeSentenceCard(
                     }
                 }
 
-                // Speaker Icon untuk baca kalimat ini saja
+                // Speaker Icon
                 FilledTonalIconButton(
                     onClick = onPlayAudio,
                     modifier = Modifier.size(32.dp),
@@ -91,8 +90,8 @@ fun KaraokeSentenceCard(
                     )
                 ) {
                     Icon(
-                        imageVector = Icons.Default.VolumeUp,
-                        contentDescription = "Putar Kalimat",
+                        imageVector = Icons.AutoMirrored.Filled.VolumeUp,
+                        contentDescription = "Read Sentence",
                         modifier = Modifier.size(18.dp)
                     )
                 }
@@ -100,7 +99,7 @@ fun KaraokeSentenceCard(
 
             Spacer(modifier = Modifier.height(8.dp))
 
-            // Rangkaian Token Kata yang bisa di-klik satu per satu
+            // Interactive Word Tokens
             FlowRow(
                 horizontalArrangement = Arrangement.spacedBy(6.dp),
                 verticalArrangement = Arrangement.spacedBy(6.dp),
@@ -115,7 +114,7 @@ fun KaraokeSentenceCard(
                 }
             }
 
-            // Terjemahan kalimat (dapat di-toggle)
+            // Sentence translation (toggled)
             if (showTranslation) {
                 Spacer(modifier = Modifier.height(10.dp))
                 HorizontalDivider(color = LightSlate, thickness = 0.8.dp)

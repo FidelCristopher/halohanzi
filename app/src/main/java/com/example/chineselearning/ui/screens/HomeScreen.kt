@@ -8,7 +8,8 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.*
+import androidx.compose.material.icons.automirrored.filled.MenuBook
+import androidx.compose.material.icons.filled.ChevronRight
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -38,40 +39,36 @@ fun HomeScreen(
         contentPadding = PaddingValues(16.dp),
         verticalArrangement = Arrangement.spacedBy(20.dp)
     ) {
-        // Top Banner Sambutan
+        // Welcome Card
         item {
             Card(
                 shape = RoundedCornerShape(24.dp),
                 colors = CardDefaults.cardColors(containerColor = JadeGreen),
                 modifier = Modifier.fillMaxWidth()
             ) {
-                Row(
+                Column(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .padding(20.dp),
-                    verticalAlignment = Alignment.CenterVertically
+                        .padding(20.dp)
                 ) {
-                    Column(modifier = Modifier.weight(1f)) {
-                        Text(
-                            text = "你好！(Nǐ hǎo!)",
-                            fontSize = 22.sp,
-                            fontWeight = FontWeight.Bold,
-                            color = Color.White
-                        )
-                        Spacer(modifier = Modifier.height(4.dp))
-                        Text(
-                            text = "Pelajari Mandarin secara alami lewat latihan mikro & teks cerita berjenjang.",
-                            fontSize = 13.sp,
-                            color = Color.White.copy(alpha = 0.9f),
-                            lineHeight = 18.sp
-                        )
-                    }
-                    Text(text = "🐼", fontSize = 48.sp, modifier = Modifier.padding(start = 12.dp))
+                    Text(
+                        text = "你好！(Nǐ hǎo!)",
+                        fontSize = 22.sp,
+                        fontWeight = FontWeight.Bold,
+                        color = Color.White
+                    )
+                    Spacer(modifier = Modifier.height(6.dp))
+                    Text(
+                        text = "Master Mandarin Chinese naturally through structured lessons and contextual graded stories.",
+                        fontSize = 13.sp,
+                        color = Color.White.copy(alpha = 0.92f),
+                        lineHeight = 19.sp
+                    )
                 }
             }
         }
 
-        // Daftar Unit Pembelajaran
+        // Unit Course Cards
         items(units) { unit ->
             UnitCard(
                 unit = unit,
@@ -95,7 +92,7 @@ fun UnitCard(
         modifier = Modifier.fillMaxWidth()
     ) {
         Column(modifier = Modifier.padding(18.dp)) {
-            // Header Unit
+            // Unit Header
             Row(
                 modifier = Modifier.fillMaxWidth(),
                 verticalAlignment = Alignment.CenterVertically
@@ -144,7 +141,7 @@ fun UnitCard(
 
             Spacer(modifier = Modifier.height(16.dp))
 
-            // Daftar Pelajaran di Unit Ini
+            // Lessons in this Unit
             unit.lessons.forEachIndexed { idx, lesson ->
                 Surface(
                     shape = RoundedCornerShape(14.dp),
@@ -191,7 +188,7 @@ fun UnitCard(
 
                         Icon(
                             imageVector = Icons.Default.ChevronRight,
-                            contentDescription = "Buka",
+                            contentDescription = "Open",
                             tint = SlateGray
                         )
                     }
@@ -200,7 +197,7 @@ fun UnitCard(
 
             Spacer(modifier = Modifier.height(10.dp))
 
-            // Banner Graded Story Unit Ini
+            // Unit Story Banner
             Surface(
                 shape = RoundedCornerShape(16.dp),
                 color = SoftAmber,
@@ -216,13 +213,13 @@ fun UnitCard(
                     Spacer(modifier = Modifier.width(12.dp))
                     Column(modifier = Modifier.weight(1f)) {
                         Text(
-                            text = "📖 Cerita Unit: 《${unit.story.titleHanzi}》",
+                            text = "Story: 《${unit.story.titleHanzi}》",
                             fontWeight = FontWeight.Bold,
                             fontSize = 14.sp,
                             color = Color(0xFF7A4B00)
                         )
                         Text(
-                            text = "${unit.story.titleTranslation} • Ketuk untuk membaca",
+                            text = "${unit.story.titleTranslation} • Tap to read",
                             fontSize = 11.sp,
                             color = Color(0xFF9E6500)
                         )
@@ -232,7 +229,7 @@ fun UnitCard(
                         color = WarmAmber
                     ) {
                         Text(
-                            text = "Baca",
+                            text = "Read",
                             color = Color.White,
                             fontSize = 12.sp,
                             fontWeight = FontWeight.Bold,

@@ -8,6 +8,7 @@ import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
@@ -37,13 +38,13 @@ fun StoryReaderScreen(
     var showPinyin by remember { mutableStateOf(true) }
     var showTranslation by remember { mutableStateOf(true) }
     var selectedToken by remember { mutableStateOf<WordToken?>(null) }
-    
-    // Status Audio Karaoke
+
+    // Audio Karaoke State
     var activeSentenceIndex by remember { mutableStateOf(-1) }
     var isPlayingAll by remember { mutableStateOf(false) }
     var speechSpeed by remember { mutableStateOf(0.85f) }
 
-    // Kuis pemahaman cerita
+    // Comprehension Quiz State
     var showQuiz by remember { mutableStateOf(false) }
     var currentQuestionIdx by remember { mutableStateOf(0) }
     var selectedOptionIdx by remember { mutableStateOf<Int?>(null) }
@@ -53,7 +54,6 @@ fun StoryReaderScreen(
     val listState = rememberLazyListState()
     val coroutineScope = rememberCoroutineScope()
 
-    // Fungsi membaca satu kalimat tertentu
     fun playSentence(index: Int, autoAdvance: Boolean = false) {
         if (index !in story.sentences.indices) {
             isPlayingAll = false
@@ -65,7 +65,6 @@ fun StoryReaderScreen(
         val targetSentence = story.sentences[index]
 
         coroutineScope.launch {
-            // Scroll otomatis ke kalimat yang dibaca
             listState.animateScrollToItem(index + 1)
         }
 
@@ -75,7 +74,7 @@ fun StoryReaderScreen(
             onDone = {
                 if (autoAdvance && isPlayingAll) {
                     coroutineScope.launch {
-                        delay(600) // jeda napas alami antar kalimat
+                        delay(600)
                         playSentence(index + 1, autoAdvance = true)
                     }
                 } else if (!autoAdvance) {
@@ -108,11 +107,10 @@ fun StoryReaderScreen(
                         ttsManager?.stop()
                         onBackClick()
                     }) {
-                        Icon(imageVector = Icons.Default.ArrowBack, contentDescription = "Kembali")
+                        Icon(imageVector = Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back")
                     }
                 },
                 actions = {
-                    // Tombol Toggle Pinyin
                     FilterChip(
                         selected = showPinyin,
                         onClick = { showPinyin = !showPinyin },
@@ -130,11 +128,10 @@ fun StoryReaderScreen(
                         modifier = Modifier.padding(end = 6.dp)
                     )
 
-                    // Tombol Toggle Arti
                     IconButton(onClick = { showTranslation = !showTranslation }) {
                         Icon(
                             imageVector = if (showTranslation) Icons.Default.Translate else Icons.Default.GTranslate,
-                            contentDescription = "Toggle Terjemahan",
+                            contentDescription = "Toggle Translation",
                             tint = if (showTranslation) JadeGreen else SlateGray
                         )
                     }
@@ -143,7 +140,6 @@ fun StoryReaderScreen(
             )
         },
         bottomBar = {
-            // Floating Audio & Reading Bar
             Surface(
                 color = MaterialTheme.colorScheme.surface,
                 tonalElevation = 8.dp,
@@ -156,13 +152,12 @@ fun StoryReaderScreen(
                     horizontalArrangement = Arrangement.SpaceBetween,
                     verticalAlignment = Alignment.CenterVertically
                 ) {
-                    // Kontrol Kecepatan Suara
                     Surface(
                         color = LightSlate,
                         shape = RoundedCornerShape(12.dp)
                     ) {
                         Row(modifier = Modifier.padding(2.dp)) {
-                            listOf(0.7f to "Lambat", 0.85f to "Normal").forEach { (speed, label) ->
+                            listOf(0.7f to "Slow", 0.85f to "Normal").forEach { (speed, label) ->
                                 val selected = speechSpeed == speed
                                 Box(
                                     modifier = Modifier
@@ -181,7 +176,6 @@ fun StoryReaderScreen(
                         }
                     }
 
-                    // Kontrol Pemutar Narasi (Prev, Play/Pause, Next)
                     Row(
                         verticalAlignment = Alignment.CenterVertically,
                         horizontalArrangement = Arrangement.spacedBy(8.dp)
@@ -192,7 +186,7 @@ fun StoryReaderScreen(
                                 playSentence(prevIdx, autoAdvance = isPlayingAll)
                             }
                         ) {
-                            Icon(imageVector = Icons.Default.SkipPrevious, contentDescription = "Sebelumnya")
+                            Icon(imageVector = Icons.Default.SkipPrevious, contentDescription = "Previous")
                         }
 
                         FloatingActionButton(
@@ -214,7 +208,7 @@ fun StoryReaderScreen(
                         ) {
                             Icon(
                                 imageVector = if (isPlayingAll) Icons.Default.Pause else Icons.Default.PlayArrow,
-                                contentDescription = if (isPlayingAll) "Jeda" else "Baca Cerita",
+                                contentDescription = if (isPlayingAll) "Pause" else "Read Aloud",
                                 modifier = Modifier.size(28.dp)
                             )
                         }
@@ -225,7 +219,7 @@ fun StoryReaderScreen(
                                 playSentence(nextIdx, autoAdvance = isPlayingAll)
                             }
                         ) {
-                            Icon(imageVector = Icons.Default.SkipNext, contentDescription = "Berikutnya")
+                            Icon(imageVector = Icons.Default.SkipNext, contentDescription = "Next")
                         }
                     }
                 }
@@ -240,7 +234,6 @@ fun StoryReaderScreen(
                 .padding(horizontal = 16.dp),
             contentPadding = PaddingValues(top = 12.dp, bottom = 40.dp)
         ) {
-            // Header Cerita
             item {
                 Card(
                     shape = RoundedCornerShape(20.dp),
@@ -276,7 +269,7 @@ fun StoryReaderScreen(
                                 }
                                 Spacer(modifier = Modifier.width(8.dp))
                                 Text(
-                                    text = "⏱️ ${story.estimatedReadMinutes} menit baca",
+                                    text = "${story.estimatedReadMinutes} min read",
                                     fontSize = 12.sp,
                                     color = DarkJade
                                 )
@@ -292,7 +285,6 @@ fun StoryReaderScreen(
                     }
                 }
 
-                // Petunjuk Interaktif
                 Surface(
                     color = SoftAmber,
                     shape = RoundedCornerShape(12.dp),
@@ -304,10 +296,8 @@ fun StoryReaderScreen(
                         modifier = Modifier.padding(10.dp),
                         verticalAlignment = Alignment.CenterVertically
                     ) {
-                        Text(text = "💡", fontSize = 16.sp)
-                        Spacer(modifier = Modifier.width(8.dp))
                         Text(
-                            text = "Ketuk karakter/kata Hanzi manapun untuk melihat arti instan & dengar pelafalannya!",
+                            text = "Tip: Tap any Hanzi character to inspect definition and native audio pronunciation.",
                             fontSize = 12.sp,
                             color = Color(0xFF7A4B00)
                         )
@@ -315,7 +305,6 @@ fun StoryReaderScreen(
                 }
             }
 
-            // Daftar Kalimat dengan fitur karaoke sync dan kata klik-able
             itemsIndexed(story.sentences) { index, sentence ->
                 KaraokeSentenceCard(
                     sentence = sentence,
@@ -332,7 +321,7 @@ fun StoryReaderScreen(
                 )
             }
 
-            // Bagian Kuis Pemahaman di Akhir Cerita
+            // Comprehension Quiz Section
             item {
                 Spacer(modifier = Modifier.height(20.dp))
                 Card(
@@ -346,23 +335,17 @@ fun StoryReaderScreen(
                             .fillMaxWidth()
                             .padding(18.dp)
                     ) {
-                        Row(verticalAlignment = Alignment.CenterVertically) {
-                            Text(text = "📝", fontSize = 24.sp)
-                            Spacer(modifier = Modifier.width(10.dp))
-                            Column {
-                                Text(
-                                    text = "Kuis Pemahaman Cerita",
-                                    fontWeight = FontWeight.Bold,
-                                    fontSize = 16.sp,
-                                    color = DeepNavy
-                                )
-                                Text(
-                                    text = "Uji pemahaman Anda terhadap isi bacaan di atas",
-                                    fontSize = 12.sp,
-                                    color = SlateGray
-                                )
-                            }
-                        }
+                        Text(
+                            text = "Story Comprehension Quiz",
+                            fontWeight = FontWeight.Bold,
+                            fontSize = 16.sp,
+                            color = DeepNavy
+                        )
+                        Text(
+                            text = "Test your understanding of the story above",
+                            fontSize = 12.sp,
+                            color = SlateGray
+                        )
 
                         Spacer(modifier = Modifier.height(14.dp))
 
@@ -374,16 +357,15 @@ fun StoryReaderScreen(
                                 modifier = Modifier.fillMaxWidth()
                             ) {
                                 Text(
-                                    text = "Mulai Kuis (${story.questions.size} Soal)",
+                                    text = "Start Quiz (${story.questions.size} Questions)",
                                     fontWeight = FontWeight.Bold
                                 )
                             }
                         } else {
-                            // Quiz Container
                             val question = story.questions[currentQuestionIdx]
 
                             Text(
-                                text = "Soal ${currentQuestionIdx + 1} dari ${story.questions.size}:",
+                                text = "Question ${currentQuestionIdx + 1} of ${story.questions.size}:",
                                 fontSize = 12.sp,
                                 fontWeight = FontWeight.Bold,
                                 color = SlateGray
@@ -398,7 +380,6 @@ fun StoryReaderScreen(
 
                             Spacer(modifier = Modifier.height(12.dp))
 
-                            // Pilihan Jawaban
                             question.options.forEachIndexed { oIdx, optText ->
                                 val isSelected = selectedOptionIdx == oIdx
                                 val isCorrect = oIdx == question.correctAnswerIndex
@@ -452,10 +433,9 @@ fun StoryReaderScreen(
                                     modifier = Modifier.fillMaxWidth(),
                                     shape = RoundedCornerShape(12.dp)
                                 ) {
-                                    Text(text = "Periksa Jawaban")
+                                    Text(text = "Check Answer")
                                 }
                             } else {
-                                // Penjelasan Soal
                                 Column(
                                     modifier = Modifier
                                         .fillMaxWidth()
@@ -465,7 +445,7 @@ fun StoryReaderScreen(
                                 ) {
                                     val correct = selectedOptionIdx == question.correctAnswerIndex
                                     Text(
-                                        text = if (correct) "✅ Jawaban Anda Benar!" else "❌ Jawaban Belum Tepat",
+                                        text = if (correct) "Correct!" else "Explanation:",
                                         fontWeight = FontWeight.Bold,
                                         fontSize = 13.sp,
                                         color = if (correct) DarkJade else RubyCoral
@@ -487,7 +467,6 @@ fun StoryReaderScreen(
                                             selectedOptionIdx = null
                                             isAnswerSubmitted = false
                                         } else {
-                                            // Kuis Selesai
                                             currentQuestionIdx = 0
                                             selectedOptionIdx = null
                                             isAnswerSubmitted = false
@@ -499,7 +478,7 @@ fun StoryReaderScreen(
                                     colors = ButtonDefaults.buttonColors(containerColor = JadeGreen)
                                 ) {
                                     Text(
-                                        text = if (currentQuestionIdx < story.questions.lastIndex) "Soal Berikutnya →" else "Selesai (Skor: $quizScore/${story.questions.size})"
+                                        text = if (currentQuestionIdx < story.questions.lastIndex) "Next Question →" else "Complete (Score: $quizScore/${story.questions.size})"
                                     )
                                 }
                             }
@@ -510,7 +489,6 @@ fun StoryReaderScreen(
         }
     }
 
-    // Modal Dialog Detail Kata (Tap-to-Translate)
     WordDetailDialog(
         token = selectedToken,
         ttsManager = ttsManager,

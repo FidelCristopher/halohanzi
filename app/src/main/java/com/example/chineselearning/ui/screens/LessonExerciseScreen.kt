@@ -7,7 +7,8 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.*
+import androidx.compose.material.icons.automirrored.filled.VolumeUp
+import androidx.compose.material.icons.filled.Close
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -18,7 +19,6 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.chineselearning.audio.TtsManager
-import com.example.chineselearning.data.model.Exercise
 import com.example.chineselearning.data.model.ExerciseType
 import com.example.chineselearning.data.model.Lesson
 import com.example.chineselearning.ui.theme.*
@@ -31,7 +31,7 @@ fun LessonExerciseScreen(
     onFinish: () -> Unit,
     onBackClick: () -> Unit
 ) {
-    var currentStep by remember { mutableStateOf(0) } // 0 = Intro kata baru & grammar, 1..N = Exercises
+    var currentStep by remember { mutableStateOf(0) }
     var currentExerciseIdx by remember { mutableStateOf(0) }
     var selectedOption by remember { mutableStateOf<String?>(null) }
     var selectedChips by remember { mutableStateOf<List<String>>(emptyList()) }
@@ -65,7 +65,7 @@ fun LessonExerciseScreen(
                 },
                 navigationIcon = {
                     IconButton(onClick = onBackClick) {
-                        Icon(imageVector = Icons.Default.Close, contentDescription = "Tutup")
+                        Icon(imageVector = Icons.Default.Close, contentDescription = "Close")
                     }
                 },
                 colors = TopAppBarDefaults.topAppBarColors(containerColor = MaterialTheme.colorScheme.surface)
@@ -81,23 +81,19 @@ fun LessonExerciseScreen(
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             if (currentStep == 0) {
-                // TAHAP 1: PENGENALAN KATA & GRAMMAR BARU
+                // STEP 1: GRAMMAR & NEW VOCABULARY OVERVIEW
                 Card(
                     shape = RoundedCornerShape(20.dp),
                     colors = CardDefaults.cardColors(containerColor = SoftMint),
                     modifier = Modifier.fillMaxWidth()
                 ) {
                     Column(modifier = Modifier.padding(16.dp)) {
-                        Row(verticalAlignment = Alignment.CenterVertically) {
-                            Text(text = "💡", fontSize = 22.sp)
-                            Spacer(modifier = Modifier.width(8.dp))
-                            Text(
-                                text = "Tata Bahasa (Grammar Point)",
-                                fontWeight = FontWeight.Bold,
-                                fontSize = 16.sp,
-                                color = DarkJade
-                            )
-                        }
+                        Text(
+                            text = "Grammar Note",
+                            fontWeight = FontWeight.Bold,
+                            fontSize = 16.sp,
+                            color = DarkJade
+                        )
                         Spacer(modifier = Modifier.height(8.dp))
                         Text(
                             text = lesson.grammarNote,
@@ -111,7 +107,7 @@ fun LessonExerciseScreen(
                 Spacer(modifier = Modifier.height(18.dp))
 
                 Text(
-                    text = "Kosakata Baru di Pelajaran Ini:",
+                    text = "New Vocabulary in this Lesson:",
                     fontSize = 15.sp,
                     fontWeight = FontWeight.Bold,
                     color = DeepNavy,
@@ -167,7 +163,7 @@ fun LessonExerciseScreen(
                                     contentColor = DarkJade
                                 )
                             ) {
-                                Icon(imageVector = Icons.Default.VolumeUp, contentDescription = "Dengar")
+                                Icon(imageVector = Icons.AutoMirrored.Filled.VolumeUp, contentDescription = "Pronounce")
                             }
                         }
                     }
@@ -187,14 +183,14 @@ fun LessonExerciseScreen(
                     colors = ButtonDefaults.buttonColors(containerColor = JadeGreen)
                 ) {
                     Text(
-                        text = "Mulai Latihan Interaktif →",
+                        text = "Start Interactive Practice →",
                         fontSize = 16.sp,
                         fontWeight = FontWeight.Bold
                     )
                 }
 
             } else {
-                // TAHAP 2: LATIHAN INTERAKTIF (EXERCISES)
+                // STEP 2: INTERACTIVE EXERCISES
                 val exercise = lesson.exercises[currentExerciseIdx]
 
                 Surface(
@@ -203,10 +199,10 @@ fun LessonExerciseScreen(
                 ) {
                     Text(
                         text = when (exercise.type) {
-                            ExerciseType.SENTENCE_BUILDER -> "🧩 Susun Kalimat"
-                            ExerciseType.TONE_DRILL -> "🎵 Tebak Nada Mandarin"
-                            ExerciseType.LISTENING -> "🎧 Latihan Menyimak (Listening)"
-                            ExerciseType.MULTIPLE_CHOICE -> "✍️ Pilihan Ganda"
+                            ExerciseType.SENTENCE_BUILDER -> "Sentence Builder"
+                            ExerciseType.TONE_DRILL -> "Tone Drill"
+                            ExerciseType.LISTENING -> "Listening Practice"
+                            ExerciseType.MULTIPLE_CHOICE -> "Multiple Choice"
                         },
                         fontSize = 12.sp,
                         fontWeight = FontWeight.Bold,
@@ -227,7 +223,6 @@ fun LessonExerciseScreen(
 
                 Spacer(modifier = Modifier.height(12.dp))
 
-                // Kartu Target Soal & Tombol TTS
                 Card(
                     shape = RoundedCornerShape(16.dp),
                     colors = CardDefaults.cardColors(containerColor = SoftMint),
@@ -270,7 +265,7 @@ fun LessonExerciseScreen(
                                 shape = CircleShape,
                                 modifier = Modifier.size(46.dp)
                             ) {
-                                Icon(imageVector = Icons.Default.VolumeUp, contentDescription = "Dengarkan Audio")
+                                Icon(imageVector = Icons.AutoMirrored.Filled.VolumeUp, contentDescription = "Listen Audio")
                             }
                         }
                     }
@@ -278,12 +273,10 @@ fun LessonExerciseScreen(
 
                 Spacer(modifier = Modifier.height(20.dp))
 
-                // Konten tipe latihan
                 when (exercise.type) {
                     ExerciseType.SENTENCE_BUILDER -> {
-                        // Area Kalimat yang disusun
                         Text(
-                            text = "Ketuk balok kata di bawah untuk menyusun kalimat:",
+                            text = "Tap word tiles below to construct the sentence:",
                             fontSize = 13.sp,
                             color = SlateGray,
                             modifier = Modifier.fillMaxWidth()
@@ -306,7 +299,7 @@ fun LessonExerciseScreen(
                             ) {
                                 if (selectedChips.isEmpty()) {
                                     Text(
-                                        text = "Kalimat akan tersusun di sini...",
+                                        text = "Your sentence will appear here...",
                                         color = SlateGray,
                                         fontSize = 14.sp
                                     )
@@ -330,7 +323,6 @@ fun LessonExerciseScreen(
 
                         Spacer(modifier = Modifier.height(16.dp))
 
-                        // Balok-balok kata yang tersedia
                         FlowRow(
                             horizontalArrangement = Arrangement.spacedBy(8.dp),
                             verticalArrangement = Arrangement.spacedBy(8.dp),
@@ -358,7 +350,6 @@ fun LessonExerciseScreen(
                     }
 
                     ExerciseType.TONE_DRILL, ExerciseType.MULTIPLE_CHOICE, ExerciseType.LISTENING -> {
-                        // Pilihan ganda biasa
                         exercise.options.forEach { opt ->
                             val isSelected = selectedOption == opt
                             val isThisCorrect = opt == exercise.correctAnswer
@@ -410,7 +401,6 @@ fun LessonExerciseScreen(
 
                 Spacer(modifier = Modifier.height(24.dp))
 
-                // Bottom Action Button
                 if (!isSubmitted) {
                     val canCheck = when (exercise.type) {
                         ExerciseType.SENTENCE_BUILDER -> selectedChips.isNotEmpty()
@@ -434,10 +424,9 @@ fun LessonExerciseScreen(
                         shape = RoundedCornerShape(16.dp),
                         colors = ButtonDefaults.buttonColors(containerColor = JadeGreen)
                     ) {
-                        Text(text = "Periksa Jawaban", fontSize = 16.sp, fontWeight = FontWeight.Bold)
+                        Text(text = "Check Answer", fontSize = 16.sp, fontWeight = FontWeight.Bold)
                     }
                 } else {
-                    // Feedback Jawaban Benar / Salah
                     Surface(
                         color = if (isCorrect) Color(0xFFD4EDDA) else Color(0xFFF8D7DA),
                         shape = RoundedCornerShape(14.dp),
@@ -449,17 +438,15 @@ fun LessonExerciseScreen(
                             modifier = Modifier.padding(14.dp),
                             verticalAlignment = Alignment.CenterVertically
                         ) {
-                            Text(text = if (isCorrect) "🎉" else "💡", fontSize = 24.sp)
-                            Spacer(modifier = Modifier.width(10.dp))
                             Column {
                                 Text(
-                                    text = if (isCorrect) "Luar Biasa, Benar!" else "Perhatikan kembali:",
+                                    text = if (isCorrect) "Awesome! That is correct." else "Review Answer:",
                                     fontWeight = FontWeight.Bold,
                                     color = if (isCorrect) DarkJade else RubyCoral,
                                     fontSize = 14.sp
                                 )
                                 Text(
-                                    text = "Kunci: ${exercise.correctAnswer.replace(",", " ")}",
+                                    text = "Target: ${exercise.correctAnswer.replace(",", " ")}",
                                     fontSize = 13.sp,
                                     color = DeepNavy
                                 )
@@ -489,7 +476,7 @@ fun LessonExerciseScreen(
                         )
                     ) {
                         Text(
-                            text = if (currentExerciseIdx < lesson.exercises.lastIndex) "Lanjut Soal Berikutnya →" else "Selesaikan Pelajaran 🎉",
+                            text = if (currentExerciseIdx < lesson.exercises.lastIndex) "Next Question →" else "Complete Lesson",
                             fontSize = 16.sp,
                             fontWeight = FontWeight.Bold
                         )
