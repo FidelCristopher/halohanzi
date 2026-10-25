@@ -42,7 +42,10 @@ fun StoryReaderScreen(
     // Audio Karaoke State
     var activeSentenceIndex by remember { mutableStateOf(-1) }
     var isPlayingAll by remember { mutableStateOf(false) }
-    var speechSpeed by remember { mutableStateOf(0.85f) }
+    var isLooping by remember { mutableStateOf(false) }
+    var speedIndex by remember { mutableStateOf(1) } // 0 = 0.7x, 1 = 1.0x, 2 = 1.2x
+    val speedValues = listOf(0.75f, 0.95f, 1.2f)
+    val speedLabels = listOf("0.8X", "1.0X", "1.2X")
 
     // Comprehension Quiz State
     var showQuiz by remember { mutableStateOf(false) }
@@ -54,10 +57,16 @@ fun StoryReaderScreen(
     val listState = rememberLazyListState()
     val coroutineScope = rememberCoroutineScope()
 
+    val currentSpeed = speedValues[speedIndex]
+
     fun playSentence(index: Int, autoAdvance: Boolean = false) {
         if (index !in story.sentences.indices) {
-            isPlayingAll = false
-            activeSentenceIndex = -1
+            if (isLooping && story.sentences.isNotEmpty()) {
+                playSentence(0, autoAdvance = true)
+            } else {
+                isPlayingAll = false
+                activeSentenceIndex = -1
+            }
             return
         }
 
@@ -70,11 +79,11 @@ fun StoryReaderScreen(
 
         ttsManager?.speak(
             text = targetSentence.hanzi,
-            speedRate = speechSpeed,
+            speedRate = currentSpeed,
             onDone = {
                 if (autoAdvance && isPlayingAll) {
                     coroutineScope.launch {
-                        delay(600)
+                        delay(500)
                         playSentence(index + 1, autoAdvance = true)
                     }
                 } else if (!autoAdvance) {
@@ -122,17 +131,17 @@ fun StoryReaderScreen(
                             )
                         },
                         colors = FilterChipDefaults.filterChipColors(
-                            selectedContainerColor = SoftMint,
-                            selectedLabelColor = DarkJade
+                            selectedContainerColor = HelloMint,
+                            selectedLabelColor = HelloGreenDark
                         ),
-                        modifier = Modifier.padding(end = 6.dp)
+                        modifier = Modifier.padding(end = 4.dp)
                     )
 
                     IconButton(onClick = { showTranslation = !showTranslation }) {
                         Icon(
                             imageVector = if (showTranslation) Icons.Default.Translate else Icons.Default.GTranslate,
                             contentDescription = "Toggle Translation",
-                            tint = if (showTranslation) JadeGreen else SlateGray
+                            tint = if (showTranslation) HelloGreen else SlateGray
                         )
                     }
                 },
@@ -140,55 +149,92 @@ fun StoryReaderScreen(
             )
         },
         bottomBar = {
+            // HelloChinese Style Audio Player Dock (Screenshot 3)
             Surface(
                 color = MaterialTheme.colorScheme.surface,
-                tonalElevation = 8.dp,
-                shadowElevation = 8.dp
+                tonalElevation = 10.dp,
+                shadowElevation = 10.dp
             ) {
-                Row(
+                Column(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .padding(horizontal = 16.dp, vertical = 10.dp),
-                    horizontalArrangement = Arrangement.SpaceBetween,
-                    verticalAlignment = Alignment.CenterVertically
+                        .padding(horizontal = 16.dp, vertical = 8.dp)
                 ) {
-                    Surface(
-                        color = LightSlate,
-                        shape = RoundedCornerShape(12.dp)
-                    ) {
-                        Row(modifier = Modifier.padding(2.dp)) {
-                            listOf(0.7f to "Slow", 0.85f to "Normal").forEach { (speed, label) ->
-                                val selected = speechSpeed == speed
-                                Box(
-                                    modifier = Modifier
-                                        .clip(RoundedCornerShape(10.dp))
-                                        .background(if (selected) JadeGreen else Color.Transparent)
-                                        .padding(horizontal = 10.dp, vertical = 6.dp)
-                                ) {
-                                    Text(
-                                        text = label,
-                                        fontSize = 11.sp,
-                                        fontWeight = if (selected) FontWeight.Bold else FontWeight.Normal,
-                                        color = if (selected) Color.White else SlateGray
-                                    )
-                                }
-                            }
-                        }
-                    }
+                    // Time Scrubber / Progress Slider Bar (00:00 -------•------- 02:30)
+                    val currentSentenceNum = if (activeSentenceIndex >= 0) activeSentenceIndex + 1 else 0
+                    val totalSentences = story.sentences.size
+                    val sliderProgress = if (totalSentences > 0) (currentSentenceNum.toFloat() / totalSentences.toFloat()) else 0f
 
                     Row(
-                        verticalAlignment = Alignment.CenterVertically,
-                        horizontalArrangement = Arrangement.spacedBy(8.dp)
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.SpaceBetween,
+                        verticalAlignment = Alignment.CenterVertically
                     ) {
+                        Text(
+                            text = if (activeSentenceIndex >= 0) "Part $currentSentenceNum" else "00:00",
+                            fontSize = 11.sp,
+                            color = SlateGray,
+                            fontWeight = FontWeight.Medium
+                        )
+
+                        Slider(
+                            value = sliderProgress,
+                            onValueChange = { newProg ->
+                                val targetIdx = (newProg * (totalSentences - 1)).toInt().coerceIn(0, totalSentences - 1)
+                                playSentence(targetIdx, autoAdvance = isPlayingAll)
+                            },
+                            modifier = Modifier
+                                .weight(1f)
+                                .padding(horizontal = 10.dp)
+                                .height(20.dp),
+                            colors = SliderDefaults.colors(
+                                thumbColor = HelloGreen,
+                                activeTrackColor = HelloGreen,
+                                inactiveTrackColor = LightSlate
+                            )
+                        )
+
+                        Text(
+                            text = "$totalSentences Parts",
+                            fontSize = 11.sp,
+                            color = SlateGray,
+                            fontWeight = FontWeight.Medium
+                        )
+                    }
+
+                    Spacer(modifier = Modifier.height(4.dp))
+
+                    // Player Buttons Row (Loop, Prev, Play/Pause, Next, Speed)
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.SpaceBetween,
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        // Loop toggle
+                        IconButton(onClick = { isLooping = !isLooping }) {
+                            Icon(
+                                imageVector = Icons.Default.Repeat,
+                                contentDescription = "Loop",
+                                tint = if (isLooping) HelloGreen else SlateGray
+                            )
+                        }
+
+                        // Prev sentence
                         IconButton(
                             onClick = {
                                 val prevIdx = if (activeSentenceIndex > 0) activeSentenceIndex - 1 else 0
                                 playSentence(prevIdx, autoAdvance = isPlayingAll)
                             }
                         ) {
-                            Icon(imageVector = Icons.Default.SkipPrevious, contentDescription = "Previous")
+                            Icon(
+                                imageVector = Icons.Default.SkipPrevious,
+                                contentDescription = "Previous",
+                                modifier = Modifier.size(28.dp),
+                                tint = DeepNavy
+                            )
                         }
 
+                        // Main Big Play/Pause Button
                         FloatingActionButton(
                             onClick = {
                                 if (isPlayingAll) {
@@ -201,25 +247,48 @@ fun StoryReaderScreen(
                                     playSentence(startIdx, autoAdvance = true)
                                 }
                             },
-                            containerColor = JadeGreen,
+                            containerColor = HelloGreen,
                             contentColor = Color.White,
                             shape = CircleShape,
-                            modifier = Modifier.size(52.dp)
+                            modifier = Modifier.size(54.dp)
                         ) {
                             Icon(
                                 imageVector = if (isPlayingAll) Icons.Default.Pause else Icons.Default.PlayArrow,
-                                contentDescription = if (isPlayingAll) "Pause" else "Read Aloud",
-                                modifier = Modifier.size(28.dp)
+                                contentDescription = if (isPlayingAll) "Pause" else "Play",
+                                modifier = Modifier.size(32.dp)
                             )
                         }
 
+                        // Next sentence
                         IconButton(
                             onClick = {
                                 val nextIdx = if (activeSentenceIndex < story.sentences.lastIndex) activeSentenceIndex + 1 else 0
                                 playSentence(nextIdx, autoAdvance = isPlayingAll)
                             }
                         ) {
-                            Icon(imageVector = Icons.Default.SkipNext, contentDescription = "Next")
+                            Icon(
+                                imageVector = Icons.Default.SkipNext,
+                                contentDescription = "Next",
+                                modifier = Modifier.size(28.dp),
+                                tint = DeepNavy
+                            )
+                        }
+
+                        // Speed Button (1.0X pill)
+                        Surface(
+                            shape = RoundedCornerShape(12.dp),
+                            color = LightSlate,
+                            onClick = {
+                                speedIndex = (speedIndex + 1) % speedValues.size
+                            }
+                        ) {
+                            Text(
+                                text = speedLabels[speedIndex],
+                                fontSize = 12.sp,
+                                fontWeight = FontWeight.Bold,
+                                color = HelloGreenDark,
+                                modifier = Modifier.padding(horizontal = 8.dp, vertical = 6.dp)
+                            )
                         }
                     }
                 }
@@ -232,79 +301,55 @@ fun StoryReaderScreen(
                 .fillMaxSize()
                 .padding(innerPadding)
                 .padding(horizontal = 16.dp),
-            contentPadding = PaddingValues(top = 12.dp, bottom = 40.dp)
+            contentPadding = PaddingValues(top = 10.dp, bottom = 40.dp)
         ) {
+            // Story Header Card
             item {
                 Card(
                     shape = RoundedCornerShape(20.dp),
-                    colors = CardDefaults.cardColors(containerColor = SoftMint),
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(bottom = 14.dp)
-                ) {
-                    Row(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .padding(16.dp),
-                        verticalAlignment = Alignment.CenterVertically
-                    ) {
-                        Text(
-                            text = story.coverEmoji,
-                            fontSize = 40.sp,
-                            modifier = Modifier.padding(end = 14.dp)
-                        )
-                        Column(modifier = Modifier.weight(1f)) {
-                            Row(verticalAlignment = Alignment.CenterVertically) {
-                                Surface(
-                                    color = JadeGreen,
-                                    shape = RoundedCornerShape(8.dp)
-                                ) {
-                                    Text(
-                                        text = story.level,
-                                        color = Color.White,
-                                        fontSize = 11.sp,
-                                        fontWeight = FontWeight.Bold,
-                                        modifier = Modifier.padding(horizontal = 8.dp, vertical = 2.dp)
-                                    )
-                                }
-                                Spacer(modifier = Modifier.width(8.dp))
-                                Text(
-                                    text = "${story.estimatedReadMinutes} min read",
-                                    fontSize = 12.sp,
-                                    color = DarkJade
-                                )
-                            }
-                            Spacer(modifier = Modifier.height(6.dp))
-                            Text(
-                                text = story.description,
-                                fontSize = 13.sp,
-                                color = DeepNavy,
-                                lineHeight = 18.sp
-                            )
-                        }
-                    }
-                }
-
-                Surface(
-                    color = SoftAmber,
-                    shape = RoundedCornerShape(12.dp),
+                    colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
+                    elevation = CardDefaults.cardElevation(defaultElevation = 1.dp),
                     modifier = Modifier
                         .fillMaxWidth()
                         .padding(bottom = 12.dp)
                 ) {
-                    Row(
-                        modifier = Modifier.padding(10.dp),
-                        verticalAlignment = Alignment.CenterVertically
+                    Column(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(16.dp)
                     ) {
+                        Row(verticalAlignment = Alignment.CenterVertically) {
+                            Surface(
+                                color = HelloMint,
+                                shape = RoundedCornerShape(8.dp)
+                            ) {
+                                Text(
+                                    text = story.level,
+                                    color = HelloGreenDark,
+                                    fontSize = 11.sp,
+                                    fontWeight = FontWeight.Bold,
+                                    modifier = Modifier.padding(horizontal = 8.dp, vertical = 3.dp)
+                                )
+                            }
+                            Spacer(modifier = Modifier.width(8.dp))
+                            Text(
+                                text = "${story.estimatedReadMinutes} min read • ${story.category}",
+                                fontSize = 12.sp,
+                                color = SlateGray
+                            )
+                        }
+                        Spacer(modifier = Modifier.height(8.dp))
                         Text(
-                            text = "Tip: Tap any Hanzi character to inspect definition and native audio pronunciation.",
-                            fontSize = 12.sp,
-                            color = Color(0xFF7A4B00)
+                            text = story.description,
+                            fontSize = 13.sp,
+                            color = DeepNavy,
+                            lineHeight = 18.sp
                         )
                     }
                 }
             }
 
+            // Sentences List with HelloChinese Green Karaoke Highlight
             itemsIndexed(story.sentences) { index, sentence ->
                 KaraokeSentenceCard(
                     sentence = sentence,
@@ -321,9 +366,9 @@ fun StoryReaderScreen(
                 )
             }
 
-            // Comprehension Quiz Section
+            // Comprehension Quiz
             item {
-                Spacer(modifier = Modifier.height(20.dp))
+                Spacer(modifier = Modifier.height(24.dp))
                 Card(
                     shape = RoundedCornerShape(20.dp),
                     colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
@@ -385,7 +430,7 @@ fun StoryReaderScreen(
                                 val isCorrect = oIdx == question.correctAnswerIndex
 
                                 val optionColor = when {
-                                    !isAnswerSubmitted && isSelected -> SoftMint
+                                    !isAnswerSubmitted && isSelected -> HelloMint
                                     isAnswerSubmitted && isCorrect -> Color(0xFFD4EDDA)
                                     isAnswerSubmitted && isSelected && !isCorrect -> Color(0xFFF8D7DA)
                                     else -> LightSlate
@@ -448,7 +493,7 @@ fun StoryReaderScreen(
                                         text = if (correct) "Correct!" else "Explanation:",
                                         fontWeight = FontWeight.Bold,
                                         fontSize = 13.sp,
-                                        color = if (correct) DarkJade else RubyCoral
+                                        color = if (correct) HelloGreenDark else RubyCoral
                                     )
                                     Spacer(modifier = Modifier.height(4.dp))
                                     Text(
@@ -475,7 +520,7 @@ fun StoryReaderScreen(
                                     },
                                     modifier = Modifier.fillMaxWidth(),
                                     shape = RoundedCornerShape(12.dp),
-                                    colors = ButtonDefaults.buttonColors(containerColor = JadeGreen)
+                                    colors = ButtonDefaults.buttonColors(containerColor = HelloGreen)
                                 ) {
                                     Text(
                                         text = if (currentQuestionIdx < story.questions.lastIndex) "Next Question →" else "Complete (Score: $quizScore/${story.questions.size})"

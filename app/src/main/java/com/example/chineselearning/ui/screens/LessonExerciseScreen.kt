@@ -1,6 +1,8 @@
 package com.example.chineselearning.ui.screens
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
@@ -21,6 +23,7 @@ import androidx.compose.ui.unit.sp
 import com.example.chineselearning.audio.TtsManager
 import com.example.chineselearning.data.model.ExerciseType
 import com.example.chineselearning.data.model.Lesson
+import com.example.chineselearning.data.repository.LearningRepository
 import com.example.chineselearning.ui.theme.*
 
 @OptIn(ExperimentalMaterial3Api::class, ExperimentalLayoutApi::class)
@@ -52,13 +55,14 @@ fun LessonExerciseScreen(
                             fontWeight = FontWeight.Bold,
                             color = HanziColor
                         )
+                        Spacer(modifier = Modifier.height(4.dp))
                         LinearProgressIndicator(
                             progress = { progress },
                             modifier = Modifier
                                 .fillMaxWidth(0.9f)
                                 .height(6.dp)
                                 .clip(RoundedCornerShape(3.dp)),
-                            color = JadeGreen,
+                            color = HelloGreen,
                             trackColor = LightSlate,
                         )
                     }
@@ -84,7 +88,7 @@ fun LessonExerciseScreen(
                 // STEP 1: GRAMMAR & NEW VOCABULARY OVERVIEW
                 Card(
                     shape = RoundedCornerShape(20.dp),
-                    colors = CardDefaults.cardColors(containerColor = SoftMint),
+                    colors = CardDefaults.cardColors(containerColor = HelloMint),
                     modifier = Modifier.fillMaxWidth()
                 ) {
                     Column(modifier = Modifier.padding(16.dp)) {
@@ -92,7 +96,7 @@ fun LessonExerciseScreen(
                             text = "Grammar Note",
                             fontWeight = FontWeight.Bold,
                             fontSize = 16.sp,
-                            color = DarkJade
+                            color = HelloGreenDark
                         )
                         Spacer(modifier = Modifier.height(8.dp))
                         Text(
@@ -144,7 +148,7 @@ fun LessonExerciseScreen(
                                     Text(
                                         text = word.pinyin,
                                         fontSize = 14.sp,
-                                        color = JadeGreen,
+                                        color = HelloGreenDark,
                                         fontWeight = FontWeight.SemiBold
                                     )
                                 }
@@ -159,8 +163,8 @@ fun LessonExerciseScreen(
                             FilledTonalIconButton(
                                 onClick = { ttsManager?.speak(word.hanzi) },
                                 colors = IconButtonDefaults.filledTonalIconButtonColors(
-                                    containerColor = SoftMint,
-                                    contentColor = DarkJade
+                                    containerColor = HelloMint,
+                                    contentColor = HelloGreenDark
                                 )
                             ) {
                                 Icon(imageVector = Icons.AutoMirrored.Filled.VolumeUp, contentDescription = "Pronounce")
@@ -180,7 +184,7 @@ fun LessonExerciseScreen(
                         .fillMaxWidth()
                         .height(52.dp),
                     shape = RoundedCornerShape(16.dp),
-                    colors = ButtonDefaults.buttonColors(containerColor = JadeGreen)
+                    colors = ButtonDefaults.buttonColors(containerColor = HelloGreen)
                 ) {
                     Text(
                         text = "Start Interactive Practice →",
@@ -225,7 +229,7 @@ fun LessonExerciseScreen(
 
                 Card(
                     shape = RoundedCornerShape(16.dp),
-                    colors = CardDefaults.cardColors(containerColor = SoftMint),
+                    colors = CardDefaults.cardColors(containerColor = HelloMint),
                     modifier = Modifier.fillMaxWidth()
                 ) {
                     Row(
@@ -246,7 +250,7 @@ fun LessonExerciseScreen(
                                 Text(
                                     text = exercise.targetPinyin,
                                     fontSize = 15.sp,
-                                    color = DarkJade,
+                                    color = HelloGreenDark,
                                     fontWeight = FontWeight.SemiBold
                                 )
                             }
@@ -260,7 +264,7 @@ fun LessonExerciseScreen(
                         if (exercise.audioToSpeak.isNotBlank()) {
                             FloatingActionButton(
                                 onClick = { ttsManager?.speak(exercise.audioToSpeak) },
-                                containerColor = JadeGreen,
+                                containerColor = HelloGreen,
                                 contentColor = Color.White,
                                 shape = CircleShape,
                                 modifier = Modifier.size(46.dp)
@@ -275,8 +279,9 @@ fun LessonExerciseScreen(
 
                 when (exercise.type) {
                     ExerciseType.SENTENCE_BUILDER -> {
+                        // Target sentence slot line (HelloChinese style)
                         Text(
-                            text = "Tap word tiles below to construct the sentence:",
+                            text = "Tap the tiles below to build the sentence:",
                             fontSize = 13.sp,
                             color = SlateGray,
                             modifier = Modifier.fillMaxWidth()
@@ -286,64 +291,101 @@ fun LessonExerciseScreen(
                         Surface(
                             shape = RoundedCornerShape(14.dp),
                             color = MaterialTheme.colorScheme.surface,
-                            tonalElevation = 2.dp,
+                            border = androidx.compose.foundation.BorderStroke(1.5.dp, BorderGray),
                             modifier = Modifier
                                 .fillMaxWidth()
-                                .heightIn(min = 60.dp)
+                                .heightIn(min = 72.dp)
                                 .padding(vertical = 4.dp)
                         ) {
                             FlowRow(
                                 modifier = Modifier.padding(10.dp),
-                                horizontalArrangement = Arrangement.spacedBy(6.dp),
-                                verticalArrangement = Arrangement.spacedBy(6.dp)
+                                horizontalArrangement = Arrangement.spacedBy(8.dp),
+                                verticalArrangement = Arrangement.spacedBy(8.dp)
                             ) {
                                 if (selectedChips.isEmpty()) {
-                                    Text(
-                                        text = "Your sentence will appear here...",
-                                        color = SlateGray,
-                                        fontSize = 14.sp
-                                    )
+                                    Box(
+                                        modifier = Modifier.fillMaxWidth().padding(top = 16.dp),
+                                        contentAlignment = Alignment.Center
+                                    ) {
+                                        Text(
+                                            text = "Tap word cards to place them here...",
+                                            color = SlateGray,
+                                            fontSize = 13.sp
+                                        )
+                                    }
                                 } else {
                                     selectedChips.forEachIndexed { cIdx, chipText ->
-                                        ElevatedFilterChip(
-                                            selected = true,
-                                            onClick = {
+                                        val token = LearningRepository.findToken(chipText)
+                                        // Placed tile
+                                        Surface(
+                                            shape = RoundedCornerShape(10.dp),
+                                            color = HelloMint,
+                                            border = androidx.compose.foundation.BorderStroke(1.dp, HelloGreen),
+                                            modifier = Modifier.clickable {
                                                 if (!isSubmitted) {
                                                     selectedChips = selectedChips.toMutableList().also { it.removeAt(cIdx) }
                                                 }
-                                            },
-                                            label = {
-                                                Text(text = chipText, fontWeight = FontWeight.Bold, fontSize = 16.sp)
                                             }
-                                        )
+                                        ) {
+                                            Column(
+                                                horizontalAlignment = Alignment.CenterHorizontally,
+                                                modifier = Modifier.padding(horizontal = 12.dp, vertical = 6.dp)
+                                            ) {
+                                                if (token.pinyin.isNotBlank()) {
+                                                    Text(text = token.pinyin, fontSize = 11.sp, color = HelloGreenDark)
+                                                }
+                                                Text(text = chipText, fontSize = 18.sp, fontWeight = FontWeight.Bold, color = DeepNavy)
+                                            }
+                                        }
                                     }
                                 }
                             }
                         }
 
-                        Spacer(modifier = Modifier.height(16.dp))
+                        Spacer(modifier = Modifier.height(18.dp))
 
+                        // Available word cards with Pinyin above Hanzi (Screenshot 2)
                         FlowRow(
-                            horizontalArrangement = Arrangement.spacedBy(8.dp),
-                            verticalArrangement = Arrangement.spacedBy(8.dp),
+                            horizontalArrangement = Arrangement.spacedBy(10.dp),
+                            verticalArrangement = Arrangement.spacedBy(10.dp),
                             modifier = Modifier.fillMaxWidth()
                         ) {
                             exercise.wordChips.forEach { chip ->
                                 val countInSelected = selectedChips.count { it == chip }
                                 val countInAvailable = exercise.wordChips.count { it == chip }
                                 val isAvailable = countInSelected < countInAvailable
+                                val token = LearningRepository.findToken(chip)
 
-                                OutlinedButton(
-                                    onClick = {
-                                        if (isAvailable && !isSubmitted) {
+                                Surface(
+                                    shape = RoundedCornerShape(12.dp),
+                                    color = if (isAvailable) MaterialTheme.colorScheme.surface else LightSlate,
+                                    shadowElevation = if (isAvailable) 2.dp else 0.dp,
+                                    border = androidx.compose.foundation.BorderStroke(1.dp, if (isAvailable) BorderGray else Color.Transparent),
+                                    modifier = Modifier
+                                        .clip(RoundedCornerShape(12.dp))
+                                        .clickable(enabled = isAvailable && !isSubmitted) {
                                             selectedChips = selectedChips + chip
                                             ttsManager?.speak(chip)
                                         }
-                                    },
-                                    enabled = isAvailable && !isSubmitted,
-                                    shape = RoundedCornerShape(12.dp)
                                 ) {
-                                    Text(text = chip, fontSize = 16.sp, fontWeight = FontWeight.Bold)
+                                    Column(
+                                        horizontalAlignment = Alignment.CenterHorizontally,
+                                        modifier = Modifier.padding(horizontal = 14.dp, vertical = 8.dp)
+                                    ) {
+                                        if (token.pinyin.isNotBlank()) {
+                                            Text(
+                                                text = token.pinyin,
+                                                fontSize = 11.sp,
+                                                color = if (isAvailable) HelloGreenDark else Color.LightGray
+                                            )
+                                        }
+                                        Text(
+                                            text = chip,
+                                            fontSize = 20.sp,
+                                            fontWeight = FontWeight.Bold,
+                                            color = if (isAvailable) HanziColor else Color.LightGray
+                                        )
+                                    }
                                 }
                             }
                         }
@@ -355,7 +397,7 @@ fun LessonExerciseScreen(
                             val isThisCorrect = opt == exercise.correctAnswer
 
                             val optBg = when {
-                                !isSubmitted && isSelected -> SoftMint
+                                !isSubmitted && isSelected -> HelloMint
                                 isSubmitted && isThisCorrect -> Color(0xFFD4EDDA)
                                 isSubmitted && isSelected && !isThisCorrect -> Color(0xFFF8D7DA)
                                 else -> MaterialTheme.colorScheme.surface
@@ -365,6 +407,7 @@ fun LessonExerciseScreen(
                                 shape = RoundedCornerShape(14.dp),
                                 color = optBg,
                                 tonalElevation = 1.dp,
+                                border = androidx.compose.foundation.BorderStroke(1.dp, if (isSelected) HelloGreen else BorderGray),
                                 onClick = {
                                     if (!isSubmitted) {
                                         selectedOption = opt
@@ -384,7 +427,8 @@ fun LessonExerciseScreen(
                                             if (!isSubmitted) {
                                                 selectedOption = opt
                                             }
-                                        }
+                                        },
+                                        colors = RadioButtonDefaults.colors(selectedColor = HelloGreen)
                                     )
                                     Spacer(modifier = Modifier.width(8.dp))
                                     Text(
@@ -422,7 +466,7 @@ fun LessonExerciseScreen(
                             .fillMaxWidth()
                             .height(50.dp),
                         shape = RoundedCornerShape(16.dp),
-                        colors = ButtonDefaults.buttonColors(containerColor = JadeGreen)
+                        colors = ButtonDefaults.buttonColors(containerColor = HelloGreen)
                     ) {
                         Text(text = "Check Answer", fontSize = 16.sp, fontWeight = FontWeight.Bold)
                     }
@@ -442,7 +486,7 @@ fun LessonExerciseScreen(
                                 Text(
                                     text = if (isCorrect) "Awesome! That is correct." else "Review Answer:",
                                     fontWeight = FontWeight.Bold,
-                                    color = if (isCorrect) DarkJade else RubyCoral,
+                                    color = if (isCorrect) HelloGreenDark else RubyCoral,
                                     fontSize = 14.sp
                                 )
                                 Text(
@@ -472,7 +516,7 @@ fun LessonExerciseScreen(
                             .height(50.dp),
                         shape = RoundedCornerShape(16.dp),
                         colors = ButtonDefaults.buttonColors(
-                            containerColor = if (isCorrect) JadeGreen else WarmAmber
+                            containerColor = if (isCorrect) HelloGreen else WarmAmber
                         )
                     ) {
                         Text(

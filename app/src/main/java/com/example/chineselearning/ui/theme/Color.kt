@@ -2,12 +2,27 @@ package com.example.chineselearning.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
-// Primary Jade & Mint
-val JadeGreen = Color(0xFF00B386)
-val DarkJade = Color(0xFF008966)
-val SoftMint = Color(0xFFE8F7F2)
+// HelloChinese Palette
+val HelloGreen = Color(0xFF00B386)
+val HelloGreenDark = Color(0xFF008C69)
+val HelloMint = Color(0xFFE8F8F2)
+val HelloMintLight = Color(0xFFF4FAF7)
+val ActiveSentenceGreen = Color(0xFF00B386)
 
-// Warm Amber & Gold
+// Compatibility aliases
+val JadeGreen = HelloGreen
+val DarkJade = HelloGreenDark
+val SoftMint = HelloMint
+
+// Unit Path Node Colors
+val NodeGreen = Color(0xFF2CD4A0)
+val NodePink = Color(0xFFFF6B8B)
+val NodeOrange = Color(0xFFFFA940)
+val NodePurple = Color(0xFF9254DE)
+val NodeCyan = Color(0xFF13C2C2)
+val NodeRose = Color(0xFFF759AB)
+
+// Warm Accents
 val WarmAmber = Color(0xFFFF9800)
 val SoftAmber = Color(0xFFFFF3E0)
 
@@ -15,14 +30,15 @@ val SoftAmber = Color(0xFFFFF3E0)
 val RubyCoral = Color(0xFFFF5252)
 val SoftRuby = Color(0xFFFFEBEE)
 
-// Neutral Slate & Navy
+// Slate & Neutral
 val DeepNavy = Color(0xFF1E293B)
 val SlateGray = Color(0xFF64748B)
 val LightSlate = Color(0xFFF1F5F9)
+val BorderGray = Color(0xFFE2E8F0)
 
 val CardBg = Color(0xFFFFFFFF)
-val AppBg = Color(0xFFF8FAF9)
+val AppBg = Color(0xFFF5FAF7)
 
 val HanziColor = Color(0xFF1E293B)
-val PinyinColor = Color(0xFF008966)
-val HighlightReading = Color(0xFFFFF7D6)
+val PinyinColor = Color(0xFF64748B)
+val HighlightReading = Color(0xFFE8F8F2)
