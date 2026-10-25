@@ -38,15 +38,15 @@ fun HomeScreen(
     var selectedLessonForSheet by remember { mutableStateOf<Lesson?>(null) }
     var selectedUnitForSheet by remember { mutableStateOf<UnitCourse?>(null) }
 
-    // Winding path horizontal offsets (repeats smoothly across all chapters)
+    // Winding path horizontal offsets (exact serpentine curve from HelloChinese screenshot)
     val pathXOffsets = listOf(
-        0.dp,        // Center
-        65.dp,       // Right
-        0.dp,        // Center
-        (-65).dp,    // Left
-        0.dp,        // Center
-        0.dp,        // Checkpoint (Center)
-        0.dp         // Rest Area (Center)
+        0.dp,        // Node 0: Center
+        75.dp,       // Node 1: Right
+        0.dp,        // Node 2: Center
+        (-75).dp,    // Node 3: Left
+        0.dp,        // Node 4: Center
+        75.dp,       // Node 5: Right
+        0.dp         // Node 6: Center Checkpoint
     )
 
     // Palette per chapter for banner & connector
@@ -324,27 +324,25 @@ fun HomeScreen(
                     }
                 }
 
-                // CHAPTER NODES (Winding Path)
+                // CHAPTER NODES (Continuous Smooth Winding Path)
                 itemsIndexed(chapterUnit.nodes) { nodeIdx, node ->
-                    val globalIdx = (unitIdx * 5) + nodeIdx
-                    val xOffset = pathXOffsets.getOrElse(globalIdx % pathXOffsets.size) { 0.dp }
+                    val globalIdx = (unitIdx * 6) + nodeIdx
+                    val currXOffset = pathXOffsets.getOrElse(globalIdx % pathXOffsets.size) { 0.dp }
+                    val prevXOffset = if (nodeIdx == 0) 0.dp else pathXOffsets.getOrElse((globalIdx - 1) % pathXOffsets.size) { 0.dp }
 
-                    // Connector ribbon
-                    Box(
-                        modifier = Modifier
-                            .height(34.dp)
-                            .width(28.dp)
-                            .background(
-                                color = if (node.iconType == NodeIconType.REST_AREA) Color(0xFF81D4FA) else connectorColor,
-                                shape = RoundedCornerShape(14.dp)
-                            )
+                    // Smooth Bezier Curved Ribbon connecting previous node to current node
+                    CurvedPathConnector(
+                        startXOffset = prevXOffset,
+                        endXOffset = currXOffset,
+                        color = if (node.iconType == NodeIconType.REST_AREA) Color(0xFF81D4FA) else connectorColor,
+                        height = 38.dp
                     )
 
                     when (node.iconType) {
                         NodeIconType.CAP, NodeIconType.DUMBBELL -> {
                             GlossyCircleNode(
                                 node = node,
-                                xOffset = xOffset,
+                                xOffset = currXOffset,
                                 onClick = {
                                     selectedUnitForSheet = chapterUnit
                                     selectedLessonForSheet = chapterUnit.lessons.first()
@@ -354,6 +352,7 @@ fun HomeScreen(
 
                         NodeIconType.CHEST -> {
                             GoldCheckpointNode(
+                                xOffset = currXOffset,
                                 onClick = {
                                     onSelectStory(chapterUnit.story)
                                 }
@@ -475,7 +474,7 @@ fun GlossyCircleNode(
         horizontalAlignment = Alignment.CenterHorizontally,
         modifier = Modifier
             .offset(x = xOffset)
-            .padding(vertical = 4.dp)
+            .padding(vertical = 0.dp)
     ) {
         Box(
             modifier = Modifier
@@ -506,20 +505,69 @@ fun GlossyCircleNode(
 // GOLD CHECKPOINT CHEST NODE
 @Composable
 fun GoldCheckpointNode(
+    xOffset: androidx.compose.ui.unit.Dp = 0.dp,
     onClick: () -> Unit
 ) {
-    Surface(
-        shape = RoundedCornerShape(18.dp),
-        color = Color(0xFFFFB300),
-        border = androidx.compose.foundation.BorderStroke(3.dp, Color.White),
-        shadowElevation = 6.dp,
+    Column(
+        horizontalAlignment = Alignment.CenterHorizontally,
         modifier = Modifier
-            .size(76.dp)
-            .bouncyClick(scaleDown = 0.90f, onClick = onClick)
+            .offset(x = xOffset)
+            .padding(vertical = 4.dp)
     ) {
-        Box(contentAlignment = Alignment.Center) {
-            Text(text = "🤝", fontSize = 36.sp)
+        Surface(
+            shape = RoundedCornerShape(18.dp),
+            color = Color(0xFFFFB300),
+            border = androidx.compose.foundation.BorderStroke(3.dp, Color.White),
+            shadowElevation = 6.dp,
+            modifier = Modifier
+                .size(76.dp)
+                .bouncyClick(scaleDown = 0.90f, onClick = onClick)
+        ) {
+            Box(contentAlignment = Alignment.Center) {
+                Text(text = "🤝", fontSize = 36.sp)
+            }
         }
+    }
+}
+
+// CONTINUOUS SMOOTH SERPENTINE BEZIER CURVE CONNECTOR (HelloChinese style)
+@Composable
+fun CurvedPathConnector(
+    startXOffset: androidx.compose.ui.unit.Dp,
+    endXOffset: androidx.compose.ui.unit.Dp,
+    color: Color,
+    height: androidx.compose.ui.unit.Dp = 38.dp
+) {
+    androidx.compose.foundation.Canvas(
+        modifier = Modifier
+            .fillMaxWidth()
+            .height(height)
+            .offset(y = (-4).dp)
+    ) {
+        val centerX = size.width / 2f
+        val x1 = centerX + startXOffset.toPx()
+        val y1 = 0f
+        val x2 = centerX + endXOffset.toPx()
+        val y2 = size.height
+
+        val path = androidx.compose.ui.graphics.Path().apply {
+            moveTo(x1, y1)
+            cubicTo(
+                x1, y1 + (y2 - y1) * 0.5f,
+                x2, y1 + (y2 - y1) * 0.5f,
+                x2, y2
+            )
+        }
+
+        drawPath(
+            path = path,
+            color = color,
+            style = androidx.compose.ui.graphics.drawscope.Stroke(
+                width = 14.dp.toPx(),
+                cap = androidx.compose.ui.graphics.StrokeCap.Round,
+                join = androidx.compose.ui.graphics.StrokeJoin.Round
+            )
+        )
     }
 }
 
