@@ -155,6 +155,7 @@ fun LessonExerciseScreen(
                 modifier = Modifier
                     .fillMaxWidth()
                     .background(MaterialTheme.colorScheme.surface)
+                    .statusBarsPadding()
                     .padding(horizontal = 16.dp, vertical = 8.dp)
             ) {
                 // Top Action Icons
@@ -255,6 +256,7 @@ fun LessonExerciseScreen(
                             else -> MaterialTheme.colorScheme.surface
                         }
                     )
+                    .navigationBarsPadding()
                     .padding(horizontal = 20.dp, vertical = 14.dp)
             ) {
                 if (isSubmitted) {

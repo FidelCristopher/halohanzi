@@ -158,6 +158,7 @@ fun StoryReaderScreen(
                 Column(
                     modifier = Modifier
                         .fillMaxWidth()
+                        .navigationBarsPadding()
                         .padding(horizontal = 16.dp, vertical = 8.dp)
                 ) {
                     // Time Scrubber / Progress Slider Bar (00:00 -------•------- 02:30)
