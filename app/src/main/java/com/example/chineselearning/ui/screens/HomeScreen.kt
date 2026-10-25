@@ -32,30 +32,41 @@ fun HomeScreen(
     onSelectStory: (Story) -> Unit
 ) {
     val allUnits = LearningRepository.units
-    var currentUnitIndex by remember { mutableStateOf(0) }
-    val unit = allUnits[currentUnitIndex]
+    var selectedHskLevel by remember { mutableStateOf(1) }
+    var showHskMenu by remember { mutableStateOf(false) }
 
-    var showUnitMenu by remember { mutableStateOf(false) }
     var selectedLessonForSheet by remember { mutableStateOf<Lesson?>(null) }
+    var selectedUnitForSheet by remember { mutableStateOf<UnitCourse?>(null) }
 
+    // Winding path horizontal offsets (repeats smoothly across all chapters)
     val pathXOffsets = listOf(
-        0.dp,        // Node 1: Pink Cap (Center)
-        65.dp,       // Node 2: Yellow Cap (Right)
-        0.dp,        // Node 3: Yellow Dumbbell H (Center)
-        (-65).dp,    // Node 4: Yellow Cap (Left)
-        0.dp,        // Node 5: Yellow Dumbbell H (Center)
-        0.dp,        // Node 6: Gold Checkpoint Chest (Center)
-        0.dp         // Node 7: Blue Rest Area Gas Pump (Center)
+        0.dp,        // Center
+        65.dp,       // Right
+        0.dp,        // Center
+        (-65).dp,    // Left
+        0.dp,        // Center
+        0.dp,        // Checkpoint (Center)
+        0.dp         // Rest Area (Center)
+    )
+
+    // Palette per chapter for banner & connector
+    val chapterThemeColors = listOf(
+        Pair(Color(0xFFFCE4EC), Color(0xFFF8BBD0)), // Bab 1: Pink
+        Pair(Color(0xFFE1F5FE), Color(0xFF81D4FA)), // Bab 2: Sky Blue
+        Pair(Color(0xFFE8F5E9), Color(0xFFA5D6A7)), // Bab 3: Fresh Green
+        Pair(Color(0xFFFFF3E0), Color(0xFFFFCC80)), // Bab 4: Warm Amber
+        Pair(Color(0xFFEDE7F6), Color(0xFFD1C4E9)), // Bab 5: Purple
+        Pair(Color(0xFFE0F2F1), Color(0xFF80CBC4))  // Bab 6: Teal
     )
 
     LazyColumn(
         modifier = Modifier
             .fillMaxSize()
             .background(Color(0xFFFFFDFE)),
-        contentPadding = PaddingValues(bottom = 30.dp),
+        contentPadding = PaddingValues(bottom = 50.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        // TOP APP BAR (Screenshot 1)
+        // TOP APP BAR: HSK 1 - 6 Dropdown Selector (Screenshot 1)
         item {
             Row(
                 modifier = Modifier
@@ -65,38 +76,72 @@ fun HomeScreen(
                 horizontalArrangement = Arrangement.SpaceBetween,
                 verticalAlignment = Alignment.CenterVertically
             ) {
-                // Left: Level 1 Shield Badge with Unit Selector Dropdown
+                // Left: HSK 1 - 6 Dropdown Button
                 Box {
                     Surface(
                         shape = RoundedCornerShape(8.dp),
                         color = Color(0xFFEDE7F6),
                         border = androidx.compose.foundation.BorderStroke(1.dp, Color(0xFF7E57C2)),
-                        modifier = Modifier.bouncyClick { showUnitMenu = true }
+                        modifier = Modifier.bouncyClick { showHskMenu = true }
                     ) {
                         Row(
                             modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp),
                             verticalAlignment = Alignment.CenterVertically
                         ) {
-                            Text(text = "🛡️ Bab ${unit.unitNumber}", fontSize = 12.sp, fontWeight = FontWeight.Bold, color = Color(0xFF512DA8))
-                            Icon(imageVector = Icons.Default.ArrowDropDown, contentDescription = null, modifier = Modifier.size(16.dp), tint = Color(0xFF512DA8))
+                            Text(
+                                text = "🛡️ HSK $selectedHskLevel",
+                                fontSize = 12.sp,
+                                fontWeight = FontWeight.Bold,
+                                color = Color(0xFF512DA8)
+                            )
+                            Icon(
+                                imageVector = Icons.Default.ArrowDropDown,
+                                contentDescription = "Pilih Level HSK",
+                                modifier = Modifier.size(16.dp),
+                                tint = Color(0xFF512DA8)
+                            )
                         }
                     }
 
+                    // HSK 1 to HSK 6 Dropdown Menu
                     DropdownMenu(
-                        expanded = showUnitMenu,
-                        onDismissRequest = { showUnitMenu = false }
+                        expanded = showHskMenu,
+                        onDismissRequest = { showHskMenu = false }
                     ) {
-                        allUnits.forEachIndexed { idx, u ->
+                        listOf(
+                            1 to "HSK 1: Pemula (150 Kosakata)",
+                            2 to "HSK 2: Dasar (300 Kosakata)",
+                            3 to "HSK 3: Menengah (600 Kosakata)",
+                            4 to "HSK 4: Menengah Atas (1200 Kosakata)",
+                            5 to "HSK 5: Lanjutan (2500 Kosakata)",
+                            6 to "HSK 6: Mahir (5000 Kosakata)"
+                        ).forEach { (level, desc) ->
                             DropdownMenuItem(
                                 text = {
-                                    Column {
-                                        Text(text = "Bab ${u.unitNumber}: ${u.title}", fontWeight = FontWeight.Bold, fontSize = 13.sp)
-                                        Text(text = "${u.level} • ${u.subtitle}", fontSize = 11.sp, color = SlateGray)
+                                    Row(verticalAlignment = Alignment.CenterVertically) {
+                                        Text(
+                                            text = if (level == selectedHskLevel) "✓ " else "   ",
+                                            fontWeight = FontWeight.Bold,
+                                            color = Color(0xFF00C48C)
+                                        )
+                                        Column {
+                                            Text(
+                                                text = "Level HSK $level",
+                                                fontWeight = FontWeight.Bold,
+                                                fontSize = 13.sp,
+                                                color = if (level == selectedHskLevel) Color(0xFF512DA8) else DeepNavy
+                                            )
+                                            Text(
+                                                text = desc,
+                                                fontSize = 11.sp,
+                                                color = SlateGray
+                                            )
+                                        }
                                     }
                                 },
                                 onClick = {
-                                    currentUnitIndex = idx
-                                    showUnitMenu = false
+                                    selectedHskLevel = level
+                                    showHskMenu = false
                                 }
                             )
                         }
@@ -134,196 +179,211 @@ fun HomeScreen(
             }
         }
 
-        // UNIT HEADER HERO (Screenshot 1)
-        item {
-            Column(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(horizontal = 16.dp, vertical = 12.dp)
-            ) {
-                Row(
-                    modifier = Modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.SpaceBetween,
-                    verticalAlignment = Alignment.Bottom
-                ) {
-                    Row(verticalAlignment = Alignment.Bottom) {
-                        Text(text = "👴", fontSize = 54.sp)
-                        Surface(
-                            shape = RoundedCornerShape(topStart = 12.dp, topEnd = 12.dp, bottomEnd = 12.dp),
-                            color = Color(0xFFE91E63),
-                            modifier = Modifier.padding(bottom = 12.dp, start = 4.dp)
-                        ) {
-                            Text(
-                                text = "你好！",
-                                color = Color.White,
-                                fontWeight = FontWeight.Bold,
-                                fontSize = 12.sp,
-                                modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp)
-                            )
-                        }
-                    }
-
-                    // Fortune Bag 0 / 1
-                    Surface(
-                        shape = RoundedCornerShape(12.dp),
-                        color = Color(0xFFFFEBEE),
-                        border = androidx.compose.foundation.BorderStroke(1.dp, Color(0xFFE57373))
-                    ) {
-                        Row(
-                            modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp),
-                            verticalAlignment = Alignment.CenterVertically
-                        ) {
-                            Text(text = "💰", fontSize = 14.sp)
-                            Spacer(modifier = Modifier.width(4.dp))
-                            Text(text = "0 / 1", fontSize = 11.sp, fontWeight = FontWeight.Bold, color = Color(0xFFC62828))
-                        }
-                    }
-                }
-
-                Spacer(modifier = Modifier.height(4.dp))
-
-                // Unit Banner
-                Surface(
-                    shape = RoundedCornerShape(16.dp),
-                    color = Color(0xFFFCE4EC),
+        // IF USER CHOOSES HSK 2 - 6: Friendly placeholder banner
+        if (selectedHskLevel != 1) {
+            item {
+                Column(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .bouncyClick {
-                            selectedLessonForSheet = unit.lessons.first()
-                        }
+                        .padding(40.dp),
+                    horizontalAlignment = Alignment.CenterHorizontally
                 ) {
-                    Row(
+                    Text(text = "🚀", fontSize = 54.sp)
+                    Spacer(modifier = Modifier.height(14.dp))
+                    Text(
+                        text = "Materi HSK $selectedHskLevel Segera Hadir!",
+                        fontSize = 18.sp,
+                        fontWeight = FontWeight.Bold,
+                        color = DeepNavy
+                    )
+                    Spacer(modifier = Modifier.height(8.dp))
+                    Text(
+                        text = "Saat ini kita berfokus menuntaskan seluruh 150 kosakata dan 6 bab lengkap di HSK 1 terlebih dahulu.",
+                        fontSize = 13.sp,
+                        color = SlateGray,
+                        textAlign = androidx.compose.ui.text.style.TextAlign.Center
+                    )
+                    Spacer(modifier = Modifier.height(20.dp))
+                    Button(
+                        onClick = { selectedHskLevel = 1 },
+                        shape = RoundedCornerShape(20.dp),
+                        colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF00C48C))
+                    ) {
+                        Text(text = "Kembali ke HSK 1")
+                    }
+                }
+            }
+        } else {
+            // HSK 1: RENDER ALL 6 CHAPTERS IN ONE CONTINUOUS ROAD!
+            allUnits.forEachIndexed { unitIdx, chapterUnit ->
+                val (bannerBg, connectorColor) = chapterThemeColors[unitIdx % chapterThemeColors.size]
+
+                // CHAPTER HEADER (Hero character for Bab 1, or Banner for Bab 2 - 6)
+                item {
+                    Column(
                         modifier = Modifier
                             .fillMaxWidth()
-                            .padding(horizontal = 16.dp, vertical = 14.dp),
-                        horizontalArrangement = Arrangement.SpaceBetween,
-                        verticalAlignment = Alignment.CenterVertically
+                            .padding(horizontal = 16.dp, vertical = 12.dp)
                     ) {
-                        Column {
-                            Text(
-                                text = unit.bannerTitle,
-                                fontSize = 18.sp,
-                                fontWeight = FontWeight.Bold,
-                                color = Color(0xFFAD1457)
-                            )
-                            Text(
-                                text = unit.subtitle,
-                                fontSize = 11.sp,
-                                color = Color(0xFFC2185B)
-                            )
+                        // Grandpa Character (Shown on Bab 1)
+                        if (unitIdx == 0) {
+                            Row(
+                                modifier = Modifier.fillMaxWidth(),
+                                horizontalArrangement = Arrangement.SpaceBetween,
+                                verticalAlignment = Alignment.Bottom
+                            ) {
+                                Row(verticalAlignment = Alignment.Bottom) {
+                                    Text(text = "👴", fontSize = 54.sp)
+                                    Surface(
+                                        shape = RoundedCornerShape(topStart = 12.dp, topEnd = 12.dp, bottomEnd = 12.dp),
+                                        color = Color(0xFFE91E63),
+                                        modifier = Modifier.padding(bottom = 12.dp, start = 4.dp)
+                                    ) {
+                                        Text(
+                                            text = "你好！",
+                                            color = Color.White,
+                                            fontWeight = FontWeight.Bold,
+                                            fontSize = 12.sp,
+                                            modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp)
+                                        )
+                                    }
+                                }
+
+                                Surface(
+                                    shape = RoundedCornerShape(12.dp),
+                                    color = Color(0xFFFFEBEE),
+                                    border = androidx.compose.foundation.BorderStroke(1.dp, Color(0xFFE57373))
+                                ) {
+                                    Row(
+                                        modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp),
+                                        verticalAlignment = Alignment.CenterVertically
+                                    ) {
+                                        Text(text = "💰", fontSize = 14.sp)
+                                        Spacer(modifier = Modifier.width(4.dp))
+                                        Text(text = "0 / 1", fontSize = 11.sp, fontWeight = FontWeight.Bold, color = Color(0xFFC62828))
+                                    }
+                                }
+                            }
+                            Spacer(modifier = Modifier.height(4.dp))
                         }
 
-                        Text(text = "⭐🃏", fontSize = 20.sp)
-                    }
-                }
+                        // Chapter Banner (Screenshot 1)
+                        Surface(
+                            shape = RoundedCornerShape(16.dp),
+                            color = bannerBg,
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .bouncyClick {
+                                    selectedUnitForSheet = chapterUnit
+                                    selectedLessonForSheet = chapterUnit.lessons.first()
+                                }
+                        ) {
+                            Row(
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .padding(horizontal = 16.dp, vertical = 14.dp),
+                                horizontalArrangement = Arrangement.SpaceBetween,
+                                verticalAlignment = Alignment.CenterVertically
+                            ) {
+                                Column(modifier = Modifier.weight(1f)) {
+                                    Text(
+                                        text = "Bab ${chapterUnit.unitNumber}: ${chapterUnit.bannerTitle}",
+                                        fontSize = 17.sp,
+                                        fontWeight = FontWeight.Bold,
+                                        color = DeepNavy
+                                    )
+                                    Text(
+                                        text = chapterUnit.subtitle,
+                                        fontSize = 11.sp,
+                                        color = SlateGray
+                                    )
+                                }
 
-                // Sub-pill "1"
-                Surface(
-                    shape = RoundedCornerShape(8.dp),
-                    color = Color(0xFFF8BBD0),
-                    modifier = Modifier.padding(top = 4.dp, start = 20.dp)
-                ) {
-                    Text(
-                        text = "${unit.unitNumber}",
-                        fontSize = 12.sp,
-                        fontWeight = FontWeight.Bold,
-                        color = Color(0xFF880E4F),
-                        modifier = Modifier.padding(horizontal = 14.dp, vertical = 2.dp)
-                    )
-                }
-            }
-        }
-
-        // WINDING SERPENTINE 3D NODES (Screenshots 1, 2, 3)
-        itemsIndexed(unit.nodes) { index, node ->
-            val xOffset = pathXOffsets.getOrElse(index) { 0.dp }
-
-            if (index > 0) {
-                Box(
-                    modifier = Modifier
-                        .height(34.dp)
-                        .width(28.dp)
-                        .background(
-                            color = if (node.iconType == NodeIconType.REST_AREA) Color(0xFF81D4FA) else Color(0xFFF8BBD0),
-                            shape = RoundedCornerShape(14.dp)
-                        )
-                )
-            }
-
-            when (node.iconType) {
-                NodeIconType.CAP, NodeIconType.DUMBBELL -> {
-                    GlossyCircleNode(
-                        node = node,
-                        xOffset = xOffset,
-                        onClick = {
-                            selectedLessonForSheet = unit.lessons.first()
-                        }
-                    )
-                }
-
-                NodeIconType.CHEST -> {
-                    GoldCheckpointNode(
-                        onClick = {
-                            onSelectStory(unit.story)
-                        }
-                    )
-                }
-
-                NodeIconType.REST_AREA -> {
-                    RestAreaNode(
-                        onClick = {
-                            // Advance to next unit if available
-                            if (currentUnitIndex < allUnits.lastIndex) {
-                                currentUnitIndex++
+                                Row(verticalAlignment = Alignment.CenterVertically) {
+                                    Text(text = chapterUnit.emoji, fontSize = 22.sp)
+                                    Spacer(modifier = Modifier.width(4.dp))
+                                    Text(text = "⭐", fontSize = 18.sp)
+                                }
                             }
                         }
-                    )
-                }
-            }
-        }
 
-        // FLOATING NOTIFICATION TOOLTIP (Screenshot 1)
-        item {
-            Spacer(modifier = Modifier.height(20.dp))
-            Surface(
-                shape = RoundedCornerShape(18.dp),
-                color = Color(0xFFFFB300),
-                shadowElevation = 6.dp,
-                modifier = Modifier
-                    .fillMaxWidth(0.9f)
-                    .bouncyClick { selectedLessonForSheet = unit.lessons.first() }
-            ) {
-                Row(
-                    modifier = Modifier.padding(horizontal = 16.dp, vertical = 12.dp),
-                    horizontalArrangement = Arrangement.SpaceBetween,
-                    verticalAlignment = Alignment.CenterVertically
-                ) {
-                    Row(verticalAlignment = Alignment.CenterVertically) {
-                        Text(text = "🔔", fontSize = 18.sp)
-                        Spacer(modifier = Modifier.width(8.dp))
-                        Text(
-                            text = "Anda punya pesan baru! >",
-                            fontWeight = FontWeight.Bold,
-                            fontSize = 14.sp,
-                            color = Color.White
-                        )
+                        // Sub-pill "Bab X"
+                        Surface(
+                            shape = RoundedCornerShape(8.dp),
+                            color = connectorColor,
+                            modifier = Modifier.padding(top = 4.dp, start = 20.dp)
+                        ) {
+                            Text(
+                                text = "Bab ${chapterUnit.unitNumber}",
+                                fontSize = 11.sp,
+                                fontWeight = FontWeight.Bold,
+                                color = DeepNavy,
+                                modifier = Modifier.padding(horizontal = 12.dp, vertical = 2.dp)
+                            )
+                        }
                     }
+                }
 
-                    Icon(
-                        imageVector = Icons.Default.ArrowDownward,
-                        contentDescription = "Buka",
-                        tint = Color.White
+                // CHAPTER NODES (Winding Path)
+                itemsIndexed(chapterUnit.nodes) { nodeIdx, node ->
+                    val globalIdx = (unitIdx * 5) + nodeIdx
+                    val xOffset = pathXOffsets.getOrElse(globalIdx % pathXOffsets.size) { 0.dp }
+
+                    // Connector ribbon
+                    Box(
+                        modifier = Modifier
+                            .height(34.dp)
+                            .width(28.dp)
+                            .background(
+                                color = if (node.iconType == NodeIconType.REST_AREA) Color(0xFF81D4FA) else connectorColor,
+                                shape = RoundedCornerShape(14.dp)
+                            )
                     )
+
+                    when (node.iconType) {
+                        NodeIconType.CAP, NodeIconType.DUMBBELL -> {
+                            GlossyCircleNode(
+                                node = node,
+                                xOffset = xOffset,
+                                onClick = {
+                                    selectedUnitForSheet = chapterUnit
+                                    selectedLessonForSheet = chapterUnit.lessons.first()
+                                }
+                            )
+                        }
+
+                        NodeIconType.CHEST -> {
+                            GoldCheckpointNode(
+                                onClick = {
+                                    onSelectStory(chapterUnit.story)
+                                }
+                            )
+                        }
+
+                        NodeIconType.REST_AREA -> {
+                            RestAreaNode(
+                                label = "Rest area (Lanjut Bab ${chapterUnit.unitNumber + 1})",
+                                onClick = {
+                                    onSelectStory(chapterUnit.story)
+                                }
+                            )
+                        }
+                    }
                 }
             }
         }
     }
 
-    // Modal Bottom Sheet when user clicks a node
-    if (selectedLessonForSheet != null) {
+    // Modal Bottom Sheet when user clicks any node or chapter
+    if (selectedLessonForSheet != null && selectedUnitForSheet != null) {
         val lesson = selectedLessonForSheet!!
+        val unitItem = selectedUnitForSheet!!
+
         ModalBottomSheet(
-            onDismissRequest = { selectedLessonForSheet = null },
+            onDismissRequest = {
+                selectedLessonForSheet = null
+                selectedUnitForSheet = null
+            },
             containerColor = MaterialTheme.colorScheme.surface
         ) {
             Column(
@@ -339,12 +399,12 @@ fun HomeScreen(
                             .background(Color(0xFFE91E63)),
                         contentAlignment = Alignment.Center
                     ) {
-                        Text(text = "🎓", fontSize = 26.sp)
+                        Text(text = unitItem.emoji, fontSize = 26.sp)
                     }
                     Spacer(modifier = Modifier.width(14.dp))
                     Column {
                         Text(
-                            text = lesson.title,
+                            text = "Bab ${unitItem.unitNumber}: ${lesson.title}",
                             fontSize = 18.sp,
                             fontWeight = FontWeight.Bold,
                             color = DeepNavy
@@ -368,6 +428,7 @@ fun HomeScreen(
                         .bouncyClick {
                             val targetLesson = lesson
                             selectedLessonForSheet = null
+                            selectedUnitForSheet = null
                             onSelectLesson(targetLesson)
                         }
                 ) {
@@ -386,12 +447,14 @@ fun HomeScreen(
                         .fillMaxWidth()
                         .height(50.dp)
                         .bouncyClick {
+                            val targetStory = unitItem.story
                             selectedLessonForSheet = null
-                            onSelectStory(unit.story)
+                            selectedUnitForSheet = null
+                            onSelectStory(targetStory)
                         }
                 ) {
                     Box(contentAlignment = Alignment.Center) {
-                        Text(text = "Baca Cerita: 《${unit.story.titleHanzi}》", fontWeight = FontWeight.Bold, color = Color(0xFF7A4B00))
+                        Text(text = "Baca Cerita: 《${unitItem.story.titleHanzi}》", fontWeight = FontWeight.Bold, color = Color(0xFF7A4B00))
                     }
                 }
 
@@ -401,7 +464,7 @@ fun HomeScreen(
     }
 }
 
-// 3D GLOSSY CIRCLE NODE WITH BOUNCY TOUCH (Screenshots 1, 2)
+// 3D GLOSSY CIRCLE NODE WITH BOUNCY TOUCH
 @Composable
 fun GlossyCircleNode(
     node: PathNode,
@@ -440,7 +503,7 @@ fun GlossyCircleNode(
     }
 }
 
-// GOLD CHECKPOINT CHEST NODE (Screenshot 2)
+// GOLD CHECKPOINT CHEST NODE
 @Composable
 fun GoldCheckpointNode(
     onClick: () -> Unit
@@ -460,9 +523,10 @@ fun GoldCheckpointNode(
     }
 }
 
-// REST AREA NODE (Screenshot 2)
+// REST AREA NODE
 @Composable
 fun RestAreaNode(
+    label: String = "Rest area",
     onClick: () -> Unit
 ) {
     Column(
@@ -488,7 +552,7 @@ fun RestAreaNode(
             modifier = Modifier.padding(top = 6.dp)
         ) {
             Text(
-                text = "Rest area (Lanjut Bab)",
+                text = label,
                 fontWeight = FontWeight.Bold,
                 fontSize = 12.sp,
                 color = Color(0xFF0288D1),
