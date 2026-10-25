@@ -5,7 +5,6 @@
 [![Platform](https://img.shields.io/badge/Platform-Android%207.0%2B%20(API%2024%2B)-brightgreen.svg)](https://developer.android.com)
 [![Language](https://img.shields.io/badge/Language-Kotlin%202.2-blue.svg)](https://kotlinlang.org)
 [![UI Framework](https://img.shields.io/badge/UI-Jetpack%20Compose-4285F4.svg)](https://developer.android.com/jetpack/compose)
-[![License](https://img.shields.io/badge/License-MIT-lightgrey.svg)](LICENSE)
 
 ---
 
@@ -131,9 +130,3 @@ Contributions, feedback, and content expansions are welcome!
 3. Commit your Changes (`git commit -m 'Add new HSK 2 graded story'`).
 4. Push to the Branch (`git push origin feature/NewStory`).
 5. Open a Pull Request.
-
----
-
-## License
-
-Distributed under the MIT License. See `LICENSE` for details.
