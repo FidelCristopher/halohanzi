@@ -16,14 +16,13 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.shadow
-import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.chineselearning.data.model.*
 import com.example.chineselearning.data.repository.LearningRepository
+import com.example.chineselearning.ui.components.bouncyClick
 import com.example.chineselearning.ui.theme.*
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -32,10 +31,13 @@ fun HomeScreen(
     onSelectLesson: (Lesson) -> Unit,
     onSelectStory: (Story) -> Unit
 ) {
-    val unit = LearningRepository.units.first()
+    val allUnits = LearningRepository.units
+    var currentUnitIndex by remember { mutableStateOf(0) }
+    val unit = allUnits[currentUnitIndex]
+
+    var showUnitMenu by remember { mutableStateOf(false) }
     var selectedLessonForSheet by remember { mutableStateOf<Lesson?>(null) }
 
-    // Winding path horizontal offsets (Screenshot 1, 2, 3)
     val pathXOffsets = listOf(
         0.dp,        // Node 1: Pink Cap (Center)
         65.dp,       // Node 2: Yellow Cap (Right)
@@ -63,18 +65,41 @@ fun HomeScreen(
                 horizontalArrangement = Arrangement.SpaceBetween,
                 verticalAlignment = Alignment.CenterVertically
             ) {
-                // Left: Level 1 Shield Badge
-                Surface(
-                    shape = RoundedCornerShape(8.dp),
-                    color = Color(0xFFEDE7F6),
-                    border = androidx.compose.foundation.BorderStroke(1.dp, Color(0xFF7E57C2))
-                ) {
-                    Row(
-                        modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp),
-                        verticalAlignment = Alignment.CenterVertically
+                // Left: Level 1 Shield Badge with Unit Selector Dropdown
+                Box {
+                    Surface(
+                        shape = RoundedCornerShape(8.dp),
+                        color = Color(0xFFEDE7F6),
+                        border = androidx.compose.foundation.BorderStroke(1.dp, Color(0xFF7E57C2)),
+                        modifier = Modifier.bouncyClick { showUnitMenu = true }
                     ) {
-                        Text(text = "🛡️ 1", fontSize = 12.sp, fontWeight = FontWeight.Bold, color = Color(0xFF512DA8))
-                        Icon(imageVector = Icons.Default.ArrowDropDown, contentDescription = null, modifier = Modifier.size(16.dp), tint = Color(0xFF512DA8))
+                        Row(
+                            modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp),
+                            verticalAlignment = Alignment.CenterVertically
+                        ) {
+                            Text(text = "🛡️ Bab ${unit.unitNumber}", fontSize = 12.sp, fontWeight = FontWeight.Bold, color = Color(0xFF512DA8))
+                            Icon(imageVector = Icons.Default.ArrowDropDown, contentDescription = null, modifier = Modifier.size(16.dp), tint = Color(0xFF512DA8))
+                        }
+                    }
+
+                    DropdownMenu(
+                        expanded = showUnitMenu,
+                        onDismissRequest = { showUnitMenu = false }
+                    ) {
+                        allUnits.forEachIndexed { idx, u ->
+                            DropdownMenuItem(
+                                text = {
+                                    Column {
+                                        Text(text = "Bab ${u.unitNumber}: ${u.title}", fontWeight = FontWeight.Bold, fontSize = 13.sp)
+                                        Text(text = "${u.level} • ${u.subtitle}", fontSize = 11.sp, color = SlateGray)
+                                    }
+                                },
+                                onClick = {
+                                    currentUnitIndex = idx
+                                    showUnitMenu = false
+                                }
+                            )
+                        }
                     }
                 }
 
@@ -116,7 +141,6 @@ fun HomeScreen(
                     .fillMaxWidth()
                     .padding(horizontal = 16.dp, vertical = 12.dp)
             ) {
-                // Grandpa Character & Fortune Bag
                 Row(
                     modifier = Modifier.fillMaxWidth(),
                     horizontalArrangement = Arrangement.SpaceBetween,
@@ -158,11 +182,15 @@ fun HomeScreen(
 
                 Spacer(modifier = Modifier.height(4.dp))
 
-                // Unit Pink Banner "Membuat teman baru"
+                // Unit Banner
                 Surface(
                     shape = RoundedCornerShape(16.dp),
                     color = Color(0xFFFCE4EC),
-                    modifier = Modifier.fillMaxWidth()
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .bouncyClick {
+                            selectedLessonForSheet = unit.lessons.first()
+                        }
                 ) {
                     Row(
                         modifier = Modifier
@@ -178,9 +206,13 @@ fun HomeScreen(
                                 fontWeight = FontWeight.Bold,
                                 color = Color(0xFFAD1457)
                             )
+                            Text(
+                                text = unit.subtitle,
+                                fontSize = 11.sp,
+                                color = Color(0xFFC2185B)
+                            )
                         }
 
-                        // Star card deck icon
                         Text(text = "⭐🃏", fontSize = 20.sp)
                     }
                 }
@@ -192,7 +224,7 @@ fun HomeScreen(
                     modifier = Modifier.padding(top = 4.dp, start = 20.dp)
                 ) {
                     Text(
-                        text = "1",
+                        text = "${unit.unitNumber}",
                         fontSize = 12.sp,
                         fontWeight = FontWeight.Bold,
                         color = Color(0xFF880E4F),
@@ -206,7 +238,6 @@ fun HomeScreen(
         itemsIndexed(unit.nodes) { index, node ->
             val xOffset = pathXOffsets.getOrElse(index) { 0.dp }
 
-            // Curved connector line
             if (index > 0) {
                 Box(
                     modifier = Modifier
@@ -219,7 +250,6 @@ fun HomeScreen(
                 )
             }
 
-            // Node item
             when (node.iconType) {
                 NodeIconType.CAP, NodeIconType.DUMBBELL -> {
                     GlossyCircleNode(
@@ -232,7 +262,6 @@ fun HomeScreen(
                 }
 
                 NodeIconType.CHEST -> {
-                    // Golden square checkpoint chest with handshake
                     GoldCheckpointNode(
                         onClick = {
                             onSelectStory(unit.story)
@@ -241,10 +270,12 @@ fun HomeScreen(
                 }
 
                 NodeIconType.REST_AREA -> {
-                    // Unit 2 Rest Area Banner
                     RestAreaNode(
                         onClick = {
-                            onSelectStory(unit.story)
+                            // Advance to next unit if available
+                            if (currentUnitIndex < allUnits.lastIndex) {
+                                currentUnitIndex++
+                            }
                         }
                     )
                 }
@@ -260,7 +291,7 @@ fun HomeScreen(
                 shadowElevation = 6.dp,
                 modifier = Modifier
                     .fillMaxWidth(0.9f)
-                    .clickable { selectedLessonForSheet = unit.lessons.first() }
+                    .bouncyClick { selectedLessonForSheet = unit.lessons.first() }
             ) {
                 Row(
                     modifier = Modifier.padding(horizontal = 16.dp, vertical = 12.dp),
@@ -319,7 +350,7 @@ fun HomeScreen(
                             color = DeepNavy
                         )
                         Text(
-                            text = "${lesson.exercises.size} Latihan interaktif sesuai HelloChinese",
+                            text = "${lesson.exercises.size} Latihan interaktif HSK 1",
                             fontSize = 12.sp,
                             color = SlateGray
                         )
@@ -328,34 +359,40 @@ fun HomeScreen(
 
                 Spacer(modifier = Modifier.height(18.dp))
 
-                Button(
-                    onClick = {
-                        val l = lesson
-                        selectedLessonForSheet = null
-                        onSelectLesson(l)
-                    },
+                Surface(
+                    shape = RoundedCornerShape(26.dp),
+                    color = Color(0xFF00C48C),
                     modifier = Modifier
                         .fillMaxWidth()
-                        .height(52.dp),
-                    shape = RoundedCornerShape(26.dp),
-                    colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF00C48C))
+                        .height(52.dp)
+                        .bouncyClick {
+                            val targetLesson = lesson
+                            selectedLessonForSheet = null
+                            onSelectLesson(targetLesson)
+                        }
                 ) {
-                    Text(text = "MULAI BELAJAR", fontWeight = FontWeight.Bold, fontSize = 16.sp)
+                    Box(contentAlignment = Alignment.Center) {
+                        Text(text = "MULAI BELAJAR", fontWeight = FontWeight.Bold, fontSize = 16.sp, color = Color.White)
+                    }
                 }
 
                 Spacer(modifier = Modifier.height(10.dp))
 
-                OutlinedButton(
-                    onClick = {
-                        selectedLessonForSheet = null
-                        onSelectStory(unit.story)
-                    },
+                Surface(
+                    shape = RoundedCornerShape(25.dp),
+                    color = Color(0xFFFFF8E1),
+                    border = androidx.compose.foundation.BorderStroke(1.dp, Color(0xFFFFD54F)),
                     modifier = Modifier
                         .fillMaxWidth()
-                        .height(50.dp),
-                    shape = RoundedCornerShape(25.dp)
+                        .height(50.dp)
+                        .bouncyClick {
+                            selectedLessonForSheet = null
+                            onSelectStory(unit.story)
+                        }
                 ) {
-                    Text(text = "Baca Cerita: 《${unit.story.titleHanzi}》", fontWeight = FontWeight.Bold, color = DeepNavy)
+                    Box(contentAlignment = Alignment.Center) {
+                        Text(text = "Baca Cerita: 《${unit.story.titleHanzi}》", fontWeight = FontWeight.Bold, color = Color(0xFF7A4B00))
+                    }
                 }
 
                 Spacer(modifier = Modifier.height(20.dp))
@@ -364,7 +401,7 @@ fun HomeScreen(
     }
 }
 
-// 3D GLOSSY CIRCLE NODE (Screenshots 1, 2)
+// 3D GLOSSY CIRCLE NODE WITH BOUNCY TOUCH (Screenshots 1, 2)
 @Composable
 fun GlossyCircleNode(
     node: PathNode,
@@ -384,10 +421,9 @@ fun GlossyCircleNode(
                 .clip(CircleShape)
                 .background(node.color)
                 .border(3.dp, Color.White, CircleShape)
-                .clickable(onClick = onClick),
+                .bouncyClick(scaleDown = 0.90f, onClick = onClick),
             contentAlignment = Alignment.Center
         ) {
-            // Specular gloss reflection highlight on top-right
             Box(
                 modifier = Modifier
                     .size(24.dp)
@@ -396,7 +432,6 @@ fun GlossyCircleNode(
                     .background(Color.White.copy(alpha = 0.45f))
             )
 
-            // Icon inside circle
             Text(
                 text = if (node.iconType == NodeIconType.CAP) "🎓" else "🏋️",
                 fontSize = 32.sp
@@ -417,7 +452,7 @@ fun GoldCheckpointNode(
         shadowElevation = 6.dp,
         modifier = Modifier
             .size(76.dp)
-            .clickable(onClick = onClick)
+            .bouncyClick(scaleDown = 0.90f, onClick = onClick)
     ) {
         Box(contentAlignment = Alignment.Center) {
             Text(text = "🤝", fontSize = 36.sp)
@@ -440,7 +475,7 @@ fun RestAreaNode(
             border = androidx.compose.foundation.BorderStroke(2.dp, Color(0xFF03A9F4)),
             modifier = Modifier
                 .size(76.dp)
-                .clickable(onClick = onClick)
+                .bouncyClick(scaleDown = 0.90f, onClick = onClick)
         ) {
             Box(contentAlignment = Alignment.Center) {
                 Text(text = "⛽", fontSize = 38.sp)
@@ -453,11 +488,11 @@ fun RestAreaNode(
             modifier = Modifier.padding(top = 6.dp)
         ) {
             Text(
-                text = "Rest area",
+                text = "Rest area (Lanjut Bab)",
                 fontWeight = FontWeight.Bold,
-                fontSize = 13.sp,
+                fontSize = 12.sp,
                 color = Color(0xFF0288D1),
-                modifier = Modifier.padding(horizontal = 14.dp, vertical = 4.dp)
+                modifier = Modifier.padding(horizontal = 12.dp, vertical = 4.dp)
             )
         }
     }

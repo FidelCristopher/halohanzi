@@ -1,6 +1,7 @@
 package com.example.chineselearning.ui.screens
 
 import androidx.compose.animation.*
+import androidx.compose.animation.core.*
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
@@ -20,6 +21,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
@@ -31,6 +33,8 @@ import com.example.chineselearning.data.model.Lesson
 import com.example.chineselearning.data.model.MatchPairItem
 import com.example.chineselearning.data.model.PictureOption
 import com.example.chineselearning.data.repository.LearningRepository
+import com.example.chineselearning.ui.components.bouncyClick
+import com.example.chineselearning.ui.components.shake
 import com.example.chineselearning.ui.theme.*
 
 @OptIn(ExperimentalLayoutApi::class)
@@ -93,7 +97,6 @@ fun LessonExerciseScreen(
 
         if (isCorrect) {
             comboCount++
-            // Auto play audio of target sentence if available
             if (exercise.audioToSpeak.isNotBlank()) {
                 ttsManager?.speak(exercise.audioToSpeak)
             }
@@ -132,7 +135,19 @@ fun LessonExerciseScreen(
         return
     }
 
-    val progress = ((currentExerciseIdx + 1).toFloat() / totalExercises.toFloat()).coerceIn(0f, 1f)
+    // Animated smooth progress bar
+    val animatedProgress by animateFloatAsState(
+        targetValue = ((currentExerciseIdx + 1).toFloat() / totalExercises.toFloat()).coerceIn(0f, 1f),
+        animationSpec = tween(durationMillis = 350, easing = FastOutSlowInEasing),
+        label = "progressBar"
+    )
+
+    // Pop scale animation for checkmark on correct answer
+    val checkmarkScale by animateFloatAsState(
+        targetValue = if (isSubmitted && isCorrect) 1.15f else 0.8f,
+        animationSpec = spring(dampingRatio = Spring.DampingRatioMediumBouncy, stiffness = Spring.StiffnessLow),
+        label = "checkmarkPop"
+    )
 
     Scaffold(
         topBar = {
@@ -153,26 +168,31 @@ fun LessonExerciseScreen(
                     }
 
                     // Combo / Encouragement Text
-                    if (comboCount > 1) {
-                        Text(
-                            text = "Combo x$comboCount!",
-                            color = Color(0xFFFF9800),
-                            fontWeight = FontWeight.Bold,
-                            fontStyle = FontStyle.Italic,
-                            fontSize = 14.sp
-                        )
-                    } else {
-                        Text(
-                            text = "${totalExercises - currentExerciseIdx} soal lagi sempurna!",
-                            color = Color(0xFFE91E63),
-                            fontWeight = FontWeight.Bold,
-                            fontStyle = FontStyle.Italic,
-                            fontSize = 12.sp
-                        )
+                    AnimatedVisibility(
+                        visible = true,
+                        enter = fadeIn() + scaleIn(),
+                        exit = fadeOut()
+                    ) {
+                        if (comboCount > 1) {
+                            Text(
+                                text = "Combo x$comboCount!",
+                                color = Color(0xFFFF9800),
+                                fontWeight = FontWeight.Bold,
+                                fontStyle = FontStyle.Italic,
+                                fontSize = 14.sp
+                            )
+                        } else {
+                            Text(
+                                text = "${totalExercises - currentExerciseIdx} soal lagi sempurna!",
+                                color = Color(0xFFE91E63),
+                                fontWeight = FontWeight.Bold,
+                                fontStyle = FontStyle.Italic,
+                                fontSize = 12.sp
+                            )
+                        }
                     }
 
                     Row(verticalAlignment = Alignment.CenterVertically) {
-                        // Quote / tip badge
                         Surface(
                             shape = CircleShape,
                             color = Color(0xFF26A69A),
@@ -206,7 +226,7 @@ fun LessonExerciseScreen(
                         Box(
                             modifier = Modifier
                                 .fillMaxHeight()
-                                .fillMaxWidth(fraction = progress)
+                                .fillMaxWidth(fraction = animatedProgress)
                                 .clip(RoundedCornerShape(5.dp))
                                 .background(
                                     brush = Brush.horizontalGradient(
@@ -223,10 +243,11 @@ fun LessonExerciseScreen(
             }
         },
         bottomBar = {
-            // BOTTOM BAR / FEEDBACK SHEET (Screenshots 3, 5, 8)
+            // BOTTOM BAR / FEEDBACK SHEET (Screenshots 3, 5, 8) with SHAKE on error!
             Column(
                 modifier = Modifier
                     .fillMaxWidth()
+                    .shake(isSubmitted && !isCorrect) // Shake animation if wrong!
                     .background(
                         when {
                             isSubmitted && isCorrect -> Color(0xFFE6F8F0)
@@ -246,7 +267,11 @@ fun LessonExerciseScreen(
                         Row(verticalAlignment = Alignment.CenterVertically) {
                             Box(
                                 modifier = Modifier
-                                    .size(28.dp)
+                                    .size(32.dp)
+                                    .graphicsLayer {
+                                        scaleX = checkmarkScale
+                                        scaleY = checkmarkScale
+                                    }
                                     .clip(CircleShape)
                                     .background(if (isCorrect) Color(0xFF00C48C) else RubyCoral),
                                 contentAlignment = Alignment.Center
@@ -255,13 +280,13 @@ fun LessonExerciseScreen(
                                     imageVector = if (isCorrect) Icons.Default.Check else Icons.Default.Close,
                                     contentDescription = null,
                                     tint = Color.White,
-                                    modifier = Modifier.size(18.dp)
+                                    modifier = Modifier.size(20.dp)
                                 )
                             }
                             Spacer(modifier = Modifier.width(10.dp))
                             Text(
                                 text = if (isCorrect) (if (comboCount > 2) "Mantap!" else "Luar biasa!") else "Belum tepat!",
-                                fontSize = 18.sp,
+                                fontSize = 19.sp,
                                 fontWeight = FontWeight.Bold,
                                 color = if (isCorrect) Color(0xFF008966) else RubyCoral
                             )
@@ -312,44 +337,44 @@ fun LessonExerciseScreen(
 
                     Spacer(modifier = Modifier.height(14.dp))
 
-                    Button(
-                        onClick = { nextExercise() },
+                    // Bouncy continue button
+                    Surface(
+                        shape = RoundedCornerShape(26.dp),
+                        color = if (isCorrect) Color(0xFF00C48C) else RubyCoral,
                         modifier = Modifier
                             .fillMaxWidth()
-                            .height(52.dp),
-                        shape = RoundedCornerShape(26.dp),
-                        colors = ButtonDefaults.buttonColors(
-                            containerColor = if (isCorrect) Color(0xFF00C48C) else RubyCoral
-                        )
+                            .height(52.dp)
+                            .bouncyClick { nextExercise() }
                     ) {
-                        Text(
-                            text = "LANJUTKAN",
-                            fontWeight = FontWeight.Bold,
-                            fontSize = 16.sp,
-                            color = Color.White
-                        )
+                        Box(contentAlignment = Alignment.Center) {
+                            Text(
+                                text = "LANJUTKAN",
+                                fontWeight = FontWeight.Bold,
+                                fontSize = 16.sp,
+                                color = Color.White
+                            )
+                        }
                     }
                 } else {
-                    // Default PERIKSA button
-                    Button(
-                        onClick = { submitAnswer() },
-                        enabled = canCheck,
+                    // Default PERIKSA button with tactile Bouncy click
+                    Surface(
+                        shape = RoundedCornerShape(26.dp),
+                        color = if (canCheck) Color(0xFF00C48C) else Color(0xFFE0E0E0),
                         modifier = Modifier
                             .fillMaxWidth()
-                            .height(52.dp),
-                        shape = RoundedCornerShape(26.dp),
-                        colors = ButtonDefaults.buttonColors(
-                            containerColor = Color(0xFF00C48C),
-                            disabledContainerColor = Color(0xFFE0E0E0),
-                            disabledContentColor = Color(0xFF9E9E9E)
-                        )
+                            .height(52.dp)
+                            .then(
+                                if (canCheck) Modifier.bouncyClick { submitAnswer() } else Modifier
+                            )
                     ) {
-                        Text(
-                            text = "PERIKSA",
-                            fontWeight = FontWeight.Bold,
-                            fontSize = 16.sp,
-                            color = if (canCheck) Color.White else Color(0xFF9E9E9E)
-                        )
+                        Box(contentAlignment = Alignment.Center) {
+                            Text(
+                                text = "PERIKSA",
+                                fontWeight = FontWeight.Bold,
+                                fontSize = 16.sp,
+                                color = if (canCheck) Color.White else Color(0xFF9E9E9E)
+                            )
+                        }
                     }
                 }
             }
@@ -386,7 +411,7 @@ fun LessonExerciseScreen(
                             .size(54.dp)
                             .clip(CircleShape)
                             .background(Color(0xFF00C48C))
-                            .clickable { ttsManager?.speak(exercise.audioToSpeak) },
+                            .bouncyClick { ttsManager?.speak(exercise.audioToSpeak) },
                         contentAlignment = Alignment.Center
                     ) {
                         Icon(
@@ -417,7 +442,7 @@ fun LessonExerciseScreen(
 
                 Spacer(modifier = Modifier.height(24.dp))
 
-                // 2x2 Picture Grid
+                // 2x2 Picture Grid with Bouncy feedback
                 Column(
                     verticalArrangement = Arrangement.spacedBy(14.dp),
                     modifier = Modifier.fillMaxWidth()
@@ -441,8 +466,10 @@ fun LessonExerciseScreen(
                                             color = if (isSelected) Color(0xFF00C48C) else BorderGray,
                                             shape = RoundedCornerShape(18.dp)
                                         )
-                                        .clickable(enabled = !isSubmitted) {
-                                            selectedPictureId = opt.id
+                                        .bouncyClick {
+                                            if (!isSubmitted) {
+                                                selectedPictureId = opt.id
+                                            }
                                         }
                                 ) {
                                     Column(
@@ -483,7 +510,6 @@ fun LessonExerciseScreen(
 
             // EXERCISE TYPE 2: LENGKAPI TERJEMAHAN (Screenshot 6)
             if (exercise.type == ExerciseType.FILL_BLANK) {
-                // Word Prompt
                 Row(
                     modifier = Modifier.fillMaxWidth(),
                     verticalAlignment = Alignment.CenterVertically
@@ -493,7 +519,7 @@ fun LessonExerciseScreen(
                             .size(54.dp)
                             .clip(CircleShape)
                             .background(Color(0xFF00C48C))
-                            .clickable { ttsManager?.speak(exercise.audioToSpeak) },
+                            .bouncyClick { ttsManager?.speak(exercise.audioToSpeak) },
                         contentAlignment = Alignment.Center
                     ) {
                         Icon(imageVector = Icons.AutoMirrored.Filled.VolumeUp, contentDescription = "Dengarkan", tint = Color.White)
@@ -507,7 +533,6 @@ fun LessonExerciseScreen(
 
                 Spacer(modifier = Modifier.height(28.dp))
 
-                // Sentence with Blank Underline
                 val blankText = selectedOption ?: "________"
                 val fullSentence = exercise.sentenceWithBlank.replace("________", blankText)
 
@@ -532,7 +557,7 @@ fun LessonExerciseScreen(
 
                 Spacer(modifier = Modifier.height(40.dp))
 
-                // Options Chips
+                // Options Chips with Bouncy Touch
                 Row(
                     horizontalArrangement = Arrangement.spacedBy(10.dp),
                     modifier = Modifier.fillMaxWidth()
@@ -549,8 +574,10 @@ fun LessonExerciseScreen(
                             ),
                             modifier = Modifier
                                 .weight(1f)
-                                .clickable(enabled = !isSubmitted) {
-                                    selectedOption = opt
+                                .bouncyClick {
+                                    if (!isSubmitted) {
+                                        selectedOption = opt
+                                    }
                                 }
                         ) {
                             Box(
@@ -571,7 +598,6 @@ fun LessonExerciseScreen(
 
             // EXERCISE TYPE 3: PILIH TERJEMAHAN YANG BENAR (Screenshot 7 & 10)
             if (exercise.type == ExerciseType.SENTENCE_CHOICE) {
-                // Word Prompt
                 if (exercise.targetHanzi.isNotBlank()) {
                     Row(
                         modifier = Modifier.fillMaxWidth(),
@@ -583,7 +609,7 @@ fun LessonExerciseScreen(
                                     .size(54.dp)
                                     .clip(CircleShape)
                                     .background(Color(0xFF00C48C))
-                                    .clickable { ttsManager?.speak(exercise.audioToSpeak) },
+                                    .bouncyClick { ttsManager?.speak(exercise.audioToSpeak) },
                                 contentAlignment = Alignment.Center
                             ) {
                                 Icon(imageVector = Icons.AutoMirrored.Filled.VolumeUp, contentDescription = "Dengarkan", tint = Color.White)
@@ -601,7 +627,6 @@ fun LessonExerciseScreen(
                     Spacer(modifier = Modifier.height(20.dp))
                 }
 
-                // 4 Option Cards
                 exercise.options.forEach { opt ->
                     val isSelected = selectedOption == opt
                     Card(
@@ -618,8 +643,10 @@ fun LessonExerciseScreen(
                                 color = if (isSelected) Color(0xFF00C48C) else BorderGray,
                                 shape = RoundedCornerShape(16.dp)
                             )
-                            .clickable(enabled = !isSubmitted) {
-                                selectedOption = opt
+                            .bouncyClick {
+                                if (!isSubmitted) {
+                                    selectedOption = opt
+                                }
                             }
                     ) {
                         Box(
@@ -641,7 +668,6 @@ fun LessonExerciseScreen(
 
             // EXERCISE TYPE 4: APA YANG ANDA DENGAR / SENTENCE BUILDER (Screenshot 9)
             if (exercise.type == ExerciseType.SENTENCE_BUILDER) {
-                // Speaker prompt
                 Row(
                     modifier = Modifier.fillMaxWidth(),
                     verticalAlignment = Alignment.CenterVertically
@@ -651,7 +677,7 @@ fun LessonExerciseScreen(
                             .size(54.dp)
                             .clip(CircleShape)
                             .background(Color(0xFF00C48C))
-                            .clickable { ttsManager?.speak(exercise.audioToSpeak) },
+                            .bouncyClick { ttsManager?.speak(exercise.audioToSpeak) },
                         contentAlignment = Alignment.Center
                     ) {
                         Icon(imageVector = Icons.AutoMirrored.Filled.VolumeUp, contentDescription = "Dengarkan", tint = Color.White)
@@ -666,7 +692,6 @@ fun LessonExerciseScreen(
 
                 Spacer(modifier = Modifier.height(20.dp))
 
-                // Answer slot box with slots
                 Surface(
                     shape = RoundedCornerShape(16.dp),
                     color = MaterialTheme.colorScheme.surface,
@@ -680,7 +705,6 @@ fun LessonExerciseScreen(
                         horizontalArrangement = Arrangement.spacedBy(8.dp),
                         verticalArrangement = Arrangement.spacedBy(8.dp)
                     ) {
-                        // Prefixed word if any (e.g. 布迪)
                         Surface(
                             shape = RoundedCornerShape(10.dp),
                             color = Color(0xFFF1F5F9),
@@ -695,14 +719,13 @@ fun LessonExerciseScreen(
                             }
                         }
 
-                        // Selected chips
                         selectedChips.forEachIndexed { cIdx, chipText ->
                             val token = LearningRepository.findToken(chipText)
                             Surface(
                                 shape = RoundedCornerShape(10.dp),
                                 color = Color(0xFFE8F5E9),
                                 border = androidx.compose.foundation.BorderStroke(1.dp, Color(0xFF00C48C)),
-                                modifier = Modifier.clickable {
+                                modifier = Modifier.bouncyClick {
                                     if (!isSubmitted) {
                                         selectedChips = selectedChips.toMutableList().also { it.removeAt(cIdx) }
                                     }
@@ -724,7 +747,6 @@ fun LessonExerciseScreen(
 
                 Spacer(modifier = Modifier.height(24.dp))
 
-                // Available tiles with Pinyin on top & Hanzi below (Screenshot 9)
                 FlowRow(
                     horizontalArrangement = Arrangement.spacedBy(10.dp),
                     verticalArrangement = Arrangement.spacedBy(10.dp),
@@ -742,9 +764,11 @@ fun LessonExerciseScreen(
                             border = androidx.compose.foundation.BorderStroke(1.dp, if (isAvailable) BorderGray else Color.Transparent),
                             modifier = Modifier
                                 .clip(RoundedCornerShape(12.dp))
-                                .clickable(enabled = isAvailable && !isSubmitted) {
-                                    selectedChips = selectedChips + chip
-                                    ttsManager?.speak(chip)
+                                .bouncyClick {
+                                    if (isAvailable && !isSubmitted) {
+                                        selectedChips = selectedChips + chip
+                                        ttsManager?.speak(chip)
+                                    }
                                 }
                         ) {
                             Column(
@@ -803,17 +827,18 @@ fun LessonExerciseScreen(
                                 shadowElevation = if (isMatched) 0.dp else 1.dp,
                                 modifier = Modifier
                                     .fillMaxWidth()
-                                    .clickable(enabled = !isMatched) {
-                                        selectedLeftPairId = item.id
-                                        ttsManager?.speak(item.hanzi)
+                                    .bouncyClick {
+                                        if (!isMatched) {
+                                            selectedLeftPairId = item.id
+                                            ttsManager?.speak(item.hanzi)
 
-                                        // If right side was already picked, test match!
-                                        if (selectedRightPairId != null) {
-                                            if (item.id == selectedRightPairId) {
-                                                matchedPairIds = matchedPairIds + item.id
+                                            if (selectedRightPairId != null) {
+                                                if (item.id == selectedRightPairId) {
+                                                    matchedPairIds = matchedPairIds + item.id
+                                                }
+                                                selectedLeftPairId = null
+                                                selectedRightPairId = null
                                             }
-                                            selectedLeftPairId = null
-                                            selectedRightPairId = null
                                         }
                                     }
                             ) {
@@ -864,16 +889,17 @@ fun LessonExerciseScreen(
                                 shadowElevation = if (isMatched) 0.dp else 1.dp,
                                 modifier = Modifier
                                     .fillMaxWidth()
-                                    .clickable(enabled = !isMatched) {
-                                        selectedRightPairId = item.id
+                                    .bouncyClick {
+                                        if (!isMatched) {
+                                            selectedRightPairId = item.id
 
-                                        // If left side was already picked, test match!
-                                        if (selectedLeftPairId != null) {
-                                            if (item.id == selectedLeftPairId) {
-                                                matchedPairIds = matchedPairIds + item.id
+                                            if (selectedLeftPairId != null) {
+                                                if (item.id == selectedLeftPairId) {
+                                                    matchedPairIds = matchedPairIds + item.id
+                                                }
+                                                selectedLeftPairId = null
+                                                selectedRightPairId = null
                                             }
-                                            selectedLeftPairId = null
-                                            selectedRightPairId = null
                                         }
                                     }
                             ) {
@@ -907,6 +933,13 @@ fun LessonCelebrationScreen(
     comboCount: Int,
     onContinue: () -> Unit
 ) {
+    // Entrance pulse animation
+    val lionScale by animateFloatAsState(
+        targetValue = 1.0f,
+        animationSpec = spring(dampingRatio = Spring.DampingRatioMediumBouncy, stiffness = Spring.StiffnessLow),
+        label = "lionScale"
+    )
+
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -921,10 +954,14 @@ fun LessonCelebrationScreen(
         ) {
             Spacer(modifier = Modifier.height(20.dp))
 
-            // Barongsai / Lion Dance celebration emoji & character
+            // Barongsai / Lion Dance celebration emoji with bounce
             Box(
                 modifier = Modifier
                     .size(160.dp)
+                    .graphicsLayer {
+                        scaleX = lionScale
+                        scaleY = lionScale
+                    }
                     .clip(CircleShape)
                     .background(Color(0xFFFFF3E0)),
                 contentAlignment = Alignment.Center
@@ -1054,21 +1091,23 @@ fun LessonCelebrationScreen(
             }
         }
 
-        // Golden gradient continue button
-        Button(
-            onClick = onContinue,
+        // Golden gradient continue button with Bouncy Touch
+        Surface(
+            shape = RoundedCornerShape(27.dp),
+            color = Color(0xFFFF9800),
             modifier = Modifier
                 .fillMaxWidth()
-                .height(54.dp),
-            shape = RoundedCornerShape(27.dp),
-            colors = ButtonDefaults.buttonColors(containerColor = Color(0xFFFF9800))
+                .height(54.dp)
+                .bouncyClick(onClick = onContinue)
         ) {
-            Text(
-                text = "LANJUTKAN",
-                fontWeight = FontWeight.Bold,
-                fontSize = 16.sp,
-                color = Color.White
-            )
+            Box(contentAlignment = Alignment.Center) {
+                Text(
+                    text = "LANJUTKAN",
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 16.sp,
+                    color = Color.White
+                )
+            }
         }
     }
 }
