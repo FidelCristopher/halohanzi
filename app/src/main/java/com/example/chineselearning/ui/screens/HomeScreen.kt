@@ -16,13 +16,13 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.shadow
+import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.chineselearning.data.model.Lesson
-import com.example.chineselearning.data.model.Story
-import com.example.chineselearning.data.model.UnitCourse
+import com.example.chineselearning.data.model.*
 import com.example.chineselearning.data.repository.LearningRepository
 import com.example.chineselearning.ui.theme.*
 
@@ -32,238 +32,267 @@ fun HomeScreen(
     onSelectLesson: (Lesson) -> Unit,
     onSelectStory: (Story) -> Unit
 ) {
-    val units = LearningRepository.units
-    var selectedUnitForSheet by remember { mutableStateOf<UnitCourse?>(null) }
+    val unit = LearningRepository.units.first()
+    var selectedLessonForSheet by remember { mutableStateOf<Lesson?>(null) }
 
-    // HelloChinese style node colors
-    val nodeColors = listOf(
-        NodeGreen,
-        NodePink,
-        NodeOrange,
-        NodePurple,
-        NodeCyan,
-        NodeRose
+    // Winding path horizontal offsets (Screenshot 1, 2, 3)
+    val pathXOffsets = listOf(
+        0.dp,        // Node 1: Pink Cap (Center)
+        65.dp,       // Node 2: Yellow Cap (Right)
+        0.dp,        // Node 3: Yellow Dumbbell H (Center)
+        (-65).dp,    // Node 4: Yellow Cap (Left)
+        0.dp,        // Node 5: Yellow Dumbbell H (Center)
+        0.dp,        // Node 6: Gold Checkpoint Chest (Center)
+        0.dp         // Node 7: Blue Rest Area Gas Pump (Center)
     )
-
-    // Serpentine horizontal biases: 0 = center, -1 = left, 1 = right
-    val horizontalOffsets = listOf(0.dp, (-60).dp, 60.dp, (-40).dp, 40.dp, 0.dp)
 
     LazyColumn(
         modifier = Modifier
             .fillMaxSize()
-            .background(AppBg),
-        contentPadding = PaddingValues(horizontal = 20.dp, vertical = 16.dp),
+            .background(Color(0xFFFFFDFE)),
+        contentPadding = PaddingValues(bottom = 30.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        // HelloChinese Top Header
+        // TOP APP BAR (Screenshot 1)
         item {
-            Card(
-                shape = RoundedCornerShape(20.dp),
-                colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
-                elevation = CardDefaults.cardElevation(defaultElevation = 1.dp),
+            Row(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(bottom = 20.dp)
+                    .background(Color.White)
+                    .padding(horizontal = 16.dp, vertical = 10.dp),
+                horizontalArrangement = Arrangement.SpaceBetween,
+                verticalAlignment = Alignment.CenterVertically
             ) {
-                Row(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(14.dp),
-                    horizontalArrangement = Arrangement.SpaceBetween,
-                    verticalAlignment = Alignment.CenterVertically
-                ) {
-                    Row(verticalAlignment = Alignment.CenterVertically) {
-                        Surface(
-                            shape = CircleShape,
-                            color = HelloMint,
-                            modifier = Modifier.size(36.dp)
-                        ) {
-                            Box(contentAlignment = Alignment.Center) {
-                                Text(text = "🇨🇳", fontSize = 18.sp)
-                            }
-                        }
-                        Spacer(modifier = Modifier.width(10.dp))
-                        Column {
-                            Row(verticalAlignment = Alignment.CenterVertically) {
-                                Text(
-                                    text = "Main Course",
-                                    fontSize = 16.sp,
-                                    fontWeight = FontWeight.Bold,
-                                    color = DeepNavy
-                                )
-                                Icon(
-                                    imageVector = Icons.Default.KeyboardArrowDown,
-                                    contentDescription = "Select Course",
-                                    tint = SlateGray,
-                                    modifier = Modifier.size(18.dp)
-                                )
-                            }
-                            Text(
-                                text = "HSK 1 - 2 Beginner Track",
-                                fontSize = 11.sp,
-                                color = HelloGreenDark,
-                                fontWeight = FontWeight.SemiBold
-                            )
-                        }
-                    }
-
-                    Surface(
-                        shape = RoundedCornerShape(12.dp),
-                        color = HelloMintLight,
-                        border = androidx.compose.foundation.BorderStroke(1.dp, Color(0xFFC9EEDB))
-                    ) {
-                        Text(
-                            text = "3 Units • 3 Stories",
-                            fontSize = 11.sp,
-                            fontWeight = FontWeight.Bold,
-                            color = HelloGreenDark,
-                            modifier = Modifier.padding(horizontal = 10.dp, vertical = 6.dp)
-                        )
-                    }
-                }
-            }
-        }
-
-        // Winding Course Nodes (HelloChinese Path)
-        itemsIndexed(units) { index, unit ->
-            val color = nodeColors[index % nodeColors.size]
-            val xOffset = horizontalOffsets[index % horizontalOffsets.size]
-
-            // Path connector line between nodes
-            if (index > 0) {
-                Box(
-                    modifier = Modifier
-                        .height(36.dp)
-                        .width(4.dp)
-                        .background(
-                            color = BorderGray,
-                            shape = RoundedCornerShape(2.dp)
-                        )
-                )
-            }
-
-            // Circular Learning Node
-            Column(
-                horizontalAlignment = Alignment.CenterHorizontally,
-                modifier = Modifier
-                    .offset(x = xOffset)
-                    .padding(vertical = 4.dp)
-            ) {
-                // Outer circle button with shadow
-                Box(
-                    modifier = Modifier
-                        .size(80.dp)
-                        .shadow(elevation = 6.dp, shape = CircleShape)
-                        .clip(CircleShape)
-                        .background(color)
-                        .border(4.dp, Color.White, CircleShape)
-                        .clickable { selectedUnitForSheet = unit },
-                    contentAlignment = Alignment.Center
-                ) {
-                    Text(
-                        text = unit.emoji,
-                        fontSize = 32.sp
-                    )
-                }
-
-                Spacer(modifier = Modifier.height(6.dp))
-
-                // Node Title Label
+                // Left: Level 1 Shield Badge
                 Surface(
-                    shape = RoundedCornerShape(12.dp),
-                    color = MaterialTheme.colorScheme.surface,
-                    shadowElevation = 1.dp
+                    shape = RoundedCornerShape(8.dp),
+                    color = Color(0xFFEDE7F6),
+                    border = androidx.compose.foundation.BorderStroke(1.dp, Color(0xFF7E57C2))
                 ) {
-                    Text(
-                        text = unit.title,
-                        fontSize = 13.sp,
-                        fontWeight = FontWeight.Bold,
-                        color = DeepNavy,
-                        modifier = Modifier.padding(horizontal = 10.dp, vertical = 4.dp)
-                    )
+                    Row(
+                        modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp),
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        Text(text = "🛡️ 1", fontSize = 12.sp, fontWeight = FontWeight.Bold, color = Color(0xFF512DA8))
+                        Icon(imageVector = Icons.Default.ArrowDropDown, contentDescription = null, modifier = Modifier.size(16.dp), tint = Color(0xFF512DA8))
+                    }
                 }
 
-                // Level Tag
-                Text(
-                    text = "${unit.level} • ${unit.lessons.size} Lessons",
-                    fontSize = 10.sp,
-                    color = SlateGray,
-                    modifier = Modifier.padding(top = 2.dp)
-                )
-            }
-        }
+                // Center: Rainbow Crown
+                Text(text = "👑", fontSize = 24.sp)
 
-        // Story Shortcut Tile at the bottom of the path
-        item {
-            Spacer(modifier = Modifier.height(24.dp))
-            Card(
-                shape = RoundedCornerShape(20.dp),
-                colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
-                elevation = CardDefaults.cardElevation(defaultElevation = 2.dp),
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .clickable { onSelectStory(units[0].story) }
-            ) {
-                Row(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(16.dp),
-                    verticalAlignment = Alignment.CenterVertically
-                ) {
-                    Box(
-                        modifier = Modifier
-                            .size(50.dp)
-                            .clip(CircleShape)
-                            .background(HelloMint),
-                        contentAlignment = Alignment.Center
-                    ) {
-                        Text(text = "📖", fontSize = 24.sp)
+                // Right: Streak Flame & Gold Coin
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    Row(verticalAlignment = Alignment.CenterVertically) {
+                        Text(text = "🔥", fontSize = 16.sp)
+                        Spacer(modifier = Modifier.width(3.dp))
+                        Text(text = "0", fontSize = 14.sp, fontWeight = FontWeight.Bold, color = SlateGray)
                     }
 
                     Spacer(modifier = Modifier.width(14.dp))
 
-                    Column(modifier = Modifier.weight(1f)) {
-                        Text(
-                            text = "Featured Graded Story",
-                            fontSize = 12.sp,
-                            fontWeight = FontWeight.Bold,
-                            color = HelloGreenDark
+                    Surface(
+                        shape = RoundedCornerShape(14.dp),
+                        color = Color(0xFFFFF8E1),
+                        border = androidx.compose.foundation.BorderStroke(1.dp, Color(0xFFFFD54F))
+                    ) {
+                        Row(
+                            modifier = Modifier.padding(horizontal = 8.dp, vertical = 3.dp),
+                            verticalAlignment = Alignment.CenterVertically
+                        ) {
+                            Text(text = "🪙", fontSize = 14.sp)
+                            Spacer(modifier = Modifier.width(4.dp))
+                            Text(text = "171", fontSize = 13.sp, fontWeight = FontWeight.Bold, color = Color(0xFFE65100))
+                        }
+                    }
+                }
+            }
+        }
+
+        // UNIT HEADER HERO (Screenshot 1)
+        item {
+            Column(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = 16.dp, vertical = 12.dp)
+            ) {
+                // Grandpa Character & Fortune Bag
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.SpaceBetween,
+                    verticalAlignment = Alignment.Bottom
+                ) {
+                    Row(verticalAlignment = Alignment.Bottom) {
+                        Text(text = "👴", fontSize = 54.sp)
+                        Surface(
+                            shape = RoundedCornerShape(topStart = 12.dp, topEnd = 12.dp, bottomEnd = 12.dp),
+                            color = Color(0xFFE91E63),
+                            modifier = Modifier.padding(bottom = 12.dp, start = 4.dp)
+                        ) {
+                            Text(
+                                text = "你好！",
+                                color = Color.White,
+                                fontWeight = FontWeight.Bold,
+                                fontSize = 12.sp,
+                                modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp)
+                            )
+                        }
+                    }
+
+                    // Fortune Bag 0 / 1
+                    Surface(
+                        shape = RoundedCornerShape(12.dp),
+                        color = Color(0xFFFFEBEE),
+                        border = androidx.compose.foundation.BorderStroke(1.dp, Color(0xFFE57373))
+                    ) {
+                        Row(
+                            modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp),
+                            verticalAlignment = Alignment.CenterVertically
+                        ) {
+                            Text(text = "💰", fontSize = 14.sp)
+                            Spacer(modifier = Modifier.width(4.dp))
+                            Text(text = "0 / 1", fontSize = 11.sp, fontWeight = FontWeight.Bold, color = Color(0xFFC62828))
+                        }
+                    }
+                }
+
+                Spacer(modifier = Modifier.height(4.dp))
+
+                // Unit Pink Banner "Membuat teman baru"
+                Surface(
+                    shape = RoundedCornerShape(16.dp),
+                    color = Color(0xFFFCE4EC),
+                    modifier = Modifier.fillMaxWidth()
+                ) {
+                    Row(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(horizontal = 16.dp, vertical = 14.dp),
+                        horizontalArrangement = Arrangement.SpaceBetween,
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        Column {
+                            Text(
+                                text = unit.bannerTitle,
+                                fontSize = 18.sp,
+                                fontWeight = FontWeight.Bold,
+                                color = Color(0xFFAD1457)
+                            )
+                        }
+
+                        // Star card deck icon
+                        Text(text = "⭐🃏", fontSize = 20.sp)
+                    }
+                }
+
+                // Sub-pill "1"
+                Surface(
+                    shape = RoundedCornerShape(8.dp),
+                    color = Color(0xFFF8BBD0),
+                    modifier = Modifier.padding(top = 4.dp, start = 20.dp)
+                ) {
+                    Text(
+                        text = "1",
+                        fontSize = 12.sp,
+                        fontWeight = FontWeight.Bold,
+                        color = Color(0xFF880E4F),
+                        modifier = Modifier.padding(horizontal = 14.dp, vertical = 2.dp)
+                    )
+                }
+            }
+        }
+
+        // WINDING SERPENTINE 3D NODES (Screenshots 1, 2, 3)
+        itemsIndexed(unit.nodes) { index, node ->
+            val xOffset = pathXOffsets.getOrElse(index) { 0.dp }
+
+            // Curved connector line
+            if (index > 0) {
+                Box(
+                    modifier = Modifier
+                        .height(34.dp)
+                        .width(28.dp)
+                        .background(
+                            color = if (node.iconType == NodeIconType.REST_AREA) Color(0xFF81D4FA) else Color(0xFFF8BBD0),
+                            shape = RoundedCornerShape(14.dp)
                         )
+                )
+            }
+
+            // Node item
+            when (node.iconType) {
+                NodeIconType.CAP, NodeIconType.DUMBBELL -> {
+                    GlossyCircleNode(
+                        node = node,
+                        xOffset = xOffset,
+                        onClick = {
+                            selectedLessonForSheet = unit.lessons.first()
+                        }
+                    )
+                }
+
+                NodeIconType.CHEST -> {
+                    // Golden square checkpoint chest with handshake
+                    GoldCheckpointNode(
+                        onClick = {
+                            onSelectStory(unit.story)
+                        }
+                    )
+                }
+
+                NodeIconType.REST_AREA -> {
+                    // Unit 2 Rest Area Banner
+                    RestAreaNode(
+                        onClick = {
+                            onSelectStory(unit.story)
+                        }
+                    )
+                }
+            }
+        }
+
+        // FLOATING NOTIFICATION TOOLTIP (Screenshot 1)
+        item {
+            Spacer(modifier = Modifier.height(20.dp))
+            Surface(
+                shape = RoundedCornerShape(18.dp),
+                color = Color(0xFFFFB300),
+                shadowElevation = 6.dp,
+                modifier = Modifier
+                    .fillMaxWidth(0.9f)
+                    .clickable { selectedLessonForSheet = unit.lessons.first() }
+            ) {
+                Row(
+                    modifier = Modifier.padding(horizontal = 16.dp, vertical = 12.dp),
+                    horizontalArrangement = Arrangement.SpaceBetween,
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    Row(verticalAlignment = Alignment.CenterVertically) {
+                        Text(text = "🔔", fontSize = 18.sp)
+                        Spacer(modifier = Modifier.width(8.dp))
                         Text(
-                            text = "《${units[0].story.titleHanzi}》",
-                            fontSize = 16.sp,
+                            text = "Anda punya pesan baru! >",
                             fontWeight = FontWeight.Bold,
-                            color = DeepNavy
-                        )
-                        Text(
-                            text = units[0].story.titleTranslation,
-                            fontSize = 12.sp,
-                            color = SlateGray
+                            fontSize = 14.sp,
+                            color = Color.White
                         )
                     }
 
-                    Surface(
-                        shape = RoundedCornerShape(12.dp),
-                        color = HelloGreen
-                    ) {
-                        Text(
-                            text = "Read",
-                            color = Color.White,
-                            fontSize = 12.sp,
-                            fontWeight = FontWeight.Bold,
-                            modifier = Modifier.padding(horizontal = 14.dp, vertical = 6.dp)
-                        )
-                    }
+                    Icon(
+                        imageVector = Icons.Default.ArrowDownward,
+                        contentDescription = "Buka",
+                        tint = Color.White
+                    )
                 }
             }
         }
     }
 
-    // Modal Bottom Sheet when user taps any unit node
-    if (selectedUnitForSheet != null) {
-        val unit = selectedUnitForSheet!!
+    // Modal Bottom Sheet when user clicks a node
+    if (selectedLessonForSheet != null) {
+        val lesson = selectedLessonForSheet!!
         ModalBottomSheet(
-            onDismissRequest = { selectedUnitForSheet = null },
+            onDismissRequest = { selectedLessonForSheet = null },
             containerColor = MaterialTheme.colorScheme.surface
         ) {
             Column(
@@ -274,136 +303,162 @@ fun HomeScreen(
                 Row(verticalAlignment = Alignment.CenterVertically) {
                     Box(
                         modifier = Modifier
-                            .size(46.dp)
+                            .size(50.dp)
                             .clip(CircleShape)
-                            .background(HelloMint),
+                            .background(Color(0xFFE91E63)),
                         contentAlignment = Alignment.Center
                     ) {
-                        Text(text = unit.emoji, fontSize = 24.sp)
+                        Text(text = "🎓", fontSize = 26.sp)
                     }
-                    Spacer(modifier = Modifier.width(12.dp))
+                    Spacer(modifier = Modifier.width(14.dp))
                     Column {
                         Text(
-                            text = "UNIT ${unit.unitNumber}: ${unit.title}",
-                            fontSize = 17.sp,
+                            text = lesson.title,
+                            fontSize = 18.sp,
                             fontWeight = FontWeight.Bold,
                             color = DeepNavy
                         )
                         Text(
-                            text = unit.subtitle,
+                            text = "${lesson.exercises.size} Latihan interaktif sesuai HelloChinese",
                             fontSize = 12.sp,
                             color = SlateGray
                         )
                     }
                 }
 
-                Spacer(modifier = Modifier.height(16.dp))
-                HorizontalDivider(color = LightSlate, thickness = 1.dp)
-                Spacer(modifier = Modifier.height(14.dp))
+                Spacer(modifier = Modifier.height(18.dp))
 
-                Text(
-                    text = "Lessons in this unit:",
-                    fontSize = 13.sp,
-                    fontWeight = FontWeight.Bold,
-                    color = SlateGray
-                )
-
-                Spacer(modifier = Modifier.height(8.dp))
-
-                unit.lessons.forEachIndexed { lIdx, lesson ->
-                    Surface(
-                        shape = RoundedCornerShape(14.dp),
-                        color = LightSlate,
-                        onClick = {
-                            selectedUnitForSheet = null
-                            onSelectLesson(lesson)
-                        },
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .padding(vertical = 4.dp)
-                    ) {
-                        Row(
-                            modifier = Modifier.padding(14.dp),
-                            verticalAlignment = Alignment.CenterVertically
-                        ) {
-                            Box(
-                                modifier = Modifier
-                                    .size(30.dp)
-                                    .clip(CircleShape)
-                                    .background(HelloGreen),
-                                contentAlignment = Alignment.Center
-                            ) {
-                                Text(
-                                    text = "${lIdx + 1}",
-                                    color = Color.White,
-                                    fontSize = 13.sp,
-                                    fontWeight = FontWeight.Bold
-                                )
-                            }
-                            Spacer(modifier = Modifier.width(12.dp))
-                            Column(modifier = Modifier.weight(1f)) {
-                                Text(
-                                    text = lesson.title,
-                                    fontSize = 14.sp,
-                                    fontWeight = FontWeight.Bold,
-                                    color = DeepNavy
-                                )
-                                Text(
-                                    text = lesson.subtitle,
-                                    fontSize = 11.sp,
-                                    color = SlateGray
-                                )
-                            }
-                            Icon(
-                                imageVector = Icons.Default.ChevronRight,
-                                contentDescription = "Start",
-                                tint = SlateGray
-                            )
-                        }
-                    }
+                Button(
+                    onClick = {
+                        val l = lesson
+                        selectedLessonForSheet = null
+                        onSelectLesson(l)
+                    },
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .height(52.dp),
+                    shape = RoundedCornerShape(26.dp),
+                    colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF00C48C))
+                ) {
+                    Text(text = "MULAI BELAJAR", fontWeight = FontWeight.Bold, fontSize = 16.sp)
                 }
 
                 Spacer(modifier = Modifier.height(10.dp))
 
-                // Unit Story Action
-                Surface(
-                    shape = RoundedCornerShape(14.dp),
-                    color = SoftAmber,
+                OutlinedButton(
                     onClick = {
-                        selectedUnitForSheet = null
+                        selectedLessonForSheet = null
                         onSelectStory(unit.story)
                     },
-                    modifier = Modifier.fillMaxWidth()
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .height(50.dp),
+                    shape = RoundedCornerShape(25.dp)
                 ) {
-                    Row(
-                        modifier = Modifier.padding(14.dp),
-                        verticalAlignment = Alignment.CenterVertically
-                    ) {
-                        Text(text = "📖", fontSize = 22.sp)
-                        Spacer(modifier = Modifier.width(12.dp))
-                        Column(modifier = Modifier.weight(1f)) {
-                            Text(
-                                text = "Read Graded Story: 《${unit.story.titleHanzi}》",
-                                fontSize = 13.sp,
-                                fontWeight = FontWeight.Bold,
-                                color = Color(0xFF7A4B00)
-                            )
-                            Text(
-                                text = "${unit.story.titleTranslation} • Test your reading",
-                                fontSize = 11.sp,
-                                color = Color(0xFF9E6500)
-                            )
-                        }
-                        Icon(
-                            imageVector = Icons.Default.ChevronRight,
-                            contentDescription = "Read",
-                            tint = Color(0xFF7A4B00)
-                        )
-                    }
+                    Text(text = "Baca Cerita: 《${unit.story.titleHanzi}》", fontWeight = FontWeight.Bold, color = DeepNavy)
                 }
 
-                Spacer(modifier = Modifier.height(24.dp))
+                Spacer(modifier = Modifier.height(20.dp))
             }
+        }
+    }
+}
+
+// 3D GLOSSY CIRCLE NODE (Screenshots 1, 2)
+@Composable
+fun GlossyCircleNode(
+    node: PathNode,
+    xOffset: androidx.compose.ui.unit.Dp,
+    onClick: () -> Unit
+) {
+    Column(
+        horizontalAlignment = Alignment.CenterHorizontally,
+        modifier = Modifier
+            .offset(x = xOffset)
+            .padding(vertical = 4.dp)
+    ) {
+        Box(
+            modifier = Modifier
+                .size(76.dp)
+                .shadow(elevation = 6.dp, shape = CircleShape)
+                .clip(CircleShape)
+                .background(node.color)
+                .border(3.dp, Color.White, CircleShape)
+                .clickable(onClick = onClick),
+            contentAlignment = Alignment.Center
+        ) {
+            // Specular gloss reflection highlight on top-right
+            Box(
+                modifier = Modifier
+                    .size(24.dp)
+                    .offset(x = 12.dp, y = (-12).dp)
+                    .clip(CircleShape)
+                    .background(Color.White.copy(alpha = 0.45f))
+            )
+
+            // Icon inside circle
+            Text(
+                text = if (node.iconType == NodeIconType.CAP) "🎓" else "🏋️",
+                fontSize = 32.sp
+            )
+        }
+    }
+}
+
+// GOLD CHECKPOINT CHEST NODE (Screenshot 2)
+@Composable
+fun GoldCheckpointNode(
+    onClick: () -> Unit
+) {
+    Surface(
+        shape = RoundedCornerShape(18.dp),
+        color = Color(0xFFFFB300),
+        border = androidx.compose.foundation.BorderStroke(3.dp, Color.White),
+        shadowElevation = 6.dp,
+        modifier = Modifier
+            .size(76.dp)
+            .clickable(onClick = onClick)
+    ) {
+        Box(contentAlignment = Alignment.Center) {
+            Text(text = "🤝", fontSize = 36.sp)
+        }
+    }
+}
+
+// REST AREA NODE (Screenshot 2)
+@Composable
+fun RestAreaNode(
+    onClick: () -> Unit
+) {
+    Column(
+        horizontalAlignment = Alignment.CenterHorizontally,
+        modifier = Modifier.padding(top = 10.dp)
+    ) {
+        Surface(
+            shape = CircleShape,
+            color = Color(0xFFE1F5FE),
+            border = androidx.compose.foundation.BorderStroke(2.dp, Color(0xFF03A9F4)),
+            modifier = Modifier
+                .size(76.dp)
+                .clickable(onClick = onClick)
+        ) {
+            Box(contentAlignment = Alignment.Center) {
+                Text(text = "⛽", fontSize = 38.sp)
+            }
+        }
+
+        Surface(
+            shape = RoundedCornerShape(10.dp),
+            color = Color(0xFFE1F5FE),
+            modifier = Modifier.padding(top = 6.dp)
+        ) {
+            Text(
+                text = "Rest area",
+                fontWeight = FontWeight.Bold,
+                fontSize = 13.sp,
+                color = Color(0xFF0288D1),
+                modifier = Modifier.padding(horizontal = 14.dp, vertical = 4.dp)
+            )
         }
     }
 }
