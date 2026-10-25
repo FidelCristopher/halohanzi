@@ -100,8 +100,10 @@ data class Lesson(
 enum class NodeIconType {
     CAP,        // Graduation cap
     DUMBBELL,   // 'H' dumbbell
+    SHUFFLE,    // Cross / shuffle arrows (Screenshot 2026-10-25 210240.png)
+    BOOK,       // Reading / Quiz icon
     CHEST,      // Checkpoint chest with handshake
-    REST_AREA   // Unit 2 Rest area gas pump
+    REST_AREA   // Unit transition gas pump
 }
 
 data class PathNode(

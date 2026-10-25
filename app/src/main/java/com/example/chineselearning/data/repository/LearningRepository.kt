@@ -382,12 +382,14 @@ object LearningRepository {
             story = stories[0],
             nodes = listOf(
                 PathNode("u1_n1", "Sapaan 1", Color(0xFFE91E63), NodeIconType.CAP, isCompleted = true, lessonId = "u1_l1"),
-                PathNode("u1_n2", "Identitas", Color(0xFFFFC107), NodeIconType.CAP, isCompleted = true, lessonId = "u1_l1"),
-                PathNode("u1_n3", "Latihan H", Color(0xFFFFC107), NodeIconType.DUMBBELL, isCompleted = true, lessonId = "u1_l1"),
-                PathNode("u1_n4", "Teman Baru", Color(0xFFFFC107), NodeIconType.CAP, isCompleted = false, lessonId = "u1_l1"),
-                PathNode("u1_n5", "Review H", Color(0xFFFFC107), NodeIconType.DUMBBELL, isCompleted = false, lessonId = "u1_l1"),
-                PathNode("u1_n6", "Checkpoint", Color(0xFFFFB300), NodeIconType.CHEST, isCompleted = false, lessonId = "u1_l1"),
-                PathNode("u1_n7", "Rest area", Color(0xFF03A9F4), NodeIconType.REST_AREA, isCompleted = false, lessonId = "u1_l1")
+                PathNode("u1_n2", "Sapaan 2", Color(0xFFFFC107), NodeIconType.CAP, isCompleted = true, lessonId = "u1_l1"),
+                PathNode("u1_n3", "Latihan 1", Color(0xFFFFC107), NodeIconType.DUMBBELL, isCompleted = true, lessonId = "u1_l1"),
+                PathNode("u1_n4", "Identitas", Color(0xFFFFC107), NodeIconType.CAP, isCompleted = false, lessonId = "u1_l1"),
+                PathNode("u1_n5", "Latihan 2", Color(0xFFFFC107), NodeIconType.DUMBBELL, isCompleted = false, lessonId = "u1_l1"),
+                PathNode("u1_n6", "Latihan Campuran", Color(0xFFFFC107), NodeIconType.SHUFFLE, isCompleted = false, lessonId = "u1_l1"),
+                PathNode("u1_n7", "Kuis Cerita", Color(0xFFFFC107), NodeIconType.BOOK, isCompleted = false, lessonId = "u1_l1"),
+                PathNode("u1_n8", "Checkpoint Peti", Color(0xFFFFB300), NodeIconType.CHEST, isCompleted = false, lessonId = "u1_l1"),
+                PathNode("u1_n9", "Rest area", Color(0xFF03A9F4), NodeIconType.REST_AREA, isCompleted = false, lessonId = "u1_l1")
             ),
             lessons = listOf(
                 Lesson(
@@ -511,7 +513,11 @@ object LearningRepository {
                 PathNode("u2_n2", "Umur & Tahun", Color(0xFFFFC107), NodeIconType.CAP, isCompleted = false, lessonId = "u2_l1"),
                 PathNode("u2_n3", "Latihan Waktu", Color(0xFFFFC107), NodeIconType.DUMBBELL, isCompleted = false, lessonId = "u2_l1"),
                 PathNode("u2_n4", "Jam & Menit", Color(0xFFFFC107), NodeIconType.CAP, isCompleted = false, lessonId = "u2_l1"),
-                PathNode("u2_n5", "Checkpoint", Color(0xFFFFB300), NodeIconType.CHEST, isCompleted = false, lessonId = "u2_l1")
+                PathNode("u2_n5", "Latihan Menit", Color(0xFFFFC107), NodeIconType.DUMBBELL, isCompleted = false, lessonId = "u2_l1"),
+                PathNode("u2_n6", "Latihan Campuran", Color(0xFFFFC107), NodeIconType.SHUFFLE, isCompleted = false, lessonId = "u2_l1"),
+                PathNode("u2_n7", "Kuis Cerita", Color(0xFFFFC107), NodeIconType.BOOK, isCompleted = false, lessonId = "u2_l1"),
+                PathNode("u2_n8", "Checkpoint Peti", Color(0xFFFFB300), NodeIconType.CHEST, isCompleted = false, lessonId = "u2_l1"),
+                PathNode("u2_n9", "Rest area", Color(0xFF03A9F4), NodeIconType.REST_AREA, isCompleted = false, lessonId = "u2_l1")
             ),
             lessons = listOf(
                 Lesson(

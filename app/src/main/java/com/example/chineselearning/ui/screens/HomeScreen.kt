@@ -43,15 +43,17 @@ fun HomeScreen(
     var selectedLessonForSheet by remember { mutableStateOf<Lesson?>(null) }
     var selectedUnitForSheet by remember { mutableStateOf<UnitCourse?>(null) }
 
-    // Winding path horizontal offsets (exact serpentine curve from HelloChinese screenshot)
+    // Winding path horizontal offsets (exact 8 stages serpentine sequence from Screenshot 2026-10-25 210240.png)
     val pathXOffsets = listOf(
-        0.dp,        // Node 0: Center
-        75.dp,       // Node 1: Right
-        0.dp,        // Node 2: Center
-        (-75).dp,    // Node 3: Left
-        0.dp,        // Node 4: Center
-        75.dp,       // Node 5: Right
-        0.dp         // Node 6: Center Checkpoint
+        0.dp,        // Stage 1: Pink Cap (Center)
+        75.dp,       // Stage 2: Yellow Cap (Right)
+        0.dp,        // Stage 3: Yellow Dumbbell (Center)
+        (-75).dp,    // Stage 4: Yellow Cap (Left)
+        0.dp,        // Stage 5: Yellow Dumbbell (Center)
+        75.dp,       // Stage 6: Yellow Shuffle (Right)
+        0.dp,        // Stage 7: Yellow Book/Quiz (Center)
+        0.dp,        // Stage 8: Golden Checkpoint Chest (Center)
+        0.dp         // Transition: Rest area (Center)
     )
 
     // Palette per chapter for banner & connector
@@ -329,12 +331,11 @@ fun HomeScreen(
                     }
                 }
 
-                // CHAPTER NODES (Continuous Clean Bezier Path)
+                // CHAPTER NODES (Continuous Clean Bezier Path - 7-8 Stages per Chapter)
                 itemsIndexed(chapterUnit.nodes) { nodeIdx, node ->
-                    val globalIdx = (unitIdx * 6) + nodeIdx
-                    val currXOffset = pathXOffsets.getOrElse(globalIdx % pathXOffsets.size) { 0.dp }
+                    val currXOffset = pathXOffsets.getOrElse(nodeIdx) { 0.dp }
                     val nextXOffset = if (nodeIdx < chapterUnit.nodes.lastIndex) {
-                        pathXOffsets.getOrElse((globalIdx + 1) % pathXOffsets.size) { 0.dp }
+                        pathXOffsets.getOrElse(nodeIdx + 1) { 0.dp }
                     } else {
                         0.dp
                     }
@@ -347,11 +348,11 @@ fun HomeScreen(
                         hasNextNode = (nodeIdx < chapterUnit.nodes.lastIndex || unitIdx < allUnits.lastIndex),
                         onClick = {
                             when (node.iconType) {
-                                NodeIconType.CAP, NodeIconType.DUMBBELL -> {
+                                NodeIconType.CAP, NodeIconType.DUMBBELL, NodeIconType.SHUFFLE -> {
                                     selectedUnitForSheet = chapterUnit
                                     selectedLessonForSheet = chapterUnit.lessons.first()
                                 }
-                                NodeIconType.CHEST, NodeIconType.REST_AREA -> {
+                                NodeIconType.BOOK, NodeIconType.CHEST, NodeIconType.REST_AREA -> {
                                     onSelectStory(chapterUnit.story)
                                 }
                             }
@@ -512,7 +513,7 @@ fun StageNodeRow(
             contentAlignment = Alignment.Center
         ) {
             when (node.iconType) {
-                NodeIconType.CAP, NodeIconType.DUMBBELL -> {
+                NodeIconType.CAP, NodeIconType.DUMBBELL, NodeIconType.SHUFFLE, NodeIconType.BOOK -> {
                     Box(
                         modifier = Modifier
                             .size(76.dp)
@@ -533,7 +534,13 @@ fun StageNodeRow(
                         )
 
                         Text(
-                            text = if (node.iconType == NodeIconType.CAP) "🎓" else "🏋️",
+                            text = when (node.iconType) {
+                                NodeIconType.CAP -> "🎓"
+                                NodeIconType.DUMBBELL -> "🏋️"
+                                NodeIconType.SHUFFLE -> "🔀"
+                                NodeIconType.BOOK -> "📖"
+                                else -> "⭐"
+                            },
                             fontSize = 32.sp
                         )
                     }
