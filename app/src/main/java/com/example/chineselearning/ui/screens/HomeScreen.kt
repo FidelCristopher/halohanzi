@@ -17,7 +17,12 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.Path
+import androidx.compose.ui.graphics.StrokeCap
+import androidx.compose.ui.graphics.StrokeJoin
+import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.chineselearning.data.model.*
@@ -51,12 +56,12 @@ fun HomeScreen(
 
     // Palette per chapter for banner & connector
     val chapterThemeColors = listOf(
-        Pair(Color(0xFFFCE4EC), Color(0xFFF8BBD0)), // Bab 1: Pink
+        Pair(Color(0xFFFCE4EC), Color(0xFFF48FB1)), // Bab 1: Pink
         Pair(Color(0xFFE1F5FE), Color(0xFF81D4FA)), // Bab 2: Sky Blue
         Pair(Color(0xFFE8F5E9), Color(0xFFA5D6A7)), // Bab 3: Fresh Green
-        Pair(Color(0xFFFFF3E0), Color(0xFFFFCC80)), // Bab 4: Warm Amber
-        Pair(Color(0xFFEDE7F6), Color(0xFFD1C4E9)), // Bab 5: Purple
-        Pair(Color(0xFFE0F2F1), Color(0xFF80CBC4))  // Bab 6: Teal
+        Pair(Color(0xFFFFF3E0), Color(0xFFFFB74D)), // Bab 4: Warm Amber
+        Pair(Color(0xFFEDE7F6), Color(0xFFBA68C8)), // Bab 5: Purple
+        Pair(Color(0xFFE0F2F1), Color(0xFF4DB6AC))  // Bab 6: Teal
     )
 
     LazyColumn(
@@ -324,50 +329,34 @@ fun HomeScreen(
                     }
                 }
 
-                // CHAPTER NODES (Continuous Smooth Winding Path)
+                // CHAPTER NODES (Continuous Clean Bezier Path)
                 itemsIndexed(chapterUnit.nodes) { nodeIdx, node ->
                     val globalIdx = (unitIdx * 6) + nodeIdx
                     val currXOffset = pathXOffsets.getOrElse(globalIdx % pathXOffsets.size) { 0.dp }
-                    val prevXOffset = if (nodeIdx == 0) 0.dp else pathXOffsets.getOrElse((globalIdx - 1) % pathXOffsets.size) { 0.dp }
+                    val nextXOffset = if (nodeIdx < chapterUnit.nodes.lastIndex) {
+                        pathXOffsets.getOrElse((globalIdx + 1) % pathXOffsets.size) { 0.dp }
+                    } else {
+                        0.dp
+                    }
 
-                    // Smooth Bezier Curved Ribbon connecting previous node to current node
-                    CurvedPathConnector(
-                        startXOffset = prevXOffset,
-                        endXOffset = currXOffset,
-                        color = if (node.iconType == NodeIconType.REST_AREA) Color(0xFF81D4FA) else connectorColor,
-                        height = 38.dp
-                    )
-
-                    when (node.iconType) {
-                        NodeIconType.CAP, NodeIconType.DUMBBELL -> {
-                            GlossyCircleNode(
-                                node = node,
-                                xOffset = currXOffset,
-                                onClick = {
+                    StageNodeRow(
+                        node = node,
+                        currXOffset = currXOffset,
+                        nextXOffset = nextXOffset,
+                        lineColor = if (node.iconType == NodeIconType.REST_AREA) Color(0xFF81D4FA) else connectorColor,
+                        hasNextNode = (nodeIdx < chapterUnit.nodes.lastIndex || unitIdx < allUnits.lastIndex),
+                        onClick = {
+                            when (node.iconType) {
+                                NodeIconType.CAP, NodeIconType.DUMBBELL -> {
                                     selectedUnitForSheet = chapterUnit
                                     selectedLessonForSheet = chapterUnit.lessons.first()
                                 }
-                            )
-                        }
-
-                        NodeIconType.CHEST -> {
-                            GoldCheckpointNode(
-                                xOffset = currXOffset,
-                                onClick = {
+                                NodeIconType.CHEST, NodeIconType.REST_AREA -> {
                                     onSelectStory(chapterUnit.story)
                                 }
-                            )
+                            }
                         }
-
-                        NodeIconType.REST_AREA -> {
-                            RestAreaNode(
-                                label = "Rest area (Lanjut Bab ${chapterUnit.unitNumber + 1})",
-                                onClick = {
-                                    onSelectStory(chapterUnit.story)
-                                }
-                            )
-                        }
-                    }
+                    )
                 }
             }
         }
@@ -463,149 +452,129 @@ fun HomeScreen(
     }
 }
 
-// 3D GLOSSY CIRCLE NODE WITH BOUNCY TOUCH
+/**
+ * StageNodeRow:
+ * Draws exactly ONE continuous Bezier S-curve from the center of this circle (xCurr, yCenter)
+ * to the center of the next circle (xNext, yNextCenter).
+ * Both circles sit ON TOP with solid colors & thick white borders,
+ * completely hiding the endpoints and ensuring the curve NEVER pierces or overlaps awkwardly!
+ */
 @Composable
-fun GlossyCircleNode(
+fun StageNodeRow(
     node: PathNode,
-    xOffset: androidx.compose.ui.unit.Dp,
+    currXOffset: Dp,
+    nextXOffset: Dp,
+    lineColor: Color,
+    hasNextNode: Boolean,
+    rowHeight: Dp = 100.dp,
     onClick: () -> Unit
 ) {
-    Column(
-        horizontalAlignment = Alignment.CenterHorizontally,
-        modifier = Modifier
-            .offset(x = xOffset)
-            .padding(vertical = 0.dp)
-    ) {
-        Box(
-            modifier = Modifier
-                .size(76.dp)
-                .shadow(elevation = 6.dp, shape = CircleShape)
-                .clip(CircleShape)
-                .background(node.color)
-                .border(3.dp, Color.White, CircleShape)
-                .bouncyClick(scaleDown = 0.90f, onClick = onClick),
-            contentAlignment = Alignment.Center
-        ) {
-            Box(
-                modifier = Modifier
-                    .size(24.dp)
-                    .offset(x = 12.dp, y = (-12).dp)
-                    .clip(CircleShape)
-                    .background(Color.White.copy(alpha = 0.45f))
-            )
-
-            Text(
-                text = if (node.iconType == NodeIconType.CAP) "🎓" else "🏋️",
-                fontSize = 32.sp
-            )
-        }
-    }
-}
-
-// GOLD CHECKPOINT CHEST NODE
-@Composable
-fun GoldCheckpointNode(
-    xOffset: androidx.compose.ui.unit.Dp = 0.dp,
-    onClick: () -> Unit
-) {
-    Column(
-        horizontalAlignment = Alignment.CenterHorizontally,
-        modifier = Modifier
-            .offset(x = xOffset)
-            .padding(vertical = 4.dp)
-    ) {
-        Surface(
-            shape = RoundedCornerShape(18.dp),
-            color = Color(0xFFFFB300),
-            border = androidx.compose.foundation.BorderStroke(3.dp, Color.White),
-            shadowElevation = 6.dp,
-            modifier = Modifier
-                .size(76.dp)
-                .bouncyClick(scaleDown = 0.90f, onClick = onClick)
-        ) {
-            Box(contentAlignment = Alignment.Center) {
-                Text(text = "🤝", fontSize = 36.sp)
-            }
-        }
-    }
-}
-
-// CONTINUOUS SMOOTH SERPENTINE BEZIER CURVE CONNECTOR (HelloChinese style)
-@Composable
-fun CurvedPathConnector(
-    startXOffset: androidx.compose.ui.unit.Dp,
-    endXOffset: androidx.compose.ui.unit.Dp,
-    color: Color,
-    height: androidx.compose.ui.unit.Dp = 38.dp
-) {
-    androidx.compose.foundation.Canvas(
+    Box(
         modifier = Modifier
             .fillMaxWidth()
-            .height(height)
-            .offset(y = (-4).dp)
+            .height(rowHeight),
+        contentAlignment = Alignment.Center
     ) {
-        val centerX = size.width / 2f
-        val x1 = centerX + startXOffset.toPx()
-        val y1 = 0f
-        val x2 = centerX + endXOffset.toPx()
-        val y2 = size.height
+        // 1. BEZIER ROAD DRAWN BEHIND (Extending from center of this circle to center of next circle)
+        if (hasNextNode) {
+            androidx.compose.foundation.Canvas(modifier = Modifier.fillMaxSize()) {
+                val centerX = size.width / 2f
+                val yCenter = size.height / 2f
 
-        val path = androidx.compose.ui.graphics.Path().apply {
-            moveTo(x1, y1)
-            cubicTo(
-                x1, y1 + (y2 - y1) * 0.5f,
-                x2, y1 + (y2 - y1) * 0.5f,
-                x2, y2
-            )
-        }
+                val xCurr = centerX + currXOffset.toPx()
+                val xNext = centerX + nextXOffset.toPx()
+                val yNext = yCenter + size.height // Reaches exactly the center of the next row's circle!
 
-        drawPath(
-            path = path,
-            color = color,
-            style = androidx.compose.ui.graphics.drawscope.Stroke(
-                width = 14.dp.toPx(),
-                cap = androidx.compose.ui.graphics.StrokeCap.Round,
-                join = androidx.compose.ui.graphics.StrokeJoin.Round
-            )
-        )
-    }
-}
+                val path = Path().apply {
+                    moveTo(xCurr, yCenter)
+                    cubicTo(
+                        xCurr, yCenter + (yNext - yCenter) * 0.5f,
+                        xNext, yCenter + (yNext - yCenter) * 0.5f,
+                        xNext, yNext
+                    )
+                }
 
-// REST AREA NODE
-@Composable
-fun RestAreaNode(
-    label: String = "Rest area",
-    onClick: () -> Unit
-) {
-    Column(
-        horizontalAlignment = Alignment.CenterHorizontally,
-        modifier = Modifier.padding(top = 10.dp)
-    ) {
-        Surface(
-            shape = CircleShape,
-            color = Color(0xFFE1F5FE),
-            border = androidx.compose.foundation.BorderStroke(2.dp, Color(0xFF03A9F4)),
-            modifier = Modifier
-                .size(76.dp)
-                .bouncyClick(scaleDown = 0.90f, onClick = onClick)
-        ) {
-            Box(contentAlignment = Alignment.Center) {
-                Text(text = "⛽", fontSize = 38.sp)
+                drawPath(
+                    path = path,
+                    color = lineColor,
+                    style = Stroke(
+                        width = 13.dp.toPx(),
+                        cap = StrokeCap.Round,
+                        join = StrokeJoin.Round
+                    )
+                )
             }
         }
 
-        Surface(
-            shape = RoundedCornerShape(10.dp),
-            color = Color(0xFFE1F5FE),
-            modifier = Modifier.padding(top = 6.dp)
+        // 2. THE NODE DRAWN ON TOP (Solid background + 3.5dp white border cleanly covers the center!)
+        Box(
+            modifier = Modifier.offset(x = currXOffset),
+            contentAlignment = Alignment.Center
         ) {
-            Text(
-                text = label,
-                fontWeight = FontWeight.Bold,
-                fontSize = 12.sp,
-                color = Color(0xFF0288D1),
-                modifier = Modifier.padding(horizontal = 12.dp, vertical = 4.dp)
-            )
+            when (node.iconType) {
+                NodeIconType.CAP, NodeIconType.DUMBBELL -> {
+                    Box(
+                        modifier = Modifier
+                            .size(76.dp)
+                            .shadow(elevation = 6.dp, shape = CircleShape)
+                            .clip(CircleShape)
+                            .background(node.color)
+                            .border(3.5.dp, Color.White, CircleShape)
+                            .bouncyClick(scaleDown = 0.90f, onClick = onClick),
+                        contentAlignment = Alignment.Center
+                    ) {
+                        // Gloss specular reflection highlight
+                        Box(
+                            modifier = Modifier
+                                .size(24.dp)
+                                .offset(x = 12.dp, y = (-12).dp)
+                                .clip(CircleShape)
+                                .background(Color.White.copy(alpha = 0.45f))
+                        )
+
+                        Text(
+                            text = if (node.iconType == NodeIconType.CAP) "🎓" else "🏋️",
+                            fontSize = 32.sp
+                        )
+                    }
+                }
+
+                NodeIconType.CHEST -> {
+                    Surface(
+                        shape = RoundedCornerShape(18.dp),
+                        color = Color(0xFFFFB300),
+                        border = androidx.compose.foundation.BorderStroke(3.5.dp, Color.White),
+                        shadowElevation = 6.dp,
+                        modifier = Modifier
+                            .size(76.dp)
+                            .bouncyClick(scaleDown = 0.90f, onClick = onClick)
+                    ) {
+                        Box(contentAlignment = Alignment.Center) {
+                            Text(text = "🤝", fontSize = 36.sp)
+                        }
+                    }
+                }
+
+                NodeIconType.REST_AREA -> {
+                    Column(
+                        horizontalAlignment = Alignment.CenterHorizontally
+                    ) {
+                        Surface(
+                            shape = CircleShape,
+                            color = Color(0xFFE1F5FE),
+                            border = androidx.compose.foundation.BorderStroke(3.dp, Color(0xFF03A9F4)),
+                            shadowElevation = 4.dp,
+                            modifier = Modifier
+                                .size(76.dp)
+                                .bouncyClick(scaleDown = 0.90f, onClick = onClick)
+                        ) {
+                            Box(contentAlignment = Alignment.Center) {
+                                Text(text = "⛽", fontSize = 38.sp)
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }
