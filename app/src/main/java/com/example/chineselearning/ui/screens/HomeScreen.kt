@@ -1,5 +1,6 @@
 package com.example.chineselearning.ui.screens
 
+import androidx.compose.animation.*
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
@@ -27,6 +28,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.chineselearning.data.model.*
 import com.example.chineselearning.data.repository.LearningRepository
+import com.example.chineselearning.ui.components.GoldenStagePopup
 import com.example.chineselearning.ui.components.bouncyClick
 import com.example.chineselearning.ui.theme.*
 
@@ -40,8 +42,7 @@ fun HomeScreen(
     var selectedHskLevel by remember { mutableStateOf(1) }
     var showHskMenu by remember { mutableStateOf(false) }
 
-    var selectedLessonForSheet by remember { mutableStateOf<Lesson?>(null) }
-    var selectedUnitForSheet by remember { mutableStateOf<UnitCourse?>(null) }
+    var activePopupNodeId by remember { mutableStateOf<String?>("u1_n2") } // Defaults to Node 2 (like screenshot) or null
 
     // Winding path horizontal offsets (exact 8 stages serpentine sequence from Screenshot 2026-10-25 210240.png)
     val pathXOffsets = listOf(
@@ -281,8 +282,7 @@ fun HomeScreen(
                             modifier = Modifier
                                 .fillMaxWidth()
                                 .bouncyClick {
-                                    selectedUnitForSheet = chapterUnit
-                                    selectedLessonForSheet = chapterUnit.lessons.first()
+                                    activePopupNodeId = chapterUnit.nodes.firstOrNull()?.id
                                 }
                         ) {
                             Row(
@@ -347,107 +347,33 @@ fun HomeScreen(
                         lineColor = if (node.iconType == NodeIconType.REST_AREA) Color(0xFF81D4FA) else connectorColor,
                         hasNextNode = (nodeIdx < chapterUnit.nodes.lastIndex || unitIdx < allUnits.lastIndex),
                         onClick = {
-                            when (node.iconType) {
-                                NodeIconType.CAP, NodeIconType.DUMBBELL, NodeIconType.SHUFFLE -> {
-                                    selectedUnitForSheet = chapterUnit
-                                    selectedLessonForSheet = chapterUnit.lessons.first()
-                                }
-                                NodeIconType.BOOK, NodeIconType.CHEST, NodeIconType.REST_AREA -> {
-                                    onSelectStory(chapterUnit.story)
-                                }
-                            }
+                            activePopupNodeId = if (activePopupNodeId == node.id) null else node.id
                         }
                     )
-                }
-            }
-        }
-    }
 
-    // Modal Bottom Sheet when user clicks any node or chapter
-    if (selectedLessonForSheet != null && selectedUnitForSheet != null) {
-        val lesson = selectedLessonForSheet!!
-        val unitItem = selectedUnitForSheet!!
-
-        ModalBottomSheet(
-            onDismissRequest = {
-                selectedLessonForSheet = null
-                selectedUnitForSheet = null
-            },
-            containerColor = MaterialTheme.colorScheme.surface
-        ) {
-            Column(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(20.dp)
-            ) {
-                Row(verticalAlignment = Alignment.CenterVertically) {
-                    Box(
-                        modifier = Modifier
-                            .size(50.dp)
-                            .clip(CircleShape)
-                            .background(Color(0xFFE91E63)),
-                        contentAlignment = Alignment.Center
+                    // HelloChinese Golden Speech-Bubble Popup (WhatsApp Image 2026-10-26 at 22.11.46.jpeg)
+                    AnimatedVisibility(
+                        visible = activePopupNodeId == node.id,
+                        enter = expandVertically() + fadeIn(),
+                        exit = shrinkVertically() + fadeOut()
                     ) {
-                        Text(text = unitItem.emoji, fontSize = 26.sp)
-                    }
-                    Spacer(modifier = Modifier.width(14.dp))
-                    Column {
-                        Text(
-                            text = "Bab ${unitItem.unitNumber}: ${lesson.title}",
-                            fontSize = 18.sp,
-                            fontWeight = FontWeight.Bold,
-                            color = DeepNavy
+                        GoldenStagePopup(
+                            node = node,
+                            xOffset = currXOffset,
+                            onStartClick = {
+                                activePopupNodeId = null
+                                when (node.iconType) {
+                                    NodeIconType.CAP, NodeIconType.DUMBBELL, NodeIconType.SHUFFLE -> {
+                                        onSelectLesson(chapterUnit.lessons.first())
+                                    }
+                                    NodeIconType.BOOK, NodeIconType.CHEST, NodeIconType.REST_AREA -> {
+                                        onSelectStory(chapterUnit.story)
+                                    }
+                                }
+                            }
                         )
-                        Text(
-                            text = "${lesson.exercises.size} Latihan interaktif HSK 1",
-                            fontSize = 12.sp,
-                            color = SlateGray
-                        )
                     }
                 }
-
-                Spacer(modifier = Modifier.height(18.dp))
-
-                Surface(
-                    shape = RoundedCornerShape(26.dp),
-                    color = Color(0xFF00C48C),
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .height(52.dp)
-                        .bouncyClick {
-                            val targetLesson = lesson
-                            selectedLessonForSheet = null
-                            selectedUnitForSheet = null
-                            onSelectLesson(targetLesson)
-                        }
-                ) {
-                    Box(contentAlignment = Alignment.Center) {
-                        Text(text = "MULAI BELAJAR", fontWeight = FontWeight.Bold, fontSize = 16.sp, color = Color.White)
-                    }
-                }
-
-                Spacer(modifier = Modifier.height(10.dp))
-
-                Surface(
-                    shape = RoundedCornerShape(25.dp),
-                    color = Color(0xFFFFF8E1),
-                    border = androidx.compose.foundation.BorderStroke(1.dp, Color(0xFFFFD54F)),
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .height(50.dp)
-                        .bouncyClick {
-                            val targetStory = unitItem.story
-                            selectedLessonForSheet = null
-                            selectedUnitForSheet = null
-                            onSelectStory(targetStory)
-                        }
-                ) {
-                    Box(contentAlignment = Alignment.Center) {
-                        Text(text = "Baca Cerita: 《${unitItem.story.titleHanzi}》", fontWeight = FontWeight.Bold, color = Color(0xFF7A4B00))
-                    }
-                }
-
-                Spacer(modifier = Modifier.height(20.dp))
             }
         }
     }
