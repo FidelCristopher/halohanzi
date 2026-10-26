@@ -1,8 +1,6 @@
 package com.example.chineselearning.ui.components
 
-import androidx.compose.animation.*
 import androidx.compose.foundation.background
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.*
@@ -15,6 +13,7 @@ import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Path
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -38,10 +37,10 @@ fun GoldenStagePopup(
     Column(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(horizontal = 20.dp, vertical = 4.dp),
+            .padding(horizontal = 16.dp, vertical = 2.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        // Triangular notch pointing up toward the node circle
+        // Triangular notch pointing up toward the node circle (Screenshot WhatsApp Image 2026-10-26 at 22.11.46.jpeg)
         androidx.compose.foundation.Canvas(
             modifier = Modifier
                 .fillMaxWidth()
@@ -67,7 +66,7 @@ fun GoldenStagePopup(
         Box(
             modifier = Modifier
                 .fillMaxWidth()
-                .shadow(elevation = 10.dp, shape = RoundedCornerShape(20.dp))
+                .shadow(elevation = 12.dp, shape = RoundedCornerShape(20.dp))
                 .clip(RoundedCornerShape(20.dp))
                 .background(Color(0xFFFF8F00)) // 3D Bottom darker rim
         ) {
@@ -77,7 +76,7 @@ fun GoldenStagePopup(
                     .padding(bottom = 5.dp) // Exposes 5dp bottom 3D rim
                     .clip(RoundedCornerShape(topStart = 20.dp, topEnd = 20.dp, bottomStart = 16.dp, bottomEnd = 16.dp))
                     .background(goldGradient)
-                    .padding(horizontal = 20.dp, vertical = 18.dp)
+                    .padding(horizontal = 18.dp, vertical = 18.dp)
             ) {
                 // Category Header (🎓 Belajar or 🏋️ Latihan)
                 Row(verticalAlignment = Alignment.CenterVertically) {
@@ -108,49 +107,69 @@ fun GoldenStagePopup(
 
                 Spacer(modifier = Modifier.height(16.dp))
 
-                // FULL-WIDTH WHITE PILL BUTTON: Both "ULANGI" and "1/2" are INSIDE!
+                // TWO SEPARATE WHITE BOXES SIDE BY SIDE (Screenshot WhatsApp Image 2026-10-26 at 22.11.46.jpeg)
                 val progressText = "$progressCount/2"
                 val buttonText = if (progressCount >= 2 || node.isCompleted) "ULANGI" else "MULAI"
 
-                Box(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .height(52.dp)
-                        .shadow(elevation = 4.dp, shape = RoundedCornerShape(26.dp))
-                        .clip(RoundedCornerShape(26.dp))
-                        .background(Color(0xFFD6D6D6)) // Button 3D bottom rim
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.spacedBy(10.dp),
+                    verticalAlignment = Alignment.CenterVertically
                 ) {
-                    Surface(
-                        shape = RoundedCornerShape(26.dp),
-                        color = Color.White,
+                    // Kotak 1: Tombol Putih "ULANGI" / "MULAI" (Lebar fleksibel)
+                    Box(
                         modifier = Modifier
-                            .fillMaxWidth()
-                            .height(47.dp)
-                            .bouncyClick(onClick = onStartClick)
+                            .weight(1f)
+                            .height(50.dp)
+                            .shadow(elevation = 4.dp, shape = RoundedCornerShape(25.dp))
+                            .clip(RoundedCornerShape(25.dp))
+                            .background(Color(0xFFD6D6D6)) // 3D rim bawah tombol
                     ) {
-                        Box(
+                        Surface(
+                            shape = RoundedCornerShape(25.dp),
+                            color = Color.White,
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .height(46.dp)
+                                .bouncyClick(onClick = onStartClick)
+                        ) {
+                            Box(contentAlignment = Alignment.Center) {
+                                Text(
+                                    text = buttonText,
+                                    fontSize = 16.sp,
+                                    fontWeight = FontWeight.Bold,
+                                    color = Color(0xFFFF9800),
+                                    letterSpacing = 0.5.sp
+                                )
+                            }
+                        }
+                    }
+
+                    // Kotak 2: Kotak Putih Terpisah "1/2" (atau "2/2")
+                    Box(
+                        modifier = Modifier
+                            .width(76.dp)
+                            .height(50.dp)
+                            .shadow(elevation = 4.dp, shape = RoundedCornerShape(25.dp))
+                            .clip(RoundedCornerShape(25.dp))
+                            .background(Color(0xFFD6D6D6)) // 3D rim bawah kotak
+                    ) {
+                        Surface(
+                            shape = RoundedCornerShape(25.dp),
+                            color = Color.White,
                             modifier = Modifier
                                 .fillMaxSize()
-                                .padding(horizontal = 20.dp),
-                            contentAlignment = Alignment.Center
+                                .padding(bottom = 4.dp)
                         ) {
-                            // "ULANGI" / "MULAI" centered
-                            Text(
-                                text = buttonText,
-                                fontSize = 16.sp,
-                                fontWeight = FontWeight.Bold,
-                                color = Color(0xFFFF9800),
-                                letterSpacing = 0.5.sp
-                            )
-
-                            // "1/2" or "2/2" at the far right inside the white pill!
-                            Text(
-                                text = progressText,
-                                fontSize = 15.sp,
-                                fontWeight = FontWeight.Bold,
-                                color = Color(0xFFFF9800),
-                                modifier = Modifier.align(Alignment.CenterEnd)
-                            )
+                            Box(contentAlignment = Alignment.Center) {
+                                Text(
+                                    text = progressText,
+                                    fontSize = 16.sp,
+                                    fontWeight = FontWeight.Bold,
+                                    color = Color(0xFFFF8F00),
+                                    textAlign = TextAlign.Center
+                                )
+                            }
                         }
                     }
                 }

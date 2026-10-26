@@ -22,10 +22,14 @@ import androidx.compose.ui.graphics.Path
 import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.graphics.StrokeJoin
 import androidx.compose.ui.graphics.drawscope.Stroke
+import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.Dp
+import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.compose.ui.window.Popup
+import androidx.compose.ui.window.PopupProperties
 import com.example.chineselearning.data.model.*
 import com.example.chineselearning.data.repository.LearningRepository
 import com.example.chineselearning.ui.components.GoldenStagePopup
@@ -339,6 +343,7 @@ fun HomeScreen(
                     } else {
                         0.dp
                     }
+                    val progressCount = LearningRepository.getStageProgress(node.id)
 
                     StageNodeRow(
                         node = node,
@@ -346,36 +351,26 @@ fun HomeScreen(
                         nextXOffset = nextXOffset,
                         lineColor = if (node.iconType == NodeIconType.REST_AREA) Color(0xFF81D4FA) else connectorColor,
                         hasNextNode = (nodeIdx < chapterUnit.nodes.lastIndex || unitIdx < allUnits.lastIndex),
+                        isPopupActive = (activePopupNodeId == node.id),
+                        progressCount = progressCount,
                         onClick = {
                             activePopupNodeId = if (activePopupNodeId == node.id) null else node.id
-                        }
-                    )
-
-                    // HelloChinese Golden Speech-Bubble Popup (WhatsApp Image 2026-10-26 at 22.11.46.jpeg)
-                    val progressCount = LearningRepository.getStageProgress(node.id)
-
-                    AnimatedVisibility(
-                        visible = activePopupNodeId == node.id,
-                        enter = expandVertically() + fadeIn(),
-                        exit = shrinkVertically() + fadeOut()
-                    ) {
-                        GoldenStagePopup(
-                            node = node,
-                            xOffset = currXOffset,
-                            progressCount = progressCount,
-                            onStartClick = {
-                                activePopupNodeId = null
-                                when (node.iconType) {
-                                    NodeIconType.CAP, NodeIconType.DUMBBELL, NodeIconType.SHUFFLE -> {
-                                        onSelectLesson(chapterUnit.lessons.first(), node.id)
-                                    }
-                                    NodeIconType.BOOK, NodeIconType.CHEST, NodeIconType.REST_AREA -> {
-                                        onSelectStory(chapterUnit.story)
-                                    }
+                        },
+                        onDismissPopup = {
+                            activePopupNodeId = null
+                        },
+                        onStartLesson = {
+                            activePopupNodeId = null
+                            when (node.iconType) {
+                                NodeIconType.CAP, NodeIconType.DUMBBELL, NodeIconType.SHUFFLE -> {
+                                    onSelectLesson(chapterUnit.lessons.first(), node.id)
+                                }
+                                NodeIconType.BOOK, NodeIconType.CHEST, NodeIconType.REST_AREA -> {
+                                    onSelectStory(chapterUnit.story)
                                 }
                             }
-                        )
-                    }
+                        }
+                    )
                 }
             }
         }
@@ -396,8 +391,12 @@ fun StageNodeRow(
     nextXOffset: Dp,
     lineColor: Color,
     hasNextNode: Boolean,
+    isPopupActive: Boolean = false,
+    progressCount: Int = 1,
     rowHeight: Dp = 100.dp,
-    onClick: () -> Unit
+    onClick: () -> Unit,
+    onDismissPopup: () -> Unit = {},
+    onStartLesson: () -> Unit = {}
 ) {
     Box(
         modifier = Modifier
@@ -510,6 +509,30 @@ fun StageNodeRow(
                         }
                     }
                 }
+            }
+        }
+
+        // 3. FLOATING GOLDEN STAGE POPUP OVERLAY (Highest Layer - Does not push stages down!)
+        if (isPopupActive) {
+            val density = LocalDensity.current
+            val offsetY = remember(density) { with(density) { 68.dp.roundToPx() } }
+
+            Popup(
+                alignment = Alignment.TopCenter,
+                offset = IntOffset(0, offsetY),
+                onDismissRequest = onDismissPopup,
+                properties = PopupProperties(
+                    focusable = true,
+                    dismissOnBackPress = true,
+                    dismissOnClickOutside = true
+                )
+            ) {
+                GoldenStagePopup(
+                    node = node,
+                    xOffset = currXOffset,
+                    progressCount = progressCount,
+                    onStartClick = onStartLesson
+                )
             }
         }
     }
