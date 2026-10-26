@@ -434,21 +434,19 @@ object LearningRepository {
                                 PictureOption("pic_guru", "guru", "👩‍🏫", isCorrect = false)
                             )
                         ),
-                        // 2. SOAL 2: Pilih gambar yang benar (印度尼西亚)
+                        // 2. SOAL 2: (Screenshot WhatsApp Image 2026-10-27 at 02.18.28.jpeg)
                         Exercise(
                             id = "u1_p1_q2",
                             type = ExerciseType.PICTURE_CHOICE,
                             title = "Pilih gambar yang benar",
-                            targetHanzi = "印度尼西亚",
-                            targetPinyin = "Yìndùníxīyà",
-                            targetTranslation = "(negara) Indonesia",
-                            correctAnswer = "(negara) Indonesia",
-                            audioToSpeak = "印度尼西亚",
+                            targetHanzi = "我",
+                            targetPinyin = "wǒ",
+                            targetTranslation = "saya",
+                            correctAnswer = "saya",
+                            audioToSpeak = "我",
                             pictureOptions = listOf(
-                                PictureOption("pic_indo2", "(negara)\nIndonesia", "🇮🇩", isCorrect = true),
-                                PictureOption("pic_murid2", "murid", "👨‍🎓", isCorrect = false),
-                                PictureOption("pic_saya2", "saya", "🙋‍♂️", isCorrect = false),
-                                PictureOption("pic_guru2", "guru", "👩‍🏫", isCorrect = false)
+                                PictureOption("pic2_halo", "halo", "👋", isCorrect = false),
+                                PictureOption("pic2_saya", "saya", "🙋‍♂️", isCorrect = true)
                             )
                         ),
                         // 3. SOAL 3: Lengkapi terjemahan (我是印度尼西亚人)
