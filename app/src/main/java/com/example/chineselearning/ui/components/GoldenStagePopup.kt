@@ -25,6 +25,7 @@ import com.example.chineselearning.data.model.PathNode
 fun GoldenStagePopup(
     node: PathNode,
     xOffset: Dp,
+    progressCount: Int = 1,
     onStartClick: () -> Unit
 ) {
     val goldGradient = Brush.verticalGradient(
@@ -40,7 +41,7 @@ fun GoldenStagePopup(
             .padding(horizontal = 20.dp, vertical = 4.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        // Triangular notch pointing up toward the node circle (Screenshot WhatsApp Image 2026-10-26 at 22.11.46.jpeg)
+        // Triangular notch pointing up toward the node circle
         androidx.compose.foundation.Canvas(
             modifier = Modifier
                 .fillMaxWidth()
@@ -107,51 +108,51 @@ fun GoldenStagePopup(
 
                 Spacer(modifier = Modifier.height(16.dp))
 
-                // Bottom Action Row: Big White Pill Button + "1/2" Progress
-                Row(
-                    modifier = Modifier.fillMaxWidth(),
-                    verticalAlignment = Alignment.CenterVertically,
-                    horizontalArrangement = Arrangement.SpaceBetween
+                // FULL-WIDTH WHITE PILL BUTTON: Both "ULANGI" and "1/2" are INSIDE!
+                val progressText = "$progressCount/2"
+                val buttonText = if (progressCount >= 2 || node.isCompleted) "ULANGI" else "MULAI"
+
+                Box(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .height(52.dp)
+                        .shadow(elevation = 4.dp, shape = RoundedCornerShape(26.dp))
+                        .clip(RoundedCornerShape(26.dp))
+                        .background(Color(0xFFD6D6D6)) // Button 3D bottom rim
                 ) {
-                    // White Button with 3D bottom shadow (ULANGI / MULAI)
-                    Box(
+                    Surface(
+                        shape = RoundedCornerShape(26.dp),
+                        color = Color.White,
                         modifier = Modifier
-                            .weight(1f)
-                            .height(48.dp)
-                            .shadow(elevation = 4.dp, shape = RoundedCornerShape(24.dp))
-                            .clip(RoundedCornerShape(24.dp))
-                            .background(Color(0xFFE0E0E0)) // Button 3D bottom rim
+                            .fillMaxWidth()
+                            .height(47.dp)
+                            .bouncyClick(onClick = onStartClick)
                     ) {
-                        Surface(
-                            shape = RoundedCornerShape(24.dp),
-                            color = Color.White,
+                        Box(
                             modifier = Modifier
-                                .fillMaxWidth()
-                                .height(45.dp)
-                                .bouncyClick(onClick = onStartClick)
+                                .fillMaxSize()
+                                .padding(horizontal = 20.dp),
+                            contentAlignment = Alignment.Center
                         ) {
-                            Box(contentAlignment = Alignment.Center) {
-                                Text(
-                                    text = if (node.isCompleted) "ULANGI" else "MULAI",
-                                    fontSize = 16.sp,
-                                    fontWeight = FontWeight.Bold,
-                                    color = Color(0xFFFF9800),
-                                    letterSpacing = 0.5.sp
-                                )
-                            }
+                            // "ULANGI" / "MULAI" centered
+                            Text(
+                                text = buttonText,
+                                fontSize = 16.sp,
+                                fontWeight = FontWeight.Bold,
+                                color = Color(0xFFFF9800),
+                                letterSpacing = 0.5.sp
+                            )
+
+                            // "1/2" or "2/2" at the far right inside the white pill!
+                            Text(
+                                text = progressText,
+                                fontSize = 15.sp,
+                                fontWeight = FontWeight.Bold,
+                                color = Color(0xFFFF9800),
+                                modifier = Modifier.align(Alignment.CenterEnd)
+                            )
                         }
                     }
-
-                    Spacer(modifier = Modifier.width(16.dp))
-
-                    // Progress indicator text (1/2 or 0/2)
-                    Text(
-                        text = if (node.isCompleted) "1/2" else "0/2",
-                        fontSize = 16.sp,
-                        fontWeight = FontWeight.Bold,
-                        color = Color(0xFFFF8F00),
-                        modifier = Modifier.padding(end = 4.dp)
-                    )
                 }
             }
         }

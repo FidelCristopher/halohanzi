@@ -19,6 +19,7 @@ fun MainAppContainer(
     var selectedTab by remember { mutableStateOf(0) }
     var activeStory by remember { mutableStateOf<Story?>(null) }
     var activeLesson by remember { mutableStateOf<Lesson?>(null) }
+    var activeNodeId by remember { mutableStateOf<String?>(null) }
 
     // Graded Story Reader Mode
     if (activeStory != null) {
@@ -38,10 +39,13 @@ fun MainAppContainer(
             lesson = activeLesson!!,
             ttsManager = ttsManager,
             onFinish = {
+                activeNodeId?.let { com.example.chineselearning.data.repository.LearningRepository.toggleStageProgress(it) }
                 activeLesson = null
+                activeNodeId = null
             },
             onBackClick = {
                 activeLesson = null
+                activeNodeId = null
             }
         )
         return
@@ -63,7 +67,10 @@ fun MainAppContainer(
         ) {
             when (selectedTab) {
                 0 -> HomeScreen(
-                    onSelectLesson = { lesson -> activeLesson = lesson },
+                    onSelectLesson = { lesson, nodeId ->
+                        activeNodeId = nodeId
+                        activeLesson = lesson
+                    },
                     onSelectStory = { story -> activeStory = story }
                 )
                 1 -> SavedVocabScreen(ttsManager = ttsManager)

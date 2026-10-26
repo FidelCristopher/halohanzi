@@ -35,7 +35,7 @@ import com.example.chineselearning.ui.theme.*
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun HomeScreen(
-    onSelectLesson: (Lesson) -> Unit,
+    onSelectLesson: (Lesson, String) -> Unit,
     onSelectStory: (Story) -> Unit
 ) {
     val allUnits = LearningRepository.units
@@ -352,6 +352,8 @@ fun HomeScreen(
                     )
 
                     // HelloChinese Golden Speech-Bubble Popup (WhatsApp Image 2026-10-26 at 22.11.46.jpeg)
+                    val progressCount = LearningRepository.getStageProgress(node.id)
+
                     AnimatedVisibility(
                         visible = activePopupNodeId == node.id,
                         enter = expandVertically() + fadeIn(),
@@ -360,11 +362,12 @@ fun HomeScreen(
                         GoldenStagePopup(
                             node = node,
                             xOffset = currXOffset,
+                            progressCount = progressCount,
                             onStartClick = {
                                 activePopupNodeId = null
                                 when (node.iconType) {
                                     NodeIconType.CAP, NodeIconType.DUMBBELL, NodeIconType.SHUFFLE -> {
-                                        onSelectLesson(chapterUnit.lessons.first())
+                                        onSelectLesson(chapterUnit.lessons.first(), node.id)
                                     }
                                     NodeIconType.BOOK, NodeIconType.CHEST, NodeIconType.REST_AREA -> {
                                         onSelectStory(chapterUnit.story)

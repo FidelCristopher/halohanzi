@@ -202,6 +202,19 @@ object LearningRepository {
 
     fun getSavedWords(): List<Word> = savedWords
 
+    private val stageProgress = mutableMapOf<String, Int>()
+
+    fun getStageProgress(nodeId: String): Int {
+        return stageProgress.getOrPut(nodeId) { 1 } // Default is 1 -> "1/2"
+    }
+
+    fun toggleStageProgress(nodeId: String): Int {
+        val curr = getStageProgress(nodeId)
+        val next = if (curr == 1) 2 else 1
+        stageProgress[nodeId] = next
+        return next
+    }
+
     fun toggleSaveWord(word: Word): Boolean {
         val existingIndex = savedWords.indexOfFirst { it.hanzi == word.hanzi }
         return if (existingIndex >= 0) {
