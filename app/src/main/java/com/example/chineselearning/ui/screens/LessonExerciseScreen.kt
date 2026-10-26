@@ -41,12 +41,14 @@ import com.example.chineselearning.ui.theme.*
 @Composable
 fun LessonExerciseScreen(
     lesson: Lesson,
+    partNumber: Int = 1,
     ttsManager: TtsManager?,
     onFinish: () -> Unit,
     onBackClick: () -> Unit
 ) {
+    val exercisesList = remember(lesson, partNumber) { lesson.getExercisesForPart(partNumber) }
     var currentExerciseIdx by remember { mutableStateOf(0) }
-    val totalExercises = lesson.exercises.size
+    val totalExercises = exercisesList.size
     val isLastExercise = currentExerciseIdx >= totalExercises - 1
 
     // State per exercise
@@ -59,7 +61,7 @@ fun LessonExerciseScreen(
     var selectedRightPairId by remember { mutableStateOf<String?>(null) }
     var matchedPairIds by remember { mutableStateOf<Set<String>>(emptySet()) }
     var shuffledRightPairs by remember(currentExerciseIdx) {
-        val currEx = lesson.exercises.getOrNull(currentExerciseIdx)
+        val currEx = exercisesList.getOrNull(currentExerciseIdx)
         mutableStateOf(currEx?.matchPairs?.shuffled() ?: emptyList())
     }
 
@@ -69,7 +71,7 @@ fun LessonExerciseScreen(
     var comboCount by remember { mutableStateOf(0) }
     var isLessonCompleted by remember { mutableStateOf(false) }
 
-    val exercise = lesson.exercises.getOrNull(currentExerciseIdx)
+    val exercise = exercisesList.getOrNull(currentExerciseIdx)
 
     // Check if user has selected an answer to enable "PERIKSA"
     val canCheck = when (exercise?.type) {

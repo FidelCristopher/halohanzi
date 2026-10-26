@@ -94,8 +94,20 @@ data class Lesson(
     val subtitle: String,
     val grammarNote: String,
     val newWords: List<Word>,
-    val exercises: List<Exercise>
-)
+    val exercises: List<Exercise> = emptyList(),
+    val exercisesPart1: List<Exercise> = emptyList(),
+    val exercisesPart2: List<Exercise> = emptyList()
+) {
+    fun getExercisesForPart(part: Int): List<Exercise> {
+        return if (part == 1 && exercisesPart1.isNotEmpty()) {
+            exercisesPart1
+        } else if (part == 2 && exercisesPart2.isNotEmpty()) {
+            exercisesPart2
+        } else {
+            exercises
+        }
+    }
+}
 
 enum class NodeIconType {
     CAP,        // Graduation cap

@@ -407,7 +407,7 @@ object LearningRepository {
             lessons = listOf(
                 Lesson(
                     id = "u1_l1",
-                    title = "Membuat teman baru (1)",
+                    title = "Sapaan 2",
                     subtitle = "Sapaan dasar & Identitas",
                     grammarNote = "Pola kalimat 'A 是 B' (A adalah B). Negasi menggunakan '不是'. Contoh: 我是印尼人 (Saya orang Indonesia).",
                     newWords = listOf(
@@ -416,10 +416,27 @@ object LearningRepository {
                         Word("w3", "学生", "xuéshēng", "Murid / Siswa", "Kata benda", "布迪是学生。", "Bùdí shì xuéshēng.", "Budi adalah seorang murid."),
                         Word("w4", "老师", "lǎoshī", "(Bapak atau Ibu) Guru", "Kata benda", "老师好！", "Lǎoshī hǎo!", "Halo Guru!")
                     ),
-                    exercises = listOf(
-                        // 1. Screenshot 4: Pilih gambar yang benar
+                    exercisesPart1 = listOf(
+                        // 1. SOAL 1 (Screenshot WhatsApp Image 2026-10-27 at 00.47.45.jpeg)
                         Exercise(
-                            id = "ex_pic_1",
+                            id = "u1_p1_q1",
+                            type = ExerciseType.PICTURE_CHOICE,
+                            title = "Pilih gambar yang benar",
+                            targetHanzi = "你好",
+                            targetPinyin = "nǐhǎo",
+                            targetTranslation = "halo",
+                            correctAnswer = "halo",
+                            audioToSpeak = "你好",
+                            pictureOptions = listOf(
+                                PictureOption("pic_saya", "saya", "🙋‍♂️", isCorrect = false),
+                                PictureOption("pic_indo", "(negara)\nIndonesia", "🇮🇩", isCorrect = false),
+                                PictureOption("pic_halo", "halo", "👋", isCorrect = true),
+                                PictureOption("pic_guru", "guru", "👩‍🏫", isCorrect = false)
+                            )
+                        ),
+                        // 2. SOAL 2: Pilih gambar yang benar (印度尼西亚)
+                        Exercise(
+                            id = "u1_p1_q2",
                             type = ExerciseType.PICTURE_CHOICE,
                             title = "Pilih gambar yang benar",
                             targetHanzi = "印度尼西亚",
@@ -428,15 +445,15 @@ object LearningRepository {
                             correctAnswer = "(negara) Indonesia",
                             audioToSpeak = "印度尼西亚",
                             pictureOptions = listOf(
-                                PictureOption("pic_1", "(negara)\nIndonesia", "🇮🇩", isCorrect = true),
-                                PictureOption("pic_2", "murid", "👨‍🎓", isCorrect = false),
-                                PictureOption("pic_3", "saya", "🙋‍♂️", isCorrect = false),
-                                PictureOption("pic_4", "guru", "👩‍🏫", isCorrect = false)
+                                PictureOption("pic_indo2", "(negara)\nIndonesia", "🇮🇩", isCorrect = true),
+                                PictureOption("pic_murid2", "murid", "👨‍🎓", isCorrect = false),
+                                PictureOption("pic_saya2", "saya", "🙋‍♂️", isCorrect = false),
+                                PictureOption("pic_guru2", "guru", "👩‍🏫", isCorrect = false)
                             )
                         ),
-                        // 2. Screenshot 6: Lengkapi terjemahan
+                        // 3. SOAL 3: Lengkapi terjemahan (我是印度尼西亚人)
                         Exercise(
-                            id = "ex_fill_1",
+                            id = "u1_p1_q3",
                             type = ExerciseType.FILL_BLANK,
                             title = "Lengkapi terjemahan",
                             targetHanzi = "我 是 印度尼西亚 人 。",
@@ -447,9 +464,9 @@ object LearningRepository {
                             correctAnswer = "adalah",
                             audioToSpeak = "我是印度尼西亚人。"
                         ),
-                        // 3. Screenshot 7: Pilih terjemahan yang benar
+                        // 4. SOAL 4: Pilih terjemahan yang benar
                         Exercise(
-                            id = "ex_trans_1",
+                            id = "u1_p1_q4",
                             type = ExerciseType.SENTENCE_CHOICE,
                             title = "Pilih terjemahan yang benar",
                             targetHanzi = "老师，你好，我是印尼人。",
@@ -464,9 +481,9 @@ object LearningRepository {
                             correctAnswer = "Halo (Bapak atau Ibu) Guru, saya adalah orang Indonesia.",
                             audioToSpeak = "老师，你好，我是印尼人。"
                         ),
-                        // 4. Screenshot 9: Apa yang Anda dengar? (Sentence Builder)
+                        // 5. SOAL 5: Apa yang Anda dengar? (Sentence Builder)
                         Exercise(
-                            id = "ex_builder_1",
+                            id = "u1_p1_q5",
                             type = ExerciseType.SENTENCE_BUILDER,
                             title = "Apa yang Anda dengar?",
                             targetHanzi = "布迪 是 学生 。",
@@ -476,9 +493,9 @@ object LearningRepository {
                             correctAnswer = "是,学生",
                             audioToSpeak = "布迪是学生。"
                         ),
-                        // 5. Screenshot 10: Pilih terjemahan yang benar
+                        // 6. SOAL 6: Pilih terjemahan yang benar
                         Exercise(
-                            id = "ex_trans_2",
+                            id = "u1_p1_q6",
                             type = ExerciseType.SENTENCE_CHOICE,
                             title = "Pilih terjemahan yang benar",
                             targetHanzi = "Budi adalah seorang murid.",
@@ -492,9 +509,9 @@ object LearningRepository {
                             correctAnswer = "布迪 是 学生 。",
                             audioToSpeak = "布迪是学生。"
                         ),
-                        // 6. Screenshot 11 & 12: Ketuk pasangan yang sesuai
+                        // 7. SOAL 7: Ketuk pasangan yang sesuai (Match Pairs)
                         Exercise(
-                            id = "ex_match_1",
+                            id = "u1_p1_q7",
                             type = ExerciseType.MATCH_PAIRS,
                             title = "Ketuk pasangan yang sesuai",
                             correctAnswer = "ALL_MATCHED",
@@ -505,6 +522,70 @@ object LearningRepository {
                                 MatchPairItem("m4", "人", "rén", "orang"),
                                 MatchPairItem("m5", "是", "shì", "adalah")
                             )
+                        ),
+                        // 8. SOAL 8: Lengkapi terjemahan
+                        Exercise(
+                            id = "u1_p1_q8",
+                            type = ExerciseType.FILL_BLANK,
+                            title = "Lengkapi terjemahan",
+                            targetHanzi = "你好 ， 老师 ！",
+                            targetPinyin = "Nǐhǎo , lǎoshī !",
+                            targetTranslation = "Halo, Guru!",
+                            sentenceWithBlank = "________, Guru!",
+                            options = listOf("Halo", "Terima kasih", "Sampai jumpa"),
+                            correctAnswer = "Halo",
+                            audioToSpeak = "你好，老师！"
+                        ),
+                        // 9. SOAL 9: Pilih gambar yang benar (学生)
+                        Exercise(
+                            id = "u1_p1_q9",
+                            type = ExerciseType.PICTURE_CHOICE,
+                            title = "Pilih gambar yang benar",
+                            targetHanzi = "学生",
+                            targetPinyin = "xuéshēng",
+                            targetTranslation = "murid",
+                            correctAnswer = "murid",
+                            audioToSpeak = "学生",
+                            pictureOptions = listOf(
+                                PictureOption("pic_guru9", "guru", "👩‍🏫", isCorrect = false),
+                                PictureOption("pic_murid9", "murid", "👨‍🎓", isCorrect = true),
+                                PictureOption("pic_saya9", "saya", "🙋‍♂️", isCorrect = false),
+                                PictureOption("pic_indo9", "(negara)\nIndonesia", "🇮🇩", isCorrect = false)
+                            )
+                        )
+                    ),
+                    exercisesPart2 = listOf(
+                        Exercise(
+                            id = "u1_p2_q1",
+                            type = ExerciseType.PICTURE_CHOICE,
+                            title = "Pilih gambar yang benar",
+                            targetHanzi = "老师",
+                            targetPinyin = "lǎoshī",
+                            targetTranslation = "guru",
+                            correctAnswer = "guru",
+                            audioToSpeak = "老师",
+                            pictureOptions = listOf(
+                                PictureOption("p2_g", "guru", "👩‍🏫", isCorrect = true),
+                                PictureOption("p2_m", "murid", "👨‍🎓", isCorrect = false),
+                                PictureOption("p2_s", "saya", "🙋‍♂️", isCorrect = false),
+                                PictureOption("p2_i", "(negara)\nIndonesia", "🇮🇩", isCorrect = false)
+                            )
+                        ),
+                        Exercise(
+                            id = "u1_p2_q2",
+                            type = ExerciseType.SENTENCE_CHOICE,
+                            title = "Pilih terjemahan yang benar",
+                            targetHanzi = "我是老师，不是学生。",
+                            targetPinyin = "Wǒ shì lǎoshī, bú shì xuésheng.",
+                            targetTranslation = "Saya adalah guru, bukan murid.",
+                            options = listOf(
+                                "Saya adalah guru, bukan murid.",
+                                "Saya adalah murid, bukan guru.",
+                                "Dia adalah guru.",
+                                "Kamu adalah murid."
+                            ),
+                            correctAnswer = "Saya adalah guru, bukan murid.",
+                            audioToSpeak = "我是老师，不是学生。"
                         )
                     )
                 )

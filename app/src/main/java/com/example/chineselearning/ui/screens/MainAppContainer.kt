@@ -20,6 +20,7 @@ fun MainAppContainer(
     var activeStory by remember { mutableStateOf<Story?>(null) }
     var activeLesson by remember { mutableStateOf<Lesson?>(null) }
     var activeNodeId by remember { mutableStateOf<String?>(null) }
+    var activePartNumber by remember { mutableStateOf(1) }
 
     // Graded Story Reader Mode
     if (activeStory != null) {
@@ -37,6 +38,7 @@ fun MainAppContainer(
     if (activeLesson != null) {
         LessonExerciseScreen(
             lesson = activeLesson!!,
+            partNumber = activePartNumber,
             ttsManager = ttsManager,
             onFinish = {
                 activeNodeId?.let { com.example.chineselearning.data.repository.LearningRepository.toggleStageProgress(it) }
@@ -69,6 +71,7 @@ fun MainAppContainer(
                 0 -> HomeScreen(
                     onSelectLesson = { lesson, nodeId ->
                         activeNodeId = nodeId
+                        activePartNumber = com.example.chineselearning.data.repository.LearningRepository.getStageProgress(nodeId)
                         activeLesson = lesson
                     },
                     onSelectStory = { story -> activeStory = story }
