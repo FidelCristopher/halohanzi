@@ -85,7 +85,11 @@ data class Exercise(
     val matchPairs: List<MatchPairItem> = emptyList(),
     val wordChips: List<String> = emptyList(),
     val correctAnswer: String = "",
-    val audioToSpeak: String = ""
+    val audioToSpeak: String = "",
+    val staticTrailingText: String = "",
+    val staticTrailingPinyin: String = "",
+    val hasCommaAfterSlot1: Boolean = false,
+    val isImmersiveSpeaker: Boolean = false
 )
 
 data class Lesson(

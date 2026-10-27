@@ -512,19 +512,21 @@ object LearningRepository {
                             correctAnswer = "Wǒ jiào    Bùdí\n我 叫 布迪 。",
                             audioToSpeak = "我叫布迪。"
                         ),
-                        // 7. SOAL 7: Ketuk pasangan yang sesuai (Match Pairs)
+                        // 7. SOAL 7: (Screenshot WhatsApp Image 2026-10-26 at 22.11.52.jpeg - Apa yang Anda dengar?)
                         Exercise(
                             id = "u1_p1_q7",
-                            type = ExerciseType.MATCH_PAIRS,
-                            title = "Ketuk pasangan yang sesuai",
-                            correctAnswer = "ALL_MATCHED",
-                            matchPairs = listOf(
-                                MatchPairItem("m1", "印度尼西亚", "Yìndùníxīyà", "(negara) Indonesia"),
-                                MatchPairItem("m2", "学生", "xuéshēng", "murid"),
-                                MatchPairItem("m3", "老师", "lǎoshī", "guru"),
-                                MatchPairItem("m4", "人", "rén", "orang"),
-                                MatchPairItem("m5", "是", "shì", "adalah")
-                            )
+                            type = ExerciseType.SENTENCE_BUILDER,
+                            title = "Apa yang Anda dengar?",
+                            targetHanzi = "你好，我叫王飞。",
+                            targetPinyin = "Nǐhǎo, wǒ jiào WángFēi.",
+                            targetTranslation = "Halo, nama saya Wang Fei.",
+                            wordChips = listOf("你好:nǐhǎo", "布迪:Bùdí", "我:wǒ", "叫:jiào"),
+                            correctAnswer = "你好,我,叫",
+                            audioToSpeak = "你好，我叫王飞。",
+                            staticTrailingText = "王飞 。",
+                            staticTrailingPinyin = "WángFēi",
+                            hasCommaAfterSlot1 = true,
+                            isImmersiveSpeaker = true
                         ),
                         // 8. SOAL 8: Lengkapi terjemahan
                         Exercise(

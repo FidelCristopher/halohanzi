@@ -78,7 +78,14 @@ fun LessonExerciseScreen(
         ExerciseType.PICTURE_CHOICE -> selectedPictureId != null
         ExerciseType.FILL_BLANK -> selectedOption != null
         ExerciseType.SENTENCE_CHOICE -> selectedOption != null
-        ExerciseType.SENTENCE_BUILDER -> selectedChips.isNotEmpty()
+        ExerciseType.SENTENCE_BUILDER -> {
+            if (exercise.correctAnswer.contains(",")) {
+                val expectedCount = exercise.correctAnswer.split(",").size
+                selectedChips.size >= expectedCount
+            } else {
+                selectedChips.isNotEmpty()
+            }
+        }
         ExerciseType.MATCH_PAIRS -> matchedPairIds.size == (exercise.matchPairs.size)
         null -> false
     }
@@ -93,7 +100,10 @@ fun LessonExerciseScreen(
             }
             ExerciseType.FILL_BLANK -> selectedOption == exercise.correctAnswer
             ExerciseType.SENTENCE_CHOICE -> selectedOption == exercise.correctAnswer
-            ExerciseType.SENTENCE_BUILDER -> selectedChips.joinToString(",") == exercise.correctAnswer
+            ExerciseType.SENTENCE_BUILDER -> {
+                val selectedClean = selectedChips.map { it.substringBefore(":") }.joinToString(",")
+                selectedClean == exercise.correctAnswer
+            }
             ExerciseType.MATCH_PAIRS -> matchedPairIds.size == exercise.matchPairs.size
         }
 
@@ -822,126 +832,452 @@ fun LessonExerciseScreen(
                 }
             }
 
-            // EXERCISE TYPE 4: APA YANG ANDA DENGAR / SENTENCE BUILDER (Screenshot 9)
+            // EXERCISE TYPE 4: APA YANG ANDA DENGAR / SENTENCE BUILDER (Screenshot 9 & WhatsApp Image 2026-10-26 at 22.11.52.jpeg)
             if (exercise.type == ExerciseType.SENTENCE_BUILDER) {
-                Row(
-                    modifier = Modifier.fillMaxWidth(),
-                    verticalAlignment = Alignment.CenterVertically
-                ) {
+                if (exercise.isImmersiveSpeaker) {
                     Box(
                         modifier = Modifier
-                            .size(54.dp)
-                            .clip(CircleShape)
-                            .background(Color(0xFF00C48C))
-                            .bouncyClick { ttsManager?.speak(exercise.audioToSpeak) },
-                        contentAlignment = Alignment.Center
+                            .fillMaxWidth()
+                            .height(520.dp)
+                            .clip(RoundedCornerShape(24.dp))
+                            .background(
+                                Brush.verticalGradient(
+                                    colors = listOf(
+                                        Color(0xFFF8FAFC),
+                                        Color(0xFFEDF2F7),
+                                        Color(0xFFE2E8F0)
+                                    )
+                                )
+                            )
                     ) {
-                        Icon(imageVector = Icons.AutoMirrored.Filled.VolumeUp, contentDescription = "Dengarkan", tint = Color.White)
-                    }
-                    Spacer(modifier = Modifier.width(14.dp))
-                    Text(
-                        text = "Ketuk balok untuk menyusun kalimat yang diucapkan",
-                        fontSize = 14.sp,
-                        color = SlateGray
-                    )
-                }
-
-                Spacer(modifier = Modifier.height(20.dp))
-
-                Surface(
-                    shape = RoundedCornerShape(16.dp),
-                    color = MaterialTheme.colorScheme.surface,
-                    border = androidx.compose.foundation.BorderStroke(1.5.dp, BorderGray),
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .heightIn(min = 80.dp)
-                ) {
-                    FlowRow(
-                        modifier = Modifier.padding(12.dp),
-                        horizontalArrangement = Arrangement.spacedBy(8.dp),
-                        verticalArrangement = Arrangement.spacedBy(8.dp)
-                    ) {
-                        Surface(
-                            shape = RoundedCornerShape(10.dp),
-                            color = Color(0xFFF1F5F9),
-                            modifier = Modifier.padding(2.dp)
+                        // Ambient native speaker silhouette
+                        Box(
+                            modifier = Modifier
+                                .fillMaxSize()
+                                .padding(top = 90.dp),
+                            contentAlignment = Alignment.Center
                         ) {
-                            Column(
-                                horizontalAlignment = Alignment.CenterHorizontally,
-                                modifier = Modifier.padding(horizontal = 10.dp, vertical = 6.dp)
-                            ) {
-                                Text(text = "Bùdí", fontSize = 11.sp, color = SlateGray)
-                                Text(text = "布迪", fontSize = 18.sp, fontWeight = FontWeight.Bold, color = DeepNavy)
-                            }
+                            Text(
+                                text = "👩‍🎓",
+                                fontSize = 160.sp,
+                                modifier = Modifier.graphicsLayer(alpha = 0.20f)
+                            )
                         }
 
-                        selectedChips.forEachIndexed { cIdx, chipText ->
-                            val token = LearningRepository.findToken(chipText)
-                            Surface(
-                                shape = RoundedCornerShape(10.dp),
-                                color = Color(0xFFE8F5E9),
-                                border = androidx.compose.foundation.BorderStroke(1.dp, Color(0xFF00C48C)),
-                                modifier = Modifier.bouncyClick {
-                                    if (!isSubmitted) {
-                                        selectedChips = selectedChips.toMutableList().also { it.removeAt(cIdx) }
+                        Column(
+                            modifier = Modifier
+                                .fillMaxSize()
+                                .padding(14.dp),
+                            verticalArrangement = Arrangement.SpaceBetween
+                        ) {
+                            // Top: Sentence with 3 slots + trailing text
+                            Row(
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .padding(top = 18.dp),
+                                horizontalArrangement = Arrangement.Center,
+                                verticalAlignment = Alignment.Bottom
+                            ) {
+                                // Slot 1: 你好
+                                Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                                    Row(verticalAlignment = Alignment.Bottom) {
+                                        if (selectedChips.isNotEmpty()) {
+                                            val chip = selectedChips[0]
+                                            val hanzi = chip.substringBefore(":")
+                                            val pinyin = if (chip.contains(":")) chip.substringAfter(":") else ""
+                                            Surface(
+                                                shape = RoundedCornerShape(12.dp),
+                                                color = Color.White,
+                                                shadowElevation = 2.dp,
+                                                border = androidx.compose.foundation.BorderStroke(1.dp, Color(0xFFE2E8F0)),
+                                                modifier = Modifier.bouncyClick {
+                                                    if (!isSubmitted) {
+                                                        selectedChips = selectedChips.toMutableList().also { it.removeAt(0) }
+                                                    }
+                                                }
+                                            ) {
+                                                Column(
+                                                    horizontalAlignment = Alignment.CenterHorizontally,
+                                                    modifier = Modifier.padding(horizontal = 12.dp, vertical = 6.dp)
+                                                ) {
+                                                    if (pinyin.isNotBlank()) {
+                                                        Text(text = pinyin, fontSize = 13.sp, color = DeepNavy)
+                                                    }
+                                                    Text(text = hanzi, fontSize = 21.sp, fontWeight = FontWeight.Normal, color = DeepNavy)
+                                                }
+                                            }
+                                        } else {
+                                            Box(modifier = Modifier.width(62.dp).height(48.dp))
+                                        }
+                                        if (exercise.hasCommaAfterSlot1) {
+                                            Text(
+                                                text = " ，",
+                                                fontSize = 22.sp,
+                                                color = DeepNavy,
+                                                modifier = Modifier.padding(bottom = 6.dp)
+                                            )
+                                        }
+                                    }
+                                    Spacer(modifier = Modifier.height(4.dp))
+                                    Box(
+                                        modifier = Modifier
+                                            .width(62.dp)
+                                            .height(2.5.dp)
+                                            .background(Color(0xFF00C48C), shape = RoundedCornerShape(2.dp))
+                                    )
+                                }
+
+                                Spacer(modifier = Modifier.width(8.dp))
+
+                                // Slot 2: 我
+                                Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                                    if (selectedChips.size > 1) {
+                                        val chip = selectedChips[1]
+                                        val hanzi = chip.substringBefore(":")
+                                        val pinyin = if (chip.contains(":")) chip.substringAfter(":") else ""
+                                        Surface(
+                                            shape = RoundedCornerShape(12.dp),
+                                            color = Color.White,
+                                            shadowElevation = 2.dp,
+                                            border = androidx.compose.foundation.BorderStroke(1.dp, Color(0xFFE2E8F0)),
+                                            modifier = Modifier.bouncyClick {
+                                                if (!isSubmitted) {
+                                                    selectedChips = selectedChips.toMutableList().also { it.removeAt(1) }
+                                                }
+                                            }
+                                        ) {
+                                            Column(
+                                                horizontalAlignment = Alignment.CenterHorizontally,
+                                                modifier = Modifier.padding(horizontal = 10.dp, vertical = 6.dp)
+                                            ) {
+                                                if (pinyin.isNotBlank()) {
+                                                    Text(text = pinyin, fontSize = 13.sp, color = DeepNavy)
+                                                }
+                                                Text(text = hanzi, fontSize = 21.sp, fontWeight = FontWeight.Normal, color = DeepNavy)
+                                            }
+                                        }
+                                    } else {
+                                        Box(modifier = Modifier.width(48.dp).height(48.dp))
+                                    }
+                                    Spacer(modifier = Modifier.height(4.dp))
+                                    Box(
+                                        modifier = Modifier
+                                            .width(48.dp)
+                                            .height(2.5.dp)
+                                            .background(Color(0xFF00C48C), shape = RoundedCornerShape(2.dp))
+                                    )
+                                }
+
+                                Spacer(modifier = Modifier.width(8.dp))
+
+                                // Slot 3: 叫
+                                Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                                    if (selectedChips.size > 2) {
+                                        val chip = selectedChips[2]
+                                        val hanzi = chip.substringBefore(":")
+                                        val pinyin = if (chip.contains(":")) chip.substringAfter(":") else ""
+                                        Surface(
+                                            shape = RoundedCornerShape(12.dp),
+                                            color = Color.White,
+                                            shadowElevation = 2.dp,
+                                            border = androidx.compose.foundation.BorderStroke(1.dp, Color(0xFFE2E8F0)),
+                                            modifier = Modifier.bouncyClick {
+                                                if (!isSubmitted) {
+                                                    selectedChips = selectedChips.toMutableList().also { it.removeAt(2) }
+                                                }
+                                            }
+                                        ) {
+                                            Column(
+                                                horizontalAlignment = Alignment.CenterHorizontally,
+                                                modifier = Modifier.padding(horizontal = 10.dp, vertical = 6.dp)
+                                            ) {
+                                                if (pinyin.isNotBlank()) {
+                                                    Text(text = pinyin, fontSize = 13.sp, color = DeepNavy)
+                                                }
+                                                Text(text = hanzi, fontSize = 21.sp, fontWeight = FontWeight.Normal, color = DeepNavy)
+                                            }
+                                        }
+                                    } else {
+                                        Box(modifier = Modifier.width(48.dp).height(48.dp))
+                                    }
+                                    Spacer(modifier = Modifier.height(4.dp))
+                                    Box(
+                                        modifier = Modifier
+                                            .width(48.dp)
+                                            .height(2.5.dp)
+                                            .background(Color(0xFF00C48C), shape = RoundedCornerShape(2.dp))
+                                    )
+                                }
+
+                                Spacer(modifier = Modifier.width(12.dp))
+
+                                // Static Trailing Text: 王飞 。
+                                Column(
+                                    horizontalAlignment = Alignment.CenterHorizontally,
+                                    modifier = Modifier.padding(bottom = 6.dp)
+                                ) {
+                                    if (exercise.staticTrailingPinyin.isNotBlank()) {
+                                        Text(
+                                            text = exercise.staticTrailingPinyin,
+                                            fontSize = 14.sp,
+                                            color = DeepNavy
+                                        )
+                                        Spacer(modifier = Modifier.height(2.dp))
+                                    }
+                                    Text(
+                                        text = exercise.staticTrailingText,
+                                        fontSize = 22.sp,
+                                        fontWeight = FontWeight.Normal,
+                                        color = DeepNavy
+                                    )
+                                }
+                            }
+
+                            // Middle: Chips Row (4 items)
+                            Row(
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .padding(horizontal = 2.dp),
+                                horizontalArrangement = Arrangement.spacedBy(8.dp)
+                            ) {
+                                exercise.wordChips.forEach { chip ->
+                                    val isUsed = selectedChips.contains(chip)
+                                    val hanzi = chip.substringBefore(":")
+                                    val pinyin = if (chip.contains(":")) chip.substringAfter(":") else ""
+
+                                    if (isUsed) {
+                                        // Translucent dark grey placeholder box
+                                        Box(
+                                            modifier = Modifier
+                                                .weight(1f)
+                                                .height(64.dp)
+                                                .clip(RoundedCornerShape(14.dp))
+                                                .background(Color(0x2E000000))
+                                        )
+                                    } else {
+                                        Surface(
+                                            shape = RoundedCornerShape(14.dp),
+                                            color = Color.White,
+                                            shadowElevation = 2.dp,
+                                            border = androidx.compose.foundation.BorderStroke(1.dp, Color(0xFFE2E8F0)),
+                                            modifier = Modifier
+                                                .weight(1f)
+                                                .height(64.dp)
+                                                .bouncyClick {
+                                                    if (!isSubmitted && selectedChips.size < 3) {
+                                                        selectedChips = selectedChips + chip
+                                                        ttsManager?.speak(hanzi)
+                                                    }
+                                                }
+                                        ) {
+                                            Column(
+                                                horizontalAlignment = Alignment.CenterHorizontally,
+                                                verticalArrangement = Arrangement.Center,
+                                                modifier = Modifier
+                                                    .fillMaxSize()
+                                                    .padding(horizontal = 4.dp, vertical = 4.dp)
+                                            ) {
+                                                if (pinyin.isNotBlank()) {
+                                                    Text(
+                                                        text = pinyin,
+                                                        fontSize = 13.sp,
+                                                        color = DeepNavy
+                                                    )
+                                                }
+                                                Text(
+                                                    text = hanzi,
+                                                    fontSize = 20.sp,
+                                                    fontWeight = FontWeight.Normal,
+                                                    color = DeepNavy
+                                                )
+                                            }
+                                        }
                                     }
                                 }
+                            }
+
+                            // Bottom: Snail, Play, Chevron Audio Player Controls
+                            Row(
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .padding(bottom = 6.dp),
+                                horizontalArrangement = Arrangement.spacedBy(16.dp, Alignment.CenterHorizontally),
+                                verticalAlignment = Alignment.CenterVertically
+                            ) {
+                                // Snail (Slow audio)
+                                Box(
+                                    modifier = Modifier
+                                        .size(46.dp)
+                                        .clip(CircleShape)
+                                        .background(Color(0xFFD4F5EC))
+                                        .bouncyClick {
+                                            ttsManager?.speak(exercise.audioToSpeak, speedRate = 0.55f)
+                                        },
+                                    contentAlignment = Alignment.Center
+                                ) {
+                                    Text(text = "🐌", fontSize = 22.sp)
+                                }
+
+                                // Play (Normal audio)
+                                Box(
+                                    modifier = Modifier
+                                        .size(46.dp)
+                                        .clip(CircleShape)
+                                        .background(Color(0xFFD4F5EC))
+                                        .bouncyClick {
+                                            ttsManager?.speak(exercise.audioToSpeak, speedRate = 0.85f)
+                                        },
+                                    contentAlignment = Alignment.Center
+                                ) {
+                                    Icon(
+                                        imageVector = Icons.Filled.PlayArrow,
+                                        contentDescription = "Putar",
+                                        tint = Color(0xFF00B386),
+                                        modifier = Modifier.size(28.dp)
+                                    )
+                                }
+
+                                // Chevron Down
+                                Box(
+                                    modifier = Modifier
+                                        .size(46.dp)
+                                        .clip(CircleShape)
+                                        .background(Color(0xFFD4F5EC))
+                                        .bouncyClick {
+                                            ttsManager?.speak(exercise.audioToSpeak, speedRate = 0.85f)
+                                        },
+                                    contentAlignment = Alignment.Center
+                                ) {
+                                    Icon(
+                                        imageVector = Icons.Filled.KeyboardArrowDown,
+                                        contentDescription = "Menu",
+                                        tint = Color(0xFF00B386),
+                                        modifier = Modifier.size(28.dp)
+                                    )
+                                }
+                            }
+                        }
+                    }
+                } else {
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        Box(
+                            modifier = Modifier
+                                .size(54.dp)
+                                .clip(CircleShape)
+                                .background(Color(0xFF00C48C))
+                                .bouncyClick { ttsManager?.speak(exercise.audioToSpeak) },
+                            contentAlignment = Alignment.Center
+                        ) {
+                            Icon(imageVector = Icons.AutoMirrored.Filled.VolumeUp, contentDescription = "Dengarkan", tint = Color.White)
+                        }
+                        Spacer(modifier = Modifier.width(14.dp))
+                        Text(
+                            text = "Ketuk balok untuk menyusun kalimat yang diucapkan",
+                            fontSize = 14.sp,
+                            color = SlateGray
+                        )
+                    }
+
+                    Spacer(modifier = Modifier.height(20.dp))
+
+                    Surface(
+                        shape = RoundedCornerShape(16.dp),
+                        color = MaterialTheme.colorScheme.surface,
+                        border = androidx.compose.foundation.BorderStroke(1.5.dp, BorderGray),
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .heightIn(min = 80.dp)
+                    ) {
+                        FlowRow(
+                            modifier = Modifier.padding(12.dp),
+                            horizontalArrangement = Arrangement.spacedBy(8.dp),
+                            verticalArrangement = Arrangement.spacedBy(8.dp)
+                        ) {
+                            Surface(
+                                shape = RoundedCornerShape(10.dp),
+                                color = Color(0xFFF1F5F9),
+                                modifier = Modifier.padding(2.dp)
                             ) {
                                 Column(
                                     horizontalAlignment = Alignment.CenterHorizontally,
-                                    modifier = Modifier.padding(horizontal = 12.dp, vertical = 6.dp)
+                                    modifier = Modifier.padding(horizontal = 10.dp, vertical = 6.dp)
                                 ) {
-                                    if (token.pinyin.isNotBlank()) {
-                                        Text(text = token.pinyin, fontSize = 11.sp, color = Color(0xFF008966))
+                                    Text(text = "Bùdí", fontSize = 11.sp, color = SlateGray)
+                                    Text(text = "布迪", fontSize = 18.sp, fontWeight = FontWeight.Bold, color = DeepNavy)
+                                }
+                            }
+
+                            selectedChips.forEachIndexed { cIdx, chipText ->
+                                val token = LearningRepository.findToken(chipText)
+                                Surface(
+                                    shape = RoundedCornerShape(10.dp),
+                                    color = Color(0xFFE8F5E9),
+                                    border = androidx.compose.foundation.BorderStroke(1.dp, Color(0xFF00C48C)),
+                                    modifier = Modifier.bouncyClick {
+                                        if (!isSubmitted) {
+                                            selectedChips = selectedChips.toMutableList().also { it.removeAt(cIdx) }
+                                        }
                                     }
-                                    Text(text = chipText, fontSize = 18.sp, fontWeight = FontWeight.Bold, color = DeepNavy)
+                                ) {
+                                    Column(
+                                        horizontalAlignment = Alignment.CenterHorizontally,
+                                        modifier = Modifier.padding(horizontal = 12.dp, vertical = 6.dp)
+                                    ) {
+                                        if (token.pinyin.isNotBlank()) {
+                                            Text(text = token.pinyin, fontSize = 11.sp, color = Color(0xFF008966))
+                                        }
+                                        Text(text = chipText, fontSize = 18.sp, fontWeight = FontWeight.Bold, color = DeepNavy)
+                                    }
                                 }
                             }
                         }
                     }
-                }
 
-                Spacer(modifier = Modifier.height(24.dp))
+                    Spacer(modifier = Modifier.height(24.dp))
 
-                FlowRow(
-                    horizontalArrangement = Arrangement.spacedBy(10.dp),
-                    verticalArrangement = Arrangement.spacedBy(10.dp),
-                    modifier = Modifier.fillMaxWidth()
-                ) {
-                    exercise.wordChips.forEach { chip ->
-                        val countInSelected = selectedChips.count { it == chip }
-                        val isAvailable = countInSelected == 0
-                        val token = LearningRepository.findToken(chip)
+                    FlowRow(
+                        horizontalArrangement = Arrangement.spacedBy(10.dp),
+                        verticalArrangement = Arrangement.spacedBy(10.dp),
+                        modifier = Modifier.fillMaxWidth()
+                    ) {
+                        exercise.wordChips.forEach { chip ->
+                            val countInSelected = selectedChips.count { it == chip }
+                            val isAvailable = countInSelected == 0
+                            val token = LearningRepository.findToken(chip)
 
-                        Surface(
-                            shape = RoundedCornerShape(12.dp),
-                            color = if (isAvailable) MaterialTheme.colorScheme.surface else Color(0xFFEEEEEE),
-                            shadowElevation = if (isAvailable) 2.dp else 0.dp,
-                            border = androidx.compose.foundation.BorderStroke(1.dp, if (isAvailable) BorderGray else Color.Transparent),
-                            modifier = Modifier
-                                .clip(RoundedCornerShape(12.dp))
-                                .bouncyClick {
-                                    if (isAvailable && !isSubmitted) {
-                                        selectedChips = selectedChips + chip
-                                        ttsManager?.speak(chip)
+                            Surface(
+                                shape = RoundedCornerShape(12.dp),
+                                color = if (isAvailable) MaterialTheme.colorScheme.surface else Color(0xFFEEEEEE),
+                                shadowElevation = if (isAvailable) 2.dp else 0.dp,
+                                border = androidx.compose.foundation.BorderStroke(1.dp, if (isAvailable) BorderGray else Color.Transparent),
+                                modifier = Modifier
+                                    .clip(RoundedCornerShape(12.dp))
+                                    .bouncyClick {
+                                        if (isAvailable && !isSubmitted) {
+                                            selectedChips = selectedChips + chip
+                                            ttsManager?.speak(chip)
+                                        }
                                     }
-                                }
-                        ) {
-                            Column(
-                                horizontalAlignment = Alignment.CenterHorizontally,
-                                modifier = Modifier.padding(horizontal = 14.dp, vertical = 8.dp)
                             ) {
-                                Text(
-                                    text = token.pinyin,
-                                    fontSize = 11.sp,
-                                    color = if (isAvailable) Color(0xFF008966) else Color.LightGray
-                                )
-                                Text(
-                                    text = chip,
-                                    fontSize = 20.sp,
-                                    fontWeight = FontWeight.Bold,
-                                    color = if (isAvailable) HanziColor else Color.LightGray
-                                )
+                                Column(
+                                    horizontalAlignment = Alignment.CenterHorizontally,
+                                    modifier = Modifier.padding(horizontal = 14.dp, vertical = 8.dp)
+                                ) {
+                                    Text(
+                                        text = token.pinyin,
+                                        fontSize = 11.sp,
+                                        color = if (isAvailable) Color(0xFF008966) else Color.LightGray
+                                    )
+                                    Text(
+                                        text = chip,
+                                        fontSize = 20.sp,
+                                        fontWeight = FontWeight.Bold,
+                                        color = if (isAvailable) HanziColor else Color.LightGray
+                                    )
+                                }
                             }
                         }
                     }
