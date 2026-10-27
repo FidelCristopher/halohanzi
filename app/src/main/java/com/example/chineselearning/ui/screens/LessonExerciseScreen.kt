@@ -700,20 +700,17 @@ fun LessonExerciseScreen(
 
                 exercise.options.forEach { opt ->
                     val isSelected = selectedOption == opt
-                    Card(
+                    Surface(
                         shape = RoundedCornerShape(16.dp),
-                        colors = CardDefaults.cardColors(
-                            containerColor = if (isSelected) Color(0xFFE8F5E9) else MaterialTheme.colorScheme.surface
+                        color = Color.White,
+                        shadowElevation = if (isSelected) 2.dp else 1.dp,
+                        border = androidx.compose.foundation.BorderStroke(
+                            width = if (isSelected) 2.dp else 1.dp,
+                            color = if (isSelected) Color(0xFF007AFF) else Color(0xFFE2E8F0)
                         ),
-                        elevation = CardDefaults.cardElevation(defaultElevation = if (isSelected) 3.dp else 1.dp),
                         modifier = Modifier
                             .fillMaxWidth()
-                            .padding(vertical = 6.dp)
-                            .border(
-                                width = if (isSelected) 2.dp else 1.dp,
-                                color = if (isSelected) Color(0xFF00C48C) else BorderGray,
-                                shape = RoundedCornerShape(16.dp)
-                            )
+                            .padding(vertical = 7.dp)
                             .bouncyClick {
                                 if (!isSubmitted) {
                                     selectedOption = opt
@@ -723,14 +720,14 @@ fun LessonExerciseScreen(
                         Box(
                             modifier = Modifier
                                 .fillMaxWidth()
-                                .padding(16.dp)
+                                .padding(horizontal = 20.dp, vertical = 18.dp)
                         ) {
                             Text(
                                 text = opt,
-                                fontSize = 16.sp,
-                                fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Medium,
-                                color = if (isSelected) Color(0xFF008966) else DeepNavy,
-                                lineHeight = 22.sp
+                                fontSize = 17.sp,
+                                fontWeight = if (isSelected) FontWeight.Medium else FontWeight.Normal,
+                                color = if (isSelected) Color(0xFF007AFF) else DeepNavy,
+                                lineHeight = 24.sp
                             )
                         }
                     }

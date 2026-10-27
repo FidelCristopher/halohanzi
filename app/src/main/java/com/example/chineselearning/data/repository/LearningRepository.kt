@@ -449,9 +449,26 @@ object LearningRepository {
                                 PictureOption("pic2_saya", "saya", "🙋‍♂️", isCorrect = true)
                             )
                         ),
-                        // 3. SOAL 3: (Screenshot WhatsApp Image 2026-10-27 at 09.18.52.jpeg)
+                        // 3. SOAL 3: (Screenshot WhatsApp Image 2026-10-26 at 22.11.50.jpeg)
                         Exercise(
                             id = "u1_p1_q3",
+                            type = ExerciseType.SENTENCE_CHOICE,
+                            title = "Pilih terjemahan yang benar",
+                            targetHanzi = "你好，我 叫 布迪 。",
+                            targetPinyin = "Nǐhǎo    wǒ jiào  Bùdí",
+                            targetTranslation = "Halo, nama saya Budi.",
+                            options = listOf(
+                                "Halo, Budi.",
+                                "Halo, nama saya Budi.",
+                                "Halo, nama saya Wang Fei.",
+                                "Halo Budi, nama saya Wang Fei."
+                            ),
+                            correctAnswer = "Halo, nama saya Budi.",
+                            audioToSpeak = "你好，我叫布迪。"
+                        ),
+                        // 4. SOAL 4: (Screenshot WhatsApp Image 2026-10-27 at 09.18.52.jpeg)
+                        Exercise(
+                            id = "u1_p1_q4",
                             type = ExerciseType.FILL_BLANK,
                             title = "Lengkapi terjemahan",
                             targetHanzi = "我 叫 王 飞 。",
@@ -461,23 +478,6 @@ object LearningRepository {
                             options = listOf("Nama", "Marga", "Identitas"),
                             correctAnswer = "Nama",
                             audioToSpeak = "我叫王飞。"
-                        ),
-                        // 4. SOAL 4: Pilih terjemahan yang benar
-                        Exercise(
-                            id = "u1_p1_q4",
-                            type = ExerciseType.SENTENCE_CHOICE,
-                            title = "Pilih terjemahan yang benar",
-                            targetHanzi = "老师，你好，我是印尼人。",
-                            targetPinyin = "Lǎoshī, nǐhǎo, wǒ shì Yìnní rén.",
-                            targetTranslation = "Halo (Bapak atau Ibu) Guru, saya adalah orang Indonesia.",
-                            options = listOf(
-                                "Halo (Bapak atau Ibu) Guru, saya adalah orang Indonesia.",
-                                "Halo, (Bapak atau Ibu) Guru.",
-                                "Budi adalah orang Indonesia.",
-                                "Halo, saya adalah seorang guru."
-                            ),
-                            correctAnswer = "Halo (Bapak atau Ibu) Guru, saya adalah orang Indonesia.",
-                            audioToSpeak = "老师，你好，我是印尼人。"
                         ),
                         // 5. SOAL 5: Apa yang Anda dengar? (Sentence Builder)
                         Exercise(
