@@ -62,7 +62,10 @@ fun LessonExerciseScreen(
     var matchedPairIds by remember { mutableStateOf<Set<String>>(emptySet()) }
     var shuffledRightPairs by remember(currentExerciseIdx) {
         val currEx = exercisesList.getOrNull(currentExerciseIdx)
-        mutableStateOf(currEx?.matchPairs?.shuffled() ?: emptyList())
+        val fixedOrder = listOf("saya", "halo", "dipanggil")
+        val pairs = currEx?.matchPairs ?: emptyList()
+        val sorted = pairs.sortedBy { fixedOrder.indexOf(it.translation).takeIf { idx -> idx >= 0 } ?: 99 }
+        mutableStateOf(sorted)
     }
 
     // Submission and Feedback state
@@ -370,7 +373,8 @@ fun LessonExerciseScreen(
                         }
                     }
                 } else {
-                    // Default PERIKSA button with tactile Bouncy click
+                    // Default PERIKSA / LANJUTKAN button with tactile Bouncy click
+                    val isMatchPairsAllDone = exercise.type == ExerciseType.MATCH_PAIRS && matchedPairIds.size == exercise.matchPairs.size
                     Surface(
                         shape = RoundedCornerShape(26.dp),
                         color = if (canCheck) Color(0xFF00C48C) else Color(0xFFE0E0E0),
@@ -378,12 +382,20 @@ fun LessonExerciseScreen(
                             .fillMaxWidth()
                             .height(52.dp)
                             .then(
-                                if (canCheck) Modifier.bouncyClick { submitAnswer() } else Modifier
+                                if (canCheck) {
+                                    Modifier.bouncyClick {
+                                        if (isMatchPairsAllDone) {
+                                            nextExercise()
+                                        } else {
+                                            submitAnswer()
+                                        }
+                                    }
+                                } else Modifier
                             )
                     ) {
                         Box(contentAlignment = Alignment.Center) {
                             Text(
-                                text = "PERIKSA",
+                                text = if (exercise.type == ExerciseType.MATCH_PAIRS) "LANJUTKAN" else "PERIKSA",
                                 fontWeight = FontWeight.Bold,
                                 fontSize = 16.sp,
                                 color = if (canCheck) Color.White else Color(0xFF9E9E9E)
@@ -1284,41 +1296,38 @@ fun LessonExerciseScreen(
                 }
             }
 
-            // EXERCISE TYPE 5: KETUK PASANGAN YANG SESUAI (Screenshots 11 & 12)
+            // EXERCISE TYPE 5: KETUK PASANGAN YANG SESUAI (WhatsApp Image 2026-10-26 at 22.11.52.jpeg)
             if (exercise.type == ExerciseType.MATCH_PAIRS) {
-                Spacer(modifier = Modifier.height(10.dp))
+                Spacer(modifier = Modifier.height(20.dp))
 
                 Row(
                     modifier = Modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.spacedBy(12.dp)
+                    horizontalArrangement = Arrangement.spacedBy(16.dp)
                 ) {
                     // Left Column (Hanzi + Pinyin)
                     Column(
                         modifier = Modifier.weight(1f),
-                        verticalArrangement = Arrangement.spacedBy(10.dp)
+                        verticalArrangement = Arrangement.spacedBy(18.dp)
                     ) {
                         exercise.matchPairs.forEach { item ->
                             val isMatched = matchedPairIds.contains(item.id)
                             val isSelected = selectedLeftPairId == item.id
 
                             Surface(
-                                shape = RoundedCornerShape(14.dp),
-                                color = when {
-                                    isMatched -> Color(0xFFF1F5F9)
-                                    isSelected -> Color(0xFFE3F2FD)
-                                    else -> MaterialTheme.colorScheme.surface
-                                },
+                                shape = RoundedCornerShape(18.dp),
+                                color = Color.White,
                                 border = androidx.compose.foundation.BorderStroke(
-                                    width = if (isSelected) 2.dp else 1.dp,
+                                    width = if (isSelected) 2.5.dp else 1.dp,
                                     color = when {
-                                        isMatched -> Color.Transparent
-                                        isSelected -> Color(0xFF1976D2)
-                                        else -> BorderGray
+                                        isSelected -> Color(0xFF007AFF)
+                                        isMatched -> Color(0xFFE2E8F0)
+                                        else -> Color(0xFFE2E8F0)
                                     }
                                 ),
-                                shadowElevation = if (isMatched) 0.dp else 1.dp,
+                                shadowElevation = if (isSelected) 2.dp else 1.dp,
                                 modifier = Modifier
                                     .fillMaxWidth()
+                                    .height(115.dp)
                                     .bouncyClick {
                                         if (!isMatched) {
                                             selectedLeftPairId = item.id
@@ -1336,18 +1345,21 @@ fun LessonExerciseScreen(
                             ) {
                                 Column(
                                     horizontalAlignment = Alignment.CenterHorizontally,
-                                    modifier = Modifier.padding(vertical = 12.dp)
+                                    verticalArrangement = Arrangement.Center,
+                                    modifier = Modifier.fillMaxSize()
                                 ) {
                                     Text(
                                         text = item.pinyin,
-                                        fontSize = 11.sp,
-                                        color = if (isMatched) Color.LightGray else (if (isSelected) Color(0xFF1976D2) else SlateGray)
+                                        fontSize = 15.sp,
+                                        fontWeight = FontWeight.Normal,
+                                        color = if (isSelected) Color(0xFF007AFF) else SlateGray
                                     )
+                                    Spacer(modifier = Modifier.height(2.dp))
                                     Text(
                                         text = item.hanzi,
-                                        fontSize = 18.sp,
-                                        fontWeight = FontWeight.Bold,
-                                        color = if (isMatched) Color.LightGray else (if (isSelected) Color(0xFF1976D2) else HanziColor)
+                                        fontSize = 24.sp,
+                                        fontWeight = FontWeight.Normal,
+                                        color = if (isSelected) Color(0xFF007AFF) else DeepNavy
                                     )
                                 }
                             }
@@ -1357,30 +1369,27 @@ fun LessonExerciseScreen(
                     // Right Column (Translations)
                     Column(
                         modifier = Modifier.weight(1f),
-                        verticalArrangement = Arrangement.spacedBy(10.dp)
+                        verticalArrangement = Arrangement.spacedBy(18.dp)
                     ) {
                         shuffledRightPairs.forEach { item ->
                             val isMatched = matchedPairIds.contains(item.id)
                             val isSelected = selectedRightPairId == item.id
 
                             Surface(
-                                shape = RoundedCornerShape(14.dp),
-                                color = when {
-                                    isMatched -> Color(0xFFF1F5F9)
-                                    isSelected -> Color(0xFFE3F2FD)
-                                    else -> MaterialTheme.colorScheme.surface
-                                },
+                                shape = RoundedCornerShape(18.dp),
+                                color = Color.White,
                                 border = androidx.compose.foundation.BorderStroke(
-                                    width = if (isSelected) 2.dp else 1.dp,
+                                    width = if (isSelected) 2.5.dp else 1.dp,
                                     color = when {
-                                        isMatched -> Color.Transparent
-                                        isSelected -> Color(0xFF1976D2)
-                                        else -> BorderGray
+                                        isSelected -> Color(0xFF007AFF)
+                                        isMatched -> Color(0xFFE2E8F0)
+                                        else -> Color(0xFFE2E8F0)
                                     }
                                 ),
-                                shadowElevation = if (isMatched) 0.dp else 1.dp,
+                                shadowElevation = if (isSelected) 2.dp else 1.dp,
                                 modifier = Modifier
                                     .fillMaxWidth()
+                                    .height(115.dp)
                                     .bouncyClick {
                                         if (!isMatched) {
                                             selectedRightPairId = item.id
@@ -1396,17 +1405,14 @@ fun LessonExerciseScreen(
                                     }
                             ) {
                                 Box(
-                                    modifier = Modifier
-                                        .fillMaxWidth()
-                                        .height(58.dp)
-                                        .padding(horizontal = 8.dp),
+                                    modifier = Modifier.fillMaxSize(),
                                     contentAlignment = Alignment.Center
                                 ) {
                                     Text(
                                         text = item.translation,
-                                        fontSize = 14.sp,
-                                        fontWeight = FontWeight.Bold,
-                                        color = if (isMatched) Color.LightGray else (if (isSelected) Color(0xFF1976D2) else DeepNavy),
+                                        fontSize = 18.sp,
+                                        fontWeight = FontWeight.Normal,
+                                        color = if (isSelected) Color(0xFF007AFF) else DeepNavy,
                                         textAlign = TextAlign.Center
                                     )
                                 }

@@ -528,18 +528,17 @@ object LearningRepository {
                             hasCommaAfterSlot1 = true,
                             isImmersiveSpeaker = true
                         ),
-                        // 8. SOAL 8: Lengkapi terjemahan
+                        // 8. SOAL 8: (Screenshot WhatsApp Image 2026-10-26 at 22.11.52.jpeg - Ketuk pasangan yang sesuai)
                         Exercise(
                             id = "u1_p1_q8",
-                            type = ExerciseType.FILL_BLANK,
-                            title = "Lengkapi terjemahan",
-                            targetHanzi = "你好 ， 老师 ！",
-                            targetPinyin = "Nǐhǎo , lǎoshī !",
-                            targetTranslation = "Halo, Guru!",
-                            sentenceWithBlank = "________, Guru!",
-                            options = listOf("Halo", "Terima kasih", "Sampai jumpa"),
-                            correctAnswer = "Halo",
-                            audioToSpeak = "你好，老师！"
+                            type = ExerciseType.MATCH_PAIRS,
+                            title = "Ketuk pasangan yang sesuai",
+                            correctAnswer = "ALL_MATCHED",
+                            matchPairs = listOf(
+                                MatchPairItem("m1", "叫", "jiào", "dipanggil"),
+                                MatchPairItem("m2", "我", "wǒ", "saya"),
+                                MatchPairItem("m3", "你好", "nǐhǎo", "halo")
+                            )
                         ),
                         // 9. SOAL 9: Pilih gambar yang benar (学生)
                         Exercise(
