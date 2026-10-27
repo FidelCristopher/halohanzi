@@ -449,18 +449,18 @@ object LearningRepository {
                                 PictureOption("pic2_saya", "saya", "🙋‍♂️", isCorrect = true)
                             )
                         ),
-                        // 3. SOAL 3: Lengkapi terjemahan (我是印度尼西亚人)
+                        // 3. SOAL 3: (Screenshot WhatsApp Image 2026-10-27 at 09.18.52.jpeg)
                         Exercise(
                             id = "u1_p1_q3",
                             type = ExerciseType.FILL_BLANK,
                             title = "Lengkapi terjemahan",
-                            targetHanzi = "我 是 印度尼西亚 人 。",
-                            targetPinyin = "Wǒ shì Yìndùníxīyà rén .",
-                            targetTranslation = "Saya adalah orang Indonesia.",
-                            sentenceWithBlank = "Saya ________ orang Indonesia.",
-                            options = listOf("adalah", "kenal", "bukan"),
-                            correctAnswer = "adalah",
-                            audioToSpeak = "我是印度尼西亚人。"
+                            targetHanzi = "我 叫 王 飞 。",
+                            targetPinyin = "Wǒ jiào WángFēi",
+                            targetTranslation = "Nama saya Wang Fei.",
+                            sentenceWithBlank = "________ saya Wang Fei.",
+                            options = listOf("Nama", "Marga", "Identitas"),
+                            correctAnswer = "Nama",
+                            audioToSpeak = "我叫王飞。"
                         ),
                         // 4. SOAL 4: Pilih terjemahan yang benar
                         Exercise(

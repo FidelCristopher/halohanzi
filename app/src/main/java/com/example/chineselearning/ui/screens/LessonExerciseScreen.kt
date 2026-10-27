@@ -512,7 +512,7 @@ fun LessonExerciseScreen(
                 }
             }
 
-            // EXERCISE TYPE 2: LENGKAPI TERJEMAHAN (Screenshot 6)
+            // EXERCISE TYPE 2: LENGKAPI TERJEMAHAN (WhatsApp Image 2026-10-27 at 09.18.52.jpeg)
             if (exercise.type == ExerciseType.FILL_BLANK) {
                 Row(
                     modifier = Modifier.fillMaxWidth(),
@@ -528,72 +528,139 @@ fun LessonExerciseScreen(
                     ) {
                         Icon(imageVector = Icons.AutoMirrored.Filled.VolumeUp, contentDescription = "Dengarkan", tint = Color.White)
                     }
-                    Spacer(modifier = Modifier.width(14.dp))
+                    Spacer(modifier = Modifier.width(16.dp))
                     Column {
-                        Text(text = exercise.targetPinyin, fontSize = 15.sp, color = SlateGray)
-                        Text(text = exercise.targetHanzi, fontSize = 24.sp, fontWeight = FontWeight.Bold, color = HanziColor)
+                        Text(text = exercise.targetPinyin, fontSize = 16.sp, color = SlateGray)
+                        Spacer(modifier = Modifier.height(2.dp))
+                        Text(text = exercise.targetHanzi, fontSize = 24.sp, fontWeight = FontWeight.SemiBold, color = HanziColor)
                     }
                 }
 
-                Spacer(modifier = Modifier.height(28.dp))
+                Spacer(modifier = Modifier.height(36.dp))
 
-                val blankText = selectedOption ?: "________"
-                val fullSentence = exercise.sentenceWithBlank.replace("________", blankText)
+                // Sentence with slot and underline (matching HelloChinese exact design)
+                val parts = exercise.sentenceWithBlank.split("________")
+                val prefix = parts.getOrNull(0) ?: ""
+                val suffix = parts.getOrNull(1) ?: ""
 
-                Surface(
-                    shape = RoundedCornerShape(16.dp),
-                    color = MaterialTheme.colorScheme.surface,
-                    border = androidx.compose.foundation.BorderStroke(1.dp, BorderGray),
-                    modifier = Modifier.fillMaxWidth()
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    verticalAlignment = Alignment.Bottom,
+                    horizontalArrangement = Arrangement.Start
                 ) {
-                    Box(
-                        modifier = Modifier.padding(20.dp),
-                        contentAlignment = Alignment.CenterStart
-                    ) {
+                    if (prefix.isNotBlank()) {
                         Text(
-                            text = fullSentence,
-                            fontSize = 17.sp,
-                            fontWeight = FontWeight.Bold,
-                            color = DeepNavy
+                            text = prefix,
+                            fontSize = 20.sp,
+                            fontWeight = FontWeight.Normal,
+                            color = DeepNavy,
+                            modifier = Modifier.padding(bottom = 6.dp)
+                        )
+                        Spacer(modifier = Modifier.width(8.dp))
+                    }
+
+                    // Blank slot with underline
+                    Column(
+                        horizontalAlignment = Alignment.CenterHorizontally,
+                        modifier = Modifier.width(IntrinsicSize.Min)
+                    ) {
+                        if (selectedOption != null) {
+                            Surface(
+                                shape = RoundedCornerShape(12.dp),
+                                color = Color.White,
+                                shadowElevation = 1.5.dp,
+                                border = androidx.compose.foundation.BorderStroke(1.dp, BorderGray),
+                                modifier = Modifier
+                                    .padding(bottom = 6.dp)
+                                    .bouncyClick {
+                                        if (!isSubmitted) {
+                                            selectedOption = null
+                                        }
+                                    }
+                            ) {
+                                Text(
+                                    text = selectedOption!!,
+                                    fontSize = 19.sp,
+                                    fontWeight = FontWeight.Normal,
+                                    color = DeepNavy,
+                                    modifier = Modifier.padding(horizontal = 16.dp, vertical = 8.dp)
+                                )
+                            }
+                        } else {
+                            Box(
+                                modifier = Modifier
+                                    .width(96.dp)
+                                    .height(44.dp)
+                                    .padding(bottom = 6.dp)
+                            )
+                        }
+
+                        // Underline indicator
+                        Box(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .defaultMinSize(minWidth = 96.dp)
+                                .height(2.dp)
+                                .background(Color(0xFF00C48C), shape = RoundedCornerShape(1.dp))
+                        )
+                    }
+
+                    if (suffix.isNotBlank()) {
+                        Spacer(modifier = Modifier.width(10.dp))
+                        Text(
+                            text = suffix.trimStart(),
+                            fontSize = 20.sp,
+                            fontWeight = FontWeight.Normal,
+                            color = DeepNavy,
+                            modifier = Modifier.padding(bottom = 6.dp)
                         )
                     }
                 }
 
-                Spacer(modifier = Modifier.height(40.dp))
+                Spacer(modifier = Modifier.height(100.dp))
 
-                // Options Chips with Bouncy Touch
+                // Options Chips with placeholder behavior
                 Row(
-                    horizontalArrangement = Arrangement.spacedBy(10.dp),
+                    horizontalArrangement = Arrangement.spacedBy(12.dp),
                     modifier = Modifier.fillMaxWidth()
                 ) {
                     exercise.options.forEach { opt ->
                         val isSelected = selectedOption == opt
-                        Surface(
-                            shape = RoundedCornerShape(14.dp),
-                            color = if (isSelected) Color(0xFFE8F5E9) else MaterialTheme.colorScheme.surface,
-                            shadowElevation = if (isSelected) 2.dp else 1.dp,
-                            border = androidx.compose.foundation.BorderStroke(
-                                1.5.dp,
-                                if (isSelected) Color(0xFF00C48C) else BorderGray
-                            ),
-                            modifier = Modifier
-                                .weight(1f)
-                                .bouncyClick {
-                                    if (!isSubmitted) {
-                                        selectedOption = opt
-                                    }
-                                }
-                        ) {
+                        if (isSelected) {
+                            // Empty placeholder when selected
                             Box(
-                                modifier = Modifier.padding(vertical = 14.dp),
-                                contentAlignment = Alignment.Center
+                                modifier = Modifier
+                                    .weight(1f)
+                                    .height(50.dp)
+                                    .clip(RoundedCornerShape(14.dp))
+                                    .background(Color(0xFFE2E8F0))
+                            )
+                        } else {
+                            Surface(
+                                shape = RoundedCornerShape(14.dp),
+                                color = MaterialTheme.colorScheme.surface,
+                                shadowElevation = 2.dp,
+                                border = androidx.compose.foundation.BorderStroke(1.dp, BorderGray),
+                                modifier = Modifier
+                                    .weight(1f)
+                                    .height(50.dp)
+                                    .bouncyClick {
+                                        if (!isSubmitted) {
+                                            selectedOption = opt
+                                        }
+                                    }
                             ) {
-                                Text(
-                                    text = opt,
-                                    fontSize = 16.sp,
-                                    fontWeight = FontWeight.Bold,
-                                    color = if (isSelected) Color(0xFF00C48C) else DeepNavy
-                                )
+                                Box(
+                                    modifier = Modifier.fillMaxSize(),
+                                    contentAlignment = Alignment.Center
+                                ) {
+                                    Text(
+                                        text = opt,
+                                        fontSize = 17.sp,
+                                        fontWeight = FontWeight.Normal,
+                                        color = DeepNavy
+                                    )
+                                }
                             }
                         }
                     }
