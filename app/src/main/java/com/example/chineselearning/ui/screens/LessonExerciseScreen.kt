@@ -685,17 +685,26 @@ fun LessonExerciseScreen(
                             ) {
                                 Icon(imageVector = Icons.AutoMirrored.Filled.VolumeUp, contentDescription = "Dengarkan", tint = Color.White)
                             }
-                            Spacer(modifier = Modifier.width(14.dp))
+                            Spacer(modifier = Modifier.width(16.dp))
                         }
                         Column {
                             if (exercise.targetPinyin.isNotBlank()) {
-                                Text(text = exercise.targetPinyin, fontSize = 15.sp, color = SlateGray)
+                                Text(text = exercise.targetPinyin, fontSize = 16.sp, color = SlateGray)
+                                Spacer(modifier = Modifier.height(2.dp))
                             }
-                            Text(text = exercise.targetHanzi, fontSize = 22.sp, fontWeight = FontWeight.Bold, color = HanziColor)
+                            Text(text = exercise.targetHanzi, fontSize = 24.sp, fontWeight = FontWeight.SemiBold, color = HanziColor)
                         }
                     }
 
-                    Spacer(modifier = Modifier.height(20.dp))
+                    Spacer(modifier = Modifier.height(28.dp))
+                } else if (exercise.targetTranslation.isNotBlank()) {
+                    Text(
+                        text = exercise.targetTranslation,
+                        fontSize = 20.sp,
+                        fontWeight = FontWeight.Normal,
+                        color = DeepNavy,
+                        modifier = Modifier.padding(bottom = 28.dp)
+                    )
                 }
 
                 val isGrid2x2 = exercise.options.size == 4 && exercise.options.all { it.length <= 16 }
@@ -774,13 +783,36 @@ fun LessonExerciseScreen(
                                     .fillMaxWidth()
                                     .padding(horizontal = 20.dp, vertical = 18.dp)
                             ) {
-                                Text(
-                                    text = opt,
-                                    fontSize = 17.sp,
-                                    fontWeight = if (isSelected) FontWeight.Medium else FontWeight.Normal,
-                                    color = if (isSelected) Color(0xFF007AFF) else DeepNavy,
-                                    lineHeight = 24.sp
-                                )
+                                if (opt.contains("\n")) {
+                                    val lines = opt.split("\n")
+                                    val pinyinPart = lines.getOrNull(0) ?: ""
+                                    val hanziPart = lines.getOrNull(1) ?: ""
+                                    Column {
+                                        if (pinyinPart.isNotBlank()) {
+                                            Text(
+                                                text = pinyinPart,
+                                                fontSize = 15.sp,
+                                                fontWeight = FontWeight.Normal,
+                                                color = if (isSelected) Color(0xFF007AFF) else SlateGray
+                                            )
+                                            Spacer(modifier = Modifier.height(4.dp))
+                                        }
+                                        Text(
+                                            text = hanziPart,
+                                            fontSize = 22.sp,
+                                            fontWeight = FontWeight.Normal,
+                                            color = if (isSelected) Color(0xFF007AFF) else DeepNavy
+                                        )
+                                    }
+                                } else {
+                                    Text(
+                                        text = opt,
+                                        fontSize = 17.sp,
+                                        fontWeight = if (isSelected) FontWeight.Medium else FontWeight.Normal,
+                                        color = if (isSelected) Color(0xFF007AFF) else DeepNavy,
+                                        lineHeight = 24.sp
+                                    )
+                                }
                             }
                         }
                     }

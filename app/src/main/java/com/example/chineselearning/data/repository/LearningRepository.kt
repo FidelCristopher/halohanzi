@@ -496,21 +496,21 @@ object LearningRepository {
                             correctAnswer = "dipanggil",
                             audioToSpeak = "叫"
                         ),
-                        // 6. SOAL 6: Pilih terjemahan yang benar
+                        // 6. SOAL 6: (Screenshot WhatsApp Image 2026-10-26 at 22.11.51.jpeg - Nama saya Budi.)
                         Exercise(
                             id = "u1_p1_q6",
                             type = ExerciseType.SENTENCE_CHOICE,
                             title = "Pilih terjemahan yang benar",
-                            targetHanzi = "Budi adalah seorang murid.",
-                            targetTranslation = "Budi adalah seorang murid.",
+                            targetHanzi = "",
+                            targetPinyin = "",
+                            targetTranslation = "Nama saya Budi.",
                             options = listOf(
-                                "王飞 是 学生 。",
-                                "我 是 学生 。",
-                                "布迪 是 学生 。",
-                                "我 是 布迪 。"
+                                "Nǐhǎo        Bùdí\n你好，布迪。",
+                                "WángFēi        nǐhǎo\n王 飞 ， 你 好 。",
+                                "Wǒ jiào    Bùdí\n我 叫 布迪 。"
                             ),
-                            correctAnswer = "布迪 是 学生 。",
-                            audioToSpeak = "布迪是学生。"
+                            correctAnswer = "Wǒ jiào    Bùdí\n我 叫 布迪 。",
+                            audioToSpeak = "我叫布迪。"
                         ),
                         // 7. SOAL 7: Ketuk pasangan yang sesuai (Match Pairs)
                         Exercise(
