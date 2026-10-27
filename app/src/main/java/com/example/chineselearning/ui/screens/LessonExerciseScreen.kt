@@ -703,7 +703,10 @@ fun LessonExerciseScreen(
                         fontSize = 20.sp,
                         fontWeight = FontWeight.Normal,
                         color = DeepNavy,
-                        modifier = Modifier.padding(bottom = 28.dp)
+                        textAlign = TextAlign.Start,
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(top = 6.dp, bottom = 32.dp)
                     )
                 }
 
