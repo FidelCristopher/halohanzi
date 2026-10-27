@@ -540,22 +540,17 @@ object LearningRepository {
                                 MatchPairItem("m3", "你好", "nǐhǎo", "halo")
                             )
                         ),
-                        // 9. SOAL 9: Pilih gambar yang benar (学生)
+                        // 9. SOAL 9: (Screenshot WhatsApp Image 2026-10-26 at 22.11.52.jpeg - Lengkapi terjemahan)
                         Exercise(
                             id = "u1_p1_q9",
-                            type = ExerciseType.PICTURE_CHOICE,
-                            title = "Pilih gambar yang benar",
-                            targetHanzi = "学生",
-                            targetPinyin = "xuéshēng",
-                            targetTranslation = "murid",
-                            correctAnswer = "murid",
-                            audioToSpeak = "学生",
-                            pictureOptions = listOf(
-                                PictureOption("pic_guru9", "guru", "👩‍🏫", isCorrect = false),
-                                PictureOption("pic_murid9", "murid", "👨‍🎓", isCorrect = true),
-                                PictureOption("pic_saya9", "saya", "🙋‍♂️", isCorrect = false),
-                                PictureOption("pic_indo9", "(negara)\nIndonesia", "🇮🇩", isCorrect = false)
-                            )
+                            type = ExerciseType.SENTENCE_BUILDER,
+                            title = "Lengkapi terjemahan",
+                            targetTranslation = "Halo Wang Fei, nama saya Budi.",
+                            targetHanzi = "你好，王飞，我叫布迪。",
+                            targetPinyin = "Nǐhǎo, WángFēi, wǒ jiào Bùdí.",
+                            wordChips = listOf("你:nǐ", "我:wǒ", "叫:jiào", "印尼:Yìnní"),
+                            correctAnswer = "我,叫",
+                            audioToSpeak = "你好，王飞，我叫布迪。"
                         )
                     ),
                     exercisesPart2 = listOf(
