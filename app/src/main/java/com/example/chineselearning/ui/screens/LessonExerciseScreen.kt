@@ -698,37 +698,90 @@ fun LessonExerciseScreen(
                     Spacer(modifier = Modifier.height(20.dp))
                 }
 
-                exercise.options.forEach { opt ->
-                    val isSelected = selectedOption == opt
-                    Surface(
-                        shape = RoundedCornerShape(16.dp),
-                        color = Color.White,
-                        shadowElevation = if (isSelected) 2.dp else 1.dp,
-                        border = androidx.compose.foundation.BorderStroke(
-                            width = if (isSelected) 2.dp else 1.dp,
-                            color = if (isSelected) Color(0xFF007AFF) else Color(0xFFE2E8F0)
-                        ),
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .padding(vertical = 7.dp)
-                            .bouncyClick {
-                                if (!isSubmitted) {
-                                    selectedOption = opt
+                val isGrid2x2 = exercise.options.size == 4 && exercise.options.all { it.length <= 16 }
+
+                if (isGrid2x2) {
+                    val rows = exercise.options.chunked(2)
+                    Column(
+                        verticalArrangement = Arrangement.spacedBy(14.dp),
+                        modifier = Modifier.fillMaxWidth()
+                    ) {
+                        rows.forEach { rowOptions ->
+                            Row(
+                                horizontalArrangement = Arrangement.spacedBy(14.dp),
+                                modifier = Modifier.fillMaxWidth()
+                            ) {
+                                rowOptions.forEach { opt ->
+                                    val isSelected = selectedOption == opt
+                                    Surface(
+                                        shape = RoundedCornerShape(18.dp),
+                                        color = Color.White,
+                                        shadowElevation = if (isSelected) 2.dp else 1.dp,
+                                        border = androidx.compose.foundation.BorderStroke(
+                                            width = if (isSelected) 2.5.dp else 1.dp,
+                                            color = if (isSelected) Color(0xFF007AFF) else Color(0xFFE2E8F0)
+                                        ),
+                                        modifier = Modifier
+                                            .weight(1f)
+                                            .height(170.dp)
+                                            .bouncyClick {
+                                                if (!isSubmitted) {
+                                                    selectedOption = opt
+                                                }
+                                            }
+                                    ) {
+                                        Box(
+                                            modifier = Modifier
+                                                .fillMaxSize()
+                                                .padding(12.dp),
+                                            contentAlignment = Alignment.Center
+                                        ) {
+                                            Text(
+                                                text = opt,
+                                                fontSize = 18.sp,
+                                                fontWeight = if (isSelected) FontWeight.Medium else FontWeight.Normal,
+                                                color = if (isSelected) Color(0xFF007AFF) else DeepNavy,
+                                                textAlign = TextAlign.Center
+                                            )
+                                        }
+                                    }
                                 }
                             }
-                    ) {
-                        Box(
+                        }
+                    }
+                } else {
+                    exercise.options.forEach { opt ->
+                        val isSelected = selectedOption == opt
+                        Surface(
+                            shape = RoundedCornerShape(16.dp),
+                            color = Color.White,
+                            shadowElevation = if (isSelected) 2.dp else 1.dp,
+                            border = androidx.compose.foundation.BorderStroke(
+                                width = if (isSelected) 2.dp else 1.dp,
+                                color = if (isSelected) Color(0xFF007AFF) else Color(0xFFE2E8F0)
+                            ),
                             modifier = Modifier
                                 .fillMaxWidth()
-                                .padding(horizontal = 20.dp, vertical = 18.dp)
+                                .padding(vertical = 7.dp)
+                                .bouncyClick {
+                                    if (!isSubmitted) {
+                                        selectedOption = opt
+                                    }
+                                }
                         ) {
-                            Text(
-                                text = opt,
-                                fontSize = 17.sp,
-                                fontWeight = if (isSelected) FontWeight.Medium else FontWeight.Normal,
-                                color = if (isSelected) Color(0xFF007AFF) else DeepNavy,
-                                lineHeight = 24.sp
-                            )
+                            Box(
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .padding(horizontal = 20.dp, vertical = 18.dp)
+                            ) {
+                                Text(
+                                    text = opt,
+                                    fontSize = 17.sp,
+                                    fontWeight = if (isSelected) FontWeight.Medium else FontWeight.Normal,
+                                    color = if (isSelected) Color(0xFF007AFF) else DeepNavy,
+                                    lineHeight = 24.sp
+                                )
+                            }
                         }
                     }
                 }

@@ -479,17 +479,22 @@ object LearningRepository {
                             correctAnswer = "Nama",
                             audioToSpeak = "我叫王飞。"
                         ),
-                        // 5. SOAL 5: Apa yang Anda dengar? (Sentence Builder)
+                        // 5. SOAL 5: (Screenshot WhatsApp Image 2026-10-26 at 22.11.51.jpeg)
                         Exercise(
                             id = "u1_p1_q5",
-                            type = ExerciseType.SENTENCE_BUILDER,
-                            title = "Apa yang Anda dengar?",
-                            targetHanzi = "布迪 是 学生 。",
-                            targetPinyin = "Bùdí shì xuéshēng .",
-                            targetTranslation = "Budi adalah seorang murid.",
-                            wordChips = listOf("是", "人", "你好", "学生", "老师", "印尼"),
-                            correctAnswer = "是,学生",
-                            audioToSpeak = "布迪是学生。"
+                            type = ExerciseType.SENTENCE_CHOICE,
+                            title = "Pilih terjemahan yang benar",
+                            targetHanzi = "叫",
+                            targetPinyin = "jiào",
+                            targetTranslation = "dipanggil",
+                            options = listOf(
+                                "saya",
+                                "(nama) Budi",
+                                "halo",
+                                "dipanggil"
+                            ),
+                            correctAnswer = "dipanggil",
+                            audioToSpeak = "叫"
                         ),
                         // 6. SOAL 6: Pilih terjemahan yang benar
                         Exercise(
