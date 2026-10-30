@@ -1,5 +1,6 @@
 package com.example.chineselearning.data.repository
 
+import androidx.compose.runtime.mutableStateMapOf
 import androidx.compose.ui.graphics.Color
 import com.example.chineselearning.data.model.*
 
@@ -202,7 +203,7 @@ object LearningRepository {
 
     fun getSavedWords(): List<Word> = savedWords
 
-    private val stageProgress = mutableMapOf<String, Int>()
+    val stageProgress = mutableStateMapOf<String, Int>()
 
     fun getStageProgress(nodeId: String): Int {
         return stageProgress.getOrPut(nodeId) { 1 } // Default is 1 -> "1/2"
@@ -213,6 +214,10 @@ object LearningRepository {
         val next = if (curr == 1) 2 else 1
         stageProgress[nodeId] = next
         return next
+    }
+
+    fun setStageProgress(nodeId: String, part: Int) {
+        stageProgress[nodeId] = part
     }
 
     fun toggleSaveWord(word: Word): Boolean {

@@ -359,6 +359,9 @@ fun HomeScreen(
                         onDismissPopup = {
                             activePopupNodeId = null
                         },
+                        onTogglePartClick = {
+                            LearningRepository.toggleStageProgress(node.id)
+                        },
                         onStartLesson = {
                             activePopupNodeId = null
                             when (node.iconType) {
@@ -396,6 +399,7 @@ fun StageNodeRow(
     rowHeight: Dp = 100.dp,
     onClick: () -> Unit,
     onDismissPopup: () -> Unit = {},
+    onTogglePartClick: () -> Unit = {},
     onStartLesson: () -> Unit = {}
 ) {
     Box(
@@ -531,7 +535,8 @@ fun StageNodeRow(
                     node = node,
                     xOffset = currXOffset,
                     progressCount = progressCount,
-                    onStartClick = onStartLesson
+                    onStartClick = onStartLesson,
+                    onTogglePartClick = onTogglePartClick
                 )
             }
         }

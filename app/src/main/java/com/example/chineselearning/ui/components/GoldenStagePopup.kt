@@ -25,7 +25,8 @@ fun GoldenStagePopup(
     node: PathNode,
     xOffset: Dp,
     progressCount: Int = 1,
-    onStartClick: () -> Unit
+    onStartClick: () -> Unit,
+    onTogglePartClick: () -> Unit = {}
 ) {
     val goldGradient = Brush.verticalGradient(
         colors = listOf(
@@ -145,7 +146,7 @@ fun GoldenStagePopup(
                         }
                     }
 
-                    // Kotak 2: Kotak Putih Terpisah "1/2" (atau "2/2")
+                    // Kotak 2: Kotak Putih Terpisah "1/2" (atau "2/2") - Interaktif toggle 1/2 <-> 2/2
                     Box(
                         modifier = Modifier
                             .width(76.dp)
@@ -158,8 +159,9 @@ fun GoldenStagePopup(
                             shape = RoundedCornerShape(25.dp),
                             color = Color.White,
                             modifier = Modifier
-                                .fillMaxSize()
-                                .padding(bottom = 4.dp)
+                                .fillMaxWidth()
+                                .height(46.dp)
+                                .bouncyClick(onClick = onTogglePartClick)
                         ) {
                             Box(contentAlignment = Alignment.Center) {
                                 Text(
