@@ -131,8 +131,8 @@ fun StoryReaderScreen(
                             )
                         },
                         colors = FilterChipDefaults.filterChipColors(
-                            selectedContainerColor = HelloMint,
-                            selectedLabelColor = HelloGreenDark
+                            selectedContainerColor = HanziMint,
+                            selectedLabelColor = HanziGreenDark
                         ),
                         modifier = Modifier.padding(end = 4.dp)
                     )
@@ -141,7 +141,7 @@ fun StoryReaderScreen(
                         Icon(
                             imageVector = if (showTranslation) Icons.Default.Translate else Icons.Default.GTranslate,
                             contentDescription = "Toggle Translation",
-                            tint = if (showTranslation) HelloGreen else SlateGray
+                            tint = if (showTranslation) HanziGreen else SlateGray
                         )
                     }
                 },
@@ -149,7 +149,7 @@ fun StoryReaderScreen(
             )
         },
         bottomBar = {
-            // HelloChinese Style Audio Player Dock (Screenshot 3)
+            // Interactive Audio Player Dock
             Surface(
                 color = MaterialTheme.colorScheme.surface,
                 tonalElevation = 10.dp,
@@ -189,8 +189,8 @@ fun StoryReaderScreen(
                                 .padding(horizontal = 10.dp)
                                 .height(20.dp),
                             colors = SliderDefaults.colors(
-                                thumbColor = HelloGreen,
-                                activeTrackColor = HelloGreen,
+                                thumbColor = HanziGreen,
+                                activeTrackColor = HanziGreen,
                                 inactiveTrackColor = LightSlate
                             )
                         )
@@ -216,7 +216,7 @@ fun StoryReaderScreen(
                             Icon(
                                 imageVector = Icons.Default.Repeat,
                                 contentDescription = "Loop",
-                                tint = if (isLooping) HelloGreen else SlateGray
+                                tint = if (isLooping) HanziGreen else SlateGray
                             )
                         }
 
@@ -248,7 +248,7 @@ fun StoryReaderScreen(
                                     playSentence(startIdx, autoAdvance = true)
                                 }
                             },
-                            containerColor = HelloGreen,
+                            containerColor = HanziGreen,
                             contentColor = Color.White,
                             shape = CircleShape,
                             modifier = Modifier.size(54.dp)
@@ -287,7 +287,7 @@ fun StoryReaderScreen(
                                 text = speedLabels[speedIndex],
                                 fontSize = 12.sp,
                                 fontWeight = FontWeight.Bold,
-                                color = HelloGreenDark,
+                                color = HanziGreenDark,
                                 modifier = Modifier.padding(horizontal = 8.dp, vertical = 6.dp)
                             )
                         }
@@ -321,12 +321,12 @@ fun StoryReaderScreen(
                     ) {
                         Row(verticalAlignment = Alignment.CenterVertically) {
                             Surface(
-                                color = HelloMint,
+                                color = HanziMint,
                                 shape = RoundedCornerShape(8.dp)
                             ) {
                                 Text(
                                     text = story.level,
-                                    color = HelloGreenDark,
+                                    color = HanziGreenDark,
                                     fontSize = 11.sp,
                                     fontWeight = FontWeight.Bold,
                                     modifier = Modifier.padding(horizontal = 8.dp, vertical = 3.dp)
@@ -350,7 +350,7 @@ fun StoryReaderScreen(
                 }
             }
 
-            // Sentences List with HelloChinese Green Karaoke Highlight
+            // Sentences List with Synchronized Karaoke Audio Highlight
             itemsIndexed(story.sentences) { index, sentence ->
                 KaraokeSentenceCard(
                     sentence = sentence,
@@ -431,7 +431,7 @@ fun StoryReaderScreen(
                                 val isCorrect = oIdx == question.correctAnswerIndex
 
                                 val optionColor = when {
-                                    !isAnswerSubmitted && isSelected -> HelloMint
+                                    !isAnswerSubmitted && isSelected -> HanziMint
                                     isAnswerSubmitted && isCorrect -> Color(0xFFD4EDDA)
                                     isAnswerSubmitted && isSelected && !isCorrect -> Color(0xFFF8D7DA)
                                     else -> LightSlate
@@ -494,7 +494,7 @@ fun StoryReaderScreen(
                                         text = if (correct) "Correct!" else "Explanation:",
                                         fontWeight = FontWeight.Bold,
                                         fontSize = 13.sp,
-                                        color = if (correct) HelloGreenDark else RubyCoral
+                                        color = if (correct) HanziGreenDark else RubyCoral
                                     )
                                     Spacer(modifier = Modifier.height(4.dp))
                                     Text(
@@ -521,7 +521,7 @@ fun StoryReaderScreen(
                                     },
                                     modifier = Modifier.fillMaxWidth(),
                                     shape = RoundedCornerShape(12.dp),
-                                    colors = ButtonDefaults.buttonColors(containerColor = HelloGreen)
+                                    colors = ButtonDefaults.buttonColors(containerColor = HanziGreen)
                                 ) {
                                     Text(
                                         text = if (currentQuestionIdx < story.questions.lastIndex) "Next Question →" else "Complete (Score: $quizScore/${story.questions.size})"

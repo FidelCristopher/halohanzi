@@ -136,7 +136,7 @@ fun LessonExerciseScreen(
         }
     }
 
-    // CELEBRATION SCREEN (Screenshot 13)
+    // CELEBRATION SCREEN
     if (isLessonCompleted) {
         LessonCelebrationScreen(
             comboCount = comboCount,
@@ -235,7 +235,7 @@ fun LessonExerciseScreen(
 
                 Spacer(modifier = Modifier.height(4.dp))
 
-                // HelloChinese Fire / Comet Progress Bar with Target Bullseye
+                // Dynamic Fire / Gradient Progress Bar with Target Bullseye
                 Row(
                     modifier = Modifier.fillMaxWidth(),
                     verticalAlignment = Alignment.CenterVertically
@@ -267,7 +267,7 @@ fun LessonExerciseScreen(
             }
         },
         bottomBar = {
-            // BOTTOM BAR / FEEDBACK SHEET (Screenshots 3, 5, 8) with SHAKE on error!
+            // BOTTOM BAR / FEEDBACK SHEET with tactile shake on incorrect answer
             Column(
                 modifier = Modifier
                     .fillMaxWidth()
@@ -433,7 +433,7 @@ fun LessonExerciseScreen(
 
             Spacer(modifier = Modifier.height(14.dp))
 
-            // EXERCISE TYPE 1: PILIH GAMBAR YANG BENAR (Screenshot 3 & 4)
+            // EXERCISE TYPE 1: PILIH GAMBAR YANG BENAR
             if (exercise.type == ExerciseType.PICTURE_CHOICE) {
                 // Word prompt with speaker button
                 Row(
@@ -542,7 +542,7 @@ fun LessonExerciseScreen(
                 }
             }
 
-            // EXERCISE TYPE 2: LENGKAPI TERJEMAHAN (WhatsApp Image 2026-10-27 at 09.18.52.jpeg)
+            // EXERCISE TYPE 2: LENGKAPI TERJEMAHAN
             if (exercise.type == ExerciseType.FILL_BLANK) {
                 Row(
                     modifier = Modifier.fillMaxWidth(),
@@ -568,7 +568,7 @@ fun LessonExerciseScreen(
 
                 Spacer(modifier = Modifier.height(36.dp))
 
-                // Sentence with slot and underline (matching HelloChinese exact design)
+                // Sentence with slot and underline indicator
                 val parts = exercise.sentenceWithBlank.split("________")
                 val prefix = parts.getOrNull(0) ?: ""
                 val suffix = parts.getOrNull(1) ?: ""
@@ -697,7 +697,7 @@ fun LessonExerciseScreen(
                 }
             }
 
-            // EXERCISE TYPE 3: PILIH TERJEMAHAN YANG BENAR (Screenshot 7 & 10)
+            // EXERCISE TYPE 3: PILIH TERJEMAHAN YANG BENAR
             if (exercise.type == ExerciseType.SENTENCE_CHOICE) {
                 if (exercise.targetHanzi.isNotBlank()) {
                     Row(
@@ -852,7 +852,7 @@ fun LessonExerciseScreen(
                 }
             }
 
-            // EXERCISE TYPE 4: APA YANG ANDA DENGAR / SENTENCE BUILDER (Screenshot 9 & WhatsApp Image 2026-10-26 at 22.11.52.jpeg)
+            // EXERCISE TYPE 4: APA YANG ANDA DENGAR / SENTENCE BUILDER
             if (exercise.type == ExerciseType.SENTENCE_BUILDER) {
                 if (exercise.isImmersiveSpeaker) {
                     Box(
@@ -1179,7 +1179,7 @@ fun LessonExerciseScreen(
                         }
                     }
                 } else if (exercise.targetTranslation.isNotBlank()) {
-                    // WhatsApp Image 2026-10-26 at 22.11.52.jpeg (Lengkapi terjemahan dengan 2 slot)
+                    // Lengkapi terjemahan dengan 2 slot
                     Text(
                         text = exercise.targetTranslation,
                         fontSize = 20.sp,
@@ -1496,7 +1496,7 @@ fun LessonExerciseScreen(
                 }
             }
 
-            // EXERCISE TYPE 5: KETUK PASANGAN YANG SESUAI (WhatsApp Image 2026-10-26 at 22.11.52.jpeg)
+            // EXERCISE TYPE 5: KETUK PASANGAN YANG SESUAI
             if (exercise.type == ExerciseType.MATCH_PAIRS) {
                 Spacer(modifier = Modifier.height(20.dp))
 
@@ -1625,7 +1625,7 @@ fun LessonExerciseScreen(
     }
 }
 
-// CELEBRATION SCREEN (Screenshot 13)
+// CELEBRATION SCREEN
 @Composable
 fun LessonCelebrationScreen(
     comboCount: Int,

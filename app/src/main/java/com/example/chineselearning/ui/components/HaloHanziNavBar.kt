@@ -1,7 +1,6 @@
 package com.example.chineselearning.ui.components
 
 import androidx.compose.foundation.background
-import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.*
@@ -34,7 +33,7 @@ data class NavTabItem(
 )
 
 @Composable
-fun HelloChineseNavBar(
+fun HaloHanziNavBar(
     selectedTab: Int,
     onTabSelected: (Int) -> Unit
 ) {
@@ -100,7 +99,7 @@ fun HelloChineseNavBar(
                                 modifier = Modifier.size(24.dp)
                             )
 
-                            // Red notification dot on Imersi tab (Screenshot 2026-10-25 210240.png)
+                            // Notification dot on Imersi tab
                             if (tab.hasNotificationDot) {
                                 Box(
                                     modifier = Modifier

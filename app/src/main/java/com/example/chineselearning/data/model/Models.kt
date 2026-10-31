@@ -116,7 +116,7 @@ data class Lesson(
 enum class NodeIconType {
     CAP,        // Graduation cap
     DUMBBELL,   // 'H' dumbbell
-    SHUFFLE,    // Cross / shuffle arrows (Screenshot 2026-10-25 210240.png)
+    SHUFFLE,    // Cross / shuffle arrows
     BOOK,       // Reading / Quiz icon
     CHEST,      // Checkpoint chest with handshake
     REST_AREA   // Unit transition gas pump

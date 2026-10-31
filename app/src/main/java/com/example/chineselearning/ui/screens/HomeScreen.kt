@@ -46,9 +46,9 @@ fun HomeScreen(
     var selectedHskLevel by remember { mutableStateOf(1) }
     var showHskMenu by remember { mutableStateOf(false) }
 
-    var activePopupNodeId by remember { mutableStateOf<String?>("u1_n2") } // Defaults to Node 2 (like screenshot) or null
+    var activePopupNodeId by remember { mutableStateOf<String?>("u1_n2") } // Defaults to active node popup or null
 
-    // Winding path horizontal offsets (exact 8 stages serpentine sequence from Screenshot 2026-10-25 210240.png)
+    // Winding path horizontal offsets (serpentine road sequence)
     val pathXOffsets = listOf(
         0.dp,        // Stage 1: Pink Cap (Center)
         75.dp,       // Stage 2: Yellow Cap (Right)
@@ -78,7 +78,7 @@ fun HomeScreen(
         contentPadding = PaddingValues(bottom = 50.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        // TOP APP BAR: HSK 1 - 6 Dropdown Selector (Screenshot 1)
+        // TOP APP BAR: HSK Level Dropdown Selector
         item {
             Row(
                 modifier = Modifier
@@ -279,7 +279,7 @@ fun HomeScreen(
                             Spacer(modifier = Modifier.height(4.dp))
                         }
 
-                        // Chapter Banner (Screenshot 1)
+                        // Chapter Header Banner
                         Surface(
                             shape = RoundedCornerShape(16.dp),
                             color = bannerBg,

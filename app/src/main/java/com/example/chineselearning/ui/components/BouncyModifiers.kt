@@ -11,7 +11,7 @@ import androidx.compose.ui.graphics.graphicsLayer
 
 /**
  * Reusable Bouncy Click Modifier
- * Gives a tactile spring bounce effect when pressed, just like HelloChinese / Duolingo buttons.
+ * Gives a tactile spring bounce effect when pressed for interactive components.
  */
 fun Modifier.bouncyClick(
     scaleDown: Float = 0.93f,

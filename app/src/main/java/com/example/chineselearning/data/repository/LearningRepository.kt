@@ -385,7 +385,7 @@ object LearningRepository {
     )
 
     // =========================================================================
-    // 6 BAB UTAMA (UNITS) DENGAN STAGE MENGIKUTI POLA SCREENSHOT HELLOCHINESE
+    // 6 BAB UTAMA (UNITS) KURIKULUM MANDARIN HSK 1
     // =========================================================================
     val units: List<UnitCourse> = listOf(
         // BAB 1: Sapaan, Identitas & Berteman
@@ -422,7 +422,7 @@ object LearningRepository {
                         Word("w4", "老师", "lǎoshī", "(Bapak atau Ibu) Guru", "Kata benda", "老师好！", "Lǎoshī hǎo!", "Halo Guru!")
                     ),
                     exercisesPart1 = listOf(
-                        // 1. SOAL 1 (Screenshot WhatsApp Image 2026-10-27 at 00.47.45.jpeg)
+                        // 1. Soal 1: Pilihan Gambar Sapaan Dasar (你好)
                         Exercise(
                             id = "u1_p1_q1",
                             type = ExerciseType.PICTURE_CHOICE,
@@ -439,7 +439,7 @@ object LearningRepository {
                                 PictureOption("pic_guru", "guru", "👩‍🏫", isCorrect = false)
                             )
                         ),
-                        // 2. SOAL 2: (Screenshot WhatsApp Image 2026-10-27 at 02.18.28.jpeg)
+                        // 2. Soal 2: Pilihan Gambar Kata Ganti (我)
                         Exercise(
                             id = "u1_p1_q2",
                             type = ExerciseType.PICTURE_CHOICE,
@@ -454,7 +454,7 @@ object LearningRepository {
                                 PictureOption("pic2_saya", "saya", "🙋‍♂️", isCorrect = true)
                             )
                         ),
-                        // 3. SOAL 3: (Screenshot WhatsApp Image 2026-10-26 at 22.11.50.jpeg)
+                        // 3. Soal 3: Pilihan Terjemahan Kalimat (你好，我叫布迪。)
                         Exercise(
                             id = "u1_p1_q3",
                             type = ExerciseType.SENTENCE_CHOICE,
@@ -471,7 +471,7 @@ object LearningRepository {
                             correctAnswer = "Halo, nama saya Budi.",
                             audioToSpeak = "你好，我叫布迪。"
                         ),
-                        // 4. SOAL 4: (Screenshot WhatsApp Image 2026-10-27 at 09.18.52.jpeg)
+                        // 4. Soal 4: Lengkapi Terjemahan Slot Kata (我叫王飞。)
                         Exercise(
                             id = "u1_p1_q4",
                             type = ExerciseType.FILL_BLANK,
@@ -484,7 +484,7 @@ object LearningRepository {
                             correctAnswer = "Nama",
                             audioToSpeak = "我叫王飞。"
                         ),
-                        // 5. SOAL 5: (Screenshot WhatsApp Image 2026-10-26 at 22.11.51.jpeg)
+                        // 5. Soal 5: Pilihan Terjemahan Kata Grid (叫)
                         Exercise(
                             id = "u1_p1_q5",
                             type = ExerciseType.SENTENCE_CHOICE,
@@ -501,7 +501,7 @@ object LearningRepository {
                             correctAnswer = "dipanggil",
                             audioToSpeak = "叫"
                         ),
-                        // 6. SOAL 6: (Screenshot WhatsApp Image 2026-10-26 at 22.11.51.jpeg - Nama saya Budi.)
+                        // 6. Soal 6: Pilihan Terjemahan Kalimat Terbalik (Nama saya Budi.)
                         Exercise(
                             id = "u1_p1_q6",
                             type = ExerciseType.SENTENCE_CHOICE,
@@ -517,7 +517,7 @@ object LearningRepository {
                             correctAnswer = "Wǒ jiào    Bùdí\n我 叫 布迪 。",
                             audioToSpeak = "我叫布迪。"
                         ),
-                        // 7. SOAL 7: (Screenshot WhatsApp Image 2026-10-26 at 22.11.52.jpeg - Apa yang Anda dengar?)
+                        // 7. Soal 7: Susun Kalimat Audio Imersif (你好，我叫王飞。)
                         Exercise(
                             id = "u1_p1_q7",
                             type = ExerciseType.SENTENCE_BUILDER,
@@ -533,7 +533,7 @@ object LearningRepository {
                             hasCommaAfterSlot1 = true,
                             isImmersiveSpeaker = true
                         ),
-                        // 8. SOAL 8: (Screenshot WhatsApp Image 2026-10-26 at 22.11.52.jpeg - Ketuk pasangan yang sesuai)
+                        // 8. Soal 8: Ketuk Pasangan Kata (叫, 我, 你好)
                         Exercise(
                             id = "u1_p1_q8",
                             type = ExerciseType.MATCH_PAIRS,
@@ -545,7 +545,7 @@ object LearningRepository {
                                 MatchPairItem("m3", "你好", "nǐhǎo", "halo")
                             )
                         ),
-                        // 9. SOAL 9: (Screenshot WhatsApp Image 2026-10-26 at 22.11.52.jpeg - Lengkapi terjemahan)
+                        // 9. Soal 9: Lengkapi Terjemahan Dua Slot (你好，王飞，我叫布迪。)
                         Exercise(
                             id = "u1_p1_q9",
                             type = ExerciseType.SENTENCE_BUILDER,

@@ -35,7 +35,7 @@ fun KaraokeSentenceCard(
     Card(
         shape = RoundedCornerShape(16.dp),
         colors = CardDefaults.cardColors(
-            containerColor = if (isActive) HelloMint else MaterialTheme.colorScheme.surface
+            containerColor = if (isActive) HanziMint else MaterialTheme.colorScheme.surface
         ),
         elevation = CardDefaults.cardElevation(defaultElevation = if (isActive) 2.dp else 0.5.dp),
         modifier = Modifier
@@ -58,7 +58,7 @@ fun KaraokeSentenceCard(
                         modifier = Modifier
                             .size(22.dp)
                             .clip(RoundedCornerShape(6.dp))
-                            .background(if (isActive) HelloGreen else LightSlate),
+                            .background(if (isActive) HanziGreen else LightSlate),
                         contentAlignment = Alignment.Center
                     ) {
                         Text(
@@ -75,7 +75,7 @@ fun KaraokeSentenceCard(
                             text = "Playing...",
                             fontSize = 11.sp,
                             fontWeight = FontWeight.Bold,
-                            color = HelloGreenDark
+                            color = HanziGreenDark
                         )
                     }
                 }
@@ -84,7 +84,7 @@ fun KaraokeSentenceCard(
                     onClick = onPlayAudio,
                     modifier = Modifier.size(30.dp),
                     colors = IconButtonDefaults.filledTonalIconButtonColors(
-                        containerColor = if (isActive) HelloGreen else LightSlate,
+                        containerColor = if (isActive) HanziGreen else LightSlate,
                         contentColor = if (isActive) Color.White else SlateGray
                     )
                 ) {
@@ -98,7 +98,7 @@ fun KaraokeSentenceCard(
 
             Spacer(modifier = Modifier.height(6.dp))
 
-            // HelloChinese Ruby Text Flow
+            // Ruby Pinyin Text Flow
             FlowRow(
                 horizontalArrangement = Arrangement.spacedBy(8.dp),
                 verticalArrangement = Arrangement.spacedBy(6.dp),
@@ -160,14 +160,14 @@ fun TokenChip(
                     text = token.pinyin,
                     fontSize = 12.sp,
                     fontWeight = FontWeight.Medium,
-                    color = if (isActive) HelloGreenDark else PinyinColor
+                    color = if (isActive) HanziGreenDark else PinyinColor
                 )
             }
             Text(
                 text = token.hanzi,
                 fontSize = 24.sp,
                 fontWeight = FontWeight.SemiBold,
-                // HelloChinese active highlight: turns vibrant green when active!
+                // Active highlight: turns vibrant green when active audio plays
                 color = if (isActive) ActiveSentenceGreen else HanziColor
             )
         }

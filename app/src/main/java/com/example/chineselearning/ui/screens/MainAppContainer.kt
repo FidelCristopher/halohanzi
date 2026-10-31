@@ -9,7 +9,7 @@ import androidx.compose.ui.Modifier
 import com.example.chineselearning.audio.TtsManager
 import com.example.chineselearning.data.model.Lesson
 import com.example.chineselearning.data.model.Story
-import com.example.chineselearning.ui.components.HelloChineseNavBar
+import com.example.chineselearning.ui.components.HaloHanziNavBar
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -55,8 +55,8 @@ fun MainAppContainer(
 
     Scaffold(
         bottomBar = {
-            // HelloChinese Exact Bottom Navbar (Screenshot 2026-10-25 210240.png)
-            HelloChineseNavBar(
+            // Floating rounded bottom navigation bar
+            HaloHanziNavBar(
                 selectedTab = selectedTab,
                 onTabSelected = { selectedTab = it }
             )

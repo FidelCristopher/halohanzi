@@ -41,7 +41,7 @@ fun GoldenStagePopup(
             .padding(horizontal = 16.dp, vertical = 2.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        // Triangular notch pointing up toward the node circle (Screenshot WhatsApp Image 2026-10-26 at 22.11.46.jpeg)
+        // Triangular notch pointing up toward the node circle
         androidx.compose.foundation.Canvas(
             modifier = Modifier
                 .fillMaxWidth()
@@ -108,7 +108,7 @@ fun GoldenStagePopup(
 
                 Spacer(modifier = Modifier.height(16.dp))
 
-                // TWO SEPARATE WHITE BOXES SIDE BY SIDE (Screenshot WhatsApp Image 2026-10-26 at 22.11.46.jpeg)
+                // Action button and progress indicator containers
                 val progressText = "$progressCount/2"
                 val buttonText = if (progressCount >= 2 || node.isCompleted) "ULANGI" else "MULAI"
 
