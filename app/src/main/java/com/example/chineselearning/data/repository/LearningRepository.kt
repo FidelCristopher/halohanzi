@@ -209,9 +209,9 @@ object LearningRepository {
         return stageProgress.getOrPut(nodeId) { 1 } // Default is 1 -> "1/2"
     }
 
-    fun toggleStageProgress(nodeId: String): Int {
+    fun toggleStageProgress(nodeId: String, maxParts: Int = 2): Int {
         val curr = getStageProgress(nodeId)
-        val next = if (curr == 1) 2 else 1
+        val next = if (curr >= maxParts) 1 else curr + 1
         stageProgress[nodeId] = next
         return next
     }
@@ -401,7 +401,7 @@ object LearningRepository {
             nodes = listOf(
                 PathNode("u1_n1", "Sapaan 1", Color(0xFFE91E63), NodeIconType.CAP, isCompleted = true, lessonId = "u1_l1"),
                 PathNode("u1_n2", "Sapaan 2", Color(0xFFFFC107), NodeIconType.CAP, isCompleted = true, lessonId = "u1_l1"),
-                PathNode("u1_n3", "Latihan 1", Color(0xFFFFC107), NodeIconType.DUMBBELL, isCompleted = true, lessonId = "u1_l1"),
+                PathNode("u1_n3", "Halo!", Color(0xFFFFC107), NodeIconType.DUMBBELL, isCompleted = true, lessonId = "u1_l2"),
                 PathNode("u1_n4", "Identitas", Color(0xFFFFC107), NodeIconType.CAP, isCompleted = false, lessonId = "u1_l1"),
                 PathNode("u1_n5", "Latihan 2", Color(0xFFFFC107), NodeIconType.DUMBBELL, isCompleted = false, lessonId = "u1_l1"),
                 PathNode("u1_n6", "Latihan Campuran", Color(0xFFFFC107), NodeIconType.SHUFFLE, isCompleted = false, lessonId = "u1_l1"),
@@ -733,6 +733,32 @@ object LearningRepository {
                             wordChips = listOf("学生:xuéshēng", "人:rén", "我:wǒ", "你好:nǐhǎo", "是:shì", "老师:lǎoshī"),
                             correctAnswer = "是,老师",
                             audioToSpeak = "王飞是老师。"
+                        )
+                    )
+                ),
+                Lesson(
+                    id = "u1_l2",
+                    title = "Halo!",
+                    subtitle = "Latihan kosakata & pola kalimat Halo!",
+                    grammarNote = "Latihan penguatan kosakata sapaan dan identitas.",
+                    newWords = listOf(
+                        Word("w1", "你好", "nǐ hǎo", "Halo", "Sapaan", "你好！", "Nǐ hǎo!", "Halo!"),
+                        Word("w4", "老师", "lǎoshī", "Guru", "Kata benda", "老师好！", "Lǎoshī hǎo!", "Halo Guru!")
+                    ),
+                    exercises = listOf(
+                        Exercise(
+                            id = "u1_l2_q1",
+                            type = ExerciseType.PICTURE_CHOICE,
+                            title = "Pilih gambar yang benar",
+                            targetHanzi = "你好",
+                            targetPinyin = "nǐhǎo",
+                            targetTranslation = "halo",
+                            correctAnswer = "halo",
+                            audioToSpeak = "你好",
+                            pictureOptions = listOf(
+                                PictureOption("l2_pic_halo", "halo", "👋", isCorrect = true),
+                                PictureOption("l2_pic_saya", "saya", "🙋‍♂️", isCorrect = false)
+                            )
                         )
                     )
                 )

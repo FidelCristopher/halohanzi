@@ -79,28 +79,39 @@ fun GoldenStagePopup(
                     .background(goldGradient)
                     .padding(horizontal = 18.dp, vertical = 18.dp)
             ) {
-                // Category Header (🎓 Belajar or 🏋️ Latihan)
+                // Category Header (🎓 Belajar or Dumbbell Latihan)
                 Row(verticalAlignment = Alignment.CenterVertically) {
-                    Text(
-                        text = when (node.iconType) {
-                            NodeIconType.CAP -> "🎓 Belajar"
-                            NodeIconType.DUMBBELL -> "🏋️ Latihan"
-                            NodeIconType.SHUFFLE -> "🔀 Review Campuran"
-                            NodeIconType.BOOK -> "📖 Kuis Cerita"
-                            NodeIconType.CHEST -> "🤝 Checkpoint Bab"
-                            NodeIconType.REST_AREA -> "⛽ Rest Area"
-                        },
-                        fontSize = 15.sp,
-                        fontWeight = FontWeight.SemiBold,
-                        color = Color(0xFF212121)
-                    )
+                    if (node.iconType == NodeIconType.DUMBBELL) {
+                        DumbbellShapeIcon(tint = Color(0xFF212121), modifier = Modifier.size(17.dp))
+                        Spacer(modifier = Modifier.width(6.dp))
+                        Text(
+                            text = "Latihan",
+                            fontSize = 15.sp,
+                            fontWeight = FontWeight.SemiBold,
+                            color = Color(0xFF212121)
+                        )
+                    } else {
+                        Text(
+                            text = when (node.iconType) {
+                                NodeIconType.CAP -> "🎓 Belajar"
+                                NodeIconType.SHUFFLE -> "🔀 Review Campuran"
+                                NodeIconType.BOOK -> "📖 Kuis Cerita"
+                                NodeIconType.CHEST -> "🤝 Checkpoint Bab"
+                                NodeIconType.REST_AREA -> "⛽ Rest Area"
+                                else -> "Latihan"
+                            },
+                            fontSize = 15.sp,
+                            fontWeight = FontWeight.SemiBold,
+                            color = Color(0xFF212121)
+                        )
+                    }
                 }
 
                 Spacer(modifier = Modifier.height(6.dp))
 
                 // Lesson / Stage Title
                 Text(
-                    text = if (node.title == "Sapaan 1") "Halo!" else node.title,
+                    text = node.title,
                     fontSize = 22.sp,
                     fontWeight = FontWeight.Bold,
                     color = Color(0xFF1E293B)
@@ -109,8 +120,9 @@ fun GoldenStagePopup(
                 Spacer(modifier = Modifier.height(16.dp))
 
                 // Action button and progress indicator containers
-                val progressText = "$progressCount/2"
-                val buttonText = if (progressCount >= 2 || node.isCompleted) "ULANGI" else "MULAI"
+                val maxParts = if (node.iconType == NodeIconType.DUMBBELL) 3 else 2
+                val progressText = "$progressCount/$maxParts"
+                val buttonText = if (progressCount >= maxParts || node.isCompleted) "ULANGI" else "MULAI"
 
                 Row(
                     modifier = Modifier.fillMaxWidth(),
@@ -177,5 +189,43 @@ fun GoldenStagePopup(
                 }
             }
         }
+    }
+}
+
+@Composable
+fun DumbbellShapeIcon(
+    tint: Color = Color.White,
+    modifier: Modifier = Modifier.size(24.dp)
+) {
+    androidx.compose.foundation.Canvas(modifier = modifier) {
+        val w = size.width
+        val h = size.height
+        val barThickness = w * 0.24f
+        val radius = androidx.compose.ui.geometry.CornerRadius(barThickness / 2f, barThickness / 2f)
+
+        // Left weight (vertical rounded rect)
+        drawRoundRect(
+            color = tint,
+            topLeft = androidx.compose.ui.geometry.Offset(0f, 0f),
+            size = androidx.compose.ui.geometry.Size(barThickness, h),
+            cornerRadius = radius
+        )
+
+        // Right weight (vertical rounded rect)
+        drawRoundRect(
+            color = tint,
+            topLeft = androidx.compose.ui.geometry.Offset(w - barThickness, 0f),
+            size = androidx.compose.ui.geometry.Size(barThickness, h),
+            cornerRadius = radius
+        )
+
+        // Middle connector (horizontal bar)
+        val connectorH = h * 0.24f
+        drawRoundRect(
+            color = tint,
+            topLeft = androidx.compose.ui.geometry.Offset(barThickness * 0.7f, (h - connectorH) / 2f),
+            size = androidx.compose.ui.geometry.Size(w - barThickness * 1.4f, connectorH),
+            cornerRadius = androidx.compose.ui.geometry.CornerRadius(connectorH / 2f, connectorH / 2f)
+        )
     }
 }

@@ -46,7 +46,7 @@ fun HomeScreen(
     var selectedHskLevel by remember { mutableStateOf(1) }
     var showHskMenu by remember { mutableStateOf(false) }
 
-    var activePopupNodeId by remember { mutableStateOf<String?>("u1_n2") } // Defaults to active node popup or null
+    var activePopupNodeId by remember { mutableStateOf<String?>("u1_n3") } // Defaults to Node 3 (Halo!)
 
     // Winding path horizontal offsets (serpentine road sequence)
     val pathXOffsets = listOf(
@@ -272,7 +272,7 @@ fun HomeScreen(
                                     ) {
                                         Text(text = "💰", fontSize = 14.sp)
                                         Spacer(modifier = Modifier.width(4.dp))
-                                        Text(text = "0 / 1", fontSize = 11.sp, fontWeight = FontWeight.Bold, color = Color(0xFFC62828))
+                                        Text(text = "1 / 3", fontSize = 11.sp, fontWeight = FontWeight.Bold, color = Color(0xFFC62828))
                                     }
                                 }
                             }
@@ -360,13 +360,15 @@ fun HomeScreen(
                             activePopupNodeId = null
                         },
                         onTogglePartClick = {
-                            LearningRepository.toggleStageProgress(node.id)
+                            val maxParts = if (node.iconType == NodeIconType.DUMBBELL) 3 else 2
+                            LearningRepository.toggleStageProgress(node.id, maxParts)
                         },
                         onStartLesson = {
                             activePopupNodeId = null
                             when (node.iconType) {
                                 NodeIconType.CAP, NodeIconType.DUMBBELL, NodeIconType.SHUFFLE -> {
-                                    onSelectLesson(chapterUnit.lessons.first(), node.id)
+                                    val targetLesson = chapterUnit.lessons.find { it.id == node.lessonId } ?: chapterUnit.lessons.first()
+                                    onSelectLesson(targetLesson, node.id)
                                 }
                                 NodeIconType.BOOK, NodeIconType.CHEST, NodeIconType.REST_AREA -> {
                                     onSelectStory(chapterUnit.story)
@@ -465,16 +467,22 @@ fun StageNodeRow(
                                 .background(Color.White.copy(alpha = 0.45f))
                         )
 
-                        Text(
-                            text = when (node.iconType) {
-                                NodeIconType.CAP -> "🎓"
-                                NodeIconType.DUMBBELL -> "🏋️"
-                                NodeIconType.SHUFFLE -> "🔀"
-                                NodeIconType.BOOK -> "📖"
-                                else -> "⭐"
-                            },
-                            fontSize = 32.sp
-                        )
+                        if (node.iconType == NodeIconType.DUMBBELL) {
+                            com.example.chineselearning.ui.components.DumbbellShapeIcon(
+                                tint = Color.White,
+                                modifier = Modifier.size(34.dp)
+                            )
+                        } else {
+                            Text(
+                                text = when (node.iconType) {
+                                    NodeIconType.CAP -> "🎓"
+                                    NodeIconType.SHUFFLE -> "🔀"
+                                    NodeIconType.BOOK -> "📖"
+                                    else -> "⭐"
+                                },
+                                fontSize = 32.sp
+                            )
+                        }
                     }
                 }
 
