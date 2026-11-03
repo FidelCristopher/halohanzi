@@ -559,22 +559,24 @@ object LearningRepository {
                         )
                     ),
                     exercisesPart2 = listOf(
+                        // 1. Soal 1: Pilihan Gambar Negara Indonesia (印度尼西亚)
                         Exercise(
                             id = "u1_p2_q1",
                             type = ExerciseType.PICTURE_CHOICE,
                             title = "Pilih gambar yang benar",
-                            targetHanzi = "老师",
-                            targetPinyin = "lǎoshī",
-                            targetTranslation = "guru",
-                            correctAnswer = "guru",
-                            audioToSpeak = "老师",
+                            targetHanzi = "印度尼西亚",
+                            targetPinyin = "Yìndùníxīyà",
+                            targetTranslation = "(negara)\nIndonesia",
+                            correctAnswer = "(negara)\nIndonesia",
+                            audioToSpeak = "印度尼西亚",
                             pictureOptions = listOf(
-                                PictureOption("p2_g", "guru", "👩‍🏫", isCorrect = true),
-                                PictureOption("p2_m", "murid", "👨‍🎓", isCorrect = false),
-                                PictureOption("p2_s", "saya", "🙋‍♂️", isCorrect = false),
-                                PictureOption("p2_i", "(negara)\nIndonesia", "🇮🇩", isCorrect = false)
+                                PictureOption("p2_q1_indo", "(negara)\nIndonesia", "🇮🇩", isCorrect = true),
+                                PictureOption("p2_q1_murid", "murid", "🧑‍🎓", isCorrect = false),
+                                PictureOption("p2_q1_saya", "saya", "🙋‍♂️", isCorrect = false),
+                                PictureOption("p2_q1_guru", "guru", "👩‍🏫", isCorrect = false)
                             )
                         ),
+                        // 2. Soal 2 (Menunggu screenshot Soal 2)
                         Exercise(
                             id = "u1_p2_q2",
                             type = ExerciseType.SENTENCE_CHOICE,
@@ -590,7 +592,17 @@ object LearningRepository {
                             ),
                             correctAnswer = "Saya adalah guru, bukan murid.",
                             audioToSpeak = "我是老师，不是学生。"
-                        )
+                        ),
+                        // Placeholder Soal 3 - 11 (Akan diupdate bertahap sesuai 11 soal)
+                        Exercise(id = "u1_p2_q3", type = ExerciseType.SENTENCE_CHOICE, title = "Soal 3 (Placeholder)", targetHanzi = "学生", targetPinyin = "xuéshēng", targetTranslation = "murid", options = listOf("murid", "guru"), correctAnswer = "murid"),
+                        Exercise(id = "u1_p2_q4", type = ExerciseType.SENTENCE_CHOICE, title = "Soal 4 (Placeholder)", targetHanzi = "老师", targetPinyin = "lǎoshī", targetTranslation = "guru", options = listOf("guru", "murid"), correctAnswer = "guru"),
+                        Exercise(id = "u1_p2_q5", type = ExerciseType.SENTENCE_CHOICE, title = "Soal 5 (Placeholder)", targetHanzi = "他", targetPinyin = "tā", targetTranslation = "dia", options = listOf("dia", "kamu"), correctAnswer = "dia"),
+                        Exercise(id = "u1_p2_q6", type = ExerciseType.SENTENCE_CHOICE, title = "Soal 6 (Placeholder)", targetHanzi = "她", targetPinyin = "tā", targetTranslation = "dia (perempuan)", options = listOf("dia", "kamu"), correctAnswer = "dia"),
+                        Exercise(id = "u1_p2_q7", type = ExerciseType.SENTENCE_CHOICE, title = "Soal 7 (Placeholder)", targetHanzi = "我们", targetPinyin = "wǒmen", targetTranslation = "kami", options = listOf("kami", "mereka"), correctAnswer = "kami"),
+                        Exercise(id = "u1_p2_q8", type = ExerciseType.SENTENCE_CHOICE, title = "Soal 8 (Placeholder)", targetHanzi = "你们", targetPinyin = "nǐmen", targetTranslation = "kalian", options = listOf("kalian", "mereka"), correctAnswer = "kalian"),
+                        Exercise(id = "u1_p2_q9", type = ExerciseType.SENTENCE_CHOICE, title = "Soal 9 (Placeholder)", targetHanzi = "他们", targetPinyin = "tāmen", targetTranslation = "mereka", options = listOf("mereka", "kami"), correctAnswer = "mereka"),
+                        Exercise(id = "u1_p2_q10", type = ExerciseType.SENTENCE_CHOICE, title = "Soal 10 (Placeholder)", targetHanzi = "中国", targetPinyin = "Zhōngguó", targetTranslation = "China", options = listOf("China", "Indonesia"), correctAnswer = "China"),
+                        Exercise(id = "u1_p2_q11", type = ExerciseType.SENTENCE_CHOICE, title = "Soal 11 (Placeholder)", targetHanzi = "中国人", targetPinyin = "Zhōngguórén", targetTranslation = "Orang China", options = listOf("Orang China", "Orang Indonesia"), correctAnswer = "Orang China")
                     )
                 )
             )
