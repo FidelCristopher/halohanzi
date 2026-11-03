@@ -62,7 +62,11 @@ fun LessonExerciseScreen(
     var matchedPairIds by remember { mutableStateOf<Set<String>>(emptySet()) }
     var shuffledRightPairs by remember(currentExerciseIdx) {
         val currEx = exercisesList.getOrNull(currentExerciseIdx)
-        val fixedOrder = listOf("saya", "halo", "dipanggil")
+        val fixedOrder = when (currEx?.id) {
+            "u1_p1_q8" -> listOf("saya", "halo", "dipanggil")
+            "u1_p2_q10" -> listOf("adalah", "guru", "(negara) Indonesia", "(negara)\nIndonesia", "orang", "murid")
+            else -> listOf("adalah", "guru", "(negara) Indonesia", "orang", "murid", "saya", "halo", "dipanggil")
+        }
         val pairs = currEx?.matchPairs ?: emptyList()
         val sorted = pairs.sortedBy { fixedOrder.indexOf(it.translation).takeIf { idx -> idx >= 0 } ?: 99 }
         mutableStateOf(sorted)
@@ -189,13 +193,22 @@ fun LessonExerciseScreen(
                         enter = fadeIn() + scaleIn(),
                         exit = fadeOut()
                     ) {
-                        if (currentExerciseIdx == totalExercises - 1) {
+                        val remaining = totalExercises - currentExerciseIdx
+                        if (remaining == 1) {
                             Text(
                                 text = "Satu lagi!",
                                 color = Color(0xFFE53935),
                                 fontWeight = FontWeight.Bold,
                                 fontStyle = FontStyle.Italic,
                                 fontSize = 14.sp
+                            )
+                        } else if (remaining <= 3) {
+                            Text(
+                                text = "$remaining soal lagi sempurna!",
+                                color = Color(0xFFE53935),
+                                fontWeight = FontWeight.Bold,
+                                fontStyle = FontStyle.Italic,
+                                fontSize = 13.sp
                             )
                         } else if (comboCount > 1) {
                             Text(
@@ -207,7 +220,7 @@ fun LessonExerciseScreen(
                             )
                         } else {
                             Text(
-                                text = "${totalExercises - currentExerciseIdx} soal lagi sempurna!",
+                                text = "$remaining soal lagi sempurna!",
                                 color = Color(0xFFE91E63),
                                 fontWeight = FontWeight.Bold,
                                 fontStyle = FontStyle.Italic,
@@ -489,6 +502,9 @@ fun LessonExerciseScreen(
                         ) {
                             rowOptions.forEach { opt ->
                                 val isSelected = selectedPictureId == opt.id
+                                val isTwoOptions = exercise.pictureOptions.size == 2
+                                val boxHeight = if (isTwoOptions) 150.dp else 110.dp
+
                                 Card(
                                     shape = RoundedCornerShape(18.dp),
                                     colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
@@ -497,7 +513,7 @@ fun LessonExerciseScreen(
                                         .weight(1f)
                                         .border(
                                             width = if (isSelected) 3.dp else 1.dp,
-                                            color = if (isSelected) Color(0xFF00C48C) else BorderGray,
+                                            color = if (isSelected) Color(0xFF007AFF) else BorderGray,
                                             shape = RoundedCornerShape(18.dp)
                                         )
                                         .bouncyClick {
@@ -513,11 +529,11 @@ fun LessonExerciseScreen(
                                         Box(
                                             modifier = Modifier
                                                 .fillMaxWidth()
-                                                .height(110.dp)
+                                                .height(boxHeight)
                                                 .background(Color(0xFFE8F5E9)),
                                             contentAlignment = Alignment.Center
                                         ) {
-                                            Text(text = opt.emoji, fontSize = 52.sp)
+                                            Text(text = opt.emoji, fontSize = if (isTwoOptions) 64.sp else 52.sp)
                                         }
 
                                         Box(
@@ -530,7 +546,7 @@ fun LessonExerciseScreen(
                                                 text = opt.label,
                                                 fontSize = 15.sp,
                                                 fontWeight = FontWeight.Bold,
-                                                color = if (isSelected) Color(0xFF00C48C) else DeepNavy,
+                                                color = if (isSelected) Color(0xFF007AFF) else DeepNavy,
                                                 textAlign = TextAlign.Center
                                             )
                                         }
@@ -898,7 +914,31 @@ fun LessonExerciseScreen(
                                 horizontalArrangement = Arrangement.Center,
                                 verticalAlignment = Alignment.Bottom
                             ) {
-                                // Slot 1: 你好
+                                // Static Leading Text (e.g. 布迪 / Bùdí)
+                                if (exercise.staticLeadingText.isNotBlank()) {
+                                    Column(
+                                        horizontalAlignment = Alignment.CenterHorizontally,
+                                        modifier = Modifier.padding(bottom = 6.dp)
+                                    ) {
+                                        if (exercise.staticLeadingPinyin.isNotBlank()) {
+                                            Text(
+                                                text = exercise.staticLeadingPinyin,
+                                                fontSize = 14.sp,
+                                                color = DeepNavy
+                                            )
+                                            Spacer(modifier = Modifier.height(2.dp))
+                                        }
+                                        Text(
+                                            text = exercise.staticLeadingText,
+                                            fontSize = 22.sp,
+                                            fontWeight = FontWeight.Normal,
+                                            color = DeepNavy
+                                        )
+                                    }
+                                    Spacer(modifier = Modifier.width(10.dp))
+                                }
+
+                                // Slot 1
                                 Column(horizontalAlignment = Alignment.CenterHorizontally) {
                                     Row(verticalAlignment = Alignment.Bottom) {
                                         if (selectedChips.isNotEmpty()) {
@@ -1053,63 +1093,81 @@ fun LessonExerciseScreen(
                                 }
                             }
 
-                            // Middle: Chips Row (4 items)
-                            Row(
+                            // Middle: Chips (1 or 2 rows)
+                            Column(
                                 modifier = Modifier
                                     .fillMaxWidth()
                                     .padding(horizontal = 2.dp),
-                                horizontalArrangement = Arrangement.spacedBy(8.dp)
+                                verticalArrangement = Arrangement.spacedBy(8.dp),
+                                horizontalAlignment = Alignment.CenterHorizontally
                             ) {
-                                exercise.wordChips.forEach { chip ->
-                                    val isUsed = selectedChips.contains(chip)
-                                    val hanzi = chip.substringBefore(":")
-                                    val pinyin = if (chip.contains(":")) chip.substringAfter(":") else ""
+                                val chipRows = if (exercise.wordChips.size > 5) {
+                                    listOf(exercise.wordChips.take(5), exercise.wordChips.drop(5))
+                                } else {
+                                    listOf(exercise.wordChips)
+                                }
 
-                                    if (isUsed) {
-                                        // Translucent dark grey placeholder box
-                                        Box(
-                                            modifier = Modifier
-                                                .weight(1f)
-                                                .height(64.dp)
-                                                .clip(RoundedCornerShape(14.dp))
-                                                .background(Color(0x2E000000))
-                                        )
-                                    } else {
-                                        Surface(
-                                            shape = RoundedCornerShape(14.dp),
-                                            color = Color.White,
-                                            shadowElevation = 2.dp,
-                                            border = androidx.compose.foundation.BorderStroke(1.dp, Color(0xFFE2E8F0)),
-                                            modifier = Modifier
-                                                .weight(1f)
-                                                .height(64.dp)
-                                                .bouncyClick {
-                                                    if (!isSubmitted && selectedChips.size < 3) {
-                                                        selectedChips = selectedChips + chip
-                                                        ttsManager?.speak(hanzi)
+                                chipRows.forEach { rowChips ->
+                                    Row(
+                                        modifier = Modifier.fillMaxWidth(),
+                                        horizontalArrangement = Arrangement.spacedBy(6.dp, Alignment.CenterHorizontally)
+                                    ) {
+                                        rowChips.forEach { chip ->
+                                            val isUsed = selectedChips.contains(chip)
+                                            val hanzi = chip.substringBefore(":")
+                                            val pinyin = if (chip.contains(":")) chip.substringAfter(":") else ""
+
+                                            val chipModifier = if (rowChips.size == 1 && chipRows.size > 1) {
+                                                Modifier.width(66.dp).height(64.dp)
+                                            } else {
+                                                Modifier.weight(1f).height(64.dp)
+                                            }
+
+                                            if (isUsed) {
+                                                // Translucent dark grey placeholder box
+                                                Box(
+                                                    modifier = chipModifier
+                                                        .clip(RoundedCornerShape(14.dp))
+                                                        .background(Color(0x2E000000))
+                                                )
+                                            } else {
+                                                Surface(
+                                                    shape = RoundedCornerShape(14.dp),
+                                                    color = Color.White,
+                                                    shadowElevation = 2.dp,
+                                                    border = androidx.compose.foundation.BorderStroke(1.dp, Color(0xFFE2E8F0)),
+                                                    modifier = chipModifier
+                                                        .bouncyClick {
+                                                            if (!isSubmitted && selectedChips.size < 3) {
+                                                                selectedChips = selectedChips + chip
+                                                                ttsManager?.speak(hanzi)
+                                                            }
+                                                        }
+                                                ) {
+                                                    Column(
+                                                        horizontalAlignment = Alignment.CenterHorizontally,
+                                                        verticalArrangement = Arrangement.Center,
+                                                        modifier = Modifier
+                                                            .fillMaxSize()
+                                                            .padding(horizontal = 2.dp, vertical = 4.dp)
+                                                    ) {
+                                                        if (pinyin.isNotBlank()) {
+                                                            Text(
+                                                                text = pinyin,
+                                                                fontSize = 12.sp,
+                                                                color = DeepNavy,
+                                                                maxLines = 1
+                                                            )
+                                                        }
+                                                        Text(
+                                                            text = hanzi,
+                                                            fontSize = 18.sp,
+                                                            fontWeight = FontWeight.Normal,
+                                                            color = DeepNavy,
+                                                            maxLines = 1
+                                                        )
                                                     }
                                                 }
-                                        ) {
-                                            Column(
-                                                horizontalAlignment = Alignment.CenterHorizontally,
-                                                verticalArrangement = Arrangement.Center,
-                                                modifier = Modifier
-                                                    .fillMaxSize()
-                                                    .padding(horizontal = 4.dp, vertical = 4.dp)
-                                            ) {
-                                                if (pinyin.isNotBlank()) {
-                                                    Text(
-                                                        text = pinyin,
-                                                        fontSize = 13.sp,
-                                                        color = DeepNavy
-                                                    )
-                                                }
-                                                Text(
-                                                    text = hanzi,
-                                                    fontSize = 20.sp,
-                                                    fontWeight = FontWeight.Normal,
-                                                    color = DeepNavy
-                                                )
                                             }
                                         }
                                     }
@@ -1191,29 +1249,40 @@ fun LessonExerciseScreen(
                             .padding(top = 6.dp, bottom = 32.dp)
                     )
 
-                    // Line 1: 你好， 王飞， [Slot 1] [Slot 2]
+                    // Line 1: [Leading Text] [Slot 1] [Slot 2] [Trailing Text]
                     Row(
                         modifier = Modifier.fillMaxWidth(),
                         verticalAlignment = Alignment.Bottom,
                         horizontalArrangement = Arrangement.Start
                     ) {
-                        Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                            Text(text = "Nǐhǎo", fontSize = 15.sp, color = SlateGray)
-                            Spacer(modifier = Modifier.height(2.dp))
-                            Text(text = "你好 ，", fontSize = 23.sp, fontWeight = FontWeight.Normal, color = HanziColor)
+                        if (exercise.staticLeadingText.isNotBlank()) {
+                            Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                                if (exercise.staticLeadingPinyin.isNotBlank()) {
+                                    Text(text = exercise.staticLeadingPinyin, fontSize = 15.sp, color = SlateGray)
+                                    Spacer(modifier = Modifier.height(2.dp))
+                                }
+                                Text(text = exercise.staticLeadingText, fontSize = 23.sp, fontWeight = FontWeight.Normal, color = HanziColor)
+                            }
+                            Spacer(modifier = Modifier.width(16.dp))
+                        } else if (exercise.id == "u1_p1_q9") {
+                            Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                                Text(text = "Nǐhǎo", fontSize = 15.sp, color = SlateGray)
+                                Spacer(modifier = Modifier.height(2.dp))
+                                Text(text = "你好 ，", fontSize = 23.sp, fontWeight = FontWeight.Normal, color = HanziColor)
+                            }
+
+                            Spacer(modifier = Modifier.width(16.dp))
+
+                            Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                                Text(text = "WángFēi", fontSize = 15.sp, color = SlateGray)
+                                Spacer(modifier = Modifier.height(2.dp))
+                                Text(text = "王飞 ，", fontSize = 23.sp, fontWeight = FontWeight.Normal, color = HanziColor)
+                            }
+
+                            Spacer(modifier = Modifier.width(16.dp))
                         }
 
-                        Spacer(modifier = Modifier.width(16.dp))
-
-                        Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                            Text(text = "WángFēi", fontSize = 15.sp, color = SlateGray)
-                            Spacer(modifier = Modifier.height(2.dp))
-                            Text(text = "王飞 ，", fontSize = 23.sp, fontWeight = FontWeight.Normal, color = HanziColor)
-                        }
-
-                        Spacer(modifier = Modifier.width(16.dp))
-
-                        // Slot 1 (receives 我)
+                        // Slot 1 (receives first chip)
                         Column(horizontalAlignment = Alignment.CenterHorizontally) {
                             if (selectedChips.isNotEmpty()) {
                                 val chip = selectedChips[0]
@@ -1254,7 +1323,7 @@ fun LessonExerciseScreen(
 
                         Spacer(modifier = Modifier.width(10.dp))
 
-                        // Slot 2 (receives 叫)
+                        // Slot 2 (receives second chip)
                         Column(horizontalAlignment = Alignment.CenterHorizontally) {
                             if (selectedChips.size > 1) {
                                 val chip = selectedChips[1]
@@ -1292,79 +1361,110 @@ fun LessonExerciseScreen(
                                     .background(Color(0xFF00C48C), shape = RoundedCornerShape(2.dp))
                             )
                         }
-                    }
 
-                    Spacer(modifier = Modifier.height(20.dp))
-
-                    // Line 2: 布迪 。
-                    Row(
-                        modifier = Modifier.fillMaxWidth(),
-                        verticalAlignment = Alignment.CenterVertically,
-                        horizontalArrangement = Arrangement.Start
-                    ) {
-                        Column(horizontalAlignment = Alignment.Start) {
-                            Text(text = "Bùdí", fontSize = 15.sp, color = SlateGray)
-                            Spacer(modifier = Modifier.height(2.dp))
-                            Text(text = "布迪 。", fontSize = 23.sp, fontWeight = FontWeight.Normal, color = HanziColor)
+                        if (exercise.staticTrailingText.isNotBlank() && exercise.id != "u1_p1_q9") {
+                            Spacer(modifier = Modifier.width(10.dp))
+                            Column(horizontalAlignment = Alignment.Start) {
+                                if (exercise.staticTrailingPinyin.isNotBlank()) {
+                                    Text(text = exercise.staticTrailingPinyin, fontSize = 15.sp, color = SlateGray)
+                                    Spacer(modifier = Modifier.height(2.dp))
+                                }
+                                Text(text = exercise.staticTrailingText, fontSize = 23.sp, fontWeight = FontWeight.Normal, color = HanziColor)
+                            }
                         }
                     }
 
-                    Spacer(modifier = Modifier.height(110.dp))
+                    // Optional Line 2 for u1_p1_q9
+                    if (exercise.id == "u1_p1_q9") {
+                        Spacer(modifier = Modifier.height(20.dp))
+                        Row(
+                            modifier = Modifier.fillMaxWidth(),
+                            verticalAlignment = Alignment.CenterVertically,
+                            horizontalArrangement = Arrangement.Start
+                        ) {
+                            Column(horizontalAlignment = Alignment.Start) {
+                                Text(text = "Bùdí", fontSize = 15.sp, color = SlateGray)
+                                Spacer(modifier = Modifier.height(2.dp))
+                                Text(text = "布迪 。", fontSize = 23.sp, fontWeight = FontWeight.Normal, color = HanziColor)
+                            }
+                        }
+                    }
 
-                    // Bottom Chips Row (4 items: 你, 我, 叫, 印尼)
-                    Row(
+                    Spacer(modifier = Modifier.height(if (exercise.wordChips.size > 5) 60.dp else 110.dp))
+
+                    // Chips (1 or 2 rows)
+                    Column(
                         modifier = Modifier.fillMaxWidth(),
-                        horizontalArrangement = Arrangement.spacedBy(10.dp)
+                        verticalArrangement = Arrangement.spacedBy(10.dp),
+                        horizontalAlignment = Alignment.CenterHorizontally
                     ) {
-                        exercise.wordChips.forEach { chip ->
-                            val isUsed = selectedChips.contains(chip)
-                            val hanzi = chip.substringBefore(":")
-                            val pinyin = if (chip.contains(":")) chip.substringAfter(":") else ""
+                        val chipRows = if (exercise.wordChips.size > 5) {
+                            listOf(exercise.wordChips.take(5), exercise.wordChips.drop(5))
+                        } else {
+                            listOf(exercise.wordChips)
+                        }
 
-                            if (isUsed) {
-                                Box(
-                                    modifier = Modifier
-                                        .weight(1f)
-                                        .height(64.dp)
-                                        .clip(RoundedCornerShape(14.dp))
-                                        .background(Color(0xFFE2E8F0))
-                                )
-                            } else {
-                                Surface(
-                                    shape = RoundedCornerShape(14.dp),
-                                    color = Color.White,
-                                    shadowElevation = 2.dp,
-                                    border = androidx.compose.foundation.BorderStroke(1.dp, Color(0xFFE2E8F0)),
-                                    modifier = Modifier
-                                        .weight(1f)
-                                        .height(64.dp)
-                                        .bouncyClick {
-                                            if (!isSubmitted && selectedChips.size < 2) {
-                                                selectedChips = selectedChips + chip
-                                                ttsManager?.speak(hanzi)
+                        chipRows.forEach { rowChips ->
+                            Row(
+                                modifier = Modifier.fillMaxWidth(),
+                                horizontalArrangement = Arrangement.spacedBy(8.dp, Alignment.CenterHorizontally)
+                            ) {
+                                rowChips.forEach { chip ->
+                                    val isUsed = selectedChips.contains(chip)
+                                    val hanzi = chip.substringBefore(":")
+                                    val pinyin = if (chip.contains(":")) chip.substringAfter(":") else ""
+
+                                    val chipModifier = if (rowChips.size == 1 && chipRows.size > 1) {
+                                        Modifier.width(66.dp).height(64.dp)
+                                    } else {
+                                        Modifier.weight(1f).height(64.dp)
+                                    }
+
+                                    if (isUsed) {
+                                        Box(
+                                            modifier = chipModifier
+                                                .clip(RoundedCornerShape(14.dp))
+                                                .background(Color(0xFFE2E8F0))
+                                        )
+                                    } else {
+                                        Surface(
+                                            shape = RoundedCornerShape(14.dp),
+                                            color = Color.White,
+                                            shadowElevation = 2.dp,
+                                            border = androidx.compose.foundation.BorderStroke(1.dp, Color(0xFFE2E8F0)),
+                                            modifier = chipModifier
+                                                .bouncyClick {
+                                                    val expectedCount = if (exercise.correctAnswer.contains(",")) exercise.correctAnswer.split(",").size else 2
+                                                    if (!isSubmitted && selectedChips.size < expectedCount) {
+                                                        selectedChips = selectedChips + chip
+                                                        ttsManager?.speak(hanzi)
+                                                    }
+                                                }
+                                        ) {
+                                            Column(
+                                                horizontalAlignment = Alignment.CenterHorizontally,
+                                                verticalArrangement = Arrangement.Center,
+                                                modifier = Modifier
+                                                    .fillMaxSize()
+                                                    .padding(horizontal = 2.dp, vertical = 4.dp)
+                                            ) {
+                                                if (pinyin.isNotBlank()) {
+                                                    Text(
+                                                        text = pinyin,
+                                                        fontSize = 13.sp,
+                                                        color = DeepNavy,
+                                                        maxLines = 1
+                                                    )
+                                                }
+                                                Text(
+                                                    text = hanzi,
+                                                    fontSize = 20.sp,
+                                                    fontWeight = FontWeight.Normal,
+                                                    color = DeepNavy,
+                                                    maxLines = 1
+                                                )
                                             }
                                         }
-                                ) {
-                                    Column(
-                                        horizontalAlignment = Alignment.CenterHorizontally,
-                                        verticalArrangement = Arrangement.Center,
-                                        modifier = Modifier
-                                            .fillMaxSize()
-                                            .padding(horizontal = 4.dp, vertical = 4.dp)
-                                    ) {
-                                        if (pinyin.isNotBlank()) {
-                                            Text(
-                                                text = pinyin,
-                                                fontSize = 13.sp,
-                                                color = DeepNavy
-                                            )
-                                        }
-                                        Text(
-                                            text = hanzi,
-                                            fontSize = 22.sp,
-                                            fontWeight = FontWeight.Normal,
-                                            color = DeepNavy
-                                        )
                                     }
                                 }
                             }
@@ -1498,7 +1598,11 @@ fun LessonExerciseScreen(
 
             // EXERCISE TYPE 5: KETUK PASANGAN YANG SESUAI
             if (exercise.type == ExerciseType.MATCH_PAIRS) {
-                Spacer(modifier = Modifier.height(20.dp))
+                val isFivePairs = exercise.matchPairs.size > 3
+                val cardHeight = if (isFivePairs) 66.dp else 115.dp
+                val pairSpacing = if (isFivePairs) 10.dp else 18.dp
+
+                Spacer(modifier = Modifier.height(if (isFivePairs) 10.dp else 20.dp))
 
                 Row(
                     modifier = Modifier.fillMaxWidth(),
@@ -1507,14 +1611,14 @@ fun LessonExerciseScreen(
                     // Left Column (Hanzi + Pinyin)
                     Column(
                         modifier = Modifier.weight(1f),
-                        verticalArrangement = Arrangement.spacedBy(18.dp)
+                        verticalArrangement = Arrangement.spacedBy(pairSpacing)
                     ) {
                         exercise.matchPairs.forEach { item ->
                             val isMatched = matchedPairIds.contains(item.id)
                             val isSelected = selectedLeftPairId == item.id
 
                             Surface(
-                                shape = RoundedCornerShape(18.dp),
+                                shape = RoundedCornerShape(16.dp),
                                 color = Color.White,
                                 border = androidx.compose.foundation.BorderStroke(
                                     width = if (isSelected) 2.5.dp else 1.dp,
@@ -1527,7 +1631,7 @@ fun LessonExerciseScreen(
                                 shadowElevation = if (isSelected) 2.dp else 1.dp,
                                 modifier = Modifier
                                     .fillMaxWidth()
-                                    .height(115.dp)
+                                    .height(cardHeight)
                                     .bouncyClick {
                                         if (!isMatched) {
                                             selectedLeftPairId = item.id
@@ -1550,14 +1654,14 @@ fun LessonExerciseScreen(
                                 ) {
                                     Text(
                                         text = item.pinyin,
-                                        fontSize = 15.sp,
+                                        fontSize = if (isFivePairs) 13.sp else 15.sp,
                                         fontWeight = FontWeight.Normal,
                                         color = if (isSelected) Color(0xFF007AFF) else SlateGray
                                     )
                                     Spacer(modifier = Modifier.height(2.dp))
                                     Text(
                                         text = item.hanzi,
-                                        fontSize = 24.sp,
+                                        fontSize = if (isFivePairs) 19.sp else 24.sp,
                                         fontWeight = FontWeight.Normal,
                                         color = if (isSelected) Color(0xFF007AFF) else DeepNavy
                                     )
@@ -1569,14 +1673,14 @@ fun LessonExerciseScreen(
                     // Right Column (Translations)
                     Column(
                         modifier = Modifier.weight(1f),
-                        verticalArrangement = Arrangement.spacedBy(18.dp)
+                        verticalArrangement = Arrangement.spacedBy(pairSpacing)
                     ) {
                         shuffledRightPairs.forEach { item ->
                             val isMatched = matchedPairIds.contains(item.id)
                             val isSelected = selectedRightPairId == item.id
 
                             Surface(
-                                shape = RoundedCornerShape(18.dp),
+                                shape = RoundedCornerShape(16.dp),
                                 color = Color.White,
                                 border = androidx.compose.foundation.BorderStroke(
                                     width = if (isSelected) 2.5.dp else 1.dp,
@@ -1589,7 +1693,7 @@ fun LessonExerciseScreen(
                                 shadowElevation = if (isSelected) 2.dp else 1.dp,
                                 modifier = Modifier
                                     .fillMaxWidth()
-                                    .height(115.dp)
+                                    .height(cardHeight)
                                     .bouncyClick {
                                         if (!isMatched) {
                                             selectedRightPairId = item.id
@@ -1610,7 +1714,7 @@ fun LessonExerciseScreen(
                                 ) {
                                     Text(
                                         text = item.translation,
-                                        fontSize = 18.sp,
+                                        fontSize = if (isFivePairs) 15.sp else 18.sp,
                                         fontWeight = FontWeight.Normal,
                                         color = if (isSelected) Color(0xFF007AFF) else DeepNavy,
                                         textAlign = TextAlign.Center

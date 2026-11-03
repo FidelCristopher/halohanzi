@@ -576,33 +576,164 @@ object LearningRepository {
                                 PictureOption("p2_q1_guru", "guru", "👩‍🏫", isCorrect = false)
                             )
                         ),
-                        // 2. Soal 2 (Menunggu screenshot Soal 2)
+                        // 2. Soal 2: Lengkapi Terjemahan Kata Adalah (我是印度尼西亚人。)
                         Exercise(
                             id = "u1_p2_q2",
+                            type = ExerciseType.FILL_BLANK,
+                            title = "Lengkapi terjemahan",
+                            targetHanzi = "我 是 印度尼西亚 人 。",
+                            targetPinyin = "Wǒ shì  Yìndùníxīyà  rén",
+                            targetTranslation = "Saya adalah orang Indonesia.",
+                            sentenceWithBlank = "Saya ________ orang Indonesia.",
+                            options = listOf("bukan", "adalah", "kenal"),
+                            correctAnswer = "adalah",
+                            audioToSpeak = "我是印度尼西亚人。"
+                        ),
+                        // 3. Soal 3: Pilihan Gambar Singkatan Indonesia (印尼)
+                        Exercise(
+                            id = "u1_p2_q3",
+                            type = ExerciseType.PICTURE_CHOICE,
+                            title = "Pilih gambar yang benar",
+                            targetHanzi = "印尼",
+                            targetPinyin = "Yìnní",
+                            targetTranslation = "(negara)\nIndonesia",
+                            correctAnswer = "(negara)\nIndonesia",
+                            audioToSpeak = "印尼",
+                            pictureOptions = listOf(
+                                PictureOption("p2_q3_saya", "saya", "🙋‍♂️", isCorrect = false),
+                                PictureOption("p2_q3_murid", "murid", "🧑‍🎓", isCorrect = false),
+                                PictureOption("p2_q3_guru", "guru", "👩‍🏫", isCorrect = false),
+                                PictureOption("p2_q3_indo", "(negara)\nIndonesia", "🇮🇩", isCorrect = true)
+                            )
+                        ),
+                        // 4. Soal 4: Pilihan Gambar Guru (老师)
+                        Exercise(
+                            id = "u1_p2_q4",
+                            type = ExerciseType.PICTURE_CHOICE,
+                            title = "Pilih gambar yang benar",
+                            targetHanzi = "老师",
+                            targetPinyin = "lǎoshī",
+                            targetTranslation = "guru",
+                            correctAnswer = "guru",
+                            audioToSpeak = "老师",
+                            pictureOptions = listOf(
+                                PictureOption("p2_q4_guru", "guru", "👩‍🏫", isCorrect = true),
+                                PictureOption("p2_q4_murid", "murid", "🧑‍🎓", isCorrect = false),
+                                PictureOption("p2_q4_indo", "(negara)\nIndonesia", "🇮🇩", isCorrect = false),
+                                PictureOption("p2_q4_orang", "orang", "👥", isCorrect = false)
+                            )
+                        ),
+                        // 5. Soal 5: Pilihan Terjemahan Kalimat Panjang (老师，你好，我是印尼人。)
+                        Exercise(
+                            id = "u1_p2_q5",
                             type = ExerciseType.SENTENCE_CHOICE,
                             title = "Pilih terjemahan yang benar",
-                            targetHanzi = "我是老师，不是学生。",
-                            targetPinyin = "Wǒ shì lǎoshī, bú shì xuésheng.",
-                            targetTranslation = "Saya adalah guru, bukan murid.",
+                            targetHanzi = "老师 ， 你好 ， 我 是\n印尼 人 。",
+                            targetPinyin = "Lǎoshī    nǐhǎo    wǒ shì\nYìnní  rén",
+                            targetTranslation = "Halo (Bapak atau Ibu) Guru, saya adalah orang Indonesia.",
                             options = listOf(
-                                "Saya adalah guru, bukan murid.",
-                                "Saya adalah murid, bukan guru.",
-                                "Dia adalah guru.",
-                                "Kamu adalah murid."
+                                "Saya adalah orang Indonesia.",
+                                "Halo (Bapak atau Ibu) Guru, saya adalah orang Indonesia.",
+                                "Halo, saya adalah seorang guru.",
+                                "Halo, (Bapak atau Ibu) Guru."
                             ),
-                            correctAnswer = "Saya adalah guru, bukan murid.",
-                            audioToSpeak = "我是老师，不是学生。"
+                            correctAnswer = "Halo (Bapak atau Ibu) Guru, saya adalah orang Indonesia.",
+                            audioToSpeak = "老师，你好，我是印尼人。"
                         ),
-                        // Placeholder Soal 3 - 11 (Akan diupdate bertahap sesuai 11 soal)
-                        Exercise(id = "u1_p2_q3", type = ExerciseType.SENTENCE_CHOICE, title = "Soal 3 (Placeholder)", targetHanzi = "学生", targetPinyin = "xuéshēng", targetTranslation = "murid", options = listOf("murid", "guru"), correctAnswer = "murid"),
-                        Exercise(id = "u1_p2_q4", type = ExerciseType.SENTENCE_CHOICE, title = "Soal 4 (Placeholder)", targetHanzi = "老师", targetPinyin = "lǎoshī", targetTranslation = "guru", options = listOf("guru", "murid"), correctAnswer = "guru"),
-                        Exercise(id = "u1_p2_q5", type = ExerciseType.SENTENCE_CHOICE, title = "Soal 5 (Placeholder)", targetHanzi = "他", targetPinyin = "tā", targetTranslation = "dia", options = listOf("dia", "kamu"), correctAnswer = "dia"),
-                        Exercise(id = "u1_p2_q6", type = ExerciseType.SENTENCE_CHOICE, title = "Soal 6 (Placeholder)", targetHanzi = "她", targetPinyin = "tā", targetTranslation = "dia (perempuan)", options = listOf("dia", "kamu"), correctAnswer = "dia"),
-                        Exercise(id = "u1_p2_q7", type = ExerciseType.SENTENCE_CHOICE, title = "Soal 7 (Placeholder)", targetHanzi = "我们", targetPinyin = "wǒmen", targetTranslation = "kami", options = listOf("kami", "mereka"), correctAnswer = "kami"),
-                        Exercise(id = "u1_p2_q8", type = ExerciseType.SENTENCE_CHOICE, title = "Soal 8 (Placeholder)", targetHanzi = "你们", targetPinyin = "nǐmen", targetTranslation = "kalian", options = listOf("kalian", "mereka"), correctAnswer = "kalian"),
-                        Exercise(id = "u1_p2_q9", type = ExerciseType.SENTENCE_CHOICE, title = "Soal 9 (Placeholder)", targetHanzi = "他们", targetPinyin = "tāmen", targetTranslation = "mereka", options = listOf("mereka", "kami"), correctAnswer = "mereka"),
-                        Exercise(id = "u1_p2_q10", type = ExerciseType.SENTENCE_CHOICE, title = "Soal 10 (Placeholder)", targetHanzi = "中国", targetPinyin = "Zhōngguó", targetTranslation = "China", options = listOf("China", "Indonesia"), correctAnswer = "China"),
-                        Exercise(id = "u1_p2_q11", type = ExerciseType.SENTENCE_CHOICE, title = "Soal 11 (Placeholder)", targetHanzi = "中国人", targetPinyin = "Zhōngguórén", targetTranslation = "Orang China", options = listOf("Orang China", "Orang Indonesia"), correctAnswer = "Orang China")
+                        // 6. Soal 6: Pilihan Gambar Murid (学生 - 1x2 Row)
+                        Exercise(
+                            id = "u1_p2_q6",
+                            type = ExerciseType.PICTURE_CHOICE,
+                            title = "Pilih gambar yang benar",
+                            targetHanzi = "学生",
+                            targetPinyin = "xuéshēng",
+                            targetTranslation = "murid",
+                            correctAnswer = "murid",
+                            audioToSpeak = "学生",
+                            pictureOptions = listOf(
+                                PictureOption("p2_q6_murid", "murid", "🧑‍🎓", isCorrect = true),
+                                PictureOption("p2_q6_orang", "orang", "👥", isCorrect = false)
+                            )
+                        ),
+                        // 7. Soal 7: Susun Kalimat Audio Imersif (布迪是印尼人。)
+                        Exercise(
+                            id = "u1_p2_q7",
+                            type = ExerciseType.SENTENCE_BUILDER,
+                            title = "Apa yang Anda dengar?",
+                            targetHanzi = "布迪是印尼人。",
+                            targetPinyin = "Bùdí shì Yìnní rén.",
+                            targetTranslation = "Budi adalah orang Indonesia.",
+                            staticLeadingText = "布迪",
+                            staticLeadingPinyin = "Bùdí",
+                            staticTrailingText = "。",
+                            wordChips = listOf("是:shì", "学生:xuéshēng", "你好:nǐhǎo", "老师:lǎoshī", "人:rén", "印尼:Yìnní"),
+                            correctAnswer = "是,印尼,人",
+                            audioToSpeak = "布迪是印尼人。",
+                            isImmersiveSpeaker = true
+                        ),
+                        // 8. Soal 8: Placeholder (Menunggu konfirmasi screenshot Soal 8)
+                        Exercise(
+                            id = "u1_p2_q8",
+                            type = ExerciseType.SENTENCE_CHOICE,
+                            title = "Pilih terjemahan yang benar",
+                            targetHanzi = "我是学生。",
+                            targetPinyin = "Wǒ shì xuéshēng.",
+                            targetTranslation = "Saya adalah murid.",
+                            options = listOf(
+                                "Saya adalah murid.",
+                                "Saya adalah guru.",
+                                "Kamu adalah murid.",
+                                "Dia adalah guru."
+                            ),
+                            correctAnswer = "Saya adalah murid.",
+                            audioToSpeak = "我是学生。"
+                        ),
+                        // 9. Soal 9: Pilihan Terjemahan Kalimat (Budi adalah seorang murid.)
+                        Exercise(
+                            id = "u1_p2_q9",
+                            type = ExerciseType.SENTENCE_CHOICE,
+                            title = "Pilih terjemahan yang benar",
+                            targetHanzi = "",
+                            targetPinyin = "",
+                            targetTranslation = "Budi adalah seorang murid.",
+                            options = listOf(
+                                "Bùdí  shì  xuéshēng\n布迪 是  学生 。",
+                                "Bùdí  shì  lǎoshī\n布迪 是  老师 。",
+                                "WángFēi  shì  xuéshēng\n王 飞  是  学生 。",
+                                "Wǒ  shì  xuéshēng\n我 是  学生 。"
+                            ),
+                            correctAnswer = "Bùdí  shì  xuéshēng\n布迪 是  学生 。",
+                            audioToSpeak = "布迪是学生。"
+                        ),
+                        // 10. Soal 10: Ketuk Pasangan yang Sesuai (5 Pasang Kartu)
+                        Exercise(
+                            id = "u1_p2_q10",
+                            type = ExerciseType.MATCH_PAIRS,
+                            title = "Ketuk pasangan yang sesuai",
+                            correctAnswer = "ALL_MATCHED",
+                            matchPairs = listOf(
+                                MatchPairItem("m1", "印度尼西亚", "Yìndùníxīyà", "(negara) Indonesia"),
+                                MatchPairItem("m2", "老师", "lǎoshī", "guru"),
+                                MatchPairItem("m3", "人", "rén", "orang"),
+                                MatchPairItem("m4", "学生", "xuéshēng", "murid"),
+                                MatchPairItem("m5", "是", "shì", "adalah")
+                            )
+                        ),
+                        // 11. Soal 11: Lengkapi Terjemahan Dua Slot (Wang Fei adalah seorang guru.)
+                        Exercise(
+                            id = "u1_p2_q11",
+                            type = ExerciseType.SENTENCE_BUILDER,
+                            title = "Lengkapi terjemahan",
+                            targetTranslation = "Wang Fei adalah seorang guru.",
+                            targetHanzi = "王飞是老师。",
+                            targetPinyin = "WángFēi shì lǎoshī.",
+                            staticLeadingText = "王飞",
+                            staticLeadingPinyin = "WángFēi",
+                            staticTrailingText = "。",
+                            wordChips = listOf("学生:xuéshēng", "人:rén", "我:wǒ", "你好:nǐhǎo", "是:shì", "老师:lǎoshī"),
+                            correctAnswer = "是,老师",
+                            audioToSpeak = "王飞是老师。"
+                        )
                     )
                 )
             )

@@ -86,6 +86,8 @@ data class Exercise(
     val wordChips: List<String> = emptyList(),
     val correctAnswer: String = "",
     val audioToSpeak: String = "",
+    val staticLeadingText: String = "",
+    val staticLeadingPinyin: String = "",
     val staticTrailingText: String = "",
     val staticTrailingPinyin: String = "",
     val hasCommaAfterSlot1: Boolean = false,
