@@ -671,26 +671,9 @@ object LearningRepository {
                             audioToSpeak = "布迪是印尼人。",
                             isImmersiveSpeaker = true
                         ),
-                        // 8. Soal 8: Placeholder (Menunggu konfirmasi screenshot Soal 8)
+                        // 8. Soal 8: Pilihan Terjemahan Kalimat (Budi adalah seorang murid.)
                         Exercise(
                             id = "u1_p2_q8",
-                            type = ExerciseType.SENTENCE_CHOICE,
-                            title = "Pilih terjemahan yang benar",
-                            targetHanzi = "我是学生。",
-                            targetPinyin = "Wǒ shì xuéshēng.",
-                            targetTranslation = "Saya adalah murid.",
-                            options = listOf(
-                                "Saya adalah murid.",
-                                "Saya adalah guru.",
-                                "Kamu adalah murid.",
-                                "Dia adalah guru."
-                            ),
-                            correctAnswer = "Saya adalah murid.",
-                            audioToSpeak = "我是学生。"
-                        ),
-                        // 9. Soal 9: Pilihan Terjemahan Kalimat (Budi adalah seorang murid.)
-                        Exercise(
-                            id = "u1_p2_q9",
                             type = ExerciseType.SENTENCE_CHOICE,
                             title = "Pilih terjemahan yang benar",
                             targetHanzi = "",
@@ -705,9 +688,9 @@ object LearningRepository {
                             correctAnswer = "Bùdí  shì  xuéshēng\n布迪 是  学生 。",
                             audioToSpeak = "布迪是学生。"
                         ),
-                        // 10. Soal 10: Ketuk Pasangan yang Sesuai (5 Pasang Kartu)
+                        // 9. Soal 9: Ketuk Pasangan yang Sesuai (5 Pasang Kartu)
                         Exercise(
-                            id = "u1_p2_q10",
+                            id = "u1_p2_q9",
                             type = ExerciseType.MATCH_PAIRS,
                             title = "Ketuk pasangan yang sesuai",
                             correctAnswer = "ALL_MATCHED",
@@ -719,9 +702,9 @@ object LearningRepository {
                                 MatchPairItem("m5", "是", "shì", "adalah")
                             )
                         ),
-                        // 11. Soal 11: Lengkapi Terjemahan Dua Slot (Wang Fei adalah seorang guru.)
+                        // 10. Soal 10: Lengkapi Terjemahan Dua Slot (Wang Fei adalah seorang guru.)
                         Exercise(
-                            id = "u1_p2_q11",
+                            id = "u1_p2_q10",
                             type = ExerciseType.SENTENCE_BUILDER,
                             title = "Lengkapi terjemahan",
                             targetTranslation = "Wang Fei adalah seorang guru.",

@@ -62,10 +62,10 @@ fun LessonExerciseScreen(
     var matchedPairIds by remember { mutableStateOf<Set<String>>(emptySet()) }
     var shuffledRightPairs by remember(currentExerciseIdx) {
         val currEx = exercisesList.getOrNull(currentExerciseIdx)
-        val fixedOrder = when (currEx?.id) {
-            "u1_p1_q8" -> listOf("saya", "halo", "dipanggil")
-            "u1_p2_q10" -> listOf("adalah", "guru", "(negara) Indonesia", "(negara)\nIndonesia", "orang", "murid")
-            else -> listOf("adalah", "guru", "(negara) Indonesia", "orang", "murid", "saya", "halo", "dipanggil")
+        val fixedOrder = if (currEx?.id == "u1_p1_q8") {
+            listOf("saya", "halo", "dipanggil")
+        } else {
+            listOf("adalah", "guru", "(negara) Indonesia", "(negara)\nIndonesia", "orang", "murid")
         }
         val pairs = currEx?.matchPairs ?: emptyList()
         val sorted = pairs.sortedBy { fixedOrder.indexOf(it.translation).takeIf { idx -> idx >= 0 } ?: 99 }
