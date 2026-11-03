@@ -165,7 +165,8 @@ fun TokenChip(
             }
             Text(
                 text = token.hanzi,
-                fontSize = 24.sp,
+                fontFamily = KaiTiFontFamily,
+                fontSize = 26.sp,
                 fontWeight = FontWeight.SemiBold,
                 // Active highlight: turns vibrant green when active audio plays
                 color = if (isActive) ActiveSentenceGreen else HanziColor

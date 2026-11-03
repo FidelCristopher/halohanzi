@@ -356,7 +356,8 @@ fun LessonExerciseScreen(
                         }
                         Text(
                             text = exercise.targetHanzi,
-                            fontSize = 20.sp,
+                            fontFamily = KaiTiFontFamily,
+                            fontSize = 22.sp,
                             fontWeight = FontWeight.Bold,
                             color = HanziColor,
                             modifier = Modifier.fillMaxWidth(),
@@ -480,7 +481,8 @@ fun LessonExerciseScreen(
                         )
                         Text(
                             text = exercise.targetHanzi,
-                            fontSize = 26.sp,
+                            fontFamily = KaiTiFontFamily,
+                            fontSize = 28.sp,
                             fontWeight = FontWeight.Bold,
                             color = HanziColor
                         )
@@ -578,7 +580,7 @@ fun LessonExerciseScreen(
                     Column {
                         Text(text = exercise.targetPinyin, fontSize = 16.sp, color = SlateGray)
                         Spacer(modifier = Modifier.height(2.dp))
-                        Text(text = exercise.targetHanzi, fontSize = 24.sp, fontWeight = FontWeight.SemiBold, color = HanziColor)
+                        Text(text = exercise.targetHanzi, fontFamily = KaiTiFontFamily, fontSize = 26.sp, fontWeight = FontWeight.SemiBold, color = HanziColor)
                     }
                 }
 
@@ -738,7 +740,7 @@ fun LessonExerciseScreen(
                                 Text(text = exercise.targetPinyin, fontSize = 16.sp, color = SlateGray)
                                 Spacer(modifier = Modifier.height(2.dp))
                             }
-                            Text(text = exercise.targetHanzi, fontSize = 24.sp, fontWeight = FontWeight.SemiBold, color = HanziColor)
+                            Text(text = exercise.targetHanzi, fontFamily = KaiTiFontFamily, fontSize = 26.sp, fontWeight = FontWeight.SemiBold, color = HanziColor)
                         }
                     }
 
@@ -848,7 +850,8 @@ fun LessonExerciseScreen(
                                         }
                                         Text(
                                             text = hanziPart,
-                                            fontSize = 22.sp,
+                                            fontFamily = KaiTiFontFamily,
+                                            fontSize = 24.sp,
                                             fontWeight = FontWeight.Normal,
                                             color = if (isSelected) Color(0xFF007AFF) else DeepNavy
                                         )
@@ -930,7 +933,8 @@ fun LessonExerciseScreen(
                                         }
                                         Text(
                                             text = exercise.staticLeadingText,
-                                            fontSize = 22.sp,
+                                            fontFamily = KaiTiFontFamily,
+                                            fontSize = 24.sp,
                                             fontWeight = FontWeight.Normal,
                                             color = DeepNavy
                                         )
@@ -1086,7 +1090,8 @@ fun LessonExerciseScreen(
                                     }
                                     Text(
                                         text = exercise.staticTrailingText,
-                                        fontSize = 22.sp,
+                                        fontFamily = KaiTiFontFamily,
+                                        fontSize = 24.sp,
                                         fontWeight = FontWeight.Normal,
                                         color = DeepNavy
                                     )
@@ -1161,7 +1166,8 @@ fun LessonExerciseScreen(
                                                         }
                                                         Text(
                                                             text = hanzi,
-                                                            fontSize = 18.sp,
+                                                            fontFamily = KaiTiFontFamily,
+                                                            fontSize = 20.sp,
                                                             fontWeight = FontWeight.Normal,
                                                             color = DeepNavy,
                                                             maxLines = 1
@@ -1261,14 +1267,14 @@ fun LessonExerciseScreen(
                                     Text(text = exercise.staticLeadingPinyin, fontSize = 15.sp, color = SlateGray)
                                     Spacer(modifier = Modifier.height(2.dp))
                                 }
-                                Text(text = exercise.staticLeadingText, fontSize = 23.sp, fontWeight = FontWeight.Normal, color = HanziColor)
+                                Text(text = exercise.staticLeadingText, fontFamily = KaiTiFontFamily, fontSize = 25.sp, fontWeight = FontWeight.Normal, color = HanziColor)
                             }
                             Spacer(modifier = Modifier.width(16.dp))
                         } else if (exercise.id == "u1_p1_q9") {
                             Column(horizontalAlignment = Alignment.CenterHorizontally) {
                                 Text(text = "Nǐhǎo", fontSize = 15.sp, color = SlateGray)
                                 Spacer(modifier = Modifier.height(2.dp))
-                                Text(text = "你好 ，", fontSize = 23.sp, fontWeight = FontWeight.Normal, color = HanziColor)
+                                Text(text = "你好 ，", fontFamily = KaiTiFontFamily, fontSize = 25.sp, fontWeight = FontWeight.Normal, color = HanziColor)
                             }
 
                             Spacer(modifier = Modifier.width(16.dp))
@@ -1276,7 +1282,7 @@ fun LessonExerciseScreen(
                             Column(horizontalAlignment = Alignment.CenterHorizontally) {
                                 Text(text = "WángFēi", fontSize = 15.sp, color = SlateGray)
                                 Spacer(modifier = Modifier.height(2.dp))
-                                Text(text = "王飞 ，", fontSize = 23.sp, fontWeight = FontWeight.Normal, color = HanziColor)
+                                Text(text = "王飞 ，", fontFamily = KaiTiFontFamily, fontSize = 25.sp, fontWeight = FontWeight.Normal, color = HanziColor)
                             }
 
                             Spacer(modifier = Modifier.width(16.dp))
@@ -1369,7 +1375,7 @@ fun LessonExerciseScreen(
                                     Text(text = exercise.staticTrailingPinyin, fontSize = 15.sp, color = SlateGray)
                                     Spacer(modifier = Modifier.height(2.dp))
                                 }
-                                Text(text = exercise.staticTrailingText, fontSize = 23.sp, fontWeight = FontWeight.Normal, color = HanziColor)
+                                Text(text = exercise.staticTrailingText, fontFamily = KaiTiFontFamily, fontSize = 25.sp, fontWeight = FontWeight.Normal, color = HanziColor)
                             }
                         }
                     }
@@ -1385,7 +1391,7 @@ fun LessonExerciseScreen(
                             Column(horizontalAlignment = Alignment.Start) {
                                 Text(text = "Bùdí", fontSize = 15.sp, color = SlateGray)
                                 Spacer(modifier = Modifier.height(2.dp))
-                                Text(text = "布迪 。", fontSize = 23.sp, fontWeight = FontWeight.Normal, color = HanziColor)
+                                Text(text = "布迪 。", fontFamily = KaiTiFontFamily, fontSize = 25.sp, fontWeight = FontWeight.Normal, color = HanziColor)
                             }
                         }
                     }
@@ -1458,7 +1464,8 @@ fun LessonExerciseScreen(
                                                 }
                                                 Text(
                                                     text = hanzi,
-                                                    fontSize = 20.sp,
+                                                    fontFamily = KaiTiFontFamily,
+                                                    fontSize = 22.sp,
                                                     fontWeight = FontWeight.Normal,
                                                     color = DeepNavy,
                                                     maxLines = 1
@@ -1661,7 +1668,8 @@ fun LessonExerciseScreen(
                                     Spacer(modifier = Modifier.height(2.dp))
                                     Text(
                                         text = item.hanzi,
-                                        fontSize = if (isFivePairs) 19.sp else 24.sp,
+                                        fontFamily = KaiTiFontFamily,
+                                        fontSize = if (isFivePairs) 21.sp else 26.sp,
                                         fontWeight = FontWeight.Normal,
                                         color = if (isSelected) Color(0xFF007AFF) else DeepNavy
                                     )
