@@ -64,10 +64,10 @@ fun LessonExerciseScreen(
     var matchedPairIds by remember { mutableStateOf<Set<String>>(emptySet()) }
     var shuffledRightPairs by remember(currentExerciseIdx) {
         val currEx = exercisesList.getOrNull(currentExerciseIdx)
-        val fixedOrder = if (currEx?.id == "u1_p1_q8" || currEx?.id == "u1_l2_q7") {
-            listOf("saya", "halo", "dipanggil")
-        } else {
-            listOf("adalah", "guru", "(negara) Indonesia", "(negara)\nIndonesia", "orang", "murid")
+        val fixedOrder = when (currEx?.id) {
+            "u1_p1_q8", "u1_l2_q7" -> listOf("saya", "halo", "dipanggil")
+            "u1_l2_p2_q3" -> listOf("orang", "(negara) Indonesia", "(negara)\nIndonesia", "guru", "adalah", "murid")
+            else -> listOf("adalah", "guru", "(negara) Indonesia", "(negara)\nIndonesia", "orang", "murid")
         }
         val pairs = currEx?.matchPairs ?: emptyList()
         val sorted = pairs.sortedBy { fixedOrder.indexOf(it.translation).takeIf { idx -> idx >= 0 } ?: 99 }
@@ -515,15 +515,15 @@ fun LessonExerciseScreen(
                                 val boxHeight = if (isTwoOptions) 150.dp else 110.dp
 
                                 Card(
-                                    shape = RoundedCornerShape(18.dp),
-                                    colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
-                                    elevation = CardDefaults.cardElevation(defaultElevation = if (isSelected) 4.dp else 1.dp),
+                                    shape = RoundedCornerShape(20.dp),
+                                    colors = CardDefaults.cardColors(containerColor = Color.White),
+                                    elevation = CardDefaults.cardElevation(defaultElevation = if (isSelected) 6.dp else 2.dp),
                                     modifier = Modifier
                                         .weight(1f)
                                         .border(
-                                            width = if (isSelected) 3.dp else 1.dp,
-                                            color = if (isSelected) Color(0xFF007AFF) else BorderGray,
-                                            shape = RoundedCornerShape(18.dp)
+                                            width = if (isSelected) 3.dp else 1.2.dp,
+                                            color = if (isSelected) Color(0xFF007AFF) else Color(0xFFE2E8F0),
+                                            shape = RoundedCornerShape(20.dp)
                                         )
                                         .bouncyClick {
                                             if (!isSubmitted) {
@@ -539,15 +539,17 @@ fun LessonExerciseScreen(
                                             modifier = Modifier
                                                 .fillMaxWidth()
                                                 .height(boxHeight)
-                                                .background(Color(0xFFE8F5E9)),
+                                                .background(Color.White),
                                             contentAlignment = Alignment.Center
                                         ) {
                                             if (opt.iconRes != 0) {
-                                                Icon(
+                                                androidx.compose.foundation.Image(
                                                     painter = painterResource(opt.iconRes),
                                                     contentDescription = opt.label,
-                                                    tint = Color.Unspecified,
-                                                    modifier = Modifier.size(if (isTwoOptions) 72.dp else 56.dp)
+                                                    modifier = Modifier
+                                                        .size(if (isTwoOptions) 130.dp else 102.dp)
+                                                        .padding(2.dp),
+                                                    contentScale = androidx.compose.ui.layout.ContentScale.Fit
                                                 )
                                             } else {
                                                 Text(text = opt.emoji, fontSize = if (isTwoOptions) 64.sp else 52.sp)
@@ -557,11 +559,12 @@ fun LessonExerciseScreen(
                                         Box(
                                             modifier = Modifier
                                                 .fillMaxWidth()
-                                                .padding(vertical = 14.dp),
+                                                .padding(bottom = 12.dp, top = 2.dp),
                                             contentAlignment = Alignment.Center
                                         ) {
                                             Text(
                                                 text = opt.label,
+                                                fontFamily = NunitoFontFamily,
                                                 fontSize = 15.sp,
                                                 fontWeight = FontWeight.Bold,
                                                 color = if (isSelected) Color(0xFF007AFF) else DeepNavy,
@@ -1547,13 +1550,27 @@ fun LessonExerciseScreen(
                             .padding(top = 6.dp, bottom = 32.dp)
                     )
 
-                    // Line 1: [Leading Text] [Slot 1] [Slot 2] [Slot 3] [Trailing Text]
+                    // Optional Line 1 when slots are placed on Line 2
+                    if (exercise.hasSlotsOnLine2) {
+                        Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.Start) {
+                            Column(horizontalAlignment = Alignment.Start) {
+                                if (exercise.staticLeadingPinyin.isNotBlank()) {
+                                    Text(text = exercise.staticLeadingPinyin, fontSize = 15.sp, color = SlateGray)
+                                    Spacer(modifier = Modifier.height(2.dp))
+                                }
+                                Text(text = exercise.staticLeadingText, fontFamily = KaiTiFontFamily, fontSize = 25.sp, fontWeight = FontWeight.Normal, color = HanziColor)
+                            }
+                        }
+                        Spacer(modifier = Modifier.height(20.dp))
+                    }
+
+                    // Line with slots: [Leading Text] [Slot 1] [Slot 2] [Slot 3] [Trailing Text]
                     Row(
                         modifier = Modifier.fillMaxWidth(),
                         verticalAlignment = Alignment.Bottom,
                         horizontalArrangement = Arrangement.Start
                     ) {
-                        if (exercise.staticLeadingText.isNotBlank()) {
+                        if (exercise.staticLeadingText.isNotBlank() && !exercise.hasSlotsOnLine2) {
                             Column(horizontalAlignment = Alignment.CenterHorizontally) {
                                 if (exercise.staticLeadingPinyin.isNotBlank()) {
                                     Text(text = exercise.staticLeadingPinyin, fontSize = 15.sp, color = SlateGray)

@@ -100,7 +100,8 @@ data class Exercise(
     val dialogueSpeakerTranslation: String = "",
     val hasTrailingLine2: Boolean = false,
     val trailingLine2Text: String = "",
-    val trailingLine2Pinyin: String = ""
+    val trailingLine2Pinyin: String = "",
+    val hasSlotsOnLine2: Boolean = false
 )
 
 data class Lesson(
@@ -111,15 +112,15 @@ data class Lesson(
     val newWords: List<Word>,
     val exercises: List<Exercise> = emptyList(),
     val exercisesPart1: List<Exercise> = emptyList(),
-    val exercisesPart2: List<Exercise> = emptyList()
+    val exercisesPart2: List<Exercise> = emptyList(),
+    val exercisesPart3: List<Exercise> = emptyList()
 ) {
     fun getExercisesForPart(part: Int): List<Exercise> {
-        return if (part == 1 && exercisesPart1.isNotEmpty()) {
-            exercisesPart1
-        } else if (part == 2 && exercisesPart2.isNotEmpty()) {
-            exercisesPart2
-        } else {
-            exercises
+        return when (part) {
+            1 -> if (exercisesPart1.isNotEmpty()) exercisesPart1 else exercises
+            2 -> if (exercisesPart2.isNotEmpty()) exercisesPart2 else exercises
+            3 -> if (exercisesPart3.isNotEmpty()) exercisesPart3 else exercises
+            else -> exercises
         }
     }
 }

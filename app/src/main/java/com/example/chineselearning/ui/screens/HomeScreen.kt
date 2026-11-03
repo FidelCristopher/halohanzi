@@ -638,9 +638,10 @@ fun StageNodeRow(
                     // Modern 3D Pushable Circular Node
                     Box(
                         modifier = Modifier
-                            .size(76.dp)
-                            .bouncyClick(scaleDown = 0.88f, onClick = onClick),
-                        contentAlignment = Alignment.Center
+                            .size(width = 80.dp, height = 84.dp)
+                            .clip(RoundedCornerShape(40.dp))
+                            .bouncyClick(scaleDown = 0.90f, onClick = onClick),
+                        contentAlignment = Alignment.TopCenter
                     ) {
                         // 3D Bottom Base Rim (darker color behind)
                         Box(
@@ -728,9 +729,10 @@ fun StageNodeRow(
                     val chestRim = getNodeRimColor(Color(0xFFFFB300))
                     Box(
                         modifier = Modifier
-                            .size(76.dp)
-                            .bouncyClick(scaleDown = 0.88f, onClick = onClick),
-                        contentAlignment = Alignment.Center
+                            .size(width = 80.dp, height = 84.dp)
+                            .clip(RoundedCornerShape(22.dp))
+                            .bouncyClick(scaleDown = 0.90f, onClick = onClick),
+                        contentAlignment = Alignment.TopCenter
                     ) {
                         // 3D Bottom Base Rim
                         Box(
