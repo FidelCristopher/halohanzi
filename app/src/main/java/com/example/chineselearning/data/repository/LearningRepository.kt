@@ -576,9 +576,26 @@ object LearningRepository {
                                 PictureOption("p2_q1_guru", "guru", "👩‍🏫", isCorrect = false)
                             )
                         ),
-                        // 2. Soal 2: Lengkapi Terjemahan Kata Adalah (我是印度尼西亚人。)
+                        // 2. Soal 2: Pilihan Gambar Kata Orang (人)
                         Exercise(
                             id = "u1_p2_q2",
+                            type = ExerciseType.PICTURE_CHOICE,
+                            title = "Pilih gambar yang benar",
+                            targetHanzi = "人",
+                            targetPinyin = "rén",
+                            targetTranslation = "orang",
+                            correctAnswer = "orang",
+                            audioToSpeak = "人",
+                            pictureOptions = listOf(
+                                PictureOption("p2_q2_guru", "guru", "👩‍🏫", isCorrect = false),
+                                PictureOption("p2_q2_saya", "saya", "🙋‍♂️", isCorrect = false),
+                                PictureOption("p2_q2_orang", "orang", "👥", isCorrect = true),
+                                PictureOption("p2_q2_murid", "murid", "🧑‍🎓", isCorrect = false)
+                            )
+                        ),
+                        // 3. Soal 3: Lengkapi Terjemahan Kata Adalah (我是印度尼西亚人。)
+                        Exercise(
+                            id = "u1_p2_q3",
                             type = ExerciseType.FILL_BLANK,
                             title = "Lengkapi terjemahan",
                             targetHanzi = "我 是 印度尼西亚 人 。",
@@ -589,9 +606,9 @@ object LearningRepository {
                             correctAnswer = "adalah",
                             audioToSpeak = "我是印度尼西亚人。"
                         ),
-                        // 3. Soal 3: Pilihan Gambar Singkatan Indonesia (印尼)
+                        // 4. Soal 4: Pilihan Gambar Singkatan Indonesia (印尼)
                         Exercise(
-                            id = "u1_p2_q3",
+                            id = "u1_p2_q4",
                             type = ExerciseType.PICTURE_CHOICE,
                             title = "Pilih gambar yang benar",
                             targetHanzi = "印尼",
@@ -600,15 +617,15 @@ object LearningRepository {
                             correctAnswer = "(negara)\nIndonesia",
                             audioToSpeak = "印尼",
                             pictureOptions = listOf(
-                                PictureOption("p2_q3_saya", "saya", "🙋‍♂️", isCorrect = false),
-                                PictureOption("p2_q3_murid", "murid", "🧑‍🎓", isCorrect = false),
-                                PictureOption("p2_q3_guru", "guru", "👩‍🏫", isCorrect = false),
-                                PictureOption("p2_q3_indo", "(negara)\nIndonesia", "🇮🇩", isCorrect = true)
+                                PictureOption("p2_q4_saya", "saya", "🙋‍♂️", isCorrect = false),
+                                PictureOption("p2_q4_murid", "murid", "🧑‍🎓", isCorrect = false),
+                                PictureOption("p2_q4_guru", "guru", "👩‍🏫", isCorrect = false),
+                                PictureOption("p2_q4_indo", "(negara)\nIndonesia", "🇮🇩", isCorrect = true)
                             )
                         ),
-                        // 4. Soal 4: Pilihan Gambar Guru (老师)
+                        // 5. Soal 5: Pilihan Gambar Guru (老师)
                         Exercise(
-                            id = "u1_p2_q4",
+                            id = "u1_p2_q5",
                             type = ExerciseType.PICTURE_CHOICE,
                             title = "Pilih gambar yang benar",
                             targetHanzi = "老师",
@@ -617,15 +634,15 @@ object LearningRepository {
                             correctAnswer = "guru",
                             audioToSpeak = "老师",
                             pictureOptions = listOf(
-                                PictureOption("p2_q4_guru", "guru", "👩‍🏫", isCorrect = true),
-                                PictureOption("p2_q4_murid", "murid", "🧑‍🎓", isCorrect = false),
-                                PictureOption("p2_q4_indo", "(negara)\nIndonesia", "🇮🇩", isCorrect = false),
-                                PictureOption("p2_q4_orang", "orang", "👥", isCorrect = false)
+                                PictureOption("p2_q5_guru", "guru", "👩‍🏫", isCorrect = true),
+                                PictureOption("p2_q5_murid", "murid", "🧑‍🎓", isCorrect = false),
+                                PictureOption("p2_q5_indo", "(negara)\nIndonesia", "🇮🇩", isCorrect = false),
+                                PictureOption("p2_q5_orang", "orang", "👥", isCorrect = false)
                             )
                         ),
-                        // 5. Soal 5: Pilihan Terjemahan Kalimat Panjang (老师，你好，我是印尼人。)
+                        // 6. Soal 6: Pilihan Terjemahan Kalimat Panjang (老师，你好，我是印尼人。)
                         Exercise(
-                            id = "u1_p2_q5",
+                            id = "u1_p2_q6",
                             type = ExerciseType.SENTENCE_CHOICE,
                             title = "Pilih terjemahan yang benar",
                             targetHanzi = "老师 ， 你好 ， 我 是\n印尼 人 。",
@@ -640,9 +657,9 @@ object LearningRepository {
                             correctAnswer = "Halo (Bapak atau Ibu) Guru, saya adalah orang Indonesia.",
                             audioToSpeak = "老师，你好，我是印尼人。"
                         ),
-                        // 6. Soal 6: Pilihan Gambar Murid (学生 - 1x2 Row)
+                        // 7. Soal 7: Pilihan Gambar Murid (学生 - 1x2 Row)
                         Exercise(
-                            id = "u1_p2_q6",
+                            id = "u1_p2_q7",
                             type = ExerciseType.PICTURE_CHOICE,
                             title = "Pilih gambar yang benar",
                             targetHanzi = "学生",
@@ -651,13 +668,13 @@ object LearningRepository {
                             correctAnswer = "murid",
                             audioToSpeak = "学生",
                             pictureOptions = listOf(
-                                PictureOption("p2_q6_murid", "murid", "🧑‍🎓", isCorrect = true),
-                                PictureOption("p2_q6_orang", "orang", "👥", isCorrect = false)
+                                PictureOption("p2_q7_murid", "murid", "🧑‍🎓", isCorrect = true),
+                                PictureOption("p2_q7_orang", "orang", "👥", isCorrect = false)
                             )
                         ),
-                        // 7. Soal 7: Susun Kalimat Audio Imersif (布迪是印尼人。)
+                        // 8. Soal 8: Susun Kalimat Audio Imersif (布迪是印尼人。)
                         Exercise(
-                            id = "u1_p2_q7",
+                            id = "u1_p2_q8",
                             type = ExerciseType.SENTENCE_BUILDER,
                             title = "Apa yang Anda dengar?",
                             targetHanzi = "布迪是印尼人。",
@@ -671,9 +688,9 @@ object LearningRepository {
                             audioToSpeak = "布迪是印尼人。",
                             isImmersiveSpeaker = true
                         ),
-                        // 8. Soal 8: Pilihan Terjemahan Kalimat (Budi adalah seorang murid.)
+                        // 9. Soal 9: Pilihan Terjemahan Kalimat (Budi adalah seorang murid.)
                         Exercise(
-                            id = "u1_p2_q8",
+                            id = "u1_p2_q9",
                             type = ExerciseType.SENTENCE_CHOICE,
                             title = "Pilih terjemahan yang benar",
                             targetHanzi = "",
@@ -688,9 +705,9 @@ object LearningRepository {
                             correctAnswer = "Bùdí  shì  xuéshēng\n布迪 是  学生 。",
                             audioToSpeak = "布迪是学生。"
                         ),
-                        // 9. Soal 9: Ketuk Pasangan yang Sesuai (5 Pasang Kartu)
+                        // 10. Soal 10: Ketuk Pasangan yang Sesuai (5 Pasang Kartu)
                         Exercise(
-                            id = "u1_p2_q9",
+                            id = "u1_p2_q10",
                             type = ExerciseType.MATCH_PAIRS,
                             title = "Ketuk pasangan yang sesuai",
                             correctAnswer = "ALL_MATCHED",
@@ -702,9 +719,9 @@ object LearningRepository {
                                 MatchPairItem("m5", "是", "shì", "adalah")
                             )
                         ),
-                        // 10. Soal 10: Lengkapi Terjemahan Dua Slot (Wang Fei adalah seorang guru.)
+                        // 11. Soal 11: Lengkapi Terjemahan Dua Slot (Wang Fei adalah seorang guru.)
                         Exercise(
-                            id = "u1_p2_q10",
+                            id = "u1_p2_q11",
                             type = ExerciseType.SENTENCE_BUILDER,
                             title = "Lengkapi terjemahan",
                             targetTranslation = "Wang Fei adalah seorang guru.",
