@@ -745,20 +745,117 @@ object LearningRepository {
                         Word("w1", "你好", "nǐ hǎo", "Halo", "Sapaan", "你好！", "Nǐ hǎo!", "Halo!"),
                         Word("w4", "老师", "lǎoshī", "Guru", "Kata benda", "老师好！", "Lǎoshī hǎo!", "Halo Guru!")
                     ),
-                    exercises = listOf(
+                    exercisesPart1 = listOf(
+                        // 1. Soal 1: Susun Audio Imersif (你好。)
                         Exercise(
                             id = "u1_l2_q1",
-                            type = ExerciseType.PICTURE_CHOICE,
-                            title = "Pilih gambar yang benar",
-                            targetHanzi = "你好",
-                            targetPinyin = "nǐhǎo",
-                            targetTranslation = "halo",
-                            correctAnswer = "halo",
-                            audioToSpeak = "你好",
-                            pictureOptions = listOf(
-                                PictureOption("l2_pic_halo", "halo", "👋", isCorrect = true),
-                                PictureOption("l2_pic_saya", "saya", "🙋‍♂️", isCorrect = false)
+                            type = ExerciseType.SENTENCE_BUILDER,
+                            title = "Apa yang Anda dengar?",
+                            targetHanzi = "你好。",
+                            targetPinyin = "Nǐhǎo.",
+                            targetTranslation = "Halo.",
+                            wordChips = listOf("你好:nǐhǎo", "布迪:Bùdí", "王飞:WángFēi", "我:wǒ", "叫:jiào"),
+                            correctAnswer = "你好",
+                            audioToSpeak = "你好。",
+                            isImmersiveSpeaker = true
+                        ),
+                        // 2. Soal 2: Lengkapi Terjemahan Dua Slot dengan Koma (Halo, nama saya Budi.)
+                        Exercise(
+                            id = "u1_l2_q2",
+                            type = ExerciseType.SENTENCE_BUILDER,
+                            title = "Lengkapi terjemahan",
+                            targetTranslation = "Halo, nama saya Budi.",
+                            targetHanzi = "你好，我叫布迪。",
+                            targetPinyin = "Nǐhǎo, wǒ jiào Bùdí.",
+                            staticTrailingText = "叫 布迪 。",
+                            staticTrailingPinyin = "jiào  Bùdí",
+                            hasCommaAfterSlot1 = true,
+                            wordChips = listOf("我:wǒ", "印度尼西亚:Yìndùníxīyà", "印尼:Yìnní", "老师:lǎoshī", "你好:nǐhǎo", "你:nǐ"),
+                            correctAnswer = "你好,我",
+                            audioToSpeak = "你好，我叫布迪。"
+                        ),
+                        // 3. Soal 3: Dengarkan Kalimat dan Pilih Terjemahan yang Benar (我叫王飞。)
+                        Exercise(
+                            id = "u1_l2_q3",
+                            type = ExerciseType.SENTENCE_CHOICE,
+                            title = "Dengarkan kalimat dan pilih terjemahan yang benar",
+                            options = listOf(
+                                "Nama saya Budi.",
+                                "Halo, Wang Fei.",
+                                "Nama saya Wang Fei.",
+                                "Halo, nama saya Budi."
+                            ),
+                            correctAnswer = "Nama saya Wang Fei.",
+                            audioToSpeak = "我叫王飞。"
+                        ),
+                        // 4. Soal 4: Lengkapi Terjemahan Tiga Slot Multiline (Halo Wang Fei, nama saya Budi.)
+                        Exercise(
+                            id = "u1_l2_q4",
+                            type = ExerciseType.SENTENCE_BUILDER,
+                            title = "Lengkapi terjemahan",
+                            targetTranslation = "Halo Wang Fei, nama saya Budi.",
+                            targetHanzi = "王飞，你好，我叫布迪。",
+                            targetPinyin = "WángFēi, nǐhǎo, wǒ jiào Bùdí.",
+                            staticLeadingText = "王飞 ，",
+                            staticLeadingPinyin = "WángFēi",
+                            hasCommaAfterSlot1 = true,
+                            hasTrailingLine2 = true,
+                            trailingLine2Text = "布迪 。",
+                            trailingLine2Pinyin = "Bùdí",
+                            wordChips = listOf("印度尼西亚:Yìndùníxīyà", "老师:lǎoshī", "印尼:Yìnní", "你:nǐ", "我:wǒ", "叫:jiào", "你好:nǐhǎo"),
+                            correctAnswer = "你好,我,叫",
+                            audioToSpeak = "王飞，你好，我叫布迪。"
+                        ),
+                        // 5. Soal 5: Percakapan / Respon Dialog (你好，我叫王飞。)
+                        Exercise(
+                            id = "u1_l2_q5",
+                            type = ExerciseType.SENTENCE_CHOICE,
+                            title = "Pilih kalimat yang tepat untuk menyelesaikan percakapan",
+                            dialogueSpeakerText = "你好，我叫王飞。",
+                            dialogueSpeakerPinyin = "Nǐhǎo, wǒ jiào WángFēi",
+                            dialogueSpeakerTranslation = "Halo, nama saya Wang Fei.",
+                            options = listOf(
+                                "Nǐhǎo        wǒ jiào  Bùdí\n你好，我叫布迪。",
+                                "Nǐhǎo        Bùdí\n你好，布迪。",
+                                "Wǒ jiào    WángFēi\n我叫王飞。"
+                            ),
+                            correctAnswer = "Nǐhǎo        wǒ jiào  Bùdí\n你好，我叫布迪。",
+                            audioToSpeak = "你好，我叫王飞。"
+                        ),
+                        // 6. Soal 6: Tata Bahasa Susunan Kata (我叫布迪。)
+                        Exercise(
+                            id = "u1_l2_q6",
+                            type = ExerciseType.SENTENCE_CHOICE,
+                            title = "Pilih kalimat yang benar secara tata bahasa",
+                            options = listOf(
+                                "Wǒ jiào  Bùdí\n我 叫 布迪 。",
+                                "Wǒ  Bùdí  jiào\n我 布迪 叫 。"
+                            ),
+                            correctAnswer = "Wǒ jiào  Bùdí\n我 叫 布迪 。"
+                        ),
+                        // 7. Soal 7: Pasangan Kartu dengan Audio Slot (你好, 叫, Audio [我])
+                        Exercise(
+                            id = "u1_l2_q7",
+                            type = ExerciseType.MATCH_PAIRS,
+                            title = "Ketuk pasangan yang sesuai",
+                            correctAnswer = "ALL_MATCHED",
+                            matchPairs = listOf(
+                                MatchPairItem("l2_m1", "你好", "nǐhǎo", "halo"),
+                                MatchPairItem("l2_m2", "叫", "jiào", "dipanggil"),
+                                MatchPairItem("l2_m3", "", "", "saya", isAudioOnly = true, audioToSpeak = "我")
                             )
+                        ),
+                        // 8. Soal 8: Terjemahkan Kalimat Ini (Halo, nama saya Wang Fei.)
+                        Exercise(
+                            id = "u1_l2_q8",
+                            type = ExerciseType.SENTENCE_BUILDER,
+                            title = "Terjemahkan kalimat ini",
+                            targetTranslation = "Halo, nama saya Wang Fei.",
+                            targetHanzi = "你好，我叫王飞。",
+                            targetPinyin = "Nǐhǎo, wǒ jiào WángFēi.",
+                            wordChips = listOf("叫:jiào", "王飞:WángFēi", "布迪:Bùdí", "你好:nǐhǎo", "我:wǒ"),
+                            correctAnswer = "你好,我,叫,王飞",
+                            audioToSpeak = "你好，我叫王飞。"
                         )
                     )
                 )

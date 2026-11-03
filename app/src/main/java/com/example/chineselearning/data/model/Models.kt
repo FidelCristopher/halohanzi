@@ -69,7 +69,9 @@ data class MatchPairItem(
     val id: String,
     val hanzi: String,
     val pinyin: String,
-    val translation: String
+    val translation: String,
+    val isAudioOnly: Boolean = false,
+    val audioToSpeak: String = ""
 )
 
 data class Exercise(
@@ -91,7 +93,13 @@ data class Exercise(
     val staticTrailingText: String = "",
     val staticTrailingPinyin: String = "",
     val hasCommaAfterSlot1: Boolean = false,
-    val isImmersiveSpeaker: Boolean = false
+    val isImmersiveSpeaker: Boolean = false,
+    val dialogueSpeakerText: String = "",
+    val dialogueSpeakerPinyin: String = "",
+    val dialogueSpeakerTranslation: String = "",
+    val hasTrailingLine2: Boolean = false,
+    val trailingLine2Text: String = "",
+    val trailingLine2Pinyin: String = ""
 )
 
 data class Lesson(
