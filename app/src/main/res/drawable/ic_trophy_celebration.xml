@@ -1,0 +1,32 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="72dp"
+    android:height="72dp"
+    android:viewportWidth="72"
+    android:viewportHeight="72">
+    <!-- Trophy Cup Body -->
+    <path
+        android:fillColor="#FFA000"
+        android:pathData="M20,12 L52,12 L52,32 C52,40.8 44.8,48 36,48 C27.2,48 20,40.8 20,32 Z" />
+    <path
+        android:fillColor="#FFC107"
+        android:pathData="M23,15 L49,15 L49,32 C49,39.2 43.2,45 36,45 C28.8,45 23,39.2 23,32 Z" />
+    <!-- Left Handle -->
+    <path
+        android:fillColor="#FFA000"
+        android:pathData="M20,16 L14,16 C11.8,16 10,17.8 10,20 L10,26 C10,30.4 13.6,34 18,34 L20,34 L20,30 L18,30 C15.8,30 14,28.2 14,26 L14,20 L20,20 Z" />
+    <!-- Right Handle -->
+    <path
+        android:fillColor="#FFA000"
+        android:pathData="M52,16 L58,16 C60.2,16 62,17.8 62,20 L62,26 C62,30.4 58.4,34 54,34 L52,34 L52,30 L54,30 C56.2,30 58,28.2 58,26 L58,20 L52,20 Z" />
+    <!-- Stem & Base -->
+    <path
+        android:fillColor="#FF8F00"
+        android:pathData="M33,48 L39,48 L39,56 L33,56 Z" />
+    <path
+        android:fillColor="#FFA000"
+        android:pathData="M24,56 L48,56 L48,62 L24,62 Z" />
+    <!-- Star on trophy -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M36,22 L38.2,26.5 L43,27.2 L39.5,30.6 L40.3,35.5 L36,33.2 L31.7,35.5 L32.5,30.6 L29,27.2 L33.8,26.5 Z" />
+</vector>

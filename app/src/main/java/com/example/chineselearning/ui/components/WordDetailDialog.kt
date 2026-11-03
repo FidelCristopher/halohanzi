@@ -215,10 +215,18 @@ fun WordDetailDialog(
                             containerColor = if (isSaved) WarmAmber else JadeGreen
                         )
                     ) {
-                        Text(
-                            text = if (isSaved) "Saved ★" else "+ Save Word",
-                            fontWeight = FontWeight.Bold
-                        )
+                        Row(verticalAlignment = Alignment.CenterVertically) {
+                            Icon(
+                                imageVector = if (isSaved) Icons.Default.Bookmark else Icons.Default.BookmarkBorder,
+                                contentDescription = null,
+                                modifier = Modifier.size(18.dp)
+                            )
+                            Spacer(modifier = Modifier.width(6.dp))
+                            Text(
+                                text = if (isSaved) "Tersimpan" else "Simpan Kata",
+                                fontWeight = FontWeight.Bold
+                            )
+                        }
                     }
                 }
             }

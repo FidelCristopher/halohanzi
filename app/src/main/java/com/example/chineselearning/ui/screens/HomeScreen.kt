@@ -23,6 +23,8 @@ import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.graphics.StrokeJoin
 import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.platform.LocalDensity
+import androidx.compose.ui.res.painterResource
+import com.example.chineselearning.R
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.IntOffset
@@ -100,8 +102,15 @@ fun HomeScreen(
                             modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp),
                             verticalAlignment = Alignment.CenterVertically
                         ) {
+                            Icon(
+                                imageVector = Icons.Default.Shield,
+                                contentDescription = null,
+                                tint = Color(0xFF512DA8),
+                                modifier = Modifier.size(16.dp)
+                            )
+                            Spacer(modifier = Modifier.width(4.dp))
                             Text(
-                                text = "🛡️ HSK $selectedHskLevel",
+                                text = "HSK $selectedHskLevel",
                                 fontSize = 12.sp,
                                 fontWeight = FontWeight.Bold,
                                 color = Color(0xFF512DA8)
@@ -131,11 +140,17 @@ fun HomeScreen(
                             DropdownMenuItem(
                                 text = {
                                     Row(verticalAlignment = Alignment.CenterVertically) {
-                                        Text(
-                                            text = if (level == selectedHskLevel) "✓ " else "   ",
-                                            fontWeight = FontWeight.Bold,
-                                            color = Color(0xFF00C48C)
-                                        )
+                                        if (level == selectedHskLevel) {
+                                            Icon(
+                                                imageVector = Icons.Default.Check,
+                                                contentDescription = null,
+                                                tint = Color(0xFF00C48C),
+                                                modifier = Modifier.size(16.dp)
+                                            )
+                                            Spacer(modifier = Modifier.width(6.dp))
+                                        } else {
+                                            Spacer(modifier = Modifier.width(22.dp))
+                                        }
                                         Column {
                                             Text(
                                                 text = "Level HSK $level",
@@ -160,13 +175,23 @@ fun HomeScreen(
                     }
                 }
 
-                // Center: Rainbow Crown
-                Text(text = "👑", fontSize = 24.sp)
+                // Center: Crown Vector
+                Icon(
+                    painter = painterResource(R.drawable.ic_crown),
+                    contentDescription = "Crown",
+                    tint = Color.Unspecified,
+                    modifier = Modifier.size(24.dp)
+                )
 
                 // Right: Streak Flame & Gold Coin
                 Row(verticalAlignment = Alignment.CenterVertically) {
                     Row(verticalAlignment = Alignment.CenterVertically) {
-                        Text(text = "🔥", fontSize = 16.sp)
+                        Icon(
+                            painter = painterResource(R.drawable.ic_fire),
+                            contentDescription = "Streak",
+                            tint = Color.Unspecified,
+                            modifier = Modifier.size(18.dp)
+                        )
                         Spacer(modifier = Modifier.width(3.dp))
                         Text(text = "0", fontSize = 14.sp, fontWeight = FontWeight.Bold, color = SlateGray)
                     }
@@ -182,7 +207,12 @@ fun HomeScreen(
                             modifier = Modifier.padding(horizontal = 8.dp, vertical = 3.dp),
                             verticalAlignment = Alignment.CenterVertically
                         ) {
-                            Text(text = "🪙", fontSize = 14.sp)
+                            Icon(
+                                painter = painterResource(R.drawable.ic_coin),
+                                contentDescription = "Coin",
+                                tint = Color.Unspecified,
+                                modifier = Modifier.size(16.dp)
+                            )
                             Spacer(modifier = Modifier.width(4.dp))
                             Text(text = "171", fontSize = 13.sp, fontWeight = FontWeight.Bold, color = Color(0xFFE65100))
                         }
@@ -200,7 +230,12 @@ fun HomeScreen(
                         .padding(40.dp),
                     horizontalAlignment = Alignment.CenterHorizontally
                 ) {
-                    Text(text = "🚀", fontSize = 54.sp)
+                    Icon(
+                        painter = painterResource(R.drawable.ic_rocket),
+                        contentDescription = "Coming Soon",
+                        tint = Color.Unspecified,
+                        modifier = Modifier.size(64.dp)
+                    )
                     Spacer(modifier = Modifier.height(14.dp))
                     Text(
                         text = "Materi HSK $selectedHskLevel Segera Hadir!",
@@ -245,7 +280,12 @@ fun HomeScreen(
                                 verticalAlignment = Alignment.Bottom
                             ) {
                                 Row(verticalAlignment = Alignment.Bottom) {
-                                    Text(text = "👴", fontSize = 54.sp)
+                                    Icon(
+                                        painter = painterResource(R.drawable.ic_avatar_teacher),
+                                        contentDescription = "Teacher",
+                                        tint = Color.Unspecified,
+                                        modifier = Modifier.size(54.dp)
+                                    )
                                     Surface(
                                         shape = RoundedCornerShape(topStart = 12.dp, topEnd = 12.dp, bottomEnd = 12.dp),
                                         color = Color(0xFFE91E63),
@@ -253,9 +293,10 @@ fun HomeScreen(
                                     ) {
                                         Text(
                                             text = "你好！",
+                                            fontFamily = com.example.chineselearning.ui.theme.KaiTiFontFamily,
                                             color = Color.White,
                                             fontWeight = FontWeight.Bold,
-                                            fontSize = 12.sp,
+                                            fontSize = 13.sp,
                                             modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp)
                                         )
                                     }
@@ -270,7 +311,12 @@ fun HomeScreen(
                                         modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp),
                                         verticalAlignment = Alignment.CenterVertically
                                     ) {
-                                        Text(text = "💰", fontSize = 14.sp)
+                                        Icon(
+                                            painter = painterResource(R.drawable.ic_pouch),
+                                            contentDescription = "Pouch",
+                                            tint = Color.Unspecified,
+                                            modifier = Modifier.size(16.dp)
+                                        )
                                         Spacer(modifier = Modifier.width(4.dp))
                                         Text(text = "1 / 3", fontSize = 11.sp, fontWeight = FontWeight.Bold, color = Color(0xFFC62828))
                                     }
@@ -311,9 +357,23 @@ fun HomeScreen(
                                 }
 
                                 Row(verticalAlignment = Alignment.CenterVertically) {
-                                    Text(text = chapterUnit.emoji, fontSize = 22.sp)
-                                    Spacer(modifier = Modifier.width(4.dp))
-                                    Text(text = "⭐", fontSize = 18.sp)
+                                    if (unitIdx == 0) {
+                                        Icon(
+                                            painter = painterResource(R.drawable.ic_hand_wave),
+                                            contentDescription = null,
+                                            tint = Color.Unspecified,
+                                            modifier = Modifier.size(24.dp)
+                                        )
+                                    } else {
+                                        Text(text = chapterUnit.emoji, fontSize = 22.sp)
+                                    }
+                                    Spacer(modifier = Modifier.width(6.dp))
+                                    Icon(
+                                        imageVector = Icons.Default.Star,
+                                        contentDescription = null,
+                                        tint = Color(0xFFFFB300),
+                                        modifier = Modifier.size(20.dp)
+                                    )
                                 }
                             }
                         }
@@ -467,21 +527,47 @@ fun StageNodeRow(
                                 .background(Color.White.copy(alpha = 0.45f))
                         )
 
-                        if (node.iconType == NodeIconType.DUMBBELL) {
-                            com.example.chineselearning.ui.components.DumbbellShapeIcon(
-                                tint = Color.White,
-                                modifier = Modifier.size(34.dp)
-                            )
-                        } else {
-                            Text(
-                                text = when (node.iconType) {
-                                    NodeIconType.CAP -> "🎓"
-                                    NodeIconType.SHUFFLE -> "🔀"
-                                    NodeIconType.BOOK -> "📖"
-                                    else -> "⭐"
-                                },
-                                fontSize = 32.sp
-                            )
+                        when (node.iconType) {
+                            NodeIconType.CAP -> {
+                                Icon(
+                                    painter = painterResource(R.drawable.ic_cap),
+                                    contentDescription = "Belajar",
+                                    tint = Color.White,
+                                    modifier = Modifier.size(36.dp)
+                                )
+                            }
+                            NodeIconType.DUMBBELL -> {
+                                Icon(
+                                    painter = painterResource(R.drawable.ic_dumbbell),
+                                    contentDescription = "Latihan",
+                                    tint = Color.White,
+                                    modifier = Modifier.size(34.dp)
+                                )
+                            }
+                            NodeIconType.SHUFFLE -> {
+                                Icon(
+                                    painter = painterResource(R.drawable.ic_shuffle),
+                                    contentDescription = "Review",
+                                    tint = Color.White,
+                                    modifier = Modifier.size(34.dp)
+                                )
+                            }
+                            NodeIconType.BOOK -> {
+                                Icon(
+                                    painter = painterResource(R.drawable.ic_book),
+                                    contentDescription = "Kuis",
+                                    tint = Color.White,
+                                    modifier = Modifier.size(36.dp)
+                                )
+                            }
+                            else -> {
+                                Icon(
+                                    imageVector = Icons.Default.Star,
+                                    contentDescription = null,
+                                    tint = Color.White,
+                                    modifier = Modifier.size(34.dp)
+                                )
+                            }
                         }
                     }
                 }
@@ -497,7 +583,12 @@ fun StageNodeRow(
                             .bouncyClick(scaleDown = 0.90f, onClick = onClick)
                     ) {
                         Box(contentAlignment = Alignment.Center) {
-                            Text(text = "🤝", fontSize = 36.sp)
+                            Icon(
+                                painter = painterResource(R.drawable.ic_handshake),
+                                contentDescription = "Checkpoint",
+                                tint = Color.White,
+                                modifier = Modifier.size(40.dp)
+                            )
                         }
                     }
                 }
@@ -516,7 +607,12 @@ fun StageNodeRow(
                                 .bouncyClick(scaleDown = 0.90f, onClick = onClick)
                         ) {
                             Box(contentAlignment = Alignment.Center) {
-                                Text(text = "⛽", fontSize = 38.sp)
+                                Icon(
+                                    painter = painterResource(R.drawable.ic_gas_station),
+                                    contentDescription = "Rest Area",
+                                    tint = Color(0xFF03A9F4),
+                                    modifier = Modifier.size(38.dp)
+                                )
                             }
                         }
                     }

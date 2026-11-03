@@ -79,32 +79,30 @@ fun GoldenStagePopup(
                     .background(goldGradient)
                     .padding(horizontal = 18.dp, vertical = 18.dp)
             ) {
-                // Category Header (🎓 Belajar or Dumbbell Latihan)
+                // Category Header (Vector Drawable Icon + Text)
                 Row(verticalAlignment = Alignment.CenterVertically) {
-                    if (node.iconType == NodeIconType.DUMBBELL) {
-                        DumbbellShapeIcon(tint = Color(0xFF212121), modifier = Modifier.size(17.dp))
-                        Spacer(modifier = Modifier.width(6.dp))
-                        Text(
-                            text = "Latihan",
-                            fontSize = 15.sp,
-                            fontWeight = FontWeight.SemiBold,
-                            color = Color(0xFF212121)
-                        )
-                    } else {
-                        Text(
-                            text = when (node.iconType) {
-                                NodeIconType.CAP -> "🎓 Belajar"
-                                NodeIconType.SHUFFLE -> "🔀 Review Campuran"
-                                NodeIconType.BOOK -> "📖 Kuis Cerita"
-                                NodeIconType.CHEST -> "🤝 Checkpoint Bab"
-                                NodeIconType.REST_AREA -> "⛽ Rest Area"
-                                else -> "Latihan"
-                            },
-                            fontSize = 15.sp,
-                            fontWeight = FontWeight.SemiBold,
-                            color = Color(0xFF212121)
-                        )
+                    val (iconRes, categoryTitle) = when (node.iconType) {
+                        NodeIconType.CAP -> Pair(com.example.chineselearning.R.drawable.ic_cap, "Belajar")
+                        NodeIconType.DUMBBELL -> Pair(com.example.chineselearning.R.drawable.ic_dumbbell, "Latihan")
+                        NodeIconType.SHUFFLE -> Pair(com.example.chineselearning.R.drawable.ic_shuffle, "Review Campuran")
+                        NodeIconType.BOOK -> Pair(com.example.chineselearning.R.drawable.ic_book, "Kuis Cerita")
+                        NodeIconType.CHEST -> Pair(com.example.chineselearning.R.drawable.ic_handshake, "Checkpoint Bab")
+                        NodeIconType.REST_AREA -> Pair(com.example.chineselearning.R.drawable.ic_gas_station, "Rest Area")
                     }
+
+                    Icon(
+                        painter = androidx.compose.ui.res.painterResource(iconRes),
+                        contentDescription = categoryTitle,
+                        tint = Color(0xFF212121),
+                        modifier = Modifier.size(18.dp)
+                    )
+                    Spacer(modifier = Modifier.width(6.dp))
+                    Text(
+                        text = categoryTitle,
+                        fontSize = 15.sp,
+                        fontWeight = FontWeight.SemiBold,
+                        color = Color(0xFF212121)
+                    )
                 }
 
                 Spacer(modifier = Modifier.height(6.dp))

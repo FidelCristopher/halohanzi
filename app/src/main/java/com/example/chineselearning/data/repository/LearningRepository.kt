@@ -433,10 +433,10 @@ object LearningRepository {
                             correctAnswer = "halo",
                             audioToSpeak = "你好",
                             pictureOptions = listOf(
-                                PictureOption("pic_saya", "saya", "🙋‍♂️", isCorrect = false),
-                                PictureOption("pic_indo", "(negara)\nIndonesia", "🇮🇩", isCorrect = false),
-                                PictureOption("pic_halo", "halo", "👋", isCorrect = true),
-                                PictureOption("pic_guru", "guru", "👩‍🏫", isCorrect = false)
+                                PictureOption("pic_saya", "saya", "🙋‍♂️", iconRes = com.example.chineselearning.R.drawable.ic_person_saya, isCorrect = false),
+                                PictureOption("pic_indo", "(negara)\nIndonesia", "🇮🇩", iconRes = com.example.chineselearning.R.drawable.ic_flag_indonesia, isCorrect = false),
+                                PictureOption("pic_halo", "halo", "👋", iconRes = com.example.chineselearning.R.drawable.ic_hand_wave, isCorrect = true),
+                                PictureOption("pic_guru", "guru", "👩‍🏫", iconRes = com.example.chineselearning.R.drawable.ic_person_guru, isCorrect = false)
                             )
                         ),
                         // 2. Soal 2: Pilihan Gambar Kata Ganti (我)
@@ -450,8 +450,8 @@ object LearningRepository {
                             correctAnswer = "saya",
                             audioToSpeak = "我",
                             pictureOptions = listOf(
-                                PictureOption("pic2_halo", "halo", "👋", isCorrect = false),
-                                PictureOption("pic2_saya", "saya", "🙋‍♂️", isCorrect = true)
+                                PictureOption("pic2_halo", "halo", "👋", iconRes = com.example.chineselearning.R.drawable.ic_hand_wave, isCorrect = false),
+                                PictureOption("pic2_saya", "saya", "🙋‍♂️", iconRes = com.example.chineselearning.R.drawable.ic_person_saya, isCorrect = true)
                             )
                         ),
                         // 3. Soal 3: Pilihan Terjemahan Kalimat (你好，我叫布迪。)
@@ -570,10 +570,10 @@ object LearningRepository {
                             correctAnswer = "(negara)\nIndonesia",
                             audioToSpeak = "印度尼西亚",
                             pictureOptions = listOf(
-                                PictureOption("p2_q1_indo", "(negara)\nIndonesia", "🇮🇩", isCorrect = true),
-                                PictureOption("p2_q1_murid", "murid", "🧑‍🎓", isCorrect = false),
-                                PictureOption("p2_q1_saya", "saya", "🙋‍♂️", isCorrect = false),
-                                PictureOption("p2_q1_guru", "guru", "👩‍🏫", isCorrect = false)
+                                PictureOption("p2_q1_indo", "(negara)\nIndonesia", "🇮🇩", iconRes = com.example.chineselearning.R.drawable.ic_flag_indonesia, isCorrect = true),
+                                PictureOption("p2_q1_murid", "murid", "🧑‍🎓", iconRes = com.example.chineselearning.R.drawable.ic_person_murid, isCorrect = false),
+                                PictureOption("p2_q1_saya", "saya", "🙋‍♂️", iconRes = com.example.chineselearning.R.drawable.ic_person_saya, isCorrect = false),
+                                PictureOption("p2_q1_guru", "guru", "👩‍🏫", iconRes = com.example.chineselearning.R.drawable.ic_person_guru, isCorrect = false)
                             )
                         ),
                         // 2. Soal 2: Pilihan Gambar Kata Orang (人)
@@ -587,10 +587,10 @@ object LearningRepository {
                             correctAnswer = "orang",
                             audioToSpeak = "人",
                             pictureOptions = listOf(
-                                PictureOption("p2_q2_guru", "guru", "👩‍🏫", isCorrect = false),
-                                PictureOption("p2_q2_saya", "saya", "🙋‍♂️", isCorrect = false),
-                                PictureOption("p2_q2_orang", "orang", "👥", isCorrect = true),
-                                PictureOption("p2_q2_murid", "murid", "🧑‍🎓", isCorrect = false)
+                                PictureOption("p2_q2_guru", "guru", "👩‍🏫", iconRes = com.example.chineselearning.R.drawable.ic_person_guru, isCorrect = false),
+                                PictureOption("p2_q2_saya", "saya", "🙋‍♂️", iconRes = com.example.chineselearning.R.drawable.ic_person_saya, isCorrect = false),
+                                PictureOption("p2_q2_orang", "orang", "👥", iconRes = com.example.chineselearning.R.drawable.ic_people_group, isCorrect = true),
+                                PictureOption("p2_q2_murid", "murid", "🧑‍🎓", iconRes = com.example.chineselearning.R.drawable.ic_person_murid, isCorrect = false)
                             )
                         ),
                         // 3. Soal 3: Lengkapi Terjemahan Kata Adalah (我是印度尼西亚人。)
@@ -617,10 +617,10 @@ object LearningRepository {
                             correctAnswer = "(negara)\nIndonesia",
                             audioToSpeak = "印尼",
                             pictureOptions = listOf(
-                                PictureOption("p2_q4_saya", "saya", "🙋‍♂️", isCorrect = false),
-                                PictureOption("p2_q4_murid", "murid", "🧑‍🎓", isCorrect = false),
-                                PictureOption("p2_q4_guru", "guru", "👩‍🏫", isCorrect = false),
-                                PictureOption("p2_q4_indo", "(negara)\nIndonesia", "🇮🇩", isCorrect = true)
+                                PictureOption("p2_q4_saya", "saya", "🙋‍♂️", iconRes = com.example.chineselearning.R.drawable.ic_person_saya, isCorrect = false),
+                                PictureOption("p2_q4_murid", "murid", "🧑‍🎓", iconRes = com.example.chineselearning.R.drawable.ic_person_murid, isCorrect = false),
+                                PictureOption("p2_q4_guru", "guru", "👩‍🏫", iconRes = com.example.chineselearning.R.drawable.ic_person_guru, isCorrect = false),
+                                PictureOption("p2_q4_indo", "(negara)\nIndonesia", "🇮🇩", iconRes = com.example.chineselearning.R.drawable.ic_flag_indonesia, isCorrect = true)
                             )
                         ),
                         // 5. Soal 5: Pilihan Gambar Guru (老师)
@@ -634,10 +634,10 @@ object LearningRepository {
                             correctAnswer = "guru",
                             audioToSpeak = "老师",
                             pictureOptions = listOf(
-                                PictureOption("p2_q5_guru", "guru", "👩‍🏫", isCorrect = true),
-                                PictureOption("p2_q5_murid", "murid", "🧑‍🎓", isCorrect = false),
-                                PictureOption("p2_q5_indo", "(negara)\nIndonesia", "🇮🇩", isCorrect = false),
-                                PictureOption("p2_q5_orang", "orang", "👥", isCorrect = false)
+                                PictureOption("p2_q5_guru", "guru", "👩‍🏫", iconRes = com.example.chineselearning.R.drawable.ic_person_guru, isCorrect = true),
+                                PictureOption("p2_q5_murid", "murid", "🧑‍🎓", iconRes = com.example.chineselearning.R.drawable.ic_person_murid, isCorrect = false),
+                                PictureOption("p2_q5_indo", "(negara)\nIndonesia", "🇮🇩", iconRes = com.example.chineselearning.R.drawable.ic_flag_indonesia, isCorrect = false),
+                                PictureOption("p2_q5_orang", "orang", "👥", iconRes = com.example.chineselearning.R.drawable.ic_people_group, isCorrect = false)
                             )
                         ),
                         // 6. Soal 6: Pilihan Terjemahan Kalimat Panjang (老师，你好，我是印尼人。)
@@ -668,8 +668,8 @@ object LearningRepository {
                             correctAnswer = "murid",
                             audioToSpeak = "学生",
                             pictureOptions = listOf(
-                                PictureOption("p2_q7_murid", "murid", "🧑‍🎓", isCorrect = true),
-                                PictureOption("p2_q7_orang", "orang", "👥", isCorrect = false)
+                                PictureOption("p2_q7_murid", "murid", "🧑‍🎓", iconRes = com.example.chineselearning.R.drawable.ic_person_murid, isCorrect = true),
+                                PictureOption("p2_q7_orang", "orang", "👥", iconRes = com.example.chineselearning.R.drawable.ic_people_group, isCorrect = false)
                             )
                         ),
                         // 8. Soal 8: Susun Kalimat Audio Imersif (布迪是印尼人。)

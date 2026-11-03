@@ -1,0 +1,27 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <!-- Crown Body -->
+    <path
+        android:fillColor="#FFA000"
+        android:pathData="M2,18 L4,9 L8.5,13 L12,4 L15.5,13 L20,9 L22,18 Z" />
+    <path
+        android:fillColor="#FFD54F"
+        android:pathData="M3.5,17 L4.8,10.2 L8.6,13.6 L12,6 L15.4,13.6 L19.2,10.2 L20.5,17 Z" />
+    <!-- Crown Base Band -->
+    <path
+        android:fillColor="#FF8F00"
+        android:pathData="M2,18 L22,18 L21.5,20.5 C21.5,21 21,21.5 20.5,21.5 L3.5,21.5 C3,21.5 2.5,21 2.5,20.5 Z" />
+    <!-- Jewels -->
+    <path
+        android:fillColor="#E91E63"
+        android:pathData="M12,18.5 C12.6,18.5 13,19 13,19.5 C13,20 12.6,20.5 12,20.5 C11.4,20.5 11,20 11,19.5 C11,19 11.4,18.5 12,18.5 Z" />
+    <path
+        android:fillColor="#00BCD4"
+        android:pathData="M7,18.5 C7.6,18.5 8,19 8,19.5 C8,20 7.6,20.5 7,20.5 C6.4,20.5 6,20 6,19.5 C6,19 6.4,18.5 7,18.5 Z" />
+    <path
+        android:fillColor="#00BCD4"
+        android:pathData="M17,18.5 C17.6,18.5 18,19 18,19.5 C18,20 17.6,20.5 17,20.5 C16.4,20.5 16,20 16,19.5 C16,19 16.4,18.5 17,18.5 Z" />
+</vector>

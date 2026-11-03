@@ -1,0 +1,26 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+    <!-- Body / Shirt (Teal) -->
+    <path
+        android:fillColor="#00B386"
+        android:pathData="M14,32 L34,32 C37,32 39,34 39,37 L39,46 L9,46 L9,37 C9,34 11,32 14,32 Z" />
+    <!-- Raised Hand / Arm -->
+    <path
+        android:fillColor="#00B386"
+        android:pathData="M11,34 L11,22 C11,20.5 12,19.5 13.5,19.5 C15,19.5 16,20.5 16,22 L16,33 Z" />
+    <!-- Hand Palm -->
+    <path
+        android:fillColor="#FFCC80"
+        android:pathData="M11,18 C11,15.8 12.8,14 15,14 C16.5,14 17.8,14.8 18.5,16 C18.8,16.5 18.5,17.2 18,17.5 L15,19 L15,22 L11,22 Z" />
+    <!-- Head & Neck -->
+    <path
+        android:fillColor="#FFCC80"
+        android:pathData="M24,14 C27.3,14 30,16.7 30,20 C30,23.3 27.3,26 24,26 C20.7,26 18,23.3 18,20 C18,16.7 20.7,14 24,14 Z" />
+    <!-- Hair -->
+    <path
+        android:fillColor="#4E342E"
+        android:pathData="M18,18 C18,14 20.5,11 24,11 C27.5,11 30,14 30,18 C29,16 27,15 24,15 C21,15 19,16 18,18 Z" />
+</vector>

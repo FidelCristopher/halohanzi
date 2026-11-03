@@ -1,0 +1,33 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+    <!-- Mini Blackboard in background -->
+    <path
+        android:fillColor="#2E7D32"
+        android:pathData="M8,8 L40,8 C41.1,8 42,8.9 42,10 L42,26 C42,27.1 41.1,28 40,28 L8,28 C6.9,28 6,27.1 6,26 L6,10 C6,8.9 6.9,8 8,8 Z" />
+    <path
+        android:fillColor="#8D6E63"
+        android:pathData="M6,27 L42,27 L42,29 L6,29 Z" />
+    <!-- Teacher Body / Blazer -->
+    <path
+        android:fillColor="#3F51B5"
+        android:pathData="M16,34 L32,34 C35,34 37,36 37,39 L37,46 L11,46 L11,39 C11,36 13,34 16,34 Z" />
+    <!-- Blouse collar -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M24,34 L21,40 L27,40 Z" />
+    <!-- Head -->
+    <path
+        android:fillColor="#FFCC80"
+        android:pathData="M24,18 C27.3,18 30,20.7 30,24 C30,27.3 27.3,30 24,30 C20.7,30 18,27.3 18,24 C18,20.7 20.7,18 24,18 Z" />
+    <!-- Hair with Glasses -->
+    <path
+        android:fillColor="#3E2723"
+        android:pathData="M17,22 C17,17 20,15 24,15 C28,15 31,17 31,22 C31,26 29,27 29,27 L31,33 L28,33 L27,29 C25.5,29.5 22.5,29.5 21,29 L20,33 L17,33 L19,27 C19,27 17,26 17,22 Z" />
+    <!-- Glasses -->
+    <path
+        android:fillColor="#212121"
+        android:pathData="M20,22 C19,22 18,23 18,24 C18,25 19,26 20,26 C21,26 22,25 22,24 C22,23 21,22 20,22 Z M20,23 C20.5,23 21,23.5 21,24 C21,24.5 20.5,25 20,25 C19.5,25 19,24.5 19,24 C19,23.5 19.5,23 20,23 Z M28,22 C27,22 26,23 26,24 C26,25 27,26 28,26 C29,26 30,25 30,24 C30,23 29,22 28,22 Z M28,23 C28.5,23 29,23.5 29,24 C29,24.5 28.5,25 28,25 C27.5,25 27,24.5 27,24 C27,23.5 27.5,23 28,23 Z M22,23.5 L26,23.5 L26,24.5 L22,24.5 Z" />
+</vector>

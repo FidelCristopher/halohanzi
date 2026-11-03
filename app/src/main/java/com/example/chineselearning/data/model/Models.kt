@@ -61,8 +61,9 @@ enum class ExerciseType {
 data class PictureOption(
     val id: String,
     val label: String,
-    val emoji: String,
-    val isCorrect: Boolean
+    val emoji: String = "",
+    val iconRes: Int = 0,
+    val isCorrect: Boolean = false
 )
 
 data class MatchPairItem(

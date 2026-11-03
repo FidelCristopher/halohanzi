@@ -1,0 +1,18 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+    <!-- Cap Diamond -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M24,10 L44,19 L24,28 L4,19 Z" />
+    <!-- Skull Cap Base -->
+    <path
+        android:fillColor="#E2E8F0"
+        android:pathData="M12,23 L12,31 C12,36 17,40 24,40 C31,40 36,36 36,31 L36,23 C33,26 28,28 24,28 C20,28 15,26 12,23 Z" />
+    <!-- Tassel cord & knot -->
+    <path
+        android:fillColor="#FFD54F"
+        android:pathData="M38,20 L38,32 C37,32 36,33 36,35 L40,35 C40,33 39,32 38,32 L38,20 Z M24,18 C24.8,18 25.5,18.7 25.5,19.5 C25.5,20.3 24.8,21 24,21 C23.2,21 22.5,20.3 22.5,19.5 C22.5,18.7 23.2,18 24,18 Z" />
+</vector>

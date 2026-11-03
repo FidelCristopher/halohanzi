@@ -1,0 +1,20 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+    <!-- Waving Motion Lines -->
+    <path
+        android:fillColor="#FFCA28"
+        android:pathData="M10,8 C8,10 6,14 6,18 C6,22 8,26 10,28 L8,29 C5.8,26.5 4,22.5 4,18 C4,13.5 5.8,9.5 8,7 L10,8 Z" />
+    <path
+        android:fillColor="#FFCA28"
+        android:pathData="M14,11 C13,13 12,15.5 12,18 C12,20.5 13,23 14,25 L12.5,26 C11,23.5 10,20.8 10,18 C10,15.2 11,12.5 12.5,10 L14,11 Z" />
+    <!-- Hand -->
+    <path
+        android:fillColor="#FFB300"
+        android:pathData="M24,14 C25.1,14 26,14.9 26,16 L26,24 L27,24 C28.1,24 29,24.9 29,26 L29,27 C30.1,27 31,27.9 31,29 L31,31 C32.1,31 33,31.9 33,33 C33,38 28.5,42 23,42 C18,42 15,38 15,33 L15,22 C15,20.9 15.9,20 17,20 C18.1,20 19,20.9 19,22 L19,24 L20,24 C20,24 20,18 20,17 C20,15.9 20.9,15 22,15 C23.1,15 24,15.9 24,17 L24,14 Z" />
+    <path
+        android:fillColor="#FFD54F"
+        android:pathData="M24,12 C25.1,12 26,12.9 26,14 L26,22 L27,22 C28.1,22 29,22.9 29,24 L29,25 C30.1,25 31,25.9 31,27 L31,29 C32.1,29 33,29.9 33,31 C33,36 28.5,40 23,40 C18,40 15,36 15,31 L15,20 C15,18.9 15.9,18 17,18 C18.1,18 19,18.9 19,20 L19,22 L20,22 C20,22 20,16 20,15 C20,13.9 20.9,13 22,13 C23.1,13 24,13.9 24,15 L24,12 Z" />
+</vector>

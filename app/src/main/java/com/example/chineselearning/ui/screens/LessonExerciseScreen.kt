@@ -22,7 +22,9 @@ import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.graphicsLayer
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontStyle
+import com.example.chineselearning.R
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
@@ -275,7 +277,12 @@ fun LessonExerciseScreen(
 
                     Spacer(modifier = Modifier.width(6.dp))
 
-                    Text(text = "🎯", fontSize = 18.sp)
+                    Icon(
+                        painter = painterResource(R.drawable.ic_target),
+                        contentDescription = "Target",
+                        tint = Color.Unspecified,
+                        modifier = Modifier.size(20.dp)
+                    )
                 }
             }
         },
@@ -535,7 +542,16 @@ fun LessonExerciseScreen(
                                                 .background(Color(0xFFE8F5E9)),
                                             contentAlignment = Alignment.Center
                                         ) {
-                                            Text(text = opt.emoji, fontSize = if (isTwoOptions) 64.sp else 52.sp)
+                                            if (opt.iconRes != 0) {
+                                                Icon(
+                                                    painter = painterResource(opt.iconRes),
+                                                    contentDescription = opt.label,
+                                                    tint = Color.Unspecified,
+                                                    modifier = Modifier.size(if (isTwoOptions) 72.dp else 56.dp)
+                                                )
+                                            } else {
+                                                Text(text = opt.emoji, fontSize = if (isTwoOptions) 64.sp else 52.sp)
+                                            }
                                         }
 
                                         Box(
@@ -759,7 +775,12 @@ fun LessonExerciseScreen(
                             modifier = Modifier.size(72.dp)
                         ) {
                             Box(contentAlignment = Alignment.Center) {
-                                Text(text = "👩‍🏫", fontSize = 42.sp)
+                                Icon(
+                                    painter = painterResource(R.drawable.ic_person_guru),
+                                    contentDescription = "Speaker",
+                                    tint = Color.Unspecified,
+                                    modifier = Modifier.size(46.dp)
+                                )
                             }
                         }
                         Spacer(modifier = Modifier.width(12.dp))
@@ -980,10 +1001,13 @@ fun LessonExerciseScreen(
                                 .padding(top = 90.dp),
                             contentAlignment = Alignment.Center
                         ) {
-                            Text(
-                                text = "👩‍🎓",
-                                fontSize = 160.sp,
-                                modifier = Modifier.graphicsLayer(alpha = 0.20f)
+                            Icon(
+                                painter = painterResource(R.drawable.ic_person_murid),
+                                contentDescription = null,
+                                tint = Color.Unspecified,
+                                modifier = Modifier
+                                    .size(160.dp)
+                                    .graphicsLayer(alpha = 0.20f)
                             )
                         }
 
@@ -1290,7 +1314,12 @@ fun LessonExerciseScreen(
                                         },
                                     contentAlignment = Alignment.Center
                                 ) {
-                                    Text(text = "🐌", fontSize = 22.sp)
+                                    Icon(
+                                        painter = painterResource(R.drawable.ic_snail),
+                                        contentDescription = "Slow audio",
+                                        tint = Color.Unspecified,
+                                        modifier = Modifier.size(24.dp)
+                                    )
                                 }
 
                                 // Play (Normal audio)
@@ -1496,7 +1525,12 @@ fun LessonExerciseScreen(
                             modifier = Modifier.size(36.dp)
                         ) {
                             Box(contentAlignment = Alignment.Center) {
-                                Text(text = "⌨️", fontSize = 18.sp)
+                                Icon(
+                                    imageVector = Icons.Default.Keyboard,
+                                    contentDescription = "Keyboard",
+                                    tint = Color(0xFF00897B),
+                                    modifier = Modifier.size(20.dp)
+                                )
                             }
                         }
                     }
@@ -2107,7 +2141,12 @@ fun LessonCelebrationScreen(
                     .background(Color(0xFFFFF3E0)),
                 contentAlignment = Alignment.Center
             ) {
-                Text(text = "🦁", fontSize = 90.sp)
+                Icon(
+                    painter = painterResource(R.drawable.ic_trophy_celebration),
+                    contentDescription = "Celebration",
+                    tint = Color.Unspecified,
+                    modifier = Modifier.size(100.dp)
+                )
             }
 
             Spacer(modifier = Modifier.height(24.dp))
@@ -2143,7 +2182,10 @@ fun LessonCelebrationScreen(
                     verticalAlignment = Alignment.CenterVertically
                 ) {
                     Row(verticalAlignment = Alignment.CenterVertically) {
-                        Text(text = "⚡🏅", fontSize = 22.sp)
+                        Row(verticalAlignment = Alignment.CenterVertically) {
+                            Icon(imageVector = Icons.Default.Bolt, contentDescription = null, tint = Color(0xFFFFB300), modifier = Modifier.size(22.dp))
+                            Icon(imageVector = Icons.Default.EmojiEvents, contentDescription = null, tint = Color(0xFFFFA000), modifier = Modifier.size(20.dp))
+                        }
                         Spacer(modifier = Modifier.width(12.dp))
                         Text(text = "Total XP", fontSize = 15.sp, fontWeight = FontWeight.Bold, color = DeepNavy)
                     }
@@ -2187,7 +2229,7 @@ fun LessonCelebrationScreen(
                             verticalAlignment = Alignment.CenterVertically,
                             modifier = Modifier.padding(14.dp)
                         ) {
-                            Text(text = "⏱️", fontSize = 20.sp)
+                            Icon(imageVector = Icons.Default.Timer, contentDescription = null, tint = Color(0xFF1E88E5), modifier = Modifier.size(20.dp))
                             Spacer(modifier = Modifier.width(6.dp))
                             Text(text = "01:23", fontSize = 18.sp, fontWeight = FontWeight.Bold, color = DeepNavy)
                         }
@@ -2223,7 +2265,7 @@ fun LessonCelebrationScreen(
                             verticalAlignment = Alignment.CenterVertically,
                             modifier = Modifier.padding(14.dp)
                         ) {
-                            Text(text = "🎯", fontSize = 20.sp)
+                            Icon(painter = painterResource(R.drawable.ic_target), contentDescription = null, tint = Color.Unspecified, modifier = Modifier.size(20.dp))
                             Spacer(modifier = Modifier.width(6.dp))
                             Text(text = "100%", fontSize = 18.sp, fontWeight = FontWeight.Bold, color = DeepNavy)
                         }

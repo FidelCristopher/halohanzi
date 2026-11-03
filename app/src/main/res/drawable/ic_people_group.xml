@@ -1,0 +1,30 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+    <!-- Center Person Body -->
+    <path
+        android:fillColor="#1E88E5"
+        android:pathData="M17,32 L31,32 C33.5,32 35,34 35,36.5 L35,46 L13,46 L13,36.5 C13,34 14.5,32 17,32 Z" />
+    <!-- Center Person Head -->
+    <path
+        android:fillColor="#FFCC80"
+        android:pathData="M24,18 C26.8,18 29,20.2 29,23 C29,25.8 26.8,28 24,28 C21.2,28 19,25.8 19,23 C19,20.2 21.2,18 24,18 Z" />
+    <!-- Left Person Body -->
+    <path
+        android:fillColor="#43A047"
+        android:pathData="M7,34 L19,34 C21,34 22,35.5 22,37.5 L22,46 L4,46 L4,37.5 C4,35.5 5,34 7,34 Z" />
+    <!-- Left Person Head -->
+    <path
+        android:fillColor="#FFE082"
+        android:pathData="M13,21 C15.2,21 17,22.8 17,25 C17,27.2 15.2,29 13,29 C10.8,29 9,27.2 9,25 C9,22.8 10.8,21 13,21 Z" />
+    <!-- Right Person Body -->
+    <path
+        android:fillColor="#FB8C00"
+        android:pathData="M29,34 L41,34 C43,34 44,35.5 44,37.5 L44,46 L26,46 L26,37.5 C26,35.5 27,34 29,34 Z" />
+    <!-- Right Person Head -->
+    <path
+        android:fillColor="#FFAB91"
+        android:pathData="M35,21 C37.2,21 39,22.8 39,25 C39,27.2 37.2,29 35,29 C32.8,29 31,27.2 31,25 C31,22.8 32.8,21 35,21 Z" />
+</vector>
