@@ -19,6 +19,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.chineselearning.data.model.NodeIconType
 import com.example.chineselearning.data.model.PathNode
+import com.example.chineselearning.ui.theme.NunitoFontFamily
 
 @Composable
 fun GoldenStagePopup(
@@ -99,8 +100,9 @@ fun GoldenStagePopup(
                     Spacer(modifier = Modifier.width(6.dp))
                     Text(
                         text = categoryTitle,
+                        fontFamily = NunitoFontFamily,
                         fontSize = 15.sp,
-                        fontWeight = FontWeight.SemiBold,
+                        fontWeight = FontWeight.Bold,
                         color = Color(0xFF212121)
                     )
                 }
@@ -110,6 +112,7 @@ fun GoldenStagePopup(
                 // Lesson / Stage Title
                 Text(
                     text = node.title,
+                    fontFamily = NunitoFontFamily,
                     fontSize = 22.sp,
                     fontWeight = FontWeight.Bold,
                     color = Color(0xFF1E293B)
@@ -147,8 +150,9 @@ fun GoldenStagePopup(
                             Box(contentAlignment = Alignment.Center) {
                                 Text(
                                     text = buttonText,
+                                    fontFamily = NunitoFontFamily,
                                     fontSize = 16.sp,
-                                    fontWeight = FontWeight.Bold,
+                                    fontWeight = FontWeight.ExtraBold,
                                     color = Color(0xFFFF9800),
                                     letterSpacing = 0.5.sp
                                 )
@@ -176,8 +180,9 @@ fun GoldenStagePopup(
                             Box(contentAlignment = Alignment.Center) {
                                 Text(
                                     text = progressText,
+                                    fontFamily = NunitoFontFamily,
                                     fontSize = 16.sp,
-                                    fontWeight = FontWeight.Bold,
+                                    fontWeight = FontWeight.ExtraBold,
                                     color = Color(0xFFFF8F00),
                                     textAlign = TextAlign.Center
                                 )
