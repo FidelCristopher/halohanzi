@@ -2,6 +2,7 @@ package com.example.chineselearning.data.repository
 
 import androidx.compose.runtime.mutableStateMapOf
 import androidx.compose.ui.graphics.Color
+import com.example.chineselearning.R
 import com.example.chineselearning.data.model.*
 
 object LearningRepository {
@@ -946,6 +947,92 @@ object LearningRepository {
                             wordChips = listOf("我:wǒ", "是:shì", "印度尼西亚:Yìndùníxīyà", "人:rén", "老师:lǎoshī", "学生:xuéshēng", "你好:nǐhǎo"),
                             correctAnswer = "我,是,印度尼西亚,人",
                             audioToSpeak = "我是印度尼西亚人。"
+                        )
+                    ),
+                    exercisesPart3 = listOf(
+                        // 1. Soal 1: Apa yang Anda dengar? (布迪是老师。)
+                        Exercise(
+                            id = "u1_l2_p3_q1",
+                            type = ExerciseType.SENTENCE_BUILDER,
+                            title = "Apa yang Anda dengar?",
+                            targetHanzi = "布迪是老师。",
+                            targetPinyin = "Bùdí shì lǎoshī.",
+                            targetTranslation = "Budi adalah seorang guru.",
+                            illustrationRes = R.drawable.img_teacher_budi,
+                            staticTrailingText = "。",
+                            wordChips = listOf("布迪:Bùdí", "是:shì", "老师:lǎoshī", "我:wǒ", "学生:xuéshēng"),
+                            correctAnswer = "布迪,是,老师",
+                            audioToSpeak = "布迪是老师。"
+                        ),
+                        // 2. Soal 2: Lengkapi kalimat (我叫王飞。)
+                        Exercise(
+                            id = "u1_l2_p3_q2",
+                            type = ExerciseType.SENTENCE_BUILDER,
+                            title = "Lengkapi kalimat",
+                            targetHanzi = "我叫王飞。",
+                            targetPinyin = "Wǒ jiào WángFēi.",
+                            targetTranslation = "Nama saya Wang Fei.",
+                            illustrationRes = R.drawable.img_wang_fei_girl,
+                            staticTrailingText = "。",
+                            wordChips = listOf("叫:jiào", "王飞:WángFēi", "我:wǒ"),
+                            correctAnswer = "我,叫,王飞",
+                            audioToSpeak = "我叫王飞。"
+                        ),
+                        // 3. Soal 3: Apa yang Anda dengar? (我是学生。)
+                        Exercise(
+                            id = "u1_l2_p3_q3",
+                            type = ExerciseType.SENTENCE_BUILDER,
+                            title = "Apa yang Anda dengar?",
+                            targetHanzi = "我是学生。",
+                            targetPinyin = "Wǒ shì xuéshēng.",
+                            targetTranslation = "Saya adalah seorang murid.",
+                            illustrationRes = R.drawable.img_student_boy,
+                            staticTrailingText = "。",
+                            wordChips = listOf("我:wǒ", "是:shì", "学生:xuéshēng", "老师:lǎoshī", "你好:nǐhǎo"),
+                            correctAnswer = "我,是,学生",
+                            audioToSpeak = "我是学生。"
+                        ),
+                        // 4. Soal 4: Lengkapi kalimat (你好，我叫布迪。)
+                        Exercise(
+                            id = "u1_l2_p3_q4",
+                            type = ExerciseType.SENTENCE_BUILDER,
+                            title = "Lengkapi kalimat",
+                            targetHanzi = "你好，我叫布迪。",
+                            targetPinyin = "Nǐhǎo, wǒ jiào Bùdí.",
+                            targetTranslation = "Halo, nama saya Budi.",
+                            illustrationRes = R.drawable.img_budi_waving,
+                            hasCommaAfterSlot1 = true,
+                            staticTrailingText = "布迪 。",
+                            staticTrailingPinyin = "Bùdí",
+                            wordChips = listOf("我:wǒ", "叫:jiào", "你好:nǐhǎo"),
+                            correctAnswer = "你好,我,叫",
+                            audioToSpeak = "你好，我叫布迪。"
+                        ),
+                        // 5. Soal 5: Buat kalimat berdasarkan gambar (我是印度尼西亚人。)
+                        Exercise(
+                            id = "u1_l2_p3_q5",
+                            type = ExerciseType.SENTENCE_BUILDER,
+                            title = "Buat kalimat menggunakan semua kata berdasarkan gambar",
+                            targetHanzi = "我是印度尼西亚人。",
+                            targetPinyin = "Wǒ shì Yìndùníxīyà rén.",
+                            targetTranslation = "Saya adalah orang Indonesia.",
+                            illustrationRes = R.drawable.img_indonesia_man,
+                            wordChips = listOf("人:rén", "是:shì", "我:wǒ", "印度尼西亚:Yìndùníxīyà"),
+                            correctAnswer = "我,是,印度尼西亚,人",
+                            audioToSpeak = "我是印度尼西亚人。"
+                        ),
+                        // 6. Soal 6: Buat kalimat berdasarkan gambar (我是老师。)
+                        Exercise(
+                            id = "u1_l2_p3_q6",
+                            type = ExerciseType.SENTENCE_BUILDER,
+                            title = "Buat kalimat menggunakan semua kata berdasarkan gambar",
+                            targetHanzi = "我是老师。",
+                            targetPinyin = "Wǒ shì lǎoshī.",
+                            targetTranslation = "Saya adalah seorang guru.",
+                            illustrationRes = R.drawable.img_teacher_glasses,
+                            wordChips = listOf("是:shì", "我:wǒ", "老师:lǎoshī"),
+                            correctAnswer = "我,是,老师",
+                            audioToSpeak = "我是老师。"
                         )
                     )
                 )
