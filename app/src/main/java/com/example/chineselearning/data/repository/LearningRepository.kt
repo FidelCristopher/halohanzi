@@ -886,18 +886,18 @@ object LearningRepository {
                             correctAnswer = "布迪,是,学生",
                             audioToSpeak = "布迪是学生。"
                         ),
-                        // 3. Soal 3: Pasangan Kartu dengan 2 Audio (Ketuk pasangan yang sesuai)
+                        // 3. Soal 3: Pasangan Kartu dengan Audio Penuh (Ketuk pasangan yang sesuai)
                         Exercise(
                             id = "u1_l2_p2_q3",
                             type = ExerciseType.MATCH_PAIRS,
                             title = "Ketuk pasangan yang sesuai",
                             correctAnswer = "ALL_MATCHED",
                             matchPairs = listOf(
-                                MatchPairItem("l2_p2_m1", "是", "shì", "adalah"),
-                                MatchPairItem("l2_p2_m2", "老师", "lǎoshī", "guru"),
-                                MatchPairItem("l2_p2_m3", "学生", "xuéshēng", "murid"),
-                                MatchPairItem("l2_p2_m4", "", "", "(negara) Indonesia", isAudioOnly = true, audioToSpeak = "印度尼西亚"),
-                                MatchPairItem("l2_p2_m5", "", "", "orang", isAudioOnly = true, audioToSpeak = "人")
+                                MatchPairItem("l2_p2_m1", "是", "shì", "adalah", isAudioOnly = true, audioToSpeak = "是"),
+                                MatchPairItem("l2_p2_m2", "老师", "lǎoshī", "guru", isAudioOnly = true, audioToSpeak = "老师"),
+                                MatchPairItem("l2_p2_m3", "学生", "xuéshēng", "murid", isAudioOnly = true, audioToSpeak = "学生"),
+                                MatchPairItem("l2_p2_m4", "印度尼西亚", "Yìndùníxīyà", "(negara) Indonesia", isAudioOnly = true, audioToSpeak = "印度尼西亚"),
+                                MatchPairItem("l2_p2_m5", "人", "rén", "orang", isAudioOnly = true, audioToSpeak = "人")
                             )
                         ),
                         // 4. Soal 4: Lengkapi Terjemahan (Halo (Bapak atau Ibu) Guru, saya adalah orang Indonesia.)

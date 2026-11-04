@@ -62,6 +62,7 @@ fun LessonExerciseScreen(
     var selectedLeftPairId by remember { mutableStateOf<String?>(null) }
     var selectedRightPairId by remember { mutableStateOf<String?>(null) }
     var matchedPairIds by remember { mutableStateOf<Set<String>>(emptySet()) }
+    var lastMatchedPairId by remember(currentExerciseIdx) { mutableStateOf<String?>(null) }
     var shuffledRightPairs by remember(currentExerciseIdx) {
         val currEx = exercisesList.getOrNull(currentExerciseIdx)
         val fixedOrder = when (currEx?.id) {
@@ -137,6 +138,7 @@ fun LessonExerciseScreen(
             selectedLeftPairId = null
             selectedRightPairId = null
             matchedPairIds = emptySet()
+            lastMatchedPairId = null
             isSubmitted = false
             isCorrect = false
         }
@@ -2184,38 +2186,47 @@ fun LessonExerciseScreen(
                     modifier = Modifier.fillMaxWidth(),
                     horizontalArrangement = Arrangement.spacedBy(16.dp)
                 ) {
-                    // Left Column (Hanzi + Pinyin)
+                    // Left Column (Hanzi + Pinyin / Audio)
                     Column(
                         modifier = Modifier.weight(1f),
                         verticalArrangement = Arrangement.spacedBy(pairSpacing)
                     ) {
                         exercise.matchPairs.forEach { item ->
                             val isMatched = matchedPairIds.contains(item.id)
+                            val isJustMatched = (lastMatchedPairId == item.id)
                             val isSelected = selectedLeftPairId == item.id
 
                             Surface(
                                 shape = RoundedCornerShape(16.dp),
-                                color = Color.White,
+                                color = when {
+                                    isJustMatched -> Color(0xFFE8F8F4)
+                                    else -> Color.White
+                                },
                                 border = androidx.compose.foundation.BorderStroke(
-                                    width = if (isSelected) 2.5.dp else 1.dp,
+                                    width = if (isSelected || isJustMatched) 2.dp else 1.dp,
                                     color = when {
+                                        isJustMatched -> Color(0xFF00C48C)
                                         isSelected -> Color(0xFF007AFF)
                                         isMatched -> Color(0xFFE2E8F0)
                                         else -> Color(0xFFE2E8F0)
                                     }
                                 ),
-                                shadowElevation = if (isSelected) 2.dp else 1.dp,
+                                shadowElevation = if (isSelected || isJustMatched) 2.dp else 1.dp,
                                 modifier = Modifier
                                     .fillMaxWidth()
                                     .height(cardHeight)
                                     .bouncyClick {
                                         if (!isMatched) {
                                             selectedLeftPairId = item.id
-                                            ttsManager?.speak(if (item.isAudioOnly) item.audioToSpeak else item.hanzi)
+                                            val speakText = if (item.audioToSpeak.isNotBlank()) item.audioToSpeak else item.hanzi
+                                            if (speakText.isNotBlank()) {
+                                                ttsManager?.speak(speakText)
+                                            }
 
                                             if (selectedRightPairId != null) {
                                                 if (item.id == selectedRightPairId) {
                                                     matchedPairIds = matchedPairIds + item.id
+                                                    lastMatchedPairId = item.id
                                                 }
                                                 selectedLeftPairId = null
                                                 selectedRightPairId = null
@@ -2223,37 +2234,63 @@ fun LessonExerciseScreen(
                                         }
                                     }
                             ) {
-                                if (item.isAudioOnly) {
-                                    Box(
-                                        modifier = Modifier.fillMaxSize(),
-                                        contentAlignment = Alignment.Center
-                                    ) {
+                                Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+                                    if (item.isAudioOnly && !isMatched) {
                                         Icon(
                                             imageVector = Icons.AutoMirrored.Filled.VolumeUp,
                                             contentDescription = "Audio",
                                             tint = if (isSelected) Color(0xFF007AFF) else DeepNavy,
                                             modifier = Modifier.size(34.dp)
                                         )
+                                    } else {
+                                        Column(
+                                            horizontalAlignment = Alignment.CenterHorizontally,
+                                            verticalArrangement = Arrangement.Center,
+                                            modifier = Modifier.fillMaxSize()
+                                        ) {
+                                            Text(
+                                                text = item.pinyin,
+                                                fontSize = if (isFivePairs) 13.sp else 15.sp,
+                                                fontWeight = FontWeight.Normal,
+                                                color = when {
+                                                    isJustMatched -> Color(0xFF00B386)
+                                                    isMatched -> Color(0xFFB0BEC5)
+                                                    isSelected -> Color(0xFF007AFF)
+                                                    else -> SlateGray
+                                                }
+                                            )
+                                            Spacer(modifier = Modifier.height(2.dp))
+                                            Text(
+                                                text = item.hanzi,
+                                                fontFamily = KaiTiFontFamily,
+                                                fontSize = if (isFivePairs) 21.sp else 26.sp,
+                                                fontWeight = FontWeight.Normal,
+                                                color = when {
+                                                    isJustMatched -> Color(0xFF00B386)
+                                                    isMatched -> Color(0xFFB0BEC5)
+                                                    isSelected -> Color(0xFF007AFF)
+                                                    else -> DeepNavy
+                                                }
+                                            )
+                                        }
                                     }
-                                } else {
-                                    Column(
-                                        horizontalAlignment = Alignment.CenterHorizontally,
-                                        verticalArrangement = Arrangement.Center,
-                                        modifier = Modifier.fillMaxSize()
-                                    ) {
+
+                                    if (isJustMatched) {
                                         Text(
-                                            text = item.pinyin,
-                                            fontSize = if (isFivePairs) 13.sp else 15.sp,
-                                            fontWeight = FontWeight.Normal,
-                                            color = if (isSelected) Color(0xFF007AFF) else SlateGray
+                                            text = "✦",
+                                            color = Color(0xFF00C48C).copy(alpha = 0.7f),
+                                            fontSize = 12.sp,
+                                            modifier = Modifier
+                                                .align(Alignment.TopEnd)
+                                                .padding(top = 4.dp, end = 6.dp)
                                         )
-                                        Spacer(modifier = Modifier.height(2.dp))
                                         Text(
-                                            text = item.hanzi,
-                                            fontFamily = KaiTiFontFamily,
-                                            fontSize = if (isFivePairs) 21.sp else 26.sp,
-                                            fontWeight = FontWeight.Normal,
-                                            color = if (isSelected) Color(0xFF007AFF) else DeepNavy
+                                            text = "✦",
+                                            color = Color(0xFF00C48C).copy(alpha = 0.7f),
+                                            fontSize = 10.sp,
+                                            modifier = Modifier
+                                                .align(Alignment.BottomStart)
+                                                .padding(bottom = 4.dp, start = 6.dp)
                                         )
                                     }
                                 }
@@ -2268,20 +2305,25 @@ fun LessonExerciseScreen(
                     ) {
                         shuffledRightPairs.forEach { item ->
                             val isMatched = matchedPairIds.contains(item.id)
+                            val isJustMatched = (lastMatchedPairId == item.id)
                             val isSelected = selectedRightPairId == item.id
 
                             Surface(
                                 shape = RoundedCornerShape(16.dp),
-                                color = Color.White,
+                                color = when {
+                                    isJustMatched -> Color(0xFFE8F8F4)
+                                    else -> Color.White
+                                },
                                 border = androidx.compose.foundation.BorderStroke(
-                                    width = if (isSelected) 2.5.dp else 1.dp,
+                                    width = if (isSelected || isJustMatched) 2.dp else 1.dp,
                                     color = when {
+                                        isJustMatched -> Color(0xFF00C48C)
                                         isSelected -> Color(0xFF007AFF)
                                         isMatched -> Color(0xFFE2E8F0)
                                         else -> Color(0xFFE2E8F0)
                                     }
                                 ),
-                                shadowElevation = if (isSelected) 2.dp else 1.dp,
+                                shadowElevation = if (isSelected || isJustMatched) 2.dp else 1.dp,
                                 modifier = Modifier
                                     .fillMaxWidth()
                                     .height(cardHeight)
@@ -2292,6 +2334,7 @@ fun LessonExerciseScreen(
                                             if (selectedLeftPairId != null) {
                                                 if (item.id == selectedLeftPairId) {
                                                     matchedPairIds = matchedPairIds + item.id
+                                                    lastMatchedPairId = item.id
                                                 }
                                                 selectedLeftPairId = null
                                                 selectedRightPairId = null
@@ -2307,9 +2350,33 @@ fun LessonExerciseScreen(
                                         text = item.translation,
                                         fontSize = if (isFivePairs) 15.sp else 18.sp,
                                         fontWeight = FontWeight.Normal,
-                                        color = if (isSelected) Color(0xFF007AFF) else DeepNavy,
+                                        color = when {
+                                            isJustMatched -> Color(0xFF00B386)
+                                            isMatched -> Color(0xFFB0BEC5)
+                                            isSelected -> Color(0xFF007AFF)
+                                            else -> DeepNavy
+                                        },
                                         textAlign = TextAlign.Center
                                     )
+
+                                    if (isJustMatched) {
+                                        Text(
+                                            text = "✦",
+                                            color = Color(0xFF00C48C).copy(alpha = 0.7f),
+                                            fontSize = 12.sp,
+                                            modifier = Modifier
+                                                .align(Alignment.TopEnd)
+                                                .padding(top = 4.dp, end = 6.dp)
+                                        )
+                                        Text(
+                                            text = "✦",
+                                            color = Color(0xFF00C48C).copy(alpha = 0.7f),
+                                            fontSize = 10.sp,
+                                            modifier = Modifier
+                                                .align(Alignment.BottomStart)
+                                                .padding(bottom = 4.dp, start = 6.dp)
+                                        )
+                                    }
                                 }
                             }
                         }
