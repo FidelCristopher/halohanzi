@@ -900,7 +900,7 @@ object LearningRepository {
                                 MatchPairItem("l2_p2_m5", "", "", "orang", isAudioOnly = true, audioToSpeak = "人")
                             )
                         ),
-                        // 4. Soal 4: Lengkapi Terjemahan Baris 2 (Halo (Bapak atau Ibu) Guru, saya adalah orang Indonesia.)
+                        // 4. Soal 4: Lengkapi Terjemahan (Halo (Bapak atau Ibu) Guru, saya adalah orang Indonesia.)
                         Exercise(
                             id = "u1_l2_p2_q4",
                             type = ExerciseType.SENTENCE_BUILDER,
@@ -908,12 +908,8 @@ object LearningRepository {
                             targetTranslation = "Halo (Bapak atau Ibu) Guru, saya adalah orang Indonesia.",
                             targetHanzi = "老师，你好，我是印尼人。",
                             targetPinyin = "Lǎoshī, nǐhǎo, wǒ shì Yìnní rén.",
-                            staticLeadingText = "老师 ， 你好 ， 我 是",
-                            staticLeadingPinyin = "lǎoshī    nǐhǎo    wǒ    shì",
-                            hasSlotsOnLine2 = true,
-                            staticTrailingText = "。",
-                            wordChips = listOf("印尼:Yìnní", "人:rén", "印度尼西亚:Yìndùníxīyà", "学生:xuéshēng", "你:nǐ", "叫:jiào"),
-                            correctAnswer = "印尼,人",
+                            wordChips = listOf("人:rén", "是:shì", "印尼:Yìnní", "老师:lǎoshī", "学生:xuéshēng", "王飞:WángFēi", "叫:jiào"),
+                            correctAnswer = "老师,是,印尼,人",
                             audioToSpeak = "老师，你好，我是印尼人。"
                         ),
                         // 5. Soal 5: Tata Bahasa Susunan Kata (你好，我是老师。)
