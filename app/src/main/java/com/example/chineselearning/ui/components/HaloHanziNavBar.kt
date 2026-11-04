@@ -13,11 +13,6 @@ import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.automirrored.outlined.Chat
-import androidx.compose.material.icons.automirrored.rounded.Chat
-import androidx.compose.material.icons.outlined.*
-import androidx.compose.material.icons.rounded.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -29,21 +24,22 @@ import androidx.compose.ui.draw.scale
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.chineselearning.R
 import com.example.chineselearning.ui.theme.NunitoFontFamily
 
-// Modern Duolingo / Expressive Palette
+// Modern Brand Palette
 private val ActivePurple = Color(0xFF6A4CE4)
 private val InactiveGray = Color(0xFF8E8E98)
 private val FloatingBorderColor = Color(0xFFECEAF6)
 
 data class NavTabItem(
     val title: String,
-    val selectedIcon: ImageVector,
-    val unselectedIcon: ImageVector,
+    val selectedIconRes: Int,
+    val unselectedIconRes: Int,
     val hasNotificationDot: Boolean = false
 )
 
@@ -53,11 +49,32 @@ fun HaloHanziNavBar(
     onTabSelected: (Int) -> Unit
 ) {
     val tabs = listOf(
-        NavTabItem("Belajar", Icons.Rounded.School, Icons.Outlined.School),
-        NavTabItem("Latihan", Icons.Rounded.FitnessCenter, Icons.Outlined.FitnessCenter),
-        NavTabItem("Cerita", Icons.Rounded.AutoStories, Icons.Outlined.AutoStories),
-        NavTabItem("Imersi", Icons.AutoMirrored.Rounded.Chat, Icons.AutoMirrored.Outlined.Chat, hasNotificationDot = true),
-        NavTabItem("Saya", Icons.Rounded.Person, Icons.Outlined.Person)
+        NavTabItem(
+            title = "Belajar",
+            selectedIconRes = R.drawable.ic_nav_belajar_active,
+            unselectedIconRes = R.drawable.ic_nav_belajar
+        ),
+        NavTabItem(
+            title = "Latihan",
+            selectedIconRes = R.drawable.ic_nav_latihan_active,
+            unselectedIconRes = R.drawable.ic_nav_latihan
+        ),
+        NavTabItem(
+            title = "Cerita",
+            selectedIconRes = R.drawable.ic_nav_cerita_active,
+            unselectedIconRes = R.drawable.ic_nav_cerita
+        ),
+        NavTabItem(
+            title = "Imersi",
+            selectedIconRes = R.drawable.ic_nav_imersi_active,
+            unselectedIconRes = R.drawable.ic_nav_imersi,
+            hasNotificationDot = true
+        ),
+        NavTabItem(
+            title = "Saya",
+            selectedIconRes = R.drawable.ic_nav_saya_active,
+            unselectedIconRes = R.drawable.ic_nav_saya
+        )
     )
 
     Box(
@@ -95,7 +112,7 @@ fun HaloHanziNavBar(
 
                     // Bouncy spring animation for selected icon scale
                     val iconScale by animateFloatAsState(
-                        targetValue = if (isSelected) 1.14f else 1.0f,
+                        targetValue = if (isSelected) 1.15f else 1.0f,
                         animationSpec = spring(
                             dampingRatio = Spring.DampingRatioMediumBouncy,
                             stiffness = Spring.StiffnessLow
@@ -159,13 +176,13 @@ fun HaloHanziNavBar(
                                 )
                             }
 
-                            // Dynamic icon (Filled/Rounded when active, Outlined when inactive)
+                            // Bespoke Vector Icon (Custom AOSP VectorDrawable with dual-state assets)
                             Icon(
-                                imageVector = if (isSelected) tab.selectedIcon else tab.unselectedIcon,
+                                painter = painterResource(if (isSelected) tab.selectedIconRes else tab.unselectedIconRes),
                                 contentDescription = tab.title,
                                 tint = activeColor,
                                 modifier = Modifier
-                                    .size(23.dp)
+                                    .size(24.dp)
                                     .scale(iconScale)
                             )
 
