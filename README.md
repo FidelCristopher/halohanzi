@@ -1,10 +1,18 @@
-# HaloHanzi
+<p align="center">
+  <img src="docs/images/logo-HaloHanzi.jpeg" alt="HaloHanzi Logo" width="600" />
+</p>
 
-> An intuitive, story-driven Mandarin Chinese learning application for Android, built with Jetpack Compose, Kotlin, and native Android speech synthesis.
+<h1 align="center">HaloHanzi</h1>
 
-[![Platform](https://img.shields.io/badge/Platform-Android%207.0%2B%20(API%2024%2B)-brightgreen.svg)](https://developer.android.com)
-[![Language](https://img.shields.io/badge/Language-Kotlin%202.2-blue.svg)](https://kotlinlang.org)
-[![UI Framework](https://img.shields.io/badge/UI-Jetpack%20Compose-4285F4.svg)](https://developer.android.com/jetpack/compose)
+<p align="center">
+  <strong>An intuitive, story-driven Mandarin Chinese learning application for Android, built with Jetpack Compose, Kotlin, and native Android speech synthesis.</strong>
+</p>
+
+<p align="center">
+  <a href="https://developer.android.com"><img src="https://img.shields.io/badge/Platform-Android%207.0%2B%20(API%2024%2B)-brightgreen.svg" alt="Platform" /></a>
+  <a href="https://kotlinlang.org"><img src="https://img.shields.io/badge/Language-Kotlin%202.2-blue.svg" alt="Language" /></a>
+  <a href="https://developer.android.com/jetpack/compose"><img src="https://img.shields.io/badge/UI-Jetpack%20Compose-4285F4.svg" alt="UI Framework" /></a>
+</p>
 
 ---
 
