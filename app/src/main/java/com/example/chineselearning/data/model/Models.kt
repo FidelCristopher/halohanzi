@@ -101,7 +101,8 @@ data class Exercise(
     val hasTrailingLine2: Boolean = false,
     val trailingLine2Text: String = "",
     val trailingLine2Pinyin: String = "",
-    val hasSlotsOnLine2: Boolean = false
+    val hasSlotsOnLine2: Boolean = false,
+    val illustrationRes: Int = 0
 )
 
 data class Lesson(
