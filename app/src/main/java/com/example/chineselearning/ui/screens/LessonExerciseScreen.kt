@@ -38,6 +38,10 @@ import com.example.chineselearning.data.repository.LearningRepository
 import com.example.chineselearning.ui.components.bouncyClick
 import com.example.chineselearning.ui.components.shake
 import com.example.chineselearning.ui.theme.*
+import androidx.compose.ui.platform.LocalHapticFeedback
+import androidx.compose.ui.hapticfeedback.HapticFeedbackType
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
@@ -63,6 +67,10 @@ fun LessonExerciseScreen(
     var selectedRightPairId by remember { mutableStateOf<String?>(null) }
     var matchedPairIds by remember { mutableStateOf<Set<String>>(emptySet()) }
     var lastMatchedPairId by remember(currentExerciseIdx) { mutableStateOf<String?>(null) }
+    var wrongLeftPairId by remember(currentExerciseIdx) { mutableStateOf<String?>(null) }
+    var wrongRightPairId by remember(currentExerciseIdx) { mutableStateOf<String?>(null) }
+    val coroutineScope = rememberCoroutineScope()
+    val hapticFeedback = LocalHapticFeedback.current
     var shuffledRightPairs by remember(currentExerciseIdx) {
         val currEx = exercisesList.getOrNull(currentExerciseIdx)
         val fixedOrder = when (currEx?.id) {
@@ -139,6 +147,8 @@ fun LessonExerciseScreen(
             selectedRightPairId = null
             matchedPairIds = emptySet()
             lastMatchedPairId = null
+            wrongLeftPairId = null
+            wrongRightPairId = null
             isSubmitted = false
             isCorrect = false
         }
@@ -2194,42 +2204,62 @@ fun LessonExerciseScreen(
                         exercise.matchPairs.forEach { item ->
                             val isMatched = matchedPairIds.contains(item.id)
                             val isJustMatched = (lastMatchedPairId == item.id)
+                            val isWrong = (wrongLeftPairId == item.id)
                             val isSelected = selectedLeftPairId == item.id
 
                             Surface(
                                 shape = RoundedCornerShape(16.dp),
                                 color = when {
+                                    isWrong -> Color(0xFFFFEBEE)
                                     isJustMatched -> Color(0xFFE8F8F4)
                                     else -> Color.White
                                 },
                                 border = androidx.compose.foundation.BorderStroke(
-                                    width = if (isSelected || isJustMatched) 2.dp else 1.dp,
+                                    width = if (isSelected || isJustMatched || isWrong) 2.dp else 1.dp,
                                     color = when {
+                                        isWrong -> Color(0xFFFF5252)
                                         isJustMatched -> Color(0xFF00C48C)
                                         isSelected -> Color(0xFF007AFF)
                                         isMatched -> Color(0xFFE2E8F0)
                                         else -> Color(0xFFE2E8F0)
                                     }
                                 ),
-                                shadowElevation = if (isSelected || isJustMatched) 2.dp else 1.dp,
+                                shadowElevation = if (isSelected || isJustMatched || isWrong) 2.dp else 1.dp,
                                 modifier = Modifier
                                     .fillMaxWidth()
                                     .height(cardHeight)
+                                    .shake(trigger = isWrong)
                                     .bouncyClick {
+                                        if (wrongLeftPairId != null || wrongRightPairId != null) return@bouncyClick
                                         if (!isMatched) {
-                                            selectedLeftPairId = item.id
                                             val speakText = if (item.audioToSpeak.isNotBlank()) item.audioToSpeak else item.hanzi
                                             if (speakText.isNotBlank()) {
                                                 ttsManager?.speak(speakText)
                                             }
 
                                             if (selectedRightPairId != null) {
-                                                if (item.id == selectedRightPairId) {
+                                                val rightId = selectedRightPairId!!
+                                                if (item.id == rightId) {
+                                                    // Correct Match!
                                                     matchedPairIds = matchedPairIds + item.id
                                                     lastMatchedPairId = item.id
+                                                    selectedLeftPairId = null
+                                                    selectedRightPairId = null
+                                                } else {
+                                                    // Wrong Match!
+                                                    wrongLeftPairId = item.id
+                                                    wrongRightPairId = rightId
+                                                    selectedLeftPairId = null
+                                                    selectedRightPairId = null
+                                                    hapticFeedback.performHapticFeedback(HapticFeedbackType.LongPress)
+                                                    coroutineScope.launch {
+                                                        delay(600)
+                                                        wrongLeftPairId = null
+                                                        wrongRightPairId = null
+                                                    }
                                                 }
-                                                selectedLeftPairId = null
-                                                selectedRightPairId = null
+                                            } else {
+                                                selectedLeftPairId = item.id
                                             }
                                         }
                                     }
@@ -2239,7 +2269,11 @@ fun LessonExerciseScreen(
                                         Icon(
                                             imageVector = Icons.AutoMirrored.Filled.VolumeUp,
                                             contentDescription = "Audio",
-                                            tint = if (isSelected) Color(0xFF007AFF) else DeepNavy,
+                                            tint = when {
+                                                isWrong -> Color(0xFFFF5252)
+                                                isSelected -> Color(0xFF007AFF)
+                                                else -> DeepNavy
+                                            },
                                             modifier = Modifier.size(34.dp)
                                         )
                                     } else {
@@ -2253,6 +2287,7 @@ fun LessonExerciseScreen(
                                                 fontSize = if (isFivePairs) 13.sp else 15.sp,
                                                 fontWeight = FontWeight.Normal,
                                                 color = when {
+                                                    isWrong -> Color(0xFFFF5252)
                                                     isJustMatched -> Color(0xFF00B386)
                                                     isMatched -> Color(0xFFB0BEC5)
                                                     isSelected -> Color(0xFF007AFF)
@@ -2266,6 +2301,7 @@ fun LessonExerciseScreen(
                                                 fontSize = if (isFivePairs) 21.sp else 26.sp,
                                                 fontWeight = FontWeight.Normal,
                                                 color = when {
+                                                    isWrong -> Color(0xFFFF5252)
                                                     isJustMatched -> Color(0xFF00B386)
                                                     isMatched -> Color(0xFFB0BEC5)
                                                     isSelected -> Color(0xFF007AFF)
@@ -2306,38 +2342,57 @@ fun LessonExerciseScreen(
                         shuffledRightPairs.forEach { item ->
                             val isMatched = matchedPairIds.contains(item.id)
                             val isJustMatched = (lastMatchedPairId == item.id)
+                            val isWrong = (wrongRightPairId == item.id)
                             val isSelected = selectedRightPairId == item.id
 
                             Surface(
                                 shape = RoundedCornerShape(16.dp),
                                 color = when {
+                                    isWrong -> Color(0xFFFFEBEE)
                                     isJustMatched -> Color(0xFFE8F8F4)
                                     else -> Color.White
                                 },
                                 border = androidx.compose.foundation.BorderStroke(
-                                    width = if (isSelected || isJustMatched) 2.dp else 1.dp,
+                                    width = if (isSelected || isJustMatched || isWrong) 2.dp else 1.dp,
                                     color = when {
+                                        isWrong -> Color(0xFFFF5252)
                                         isJustMatched -> Color(0xFF00C48C)
                                         isSelected -> Color(0xFF007AFF)
                                         isMatched -> Color(0xFFE2E8F0)
                                         else -> Color(0xFFE2E8F0)
                                     }
                                 ),
-                                shadowElevation = if (isSelected || isJustMatched) 2.dp else 1.dp,
+                                shadowElevation = if (isSelected || isJustMatched || isWrong) 2.dp else 1.dp,
                                 modifier = Modifier
                                     .fillMaxWidth()
                                     .height(cardHeight)
+                                    .shake(trigger = isWrong)
                                     .bouncyClick {
+                                        if (wrongLeftPairId != null || wrongRightPairId != null) return@bouncyClick
                                         if (!isMatched) {
-                                            selectedRightPairId = item.id
-
                                             if (selectedLeftPairId != null) {
-                                                if (item.id == selectedLeftPairId) {
+                                                val leftId = selectedLeftPairId!!
+                                                if (item.id == leftId) {
+                                                    // Correct Match!
                                                     matchedPairIds = matchedPairIds + item.id
                                                     lastMatchedPairId = item.id
+                                                    selectedLeftPairId = null
+                                                    selectedRightPairId = null
+                                                } else {
+                                                    // Wrong Match!
+                                                    wrongLeftPairId = leftId
+                                                    wrongRightPairId = item.id
+                                                    selectedLeftPairId = null
+                                                    selectedRightPairId = null
+                                                    hapticFeedback.performHapticFeedback(HapticFeedbackType.LongPress)
+                                                    coroutineScope.launch {
+                                                        delay(600)
+                                                        wrongLeftPairId = null
+                                                        wrongRightPairId = null
+                                                    }
                                                 }
-                                                selectedLeftPairId = null
-                                                selectedRightPairId = null
+                                            } else {
+                                                selectedRightPairId = item.id
                                             }
                                         }
                                     }
@@ -2351,6 +2406,7 @@ fun LessonExerciseScreen(
                                         fontSize = if (isFivePairs) 15.sp else 18.sp,
                                         fontWeight = FontWeight.Normal,
                                         color = when {
+                                            isWrong -> Color(0xFFFF5252)
                                             isJustMatched -> Color(0xFF00B386)
                                             isMatched -> Color(0xFFB0BEC5)
                                             isSelected -> Color(0xFF007AFF)
