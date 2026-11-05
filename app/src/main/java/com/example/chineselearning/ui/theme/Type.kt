@@ -8,12 +8,22 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
 import com.example.chineselearning.R
 
-val NunitoFontFamily = FontFamily(
-    Font(R.font.nunito_regular, FontWeight.Normal),
-    Font(R.font.nunito_semibold, FontWeight.SemiBold),
-    Font(R.font.nunito_bold, FontWeight.Bold)
+// Modern, high-legibility geometric sans-serif (Plus Jakarta Sans)
+val PlusJakartaSansFontFamily = FontFamily(
+    Font(R.font.plus_jakarta_sans_regular, FontWeight.Normal),
+    Font(R.font.plus_jakarta_sans_medium, FontWeight.Medium),
+    Font(R.font.plus_jakarta_sans_semibold, FontWeight.SemiBold),
+    Font(R.font.plus_jakarta_sans_bold, FontWeight.Bold),
+    Font(R.font.plus_jakarta_sans_extrabold, FontWeight.ExtraBold)
 )
 
+// Primary app UI font family
+val AppFontFamily = PlusJakartaSansFontFamily
+
+// Backward compatibility alias: redirects NunitoFontFamily references directly to Plus Jakarta Sans
+val NunitoFontFamily = PlusJakartaSansFontFamily
+
+// Authentic textbook Chinese calligraphy script
 val KaiTiFontFamily = FontFamily(
     Font(R.font.kai_regular, FontWeight.Normal),
     Font(R.font.kai_regular, FontWeight.Medium),
@@ -22,55 +32,55 @@ val KaiTiFontFamily = FontFamily(
 )
 
 val Typography = Typography(
-    displayLarge = TextStyle(fontFamily = NunitoFontFamily, fontWeight = FontWeight.Normal),
-    displayMedium = TextStyle(fontFamily = NunitoFontFamily, fontWeight = FontWeight.Normal),
-    displaySmall = TextStyle(fontFamily = NunitoFontFamily, fontWeight = FontWeight.Normal),
-    headlineLarge = TextStyle(fontFamily = NunitoFontFamily, fontWeight = FontWeight.SemiBold),
-    headlineMedium = TextStyle(fontFamily = NunitoFontFamily, fontWeight = FontWeight.SemiBold),
-    headlineSmall = TextStyle(fontFamily = NunitoFontFamily, fontWeight = FontWeight.SemiBold),
-    titleLarge = TextStyle(fontFamily = NunitoFontFamily, fontWeight = FontWeight.Bold),
-    titleMedium = TextStyle(fontFamily = NunitoFontFamily, fontWeight = FontWeight.SemiBold),
-    titleSmall = TextStyle(fontFamily = NunitoFontFamily, fontWeight = FontWeight.Medium),
+    displayLarge = TextStyle(fontFamily = PlusJakartaSansFontFamily, fontWeight = FontWeight.Normal),
+    displayMedium = TextStyle(fontFamily = PlusJakartaSansFontFamily, fontWeight = FontWeight.Normal),
+    displaySmall = TextStyle(fontFamily = PlusJakartaSansFontFamily, fontWeight = FontWeight.Normal),
+    headlineLarge = TextStyle(fontFamily = PlusJakartaSansFontFamily, fontWeight = FontWeight.SemiBold),
+    headlineMedium = TextStyle(fontFamily = PlusJakartaSansFontFamily, fontWeight = FontWeight.SemiBold),
+    headlineSmall = TextStyle(fontFamily = PlusJakartaSansFontFamily, fontWeight = FontWeight.SemiBold),
+    titleLarge = TextStyle(fontFamily = PlusJakartaSansFontFamily, fontWeight = FontWeight.Bold),
+    titleMedium = TextStyle(fontFamily = PlusJakartaSansFontFamily, fontWeight = FontWeight.SemiBold),
+    titleSmall = TextStyle(fontFamily = PlusJakartaSansFontFamily, fontWeight = FontWeight.Medium),
     bodyLarge = TextStyle(
-        fontFamily = NunitoFontFamily,
+        fontFamily = PlusJakartaSansFontFamily,
         fontWeight = FontWeight.Normal,
         fontSize = 16.sp,
         lineHeight = 24.sp,
-        letterSpacing = 0.5.sp
+        letterSpacing = 0.3.sp
     ),
     bodyMedium = TextStyle(
-        fontFamily = NunitoFontFamily,
+        fontFamily = PlusJakartaSansFontFamily,
         fontWeight = FontWeight.Normal,
         fontSize = 14.sp,
         lineHeight = 20.sp,
-        letterSpacing = 0.25.sp
+        letterSpacing = 0.2.sp
     ),
     bodySmall = TextStyle(
-        fontFamily = NunitoFontFamily,
+        fontFamily = PlusJakartaSansFontFamily,
         fontWeight = FontWeight.Normal,
         fontSize = 12.sp,
         lineHeight = 16.sp,
-        letterSpacing = 0.4.sp
+        letterSpacing = 0.3.sp
     ),
     labelLarge = TextStyle(
-        fontFamily = NunitoFontFamily,
+        fontFamily = PlusJakartaSansFontFamily,
         fontWeight = FontWeight.SemiBold,
         fontSize = 14.sp,
         lineHeight = 20.sp,
         letterSpacing = 0.1.sp
     ),
     labelMedium = TextStyle(
-        fontFamily = NunitoFontFamily,
+        fontFamily = PlusJakartaSansFontFamily,
         fontWeight = FontWeight.Medium,
         fontSize = 12.sp,
         lineHeight = 16.sp,
-        letterSpacing = 0.5.sp
+        letterSpacing = 0.3.sp
     ),
     labelSmall = TextStyle(
-        fontFamily = NunitoFontFamily,
+        fontFamily = PlusJakartaSansFontFamily,
         fontWeight = FontWeight.Medium,
         fontSize = 11.sp,
         lineHeight = 16.sp,
-        letterSpacing = 0.5.sp
+        letterSpacing = 0.3.sp
     )
 )
