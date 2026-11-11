@@ -82,6 +82,7 @@ fun LessonExerciseScreen(
             "u1_p1_q8", "u1_l2_q7" -> listOf("saya", "halo", "dipanggil")
             "u1_l2_p2_q3" -> listOf("orang", "(negara) Indonesia", "(negara)\nIndonesia", "guru", "adalah", "murid")
             "u1_l3_p1_q9" -> listOf("(negara) Tiongkok", "kamu", "(pria) dia")
+            "u1_l3_p2_q10" -> listOf("dokter", "tidak, bukan", "sampai jumpa,\nselamat tinggal", "(perempuan)\ndia")
             else -> listOf("adalah", "guru", "(negara) Indonesia", "(negara)\nIndonesia", "orang", "murid")
         }
         val pairs = currEx?.matchPairs ?: emptyList()
@@ -781,7 +782,23 @@ fun LessonExerciseScreen(
 
             // EXERCISE TYPE 3: PILIH TERJEMAHAN YANG BENAR
             if (exercise.type == ExerciseType.SENTENCE_CHOICE) {
-                if (exercise.targetHanzi.isNotBlank()) {
+                if (exercise.illustrationRes != 0) {
+                    Surface(
+                        shape = RoundedCornerShape(20.dp),
+                        color = Color(0xFFF1F5F9),
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .height(200.dp)
+                            .padding(bottom = 16.dp)
+                    ) {
+                        Image(
+                            painter = painterResource(exercise.illustrationRes),
+                            contentDescription = "Prompt illustration",
+                            contentScale = ContentScale.Crop,
+                            modifier = Modifier.fillMaxSize()
+                        )
+                    }
+                } else if (exercise.targetHanzi.isNotBlank()) {
                     Row(
                         modifier = Modifier.fillMaxWidth(),
                         verticalAlignment = Alignment.CenterVertically
@@ -911,7 +928,8 @@ fun LessonExerciseScreen(
                     )
                 }
 
-                val isGrid2x2 = exercise.options.size == 4 && exercise.options.all { it.length <= 16 }
+                val hasIllustration = exercise.illustrationRes != 0
+                val isGrid2x2 = exercise.options.size == 4 && (hasIllustration || exercise.options.all { it.length <= 16 })
 
                 if (isGrid2x2) {
                     val rows = exercise.options.chunked(2)
@@ -936,26 +954,50 @@ fun LessonExerciseScreen(
                                         ),
                                         modifier = Modifier
                                             .weight(1f)
-                                            .height(170.dp)
+                                            .height(if (hasIllustration) 76.dp else 170.dp)
                                             .bouncyClick {
                                                 if (!isSubmitted) {
                                                     selectedOption = opt
+                                                    if (opt.contains("\n")) {
+                                                        ttsManager?.speak(opt.substringAfter("\n"))
+                                                    }
                                                 }
                                             }
                                     ) {
                                         Box(
                                             modifier = Modifier
                                                 .fillMaxSize()
-                                                .padding(12.dp),
+                                                .padding(if (hasIllustration) 8.dp else 12.dp),
                                             contentAlignment = Alignment.Center
                                         ) {
-                                            Text(
-                                                text = opt,
-                                                fontSize = 18.sp,
-                                                fontWeight = if (isSelected) FontWeight.Medium else FontWeight.Normal,
-                                                color = if (isSelected) Color(0xFF007AFF) else DeepNavy,
-                                                textAlign = TextAlign.Center
-                                            )
+                                            if (hasIllustration && opt.contains("\n")) {
+                                                val pinyin = opt.substringBefore("\n")
+                                                val hanzi = opt.substringAfter("\n")
+                                                Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                                                    Text(
+                                                        text = pinyin,
+                                                        fontSize = 14.sp,
+                                                        fontWeight = FontWeight.Normal,
+                                                        color = DeepNavy
+                                                    )
+                                                    Spacer(modifier = Modifier.height(2.dp))
+                                                    Text(
+                                                        text = hanzi,
+                                                        fontFamily = KaiTiFontFamily,
+                                                        fontSize = 22.sp,
+                                                        fontWeight = FontWeight.SemiBold,
+                                                        color = HanziColor
+                                                    )
+                                                }
+                                            } else {
+                                                Text(
+                                                    text = opt,
+                                                    fontSize = 18.sp,
+                                                    fontWeight = if (isSelected) FontWeight.Medium else FontWeight.Normal,
+                                                    color = if (isSelected) Color(0xFF007AFF) else DeepNavy,
+                                                    textAlign = TextAlign.Center
+                                                )
+                                            }
                                         }
                                     }
                                 }
