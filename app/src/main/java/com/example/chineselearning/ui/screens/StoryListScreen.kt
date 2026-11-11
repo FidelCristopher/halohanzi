@@ -107,52 +107,12 @@ fun StoryListScreen(
                     .fillMaxWidth()
                     .padding(vertical = 4.dp)
             ) {
-                // Eyebrow badge
-                Surface(
-                    color = HanziMint,
-                    shape = RoundedCornerShape(8.dp),
-                    border = BorderStroke(1.dp, HanziGreen.copy(alpha = 0.25f))
-                ) {
-                    Row(
-                        modifier = Modifier.padding(horizontal = 10.dp, vertical = 4.dp),
-                        verticalAlignment = Alignment.CenterVertically
-                    ) {
-                        Icon(
-                            painter = painterResource(R.drawable.ic_story_book_open),
-                            contentDescription = null,
-                            tint = HanziGreenDark,
-                            modifier = Modifier.size(13.dp)
-                        )
-                        Spacer(modifier = Modifier.width(6.dp))
-                        Text(
-                            text = "BACAAN BERTINGKAT • GRADED READERS",
-                            fontFamily = AppFontFamily,
-                            fontSize = 11.sp,
-                            fontWeight = FontWeight.Bold,
-                            color = HanziGreenDark,
-                            letterSpacing = 0.5.sp
-                        )
-                    }
-                }
-
-                Spacer(modifier = Modifier.height(10.dp))
-
                 Text(
                     text = "Pustaka Cerita Mandarin",
                     fontFamily = AppFontFamily,
                     fontSize = 24.sp,
                     fontWeight = FontWeight.ExtraBold,
                     color = DeepNavy
-                )
-
-                Spacer(modifier = Modifier.height(4.dp))
-
-                Text(
-                    text = "Perkaya kosakata dan kelancaran membaca secara alami dengan cerita bertingkat, audio penutur asli, dan kuis pemahaman.",
-                    fontFamily = AppFontFamily,
-                    fontSize = 13.sp,
-                    color = SlateGray,
-                    lineHeight = 18.5.sp
                 )
 
                 Spacer(modifier = Modifier.height(14.dp))
@@ -647,17 +607,9 @@ private fun ModernStoryCard(
                             Spacer(modifier = Modifier.width(12.dp))
                             Column {
                                 Text(
-                                    text = "BACAAN BERTINGKAT",
-                                    fontFamily = AppFontFamily,
-                                    fontSize = 10.sp,
-                                    fontWeight = FontWeight.Bold,
-                                    color = Color.White.copy(alpha = 0.8f),
-                                    letterSpacing = 0.5.sp
-                                )
-                                Text(
                                     text = story.titleHanzi,
                                     fontFamily = KaiTiFontFamily,
-                                    fontSize = 18.sp,
+                                    fontSize = 20.sp,
                                     fontWeight = FontWeight.Bold,
                                     color = Color.White
                                 )
