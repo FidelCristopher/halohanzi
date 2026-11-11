@@ -102,46 +102,14 @@ fun StoryListScreen(
     ) {
         // --- 1. HERO HEADER SECTION ---
         item {
-            Column(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(vertical = 4.dp)
-            ) {
-                Text(
-                    text = "Pustaka Cerita Mandarin",
-                    fontFamily = AppFontFamily,
-                    fontSize = 24.sp,
-                    fontWeight = FontWeight.ExtraBold,
-                    color = DeepNavy
-                )
-
-                Spacer(modifier = Modifier.height(14.dp))
-
-                // Modern 3-Micro Stats Bar
-                Row(
-                    modifier = Modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.spacedBy(8.dp)
-                ) {
-                    StoryHeaderStatChip(
-                        iconRes = R.drawable.ic_book,
-                        label = "Total Cerita",
-                        value = "${allStories.size} Judul",
-                        modifier = Modifier.weight(1f)
-                    )
-                    StoryHeaderStatChip(
-                        iconRes = R.drawable.ic_story_level_badge,
-                        label = "Tingkat",
-                        value = "HSK 1 - 2",
-                        modifier = Modifier.weight(1f)
-                    )
-                    StoryHeaderStatChip(
-                        iconRes = R.drawable.ic_story_quiz_check,
-                        label = "Fitur",
-                        value = "Audio & Kuis",
-                        modifier = Modifier.weight(1f)
-                    )
-                }
-            }
+            Text(
+                text = "Pustaka Cerita Mandarin",
+                fontFamily = AppFontFamily,
+                fontSize = 24.sp,
+                fontWeight = FontWeight.ExtraBold,
+                color = DeepNavy,
+                modifier = Modifier.padding(top = 4.dp, bottom = 4.dp)
+            )
         }
 
         // --- 2. SEARCH BAR ---
@@ -283,63 +251,6 @@ fun StoryListScreen(
                 ModernStoryCard(
                     story = story,
                     onCardClick = { onSelectStory(story) }
-                )
-            }
-        }
-    }
-}
-
-// -------------------------------------------------------------
-// SUB-COMPONENTS: HEADER STAT CHIP
-// -------------------------------------------------------------
-@Composable
-private fun StoryHeaderStatChip(
-    iconRes: Int,
-    label: String,
-    value: String,
-    modifier: Modifier = Modifier
-) {
-    Surface(
-        modifier = modifier,
-        shape = RoundedCornerShape(14.dp),
-        color = Color.White,
-        border = BorderStroke(1.dp, BorderGray)
-    ) {
-        Row(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(horizontal = 10.dp, vertical = 8.dp),
-            verticalAlignment = Alignment.CenterVertically
-        ) {
-            Box(
-                modifier = Modifier
-                    .size(28.dp)
-                    .clip(RoundedCornerShape(8.dp))
-                    .background(HanziMint),
-                contentAlignment = Alignment.Center
-            ) {
-                Icon(
-                    painter = painterResource(iconRes),
-                    contentDescription = null,
-                    tint = HanziGreenDark,
-                    modifier = Modifier.size(15.dp)
-                )
-            }
-            Spacer(modifier = Modifier.width(8.dp))
-            Column {
-                Text(
-                    text = label,
-                    fontFamily = AppFontFamily,
-                    fontSize = 10.sp,
-                    color = SlateGray,
-                    fontWeight = FontWeight.Medium
-                )
-                Text(
-                    text = value,
-                    fontFamily = AppFontFamily,
-                    fontSize = 12.sp,
-                    fontWeight = FontWeight.Bold,
-                    color = DeepNavy
                 )
             }
         }
