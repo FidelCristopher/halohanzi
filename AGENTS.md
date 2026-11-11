@@ -24,3 +24,8 @@ To maintain rapid development while preventing regressions, strictly follow this
   - Run `gradlew assembleDebug` and install to emulator.
   - Capture screenshot via ADB screencap to verify visual accuracy.
   - Commit after visual confirmation.
+
+## Remote Push Policy
+* **STRICT RULE**: The assistant must **ONLY** stage and commit changes locally (`git commit`).
+* **NEVER** run `git push` or push to any remote.
+* The user will manually handle all `git push` operations via Git Bash.
