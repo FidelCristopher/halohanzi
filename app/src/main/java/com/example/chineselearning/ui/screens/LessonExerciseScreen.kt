@@ -86,6 +86,8 @@ fun LessonExerciseScreen(
             "u1_l4_p1_q6" -> listOf("(pria) dia", "(negara) Tiongkok", "kamu")
             "u1_l4_p2_q6" -> listOf("(perempuan) dia", "tidak, bukan", "dokter", "sampai jumpa,\nselamat tinggal")
             "u1_l5_p1_q5" -> listOf("dipanggil", "halo", "orang", "sampai jumpa,\nselamat tinggal")
+            "u1_l5_p2_q3" -> listOf("(pria) dia", "dokter", "tidak, bukan", "guru")
+            "u1_l5_p2_q6" -> listOf("murid", "(perempuan) dia", "adalah")
             else -> listOf("adalah", "guru", "(negara) Indonesia", "(negara)\nIndonesia", "orang", "murid")
         }
         val pairs = currEx?.matchPairs ?: emptyList()
@@ -523,7 +525,21 @@ fun LessonExerciseScreen(
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             // Exercise Title
-            if (exercise.title.startsWith("Buat kalimat menggunakan")) {
+            if (exercise.title.startsWith("Lengkapi percakapan dengan")) {
+                val annotatedTitle = buildAnnotatedString {
+                    withStyle(SpanStyle(color = DeepNavy, fontWeight = FontWeight.Bold, fontSize = 21.sp)) {
+                        append("Lengkapi percakapan dengan\n")
+                    }
+                    withStyle(SpanStyle(color = Color(0xFF7C4DFF), fontWeight = FontWeight.Bold, fontSize = 21.sp)) {
+                        append("semua kata")
+                    }
+                }
+                Text(
+                    text = annotatedTitle,
+                    lineHeight = 27.sp,
+                    modifier = Modifier.fillMaxWidth()
+                )
+            } else if (exercise.title.startsWith("Buat kalimat menggunakan")) {
                 val annotatedTitle = buildAnnotatedString {
                     withStyle(SpanStyle(color = DeepNavy, fontWeight = FontWeight.Bold, fontSize = 21.sp)) {
                         append("Buat kalimat menggunakan\n")
@@ -920,6 +936,44 @@ fun LessonExerciseScreen(
                     }
 
                     Spacer(modifier = Modifier.height(28.dp))
+                } else if (exercise.title.startsWith("Dengarkan rekaman")) {
+                    Row(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(top = 8.dp, bottom = 20.dp),
+                        horizontalArrangement = Arrangement.spacedBy(16.dp),
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        Box(
+                            modifier = Modifier
+                                .size(58.dp)
+                                .clip(RoundedCornerShape(16.dp))
+                                .background(Color(0xFF00C48C))
+                                .bouncyClick { ttsManager?.speak(exercise.audioToSpeak) },
+                            contentAlignment = Alignment.Center
+                        ) {
+                            Icon(imageVector = Icons.AutoMirrored.Filled.VolumeUp, contentDescription = "Audio", tint = Color.White, modifier = Modifier.size(28.dp))
+                        }
+                        Box(
+                            modifier = Modifier
+                                .size(58.dp)
+                                .clip(RoundedCornerShape(16.dp))
+                                .background(Color(0xFFD4F5EC))
+                                .bouncyClick { ttsManager?.speak(exercise.audioToSpeak, speedRate = 0.55f) },
+                            contentAlignment = Alignment.Center
+                        ) {
+                            Icon(painter = painterResource(R.drawable.ic_snail), contentDescription = "Slow audio", tint = Color(0xFF00B386), modifier = Modifier.size(28.dp))
+                        }
+                    }
+
+                    if (exercise.targetTranslation.isNotBlank()) {
+                        Text(
+                            text = exercise.targetTranslation,
+                            fontSize = 19.sp,
+                            color = DeepNavy,
+                            modifier = Modifier.fillMaxWidth().padding(bottom = 24.dp)
+                        )
+                    }
                 } else if (exercise.title == "Selesaikan percakapan" || exercise.title == "Pilih kalimat yang benar untuk melengkapi dialog") {
                     Column(
                         modifier = Modifier

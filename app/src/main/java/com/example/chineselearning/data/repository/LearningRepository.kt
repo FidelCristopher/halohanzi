@@ -570,6 +570,7 @@ object LearningRepository {
             category = "Sapaan & Sekolah",
             description = "Pertemuan ramah David dengan murid baru asal Beijing di sekolah.",
             coverEmoji = "🎓",
+            coverImageRes = R.drawable.img_two_students_studying,
             estimatedReadMinutes = 2,
             sentences = listOf(
                 Sentence("s1_1", "你好！我叫大卫。", "Nǐ hǎo! Wǒ jiào Dàwèi.", "Halo! Nama saya David.", listOf(findToken("你好"), findToken("我"), findToken("叫"), findToken("大卫"))),
@@ -596,6 +597,7 @@ object LearningRepository {
             category = "Waktu & Jadwal",
             description = "Rutinitas hari Minggu David mengatur waktu dari pagi hingga sore.",
             coverEmoji = "⏰",
+            coverImageRes = R.drawable.img_student_boy,
             estimatedReadMinutes = 2,
             sentences = listOf(
                 Sentence("s2_1", "今天是一月十号，星期天。", "Jīntiān shì yī yuè shí hào, xīngqītiān.", "Hari ini tanggal 10 Januari, hari Minggu.", listOf(findToken("今天"), findToken("是"), findToken("一"), findToken("月"), findToken("十"), findToken("号"), findToken("星期"))),
@@ -668,6 +670,7 @@ object LearningRepository {
             category = "Profesi & Belajar",
             description = "Dedikasi dokter Li di rumah sakit dan kegemarannya membaca buku di komputer.",
             coverEmoji = "👨‍⚕️",
+            coverImageRes = R.drawable.img_female_doctor_syringe,
             estimatedReadMinutes = 2,
             sentences = listOf(
                 Sentence("s5_1", "李先生是一位好医生，在医院工作。", "Lǐ xiānsheng shì yí wèi hǎo yīshēng, zài yīyuàn gōngzuò.", "Tuan Li adalah seorang dokter yang baik, bekerja di rumah sakit.", listOf(findToken("是"), findToken("好"), findToken("医生"), findToken("在"), findToken("医院"), findToken("工作"))),
@@ -692,6 +695,7 @@ object LearningRepository {
             category = "Transportasi & Cuaca",
             description = "Perjalanan naik taksi di bawah cuaca Beijing yang sejuk menuju stasiun.",
             coverEmoji = "🚕",
+            coverImageRes = R.drawable.img_girl_in_car,
             estimatedReadMinutes = 2,
             sentences = listOf(
                 Sentence("s6_1", "今天天气很好，不太热，也不冷。", "Jīntiān tiānqì hěn hǎo, bú tài rè, yě bù lěng.", "Cuaca hari ini sangat bagus, tidak terlalu panas dan tidak dingin.", listOf(findToken("今天"), findToken("天气"), findToken("很"), findToken("好"), findToken("不"), findToken("太"), findToken("热"), findToken("也"), findToken("不"), findToken("冷"))),
@@ -703,6 +707,268 @@ object LearningRepository {
             questions = listOf(
                 StoryQuestion("q6_1", "今天天气怎么样？(Bagaimana cuaca hari ini?)", listOf("很冷 (Sangat dingin)", "下雨 (Hujan)", "很好，不热也不冷 (Bagus, tidak panas/dingin)", "太热了 (Terlalu panas)"), 2, "Kalimat 1: '今天天气很好，不太热，也不冷'."),
                 StoryQuestion("q6_2", "他们坐什么车去火车站？(Naik kendaraan apa ke stasiun?)", listOf("飞机 (Pesawat)", "出租车 (Taksi)", "自行车 (Sepeda)", "火车 (Kereta)"), 1, "Kalimat 2: '坐出租车去火车站'.")
+            )
+        ),
+
+        // Cerita 7 - HSK 2: Belanja Buah di Supermarket
+        Story(
+            id = "story_hsk2_market",
+            titleHanzi = "在超市买水果",
+            titlePinyin = "Zài Chāoshì Mǎi Shuǐguǒ",
+            titleTranslation = "Membeli Buah di Supermarket",
+            level = "HSK 2",
+            category = "Belanja & Makanan",
+            description = "Mingming dan ibu pergi ke supermarket untuk memilih apel merah dan semangka manis di hari musim panas.",
+            coverEmoji = "🍎",
+            coverImageRes = 0,
+            estimatedReadMinutes = 3,
+            sentences = listOf(
+                Sentence(
+                    "s_hsk2_m_1",
+                    "今天星期六，明明和妈妈一起去超市买东西。",
+                    "Jīntiān xīngqīliù, Míngming hé māma yìqǐ qù chāoshì mǎi dōngxi.",
+                    "Hari ini hari Sabtu, Mingming dan ibu bersama-sama pergi ke supermarket berbelanja.",
+                    listOf(
+                        WordToken("今天", "jīntiān", "Hari ini"),
+                        WordToken("星期六", "xīngqīliù", "Hari Sabtu"),
+                        WordToken("明明", "Míngming", "Mingming"),
+                        WordToken("和", "hé", "Dan / bersama"),
+                        WordToken("妈妈", "māma", "Ibu"),
+                        WordToken("一起", "yìqǐ", "Bersama-sama"),
+                        WordToken("去", "qù", "Pergi"),
+                        WordToken("超市", "chāoshì", "Supermarket"),
+                        WordToken("买", "mǎi", "Membeli"),
+                        WordToken("东西", "dōngxi", "Barang / belanjaan")
+                    )
+                ),
+                Sentence(
+                    "s_hsk2_m_2",
+                    "超市里的水果真多，有红色的苹果，也有大西瓜。",
+                    "Chāoshì lǐ de shuǐguǒ zhēn duō, yǒu hóngsè de píngguǒ, yě yǒu dà xīguā.",
+                    "Buah di supermarket sungguh banyak, ada apel merah, juga ada semangka besar.",
+                    listOf(
+                        WordToken("超市", "chāoshì", "Supermarket"),
+                        WordToken("里", "lǐ", "Di dalam"),
+                        WordToken("的", "de", "Partikel kepemilikan"),
+                        WordToken("水果", "shuǐguǒ", "Buah-buahan"),
+                        WordToken("真", "zhēn", "Sungguh / benar-benar"),
+                        WordToken("多", "duō", "Banyak"),
+                        WordToken("有", "yǒu", "Ada"),
+                        WordToken("红色", "hóngsè", "Warna merah"),
+                        WordToken("的", "de", "Partikel"),
+                        WordToken("苹果", "píngguǒ", "Apel"),
+                        WordToken("也", "yě", "Juga"),
+                        WordToken("有", "yǒu", "Ada"),
+                        WordToken("大", "dà", "Besar"),
+                        WordToken("西瓜", "xīguā", "Semangka")
+                    )
+                ),
+                Sentence(
+                    "s_hsk2_m_3",
+                    "明明问妈妈：“妈妈，今天的西瓜甜不甜？”",
+                    "Míngming wèn māma: “Māma, jīntiān de xīguā tián bu tián?”",
+                    "Mingming bertanya pada ibu: “Ibu, apakah semangka hari ini manis?”",
+                    listOf(
+                        WordToken("明明", "Míngming", "Mingming"),
+                        WordToken("问", "wèn", "Bertanya"),
+                        WordToken("妈妈", "māma", "Ibu"),
+                        WordToken("今天", "jīntiān", "Hari ini"),
+                        WordToken("的", "de", "Partikel"),
+                        WordToken("西瓜", "xīguā", "Semangka"),
+                        WordToken("甜不甜", "tián bu tián", "Manis atau tidak")
+                    )
+                ),
+                Sentence(
+                    "s_hsk2_m_4",
+                    "妈妈笑着回答：“你看，这里的西瓜又大又新鲜，一定很甜。”",
+                    "Māma xiào zhe huídá: “Nǐ kàn, zhèlǐ de xīguā yòu dà yòu xīnxiān, yídìng hěn tián.”",
+                    "Ibu tersenyum menjawab: “Coba lihat, semangka di sini besar dan segar, pasti manis sekali.”",
+                    listOf(
+                        WordToken("妈妈", "māma", "Ibu"),
+                        WordToken("笑着", "xiào zhe", "Tersenyum sambil"),
+                        WordToken("回答", "huídá", "Menjawab"),
+                        WordToken("你", "nǐ", "Kamu"),
+                        WordToken("看", "kàn", "Lihat"),
+                        WordToken("这里", "zhèlǐ", "Di sini"),
+                        WordToken("的", "de", "Partikel"),
+                        WordToken("西瓜", "xīguā", "Semangka"),
+                        WordToken("又大又新鲜", "yòu dà yòu xīnxiān", "Sudah besar juga segar"),
+                        WordToken("一定", "yídìng", "Pasti"),
+                        WordToken("很", "hěn", "Sangat"),
+                        WordToken("甜", "tián", "Manis")
+                    )
+                ),
+                Sentence(
+                    "s_hsk2_m_5",
+                    "他们买了两斤苹果和一个西瓜，高高兴兴地回家了。",
+                    "Tāmen mǎi le liǎng jīn píngguǒ hé yí gè xīguā, gāogāoxìngxìng de huí jiā le.",
+                    "Mereka membeli dua jin apel dan satu semangka, lalu pulang ke rumah dengan riang gembira.",
+                    listOf(
+                        WordToken("他们", "tāmen", "Mereka"),
+                        WordToken("买", "mǎi", "Membeli"),
+                        WordToken("了", "le", "Sudah"),
+                        WordToken("两斤", "liǎng jīn", "Dua jin (1 kg)"),
+                        WordToken("苹果", "píngguǒ", "Apel"),
+                        WordToken("和", "hé", "Dan"),
+                        WordToken("一个", "yí gè", "Satu buah"),
+                        WordToken("西瓜", "xīguā", "Semangka"),
+                        WordToken("高高兴兴地", "gāogāoxìngxìng de", "Dengan senang gembira"),
+                        WordToken("回家", "huí jiā", "Pulang ke rumah"),
+                        WordToken("了", "le", "Sudah")
+                    )
+                )
+            ),
+            questions = listOf(
+                StoryQuestion(
+                    "q_hsk2_m_1",
+                    "明明和谁一起去超市？(Mingming pergi ke supermarket bersama siapa?)",
+                    listOf("老师 (Guru)", "朋友 (Teman)", "妈妈 (Ibu)", "同学 (Teman sekelas)"),
+                    2,
+                    "Di kalimat ke-1 tertulis: '明明和妈妈一起去超市买东西' (bersama ibu)."
+                ),
+                StoryQuestion(
+                    "q_hsk2_m_2",
+                    "他们在超市买了什么？(Apa yang mereka beli di supermarket?)",
+                    listOf(
+                        "苹果和西瓜 (Apel dan semangka)",
+                        "米饭和茶 (Nasi dan teh)",
+                        "书和电脑 (Buku dan komputer)",
+                        "衣服和鞋子 (Baju dan sepatu)"
+                    ),
+                    0,
+                    "Di kalimat terakhir tertulis: '他们买了两斤苹果和一个西瓜' (dua jin apel dan satu semangka)."
+                )
+            )
+        ),
+
+        // Cerita 8 - HSK 2: Mengantar Teman ke Bandara
+        Story(
+            id = "story_hsk2_airport",
+            titleHanzi = "去机场送朋友",
+            titlePinyin = "Qù Jīchǎng Sòng Péngyou",
+            titleTranslation = "Mengantar Teman ke Bandara",
+            level = "HSK 2",
+            category = "Perjalanan & Transportasi",
+            description = "Wang Lei bangun pagi untuk mengantar sahabatnya yang akan terbang pulang ke negaranya dari Bandara Ibu Kota.",
+            coverEmoji = "✈️",
+            coverImageRes = 0,
+            estimatedReadMinutes = 3,
+            sentences = listOf(
+                Sentence(
+                    "s_hsk2_a_1",
+                    "早上七点，王磊就起床准备去首都机场。",
+                    "Zǎoshang qī diǎn, Wáng Lěi jiù qǐchuáng zhǔnbèi qù shǒudū jīchǎng.",
+                    "Pukul 7 pagi, Wang Lei sudah bangun bersiap pergi ke Bandara Ibu Kota.",
+                    listOf(
+                        WordToken("早上", "zǎoshang", "Pagi hari"),
+                        WordToken("七点", "qī diǎn", "Pukul 7"),
+                        WordToken("王磊", "Wáng Lěi", "Wang Lei"),
+                        WordToken("就", "jiù", "Sudah / langsung"),
+                        WordToken("起床", "qǐchuáng", "Bangun tidur"),
+                        WordToken("准备", "zhǔnbèi", "Bersiap-siap"),
+                        WordToken("去", "qù", "Pergi"),
+                        WordToken("首都", "shǒudū", "Ibu kota"),
+                        WordToken("机场", "jīchǎng", "Bandara")
+                    )
+                ),
+                Sentence(
+                    "s_hsk2_a_2",
+                    "今天他的好朋友大卫要坐飞机回自己的国家。",
+                    "Jīntiān tā de hǎo péngyou Dàwèi yào zuò fēijī huí zìjǐ de guójiā.",
+                    "Hari ini sahabatnya David hendak naik pesawat kembali ke negaranya.",
+                    listOf(
+                        WordToken("今天", "jīntiān", "Hari ini"),
+                        WordToken("他的", "tā de", "Miliknya"),
+                        WordToken("好朋友", "hǎo péngyou", "Sahabat baik"),
+                        WordToken("大卫", "Dàwèi", "David"),
+                        WordToken("要", "yào", "Hendak / akan"),
+                        WordToken("坐", "zuò", "Naik"),
+                        WordToken("飞机", "fēijī", "Pesawat terbang"),
+                        WordToken("回", "huí", "Kembali"),
+                        WordToken("自己", "zìjǐ", "Sendiri"),
+                        WordToken("的", "de", "Partikel kepemilikan"),
+                        WordToken("国家", "guójiā", "Negara")
+                    )
+                ),
+                Sentence(
+                    "s_hsk2_a_3",
+                    "在机场的大厅里，王磊见到了大卫和他的家人。",
+                    "Zài jīchǎng de dàtīng lǐ, Wáng Lěi jiàndào le Dàwèi hé tā de jiārén.",
+                    "Di aula bandara, Wang Lei bertemu dengan David dan keluarganya.",
+                    listOf(
+                        WordToken("在", "zài", "Di"),
+                        WordToken("机场", "jīchǎng", "Bandara"),
+                        WordToken("的", "de", "Partikel"),
+                        WordToken("大厅", "dàtīng", "Aula / terminal"),
+                        WordToken("里", "lǐ", "Di dalam"),
+                        WordToken("王磊", "Wáng Lěi", "Wang Lei"),
+                        WordToken("见到", "jiàndào", "Melihat / bertemu"),
+                        WordToken("了", "le", "Sudah"),
+                        WordToken("大卫", "Dàwèi", "David"),
+                        WordToken("和", "hé", "Dan"),
+                        WordToken("他的", "tā de", "Keluarganya"),
+                        WordToken("家人", "jiārén", "Keluarga")
+                    )
+                ),
+                Sentence(
+                    "s_hsk2_a_4",
+                    "大卫笑着说：“谢谢你来送我，我会经常想念你的！”",
+                    "Dàwèi xiào zhe shuō: “Xièxie nǐ lái sòng wǒ, wǒ huì jīngcháng xiǎngniàn nǐ de!”",
+                    "David tersenyum berkata: “Terima kasih telah datang mengantarku, aku akan selalu merindukanmu!”",
+                    listOf(
+                        WordToken("大卫", "Dàwèi", "David"),
+                        WordToken("笑着", "xiào zhe", "Sambil tersenyum"),
+                        WordToken("说", "shuō", "Berkata"),
+                        WordToken("谢谢", "xièxie", "Terima kasih"),
+                        WordToken("你", "nǐ", "Kamu"),
+                        WordToken("来", "lái", "Datang"),
+                        WordToken("送", "sòng", "Mengantar"),
+                        WordToken("我", "wǒ", "Saya"),
+                        WordToken("我会", "wǒ huì", "Saya akan"),
+                        WordToken("经常", "jīngcháng", "Sering / selalu"),
+                        WordToken("想念", "xiǎngniàn", "Merindukan"),
+                        WordToken("你", "nǐ", "Kamu")
+                    )
+                ),
+                Sentence(
+                    "s_hsk2_a_5",
+                    "王磊说：“祝你一路平安，到了以后记得给我打电话。”",
+                    "Wáng Lěi shuō: “Zhù nǐ yílù píng'ān, dào le yǐhòu jìde gěi wǒ dǎ diànhuà.”",
+                    "Wang Lei berkata: “Semoga selamat sampai tujuan, setelah tiba ingatlah untuk meneleponku.”",
+                    listOf(
+                        WordToken("王磊", "Wáng Lěi", "Wang Lei"),
+                        WordToken("说", "shuō", "Berkata"),
+                        WordToken("祝你", "zhù nǐ", "Mendoakanmu"),
+                        WordToken("一路平安", "yílù píng'ān", "Selamat sepanjang jalan"),
+                        WordToken("到了", "dào le", "Setelah tiba"),
+                        WordToken("以后", "yǐhòu", "Nanti / setelah"),
+                        WordToken("记得", "jìde", "Ingat"),
+                        WordToken("给", "gěi", "Kepada"),
+                        WordToken("我", "wǒ", "Saya"),
+                        WordToken("打电话", "dǎ diànhuà", "Menelepon")
+                    )
+                )
+            ),
+            questions = listOf(
+                StoryQuestion(
+                    "q_hsk2_a_1",
+                    "大卫今天要回哪里？(David hari ini hendak kembali ke mana?)",
+                    listOf("学校 (Sekolah)", "医院 (Rumah sakit)", "自己的国家 (Negaranya sendiri)", "饭馆 (Restoran)"),
+                    2,
+                    "Di kalimat ke-2: '今天他的好朋友大卫要坐飞机回自己的国家'."
+                ),
+                StoryQuestion(
+                    "q_hsk2_a_2",
+                    "王磊对大卫说了什么祝福？(Ucapan doa apa yang diberikan Wang Lei untuk David?)",
+                    listOf(
+                        "祝你一路平安 (Semoga selamat sampai tujuan)",
+                        "祝你生日快乐 (Selamat ulang tahun)",
+                        "祝你新年好 (Selamat tahun baru)",
+                        "祝你身体健康 (Semoga sehat selalu)"
+                    ),
+                    0,
+                    "Di kalimat ke-5: '王磊说：祝你一路平安' (Semoga perjalananmu aman dan damai)."
+                )
             )
         )
     )
@@ -3270,6 +3536,106 @@ object LearningRepository {
                             audioToSpeak = "他不叫布迪。",
                             keyboardKeys = listOf("b", "c", "é", "k", "o", "t", "ú", "w", "y"),
                             correctAnswer = "bú"
+                        )
+                    ),
+                    exercisesPart2 = listOf(
+                        // 1. Soal 1: Lengkapi terjemahan (Apakah namamu Wang Fei? -> [你] [叫] 王飞 [吗] ？)
+                        Exercise(
+                            id = "u1_l5_p2_q1",
+                            type = ExerciseType.SENTENCE_BUILDER,
+                            title = "Lengkapi terjemahan",
+                            targetTranslation = "Apakah namamu Wang Fei?",
+                            targetHanzi = "你叫王飞吗？",
+                            targetPinyin = "Nǐ jiào WángFēi ma?",
+                            audioToSpeak = "你叫王飞吗？",
+                            wordChips = listOf("他:tā", "我:wǒ", "人:rén", "吗:ma", "你好:nǐhǎo", "叫:jiào", "你:nǐ"),
+                            correctAnswer = "你,叫,吗"
+                        ),
+                        // 2. Soal 2: Lengkapi percakapan dengan semua kata (Speaker A: [你] [是] [医生] [吗], Speaker B: 我不是医生。)
+                        Exercise(
+                            id = "u1_l5_p2_q2",
+                            type = ExerciseType.SENTENCE_BUILDER,
+                            title = "Lengkapi percakapan dengan semua kata",
+                            targetHanzi = "你是医生吗？",
+                            targetPinyin = "Nǐ shì yīshēng ma?",
+                            audioToSpeak = "你是医生吗？",
+                            wordChips = listOf("吗:ma", "是:shì", "你:nǐ", "医生:yīshēng"),
+                            correctAnswer = "你,是,医生,吗"
+                        ),
+                        // 3. Soal 3: Ketuk pasangan yang sesuai (老师, 不, 他, audio-only 医生)
+                        Exercise(
+                            id = "u1_l5_p2_q3",
+                            type = ExerciseType.MATCH_PAIRS,
+                            title = "Ketuk pasangan yang sesuai",
+                            correctAnswer = "ALL_MATCHED",
+                            matchPairs = listOf(
+                                MatchPairItem("l5_p2_m1", "老师", "lǎoshī", "guru"),
+                                MatchPairItem("l5_p2_m2", "不", "bù", "tidak, bukan"),
+                                MatchPairItem("l5_p2_m3", "他", "tā", "(pria) dia"),
+                                MatchPairItem("l5_p2_m4", "医生", "yīshēng", "dokter", isAudioOnly = true, audioToSpeak = "医生")
+                            )
+                        ),
+                        // 4. Soal 4: Lengkapi terjemahan (Wang Fei bukan orang Tiongkok. -> 王飞 [不] [是] [中国] [人] 。)
+                        Exercise(
+                            id = "u1_l5_p2_q4",
+                            type = ExerciseType.SENTENCE_BUILDER,
+                            title = "Lengkapi terjemahan",
+                            targetTranslation = "Wang Fei bukan orang Tiongkok.",
+                            targetHanzi = "王飞不是中国人。",
+                            targetPinyin = "WángFēi bú shì Zhōngguó rén.",
+                            audioToSpeak = "王飞不是中国人。",
+                            wordChips = listOf("印尼:Yìnní", "人:rén", "叫:jiào", "你好:nǐhǎo", "是:shì", "不:bú", "学生:xuéshēng", "中国:Zhōngguó"),
+                            correctAnswer = "不,是,中国,人"
+                        ),
+                        // 5. Soal 5: Dengarkan rekaman dan jawab pertanyaan (Orang ini ingin tahu tentang: -> Kewarganegaraan.)
+                        Exercise(
+                            id = "u1_l5_p2_q5",
+                            type = ExerciseType.SENTENCE_CHOICE,
+                            title = "Dengarkan rekaman dan jawab pertanyaan",
+                            targetTranslation = "Orang ini ingin tahu tentang:",
+                            audioToSpeak = "你是中国人吗？",
+                            options = listOf(
+                                "Pekerjaan.",
+                                "Kewarganegaraan.",
+                                "Nama."
+                            ),
+                            correctAnswer = "Kewarganegaraan."
+                        ),
+                        // 6. Soal 6: Ketuk pasangan yang sesuai (她, 学生, audio-only 是)
+                        Exercise(
+                            id = "u1_l5_p2_q6",
+                            type = ExerciseType.MATCH_PAIRS,
+                            title = "Ketuk pasangan yang sesuai",
+                            correctAnswer = "ALL_MATCHED",
+                            matchPairs = listOf(
+                                MatchPairItem("l5_p2_m5", "她", "tā", "(perempuan) dia"),
+                                MatchPairItem("l5_p2_m6", "学生", "xuéshēng", "murid"),
+                                MatchPairItem("l5_p2_m7", "是", "shì", "adalah", isAudioOnly = true, audioToSpeak = "是")
+                            )
+                        ),
+                        // 7. Soal 7: Lengkapi terjemahan (Dia(P) orang Tiongkok. -> 她 [shì / 是] 中国人。)
+                        Exercise(
+                            id = "u1_l5_p2_q7",
+                            type = ExerciseType.PINYIN_KEYBOARD,
+                            title = "Lengkapi terjemahan",
+                            targetTranslation = "Dia(P) orang Tiongkok.",
+                            targetHanzi = "她是中国人。",
+                            targetPinyin = "Tā shì Zhōngguó rén.",
+                            audioToSpeak = "她是中国人。",
+                            keyboardKeys = listOf("ā", "b", "é", "h", "ì", "ǒ", "q", "s", "u"),
+                            correctAnswer = "shì"
+                        ),
+                        // 8. Soal 8: Terjemahkan kalimat ini (Nama dia(L) bukan Wang Fei. -> 他不叫王飞。)
+                        Exercise(
+                            id = "u1_l5_p2_q8",
+                            type = ExerciseType.SENTENCE_BUILDER,
+                            title = "Terjemahkan kalimat ini",
+                            targetTranslation = "Nama dia(L) bukan Wang Fei.",
+                            targetHanzi = "他不叫王飞。",
+                            targetPinyin = "Tā bú jiào WángFēi.",
+                            audioToSpeak = "他不叫王飞。",
+                            wordChips = listOf("王飞:WángFēi", "不:bú", "我:wǒ", "你:nǐ", "你好:nǐhǎo", "叫:jiào", "他:tā"),
+                            correctAnswer = "他,不,叫,王飞"
                         )
                     )
                 )
