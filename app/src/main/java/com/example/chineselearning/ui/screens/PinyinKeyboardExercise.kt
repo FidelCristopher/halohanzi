@@ -207,8 +207,8 @@ fun PinyinKeyboardExercise(
                     }
                 }
             }
-        } else if (exercise.id == "u1_l5_p1_q7") {
-            // Soal 7: Lengkapi terjemahan (Nama dia(L) bukan Budi.)
+        } else if (exercise.id == "u1_l5_p1_q7" || exercise.id == "u1_l5_p2_q7") {
+            // Soal 7: Lengkapi terjemahan
             if (exercise.targetTranslation.isNotBlank()) {
                 Text(
                     text = exercise.targetTranslation,
@@ -221,85 +221,168 @@ fun PinyinKeyboardExercise(
                 )
             }
 
-            // tā / 他 [Slot: bú / 不] jiào / 叫 Bùdí / 布迪 。
-            Row(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(vertical = 12.dp),
-                verticalAlignment = Alignment.Bottom,
-                horizontalArrangement = Arrangement.Start
-            ) {
-                // tā / 他
-                Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                    Text(text = "tā", fontSize = 15.sp, color = SlateGray)
-                    Spacer(modifier = Modifier.height(2.dp))
-                    Text(text = "他", fontFamily = KaiTiFontFamily, fontSize = 25.sp, color = HanziColor)
-                }
-
-                Spacer(modifier = Modifier.width(14.dp))
-
-                // Blank typing slot for bú above 不
-                Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                    Row(verticalAlignment = Alignment.CenterVertically) {
-                        Text(
-                            text = typedPinyin,
-                            fontSize = 16.sp,
-                            fontWeight = FontWeight.SemiBold,
-                            color = DeepNavy
-                        )
-                        if (!isSubmitted) {
-                            Box(
-                                modifier = Modifier
-                                    .width(2.dp)
-                                    .height(18.dp)
-                                    .background(DeepNavy.copy(alpha = cursorAlpha))
-                            )
-                        }
+            if (exercise.id == "u1_l5_p2_q7") {
+                // tā / 她 [Slot: shì / 是] Zhōngguó / 中国 rén / 人 。
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(vertical = 12.dp),
+                    verticalAlignment = Alignment.Bottom,
+                    horizontalArrangement = Arrangement.Start
+                ) {
+                    // tā / 她
+                    Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                        Text(text = "tā", fontSize = 15.sp, color = SlateGray)
+                        Spacer(modifier = Modifier.height(2.dp))
+                        Text(text = "她", fontFamily = KaiTiFontFamily, fontSize = 25.sp, color = HanziColor)
                     }
-                    Spacer(modifier = Modifier.height(4.dp))
-                    Box(
-                        modifier = Modifier
-                            .width(55.dp)
-                            .height(2.5.dp)
-                            .background(Color(0xFF00C48C), shape = RoundedCornerShape(2.dp))
-                    )
-                    Spacer(modifier = Modifier.height(4.dp))
+
+                    Spacer(modifier = Modifier.width(14.dp))
+
+                    // Blank typing slot for shì above 是
+                    Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                        Row(verticalAlignment = Alignment.CenterVertically) {
+                            Text(
+                                text = typedPinyin,
+                                fontSize = 16.sp,
+                                fontWeight = FontWeight.SemiBold,
+                                color = DeepNavy
+                            )
+                            if (!isSubmitted) {
+                                Box(
+                                    modifier = Modifier
+                                        .width(2.dp)
+                                        .height(18.dp)
+                                        .background(DeepNavy.copy(alpha = cursorAlpha))
+                                )
+                            }
+                        }
+                        Spacer(modifier = Modifier.height(4.dp))
+                        Box(
+                            modifier = Modifier
+                                .width(55.dp)
+                                .height(2.5.dp)
+                                .background(Color(0xFF00C48C), shape = RoundedCornerShape(2.dp))
+                        )
+                        Spacer(modifier = Modifier.height(4.dp))
+                        Text(
+                            text = "是",
+                            fontFamily = KaiTiFontFamily,
+                            fontSize = 25.sp,
+                            fontWeight = FontWeight.Normal,
+                            color = HanziColor
+                        )
+                    }
+
+                    Spacer(modifier = Modifier.width(14.dp))
+
+                    // Zhōngguó / 中国
+                    Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                        Text(text = "Zhōngguó", fontSize = 15.sp, color = SlateGray)
+                        Spacer(modifier = Modifier.height(2.dp))
+                        Text(text = "中国", fontFamily = KaiTiFontFamily, fontSize = 25.sp, color = HanziColor)
+                    }
+
+                    Spacer(modifier = Modifier.width(14.dp))
+
+                    // rén / 人
+                    Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                        Text(text = "rén", fontSize = 15.sp, color = SlateGray)
+                        Spacer(modifier = Modifier.height(2.dp))
+                        Text(text = "人", fontFamily = KaiTiFontFamily, fontSize = 25.sp, color = HanziColor)
+                    }
+
+                    Spacer(modifier = Modifier.width(6.dp))
+
                     Text(
-                        text = "不",
+                        text = " 。",
                         fontFamily = KaiTiFontFamily,
                         fontSize = 25.sp,
-                        fontWeight = FontWeight.Normal,
-                        color = HanziColor
+                        color = HanziColor,
+                        modifier = Modifier.padding(bottom = 4.dp)
                     )
                 }
+            } else {
+                // tā / 他 [Slot: bú / 不] jiào / 叫 Bùdí / 布迪 。
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(vertical = 12.dp),
+                    verticalAlignment = Alignment.Bottom,
+                    horizontalArrangement = Arrangement.Start
+                ) {
+                    // tā / 他
+                    Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                        Text(text = "tā", fontSize = 15.sp, color = SlateGray)
+                        Spacer(modifier = Modifier.height(2.dp))
+                        Text(text = "他", fontFamily = KaiTiFontFamily, fontSize = 25.sp, color = HanziColor)
+                    }
 
-                Spacer(modifier = Modifier.width(14.dp))
+                    Spacer(modifier = Modifier.width(14.dp))
 
-                // jiào / 叫
-                Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                    Text(text = "jiào", fontSize = 15.sp, color = SlateGray)
-                    Spacer(modifier = Modifier.height(2.dp))
-                    Text(text = "叫", fontFamily = KaiTiFontFamily, fontSize = 25.sp, color = HanziColor)
+                    // Blank typing slot for bú above 不
+                    Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                        Row(verticalAlignment = Alignment.CenterVertically) {
+                            Text(
+                                text = typedPinyin,
+                                fontSize = 16.sp,
+                                fontWeight = FontWeight.SemiBold,
+                                color = DeepNavy
+                            )
+                            if (!isSubmitted) {
+                                Box(
+                                    modifier = Modifier
+                                        .width(2.dp)
+                                        .height(18.dp)
+                                        .background(DeepNavy.copy(alpha = cursorAlpha))
+                                )
+                            }
+                        }
+                        Spacer(modifier = Modifier.height(4.dp))
+                        Box(
+                            modifier = Modifier
+                                .width(55.dp)
+                                .height(2.5.dp)
+                                .background(Color(0xFF00C48C), shape = RoundedCornerShape(2.dp))
+                        )
+                        Spacer(modifier = Modifier.height(4.dp))
+                        Text(
+                            text = "不",
+                            fontFamily = KaiTiFontFamily,
+                            fontSize = 25.sp,
+                            fontWeight = FontWeight.Normal,
+                            color = HanziColor
+                        )
+                    }
+
+                    Spacer(modifier = Modifier.width(14.dp))
+
+                    // jiào / 叫
+                    Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                        Text(text = "jiào", fontSize = 15.sp, color = SlateGray)
+                        Spacer(modifier = Modifier.height(2.dp))
+                        Text(text = "叫", fontFamily = KaiTiFontFamily, fontSize = 25.sp, color = HanziColor)
+                    }
+
+                    Spacer(modifier = Modifier.width(14.dp))
+
+                    // Bùdí / 布迪
+                    Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                        Text(text = "Bùdí", fontSize = 15.sp, color = SlateGray)
+                        Spacer(modifier = Modifier.height(2.dp))
+                        Text(text = "布迪", fontFamily = KaiTiFontFamily, fontSize = 25.sp, color = HanziColor)
+                    }
+
+                    Spacer(modifier = Modifier.width(6.dp))
+
+                    Text(
+                        text = " 。",
+                        fontFamily = KaiTiFontFamily,
+                        fontSize = 25.sp,
+                        color = HanziColor,
+                        modifier = Modifier.padding(bottom = 4.dp)
+                    )
                 }
-
-                Spacer(modifier = Modifier.width(14.dp))
-
-                // Bùdí / 布迪
-                Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                    Text(text = "Bùdí", fontSize = 15.sp, color = SlateGray)
-                    Spacer(modifier = Modifier.height(2.dp))
-                    Text(text = "布迪", fontFamily = KaiTiFontFamily, fontSize = 25.sp, color = HanziColor)
-                }
-
-                Spacer(modifier = Modifier.width(6.dp))
-
-                Text(
-                    text = " 。",
-                    fontFamily = KaiTiFontFamily,
-                    fontSize = 25.sp,
-                    color = HanziColor,
-                    modifier = Modifier.padding(bottom = 4.dp)
-                )
             }
         }
 

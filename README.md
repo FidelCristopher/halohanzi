@@ -119,13 +119,24 @@ com.example.chineselearning/
 
 ---
 
-## Curriculum Outline
+## Curriculum & Graded Stories Outline
 
+### Featured Graded Readers (Tab Cerita)
+| Story | Chinese Title | Level | Category | Key Vocabulary & Patterns |
+| :--- | :--- | :--- | :--- | :--- |
+| **I Didn't Laugh** | 《我没笑》 | HSK 1 | Humor & School | 学校, 回家, 怎么样, 告诉, 掉进水里, 大笑, 只有, 没笑 |
+| **Dad's Work** | 《爸爸的工作》 | HSK 1 | Humor & Family | 老师, 五岁, 小女孩, 你的爸爸, 做什么的, 妈妈让他做什么他就做什么 |
+| **Who I Am** | 《我是谁》 | HSK 1 | Profile & Careers | 李大卫, 美国人, 在日本长大, 在英国上大学, 在中国工作, 英语老师 |
+| **New Classmate Li Hua** | 《新同学李华》 | HSK 1 | Greetings & School | 你好, 我叫, 学生, 老师, 中国人, 认识, 高兴, 再见 |
+| **David's Sunday** | 《大卫的星期天》 | HSK 1 | Time & Daily Life | 星期天, 二十岁, 上午八点三十分, 起床, 中午十二点, 看朋友 |
+| **David's Family & Kitten** | 《大卫的家与小猫》 | HSK 1 | Family & Pets | 爸爸, 妈妈, 家, 喜欢, 小猫, 漂亮, 水果, 喝茶 |
+
+### Curriculum Road
 | Unit | Title | Level | Core Themes | Graded Reader Story |
 | :--- | :--- | :--- | :--- | :--- |
-| **Unit 1** | Greetings & Introductions | HSK 1 | SVO word order, copula 是, negation 不是 | 《我的新朋友》 (My New Friend) |
-| **Unit 2** | Food & Drinks at the Café | HSK 1+ | Action verbs 吃/喝, measure words, total cost | 《在茶馆点点心》 (Ordering Dim Sum) |
-| **Unit 3** | Fruit Shopping & Bargaining | HSK 2 | Question phrase 多少钱, adjectives, market bargaining | 《在水果市场买苹果》 (Buying Apples) |
+| **Unit 1** | Membuat Teman Baru | HSK 1 | SVO word order, copula 是, negation 不是, question 吗 | 《新同学李华》, 《我没笑》, 《爸爸的工作》, 《我是谁》 |
+| **Unit 2** | Jam & Jadwal Harian | HSK 1+ | Tanggal, umur, jam, menit, rutinitas | 《大卫的星期天》 |
+| **Unit 3** | Keluarga & Rumah | HSK 1+ | Anggota keluarga, hewan peliharaan, makanan/minuman | 《大卫的家与小猫》 |
 
 ---
 
