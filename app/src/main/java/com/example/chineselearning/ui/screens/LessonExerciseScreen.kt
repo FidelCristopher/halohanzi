@@ -85,6 +85,7 @@ fun LessonExerciseScreen(
             "u1_l3_p2_q10" -> listOf("dokter", "tidak, bukan", "sampai jumpa,\nselamat tinggal", "(perempuan)\ndia")
             "u1_l4_p1_q6" -> listOf("(pria) dia", "(negara) Tiongkok", "kamu")
             "u1_l4_p2_q6" -> listOf("(perempuan) dia", "tidak, bukan", "dokter", "sampai jumpa,\nselamat tinggal")
+            "u1_l5_p1_q5" -> listOf("dipanggil", "halo", "orang", "sampai jumpa,\nselamat tinggal")
             else -> listOf("adalah", "guru", "(negara) Indonesia", "(negara)\nIndonesia", "orang", "murid")
         }
         val pairs = currEx?.matchPairs ?: emptyList()
@@ -97,6 +98,7 @@ fun LessonExerciseScreen(
     var isCorrect by remember { mutableStateOf(false) }
     var comboCount by remember { mutableStateOf(0) }
     var isLessonCompleted by remember { mutableStateOf(false) }
+    var typedPinyin by remember(currentExerciseIdx) { mutableStateOf("") }
 
     LaunchedEffect(currentExerciseIdx) {
         val ex = exercisesList.getOrNull(currentExerciseIdx)
@@ -122,6 +124,7 @@ fun LessonExerciseScreen(
             }
         }
         ExerciseType.MATCH_PAIRS -> matchedPairIds.size == (exercise.matchPairs.size)
+        ExerciseType.PINYIN_KEYBOARD -> typedPinyin.isNotBlank()
         null -> false
     }
 
@@ -140,6 +143,7 @@ fun LessonExerciseScreen(
                 selectedClean == exercise.correctAnswer
             }
             ExerciseType.MATCH_PAIRS -> matchedPairIds.size == exercise.matchPairs.size
+            ExerciseType.PINYIN_KEYBOARD -> typedPinyin.trim().lowercase() == exercise.correctAnswer.trim().lowercase()
         }
 
         if (isCorrect) {
@@ -168,6 +172,7 @@ fun LessonExerciseScreen(
             wrongRightPairId = null
             isSubmitted = false
             isCorrect = false
+            typedPinyin = ""
         }
     }
 
@@ -359,7 +364,7 @@ fun LessonExerciseScreen(
                             }
                             Spacer(modifier = Modifier.width(10.dp))
                             Text(
-                                text = if (isCorrect) (if (comboCount > 2) "Mantap!" else "Luar biasa!") else "Belum tepat!",
+                                text = if (isCorrect) (if (exercise.id == "u1_l5_p1_q2") "Bagus!" else if (comboCount > 2) "Mantap!" else "Luar biasa!") else "Belum tepat!",
                                 fontSize = 19.sp,
                                 fontWeight = FontWeight.Bold,
                                 color = if (isCorrect) Color(0xFF008966) else RubyCoral
@@ -379,7 +384,52 @@ fun LessonExerciseScreen(
                     }
 
                     // Content Breakdown
-                    if (exercise.targetHanzi.isNotBlank()) {
+                    if (exercise.id == "u1_l5_p1_q2") {
+                        Spacer(modifier = Modifier.height(6.dp))
+                        Column(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .padding(vertical = 4.dp),
+                            verticalArrangement = Arrangement.spacedBy(10.dp)
+                        ) {
+                            // Speaker A
+                            Row(verticalAlignment = Alignment.Top) {
+                                Surface(
+                                    shape = RoundedCornerShape(6.dp),
+                                    color = Color(0xFFD4F5EC),
+                                    modifier = Modifier.size(24.dp)
+                                ) {
+                                    Box(contentAlignment = Alignment.Center) {
+                                        Text(text = "A", fontWeight = FontWeight.Bold, color = Color(0xFF008966), fontSize = 13.sp)
+                                    }
+                                }
+                                Spacer(modifier = Modifier.width(10.dp))
+                                Column {
+                                    Text(text = "Nǐhǎo,  Bùdí,  nǐ  shì  Yìnní  rén  ma?", fontSize = 13.sp, color = SlateGray)
+                                    Text(text = "你好 ， 布迪 ， 你 是 印尼 人 吗？", fontFamily = KaiTiFontFamily, fontSize = 18.sp, color = HanziColor)
+                                    Text(text = "Halo, Budi, apakah kamu orang Indonesia?", fontSize = 13.sp, color = SlateGray)
+                                }
+                            }
+                            // Speaker B
+                            Row(verticalAlignment = Alignment.Top) {
+                                Surface(
+                                    shape = RoundedCornerShape(6.dp),
+                                    color = Color(0xFFD4F5EC),
+                                    modifier = Modifier.size(24.dp)
+                                ) {
+                                    Box(contentAlignment = Alignment.Center) {
+                                        Text(text = "B", fontWeight = FontWeight.Bold, color = Color(0xFF008966), fontSize = 13.sp)
+                                    }
+                                }
+                                Spacer(modifier = Modifier.width(10.dp))
+                                Column {
+                                    Text(text = "Wǒ  shì  Yìnní  rén", fontSize = 13.sp, color = SlateGray)
+                                    Text(text = "我是 印尼 人 。", fontFamily = KaiTiFontFamily, fontSize = 18.sp, color = HanziColor)
+                                    Text(text = "Saya orang Indonesia.", fontSize = 13.sp, color = SlateGray)
+                                }
+                            }
+                        }
+                    } else if (exercise.targetHanzi.isNotBlank()) {
                         Spacer(modifier = Modifier.height(6.dp))
                         if (exercise.targetPinyin.isNotBlank()) {
                             Text(
@@ -489,6 +539,15 @@ fun LessonExerciseScreen(
                     text = annotatedTitle,
                     lineHeight = 27.sp,
                     modifier = Modifier.fillMaxWidth()
+                )
+            } else if (exercise.title.startsWith("Kamu sudah bekerja")) {
+                Text(
+                    text = exercise.title,
+                    fontSize = 17.5.sp,
+                    fontWeight = FontWeight.Normal,
+                    color = DeepNavy,
+                    lineHeight = 25.sp,
+                    modifier = Modifier.fillMaxWidth().padding(bottom = 12.dp)
                 )
             } else {
                 Text(
@@ -861,14 +920,125 @@ fun LessonExerciseScreen(
                     }
 
                     Spacer(modifier = Modifier.height(28.dp))
-                } else if (exercise.title == "Selesaikan percakapan") {
+                } else if (exercise.title == "Selesaikan percakapan" || exercise.title == "Pilih kalimat yang benar untuk melengkapi dialog") {
                     Column(
                         modifier = Modifier
                             .fillMaxWidth()
                             .padding(bottom = 24.dp),
                         verticalArrangement = Arrangement.spacedBy(16.dp)
                     ) {
-                        if (exercise.dialogueBlankIsFirst) {
+                        if (exercise.id == "u1_l5_p1_q2") {
+                            // Speaker A: Avatar + Audio Waveform
+                            Row(
+                                modifier = Modifier.fillMaxWidth(),
+                                verticalAlignment = Alignment.CenterVertically
+                            ) {
+                                Surface(
+                                    shape = CircleShape,
+                                    color = Color(0xFFFFD54F),
+                                    modifier = Modifier.size(46.dp)
+                                ) {
+                                    Box(contentAlignment = Alignment.Center) {
+                                        Text(text = "😊", fontSize = 26.sp)
+                                    }
+                                }
+                                Spacer(modifier = Modifier.width(10.dp))
+                                Surface(
+                                    shape = RoundedCornerShape(18.dp),
+                                    color = Color.White,
+                                    border = androidx.compose.foundation.BorderStroke(1.dp, Color(0xFFE2E8F0)),
+                                    shadowElevation = 1.dp
+                                ) {
+                                    Row(
+                                        modifier = Modifier.padding(horizontal = 12.dp, vertical = 8.dp),
+                                        verticalAlignment = Alignment.CenterVertically
+                                    ) {
+                                        Box(
+                                            modifier = Modifier
+                                                .size(38.dp)
+                                                .clip(CircleShape)
+                                                .background(Color(0xFF00C48C))
+                                                .bouncyClick { ttsManager?.speak(exercise.audioToSpeak) },
+                                            contentAlignment = Alignment.Center
+                                        ) {
+                                            Icon(imageVector = Icons.Default.PlayArrow, contentDescription = "Play", tint = Color.White, modifier = Modifier.size(24.dp))
+                                        }
+                                        Spacer(modifier = Modifier.width(10.dp))
+                                        Row(
+                                            horizontalArrangement = Arrangement.spacedBy(3.dp),
+                                            verticalAlignment = Alignment.CenterVertically,
+                                            modifier = Modifier.padding(horizontal = 4.dp)
+                                        ) {
+                                            listOf(6, 12, 18, 24, 16, 20, 26, 14, 22, 18, 10, 16, 8).forEach { barHeight ->
+                                                Box(
+                                                    modifier = Modifier
+                                                        .width(3.dp)
+                                                        .height(barHeight.dp)
+                                                        .background(Color(0xFF00C48C), shape = RoundedCornerShape(1.5.dp))
+                                                )
+                                            }
+                                        }
+                                        Spacer(modifier = Modifier.width(10.dp))
+                                        Box(
+                                            modifier = Modifier
+                                                .size(38.dp)
+                                                .clip(RoundedCornerShape(12.dp))
+                                                .background(Color(0xFFD4F5EC))
+                                                .bouncyClick { ttsManager?.speak(exercise.audioToSpeak, speedRate = 0.55f) },
+                                            contentAlignment = Alignment.Center
+                                        ) {
+                                            Icon(painter = painterResource(R.drawable.ic_snail), contentDescription = "Slow audio", tint = Color(0xFF00B386), modifier = Modifier.size(22.dp))
+                                        }
+                                    }
+                                }
+                            }
+
+                            // Speaker B: Bubble on right
+                            Row(
+                                modifier = Modifier.fillMaxWidth().padding(top = 8.dp),
+                                horizontalArrangement = Arrangement.End,
+                                verticalAlignment = Alignment.CenterVertically
+                            ) {
+                                Surface(
+                                    shape = RoundedCornerShape(18.dp),
+                                    color = Color.White,
+                                    border = androidx.compose.foundation.BorderStroke(1.dp, Color(0xFFE2E8F0)),
+                                    shadowElevation = 1.dp,
+                                    modifier = Modifier.defaultMinSize(minWidth = 140.dp, minHeight = 48.dp)
+                                ) {
+                                    Box(
+                                        modifier = Modifier.padding(horizontal = 16.dp, vertical = 10.dp),
+                                        contentAlignment = Alignment.Center
+                                    ) {
+                                        if (selectedOption != null) {
+                                            val pinyin = selectedOption!!.substringBefore("\n")
+                                            val hanzi = selectedOption!!.substringAfter("\n")
+                                            Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                                                if (pinyin.isNotBlank()) Text(text = pinyin, fontSize = 13.sp, color = SlateGray)
+                                                Text(text = hanzi, fontFamily = KaiTiFontFamily, fontSize = 19.sp, fontWeight = FontWeight.Normal, color = DeepNavy)
+                                            }
+                                        } else {
+                                            Box(
+                                                modifier = Modifier
+                                                    .width(120.dp)
+                                                    .height(2.dp)
+                                                    .background(Color(0xFF00C48C), shape = RoundedCornerShape(1.dp))
+                                            )
+                                        }
+                                    }
+                                }
+                                Spacer(modifier = Modifier.width(8.dp))
+                                Surface(
+                                    shape = CircleShape,
+                                    color = Color(0xFFD4F5EC),
+                                    modifier = Modifier.size(36.dp)
+                                ) {
+                                    Box(contentAlignment = Alignment.Center) {
+                                        Icon(imageVector = Icons.AutoMirrored.Filled.VolumeUp, contentDescription = null, tint = Color(0xFF00B386), modifier = Modifier.size(20.dp))
+                                    }
+                                }
+                            }
+                        } else if (exercise.dialogueBlankIsFirst) {
                             // Top: User response slot (Speaker A, left)
                             Row(
                                 modifier = Modifier.fillMaxWidth(),
@@ -1300,6 +1470,24 @@ fun LessonExerciseScreen(
                     selectedChips = selectedChips,
                     onChipAdded = { chip -> selectedChips = selectedChips + chip },
                     onChipRemovedAt = { idx -> selectedChips = selectedChips.toMutableList().also { it.removeAt(idx) } },
+                    isSubmitted = isSubmitted,
+                    ttsManager = ttsManager
+                )
+            }
+
+            // EXERCISE TYPE 6: PINYIN KEYBOARD
+            if (exercise.type == ExerciseType.PINYIN_KEYBOARD) {
+                PinyinKeyboardExercise(
+                    exercise = exercise,
+                    typedPinyin = typedPinyin,
+                    onKeyTyped = { key ->
+                        typedPinyin += key
+                    },
+                    onBackspace = {
+                        if (typedPinyin.isNotEmpty()) {
+                            typedPinyin = typedPinyin.dropLast(1)
+                        }
+                    },
                     isSubmitted = isSubmitted,
                     ttsManager = ttsManager
                 )

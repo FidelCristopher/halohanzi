@@ -727,7 +727,7 @@ object LearningRepository {
                 PathNode("u1_n3", "Halo!", Color(0xFFFFC107), NodeIconType.DUMBBELL, isCompleted = true, lessonId = "u1_l2"),
                 PathNode("u1_n4", "Apakah kamu orang Tiongkok?", Color(0xFFFFC107), NodeIconType.CAP, isCompleted = false, lessonId = "u1_l3"),
                 PathNode("u1_n5", "Apakah kamu orang Tiongkok?", Color(0xFFFFC107), NodeIconType.DUMBBELL, isCompleted = false, lessonId = "u1_l4"),
-                PathNode("u1_n6", "Latihan Campuran", Color(0xFFFFC107), NodeIconType.SHUFFLE, isCompleted = false, lessonId = "u1_l1"),
+                PathNode("u1_n6", "Latihan Komprehensif", Color(0xFFFFC107), NodeIconType.SHUFFLE, isCompleted = false, lessonId = "u1_l5"),
                 PathNode("u1_n7", "Kuis Cerita", Color(0xFFFFC107), NodeIconType.BOOK, isCompleted = false, lessonId = "u1_l1"),
                 PathNode("u1_n8", "Checkpoint Peti", Color(0xFFFFB300), NodeIconType.CHEST, isCompleted = false, lessonId = "u1_l1"),
                 PathNode("u1_n9", "Rest area", Color(0xFF03A9F4), NodeIconType.REST_AREA, isCompleted = false, lessonId = "u1_l1")
@@ -3177,6 +3177,101 @@ object LearningRepository {
                             correctAnswer = "她,是,医生,吗"
                         )
                     )
+                ),
+                Lesson(
+                    id = "u1_l5",
+                    title = "Latihan Komprehensif",
+                    subtitle = "Latihan pemantapan seluruh kosakata & pola kalimat Bab 1",
+                    grammarNote = "Review menyeluruh pola kalimat 'A 是 B', negasi '不是 / 不叫', serta kalimat tanya '吗'.",
+                    newWords = emptyList(),
+                    exercisesPart1 = listOf(
+                        // 1. Soal 1: Lengkapi terjemahan (Apakah Budi seorang murid? -> 布迪 [是] [学生] [吗] ？)
+                        Exercise(
+                            id = "u1_l5_p1_q1",
+                            type = ExerciseType.SENTENCE_BUILDER,
+                            title = "Lengkapi terjemahan",
+                            targetTranslation = "Apakah Budi seorang murid?",
+                            targetHanzi = "布迪是学生吗？",
+                            targetPinyin = "Bùdí shì xuéshēng ma?",
+                            audioToSpeak = "布迪是学生吗？",
+                            wordChips = listOf("老师:lǎoshī", "你好:nǐhǎo", "学生:xuéshēng", "吗:ma", "人:rén", "叫:jiào", "是:shì"),
+                            correctAnswer = "是,学生,吗"
+                        ),
+                        // 2. Soal 2: Pilih kalimat yang benar untuk melengkapi dialog (Waveform audio prompt -> 我是印尼人。)
+                        Exercise(
+                            id = "u1_l5_p1_q2",
+                            type = ExerciseType.SENTENCE_CHOICE,
+                            title = "Pilih kalimat yang benar untuk melengkapi dialog",
+                            audioToSpeak = "你好，布迪，你是印尼人吗？",
+                            options = listOf(
+                                "Wǒ  bú  shì  lǎoshī\n我不是老师。",
+                                "Wǒ  bú  shì  Zhōngguó  rén\n我不是 中国 人。",
+                                "Wǒ  shì  Yìnní  rén\n我是 印尼 人。"
+                            ),
+                            correctAnswer = "Wǒ  shì  Yìnní  rén\n我是 印尼 人。"
+                        ),
+                        // 3. Soal 3: Masukkan kata yang hilang (nǐhǎo -> 你好，我叫布迪，我是医生。)
+                        Exercise(
+                            id = "u1_l5_p1_q3",
+                            type = ExerciseType.PINYIN_KEYBOARD,
+                            title = "Masukkan kata yang hilang",
+                            targetHanzi = "你好，我叫布迪，我是医生。",
+                            targetPinyin = "Nǐhǎo, wǒ jiào Bùdí, wǒ shì yīshēng.",
+                            audioToSpeak = "你好，我叫布迪，我是医生。",
+                            keyboardKeys = listOf("ǎ", "d", "h", "ǐ", "n", "o", "ǚ", "w", "y"),
+                            correctAnswer = "nǐhǎo"
+                        ),
+                        // 4. Soal 4: Scenario sentence choice (Bos sering salah memanggil nama -> 我不叫王飞。)
+                        Exercise(
+                            id = "u1_l5_p1_q4",
+                            type = ExerciseType.SENTENCE_CHOICE,
+                            title = "Kamu sudah bekerja selama setengah tahun, tetapi bosmu masih sering salah memanggil namamu. Hari ini, ketika makan siang, kamu tidak ingin menahannya lagi. Maka, kamu dengan sungkan memberi tahu bosmu bahwa...",
+                            options = listOf(
+                                "Wǒ  bú  shì  Zhōngguó  rén\n我不是 中国 人。",
+                                "Wǒ  bú  jiào  WángFēi\n我不叫 王飞 。",
+                                "Wǒ  bú  shì  lǎoshī\n我不是老师。"
+                            ),
+                            correctAnswer = "Wǒ  bú  jiào  WángFēi\n我不叫 王飞 。",
+                            audioToSpeak = "我不叫王飞。"
+                        ),
+                        // 5. Soal 5: Ketuk pasangan yang sesuai (人, 再见, 叫, audio-only 你好)
+                        Exercise(
+                            id = "u1_l5_p1_q5",
+                            type = ExerciseType.MATCH_PAIRS,
+                            title = "Ketuk pasangan yang sesuai",
+                            correctAnswer = "ALL_MATCHED",
+                            matchPairs = listOf(
+                                MatchPairItem("l5_p1_m1", "人", "rén", "orang"),
+                                MatchPairItem("l5_p1_m2", "再见", "zàijiàn", "sampai jumpa,\nselamat tinggal"),
+                                MatchPairItem("l5_p1_m3", "叫", "jiào", "dipanggil"),
+                                MatchPairItem("l5_p1_m4", "你好", "nǐhǎo", "halo", isAudioOnly = true, audioToSpeak = "你好")
+                            )
+                        ),
+                        // 6. Soal 6: Terjemahkan kalimat ini (Budi bukan orang Tiongkok. -> 布迪不是中国人。)
+                        Exercise(
+                            id = "u1_l5_p1_q6",
+                            type = ExerciseType.SENTENCE_BUILDER,
+                            title = "Terjemahkan kalimat ini",
+                            targetTranslation = "Budi bukan orang Tiongkok.",
+                            targetHanzi = "布迪不是中国人。",
+                            targetPinyin = "Bùdí bú shì Zhōngguó rén.",
+                            audioToSpeak = "布迪不是中国人。",
+                            wordChips = listOf("布迪:Bùdí", "老师:lǎoshī", "中国:Zhōngguó", "叫:jiào", "人:rén", "你好:nǐhǎo", "是:shì", "不:bú"),
+                            correctAnswer = "布迪,不,是,中国,人"
+                        ),
+                        // 7. Soal 7: Lengkapi terjemahan (Nama dia(L) bukan Budi. -> 他 [bú / 不] 叫 布迪 。)
+                        Exercise(
+                            id = "u1_l5_p1_q7",
+                            type = ExerciseType.PINYIN_KEYBOARD,
+                            title = "Lengkapi terjemahan",
+                            targetTranslation = "Nama dia(L) bukan Budi.",
+                            targetHanzi = "他不叫布迪。",
+                            targetPinyin = "Tā bú jiào Bùdí.",
+                            audioToSpeak = "他不叫布迪。",
+                            keyboardKeys = listOf("b", "c", "é", "k", "o", "t", "ú", "w", "y"),
+                            correctAnswer = "bú"
+                        )
+                    )
                 )
             )
         ),
@@ -3197,7 +3292,7 @@ object LearningRepository {
                 PathNode("u2_n3", "Latihan Waktu", Color(0xFFFFC107), NodeIconType.DUMBBELL, isCompleted = false, lessonId = "u2_l1"),
                 PathNode("u2_n4", "Jam & Menit", Color(0xFFFFC107), NodeIconType.CAP, isCompleted = false, lessonId = "u2_l1"),
                 PathNode("u2_n5", "Latihan Menit", Color(0xFFFFC107), NodeIconType.DUMBBELL, isCompleted = false, lessonId = "u2_l1"),
-                PathNode("u2_n6", "Latihan Campuran", Color(0xFFFFC107), NodeIconType.SHUFFLE, isCompleted = false, lessonId = "u2_l1"),
+                PathNode("u2_n6", "Latihan Komprehensif", Color(0xFFFFC107), NodeIconType.SHUFFLE, isCompleted = false, lessonId = "u2_l1"),
                 PathNode("u2_n7", "Kuis Cerita", Color(0xFFFFC107), NodeIconType.BOOK, isCompleted = false, lessonId = "u2_l1"),
                 PathNode("u2_n8", "Checkpoint Peti", Color(0xFFFFB300), NodeIconType.CHEST, isCompleted = false, lessonId = "u2_l1"),
                 PathNode("u2_n9", "Rest area", Color(0xFF03A9F4), NodeIconType.REST_AREA, isCompleted = false, lessonId = "u2_l1")

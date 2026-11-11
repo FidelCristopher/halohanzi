@@ -85,7 +85,7 @@ fun GoldenStagePopup(
                     val (iconRes, categoryTitle) = when (node.iconType) {
                         NodeIconType.CAP -> Pair(com.example.chineselearning.R.drawable.ic_cap, "Belajar")
                         NodeIconType.DUMBBELL -> Pair(com.example.chineselearning.R.drawable.ic_dumbbell, "Latihan")
-                        NodeIconType.SHUFFLE -> Pair(com.example.chineselearning.R.drawable.ic_shuffle, "Review Campuran")
+                        NodeIconType.SHUFFLE -> Pair(com.example.chineselearning.R.drawable.ic_shuffle, "Latihan Komprehensif")
                         NodeIconType.BOOK -> Pair(com.example.chineselearning.R.drawable.ic_book, "Kuis Cerita")
                         NodeIconType.CHEST -> Pair(com.example.chineselearning.R.drawable.ic_handshake, "Checkpoint Bab")
                         NodeIconType.REST_AREA -> Pair(com.example.chineselearning.R.drawable.ic_gas_station, "Rest Area")

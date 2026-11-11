@@ -56,7 +56,8 @@ enum class ExerciseType {
     MATCH_PAIRS,        // Ketuk pasangan yang sesuai (Left Hanzi, Right Translation)
     FILL_BLANK,         // Lengkapi terjemahan (Blank underline + options chips)
     SENTENCE_CHOICE,    // Pilih terjemahan yang benar (4 cards)
-    SENTENCE_BUILDER    // Apa yang Anda dengar / Susun kata
+    SENTENCE_BUILDER,   // Apa yang Anda dengar / Susun kata
+    PINYIN_KEYBOARD     // Masukkan kata yang hilang / Lengkapi terjemahan dengan ketik pinyin
 }
 
 data class PictureOption(
@@ -105,7 +106,8 @@ data class Exercise(
     val hasSlotsOnLine2: Boolean = false,
     val illustrationRes: Int = 0,
     val dialogueBlankIsFirst: Boolean = false,
-    val dialogueThumbnailRes: Int = 0
+    val dialogueThumbnailRes: Int = 0,
+    val keyboardKeys: List<String> = emptyList()
 )
 
 data class Lesson(
