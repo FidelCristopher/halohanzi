@@ -60,7 +60,7 @@ fun HomeScreen(
     var selectedHskLevel by remember { mutableStateOf(1) }
     var showHskMenu by remember { mutableStateOf(false) }
 
-    var activePopupNodeId by remember { mutableStateOf<String?>("u1_n3") } // Defaults to Node 3 (Halo!)
+    var activePopupNodeId by remember { mutableStateOf<String?>(null) }
 
     // Winding path horizontal offsets (serpentine road sequence)
     val pathXOffsets = listOf(

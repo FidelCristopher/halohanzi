@@ -1,5 +1,6 @@
 package com.example.chineselearning.ui.screens
 
+import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
@@ -61,6 +62,11 @@ fun StoryReaderScreen(
     val coroutineScope = rememberCoroutineScope()
 
     val currentSpeed = speedValues[speedIndex]
+
+    BackHandler {
+        ttsManager?.stop()
+        onBackClick()
+    }
 
     fun playSentence(index: Int, autoAdvance: Boolean = false) {
         if (index !in story.sentences.indices) {

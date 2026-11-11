@@ -560,6 +560,162 @@ object LearningRepository {
             )
         ),
 
+        // Cerita Mandarin Bean 4: Do you know them? (你认识他们吗？)
+        Story(
+            id = "story_do_you_know_them",
+            titleHanzi = "你认识他们吗？",
+            titlePinyin = "Nǐ Rènshi Tāmen Ma?",
+            titleTranslation = "Do You Know Them? (Apakah Kamu Mengenal Mereka?)",
+            level = "HSK 1",
+            category = "Keluarga & Guru",
+            description = "Kisah tentang Guru Wang dan Guru Li, sepasang guru yang saling melengkapi dengan keluarga kecil mereka yang bahagia.",
+            coverEmoji = "👨‍👩‍👧‍👦",
+            coverImageRes = R.drawable.cover_story_do_you_know_them,
+            estimatedReadMinutes = 2,
+            sentences = listOf(
+                Sentence(
+                    "s_dykt_1",
+                    "你认识这两个人吗？",
+                    "Nǐ rènshi zhè liǎng gè rén ma?",
+                    "Apakah kamu mengenal kedua orang ini?",
+                    listOf(
+                        WordToken("你", "nǐ", "Kamu", "Pronomina orang kedua"),
+                        WordToken("认识", "rènshi", "Mengenal", "Mengetahui / familiar"),
+                        WordToken("这", "zhè", "Ini", "Pronomina penunjuk"),
+                        WordToken("两个人", "liǎng gè rén", "Dua orang", "Bilangan + penggolong + nomina"),
+                        WordToken("吗", "ma", "Apakah", "Partikel tanya ya/tidak")
+                    )
+                ),
+                Sentence(
+                    "s_dykt_2",
+                    "她是我的中文老师，姓王；他是弟弟的英文老师，姓李。",
+                    "Tā shì wǒ de Zhōngwén lǎoshī, xìng Wáng; tā shì dìdi de Yīngwén lǎoshī, xìng Lǐ.",
+                    "Dia adalah guru bahasa Mandarin saya, bermarga Wang; dia adalah guru bahasa Inggris adik laki-laki saya, bermarga Li.",
+                    listOf(
+                        WordToken("她", "tā", "Dia (perempuan)", "Pronomina orang ketiga wanita"),
+                        WordToken("是", "shì", "Adalah", "Kopula"),
+                        WordToken("我的", "wǒ de", "Milik saya", "Kepemilikan"),
+                        WordToken("中文老师", "Zhōngwén lǎoshī", "Guru bahasa Mandarin", "Profesi pengajar bahasa"),
+                        WordToken("姓", "xìng", "Bermarga", "Menyatakan nama keluarga"),
+                        WordToken("王", "Wáng", "Wang", "Marga Wang"),
+                        WordToken("他", "tā", "Dia (laki-laki)", "Pronomina orang ketiga pria"),
+                        WordToken("是", "shì", "Adalah", "Kopula"),
+                        WordToken("弟弟的", "dìdi de", "Milik adik laki-laki", "Kepemilikan"),
+                        WordToken("英文老师", "Yīngwén lǎoshī", "Guru bahasa Inggris", "Profesi pengajar bahasa"),
+                        WordToken("姓", "xìng", "Bermarga", "Menyatakan nama keluarga"),
+                        WordToken("李", "Lǐ", "Li", "Marga Li")
+                    )
+                ),
+                Sentence(
+                    "s_dykt_3",
+                    "王老师很漂亮，她今年二十八岁，喜欢旅游和跑步。",
+                    "Wáng lǎoshī hěn piàoliang, tā jīnnián èrshíbā suì, xǐhuan lǚyóu hé pǎobù.",
+                    "Guru Wang sangat cantik, tahun ini berusia dua puluh delapan tahun, gemar bepergian dan lari.",
+                    listOf(
+                        WordToken("王老师", "Wáng lǎoshī", "Guru Wang", "Panggilan hormat"),
+                        WordToken("很", "hěn", "Sangat", "Tingkat derajat"),
+                        WordToken("漂亮", "piàoliang", "Cantik", "Sifat visual memikat"),
+                        WordToken("她", "tā", "Dia", "Pronomina"),
+                        WordToken("今年", "jīnnián", "Tahun ini", "Keterangan waktu"),
+                        WordToken("二十八岁", "èrshíbā suì", "28 tahun", "Keterangan usia"),
+                        WordToken("喜欢", "xǐhuan", "Suka / gemar", "Perasaan suka"),
+                        WordToken("旅游", "lǚyóu", "Bepergian / liburan", "Aktivitas wisata"),
+                        WordToken("和", "hé", "Dan", "Konjungsi"),
+                        WordToken("跑步", "pǎobù", "Berlari / jogging", "Aktivitas olahraga")
+                    )
+                ),
+                Sentence(
+                    "s_dykt_4",
+                    "李老师很高，今年三十二岁，在大学工作。",
+                    "Lǐ lǎoshī hěn gāo, jīnnián sānshí'èr suì, zài dàxué gōngzuò.",
+                    "Guru Li sangat tinggi, tahun ini berusia tiga puluh dua tahun, bekerja di universitas.",
+                    listOf(
+                        WordToken("李老师", "Lǐ lǎoshī", "Guru Li", "Panggilan hormat"),
+                        WordToken("很", "hěn", "Sangat", "Derajat intensitas"),
+                        WordToken("高", "gāo", "Tinggi", "Postur fisik / tinggi badan"),
+                        WordToken("今年", "jīnnián", "Tahun ini", "Waktu saat ini"),
+                        WordToken("三十二岁", "sānshí'èr suì", "32 tahun", "Keterangan usia"),
+                        WordToken("在", "zài", "Di", "Preposisi lokasi"),
+                        WordToken("大学", "dàxué", "Universitas", "Perguruan tinggi"),
+                        WordToken("工作", "gōngzuò", "Bekerja", "Aktivitas profesi")
+                    )
+                ),
+                Sentence(
+                    "s_dykt_5",
+                    "他们两个人认识五年了，有一个女儿和一个儿子。",
+                    "Tāmen liǎng gè rén rènshi wǔ nián le, yǒu yī gè nǚ'ér hé yī gè érzi.",
+                    "Mereka berdua sudah saling mengenal selama lima tahun, memiliki seorang anak perempuan dan seorang anak laki-laki.",
+                    listOf(
+                        WordToken("他们", "tāmen", "Mereka", "Pronomina orang ketiga jamak"),
+                        WordToken("两个人", "liǎng gè rén", "Dua orang", "Kuantitas orang"),
+                        WordToken("认识", "rènshi", "Mengenal", "Saling kenal"),
+                        WordToken("五年了", "wǔ nián le", "Sudah 5 tahun", "Durasi waktu lampau"),
+                        WordToken("有", "yǒu", "Mempunyai / ada", "Kepemilikan"),
+                        WordToken("一个", "yī gè", "Seorang", "Satuan jumlah"),
+                        WordToken("女儿", "nǚ'ér", "Anak perempuan", "Anak kandung putri"),
+                        WordToken("和", "hé", "Dan", "Kata hubung"),
+                        WordToken("儿子", "érzi", "Anak laki-laki", "Anak kandung putra")
+                    )
+                ),
+                Sentence(
+                    "s_dykt_6",
+                    "女儿一岁，儿子三岁，他们会说中文，也会说英文。",
+                    "Nǚ'ér yī suì, érzi sān suì, tāmen huì shuō Zhōngwén, yě huì shuō Yīngwén.",
+                    "Anak perempuan berusia satu tahun, anak laki-laki berusia tiga tahun, mereka bisa berbicara bahasa Mandarin, juga bisa berbicara bahasa Inggris.",
+                    listOf(
+                        WordToken("女儿", "nǚ'ér", "Anak perempuan", "Putri"),
+                        WordToken("一岁", "yī suì", "1 tahun", "Usia"),
+                        WordToken("儿子", "érzi", "Anak laki-laki", "Putra"),
+                        WordToken("三岁", "sān suì", "3 tahun", "Usia"),
+                        WordToken("他们", "tāmen", "Mereka", "Pronomina jamak"),
+                        WordToken("会说", "huì shuō", "Bisa berbicara", "Kemampuan berbahasa"),
+                        WordToken("中文", "Zhōngwén", "Bahasa Mandarin", "Bahasa Mandarin"),
+                        WordToken("也会说", "yě huì shuō", "Juga bisa berbicara", "Kemampuan tambahan"),
+                        WordToken("英文", "Yīngwén", "Bahasa Inggris", "Bahasa Inggris")
+                    )
+                ),
+                Sentence(
+                    "s_dykt_7",
+                    "王老师和李老师都是很好的人，我和弟弟都很喜欢他们。",
+                    "Wáng lǎoshī hé Lǐ lǎoshī dōu shì hěn hǎo de rén, wǒ hé dìdi dōu hěn xǐhuan tāmen.",
+                    "Guru Wang dan Guru Li keduanya adalah orang yang sangat baik, saya dan adik laki-laki saya sangat menyukai mereka.",
+                    listOf(
+                        WordToken("王老师", "Wáng lǎoshī", "Guru Wang", "Subjek"),
+                        WordToken("和", "hé", "Dan", "Konjungsi"),
+                        WordToken("李老师", "Lǐ lǎoshī", "Guru Li", "Subjek"),
+                        WordToken("都是", "dōu shì", "Keduanya adalah", "Penegas kejamakan"),
+                        WordToken("很好的人", "hěn hǎo de rén", "Orang yang sangat baik", "Deskripsi kepribadian"),
+                        WordToken("我和弟弟", "wǒ hé dìdi", "Saya dan adik laki-laki", "Subjek"),
+                        WordToken("都很喜欢", "dōu hěn xǐhuan", "Keduanya sangat menyukai", "Perasaan suka"),
+                        WordToken("他们", "tāmen", "Mereka", "Objek")
+                    )
+                )
+            ),
+            questions = listOf(
+                StoryQuestion(
+                    "q_dykt_1",
+                    "王老师教什么？(Apa yang diajarkan oleh Guru Wang?)",
+                    listOf("中文 (Bahasa Mandarin)", "英文 (Bahasa Inggris)", "历史 (Sejarah)", "跑步 (Lari)"),
+                    0,
+                    "Di kalimat kedua tertulis: '她是我的中文老师，姓王' (Dia adalah guru bahasa Mandarin saya, bermarga Wang)."
+                ),
+                StoryQuestion(
+                    "q_dykt_2",
+                    "王老师和李老师有几个孩子？(Berapa banyak anak yang dimiliki Guru Wang dan Guru Li?)",
+                    listOf("一个 (Satu anak)", "两个 (Dua anak)", "三个 (Tiga anak)", "四个 (Empat anak)"),
+                    1,
+                    "Di kalimat kelima tertulis: '有一个女儿和一个儿子' (Memiliki seorang anak perempuan dan seorang anak laki-laki, total dua anak)."
+                ),
+                StoryQuestion(
+                    "q_dykt_3",
+                    "李老师今年多大？(Berapa usia Guru Li tahun ini?)",
+                    listOf("二十八岁 (28 tahun)", "三十岁 (30 tahun)", "三十二岁 (32 tahun)", "三十五岁 (35 tahun)"),
+                    2,
+                    "Di kalimat keempat tertulis: '李老师很高，今年三十二岁' (Guru Li sangat tinggi, tahun ini berusia 32 tahun)."
+                )
+            )
+        ),
+
         // Cerita 1 - Sapaan & Murid Baru
         Story(
             id = "story_1",
