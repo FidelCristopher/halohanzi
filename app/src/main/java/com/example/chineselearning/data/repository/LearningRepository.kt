@@ -1757,6 +1757,113 @@ object LearningRepository {
                             wordChips = listOf("是:shì", "我:wǒ", "吗:ma", "学生:xuéshēng", "你:nǐ", "人:rén", "叫:jiào"),
                             correctAnswer = "你,是,学生,吗"
                         )
+                    ),
+                    exercisesPart2 = listOf(
+                        // 1. Soal 1: Selesaikan percakapan (Tā jiào WángFēi ma / 她叫 王飞 吗？ -> 她不叫王飞。)
+                        Exercise(
+                            id = "u1_l4_p2_q1",
+                            type = ExerciseType.SENTENCE_CHOICE,
+                            title = "Selesaikan percakapan",
+                            dialogueBlankIsFirst = false,
+                            dialogueSpeakerText = "她叫 王飞 吗？",
+                            dialogueSpeakerPinyin = "Tā jiào WángFēi ma",
+                            audioToSpeak = "她叫王飞吗？",
+                            options = listOf(
+                                "Tā  bú  shì  yīshēng\n她不是 医生 。",
+                                "Tā  bú  jiào  WángFēi\n她不叫 王飞 。",
+                                "WángFēi  bú  shì  Zhōngguó  rén\n王飞 不是 中国 人。"
+                            ),
+                            correctAnswer = "Tā  bú  jiào  WángFēi\n她不叫 王飞 。"
+                        ),
+                        // 2. Soal 2: Lengkapi terjemahan (Sampai jumpa, Wang Fei. -> 王飞，[再见] 。)
+                        Exercise(
+                            id = "u1_l4_p2_q2",
+                            type = ExerciseType.SENTENCE_BUILDER,
+                            title = "Lengkapi terjemahan",
+                            targetTranslation = "Sampai jumpa, Wang Fei.",
+                            targetHanzi = "王飞，再见。",
+                            targetPinyin = "WángFēi, zàijiàn.",
+                            audioToSpeak = "王飞，再见。",
+                            wordChips = listOf("再见:zàijiàn", "你好:nǐhǎo", "你:nǐ", "中国:Zhōngguó"),
+                            correctAnswer = "再见"
+                        ),
+                        // 3. Soal 3: Apa yang Anda dengar? (couple background -> [她] [不] [是] [中国] [人] 。)
+                        Exercise(
+                            id = "u1_l4_p2_q3",
+                            type = ExerciseType.SENTENCE_BUILDER,
+                            title = "Apa yang Anda dengar?",
+                            isImmersiveSpeaker = true,
+                            illustrationRes = R.drawable.img_couple_peace_sign,
+                            targetHanzi = "她不是中国人。",
+                            targetPinyin = "Tā bú shì Zhōngguó rén.",
+                            targetTranslation = "Dia bukan orang Tiongkok.",
+                            wordChips = listOf("叫:jiào", "我:wǒ", "你:nǐ", "她:tā", "不:bú", "是:shì", "中国:Zhōngguó", "人:rén"),
+                            correctAnswer = "她,不,是,中国,人",
+                            audioToSpeak = "她不是中国人。"
+                        ),
+                        // 4. Soal 4: Lengkapi terjemahan (Dia(P) bukan seorang murid. -> [她] [不] [是] 学生 。)
+                        Exercise(
+                            id = "u1_l4_p2_q4",
+                            type = ExerciseType.SENTENCE_BUILDER,
+                            title = "Lengkapi terjemahan",
+                            targetTranslation = "Dia(P) bukan seorang murid.",
+                            targetHanzi = "她不是学生。",
+                            targetPinyin = "Tā bú shì xuéshēng.",
+                            audioToSpeak = "她不是学生。",
+                            wordChips = listOf("我:wǒ", "你:nǐ", "她:tā", "是:shì", "不:bú", "人:rén", "叫:jiào"),
+                            correctAnswer = "她,不,是"
+                        ),
+                        // 5. Soal 5: Pilih kalimat yang benar secara tata bahasa
+                        Exercise(
+                            id = "u1_l4_p2_q5",
+                            type = ExerciseType.SENTENCE_CHOICE,
+                            title = "Pilih kalimat yang benar secara tata bahasa",
+                            options = listOf(
+                                "Tā  bú  jiào  WángFēi\n她不叫 王飞 。",
+                                "Tā  jiào  bù  WángFēi\n她叫不 王飞 。",
+                                "Tā  bù  WángFēi\n她不 王飞 。"
+                            ),
+                            correctAnswer = "Tā  bú  jiào  WángFēi\n她不叫 王飞 。",
+                            audioToSpeak = "她不叫王飞。"
+                        ),
+                        // 6. Soal 6: Ketuk pasangan yang sesuai (不, 医生, 再见, audio-only 她)
+                        Exercise(
+                            id = "u1_l4_p2_q6",
+                            type = ExerciseType.MATCH_PAIRS,
+                            title = "Ketuk pasangan yang sesuai",
+                            correctAnswer = "ALL_MATCHED",
+                            matchPairs = listOf(
+                                MatchPairItem("l4_p2_m1", "不", "bù", "tidak, bukan"),
+                                MatchPairItem("l4_p2_m2", "医生", "yīshēng", "dokter"),
+                                MatchPairItem("l4_p2_m3", "再见", "zàijiàn", "sampai jumpa,\nselamat tinggal"),
+                                MatchPairItem("l4_p2_m4", "她", "tā", "(perempuan) dia", isAudioOnly = true, audioToSpeak = "她")
+                            )
+                        ),
+                        // 7. Soal 7: Dengarkan kalimat dan pilih terjemahan yang benar (Video woman teacher laptop -> Saya bukan seorang guru.)
+                        Exercise(
+                            id = "u1_l4_p2_q7",
+                            type = ExerciseType.SENTENCE_CHOICE,
+                            title = "Dengarkan kalimat dan pilih terjemahan yang benar",
+                            illustrationRes = R.drawable.img_girl_laptop_teacher,
+                            options = listOf(
+                                "Saya bukan seorang murid.",
+                                "Saya bukan seorang guru."
+                            ),
+                            correctAnswer = "Saya bukan seorang guru.",
+                            audioToSpeak = "我不是老师。"
+                        ),
+                        // 8. Soal 8: Terjemahkan kalimat ini (Saya bukan seorang dokter. -> 我不是医生。)
+                        Exercise(
+                            id = "u1_l4_p2_q8",
+                            type = ExerciseType.SENTENCE_BUILDER,
+                            title = "Terjemahkan kalimat ini",
+                            targetTranslation = "Saya bukan seorang dokter.",
+                            targetHanzi = "我不是医生。",
+                            targetPinyin = "Wǒ bú shì yīshēng.",
+                            audioToSpeak = "我不是医生。",
+                            wordChips = listOf("医生:yīshēng", "不:bú", "人:rén", "叫:jiào", "老师:lǎoshī", "是:shì", "我:wǒ"),
+                            correctAnswer = "我,不,是,医生"
+                        )
                     )
                 )
             )

@@ -83,7 +83,8 @@ fun LessonExerciseScreen(
             "u1_l2_p2_q3" -> listOf("orang", "(negara) Indonesia", "(negara)\nIndonesia", "guru", "adalah", "murid")
             "u1_l3_p1_q9" -> listOf("(negara) Tiongkok", "kamu", "(pria) dia")
             "u1_l3_p2_q10" -> listOf("dokter", "tidak, bukan", "sampai jumpa,\nselamat tinggal", "(perempuan)\ndia")
-            "u1_l4_p1_q6" -> listOf("(pria) dia", "(negara)\nTiongkok", "kamu")
+            "u1_l4_p1_q6" -> listOf("(pria) dia", "(negara) Tiongkok", "kamu")
+            "u1_l4_p2_q6" -> listOf("(perempuan) dia", "tidak, bukan", "dokter", "sampai jumpa,\nselamat tinggal")
             else -> listOf("adalah", "guru", "(negara) Indonesia", "(negara)\nIndonesia", "orang", "murid")
         }
         val pairs = currEx?.matchPairs ?: emptyList()
@@ -99,7 +100,7 @@ fun LessonExerciseScreen(
 
     LaunchedEffect(currentExerciseIdx) {
         val ex = exercisesList.getOrNull(currentExerciseIdx)
-        if (ex != null && ex.title == "Apa yang Anda dengar?" && ex.audioToSpeak.isNotBlank()) {
+        if (ex != null && (ex.title == "Apa yang Anda dengar?" || ex.title.startsWith("Dengarkan")) && ex.audioToSpeak.isNotBlank()) {
             delay(300)
             ttsManager?.speak(ex.audioToSpeak)
         }
@@ -784,20 +785,53 @@ fun LessonExerciseScreen(
             // EXERCISE TYPE 3: PILIH TERJEMAHAN YANG BENAR
             if (exercise.type == ExerciseType.SENTENCE_CHOICE) {
                 if (exercise.illustrationRes != 0) {
+                    val isListeningVideo = exercise.title.startsWith("Dengarkan")
                     Surface(
                         shape = RoundedCornerShape(20.dp),
                         color = Color(0xFFF1F5F9),
                         modifier = Modifier
                             .fillMaxWidth()
-                            .height(200.dp)
+                            .height(if (isListeningVideo) 260.dp else 200.dp)
                             .padding(bottom = 16.dp)
                     ) {
-                        Image(
-                            painter = painterResource(exercise.illustrationRes),
-                            contentDescription = "Prompt illustration",
-                            contentScale = ContentScale.Crop,
-                            modifier = Modifier.fillMaxSize()
-                        )
+                        Box(modifier = Modifier.fillMaxSize()) {
+                            Image(
+                                painter = painterResource(exercise.illustrationRes),
+                                contentDescription = "Prompt illustration",
+                                contentScale = ContentScale.Crop,
+                                modifier = Modifier.fillMaxSize()
+                            )
+                            if (isListeningVideo && exercise.audioToSpeak.isNotBlank()) {
+                                Row(
+                                    modifier = Modifier
+                                        .align(Alignment.BottomCenter)
+                                        .padding(bottom = 16.dp),
+                                    horizontalArrangement = Arrangement.spacedBy(16.dp),
+                                    verticalAlignment = Alignment.CenterVertically
+                                ) {
+                                    Box(
+                                        modifier = Modifier
+                                            .size(50.dp)
+                                            .clip(CircleShape)
+                                            .background(Color(0xFF00C48C))
+                                            .bouncyClick { ttsManager?.speak(exercise.audioToSpeak) },
+                                        contentAlignment = Alignment.Center
+                                    ) {
+                                        Icon(imageVector = Icons.Default.PlayArrow, contentDescription = "Play", tint = Color.White, modifier = Modifier.size(28.dp))
+                                    }
+                                    Box(
+                                        modifier = Modifier
+                                            .size(50.dp)
+                                            .clip(CircleShape)
+                                            .background(Color(0xFFD4F5EC))
+                                            .bouncyClick { ttsManager?.speak(exercise.audioToSpeak, speedRate = 0.55f) },
+                                        contentAlignment = Alignment.Center
+                                    ) {
+                                        Icon(painter = painterResource(R.drawable.ic_snail), contentDescription = "Slow", tint = Color(0xFF00B386), modifier = Modifier.size(24.dp))
+                                    }
+                                }
+                            }
+                        }
                     }
                 } else if (exercise.targetHanzi.isNotBlank()) {
                     Row(
