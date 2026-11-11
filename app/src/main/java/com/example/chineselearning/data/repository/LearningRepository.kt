@@ -401,10 +401,10 @@ object LearningRepository {
             story = stories[0],
             nodes = listOf(
                 PathNode("u1_n1", "Sapaan 1", Color(0xFFE91E63), NodeIconType.CAP, isCompleted = true, lessonId = "u1_l1"),
-                PathNode("u1_n2", "Sapaan 2", Color(0xFFFFC107), NodeIconType.CAP, isCompleted = true, lessonId = "u1_l1"),
+                PathNode("u1_n2", "Halo!", Color(0xFFFFC107), NodeIconType.CAP, isCompleted = true, lessonId = "u1_l1"),
                 PathNode("u1_n3", "Halo!", Color(0xFFFFC107), NodeIconType.DUMBBELL, isCompleted = true, lessonId = "u1_l2"),
                 PathNode("u1_n4", "Apakah kamu orang Tiongkok?", Color(0xFFFFC107), NodeIconType.CAP, isCompleted = false, lessonId = "u1_l3"),
-                PathNode("u1_n5", "Latihan 2", Color(0xFFFFC107), NodeIconType.DUMBBELL, isCompleted = false, lessonId = "u1_l1"),
+                PathNode("u1_n5", "Apakah kamu orang Tiongkok?", Color(0xFFFFC107), NodeIconType.DUMBBELL, isCompleted = false, lessonId = "u1_l1"),
                 PathNode("u1_n6", "Latihan Campuran", Color(0xFFFFC107), NodeIconType.SHUFFLE, isCompleted = false, lessonId = "u1_l1"),
                 PathNode("u1_n7", "Kuis Cerita", Color(0xFFFFC107), NodeIconType.BOOK, isCompleted = false, lessonId = "u1_l1"),
                 PathNode("u1_n8", "Checkpoint Peti", Color(0xFFFFB300), NodeIconType.CHEST, isCompleted = false, lessonId = "u1_l1"),
@@ -413,7 +413,7 @@ object LearningRepository {
             lessons = listOf(
                 Lesson(
                     id = "u1_l1",
-                    title = "Sapaan 2",
+                    title = "Halo!",
                     subtitle = "Sapaan dasar & Identitas",
                     grammarNote = "Pola kalimat 'A 是 B' (A adalah B). Negasi menggunakan '不是'. Contoh: 我是印尼人 (Saya orang Indonesia).",
                     newWords = listOf(
