@@ -83,6 +83,7 @@ fun LessonExerciseScreen(
             "u1_l2_p2_q3" -> listOf("orang", "(negara) Indonesia", "(negara)\nIndonesia", "guru", "adalah", "murid")
             "u1_l3_p1_q9" -> listOf("(negara) Tiongkok", "kamu", "(pria) dia")
             "u1_l3_p2_q10" -> listOf("dokter", "tidak, bukan", "sampai jumpa,\nselamat tinggal", "(perempuan)\ndia")
+            "u1_l4_p1_q6" -> listOf("(pria) dia", "(negara)\nTiongkok", "kamu")
             else -> listOf("adalah", "guru", "(negara) Indonesia", "(negara)\nIndonesia", "orang", "murid")
         }
         val pairs = currEx?.matchPairs ?: emptyList()
@@ -826,6 +827,198 @@ fun LessonExerciseScreen(
                     }
 
                     Spacer(modifier = Modifier.height(28.dp))
+                } else if (exercise.title == "Selesaikan percakapan") {
+                    Column(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(bottom = 24.dp),
+                        verticalArrangement = Arrangement.spacedBy(16.dp)
+                    ) {
+                        if (exercise.dialogueBlankIsFirst) {
+                            // Top: User response slot (Speaker A, left)
+                            Row(
+                                modifier = Modifier.fillMaxWidth(),
+                                verticalAlignment = Alignment.Top
+                            ) {
+                                Surface(
+                                    shape = CircleShape,
+                                    color = Color(0xFFFFD54F),
+                                    modifier = Modifier.size(46.dp)
+                                ) {
+                                    Box(contentAlignment = Alignment.Center) {
+                                        Icon(painter = painterResource(R.drawable.ic_person_saya), contentDescription = null, tint = Color.Unspecified, modifier = Modifier.size(30.dp))
+                                    }
+                                }
+                                Spacer(modifier = Modifier.width(10.dp))
+                                Surface(
+                                    shape = RoundedCornerShape(topStart = 4.dp, topEnd = 18.dp, bottomEnd = 18.dp, bottomStart = 18.dp),
+                                    color = Color.White,
+                                    border = androidx.compose.foundation.BorderStroke(1.dp, Color(0xFFE2E8F0)),
+                                    shadowElevation = 1.dp,
+                                    modifier = Modifier.weight(1f, fill = false)
+                                ) {
+                                    Box(
+                                        modifier = Modifier
+                                            .defaultMinSize(minWidth = 140.dp, minHeight = 48.dp)
+                                            .padding(horizontal = 16.dp, vertical = 10.dp),
+                                        contentAlignment = Alignment.CenterStart
+                                    ) {
+                                        if (selectedOption != null) {
+                                            val pinyin = selectedOption!!.substringBefore("\n")
+                                            val hanzi = selectedOption!!.substringAfter("\n")
+                                            Column {
+                                                if (pinyin.isNotBlank()) Text(text = pinyin, fontSize = 13.sp, color = SlateGray)
+                                                Text(text = hanzi, fontFamily = KaiTiFontFamily, fontSize = 19.sp, fontWeight = FontWeight.Normal, color = DeepNavy)
+                                            }
+                                        } else {
+                                            Box(
+                                                modifier = Modifier
+                                                    .width(120.dp)
+                                                    .height(2.5.dp)
+                                                    .background(Color(0xFF00C48C), shape = RoundedCornerShape(2.dp))
+                                            )
+                                        }
+                                    }
+                                }
+                            }
+
+                            // Bottom: Response from Speaker B (right)
+                            Row(
+                                modifier = Modifier.fillMaxWidth(),
+                                horizontalArrangement = Arrangement.End,
+                                verticalAlignment = Alignment.CenterVertically
+                            ) {
+                                Surface(
+                                    shape = RoundedCornerShape(topStart = 18.dp, topEnd = 4.dp, bottomEnd = 18.dp, bottomStart = 18.dp),
+                                    color = Color.White,
+                                    border = androidx.compose.foundation.BorderStroke(1.dp, Color(0xFFE2E8F0)),
+                                    shadowElevation = 1.dp
+                                ) {
+                                    Row(
+                                        modifier = Modifier.padding(horizontal = 14.dp, vertical = 10.dp),
+                                        verticalAlignment = Alignment.CenterVertically
+                                    ) {
+                                        Column {
+                                            if (exercise.dialogueSpeakerPinyin.isNotBlank()) {
+                                                Text(text = exercise.dialogueSpeakerPinyin, fontSize = 13.sp, color = SlateGray)
+                                            }
+                                            Text(text = exercise.dialogueSpeakerText, fontFamily = KaiTiFontFamily, fontSize = 19.sp, fontWeight = FontWeight.Normal, color = DeepNavy)
+                                        }
+                                        Spacer(modifier = Modifier.width(10.dp))
+                                        Box(
+                                            modifier = Modifier
+                                                .size(36.dp)
+                                                .clip(CircleShape)
+                                                .background(Color(0xFF00C48C))
+                                                .bouncyClick { ttsManager?.speak(exercise.audioToSpeak) },
+                                            contentAlignment = Alignment.Center
+                                        ) {
+                                            Icon(imageVector = Icons.AutoMirrored.Filled.VolumeUp, contentDescription = "Audio", tint = Color.White, modifier = Modifier.size(20.dp))
+                                        }
+                                    }
+                                }
+                                Spacer(modifier = Modifier.width(10.dp))
+                                Surface(
+                                    shape = CircleShape,
+                                    color = Color(0xFFFFCC80),
+                                    modifier = Modifier.size(46.dp)
+                                ) {
+                                    Box(contentAlignment = Alignment.Center) {
+                                        Icon(painter = painterResource(R.drawable.ic_person_murid), contentDescription = null, tint = Color.Unspecified, modifier = Modifier.size(30.dp))
+                                    }
+                                }
+                            }
+                        } else {
+                            // Top: Speaker A with video thumbnail
+                            Row(
+                                modifier = Modifier.fillMaxWidth(),
+                                verticalAlignment = Alignment.Top
+                            ) {
+                                if (exercise.dialogueThumbnailRes != 0) {
+                                    Surface(
+                                        shape = RoundedCornerShape(14.dp),
+                                        color = Color.Black,
+                                        modifier = Modifier
+                                            .width(76.dp)
+                                            .height(115.dp)
+                                            .clip(RoundedCornerShape(14.dp))
+                                    ) {
+                                        Image(
+                                            painter = painterResource(exercise.dialogueThumbnailRes),
+                                            contentDescription = null,
+                                            contentScale = ContentScale.Crop,
+                                            modifier = Modifier.fillMaxSize()
+                                        )
+                                    }
+                                    Spacer(modifier = Modifier.width(10.dp))
+                                }
+                                Surface(
+                                    shape = RoundedCornerShape(16.dp),
+                                    color = Color.White,
+                                    border = androidx.compose.foundation.BorderStroke(1.dp, Color(0xFFE2E8F0)),
+                                    shadowElevation = 1.dp,
+                                    modifier = Modifier.weight(1f, fill = false)
+                                ) {
+                                    Row(
+                                        modifier = Modifier.padding(horizontal = 14.dp, vertical = 10.dp),
+                                        verticalAlignment = Alignment.CenterVertically
+                                    ) {
+                                        Box(
+                                            modifier = Modifier
+                                                .size(36.dp)
+                                                .clip(CircleShape)
+                                                .background(Color(0xFF00C48C))
+                                                .bouncyClick { ttsManager?.speak(exercise.audioToSpeak) },
+                                            contentAlignment = Alignment.Center
+                                        ) {
+                                            Icon(imageVector = Icons.AutoMirrored.Filled.VolumeUp, contentDescription = "Audio", tint = Color.White, modifier = Modifier.size(20.dp))
+                                        }
+                                        Spacer(modifier = Modifier.width(10.dp))
+                                        Column {
+                                            if (exercise.dialogueSpeakerPinyin.isNotBlank()) {
+                                                Text(text = exercise.dialogueSpeakerPinyin, fontSize = 13.sp, color = SlateGray)
+                                            }
+                                            Text(text = exercise.dialogueSpeakerText, fontFamily = KaiTiFontFamily, fontSize = 19.sp, fontWeight = FontWeight.Normal, color = DeepNavy)
+                                        }
+                                    }
+                                }
+                            }
+
+                            // Bottom: Blank slot for user response (right)
+                            Row(
+                                modifier = Modifier.fillMaxWidth(),
+                                horizontalArrangement = Arrangement.End
+                            ) {
+                                Surface(
+                                    shape = RoundedCornerShape(topStart = 18.dp, topEnd = 4.dp, bottomEnd = 18.dp, bottomStart = 18.dp),
+                                    color = Color(0xFFE0F2F1),
+                                    border = androidx.compose.foundation.BorderStroke(1.dp, Color(0xFF80CBC4)),
+                                    modifier = Modifier.defaultMinSize(minWidth = 140.dp, minHeight = 48.dp)
+                                ) {
+                                    Box(
+                                        modifier = Modifier.padding(horizontal = 16.dp, vertical = 10.dp),
+                                        contentAlignment = Alignment.Center
+                                    ) {
+                                        if (selectedOption != null) {
+                                            val pinyin = selectedOption!!.substringBefore("\n")
+                                            val hanzi = selectedOption!!.substringAfter("\n")
+                                            Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                                                if (pinyin.isNotBlank()) Text(text = pinyin, fontSize = 13.sp, color = SlateGray)
+                                                Text(text = hanzi, fontFamily = KaiTiFontFamily, fontSize = 19.sp, fontWeight = FontWeight.Normal, color = DeepNavy)
+                                            }
+                                        } else {
+                                            Box(
+                                                modifier = Modifier
+                                                    .width(120.dp)
+                                                    .height(2.5.dp)
+                                                    .background(Color(0xFF00C48C), shape = RoundedCornerShape(2.dp))
+                                            )
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
                 } else if (exercise.dialogueSpeakerText.isNotBlank()) {
                     // Conversation / Dialogue speaker card (Soal 5)
                     Row(

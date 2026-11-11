@@ -42,7 +42,7 @@ fun MainAppContainer(
             ttsManager = ttsManager,
             onFinish = {
                 activeNodeId?.let { id ->
-                    val maxParts = if (activeLesson?.id == "u1_l2" || activeLesson?.exercisesPart3?.isNotEmpty() == true) 3 else 2
+                    val maxParts = if (activeLesson?.id == "u1_l2" || activeLesson?.id == "u1_l4" || activeNodeId == "u1_n3" || activeNodeId == "u1_n5" || activeLesson?.exercisesPart3?.isNotEmpty() == true) 3 else 2
                     com.example.chineselearning.data.repository.LearningRepository.toggleStageProgress(id, maxParts)
                 }
                 activeLesson = null

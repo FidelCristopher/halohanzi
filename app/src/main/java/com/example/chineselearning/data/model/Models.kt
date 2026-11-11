@@ -102,7 +102,9 @@ data class Exercise(
     val trailingLine2Text: String = "",
     val trailingLine2Pinyin: String = "",
     val hasSlotsOnLine2: Boolean = false,
-    val illustrationRes: Int = 0
+    val illustrationRes: Int = 0,
+    val dialogueBlankIsFirst: Boolean = false,
+    val dialogueThumbnailRes: Int = 0
 )
 
 data class Lesson(

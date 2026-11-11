@@ -404,7 +404,7 @@ object LearningRepository {
                 PathNode("u1_n2", "Halo!", Color(0xFFFFC107), NodeIconType.CAP, isCompleted = true, lessonId = "u1_l1"),
                 PathNode("u1_n3", "Halo!", Color(0xFFFFC107), NodeIconType.DUMBBELL, isCompleted = true, lessonId = "u1_l2"),
                 PathNode("u1_n4", "Apakah kamu orang Tiongkok?", Color(0xFFFFC107), NodeIconType.CAP, isCompleted = false, lessonId = "u1_l3"),
-                PathNode("u1_n5", "Apakah kamu orang Tiongkok?", Color(0xFFFFC107), NodeIconType.DUMBBELL, isCompleted = false, lessonId = "u1_l1"),
+                PathNode("u1_n5", "Apakah kamu orang Tiongkok?", Color(0xFFFFC107), NodeIconType.DUMBBELL, isCompleted = false, lessonId = "u1_l4"),
                 PathNode("u1_n6", "Latihan Campuran", Color(0xFFFFC107), NodeIconType.SHUFFLE, isCompleted = false, lessonId = "u1_l1"),
                 PathNode("u1_n7", "Kuis Cerita", Color(0xFFFFC107), NodeIconType.BOOK, isCompleted = false, lessonId = "u1_l1"),
                 PathNode("u1_n8", "Checkpoint Peti", Color(0xFFFFB300), NodeIconType.CHEST, isCompleted = false, lessonId = "u1_l1"),
@@ -1522,6 +1522,240 @@ object LearningRepository {
                             ),
                             correctAnswer = "Nama dia(P) bukan Wang Fei.",
                             audioToSpeak = "她不叫王飞。"
+                        )
+                    )
+                ),
+                Lesson(
+                    id = "u1_l4",
+                    title = "Apakah kamu orang Tiongkok?",
+                    subtitle = "Latihan penguatan materi kewarganegaraan",
+                    grammarNote = "Latihan komprehensif kosakata dan pola kalimat tanya 吗.",
+                    newWords = listOf(
+                        Word("w5_1", "中国", "Zhōngguó", "Tiongkok", "Nama negara", "你是中国人吗？", "Nǐ shì Zhōngguó rén ma?", "Apakah kamu orang Tiongkok?"),
+                        Word("w5_2", "学生", "xuéshēng", "Murid", "Profesi", "他是学生吗？", "Tā shì xuéshēng ma?", "Apakah dia seorang murid?")
+                    ),
+                    exercises = listOf(
+                        // 1. Soal 1: Lengkapi terjemahan (Apakah kamu seorang guru? -> [你] [是] 老师 [吗] ？)
+                        Exercise(
+                            id = "u1_l4_p1_q1",
+                            type = ExerciseType.SENTENCE_BUILDER,
+                            title = "Lengkapi terjemahan",
+                            targetTranslation = "Apakah kamu seorang guru?",
+                            targetHanzi = "你是老师吗？",
+                            targetPinyin = "Nǐ shì lǎoshī ma?",
+                            audioToSpeak = "你是老师吗？",
+                            wordChips = listOf("你:nǐ", "他:tā", "叫:jiào", "我:wǒ", "是:shì", "吗:ma", "人:rén"),
+                            correctAnswer = "你,是,吗"
+                        ),
+                        // 2. Soal 2: Pilih terjemahan yang benar ((negara) Tiongkok -> Zhōngguó / 中国)
+                        Exercise(
+                            id = "u1_l4_p1_q2",
+                            type = ExerciseType.SENTENCE_CHOICE,
+                            title = "Pilih terjemahan yang benar",
+                            targetTranslation = "(negara) Tiongkok",
+                            options = listOf(
+                                "lǎoshī\n老师",
+                                "xuéshēng\n学生",
+                                "Yìnní\n印尼",
+                                "Zhōngguó\n中国"
+                            ),
+                            correctAnswer = "Zhōngguó\n中国",
+                            audioToSpeak = "中国"
+                        ),
+                        // 3. Soal 3: Apa yang Anda dengar? ([他] [是] 学生 [吗] ？)
+                        Exercise(
+                            id = "u1_l4_p1_q3",
+                            type = ExerciseType.SENTENCE_BUILDER,
+                            title = "Apa yang Anda dengar?",
+                            targetHanzi = "他是学生吗？",
+                            targetPinyin = "Tā shì xuéshēng ma?",
+                            targetTranslation = "Apakah dia seorang murid?",
+                            wordChips = listOf("人:rén", "叫:jiào", "你:nǐ", "他:tā", "是:shì", "吗:ma"),
+                            correctAnswer = "他,是,吗",
+                            audioToSpeak = "他是学生吗？",
+                            isImmersiveSpeaker = true,
+                            illustrationRes = R.drawable.img_two_students_studying
+                        ),
+                        // 4. Soal 4: Selesaikan percakapan ([?] -> 他是印尼人。)
+                        Exercise(
+                            id = "u1_l4_p1_q4",
+                            type = ExerciseType.SENTENCE_CHOICE,
+                            title = "Selesaikan percakapan",
+                            dialogueBlankIsFirst = true,
+                            dialogueSpeakerText = "他是印尼人。",
+                            dialogueSpeakerPinyin = "Tā shì Yìnní rén",
+                            audioToSpeak = "他是印尼人。",
+                            options = listOf(
+                                "Bùdí  shì  Yìnní  rén ma\n布迪是印尼人吗？",
+                                "Nǐ jiào Bùdí ma\n你叫布迪吗？",
+                                "Bùdí  shì  lǎoshī  ma\n布迪是老师吗？"
+                            ),
+                            correctAnswer = "Bùdí  shì  Yìnní  rén ma\n布迪是印尼人吗？"
+                        ),
+                        // 5. Soal 5: Pilih kalimat yang benar secara tata bahasa
+                        Exercise(
+                            id = "u1_l4_p1_q5",
+                            type = ExerciseType.SENTENCE_CHOICE,
+                            title = "Pilih kalimat yang benar secara tata bahasa",
+                            options = listOf(
+                                "Shì  nǐ  Zhōngguó  rén ma\n是你 中国 人吗？",
+                                "Nǐ  shì  Zhōngguó  rén ma\n你是 中国 人吗？"
+                            ),
+                            correctAnswer = "Nǐ  shì  Zhōngguó  rén ma\n你是 中国 人吗？",
+                            audioToSpeak = "你是中国人吗？"
+                        ),
+                        // 6. Soal 6: Ketuk pasangan yang sesuai (中国, 你, audio-only 他)
+                        Exercise(
+                            id = "u1_l4_p1_q6",
+                            type = ExerciseType.MATCH_PAIRS,
+                            title = "Ketuk pasangan yang sesuai",
+                            correctAnswer = "ALL_MATCHED",
+                            matchPairs = listOf(
+                                MatchPairItem("l4_p1_m1", "中国", "Zhōngguó", "(negara) Tiongkok"),
+                                MatchPairItem("l4_p1_m2", "你", "nǐ", "kamu"),
+                                MatchPairItem("l4_p1_m3", "他", "tā", "(pria) dia", isAudioOnly = true, audioToSpeak = "他")
+                            )
+                        ),
+                        // 7. Soal 7: Selesaikan percakapan (A: 你是中国人吗？ -> B: 我是中国人。)
+                        Exercise(
+                            id = "u1_l4_p1_q7",
+                            type = ExerciseType.SENTENCE_CHOICE,
+                            title = "Selesaikan percakapan",
+                            dialogueBlankIsFirst = false,
+                            dialogueThumbnailRes = R.drawable.img_girl_in_car,
+                            dialogueSpeakerText = "你是中国人吗？",
+                            dialogueSpeakerPinyin = "Nǐ shì Zhōngguó rén ma",
+                            audioToSpeak = "你是中国人吗？",
+                            options = listOf(
+                                "Wǒ  shì  Zhōngguó  rén\n我是 中国 人。",
+                                "Wǒ  shì  lǎoshī\n我是 老师 。",
+                                "Tā  jiào  Wáng  Fēi\n他叫 王飞 。"
+                            ),
+                            correctAnswer = "Wǒ  shì  Zhōngguó  rén\n我是 中国 人。"
+                        ),
+                        // 8. Soal 8: Terjemahkan kalimat ini (Apakah kamu seorang murid? -> 你是学生吗？)
+                        Exercise(
+                            id = "u1_l4_p1_q8",
+                            type = ExerciseType.SENTENCE_BUILDER,
+                            title = "Terjemahkan kalimat ini",
+                            targetTranslation = "Apakah kamu seorang murid?",
+                            targetHanzi = "你是学生吗？",
+                            targetPinyin = "Nǐ shì xuéshēng ma?",
+                            audioToSpeak = "你是学生吗？",
+                            wordChips = listOf("是:shì", "我:wǒ", "吗:ma", "学生:xuéshēng", "你:nǐ", "人:rén", "叫:jiào"),
+                            correctAnswer = "你,是,学生,吗"
+                        )
+                    ),
+                    exercisesPart1 = listOf(
+                        // 1. Soal 1: Lengkapi terjemahan (Apakah kamu seorang guru? -> [你] [是] 老师 [吗] ？)
+                        Exercise(
+                            id = "u1_l4_p1_q1",
+                            type = ExerciseType.SENTENCE_BUILDER,
+                            title = "Lengkapi terjemahan",
+                            targetTranslation = "Apakah kamu seorang guru?",
+                            targetHanzi = "你是老师吗？",
+                            targetPinyin = "Nǐ shì lǎoshī ma?",
+                            audioToSpeak = "你是老师吗？",
+                            wordChips = listOf("你:nǐ", "他:tā", "叫:jiào", "我:wǒ", "是:shì", "吗:ma", "人:rén"),
+                            correctAnswer = "你,是,吗"
+                        ),
+                        // 2. Soal 2: Pilih terjemahan yang benar ((negara) Tiongkok -> Zhōngguó / 中国)
+                        Exercise(
+                            id = "u1_l4_p1_q2",
+                            type = ExerciseType.SENTENCE_CHOICE,
+                            title = "Pilih terjemahan yang benar",
+                            targetTranslation = "(negara) Tiongkok",
+                            options = listOf(
+                                "lǎoshī\n老师",
+                                "xuéshēng\n学生",
+                                "Yìnní\n印尼",
+                                "Zhōngguó\n中国"
+                            ),
+                            correctAnswer = "Zhōngguó\n中国",
+                            audioToSpeak = "中国"
+                        ),
+                        // 3. Soal 3: Apa yang Anda dengar? ([他] [是] 学生 [吗] ？)
+                        Exercise(
+                            id = "u1_l4_p1_q3",
+                            type = ExerciseType.SENTENCE_BUILDER,
+                            title = "Apa yang Anda dengar?",
+                            targetHanzi = "他是学生吗？",
+                            targetPinyin = "Tā shì xuéshēng ma?",
+                            targetTranslation = "Apakah dia seorang murid?",
+                            wordChips = listOf("人:rén", "叫:jiào", "你:nǐ", "他:tā", "是:shì", "吗:ma"),
+                            correctAnswer = "他,是,吗",
+                            audioToSpeak = "他是学生吗？",
+                            isImmersiveSpeaker = true,
+                            illustrationRes = R.drawable.img_two_students_studying
+                        ),
+                        // 4. Soal 4: Selesaikan percakapan ([?] -> 他是印尼人。)
+                        Exercise(
+                            id = "u1_l4_p1_q4",
+                            type = ExerciseType.SENTENCE_CHOICE,
+                            title = "Selesaikan percakapan",
+                            dialogueBlankIsFirst = true,
+                            dialogueSpeakerText = "他是印尼人。",
+                            dialogueSpeakerPinyin = "Tā shì Yìnní rén",
+                            audioToSpeak = "他是印尼人。",
+                            options = listOf(
+                                "Bùdí  shì  Yìnní  rén ma\n布迪是印尼人吗？",
+                                "Nǐ jiào Bùdí ma\n你叫布迪吗？",
+                                "Bùdí  shì  lǎoshī  ma\n布迪是老师吗？"
+                            ),
+                            correctAnswer = "Bùdí  shì  Yìnní  rén ma\n布迪是印尼人吗？"
+                        ),
+                        // 5. Soal 5: Pilih kalimat yang benar secara tata bahasa
+                        Exercise(
+                            id = "u1_l4_p1_q5",
+                            type = ExerciseType.SENTENCE_CHOICE,
+                            title = "Pilih kalimat yang benar secara tata bahasa",
+                            options = listOf(
+                                "Shì  nǐ  Zhōngguó  rén ma\n是你 中国 人吗？",
+                                "Nǐ  shì  Zhōngguó  rén ma\n你是 中国 人吗？"
+                            ),
+                            correctAnswer = "Nǐ  shì  Zhōngguó  rén ma\n你是 中国 人吗？",
+                            audioToSpeak = "你是中国人吗？"
+                        ),
+                        // 6. Soal 6: Ketuk pasangan yang sesuai (中国, 你, audio-only 他)
+                        Exercise(
+                            id = "u1_l4_p1_q6",
+                            type = ExerciseType.MATCH_PAIRS,
+                            title = "Ketuk pasangan yang sesuai",
+                            correctAnswer = "ALL_MATCHED",
+                            matchPairs = listOf(
+                                MatchPairItem("l4_p1_m1", "中国", "Zhōngguó", "(negara) Tiongkok"),
+                                MatchPairItem("l4_p1_m2", "你", "nǐ", "kamu"),
+                                MatchPairItem("l4_p1_m3", "他", "tā", "(pria) dia", isAudioOnly = true, audioToSpeak = "他")
+                            )
+                        ),
+                        // 7. Soal 7: Selesaikan percakapan (A: 你是中国人吗？ -> B: 我是中国人。)
+                        Exercise(
+                            id = "u1_l4_p1_q7",
+                            type = ExerciseType.SENTENCE_CHOICE,
+                            title = "Selesaikan percakapan",
+                            dialogueBlankIsFirst = false,
+                            dialogueThumbnailRes = R.drawable.img_girl_in_car,
+                            dialogueSpeakerText = "你是中国人吗？",
+                            dialogueSpeakerPinyin = "Nǐ shì Zhōngguó rén ma",
+                            audioToSpeak = "你是中国人吗？",
+                            options = listOf(
+                                "Wǒ  shì  Zhōngguó  rén\n我是 中国 人。",
+                                "Wǒ  shì  lǎoshī\n我是 老师 。",
+                                "Tā  jiào  Wáng  Fēi\n他叫 王飞 。"
+                            ),
+                            correctAnswer = "Wǒ  shì  Zhōngguó  rén\n我是 中国 人。"
+                        ),
+                        // 8. Soal 8: Terjemahkan kalimat ini (Apakah kamu seorang murid? -> 你是学生吗？)
+                        Exercise(
+                            id = "u1_l4_p1_q8",
+                            type = ExerciseType.SENTENCE_BUILDER,
+                            title = "Terjemahkan kalimat ini",
+                            targetTranslation = "Apakah kamu seorang murid?",
+                            targetHanzi = "你是学生吗？",
+                            targetPinyin = "Nǐ shì xuéshēng ma?",
+                            audioToSpeak = "你是学生吗？",
+                            wordChips = listOf("是:shì", "我:wǒ", "吗:ma", "学生:xuéshēng", "你:nǐ", "人:rén", "叫:jiào"),
+                            correctAnswer = "你,是,学生,吗"
                         )
                     )
                 )
