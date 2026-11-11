@@ -1,5 +1,6 @@
 package com.example.chineselearning.ui.screens
 
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
@@ -13,6 +14,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -92,7 +95,16 @@ fun StoryListScreen(
                             .background(SoftAmber),
                         contentAlignment = Alignment.Center
                     ) {
-                        Text(text = story.coverEmoji, fontSize = 28.sp)
+                        if (story.coverImageRes != 0) {
+                            Image(
+                                painter = painterResource(story.coverImageRes),
+                                contentDescription = null,
+                                contentScale = ContentScale.Crop,
+                                modifier = Modifier.fillMaxSize()
+                            )
+                        } else {
+                            Text(text = story.coverEmoji, fontSize = 28.sp)
+                        }
                     }
 
                     Spacer(modifier = Modifier.width(14.dp))

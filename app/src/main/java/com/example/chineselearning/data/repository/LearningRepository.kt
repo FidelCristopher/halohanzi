@@ -238,6 +238,328 @@ object LearningRepository {
     // 6 BAB CERITA BERJENJANG LENGKAP (GRADED READERS) HSK 1
     // =========================================================================
     val stories: List<Story> = listOf(
+        // Cerita Mandarin Bean: I Didn't Laugh (我没笑)
+        Story(
+            id = "story_i_didnt_laugh",
+            titleHanzi = "我没笑",
+            titlePinyin = "Wǒ Méi Xiào",
+            titleTranslation = "I Didn't Laugh (Saya Tidak Tertawa)",
+            level = "HSK 1",
+            category = "Humor & Sekolah",
+            description = "Anekdot lucu tentang Xiao Wang yang pulang ke rumah dan bercerita kepada ibunya tentang kejadian di sekolah.",
+            coverEmoji = "😂",
+            coverImageRes = R.drawable.cover_story_i_didnt_laugh,
+            estimatedReadMinutes = 2,
+            sentences = listOf(
+                Sentence(
+                    "s_idl_1",
+                    "小王从学校回家，妈妈问他今天怎么样，他告诉妈妈：",
+                    "Xiǎo Wáng cóng xuéxiào huí jiā, māma wèn tā jīntiān zěnmeyàng, tā gàosu māma:",
+                    "Wang kecil pulang ke rumah dari sekolah, ibu bertanya padanya bagaimana hari ini, dia memberi tahu ibunya:",
+                    listOf(
+                        WordToken("小王", "Xiǎo Wáng", "Wang kecil", "Nama orang"),
+                        WordToken("从", "cóng", "Dari", "Preposisi asal"),
+                        WordToken("学校", "xuéxiào", "Sekolah", "Tempat belajar"),
+                        WordToken("回家", "huí jiā", "Pulang ke rumah", "Kembali ke kediaman"),
+                        WordToken("妈妈", "māma", "Ibu", "Orang tua perempuan"),
+                        WordToken("问", "wèn", "Bertanya", "Mengajukan pertanyaan"),
+                        WordToken("他", "tā", "Dia / -nya", "Kata ganti orang ketiga"),
+                        WordToken("今天", "jīntiān", "Hari ini", "Waktu saat ini"),
+                        WordToken("怎么样", "zěnmeyàng", "Bagaimana", "Menanyakan keadaan"),
+                        WordToken("告诉", "gàosu", "Memberitahu", "Menyampaikan informasi"),
+                        WordToken("妈妈", "māma", "Ibu", "Orang tua perempuan")
+                    )
+                ),
+                Sentence(
+                    "s_idl_2",
+                    "“今天有一个孩子掉进水里了，同学们都大笑，只有我没笑。”",
+                    "“Jīntiān yǒu yī gè háizi diào jìn shuǐ lǐ le, tóngxuémen dōu dà xiào, zhǐyǒu wǒ méi xiào.”",
+                    "“Hari ini ada seorang anak jatuh ke dalam air, teman-teman sekelas semua tertawa terbahak-bahak, hanya aku yang tidak tertawa.”",
+                    listOf(
+                        WordToken("今天", "jīntiān", "Hari ini", "Waktu saat ini"),
+                        WordToken("有", "yǒu", "Ada", "Kata kerja keberadaan"),
+                        WordToken("一个", "yī gè", "Seorang", "Bilangan dan kata bantu"),
+                        WordToken("孩子", "háizi", "Anak", "Anak kecil"),
+                        WordToken("掉进", "diào jìn", "Jatuh ke dalam", "Terperosok ke dalam"),
+                        WordToken("水里", "shuǐ lǐ", "Di dalam air", "Tempat berisi air"),
+                        WordToken("了", "le", "Sudah", "Partikel aspek"),
+                        WordToken("同学们", "tóngxuémen", "Teman-teman sekelas", "Sesama pelajar"),
+                        WordToken("都", "dōu", "Semua", "Menunjukkan keseluruhan"),
+                        WordToken("大笑", "dà xiào", "Tertawa keras", "Tertawa terbahak-bahak"),
+                        WordToken("只有", "zhǐyǒu", "Hanya", "Menunjukkan perkecualian"),
+                        WordToken("我", "wǒ", "Saya / aku", "Kata ganti orang pertama"),
+                        WordToken("没笑", "méi xiào", "Tidak tertawa", "Bentuk negasi lampau tertawa")
+                    )
+                ),
+                Sentence(
+                    "s_idl_3",
+                    "妈妈很高兴：“好孩子，我们当然不能笑别人。谁掉进水里了？”",
+                    "Māma hěn gāoxìng: “Hǎo háizi, wǒmen dāngrán bù néng xiào biérén. Shéi diào jìn shuǐ lǐ le?”",
+                    "Ibu sangat senang: “Anak pintar, kita tentu saja tidak boleh menertawakan orang lain. Siapa yang jatuh ke dalam air?”",
+                    listOf(
+                        WordToken("妈妈", "māma", "Ibu", "Orang tua perempuan"),
+                        WordToken("很", "hěn", "Sangat", "Tingkat intensitas"),
+                        WordToken("高兴", "gāoxìng", "Senang / gembira", "Perasaan bahagia"),
+                        WordToken("好", "hǎo", "Baik / pintar", "Karakter terpuji"),
+                        WordToken("孩子", "háizi", "Anak", "Anak kecil"),
+                        WordToken("我们", "wǒmen", "Kita / kami", "Kata ganti orang pertama jamak"),
+                        WordToken("当然", "dāngrán", "Tentu saja", "Kepastian / wajar"),
+                        WordToken("不能", "bù néng", "Tidak boleh", "Larangan moral"),
+                        WordToken("笑", "xiào", "Menertawakan", "Tertawa pada sesuatu"),
+                        WordToken("别人", "biérén", "Orang lain", "Selain diri sendiri"),
+                        WordToken("谁", "shéi", "Siapa", "Kata tanya orang"),
+                        WordToken("掉进", "diào jìn", "Jatuh ke dalam", "Terperosok ke dalam"),
+                        WordToken("水里", "shuǐ lǐ", "Di dalam air", "Tempat berisi air"),
+                        WordToken("了", "le", "Partikel", "Penanda situasi")
+                    )
+                ),
+                Sentence(
+                    "s_idl_4",
+                    "小王说：“我。”",
+                    "Xiǎo Wáng shuō: “Wǒ.”",
+                    "Wang kecil berkata: “Saya.”",
+                    listOf(
+                        WordToken("小王", "Xiǎo Wáng", "Wang kecil", "Nama orang"),
+                        WordToken("说", "shuō", "Berkata", "Menyatakan sesuatu"),
+                        WordToken("我", "wǒ", "Saya", "Kata ganti orang pertama")
+                    )
+                )
+            ),
+            questions = listOf(
+                StoryQuestion(
+                    "q_idl_1",
+                    "谁掉进水里了？(Siapa yang jatuh ke dalam air?)",
+                    listOf("妈妈 (Ibu)", "同学 (Teman sekelas)", "小王 (Wang kecil)", "老师 (Guru)"),
+                    2,
+                    "Di akhir cerita, saat ibu bertanya siapa yang jatuh ke air, Xiao Wang menjawab: \"我\" (Saya)."
+                ),
+                StoryQuestion(
+                    "q_idl_2",
+                    "小王为什么没笑？(Mengapa Xiao Wang tidak tertawa?)",
+                    listOf(
+                        "因为他是好孩子 (Karena dia anak baik)",
+                        "因为是他掉进水里了 (Karena dia yang jatuh ke air)",
+                        "因为他不高兴 (Karena dia tidak senang)",
+                        "因为他没看到 (Karena dia tidak melihatnya)"
+                    ),
+                    1,
+                    "Xiao Wang tidak tertawa bukan karena menahan diri, tetapi karena dialah yang jatuh ke dalam air sehingga tidak bisa menertawakan diri sendiri."
+                ),
+                StoryQuestion(
+                    "q_idl_3",
+                    "妈妈一开始的心情怎么样？(Bagaimana perasaan ibu pada awalnya?)",
+                    listOf(
+                        "很高兴 (Sangat senang)",
+                        "很生气 (Sangat marah)",
+                        "害怕 (Takut)",
+                        "难过 (Sedih)"
+                    ),
+                    0,
+                    "Di kalimat ke-3 tertulis: '妈妈很高兴: 好孩子，我们当然不能笑别人' (Ibu sangat senang mengira anaknya berbuat terpuji)."
+                )
+            )
+        ),
+
+        // Cerita Mandarin Bean 2: Dad's Work (爸爸的工作)
+        Story(
+            id = "story_dads_work",
+            titleHanzi = "爸爸的工作",
+            titlePinyin = "Bàba de Gōngzuò",
+            titleTranslation = "Dad's Work (Pekerjaan Ayah)",
+            level = "HSK 1",
+            category = "Humor & Keluarga",
+            description = "Percakapan jenaka antara seorang guru TK dengan murid perempuan kecil berusia lima tahun tentang pekerjaan ayahnya.",
+            coverEmoji = "👨‍👧",
+            coverImageRes = R.drawable.cover_story_dads_work,
+            estimatedReadMinutes = 1,
+            sentences = listOf(
+                Sentence(
+                    "s_dw_1",
+                    "老师问五岁的小女孩：“你的爸爸是做什么的？”",
+                    "Lǎoshī wèn wǔ suì de xiǎo nǚhái: “Nǐ de bàba shì zuò shénme de?”",
+                    "Guru bertanya kepada anak perempuan kecil berusia lima tahun: “Apa pekerjaan ayahmu?”",
+                    listOf(
+                        WordToken("老师", "lǎoshī", "Guru", "Profesi pengajar"),
+                        WordToken("问", "wèn", "Bertanya", "Mengajukan pertanyaan"),
+                        WordToken("五岁", "wǔ suì", "Berusia lima tahun", "Keterangan umur"),
+                        WordToken("的", "de", "Yang", "Partikel penghubung atributif"),
+                        WordToken("小女孩", "xiǎo nǚhái", "Anak perempuan kecil", "Gadis cilik"),
+                        WordToken("你的", "nǐ de", "Milikmu / -mu", "Kata ganti kepemilikan"),
+                        WordToken("爸爸", "bàba", "Ayah / papa", "Orang tua laki-laki"),
+                        WordToken("是", "shì", "Adalah", "Kopula"),
+                        WordToken("做什么", "zuò shénme", "Mengerjakan apa", "Frasa menanyakan profesi"),
+                        WordToken("的", "de", "Partikel penekanan profesi", "Pola 是...的")
+                    )
+                ),
+                Sentence(
+                    "s_dw_2",
+                    "小女孩说：“我的妈妈让他做什么，他就做什么。”",
+                    "Xiǎo nǚhái shuō: “Wǒ de māma ràng tā zuò shénme, tā jiù zuò shénme.”",
+                    "Gadis kecil itu berkata: “Apa pun yang ibuku suruh dia lakukan, itu yang dia lakukan.”",
+                    listOf(
+                        WordToken("小女孩", "xiǎo nǚhái", "Gadis kecil", "Anak perempuan cilik"),
+                        WordToken("说", "shuō", "Berkata", "Menyatakan sesuatu"),
+                        WordToken("我的", "wǒ de", "Milikku / -ku", "Kata ganti kepemilikan"),
+                        WordToken("妈妈", "māma", "Ibu / mama", "Orang tua perempuan"),
+                        WordToken("让", "ràng", "Menyuruh / meminta", "Kata kerja kausatif"),
+                        WordToken("他", "tā", "Dia / -nya", "Merujuk ke ayah"),
+                        WordToken("做", "zuò", "Melakukan / mengerjakan", "Kata kerja tindakan"),
+                        WordToken("什么", "shénme", "Apa / apa pun", "Kata tanya / pronomina tak tentu"),
+                        WordToken("他", "tā", "Dia", "Merujuk ke ayah"),
+                        WordToken("就", "jiù", "Maka / langsung", "Adverbia penegas urutan"),
+                        WordToken("做", "zuò", "Mengerjakan", "Melakukan tindakan"),
+                        WordToken("什么", "shénme", "Itu / apa", "Korelasi dengan kata apa pun sebelumnya")
+                    )
+                )
+            ),
+            questions = listOf(
+                StoryQuestion(
+                    "q_dw_1",
+                    "小女孩几岁？(Berapa usia anak perempuan itu?)",
+                    listOf("三岁 (3 tahun)", "四岁 (4 tahun)", "五岁 (5 tahun)", "六岁 (6 tahun)"),
+                    2,
+                    "Di kalimat pertama tertulis: '老师问五岁的小女孩' (Guru bertanya kepada gadis kecil berusia 5 tahun)."
+                ),
+                StoryQuestion(
+                    "q_dw_2",
+                    "老师问了小女孩什么问题？(Pertanyaan apa yang diajukan oleh guru?)",
+                    listOf(
+                        "妈妈漂亮吗？(Apakah ibumu cantik?)",
+                        "你的爸爸是做什么的？(Apa pekerjaan ayahmu?)",
+                        "你喜欢学校吗？(Apakah kamu suka sekolah?)",
+                        "你有几个朋友？(Berapa banyak teman yang kamu punya?)"
+                    ),
+                    1,
+                    "Guru menanyakan pekerjaan ayah si anak: '你的爸爸是做什么的？'."
+                ),
+                StoryQuestion(
+                    "q_dw_3",
+                    "小女孩的意思是什么？(Apa maksud jawaban gadis kecil itu?)",
+                    listOf(
+                        "爸爸听妈妈的话 (Ayah selalu patuh pada perintah ibu)",
+                        "爸爸是老师 (Ayah bekerja sebagai guru)",
+                        "爸爸没有工作 (Ayah tidak punya pekerjaan)",
+                        "爸爸不回家 (Ayah tidak pulang ke rumah)"
+                    ),
+                    0,
+                    "Maksud dari '妈妈让他做什么，他就做什么' adalah sang ayah sangat patuh dan mendengarkan segala suruhan/perintah sang ibu di rumah."
+                )
+            )
+        ),
+
+        // Cerita Mandarin Bean 3: Who I am (我是谁)
+        Story(
+            id = "story_who_i_am",
+            titleHanzi = "我是谁",
+            titlePinyin = "Wǒ Shì Shéi",
+            titleTranslation = "Who I Am (Siapa Saya)",
+            level = "HSK 1",
+            category = "Profil & Pekerjaan",
+            description = "Perkenalan diri David Lee, seorang guru bahasa Inggris asal Amerika yang tumbuh di Jepang, kuliah di Inggris, dan kini mengajar di Tiongkok.",
+            coverEmoji = "👨‍🏫",
+            coverImageRes = R.drawable.cover_story_who_i_am,
+            estimatedReadMinutes = 2,
+            sentences = listOf(
+                Sentence(
+                    "s_wia_1",
+                    "我的名字叫李大卫，我是美国人，但是在日本长大，在英国上大学，现在在中国工作。",
+                    "Wǒ de míngzi jiào Lǐ Dàwèi, wǒ shì Měiguó rén, dànshì zài Rìběn zhǎngdà, zài Yīngguó shàng dàxué, xiànzài zài Zhōngguó gōngzuò.",
+                    "Nama saya David Lee, saya orang Amerika, tetapi besar di Jepang, kuliah di Inggris, dan sekarang bekerja di Tiongkok.",
+                    listOf(
+                        WordToken("我的", "wǒ de", "Milikku / saya punya", "Kata ganti kepemilikan"),
+                        WordToken("名字", "míngzi", "Nama", "Kata benda identitas"),
+                        WordToken("叫", "jiào", "Dipanggil / bernama", "Kata kerja menyebut nama"),
+                        WordToken("李大卫", "Lǐ Dàwèi", "David Lee", "Nama orang"),
+                        WordToken("我", "wǒ", "Saya", "Kata ganti orang pertama"),
+                        WordToken("是", "shì", "Adalah", "Kopula"),
+                        WordToken("美国人", "Měiguó rén", "Orang Amerika", "Kewarganegaraan"),
+                        WordToken("但是", "dànshì", "Tetapi / namun", "Konjungsi pertentangan"),
+                        WordToken("在", "zài", "Di", "Preposisi lokasi"),
+                        WordToken("日本", "Rìběn", "Jepang", "Nama negara"),
+                        WordToken("长大", "zhǎngdà", "Tumbuh besar", "Frasa perkembangan hidup"),
+                        WordToken("在", "zài", "Di", "Preposisi lokasi"),
+                        WordToken("英国", "Yīngguó", "Inggris", "Nama negara"),
+                        WordToken("上大学", "shàng dàxué", "Kuliah / masuk universitas", "Aktivitas pendidikan tinggi"),
+                        WordToken("现在", "xiànzài", "Sekarang", "Keterangan waktu saat ini"),
+                        WordToken("在", "zài", "Di", "Preposisi lokasi"),
+                        WordToken("中国", "Zhōngguó", "Tiongkok", "Nama negara"),
+                        WordToken("工作", "gōngzuò", "Bekerja", "Aktivitas profesi")
+                    )
+                ),
+                Sentence(
+                    "s_wia_2",
+                    "我在大学学习历史和英语，现在是一个英语老师，我非常喜欢我的工作。",
+                    "Wǒ zài dàxué xuéxí lìshǐ hé Yīngyǔ, xiànzài shì yī gè Yīngyǔ lǎoshī, wǒ fēicháng xǐhuan wǒ de gōngzuò.",
+                    "Saya belajar sejarah dan bahasa Inggris di universitas, sekarang adalah seorang guru bahasa Inggris, saya sangat menyukai pekerjaan saya.",
+                    listOf(
+                        WordToken("我", "wǒ", "Saya", "Kata ganti orang pertama"),
+                        WordToken("在", "zài", "Di", "Preposisi"),
+                        WordToken("大学", "dàxué", "Universitas", "Perguruan tinggi"),
+                        WordToken("学习", "xuéxí", "Belajar", "Kata kerja menuntut ilmu"),
+                        WordToken("历史", "lìshǐ", "Sejarah", "Mata kuliah / ilmu masa lalu"),
+                        WordToken("和", "hé", "Dan", "Kata hubung setara"),
+                        WordToken("英语", "Yīngyǔ", "Bahasa Inggris", "Bahasa asing"),
+                        WordToken("现在", "xiànzài", "Sekarang", "Keterangan waktu"),
+                        WordToken("是", "shì", "Adalah", "Kopula"),
+                        WordToken("一个", "yī gè", "Seorang", "Satuan jumlah"),
+                        WordToken("英语老师", "Yīngyǔ lǎoshī", "Guru bahasa Inggris", "Profesi pengajar bahasa"),
+                        WordToken("我", "wǒ", "Saya", "Kata ganti orang pertama"),
+                        WordToken("非常", "fēicháng", "Sangat / luar biasa", "Adverbia penegas intensitas tinggi"),
+                        WordToken("喜欢", "xǐhuan", "Menyukai / gemar", "Perasaan suka"),
+                        WordToken("我的", "wǒ de", "Milik saya", "Kepemilikan"),
+                        WordToken("工作", "gōngzuò", "Pekerjaan", "Karir / tugas")
+                    )
+                ),
+                Sentence(
+                    "s_wia_3",
+                    "学生们很好，学校也很好。",
+                    "Xuéshengmen hěn hǎo, xuéxiào yě hěn hǎo.",
+                    "Para murid sangat baik, sekolahnya juga sangat baik.",
+                    listOf(
+                        WordToken("学生们", "xuéshengmen", "Para murid / siswa", "Bentuk jamak pelajar"),
+                        WordToken("很", "hěn", "Sangat", "Adverbia derajat"),
+                        WordToken("好", "hǎo", "Baik / ramah", "Kata sifat"),
+                        WordToken("学校", "xuéxiào", "Sekolah", "Tempat mengajar"),
+                        WordToken("也", "yě", "Juga", "Adverbia inklusi"),
+                        WordToken("很好", "hěn hǎo", "Sangat baik", "Kondisi memuaskan")
+                    )
+                )
+            ),
+            questions = listOf(
+                StoryQuestion(
+                    "q_wia_1",
+                    "李大卫是哪国人？(Dari negara mana David Lee berasal?)",
+                    listOf("中国 (Tiongkok)", "美国 (Amerika Serikat)", "日本 (Jepang)", "英国 (Inggris)"),
+                    1,
+                    "Di kalimat pertama tertulis: '我是美国人' (Saya adalah orang Amerika)."
+                ),
+                StoryQuestion(
+                    "q_wia_2",
+                    "李大卫现在做什么工作？(Apa pekerjaan David Lee sekarang?)",
+                    listOf(
+                        "学生 (Murid)",
+                        "医生 (Dokter)",
+                        "英语老师 (Guru Bahasa Inggris)",
+                        "历史老师 (Guru Sejarah)"
+                    ),
+                    2,
+                    "Di kalimat ke-2 tertulis: '现在是一个英语老师' (Sekarang adalah seorang guru bahasa Inggris)."
+                ),
+                StoryQuestion(
+                    "q_wia_3",
+                    "李大卫现在在哪里工作？(Di mana David Lee bekerja sekarang?)",
+                    listOf(
+                        "在日本 (Di Jepang)",
+                        "在英国 (Di Inggris)",
+                        "在美国 (Di Amerika Serikat)",
+                        "在中国 (Di Tiongkok)"
+                    ),
+                    3,
+                    "Di kalimat pertama tertulis: '现在在中国工作' (Sekarang bekerja di Tiongkok)."
+                )
+            )
+        ),
+
         // Cerita 1 - Sapaan & Murid Baru
         Story(
             id = "story_1",

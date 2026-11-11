@@ -31,10 +31,11 @@ data class Story(
     val level: String,
     val category: String,
     val description: String,
-    val coverEmoji: String,
+    val coverEmoji: String = "📖",
     val estimatedReadMinutes: Int,
     val sentences: List<Sentence>,
-    val questions: List<StoryQuestion>
+    val questions: List<StoryQuestion>,
+    val coverImageRes: Int = 0
 )
 
 data class Word(
