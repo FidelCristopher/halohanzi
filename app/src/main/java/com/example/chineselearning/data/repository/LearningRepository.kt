@@ -3946,8 +3946,8 @@ object LearningRepository {
             level = "Level 2",
             story = stories[1],
             nodes = listOf(
-                PathNode("u2_n1", "Angka 1-10", Color(0xFFFFC107), NodeIconType.CAP, isCompleted = false, lessonId = "u2_l1"),
-                PathNode("u2_n2", "Angka 1-10", Color(0xFFFFC107), NodeIconType.DUMBBELL, isCompleted = false, lessonId = "u2_l1"),
+                PathNode("u2_n1", "Mereka adalah teman-temanku", Color(0xFFFFC107), NodeIconType.CAP, isCompleted = false, lessonId = "u2_l1"),
+                PathNode("u2_n2", "Mereka adalah teman-temanku", Color(0xFFFFC107), NodeIconType.DUMBBELL, isCompleted = false, lessonId = "u2_l1"),
                 PathNode("u2_n3", "Umur & Tahun", Color(0xFFFFC107), NodeIconType.CAP, isCompleted = false, lessonId = "u2_l1"),
                 PathNode("u2_n4", "Umur & Tahun", Color(0xFFFFC107), NodeIconType.DUMBBELL, isCompleted = false, lessonId = "u2_l1"),
                 PathNode("u2_n5", "Latihan Komprehensif", Color(0xFFFFC107), NodeIconType.SHUFFLE, isCompleted = false, lessonId = "u2_l1"),
@@ -3958,57 +3958,16 @@ object LearningRepository {
             lessons = listOf(
                 Lesson(
                     id = "u2_l1",
-                    title = "Menyatakan Waktu & Usia",
-                    subtitle = "Jam, menit, dan usia",
-                    grammarNote = "Pola usia: 'Subjek + Angka + 岁'. Jam: '点 (jam) + 分 (menit)'. Contoh: 八点三十分 (jam 8 lewat 30).",
+                    title = "Mereka adalah teman-temanku",
+                    subtitle = "Kata ganti jamak 们 & Kosakata Teman",
+                    grammarNote = "Akhiran 们 (men) digunakan setelah kata ganti orang (我 -> 我们, 你 -> 你们, 他 -> 他们, 她 -> 她们) atau kata benda manusia untuk menunjukkan bentuk jamak.",
                     newWords = listOf(
-                        Word("w2_1", "今天", "jīntiān", "Hari ini", "Waktu", "今天是星期天。", "Jīntiān shì xīngqītiān.", "Hari ini hari Minggu."),
-                        Word("w2_2", "点", "diǎn", "Jam (pukul)", "Waktu", "现在八点。", "Xiànzài bā diǎn.", "Sekarang jam 8."),
-                        Word("w2_3", "岁", "suì", "Tahun (umur)", "Satuan", "我二十岁。", "Wǒ èrshí suì.", "Saya 20 tahun.")
+                        Word("w2_1", "同学", "tóngxué", "Teman sekolah", "Kata benda", "我们是同学。", "Wǒmen shì tóngxué.", "Kami adalah teman sekolah."),
+                        Word("w2_2", "朋友", "péngyou", "Teman", "Kata benda", "我们是朋友。", "Wǒmen shì péngyou.", "Kami adalah teman."),
+                        Word("w2_3", "们", "men", "Penanda jamak", "Akhiran", "他们不是朋友。", "Tāmen bú shì péngyou.", "Mereka bukan teman.")
                     ),
-                    exercises = listOf(
-                        Exercise(
-                            id = "u2_ex1",
-                            type = ExerciseType.PICTURE_CHOICE,
-                            title = "Pilih gambar yang benar",
-                            targetHanzi = "今天",
-                            targetPinyin = "jīntiān",
-                            targetTranslation = "Hari ini",
-                            correctAnswer = "hari ini",
-                            audioToSpeak = "今天",
-                            pictureOptions = listOf(
-                                PictureOption("p2_1", "hari ini", "📅", isCorrect = true),
-                                PictureOption("p2_2", "kemarin", "⏮️", isCorrect = false),
-                                PictureOption("p2_3", "jam", "⏰", isCorrect = false),
-                                PictureOption("p2_4", "tahun", "🌍", isCorrect = false)
-                            )
-                        ),
-                        Exercise(
-                            id = "u2_ex2",
-                            type = ExerciseType.FILL_BLANK,
-                            title = "Lengkapi terjemahan",
-                            targetHanzi = "现在 八 点 。",
-                            targetPinyin = "Xiànzài bā diǎn .",
-                            targetTranslation = "Sekarang jam delapan.",
-                            sentenceWithBlank = "Sekarang ________ delapan.",
-                            options = listOf("jam", "umur", "hari"),
-                            correctAnswer = "jam",
-                            audioToSpeak = "现在八点。"
-                        ),
-                        Exercise(
-                            id = "u2_ex3",
-                            type = ExerciseType.MATCH_PAIRS,
-                            title = "Ketuk pasangan yang sesuai",
-                            correctAnswer = "ALL_MATCHED",
-                            matchPairs = listOf(
-                                MatchPairItem("m2_1", "今天", "jīntiān", "hari ini"),
-                                MatchPairItem("m2_2", "现在", "xiànzài", "sekarang"),
-                                MatchPairItem("m2_3", "点", "diǎn", "jam"),
-                                MatchPairItem("m2_4", "岁", "suì", "umur"),
-                                MatchPairItem("m2_5", "分钟", "fēnzhōng", "menit")
-                            )
-                        )
-                    )
+                    exercises = stage1Part1Exercises,
+                    exercisesPart1 = stage1Part1Exercises
                 )
             )
         ),

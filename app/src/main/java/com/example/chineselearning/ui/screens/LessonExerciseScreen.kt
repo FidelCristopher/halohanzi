@@ -88,6 +88,7 @@ fun LessonExerciseScreen(
             "u1_l5_p1_q5" -> listOf("dipanggil", "halo", "orang", "sampai jumpa,\nselamat tinggal")
             "u1_l5_p2_q3" -> listOf("(pria) dia", "dokter", "tidak, bukan", "guru")
             "u1_l5_p2_q6" -> listOf("murid", "(perempuan) dia", "adalah")
+            "u2_p1_q8" -> listOf("teman", "teman sekolah", "kata penanda jamak yang digunakan untuk kata ganti atau beberapa kat...")
             else -> listOf("adalah", "guru", "(negara) Indonesia", "(negara)\nIndonesia", "orang", "murid")
         }
         val pairs = currEx?.matchPairs ?: emptyList()
