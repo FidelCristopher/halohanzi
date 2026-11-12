@@ -250,33 +250,6 @@ fun HomeScreen(
                             }
                         }
                     }
-
-                    // Right: Subtle App Badge / Status Indicator
-                    Surface(
-                        shape = RoundedCornerShape(14.dp),
-                        color = Color(0xFFF8FAFC),
-                        border = BorderStroke(1.dp, Color(0xFFE2E8F0))
-                    ) {
-                        Row(
-                            modifier = Modifier.padding(horizontal = 10.dp, vertical = 6.dp),
-                            verticalAlignment = Alignment.CenterVertically
-                        ) {
-                            Box(
-                                modifier = Modifier
-                                    .size(8.dp)
-                                    .clip(CircleShape)
-                                    .background(HanziGreen)
-                            )
-                            Spacer(modifier = Modifier.width(6.dp))
-                            Text(
-                                text = "Kurikulum Standar",
-                                fontFamily = AppFontFamily,
-                                fontSize = 11.5.sp,
-                                fontWeight = FontWeight.SemiBold,
-                                color = SlateGray
-                            )
-                        }
-                    }
                 }
             }
         }
