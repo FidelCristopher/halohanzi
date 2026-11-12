@@ -1,6 +1,7 @@
 package com.example.chineselearning.ui.screens
 
 import androidx.compose.animation.*
+import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -17,6 +18,7 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.draw.rotate
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
@@ -92,103 +94,151 @@ fun HomeScreen(
         contentPadding = PaddingValues(bottom = 90.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        // TOP APP BAR: Modern Status Capsules Row
+        // TOP APP BAR: Modern Header with Refined HSK Level Selector
         item {
             Surface(
                 modifier = Modifier
                     .fillMaxWidth()
                     .shadow(
-                        elevation = 4.dp,
-                        spotColor = Color(0x12000000),
-                        ambientColor = Color(0x08000000)
+                        elevation = 2.dp,
+                        spotColor = Color(0x10000000),
+                        ambientColor = Color(0x06000000)
                     ),
                 color = Color.White,
-                border = BorderStroke(1.dp, Color(0xFFF3F3F8))
+                border = BorderStroke(1.dp, Color(0xFFF1F5F9))
             ) {
                 Row(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .padding(horizontal = 14.dp, vertical = 8.dp),
+                        .padding(horizontal = 16.dp, vertical = 9.dp),
                     horizontalArrangement = Arrangement.SpaceBetween,
                     verticalAlignment = Alignment.CenterVertically
                 ) {
-                    // Left: HSK 1 - 6 Dropdown Capsule
+                    // Modern HSK Level Selector
                     Box {
+                        val arrowRotation by animateFloatAsState(
+                            targetValue = if (showHskMenu) 180f else 0f,
+                            label = "hskArrow"
+                        )
+
                         Surface(
-                            shape = RoundedCornerShape(16.dp),
-                            color = Color(0xFFF1ECFC),
-                            border = BorderStroke(1.dp, Color(0xFFD6C8F6)),
+                            shape = RoundedCornerShape(18.dp),
+                            color = HanziMint,
+                            border = BorderStroke(1.2.dp, HanziGreen.copy(alpha = 0.35f)),
                             modifier = Modifier.bouncyClick { showHskMenu = true }
                         ) {
                             Row(
-                                modifier = Modifier.padding(horizontal = 10.dp, vertical = 6.dp),
+                                modifier = Modifier.padding(horizontal = 12.dp, vertical = 7.dp),
                                 verticalAlignment = Alignment.CenterVertically
                             ) {
+                                Box(
+                                    modifier = Modifier
+                                        .size(24.dp)
+                                        .clip(CircleShape)
+                                        .background(HanziGreenDark),
+                                    contentAlignment = Alignment.Center
+                                ) {
+                                    Icon(
+                                        painter = painterResource(R.drawable.ic_story_level_badge),
+                                        contentDescription = null,
+                                        tint = Color.White,
+                                        modifier = Modifier.size(13.dp)
+                                    )
+                                }
+                                Spacer(modifier = Modifier.width(8.dp))
+                                Column {
+                                    Text(
+                                        text = "HSK $selectedHskLevel",
+                                        fontFamily = AppFontFamily,
+                                        fontSize = 13.5.sp,
+                                        fontWeight = FontWeight.Bold,
+                                        color = HanziGreenDark
+                                    )
+                                }
+                                Spacer(modifier = Modifier.width(6.dp))
                                 Icon(
-                                    imageVector = Icons.Default.Shield,
-                                    contentDescription = null,
-                                    tint = Color(0xFF5E35B1),
-                                    modifier = Modifier.size(16.dp)
-                                )
-                                Spacer(modifier = Modifier.width(5.dp))
-                                Text(
-                                    text = "HSK $selectedHskLevel",
-                                    fontFamily = NunitoFontFamily,
-                                    fontSize = 12.5.sp,
-                                    fontWeight = FontWeight.Bold,
-                                    color = Color(0xFF5E35B1)
-                                )
-                                Spacer(modifier = Modifier.width(2.dp))
-                                Icon(
-                                    imageVector = Icons.Default.ArrowDropDown,
+                                    imageVector = Icons.Default.KeyboardArrowDown,
                                     contentDescription = "Pilih Level HSK",
-                                    modifier = Modifier.size(16.dp),
-                                    tint = Color(0xFF5E35B1)
+                                    modifier = Modifier
+                                        .size(18.dp)
+                                        .rotate(arrowRotation),
+                                    tint = HanziGreenDark
                                 )
                             }
                         }
 
-                        // HSK 1 to HSK 6 Dropdown Menu
+                        // Modern Elevated Dropdown Menu
                         DropdownMenu(
                             expanded = showHskMenu,
-                            onDismissRequest = { showHskMenu = false }
+                            onDismissRequest = { showHskMenu = false },
+                            shape = RoundedCornerShape(18.dp),
+                            containerColor = Color.White,
+                            border = BorderStroke(1.dp, Color(0xFFE2E8F0)),
+                            shadowElevation = 8.dp
                         ) {
+                            Text(
+                                text = "PILIH TINGKAT KEMAMPUAN",
+                                fontFamily = AppFontFamily,
+                                fontSize = 10.5.sp,
+                                fontWeight = FontWeight.Bold,
+                                color = SlateGray,
+                                letterSpacing = 0.8.sp,
+                                modifier = Modifier.padding(horizontal = 16.dp, vertical = 8.dp)
+                            )
+
+                            HorizontalDivider(color = Color(0xFFF1F5F9), thickness = 1.dp)
+
                             listOf(
-                                1 to "HSK 1: Pemula (150 Kosakata)",
-                                2 to "HSK 2: Dasar (300 Kosakata)",
-                                3 to "HSK 3: Menengah (600 Kosakata)",
-                                4 to "HSK 4: Menengah Atas (1200 Kosakata)",
-                                5 to "HSK 5: Lanjutan (2500 Kosakata)",
-                                6 to "HSK 6: Mahir (5000 Kosakata)"
-                            ).forEach { (level, desc) ->
+                                1 to Pair("HSK 1: Pemula", "150 Kosakata dasar"),
+                                2 to Pair("HSK 2: Dasar", "300 Kosakata percakapan"),
+                                3 to Pair("HSK 3: Menengah", "600 Kosakata praktis"),
+                                4 to Pair("HSK 4: Menengah Atas", "1200 Kosakata fasih"),
+                                5 to Pair("HSK 5: Lanjutan", "2500 Kosakata akademis"),
+                                6 to Pair("HSK 6: Mahir", "5000+ Kosakata profesional")
+                            ).forEach { (level, info) ->
+                                val isSelected = level == selectedHskLevel
                                 DropdownMenuItem(
+                                    modifier = Modifier
+                                        .fillMaxWidth()
+                                        .padding(horizontal = 6.dp, vertical = 2.dp),
                                     text = {
-                                        Row(verticalAlignment = Alignment.CenterVertically) {
-                                            if (level == selectedHskLevel) {
-                                                Icon(
-                                                    imageVector = Icons.Default.Check,
-                                                    contentDescription = null,
-                                                    tint = Color(0xFF00C48C),
-                                                    modifier = Modifier.size(16.dp)
-                                                )
-                                                Spacer(modifier = Modifier.width(6.dp))
-                                            } else {
-                                                Spacer(modifier = Modifier.width(22.dp))
-                                            }
-                                            Column {
-                                                Text(
-                                                    text = "Level HSK $level",
-                                                    fontFamily = NunitoFontFamily,
-                                                    fontWeight = FontWeight.Bold,
-                                                    fontSize = 13.sp,
-                                                    color = if (level == selectedHskLevel) Color(0xFF5E35B1) else DeepNavy
-                                                )
-                                                Text(
-                                                    text = desc,
-                                                    fontFamily = NunitoFontFamily,
-                                                    fontSize = 11.sp,
-                                                    color = SlateGray
-                                                )
+                                        Surface(
+                                            modifier = Modifier.fillMaxWidth(),
+                                            shape = RoundedCornerShape(12.dp),
+                                            color = if (isSelected) HanziMint else Color.Transparent
+                                        ) {
+                                            Row(
+                                                modifier = Modifier
+                                                    .fillMaxWidth()
+                                                    .padding(horizontal = 10.dp, vertical = 8.dp),
+                                                verticalAlignment = Alignment.CenterVertically
+                                            ) {
+                                                if (isSelected) {
+                                                    Icon(
+                                                        painter = painterResource(R.drawable.ic_story_quiz_check),
+                                                        contentDescription = null,
+                                                        tint = HanziGreenDark,
+                                                        modifier = Modifier.size(16.dp)
+                                                    )
+                                                    Spacer(modifier = Modifier.width(8.dp))
+                                                } else {
+                                                    Spacer(modifier = Modifier.width(24.dp))
+                                                }
+                                                Column {
+                                                    Text(
+                                                        text = info.first,
+                                                        fontFamily = AppFontFamily,
+                                                        fontWeight = if (isSelected) FontWeight.Bold else FontWeight.SemiBold,
+                                                        fontSize = 13.sp,
+                                                        color = if (isSelected) HanziGreenDark else DeepNavy
+                                                    )
+                                                    Text(
+                                                        text = info.second,
+                                                        fontFamily = AppFontFamily,
+                                                        fontSize = 11.sp,
+                                                        color = SlateGray
+                                                    )
+                                                }
                                             }
                                         }
                                     },
@@ -201,82 +251,30 @@ fun HomeScreen(
                         }
                     }
 
-                    // Center: Crown Status Pill
+                    // Right: Subtle App Badge / Status Indicator
                     Surface(
-                        shape = RoundedCornerShape(16.dp),
-                        color = Color(0xFFFFF9E6),
-                        border = BorderStroke(1.dp, Color(0xFFFFECB3))
+                        shape = RoundedCornerShape(14.dp),
+                        color = Color(0xFFF8FAFC),
+                        border = BorderStroke(1.dp, Color(0xFFE2E8F0))
                     ) {
                         Row(
                             modifier = Modifier.padding(horizontal = 10.dp, vertical = 6.dp),
                             verticalAlignment = Alignment.CenterVertically
                         ) {
-                            Icon(
-                                painter = painterResource(R.drawable.ic_crown),
-                                contentDescription = "Crown",
-                                tint = Color.Unspecified,
-                                modifier = Modifier.size(20.dp)
+                            Box(
+                                modifier = Modifier
+                                    .size(8.dp)
+                                    .clip(CircleShape)
+                                    .background(HanziGreen)
                             )
-                        }
-                    }
-
-                    // Right: Streak Flame Capsule & Gold Coin Capsule
-                    Row(
-                        verticalAlignment = Alignment.CenterVertically,
-                        horizontalArrangement = Arrangement.spacedBy(8.dp)
-                    ) {
-                        // Streak Flame Capsule
-                        Surface(
-                            shape = RoundedCornerShape(16.dp),
-                            color = Color(0xFFFFF4EC),
-                            border = BorderStroke(1.dp, Color(0xFFFFDBC8))
-                        ) {
-                            Row(
-                                modifier = Modifier.padding(horizontal = 9.dp, vertical = 5.dp),
-                                verticalAlignment = Alignment.CenterVertically
-                            ) {
-                                Icon(
-                                    painter = painterResource(R.drawable.ic_fire),
-                                    contentDescription = "Streak",
-                                    tint = Color.Unspecified,
-                                    modifier = Modifier.size(17.dp)
-                                )
-                                Spacer(modifier = Modifier.width(4.dp))
-                                Text(
-                                    text = "0",
-                                    fontFamily = NunitoFontFamily,
-                                    fontSize = 13.sp,
-                                    fontWeight = FontWeight.Bold,
-                                    color = Color(0xFFE65100)
-                                )
-                            }
-                        }
-
-                        // Gold Coin Capsule
-                        Surface(
-                            shape = RoundedCornerShape(16.dp),
-                            color = Color(0xFFFFF8E1),
-                            border = BorderStroke(1.dp, Color(0xFFFFE082))
-                        ) {
-                            Row(
-                                modifier = Modifier.padding(horizontal = 10.dp, vertical = 5.dp),
-                                verticalAlignment = Alignment.CenterVertically
-                            ) {
-                                Icon(
-                                    painter = painterResource(R.drawable.ic_coin),
-                                    contentDescription = "Coin",
-                                    tint = Color.Unspecified,
-                                    modifier = Modifier.size(16.dp)
-                                )
-                                Spacer(modifier = Modifier.width(4.dp))
-                                Text(
-                                    text = "171",
-                                    fontFamily = NunitoFontFamily,
-                                    fontSize = 13.sp,
-                                    fontWeight = FontWeight.Bold,
-                                    color = Color(0xFFE65100)
-                                )
-                            }
+                            Spacer(modifier = Modifier.width(6.dp))
+                            Text(
+                                text = "Kurikulum Standar",
+                                fontFamily = AppFontFamily,
+                                fontSize = 11.5.sp,
+                                fontWeight = FontWeight.SemiBold,
+                                color = SlateGray
+                            )
                         }
                     }
                 }
@@ -343,70 +341,39 @@ fun HomeScreen(
                                 modifier = Modifier
                                     .fillMaxWidth()
                                     .padding(bottom = 8.dp),
-                                horizontalArrangement = Arrangement.SpaceBetween,
                                 verticalAlignment = Alignment.Bottom
                             ) {
-                                Row(verticalAlignment = Alignment.Bottom) {
-                                    Icon(
-                                        painter = painterResource(R.drawable.ic_avatar_teacher),
-                                        contentDescription = "Teacher",
-                                        tint = Color.Unspecified,
-                                        modifier = Modifier.size(54.dp)
-                                    )
-                                    // Modern Speech Bubble with 3D bevel and KaiTi font
+                                Icon(
+                                    painter = painterResource(R.drawable.ic_avatar_teacher),
+                                    contentDescription = "Teacher",
+                                    tint = Color.Unspecified,
+                                    modifier = Modifier.size(54.dp)
+                                )
+                                // Modern Speech Bubble with 3D bevel and KaiTi font
+                                Box(
+                                    modifier = Modifier
+                                        .padding(bottom = 8.dp, start = 6.dp)
+                                        .shadow(elevation = 6.dp, shape = RoundedCornerShape(16.dp))
+                                        .clip(RoundedCornerShape(16.dp))
+                                        .background(Color(0xFFC2185B))
+                                ) {
                                     Box(
                                         modifier = Modifier
-                                            .padding(bottom = 8.dp, start = 6.dp)
-                                            .shadow(elevation = 6.dp, shape = RoundedCornerShape(16.dp))
-                                            .clip(RoundedCornerShape(16.dp))
-                                            .background(Color(0xFFC2185B))
-                                    ) {
-                                        Box(
-                                            modifier = Modifier
-                                                .padding(bottom = 3.dp)
-                                                .clip(RoundedCornerShape(topStart = 16.dp, topEnd = 16.dp, bottomStart = 13.dp, bottomEnd = 13.dp))
-                                                .background(
-                                                    Brush.verticalGradient(
-                                                        listOf(Color(0xFFEC407A), Color(0xFFE91E63))
-                                                    )
+                                            .padding(bottom = 3.dp)
+                                            .clip(RoundedCornerShape(topStart = 16.dp, topEnd = 16.dp, bottomStart = 13.dp, bottomEnd = 13.dp))
+                                            .background(
+                                                Brush.verticalGradient(
+                                                    listOf(Color(0xFFEC407A), Color(0xFFE91E63))
                                                 )
-                                                .padding(horizontal = 12.dp, vertical = 6.dp)
-                                        ) {
-                                            Text(
-                                                text = "你好！",
-                                                fontFamily = KaiTiFontFamily,
-                                                color = Color.White,
-                                                fontWeight = FontWeight.Bold,
-                                                fontSize = 14.sp
                                             )
-                                        }
-                                    }
-                                }
-
-                                // Chapter Pouch Progress Capsule
-                                Surface(
-                                    shape = RoundedCornerShape(16.dp),
-                                    color = Color(0xFFFFEBEE),
-                                    border = BorderStroke(1.dp, Color(0xFFFFCDD2)),
-                                    shadowElevation = 2.dp
-                                ) {
-                                    Row(
-                                        modifier = Modifier.padding(horizontal = 10.dp, vertical = 5.dp),
-                                        verticalAlignment = Alignment.CenterVertically
+                                            .padding(horizontal = 12.dp, vertical = 6.dp)
                                     ) {
-                                        Icon(
-                                            painter = painterResource(R.drawable.ic_pouch),
-                                            contentDescription = "Pouch",
-                                            tint = Color.Unspecified,
-                                            modifier = Modifier.size(16.dp)
-                                        )
-                                        Spacer(modifier = Modifier.width(5.dp))
                                         Text(
-                                            text = "1 / 3",
-                                            fontFamily = NunitoFontFamily,
-                                            fontSize = 11.5.sp,
+                                            text = "你好！",
+                                            fontFamily = KaiTiFontFamily,
+                                            color = Color.White,
                                             fontWeight = FontWeight.Bold,
-                                            color = Color(0xFFC62828)
+                                            fontSize = 14.sp
                                         )
                                     }
                                 }
