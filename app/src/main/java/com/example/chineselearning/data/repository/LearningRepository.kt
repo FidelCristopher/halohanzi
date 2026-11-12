@@ -1084,6 +1084,201 @@ object LearningRepository {
             )
         ),
 
+        // Cerita Mandarin Bean 7: My family (我的家人)
+        Story(
+            id = "story_my_family",
+            titleHanzi = "我的家人",
+            titlePinyin = "Wǒ de Jiārén",
+            titleTranslation = "My family (Keluarga Saya)",
+            level = "HSK 1",
+            category = "Keluarga & Percakapan",
+            description = "Pertemuan hangat di restoran masakan Kanton antara murid dan Guru Wang, menceritakan keluarga berempat yang bahagia dan rukun.",
+            coverEmoji = "👨‍👩‍👧‍👦",
+            coverImageRes = R.drawable.cover_story_my_family,
+            estimatedReadMinutes = 2,
+            sentences = listOf(
+                Sentence(
+                    "s_myfam_1",
+                    "王老师，好久不见！",
+                    "Wáng lǎoshī, hǎojiǔ bu jiàn!",
+                    "A: Guru Wang, lama tidak bertemu!",
+                    listOf(
+                        WordToken("王老师", "Wáng lǎoshī", "Guru Wang", "Panggilan hormat guru bermarga Wang"),
+                        WordToken("好久不见", "hǎojiǔ bu jiàn", "Lama tidak bertemu", "Ungkapan salam saat sudah lama tak bersua")
+                    )
+                ),
+                Sentence(
+                    "s_myfam_2",
+                    "好久不见！你也来这家饭店吃饭？",
+                    "Hǎojiǔ bu jiàn! Nǐ yě lái zhè jiā fàndiàn chī fàn?",
+                    "B: Lama tidak bertemu! Kamu juga datang makan di restoran ini?",
+                    listOf(
+                        WordToken("好久不见", "hǎojiǔ bu jiàn", "Lama tidak bertemu", "Sapaan ramah reuni"),
+                        WordToken("你也", "nǐ yě", "Kamu juga", "Subjek dan adverbia kesamaan"),
+                        WordToken("来", "lái", "Datang", "Kata kerja pergerakan"),
+                        WordToken("这家", "zhè jiā", "Ini (penggolong usaha)", "Kata tunjuk + penggolong restoran"),
+                        WordToken("饭店", "fàndiàn", "Restoran / rumah makan", "Tempat makan"),
+                        WordToken("吃饭", "chī fàn", "Makan nasi / bersantap", "Melakukan kegiatan makan")
+                    )
+                ),
+                Sentence(
+                    "s_myfam_3",
+                    "对，我和我的家人来吃饭。我的朋友说这里的广东菜很好吃。",
+                    "Duì, wǒ hé wǒ de jiārén lái chī fàn. Wǒ de péngyou shuō zhèlǐ de Guǎngdōng cài hěn hǎochī.",
+                    "A: Betul, saya dan keluarga saya datang untuk makan. Teman saya bilang masakan Kanton di sini sangat enak.",
+                    listOf(
+                        WordToken("对", "duì", "Betul / benar", "Pernyataan konfirmasi pembenaran"),
+                        WordToken("我和", "wǒ hé", "Saya dan", "Pronomina + kata hubung"),
+                        WordToken("我的家人", "wǒ de jiārén", "Keluarga saya", "Anggota keluarga penutur"),
+                        WordToken("来吃饭", "lái chī fàn", "Datang untuk makan", "Tujuan kedatangan"),
+                        WordToken("我的朋友", "wǒ de péngyou", "Teman saya", "Subjek teman"),
+                        WordToken("说", "shuō", "Berkata / bilang", "Kata kerja menyatakan info"),
+                        WordToken("这里的", "zhèlǐ de", "Yang di sini", "Penunjuk tempat"),
+                        WordToken("广东菜", "Guǎngdōng cài", "Masakan Kanton / Guangdong", "Masakan khas provinsi Guangdong yang populer"),
+                        WordToken("很好吃", "hěn hǎochī", "Sangat lezat / sedap", "Kualitas rasa yang enak")
+                    )
+                ),
+                Sentence(
+                    "s_myfam_4",
+                    "你的爸爸妈妈也来了吗？",
+                    "Nǐ de bàba māma yě lái le ma?",
+                    "B: Apakah ayah dan ibumu juga ikut datang?",
+                    listOf(
+                        WordToken("你的", "nǐ de", "Milikmu", "Kepemilikan orang kedua"),
+                        WordToken("爸爸妈妈", "bàba māma", "Orang tua (ayah dan ibu)", "Panggilan untuk ayah dan ibu"),
+                        WordToken("也", "yě", "Juga", "Adverbia penambahan"),
+                        WordToken("来了", "lái le", "Sudah datang", "Tindakan kedatangan"),
+                        WordToken("吗", "ma", "Apakah", "Partikel tanya ya/tidak")
+                    )
+                ),
+                Sentence(
+                    "s_myfam_5",
+                    "没有，他们喜欢在家吃。我的孩子们来了。那是我的老公，小孙；那个是我的大儿子，小宝，今年7岁了；这是我的小女儿，小贝，今年5岁了。",
+                    "Méiyǒu, tāmen xǐhuan zài jiā chī. Wǒ de háizimen lái le. Nà shì wǒ de lǎogōng, Xiǎo Sūn; nà gè shì wǒ de dà érzi, Xiǎo Bǎo, jīnnián 7 suì le; zhè shì wǒ de xiǎo nǚ'ér, Xiǎo Bèi, jīnnián 5 suì le.",
+                    "A: Tidak, mereka suka makan di rumah. Anak-anak saya yang datang. Itu suami saya, Xiao Sun; yang itu putra sulung saya, Xiao Bao, tahun ini 7 tahun; ini putri bungsu saya, Xiao Bei, tahun ini 5 tahun.",
+                    listOf(
+                        WordToken("没有", "méiyǒu", "Tidak ada / tidak", "Bentuk negasi"),
+                        WordToken("他们喜欢", "tāmen xǐhuan", "Mereka suka", "Subjek jamak + kata kerja gemar"),
+                        WordToken("在家吃", "zài jiā chī", "Makan di rumah", "Makan di dalam rumah sendiri"),
+                        WordToken("我的孩子们", "wǒ de háizimen", "Anak-anak saya", "Bentuk jamak anak penutur"),
+                        WordToken("来了", "lái le", "Sudah datang", "Kedatangan"),
+                        WordToken("那是", "nà shì", "Itu adalah", "Kata tunjuk jauh + kopula"),
+                        WordToken("我的老公", "wǒ de lǎogōng", "Suami saya", "Panggilan akrab untuk suami"),
+                        WordToken("小孙", "Xiǎo Sūn", "Xiao Sun", "Nama panggilan suami bermarga Sun"),
+                        WordToken("大儿子", "dà érzi", "Putra sulung", "Anak laki-laki pertama"),
+                        WordToken("小宝", "Xiǎo Bǎo", "Xiao Bao", "Panggilan sayang untuk anak pertama"),
+                        WordToken("今年7岁了", "jīnnián 7 suì le", "Tahun ini berusia 7 tahun", "Menyatakan umur"),
+                        WordToken("小女儿", "xiǎo nǚ'ér", "Putri bungsu", "Anak perempuan terkecil"),
+                        WordToken("小贝", "Xiǎo Bèi", "Xiao Bei", "Panggilan sayang untuk anak kedua"),
+                        WordToken("今年5岁了", "jīnnián 5 suì le", "Tahun ini berusia 5 tahun", "Menyatakan umur")
+                    )
+                ),
+                Sentence(
+                    "s_myfam_6",
+                    "你们一家四口人真幸福！孩子们都上学了吗？",
+                    "Nǐmen yī jiā sì kǒu rén zhēn xìngfú! Háizimen dōu shàngxué le ma?",
+                    "B: Keluarga berempat kalian sungguh bahagia! Apakah anak-anak sudah sekolah semua?",
+                    listOf(
+                        WordToken("你们", "nǐmen", "Kalian", "Pronomina jamak orang kedua"),
+                        WordToken("一家四口人", "yī jiā sì kǒu rén", "Satu keluarga 4 anggota", "Frasa jumlah anggota keluarga"),
+                        WordToken("真幸福", "zhēn xìngfú", "Sungguh bahagia", "Pernyataan kebahagiaan dan keharmonisan"),
+                        WordToken("孩子们", "háizimen", "Anak-anak", "Bentuk jamak anak"),
+                        WordToken("都", "dōu", "Semua", "Adverbia cakupan menyeluruh"),
+                        WordToken("上学了吗", "shàngxué le ma", "Apakah sudah mulai sekolah?", "Menanyakan masa sekolah")
+                    )
+                ),
+                Sentence(
+                    "s_myfam_7",
+                    "大儿子去年上小学了，小女儿明年上小学。",
+                    "Dà érzi qùnián shàng xiǎoxué le, xiǎo nǚ'ér míngnián shàng xiǎoxué.",
+                    "A: Putra sulung tahun lalu sudah masuk SD, putri bungsu tahun depan baru masuk SD.",
+                    listOf(
+                        WordToken("大儿子", "dà érzi", "Putra sulung", "Anak laki-laki tertua"),
+                        WordToken("去年", "qùnián", "Tahun lalu", "Keterangan tahun sebelumnya"),
+                        WordToken("上小学了", "shàng xiǎoxué le", "Sudah masuk SD", "Mulai bersekolah jenjang dasar"),
+                        WordToken("小女儿", "xiǎo nǚ'ér", "Putri bungsu", "Anak perempuan terkecil"),
+                        WordToken("明年", "míngnián", "Tahun depan", "Keterangan tahun yang akan datang"),
+                        WordToken("上小学", "shàng xiǎoxué", "Masuk SD", "Bersekolah jenjang Sekolah Dasar")
+                    )
+                ),
+                Sentence(
+                    "s_myfam_8",
+                    "你老公也会说汉语吗？",
+                    "Nǐ lǎogōng yě huì shuō Hànyǔ ma?",
+                    "B: Apakah suamimu juga bisa berbicara bahasa Mandarin?",
+                    listOf(
+                        WordToken("你老公", "nǐ lǎogōng", "Suamimu", "Panggilan suami dari lawan bicara"),
+                        WordToken("也", "yě", "Juga", "Adverbia penambahan"),
+                        WordToken("会说", "huì shuō", "Bisa berbicara", "Kemampuan berbahasa"),
+                        WordToken("汉语", "Hànyǔ", "Bahasa Mandarin", "Bahasa Mandarin"),
+                        WordToken("吗", "ma", "Apakah", "Partikel tanya ya/tidak")
+                    )
+                ),
+                Sentence(
+                    "s_myfam_9",
+                    "哈哈，当然，他是中国人！",
+                    "Hāhā, dāngrán, tā shì Zhōngguó rén!",
+                    "A: Haha, tentu saja, dia adalah orang Tiongkok!",
+                    listOf(
+                        WordToken("哈哈", "hāhā", "Haha", "Tawa ceria dan akrab"),
+                        WordToken("当然", "dāngrán", "Tentu saja", "Kepastian penuh"),
+                        WordToken("他是", "tā shì", "Dia adalah", "Subjek dia + kopula"),
+                        WordToken("中国人", "Zhōngguó rén", "Orang Tiongkok", "Warga negara Tiongkok")
+                    )
+                )
+            ),
+            questions = listOf(
+                StoryQuestion(
+                    "q_myfam_1",
+                    "A和王老师在哪里见面？(Di mana A dan Guru Wang bertemu?)",
+                    listOf(
+                        "在学校 (Di sekolah)",
+                        "在广东菜饭店 (Di restoran masakan Kanton)",
+                        "在医院 (Di rumah sakit)",
+                        "在机场 (Di bandara)"
+                    ),
+                    1,
+                    "Keduanya bertemu saat makan di restoran: '你也来这家饭店吃饭？' dan menikmati '广东菜' (masakan Kanton)."
+                ),
+                StoryQuestion(
+                    "q_myfam_2",
+                    "谁没有来这家饭店吃饭？(Siapa yang tidak ikut datang makan di restoran?)",
+                    listOf(
+                        "A的老公 (Suami A)",
+                        "A的大儿子小宝 (Putra sulung A, Xiao Bao)",
+                        "A的爸爸妈妈 (Ayah dan ibu A)",
+                        "A的小女儿小贝 (Putri bungsu A, Xiao Bei)"
+                    ),
+                    2,
+                    "A menjawab: '没有，他们喜欢在家吃。' (Ayah dan ibunya tidak ikut karena lebih suka makan di rumah)."
+                ),
+                StoryQuestion(
+                    "q_myfam_3",
+                    "关于A的两个孩子，哪个描述是正确的？(Mengenai kedua anak A, pernyataan mana yang benar?)",
+                    listOf(
+                        "小宝今年7岁，去年上小学了 (Xiao Bao 7 tahun, tahun lalu sudah masuk SD)",
+                        "小贝今年7岁，明年上小学 (Xiao Bei 7 tahun, tahun depan masuk SD)",
+                        "两个孩子都在上小学 (Kedua anak sudah masuk SD)",
+                        "小宝今年5岁，还没有上学 (Xiao Bao 5 tahun, belum sekolah)"
+                    ),
+                    0,
+                    "A menjelaskan: Xiao Bao (putra sulung) tahun ini 7 tahun dan tahun lalu sudah masuk SD ('大儿子去年上小学了')."
+                ),
+                StoryQuestion(
+                    "q_myfam_4",
+                    "为什么A的老公会说汉语？(Mengapa suami A bisa berbicara bahasa Mandarin?)",
+                    listOf(
+                        "因为他学汉语三年了 (Karena dia sudah belajar 3 tahun)",
+                        "因为他是中国人 (Karena dia adalah orang Tiongkok)",
+                        "因为他是汉语老师 (Karena dia seorang guru Mandarin)",
+                        "因为他在汉语学校工作 (Karena dia bekerja di sekolah Mandarin)"
+                    ),
+                    1,
+                    "A tertawa ramah dan menjawab: '哈哈，当然，他是中国人！' (Haha, tentu saja, dia adalah orang Tiongkok!)."
+                )
+            )
+        ),
+
         // Cerita 1 - Sapaan & Murid Baru
         Story(
             id = "story_1",
