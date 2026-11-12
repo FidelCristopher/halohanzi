@@ -15,10 +15,10 @@ val stage1Part1Exercises = listOf<Exercise>(
         correctAnswer = "teman sekolah",
         audioToSpeak = "同学",
         pictureOptions = listOf(
-            PictureOption("u2_p1_q1_opt1", "guru", "老师", R.drawable.ill_cartoon_guru, false),
-            PictureOption("u2_p1_q1_opt2", "teman sekolah", "同学", R.drawable.ill_cartoon_teman_sekolah, true),
-            PictureOption("u2_p1_q1_opt3", "murid", "学生", R.drawable.ill_cartoon_murid, false),
-            PictureOption("u2_p1_q1_opt4", "teman", "朋友", R.drawable.ill_cartoon_teman, false)
+            PictureOption("u2_p1_q1_opt1", "guru", iconRes = R.drawable.ill_cartoon_guru, isCorrect = false),
+            PictureOption("u2_p1_q1_opt2", "teman sekolah", iconRes = R.drawable.ill_cartoon_teman_sekolah, isCorrect = true),
+            PictureOption("u2_p1_q1_opt3", "murid", iconRes = R.drawable.ill_cartoon_murid, isCorrect = false),
+            PictureOption("u2_p1_q1_opt4", "teman", iconRes = R.drawable.ill_cartoon_teman, isCorrect = false)
         )
     ),
 
@@ -33,10 +33,10 @@ val stage1Part1Exercises = listOf<Exercise>(
         correctAnswer = "teman",
         audioToSpeak = "朋友",
         pictureOptions = listOf(
-            PictureOption("u2_p1_q2_opt1", "murid", "学生", R.drawable.ill_cartoon_murid, false),
-            PictureOption("u2_p1_q2_opt2", "teman", "朋友", R.drawable.ill_cartoon_teman, true),
-            PictureOption("u2_p1_q2_opt3", "guru", "老师", R.drawable.ill_cartoon_guru, false),
-            PictureOption("u2_p1_q2_opt4", "teman sekolah", "同学", R.drawable.ill_cartoon_teman_sekolah, false)
+            PictureOption("u2_p1_q2_opt1", "murid", iconRes = R.drawable.ill_cartoon_murid, isCorrect = false),
+            PictureOption("u2_p1_q2_opt2", "teman", iconRes = R.drawable.ill_cartoon_teman, isCorrect = true),
+            PictureOption("u2_p1_q2_opt3", "guru", iconRes = R.drawable.ill_cartoon_guru, isCorrect = false),
+            PictureOption("u2_p1_q2_opt4", "teman sekolah", iconRes = R.drawable.ill_cartoon_teman_sekolah, isCorrect = false)
         )
     ),
 

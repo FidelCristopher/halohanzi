@@ -587,9 +587,9 @@ fun LessonExerciseScreen(
                 ) {
                     Box(
                         modifier = Modifier
-                            .size(54.dp)
-                            .clip(CircleShape)
-                            .background(Color(0xFF00C48C))
+                            .size(48.dp)
+                            .clip(RoundedCornerShape(14.dp))
+                            .background(Color(0xFF00D592))
                             .bouncyClick { ttsManager?.speak(exercise.audioToSpeak) },
                         contentAlignment = Alignment.Center
                     ) {
@@ -597,7 +597,7 @@ fun LessonExerciseScreen(
                             imageVector = Icons.AutoMirrored.Filled.VolumeUp,
                             contentDescription = "Dengarkan",
                             tint = Color.White,
-                            modifier = Modifier.size(28.dp)
+                            modifier = Modifier.size(26.dp)
                         )
                     }
 
@@ -636,18 +636,18 @@ fun LessonExerciseScreen(
                             rowOptions.forEach { opt ->
                                 val isSelected = selectedPictureId == opt.id
                                 val isTwoOptions = exercise.pictureOptions.size == 2
-                                val boxHeight = if (isTwoOptions) 150.dp else 110.dp
+                                val boxHeight = if (isTwoOptions) 150.dp else 118.dp
 
                                 Card(
-                                    shape = RoundedCornerShape(20.dp),
+                                    shape = RoundedCornerShape(18.dp),
                                     colors = CardDefaults.cardColors(containerColor = Color.White),
-                                    elevation = CardDefaults.cardElevation(defaultElevation = if (isSelected) 6.dp else 2.dp),
+                                    elevation = CardDefaults.cardElevation(defaultElevation = if (isSelected) 3.dp else 1.dp),
                                     modifier = Modifier
                                         .weight(1f)
                                         .border(
-                                            width = if (isSelected) 3.dp else 1.2.dp,
+                                            width = if (isSelected) 2.5.dp else 1.2.dp,
                                             color = if (isSelected) Color(0xFF007AFF) else Color(0xFFE2E8F0),
-                                            shape = RoundedCornerShape(20.dp)
+                                            shape = RoundedCornerShape(18.dp)
                                         )
                                         .bouncyClick {
                                             if (!isSubmitted) {
@@ -663,17 +663,15 @@ fun LessonExerciseScreen(
                                             modifier = Modifier
                                                 .fillMaxWidth()
                                                 .height(boxHeight)
-                                                .background(Color.White),
+                                                .clip(RoundedCornerShape(topStart = 18.dp, topEnd = 18.dp)),
                                             contentAlignment = Alignment.Center
                                         ) {
                                             if (opt.iconRes != 0) {
                                                 androidx.compose.foundation.Image(
                                                     painter = painterResource(opt.iconRes),
                                                     contentDescription = opt.label,
-                                                    modifier = Modifier
-                                                        .size(if (isTwoOptions) 130.dp else 102.dp)
-                                                        .padding(2.dp),
-                                                    contentScale = androidx.compose.ui.layout.ContentScale.Fit
+                                                    modifier = Modifier.fillMaxSize(),
+                                                    contentScale = androidx.compose.ui.layout.ContentScale.Crop
                                                 )
                                             } else {
                                                 Text(text = opt.emoji, fontSize = if (isTwoOptions) 64.sp else 52.sp)
@@ -683,13 +681,13 @@ fun LessonExerciseScreen(
                                         Box(
                                             modifier = Modifier
                                                 .fillMaxWidth()
-                                                .padding(bottom = 12.dp, top = 2.dp),
+                                                .padding(vertical = 12.dp),
                                             contentAlignment = Alignment.Center
                                         ) {
                                             Text(
                                                 text = opt.label,
                                                 fontFamily = NunitoFontFamily,
-                                                fontSize = 15.sp,
+                                                fontSize = 16.sp,
                                                 fontWeight = FontWeight.Bold,
                                                 color = if (isSelected) Color(0xFF007AFF) else DeepNavy,
                                                 textAlign = TextAlign.Center
