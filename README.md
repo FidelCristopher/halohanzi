@@ -128,6 +128,7 @@ com.example.chineselearning/
 | **Dad's Work** | 《爸爸的工作》 | HSK 1 | Humor & Family | 老师, 五岁, 小女孩, 你的爸爸, 做什么的, 妈妈让他做什么他就做什么 |
 | **Who I Am** | 《我是谁》 | HSK 1 | Profile & Careers | 李大卫, 美国人, 在日本长大, 在英国上大学, 在中国工作, 英语老师 |
 | **Do You Know Them?** | 《你认识他们吗？》 | HSK 1 | Family & Teachers | 认识, 两个人, 中文老师, 姓王, 英文老师, 姓李, 漂亮, 旅游, 跑步, 很高, 女儿, 儿子 |
+| **You Have Grown Up** | 《你长大了》 | HSK 1 | Humor & Family | 孩子, 经常, 要钱, 买东西, 五毛钱, 已经, 长大了, 昨天, 今天, 明天, 大孩子, 五块钱 |
 | **New Classmate Li Hua** | 《新同学李华》 | HSK 1 | Greetings & School | 你好, 我叫, 学生, 老师, 中国人, 认识, 高兴, 再见 |
 | **David's Sunday** | 《大卫的星期天》 | HSK 1 | Time & Daily Life | 星期天, 二十岁, 上午八点三十分, 起床, 中午十二点, 看朋友 |
 | **David's Family & Kitten** | 《大卫的家与小猫》 | HSK 1 | Family & Pets | 爸爸, 妈妈, 家, 喜欢, 小猫, 漂亮, 水果, 喝茶 |
@@ -135,7 +136,7 @@ com.example.chineselearning/
 ### Curriculum Road
 | Unit | Title | Level | Core Themes | Graded Reader Story |
 | :--- | :--- | :--- | :--- | :--- |
-| **Unit 1** | Membuat Teman Baru | HSK 1 | SVO word order, copula 是, negation 不是, question 吗 | 《新同学李华》, 《我没笑》, 《爸爸的工作》, 《我是谁》, 《你认识他们吗？》 |
+| **Unit 1** | Membuat Teman Baru | HSK 1 | SVO word order, copula 是, negation 不是, question 吗 | 《新同学李华》, 《我没笑》, 《爸爸的工作》, 《我是谁》, 《你认识他们吗？》, 《你长大了》 |
 | **Unit 2** | Jam & Jadwal Harian | HSK 1+ | Tanggal, umur, jam, menit, rutinitas | 《大卫的星期天》 |
 | **Unit 3** | Keluarga & Rumah | HSK 1+ | Anggota keluarga, hewan peliharaan, makanan/minuman | 《大卫的家与小猫》 |
 

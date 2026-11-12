@@ -716,6 +716,143 @@ object LearningRepository {
             )
         ),
 
+        // Cerita Mandarin Bean 5: You have grown up (你长大了)
+        Story(
+            id = "story_you_have_grown_up",
+            titleHanzi = "你长大了",
+            titlePinyin = "Nǐ Zhǎng Dà Le",
+            titleTranslation = "You Have Grown Up (Kamu Sudah Besar)",
+            level = "HSK 1",
+            category = "Humor & Keluarga",
+            description = "Anekdot jenaka tentang seorang anak yang meminta uang saku kepada ayahnya dengan alasan ia sudah tumbuh dewasa.",
+            coverEmoji = "🪙",
+            coverImageRes = R.drawable.cover_story_you_have_grown_up,
+            estimatedReadMinutes = 2,
+            sentences = listOf(
+                Sentence(
+                    "s_yhgu_1",
+                    "孩子经常找爸爸妈妈要钱买东西。这一天，孩子又找爸爸要钱。",
+                    "Háizi jīngcháng zhǎo bàba māma yào qián mǎi dōngxi. Zhè yī tiān, háizi yòu zhǎo bàba yào qián.",
+                    "Anak itu sering mencari ayah dan ibunya untuk meminta uang membeli barang. Pada suatu hari, anak itu kembali mencari ayahnya untuk meminta uang.",
+                    listOf(
+                        WordToken("孩子", "háizi", "Anak", "Anak kecil"),
+                        WordToken("经常", "jīngcháng", "Sering / kerap", "Adverbia frekuensi"),
+                        WordToken("找", "zhǎo", "Mencari / menemui", "Kata kerja mendatangi"),
+                        WordToken("爸爸", "bàba", "Ayah", "Orang tua laki-laki"),
+                        WordToken("妈妈", "māma", "Ibu", "Orang tua perempuan"),
+                        WordToken("要钱", "yào qián", "Meminta uang", "Frasa kata kerja"),
+                        WordToken("买东西", "mǎi dōngxi", "Membeli barang", "Aktivitas belanja"),
+                        WordToken("这一天", "zhè yī tiān", "Pada suatu hari", "Keterangan waktu"),
+                        WordToken("又", "yòu", "Kembali / lagi", "Adverbia pengulangan masa lampau"),
+                        WordToken("找", "zhǎo", "Mencari / menemui", "Kata kerja"),
+                        WordToken("爸爸", "bàba", "Ayah", "Orang tua laki-laki"),
+                        WordToken("要钱", "yào qián", "Meminta uang", "Frasa kata kerja")
+                    )
+                ),
+                Sentence(
+                    "s_yhgu_2",
+                    "孩子说：“爸爸，给我五毛钱吧，我想买吃的东西。”",
+                    "Háizi shuō: “Bàba, gěi wǒ wǔ máo qián ba, wǒ xiǎng mǎi chī de dōngxi.”",
+                    "Anak itu berkata: “Ayah, berikan aku lima puluh sen (5 mao), aku ingin membeli makanan.”",
+                    listOf(
+                        WordToken("孩子", "háizi", "Anak", "Subjek"),
+                        WordToken("说", "shuō", "Berkata", "Kata kerja tutur"),
+                        WordToken("爸爸", "bàba", "Ayah", "Panggilan"),
+                        WordToken("给我", "gěi wǒ", "Beri saya", "Kata kerja + objek"),
+                        WordToken("五毛钱", "wǔ máo qián", "5 mao (0.5 yuan)", "Satuan uang receh"),
+                        WordToken("吧", "ba", "Lah / dong", "Partikel permohonan"),
+                        WordToken("我想", "wǒ xiǎng", "Saya ingin", "Harapan"),
+                        WordToken("买", "mǎi", "Membeli", "Kata kerja"),
+                        WordToken("吃的东西", "chī de dōngxi", "Makanan / barang untuk dimakan", "Nomina makanan")
+                    )
+                ),
+                Sentence(
+                    "s_yhgu_3",
+                    "爸爸说：“你10岁了，已经长大了。昨天你要了五毛钱，今天你又要五毛钱，明天还要五毛钱，这样不好吧？大孩子会这样做吗？”",
+                    "Bàba shuō: “Nǐ shí suì le, yǐjīng zhǎngdà le. Zuótiān nǐ yào le wǔ máo qián, jīntiān nǐ yòu yào wǔ máo qián, míngtiān hái yào wǔ máo qián, zhèyàng bù hǎo ba? Dà háizi huì zhèyàng zuò ma?”",
+                    "Ayah berkata: “Kamu sudah berusia 10 tahun, sudah besar. Kemarin kamu meminta lima puluh sen, hari ini kamu minta lima puluh sen lagi, besok masih akan minta lima puluh sen, begini tidak baik bukan? Apakah anak besar akan bertingkah seperti ini?”",
+                    listOf(
+                        WordToken("爸爸", "bàba", "Ayah", "Subjek"),
+                        WordToken("说", "shuō", "Berkata", "Kata kerja tutur"),
+                        WordToken("你10岁了", "nǐ shí suì le", "Kamu sudah 10 tahun", "Keterangan usia"),
+                        WordToken("已经", "yǐjīng", "Sudah", "Adverbia penyelesaian"),
+                        WordToken("长大了", "zhǎngdà le", "Tumbuh besar", "Frasa kedewasaan"),
+                        WordToken("昨天", "zuótiān", "Kemarin", "Waktu lampau"),
+                        WordToken("你要了", "nǐ yào le", "Kamu telah meminta", "Verba aspek lampau"),
+                        WordToken("五毛钱", "wǔ máo qián", "5 mao", "Uang receh"),
+                        WordToken("今天", "jīntiān", "Hari ini", "Waktu kini"),
+                        WordToken("你又", "nǐ yòu", "Kamu kembali / lagi", "Penegas pengulangan"),
+                        WordToken("要", "yào", "Meminta", "Kata kerja"),
+                        WordToken("五毛钱", "wǔ máo qián", "5 mao", "Mata uang"),
+                        WordToken("明天", "míngtiān", "Besok", "Waktu mendatang"),
+                        WordToken("还要", "hái yào", "Masih mau meminta", "Kelanjutan"),
+                        WordToken("五毛钱", "wǔ máo qián", "5 mao", "Uang"),
+                        WordToken("这样", "zhèyàng", "Begini / seperti ini", "Cara / kondisi"),
+                        WordToken("不好吧", "bù hǎo ba", "Tidak baik bukan?", "Pertanyaan retoris"),
+                        WordToken("大孩子", "dà háizi", "Anak besar / anak dewasa", "Subjek perbandingan"),
+                        WordToken("会", "huì", "Akan / bisa", "Peluang modal"),
+                        WordToken("这样做", "zhèyàng zuò", "Berbuat demikian", "Tindakan"),
+                        WordToken("吗", "ma", "Apakah", "Partikel tanya")
+                    )
+                ),
+                Sentence(
+                    "s_yhgu_4",
+                    "孩子想了想，说：“爸爸你说得对，这样不好。我是大孩子了，那你今天给我五块钱吧！”",
+                    "Háizi xiǎng le xiǎng, shuō: “Bàba nǐ shuō de duì, zhèyàng bù hǎo. Wǒ shì dà háizi le, nà nǐ jīntiān gěi wǒ wǔ kuài qián ba!”",
+                    "Anak itu berpikir sejenak, lalu berkata: “Ayah, perkataanmu benar, begini memang tidak baik. Aku sudah anak besar, kalau begitu hari ini beri aku lima yuan (5 kuai) saja!”",
+                    listOf(
+                        WordToken("孩子", "háizi", "Anak", "Subjek"),
+                        WordToken("想了想", "xiǎng le xiǎng", "Berpikir sejenak", "Reduplikasi verba pikir"),
+                        WordToken("说", "shuō", "Berkata", "Kata kerja tutur"),
+                        WordToken("爸爸", "bàba", "Ayah", "Panggilan"),
+                        WordToken("你说得对", "nǐ shuō de duì", "Kamu benar", "Persetujuan"),
+                        WordToken("这样", "zhèyàng", "Begini", "Cara"),
+                        WordToken("不好", "bù hǎo", "Tidak baik", "Penilaian negatif"),
+                        WordToken("我是", "wǒ shì", "Saya adalah", "Pernyataan diri"),
+                        WordToken("大孩子了", "dà háizi le", "Sudah anak besar", "Identitas baru"),
+                        WordToken("那你", "nà nǐ", "Kalau begitu kamu", "Penghubung konsekuensi"),
+                        WordToken("今天", "jīntiān", "Hari ini", "Waktu"),
+                        WordToken("给我", "gěi wǒ", "Beri saya", "Permintaan"),
+                        WordToken("五块钱", "wǔ kuài qián", "Lima yuan (5 kuai)", "Satuan mata uang yuan"),
+                        WordToken("吧", "ba", "Lah / saja", "Partikel permintaan")
+                    )
+                )
+            ),
+            questions = listOf(
+                StoryQuestion(
+                    "q_yhgu_1",
+                    "孩子今年几岁了？(Berapa usia anak itu tahun ini?)",
+                    listOf("5岁 (5 tahun)", "8岁 (8 tahun)", "10岁 (10 tahun)", "12岁 (12 tahun)"),
+                    2,
+                    "Di kalimat ketiga ayah berkata: '你10岁了，已经长大了' (Kamu sudah 10 tahun, sudah besar)."
+                ),
+                StoryQuestion(
+                    "q_yhgu_2",
+                    "孩子一开始想买什么？(Apa yang awalnya ingin dibeli oleh anak itu?)",
+                    listOf(
+                        "玩具 (Mainan)",
+                        "书 (Buku)",
+                        "吃的东西 (Makanan)",
+                        "衣服 (Pakaian)"
+                    ),
+                    2,
+                    "Di kalimat kedua anak berkata: '我想买吃的东西' (Aku ingin membeli makanan)."
+                ),
+                StoryQuestion(
+                    "q_yhgu_3",
+                    "孩子最后要了多少钱？(Berapa banyak uang yang akhirnya diminta anak itu?)",
+                    listOf(
+                        "五毛钱 (5 mao / 0.5 yuan)",
+                        "五块钱 (5 kuai / 5 yuan)",
+                        "十块钱 (10 kuai / 10 yuan)",
+                        "不要钱 (Tidak meminta uang)"
+                    ),
+                    1,
+                    "Karena ayah bilang dia sudah anak besar, anak tersebut dengan cerdik meminta 5 kuai (五块钱) yang bernilai 10 kali lipat dari 5 mao."
+                )
+            )
+        ),
+
         // Cerita 1 - Sapaan & Murid Baru
         Story(
             id = "story_1",
@@ -3809,15 +3946,14 @@ object LearningRepository {
             level = "Level 2",
             story = stories[1],
             nodes = listOf(
-                PathNode("u2_n1", "Angka 1-10", Color(0xFF03A9F4), NodeIconType.CAP, isCompleted = false, lessonId = "u2_l1"),
-                PathNode("u2_n2", "Umur & Tahun", Color(0xFFFFC107), NodeIconType.CAP, isCompleted = false, lessonId = "u2_l1"),
-                PathNode("u2_n3", "Latihan Waktu", Color(0xFFFFC107), NodeIconType.DUMBBELL, isCompleted = false, lessonId = "u2_l1"),
-                PathNode("u2_n4", "Jam & Menit", Color(0xFFFFC107), NodeIconType.CAP, isCompleted = false, lessonId = "u2_l1"),
-                PathNode("u2_n5", "Latihan Menit", Color(0xFFFFC107), NodeIconType.DUMBBELL, isCompleted = false, lessonId = "u2_l1"),
-                PathNode("u2_n6", "Latihan Komprehensif", Color(0xFFFFC107), NodeIconType.SHUFFLE, isCompleted = false, lessonId = "u2_l1"),
-                PathNode("u2_n7", "Kuis Cerita", Color(0xFFFFC107), NodeIconType.BOOK, isCompleted = false, lessonId = "u2_l1"),
-                PathNode("u2_n8", "Checkpoint Peti", Color(0xFFFFB300), NodeIconType.CHEST, isCompleted = false, lessonId = "u2_l1"),
-                PathNode("u2_n9", "Rest area", Color(0xFF03A9F4), NodeIconType.REST_AREA, isCompleted = false, lessonId = "u2_l1")
+                PathNode("u2_n1", "Angka 1-10", Color(0xFFFFC107), NodeIconType.CAP, isCompleted = false, lessonId = "u2_l1"),
+                PathNode("u2_n2", "Angka 1-10", Color(0xFFFFC107), NodeIconType.DUMBBELL, isCompleted = false, lessonId = "u2_l1"),
+                PathNode("u2_n3", "Umur & Tahun", Color(0xFFFFC107), NodeIconType.CAP, isCompleted = false, lessonId = "u2_l1"),
+                PathNode("u2_n4", "Umur & Tahun", Color(0xFFFFC107), NodeIconType.DUMBBELL, isCompleted = false, lessonId = "u2_l1"),
+                PathNode("u2_n5", "Latihan Komprehensif", Color(0xFFFFC107), NodeIconType.SHUFFLE, isCompleted = false, lessonId = "u2_l1"),
+                PathNode("u2_n6", "Kuis Cerita", Color(0xFFFFC107), NodeIconType.BOOK, isCompleted = false, lessonId = "u2_l1"),
+                PathNode("u2_n7", "Checkpoint Bab", Color(0xFFFFB300), NodeIconType.CHEST, isCompleted = false, lessonId = "u2_l1"),
+                PathNode("u2_n8", "Rest area", Color(0xFF03A9F4), NodeIconType.REST_AREA, isCompleted = false, lessonId = "u2_l1")
             ),
             lessons = listOf(
                 Lesson(
