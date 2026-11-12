@@ -18,6 +18,7 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.draw.drawBehind
 import androidx.compose.ui.draw.rotate
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Brush
@@ -26,6 +27,7 @@ import androidx.compose.ui.graphics.Path
 import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.graphics.StrokeJoin
 import androidx.compose.ui.graphics.drawscope.Stroke
+import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.res.painterResource
 import com.example.chineselearning.R
@@ -302,7 +304,7 @@ fun HomeScreen(
                 val chapterDarkRim = getNodeRimColor(bannerBg)
 
                 // CHAPTER HEADER (Hero character for Bab 1, or Banner for Bab 2 - 6)
-                item {
+                item(key = "chapter_header_${chapterUnit.id}") {
                     Column(
                         modifier = Modifier
                             .fillMaxWidth()
@@ -451,7 +453,10 @@ fun HomeScreen(
                 }
 
                 // CHAPTER NODES (Continuous Clean Bezier Path - 7-8 Stages per Chapter)
-                itemsIndexed(chapterUnit.nodes) { nodeIdx, node ->
+                itemsIndexed(
+                    items = chapterUnit.nodes,
+                    key = { _, node -> "${chapterUnit.id}_${node.id}" }
+                ) { nodeIdx, node ->
                     val currXOffset = pathXOffsets.getOrElse(nodeIdx) { 0.dp }
                     val nextXOffset = if (nodeIdx < chapterUnit.nodes.lastIndex) {
                         pathXOffsets.getOrElse(nodeIdx + 1) { 0.dp }
@@ -525,50 +530,57 @@ fun StageNodeRow(
     ) {
         // 1. DUAL-LAYER BEZIER ROAD (Depth shadow underneath + smooth vibrant road on top)
         if (hasNextNode) {
-            androidx.compose.foundation.Canvas(modifier = Modifier.fillMaxSize()) {
-                val centerX = size.width / 2f
-                val yCenter = size.height / 2f
+            val roadPath = remember(currXOffset, nextXOffset, rowHeight) { Path() }
 
-                val xCurr = centerX + currXOffset.toPx()
-                val xNext = centerX + nextXOffset.toPx()
-                val yNext = yCenter + size.height
+            Spacer(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .graphicsLayer() // Hardware acceleration cache
+                    .drawBehind {
+                        val centerX = size.width / 2f
+                        val yCenter = size.height / 2f
+                        val xCurr = centerX + currXOffset.toPx()
+                        val xNext = centerX + nextXOffset.toPx()
+                        val yNext = yCenter + size.height
 
-                val path = Path().apply {
-                    moveTo(xCurr, yCenter)
-                    cubicTo(
-                        xCurr, yCenter + (yNext - yCenter) * 0.5f,
-                        xNext, yCenter + (yNext - yCenter) * 0.5f,
-                        xNext, yNext
-                    )
-                }
+                        roadPath.reset()
+                        roadPath.moveTo(xCurr, yCenter)
+                        roadPath.cubicTo(
+                            xCurr, yCenter + (yNext - yCenter) * 0.5f,
+                            xNext, yCenter + (yNext - yCenter) * 0.5f,
+                            xNext, yNext
+                        )
 
-                // Road Bottom Shadow for 3D depth
-                drawPath(
-                    path = path,
-                    color = Color(0x1A000000),
-                    style = Stroke(
-                        width = 16.dp.toPx(),
-                        cap = StrokeCap.Round,
-                        join = StrokeJoin.Round
-                    )
-                )
+                        // Bayangan kedalaman jalan (3D Shadow)
+                        drawPath(
+                            path = roadPath,
+                            color = Color(0x1A000000),
+                            style = Stroke(
+                                width = 16.dp.toPx(),
+                                cap = StrokeCap.Round,
+                                join = StrokeJoin.Round
+                            )
+                        )
 
-                // Road Surface
-                drawPath(
-                    path = path,
-                    color = lineColor,
-                    style = Stroke(
-                        width = 12.dp.toPx(),
-                        cap = StrokeCap.Round,
-                        join = StrokeJoin.Round
-                    )
-                )
-            }
+                        // Permukaan jalan
+                        drawPath(
+                            path = roadPath,
+                            color = lineColor,
+                            style = Stroke(
+                                width = 12.dp.toPx(),
+                                cap = StrokeCap.Round,
+                                join = StrokeJoin.Round
+                            )
+                        )
+                    }
+            )
         }
 
         // 2. THE 3D PUSHABLE BUTTON NODE CIRCLE
         Box(
-            modifier = Modifier.offset(x = currXOffset),
+            modifier = Modifier
+                .offset(x = currXOffset)
+                .graphicsLayer(), // Mencegah CPU menghitung ulang blur bayangan saat scroll
             contentAlignment = Alignment.Center
         ) {
             val rimColor = getNodeRimColor(node.color)
