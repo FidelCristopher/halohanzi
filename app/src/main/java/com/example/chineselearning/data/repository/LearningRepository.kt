@@ -4390,10 +4390,13 @@ object LearningRepository {
                     newWords = listOf(
                         Word("w2_1", "同学", "tóngxué", "Teman sekolah", "Kata benda", "我们是同学。", "Wǒmen shì tóngxué.", "Kami adalah teman sekolah."),
                         Word("w2_2", "朋友", "péngyou", "Teman", "Kata benda", "我们是朋友。", "Wǒmen shì péngyou.", "Kami adalah teman."),
-                        Word("w2_3", "们", "men", "Penanda jamak", "Akhiran", "他们不是朋友。", "Tāmen bú shì péngyou.", "Mereka bukan teman.")
+                        Word("w2_3", "们", "men", "Penanda jamak", "Akhiran", "他们不是朋友。", "Tāmen bú shì péngyou.", "Mereka bukan teman."),
+                        Word("w2_4", "男朋友", "nánpéngyou", "Pacar (laki-laki)", "Kata benda", "我的男朋友是医生。", "Wǒ de nánpéngyou shì yīshēng.", "Pacar(L) saya adalah dokter."),
+                        Word("w2_5", "女朋友", "nǚpéngyou", "Pacar (perempuan)", "Kata benda", "我的女朋友是老师。", "Wǒ de nǚpéngyou shì lǎoshī.", "Pacar(P) saya adalah guru.")
                     ),
                     exercises = stage1Part1Exercises,
-                    exercisesPart1 = stage1Part1Exercises
+                    exercisesPart1 = stage1Part1Exercises,
+                    exercisesPart2 = stage1Part2Exercises
                 )
             )
         ),
