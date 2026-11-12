@@ -853,6 +853,237 @@ object LearningRepository {
             )
         ),
 
+        // Cerita Mandarin Bean 6: What are you studying? (你在学什么？)
+        Story(
+            id = "story_what_are_you_studying",
+            titleHanzi = "你在学什么？",
+            titlePinyin = "Nǐ Zài Xué Shénme?",
+            titleTranslation = "What are you studying? (Kamu Sedang Belajar Apa?)",
+            level = "HSK 1",
+            category = "Pendidikan & Percakapan",
+            description = "Percakapan inspiratif tentang pengalaman belajar bahasa Mandarin di sekolah bahasa, guru akrab, dan tantangan menulis karakter Hanzi.",
+            coverEmoji = "📚",
+            coverImageRes = R.drawable.cover_story_what_are_you_studying,
+            estimatedReadMinutes = 2,
+            sentences = listOf(
+                Sentence(
+                    "s_ways_1",
+                    "你在学什么？",
+                    "Nǐ zài xué shénme?",
+                    "A: Kamu sedang belajar apa?",
+                    listOf(
+                        WordToken("你", "nǐ", "Kamu", "Kata ganti orang kedua"),
+                        WordToken("在", "zài", "Sedang", "Partikel aspek progresif"),
+                        WordToken("学", "xué", "Belajar", "Kata kerja mempelajari sesuatu"),
+                        WordToken("什么", "shénme", "Apa", "Kata tanya objek atau kegiatan")
+                    )
+                ),
+                Sentence(
+                    "s_ways_2",
+                    "我在学汉语。",
+                    "Wǒ zài xué Hànyǔ.",
+                    "B: Saya sedang belajar bahasa Mandarin.",
+                    listOf(
+                        WordToken("我", "wǒ", "Saya", "Kata ganti orang pertama"),
+                        WordToken("在", "zài", "Sedang", "Partikel aspek progresif"),
+                        WordToken("学", "xué", "Belajar", "Kata kerja belajar"),
+                        WordToken("汉语", "Hànyǔ", "Bahasa Mandarin", "Bahasa Tionghoa / suku Han")
+                    )
+                ),
+                Sentence(
+                    "s_ways_3",
+                    "你有汉语老师吗？",
+                    "Nǐ yǒu Hànyǔ lǎoshī ma?",
+                    "A: Apakah kamu punya guru bahasa Mandarin?",
+                    listOf(
+                        WordToken("你", "nǐ", "Kamu", "Kata ganti orang kedua"),
+                        WordToken("有", "yǒu", "Punya / memiliki", "Kata kerja kepemilikan"),
+                        WordToken("汉语", "Hànyǔ", "Bahasa Mandarin", "Bahasa Mandarin"),
+                        WordToken("老师", "lǎoshī", "Guru", "Pendidik atau pengajar"),
+                        WordToken("吗", "ma", "Apakah", "Partikel tanya ya/tidak")
+                    )
+                ),
+                Sentence(
+                    "s_ways_4",
+                    "我有两个汉语老师，他们也是我的好朋友。",
+                    "Wǒ yǒu liǎng gè Hànyǔ lǎoshī, tāmen yě shì wǒ de hǎo péngyou.",
+                    "B: Saya punya dua guru bahasa Mandarin, mereka juga teman baik saya.",
+                    listOf(
+                        WordToken("我", "wǒ", "Saya", "Kata ganti orang pertama"),
+                        WordToken("有", "yǒu", "Punya", "Kata kerja kepemilikan"),
+                        WordToken("两个", "liǎng gè", "Dua orang", "Bilangan liang + penggolong ge"),
+                        WordToken("汉语老师", "Hànyǔ lǎoshī", "Guru Mandarin", "Profesi pengajar bahasa Mandarin"),
+                        WordToken("他们", "tāmen", "Mereka", "Kata ganti orang ketiga jamak"),
+                        WordToken("也", "yě", "Juga", "Adverbia penambahan"),
+                        WordToken("是", "shì", "Adalah", "Kopula / kata kerja penghubung"),
+                        WordToken("我的", "wǒ de", "Milik saya", "Kata ganti kepemilikan"),
+                        WordToken("好朋友", "hǎo péngyou", "Sahabat / teman baik", "Teman akrab yang dekat")
+                    )
+                ),
+                Sentence(
+                    "s_ways_5",
+                    "你在家学习吗？",
+                    "Nǐ zài jiā xuéxí ma?",
+                    "A: Apakah kamu belajar di rumah?",
+                    listOf(
+                        WordToken("你", "nǐ", "Kamu", "Kata ganti orang kedua"),
+                        WordToken("在", "zài", "Di", "Preposisi tempat"),
+                        WordToken("家", "jiā", "Rumah", "Tempat tinggal / hunian"),
+                        WordToken("学习", "xuéxí", "Belajar", "Kata kerja belajar"),
+                        WordToken("吗", "ma", "Apakah", "Partikel kalimat tanya")
+                    )
+                ),
+                Sentence(
+                    "s_ways_6",
+                    "不，我在汉语学校学习。我有三十个同学。",
+                    "Bù, wǒ zài Hànyǔ xuéxiào xuéxí. Wǒ yǒu sānshí gè tóngxué.",
+                    "B: Tidak, saya belajar di sekolah bahasa Mandarin. Saya punya tiga puluh teman sekelas.",
+                    listOf(
+                        WordToken("不", "bù", "Tidak", "Partikel negasi"),
+                        WordToken("我", "wǒ", "Saya", "Kata ganti orang pertama"),
+                        WordToken("在", "zài", "Di", "Preposisi lokasi"),
+                        WordToken("汉语学校", "Hànyǔ xuéxiào", "Sekolah bahasa Mandarin", "Institusi kursus bahasa Mandarin"),
+                        WordToken("学习", "xuéxí", "Belajar", "Melakukan aktivitas studi"),
+                        WordToken("我", "wǒ", "Saya", "Kata ganti orang pertama"),
+                        WordToken("有", "yǒu", "Memiliki", "Kata kerja kepemilikan"),
+                        WordToken("三十个", "sānshí gè", "Tiga puluh orang", "Angka 30 + penggolong"),
+                        WordToken("同学", "tóngxué", "Teman sekelas", "Sesama pelajar dalam satu kelas")
+                    )
+                ),
+                Sentence(
+                    "s_ways_7",
+                    "你学汉语多长时间了？",
+                    "Nǐ xué Hànyǔ duō cháng shíjiān le?",
+                    "A: Sudah berapa lama kamu belajar bahasa Mandarin?",
+                    listOf(
+                        WordToken("你", "nǐ", "Kamu", "Kata ganti orang kedua"),
+                        WordToken("学", "xué", "Belajar", "Kata kerja belajar"),
+                        WordToken("汉语", "Hànyǔ", "Bahasa Mandarin", "Bahasa Mandarin"),
+                        WordToken("多长时间", "duō cháng shíjiān", "Berapa lama", "Frasa penanya durasi waktu"),
+                        WordToken("了", "le", "Sudah", "Partikel aspek perubahan keadaan")
+                    )
+                ),
+                Sentence(
+                    "s_ways_8",
+                    "我学汉语三年了，现在是HSK四级。",
+                    "Wǒ xué Hànyǔ sān nián le, xiànzài shì HSK sì jí.",
+                    "B: Saya sudah belajar bahasa Mandarin tiga tahun, sekarang tingkat HSK 4.",
+                    listOf(
+                        WordToken("我", "wǒ", "Saya", "Kata ganti orang pertama"),
+                        WordToken("学", "xué", "Belajar", "Kata kerja belajar"),
+                        WordToken("汉语", "Hànyǔ", "Bahasa Mandarin", "Bahasa Mandarin"),
+                        WordToken("三年", "sān nián", "Tiga tahun", "Rentang waktu 3 tahun"),
+                        WordToken("了", "le", "Sudah", "Partikel aspek durasi berjalan"),
+                        WordToken("现在", "xiànzài", "Sekarang", "Keterangan waktu saat ini"),
+                        WordToken("是", "shì", "Adalah / mencapai", "Kopula"),
+                        WordToken("HSK四级", "HSK sì jí", "HSK tingkat 4", "Ujian kemampuan bahasa Mandarin level 4")
+                    )
+                ),
+                Sentence(
+                    "s_ways_9",
+                    "真棒！",
+                    "Zhēn bàng!",
+                    "A: Hebat sekali!",
+                    listOf(
+                        WordToken("真", "zhēn", "Sungguh / benar-benar", "Adverbia penegas intensitas"),
+                        WordToken("棒", "bàng", "Hebat / luar biasa", "Kata sifat pujian keunggulan")
+                    )
+                ),
+                Sentence(
+                    "s_ways_10",
+                    "但是我的汉字不好。很多汉字我会读，不会写。",
+                    "Dànshì wǒ de hànzì bù hǎo. Hěnduō hànzì wǒ huì dú, bù huì xiě.",
+                    "B: Tetapi karakter Hanzi saya kurang bagus. Banyak karakter Hanzi yang bisa saya baca, tapi tidak bisa saya tulis.",
+                    listOf(
+                        WordToken("但是", "dànshì", "Tetapi / namun", "Konjungsi pertentangan"),
+                        WordToken("我的", "wǒ de", "Milik saya", "Kata ganti kepemilikan"),
+                        WordToken("汉字", "hànzì", "Karakter Hanzi", "Tulisan aksara Mandarin"),
+                        WordToken("不好", "bù hǎo", "Kurang baik / tidak bagus", "Kondisi tidak memuaskan"),
+                        WordToken("很多", "hěnduō", "Banyak", "Kuantitas banyak"),
+                        WordToken("汉字", "hànzì", "Karakter Hanzi", "Tulisan aksara Mandarin"),
+                        WordToken("我", "wǒ", "Saya", "Kata ganti orang pertama"),
+                        WordToken("会读", "huì dú", "Bisa membaca", "Mampu mengenali dan mengeja bacaan"),
+                        WordToken("不会写", "bù huì xiě", "Tidak bisa menulis", "Belum mampu menuliskan goresan karakter")
+                    )
+                ),
+                Sentence(
+                    "s_ways_11",
+                    "没关系，多练习就好了！",
+                    "Méiguānxi, duō liànxí jiù hǎo le!",
+                    "A: Tidak apa-apa, perbanyak latihan pasti akan lancar!",
+                    listOf(
+                        WordToken("没关系", "méiguānxi", "Tidak apa-apa", "Ungkapan penghibur / santai saja"),
+                        WordToken("多", "duō", "Perbanyak / sering", "Adverbia kuantitas tindakan"),
+                        WordToken("练习", "liànxí", "Berlatih / latihan", "Melakukan latihan berulang"),
+                        WordToken("就", "jiù", "Maka / pasti", "Kata sambung penguat akibat"),
+                        WordToken("好了", "hǎo le", "Akan bagus / beres", "Menunjukkan kepastian hasil baik")
+                    )
+                ),
+                Sentence(
+                    "s_ways_12",
+                    "我的老师也这么说。",
+                    "Wǒ de lǎoshī yě zhème shuō.",
+                    "B: Guru saya juga berkata begitu.",
+                    listOf(
+                        WordToken("我的", "wǒ de", "Milik saya", "Kepemilikan"),
+                        WordToken("老师", "lǎoshī", "Guru", "Pengajar"),
+                        WordToken("也", "yě", "Juga", "Adverbia kesamaan"),
+                        WordToken("这么说", "zhème shuō", "Berkata demikian", "Menyatakan ucapan serupa")
+                    )
+                )
+            ),
+            questions = listOf(
+                StoryQuestion(
+                    "q_ways_1",
+                    "A问B在学什么？(A bertanya apa yang sedang dipelajari B?)",
+                    listOf(
+                        "在学英语 (Sedang belajar bahasa Inggris)",
+                        "在学汉语 (Sedang belajar bahasa Mandarin)",
+                        "在学习做饭 (Sedang belajar memasak)",
+                        "在学画画 (Sedang belajar melukis)"
+                    ),
+                    1,
+                    "Pembicara B menjawab dengan jelas: '我在学汉语' (Saya sedang belajar bahasa Mandarin)."
+                ),
+                StoryQuestion(
+                    "q_ways_2",
+                    "B在哪里学习汉语？(Di mana B belajar bahasa Mandarin?)",
+                    listOf(
+                        "在家自学 (Belajar mandiri di rumah)",
+                        "在汉语学校 (Di sekolah bahasa Mandarin)",
+                        "在大学 (Di universitas umum)",
+                        "在图书馆 (Di perpustakaan kota)"
+                    ),
+                    1,
+                    "Pembicara B menyatakan: '不，我在汉语学校学习。我有三十个同学。' (Tidak, saya belajar di sekolah bahasa Mandarin)."
+                ),
+                StoryQuestion(
+                    "q_ways_3",
+                    "B学汉语多长时间了？现在水平如何？(Sudah berapa lama B belajar dan bagaimana tingkatannya sekarang?)",
+                    listOf(
+                        "学了一年，HSK一级 (1 tahun, tingkat HSK 1)",
+                        "学了两年，HSK二级 (2 tahun, tingkat HSK 2)",
+                        "学了三年，现在是HSK四级 (3 tahun, sekarang tingkat HSK 4)",
+                        "学了五年，现在是HSK六级 (5 tahun, sekarang tingkat HSK 6)"
+                    ),
+                    2,
+                    "B menjelaskan: '我学汉语三年了，现在是HSK四级。' (Sudah 3 tahun belajar bahasa Mandarin, sekarang tingkat HSK 4)."
+                ),
+                StoryQuestion(
+                    "q_ways_4",
+                    "B觉得学习汉语哪方面比较困难？(Bagian mana yang dirasa sulit oleh B?)",
+                    listOf(
+                        "听不懂老师说话 (Tidak paham ucapan guru)",
+                        "很多汉字会读不会写 (Banyak karakter hanzi yang bisa dibaca tapi tidak bisa ditulis)",
+                        "发音不准 (Pelafalan nada tidak tepat)",
+                        "记不住生词 (Sulit menghafal kosakata baru)"
+                    ),
+                    1,
+                    "B mengatakan: '但是我的汉字不好。很多汉字我会读，不会写。' (Tetapi karakter Hanzi saya kurang bagus, banyak yang bisa dibaca tapi belum bisa ditulis)."
+                )
+            )
+        ),
+
         // Cerita 1 - Sapaan & Murid Baru
         Story(
             id = "story_1",
