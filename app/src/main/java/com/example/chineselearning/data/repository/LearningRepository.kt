@@ -1279,6 +1279,235 @@ object LearningRepository {
             )
         ),
 
+        // Cerita Mandarin Bean 8: What to do tomorrow? (明天做什么？)
+        Story(
+            id = "story_what_to_do_tomorrow",
+            titleHanzi = "明天做什么？",
+            titlePinyin = "Míngtiān Zuò Shénme?",
+            titleTranslation = "What to do tomorrow? (Besok Mau Melakukan Apa?)",
+            level = "HSK 1",
+            category = "Rencana & Belanja",
+            description = "Percakapan santai akhir pekan tentang rencana hari Sabtu, belanja kebutuhan dan buah segar, serta janji masak makan malam bersama.",
+            coverEmoji = "☕",
+            coverImageRes = R.drawable.cover_story_what_to_do_tomorrow,
+            estimatedReadMinutes = 2,
+            sentences = listOf(
+                Sentence(
+                    "s_wtdt_1",
+                    "明天你想做什么？",
+                    "Míngtiān nǐ xiǎng zuò shénme?",
+                    "A: Besok kamu ingin melakukan apa?",
+                    listOf(
+                        WordToken("明天", "míngtiān", "Besok", "Keterangan waktu esok hari"),
+                        WordToken("你想", "nǐ xiǎng", "Kamu ingin", "Subjek + kata kerja bantu berkeinginan"),
+                        WordToken("做", "zuò", "Melakukan", "Kata kerja perbuatan"),
+                        WordToken("什么", "shénme", "Apa", "Kata tanya benda/aktivitas")
+                    )
+                ),
+                Sentence(
+                    "s_wtdt_2",
+                    "明天去学校。",
+                    "Míngtiān qù xuéxiào.",
+                    "B: Besok pergi ke sekolah.",
+                    listOf(
+                        WordToken("明天", "míngtiān", "Besok", "Keterangan waktu"),
+                        WordToken("去", "qù", "Pergi ke", "Kata kerja perpindahan arah"),
+                        WordToken("学校", "xuéxiào", "Sekolah", "Tempat belajar dan menuntut ilmu")
+                    )
+                ),
+                Sentence(
+                    "s_wtdt_3",
+                    "明天星期六，休息。",
+                    "Míngtiān Xīngqīliù, xiūxi.",
+                    "A: Besok hari Sabtu, libur istirahat.",
+                    listOf(
+                        WordToken("明天", "míngtiān", "Besok", "Waktu esok"),
+                        WordToken("星期六", "Xīngqīliù", "Hari Sabtu", "Nama hari ke-6 dalam sepekan"),
+                        WordToken("休息", "xiūxi", "Istirahat / libur", "Beristirahat dari rutinitas kerja/sekolah")
+                    )
+                ),
+                Sentence(
+                    "s_wtdt_4",
+                    "是呢，我忘了。明天上午我想在家睡觉，下午我想去书店买书，你呢？",
+                    "Shì ne, wǒ wàng le. Míngtiān shàngwǔ wǒ xiǎng zài jiā shuìjiào, xiàwǔ wǒ xiǎng qù shūdiàn mǎi shū, nǐ ne?",
+                    "B: Iya ya, saya lupa. Besok pagi saya ingin tidur di rumah, sore harinya saya ingin pergi ke toko buku untuk membeli buku, bagaimana denganmu?",
+                    listOf(
+                        WordToken("是呢", "shì ne", "Iya ya / benar juga", "Partikel penanda kesadaran baru"),
+                        WordToken("我忘了", "wǒ wàng le", "Saya lupa", "Pernyataan lupa akan sesuatu"),
+                        WordToken("明天上午", "míngtiān shàngwǔ", "Besok pagi", "Waktu pagi esok hari"),
+                        WordToken("我想", "wǒ xiǎng", "Saya berniat", "Menyatakan rencana keinginan"),
+                        WordToken("在家睡觉", "zài jiā shuìjiào", "Tidur di rumah", "Tempat dan aktivitas istirahat tidur"),
+                        WordToken("下午", "xiàwǔ", "Sore hari", "Rentang waktu setelah siang"),
+                        WordToken("去书店买书", "qù shūdiàn mǎi shū", "Pergi ke toko buku membeli buku", "Aktivitas membeli literatur"),
+                        WordToken("你呢", "nǐ ne", "Kalau kamu?", "Pertanyaan balik retoris santai")
+                    )
+                ),
+                Sentence(
+                    "s_wtdt_5",
+                    "我想去买东西。",
+                    "Wǒ xiǎng qù mǎi dōngxi.",
+                    "A: Saya ingin pergi berbelanja.",
+                    listOf(
+                        WordToken("我想去", "wǒ xiǎng qù", "Saya ingin pergi", "Niat berangkat"),
+                        WordToken("买东西", "mǎi dōngxi", "Berbelanja barang", "Ungkapan membeli barang-barang kebutuhan")
+                    )
+                ),
+                Sentence(
+                    "s_wtdt_6",
+                    "你想买什么？",
+                    "Nǐ xiǎng mǎi shénme?",
+                    "B: Kamu ingin membeli apa?",
+                    listOf(
+                        WordToken("你想买", "nǐ xiǎng mǎi", "Kamu ingin membeli", "Menanyakan daftar belanjaan"),
+                        WordToken("什么", "shénme", "Apa", "Kata tanya objek")
+                    )
+                ),
+                Sentence(
+                    "s_wtdt_7",
+                    "我想买一个杯子，一盒牛奶，还有一些水果。",
+                    "Wǒ xiǎng mǎi yī gè bēizi, yī hé niúnǎi, hái yǒu yīxiē shuǐguǒ.",
+                    "A: Saya ingin membeli sebuah cangkir, sekotak susu, dan juga beberapa buah-buahan.",
+                    listOf(
+                        WordToken("我想买", "wǒ xiǎng mǎi", "Saya ingin membeli", "Keinginan berbelanja"),
+                        WordToken("一个杯子", "yī gè bēizi", "Sebuah cangkir / gelas", "Bilangan + kata penggolong + wadah minum"),
+                        WordToken("一盒牛奶", "yī hé niúnǎi", "Sekotak susu", "Bilangan + penggolong kotak + susu sapi"),
+                        WordToken("还有", "hái yǒu", "Dan juga / masih ada", "Konjungsi penambahan item"),
+                        WordToken("一些水果", "yīxiē shuǐguǒ", "Beberapa buah", "Kuantitas jamak + buah-buahan")
+                    )
+                ),
+                Sentence(
+                    "s_wtdt_8",
+                    "你喜欢吃什么水果？",
+                    "Nǐ xǐhuan chī shénme shuǐguǒ?",
+                    "B: Kamu suka makan buah apa?",
+                    listOf(
+                        WordToken("你喜欢吃", "nǐ xǐhuan chī", "Kamu suka makan", "Menanyakan preferensi makanan"),
+                        WordToken("什么水果", "shénme shuǐguǒ", "Buah apa", "Kata tanya ragam buah")
+                    )
+                ),
+                Sentence(
+                    "s_wtdt_9",
+                    "我喜欢吃香蕉和苹果。",
+                    "Wǒ xǐhuan chī xiāngjiāo hé píngguǒ.",
+                    "A: Saya suka makan pisang dan apel.",
+                    listOf(
+                        WordToken("我喜欢吃", "wǒ xǐhuan chī", "Saya suka makan", "Pernyataan selera"),
+                        WordToken("香蕉", "xiāngjiāo", "Pisang", "Buah pisang kuning"),
+                        WordToken("和", "hé", "Dan", "Kata penghubung setara"),
+                        WordToken("苹果", "píngguǒ", "Apel", "Buah apel segar")
+                    )
+                ),
+                Sentence(
+                    "s_wtdt_10",
+                    "我家也没有水果了。现在的苹果很好，你帮我也买一斤吧。",
+                    "Wǒ jiā yě méiyǒu shuǐguǒ le. Xiànzài de píngguǒ hěn hǎo, nǐ bāng wǒ yě mǎi yī jīn ba.",
+                    "B: Di rumah saya juga sudah tidak ada buah lagi. Apel saat ini sangat bagus, tolong bantu belikan untuk saya juga satu jin (setengah kilogram) ya.",
+                    listOf(
+                        WordToken("我家", "wǒ jiā", "Rumah saya", "Tempat tinggal penutur"),
+                        WordToken("也没有", "yě méiyǒu", "Juga tidak ada", "Adverbia + negasi"),
+                        WordToken("水果了", "shuǐguǒ le", "Buah lagi", "Buah + partikel perubahan keadaan"),
+                        WordToken("现在的", "xiànzài de", "Yang sekarang", "Keterangan musim sekarang"),
+                        WordToken("苹果很好", "píngguǒ hěn hǎo", "Apelnya sangat bagus", "Kualitas buah yang segar"),
+                        WordToken("你帮我", "nǐ bāng wǒ", "Kamu tolong saya", "Permintaan bantuan ramah"),
+                        WordToken("也买", "yě mǎi", "Juga beli", "Ikut membeli"),
+                        WordToken("一斤吧", "yī jīn ba", "Satu jin ya (500 gram)", "Satuan timbangan Tiongkok 0.5 kg + partikel saran")
+                    )
+                ),
+                Sentence(
+                    "s_wtdt_11",
+                    "没问题。我明天几点给你苹果？",
+                    "Méi wèntí. Wǒ míngtiān jǐ diǎn gěi nǐ píngguǒ?",
+                    "A: Tidak masalah. Besok saya jam berapa memberikan apelnya kepadamu?",
+                    listOf(
+                        WordToken("没问题", "méi wèntí", "Tidak masalah / siap", "Ungkapan kesediaan membantu"),
+                        WordToken("我明天", "wǒ míngtiān", "Saya besok", "Subjek + waktu"),
+                        WordToken("几点", "jǐ diǎn", "Jam berapa", "Menanyakan waktu spesifik"),
+                        WordToken("给你", "gěi nǐ", "Memberikan padamu", "Menyerahkan barang"),
+                        WordToken("苹果", "píngguǒ", "Apel", "Objek buah apel")
+                    )
+                ),
+                Sentence(
+                    "s_wtdt_12",
+                    "明天我五点从书店回家，你五点来我家吧。你也可以在我家吃饭，明天我们自己做，怎么样？",
+                    "Míngtiān wǒ wǔ diǎn cóng shūdiàn huí jiā, nǐ wǔ diǎn lái wǒ jiā ba. Nǐ yě kěyǐ zài wǒ jiā chī fàn, míngtiān wǒmen zìjǐ zuò, zěnmeyàng?",
+                    "B: Besok saya jam 5 pulang ke rumah dari toko buku, kamu datang ke rumah saya jam 5 saja. Kamu juga bisa makan di rumah saya, besok kita masak sendiri, bagaimana?",
+                    listOf(
+                        WordToken("明天我五点", "míngtiān wǒ wǔ diǎn", "Besok saya jam lima", "Waktu kepulangan"),
+                        WordToken("从书店回家", "cóng shūdiàn huí jiā", "Pulang ke rumah dari toko buku", "Asal tempat + pulang ke kediaman"),
+                        WordToken("你五点", "nǐ wǔ diǎn", "Kamu jam lima", "Waktu kedatangan"),
+                        WordToken("来我家吧", "lái wǒ jiā ba", "Datanglah ke rumah saya", "Undangan hangat berkunjung"),
+                        WordToken("你也可以", "nǐ yě kěyǐ", "Kamu juga bisa / boleh", "Memberikan pilihan yang baik"),
+                        WordToken("在我家吃饭", "zài wǒ jiā chī fàn", "Makan di rumah saya", "Makan bersama di rumah"),
+                        WordToken("明天我们", "míngtiān wǒmen", "Besok kita", "Waktu dan subjek jamak"),
+                        WordToken("自己做", "zìjǐ zuò", "Masak / bikin sendiri", "Memasak mandiri bersama"),
+                        WordToken("怎么样", "zěnmeyàng", "Bagaimana menurutmu?", "Menanyakan kesepakatan")
+                    )
+                ),
+                Sentence(
+                    "s_wtdt_13",
+                    "好，明天五点我去你家。",
+                    "Hǎo, míngtiān wǔ diǎn wǒ qù nǐ jiā.",
+                    "A: Baik, besok jam 5 saya akan pergi ke rumahmu.",
+                    listOf(
+                        WordToken("好", "hǎo", "Baik / setuju", "Pernyataan sepakat"),
+                        WordToken("明天五点", "míngtiān wǔ diǎn", "Besok jam 5", "Kepastian waktu"),
+                        WordToken("我去", "wǒ qù", "Saya akan berangkat ke", "Aktivitas pergi"),
+                        WordToken("你家", "nǐ jiā", "Rumahmu", "Destinasi tujuan")
+                    )
+                )
+            ),
+            questions = listOf(
+                StoryQuestion(
+                    "q_wtdt_1",
+                    "为什么B明天不用去学校？(Mengapa B besok tidak perlu ke sekolah?)",
+                    listOf(
+                        "因为他生病了 (Karena dia sakit)",
+                        "因为明天星期六，学校休息 (Karena besok hari Sabtu, sekolah libur)",
+                        "因为他已经毕业了 (Karena dia sudah lulus)",
+                        "因为学校在装修 (Karena sekolah sedang renovasi)"
+                    ),
+                    1,
+                    "A mengingatkan B bahwa: '明天星期六，休息' (Besok hari Sabtu, libur istirahat)."
+                ),
+                StoryQuestion(
+                    "q_wtdt_2",
+                    "B周六上午和下午各想做什么？(Apa rencana B di hari Sabtu pagi dan sore?)",
+                    listOf(
+                        "上午在家睡觉，下午去书店买书 (Pagi tidur di rumah, sore ke toko buku membeli buku)",
+                        "上午去买东西，下午去运动 (Pagi belanja, sore berolahraga)",
+                        "上午看电影，下午做饭 (Pagi nonton film, sore memasak)",
+                        "全天在学校上课 (Seharian belajar di sekolah)"
+                    ),
+                    0,
+                    "B menjelaskan rencananya: '明天上午我想在家睡觉，下午我想去书店买书'."
+                ),
+                StoryQuestion(
+                    "q_wtdt_3",
+                    "A打算去买什么东西？(Apa saja barang yang ingin dibeli A?)",
+                    listOf(
+                        "衣服和鞋子 (Baju dan sepatu)",
+                        "电脑和手机 (Komputer dan HP)",
+                        "一个杯子、一盒牛奶和一些水果 (Sebuah cangkir, sekotak susu, dan buah-buahan)",
+                        "两本中文书 (Dua buah buku Mandarin)"
+                    ),
+                    2,
+                    "A merinci daftar belanjanya: '我想买一个杯子，一盒牛奶，还有一些水果' (termasuk pisang dan apel)."
+                ),
+                StoryQuestion(
+                    "q_wtdt_4",
+                    "明天下午五点他们打算做什么？(Apa rencana mereka besok jam 5 sore?)",
+                    listOf(
+                        "去饭店吃广东菜 (Pergi ke restoran makan masakan Kanton)",
+                        "在B的家里一起自己做饭吃 (Di rumah B bersama-sama memasak sendiri)",
+                        "一起去书店选书 (Bersama-sama ke toko buku memilih buku)",
+                        "去公园散步 (Jalan-jalan di taman kota)"
+                    ),
+                    1,
+                    "B mengundang: '你五点来我家吧... 明天我们自己做 (besok kita masak makan sendiri di rumahku)' dan disetujui A."
+                )
+            )
+        ),
+
         // Cerita 1 - Sapaan & Murid Baru
         Story(
             id = "story_1",
