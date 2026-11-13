@@ -1716,6 +1716,177 @@ object LearningRepository {
             )
         ),
 
+        // Cerita Mandarin Bean 10: How is it going recently? (最近怎么样)
+        Story(
+            id = "story_how_is_it_going_recently",
+            titleHanzi = "最近怎么样",
+            titlePinyin = "Zuìjìn Zěnmeyàng",
+            titleTranslation = "How is it going recently? (Bagaimana Akhir-akhir Ini?)",
+            level = "HSK 1",
+            category = "Sekolah & Keluarga",
+            description = "Percakapan penuh perhatian antara Ibu Lele dan Guru Li tentang perilaku anak di sekolah, kebiasaan nonton TV di rumah, dan kerja sama pendidik-orang tua.",
+            coverEmoji = "🏫",
+            coverImageRes = R.drawable.cover_story_how_is_it_going_recently,
+            estimatedReadMinutes = 2,
+            sentences = listOf(
+                Sentence(
+                    "s_hiigr_1",
+                    "李老师，好久不见！",
+                    "Lǐ lǎoshī, hǎojiǔ bù jiàn!",
+                    "A: Guru Li, lama tidak bertemu!",
+                    listOf(
+                        WordToken("李老师", "Lǐ lǎoshī", "Guru Li", "Panggilan hormat guru bermarga Li"),
+                        WordToken("好久不见", "hǎojiǔ bù jiàn", "Lama tidak bertemu", "Ungkapan salam saat sudah lama tak berjumpa")
+                    )
+                ),
+                Sentence(
+                    "s_hiigr_2",
+                    "乐乐妈妈，好久不见！",
+                    "Lèlè māma, hǎojiǔ bù jiàn!",
+                    "B: Ibu Lele, lama tidak bertemu!",
+                    listOf(
+                        WordToken("乐乐妈妈", "Lèlè māma", "Ibu Lele", "Panggilan untuk ibu dari murid bernama Lele"),
+                        WordToken("好久不见", "hǎojiǔ bù jiàn", "Lama tidak bertemu", "Sapaan ramah balasan")
+                    )
+                ),
+                Sentence(
+                    "s_hiigr_3",
+                    "乐乐最近在学校怎么样？",
+                    "Lèlè zuìjìn zài xuéxiào zěnmeyàng?",
+                    "A: Bagaimana kabar/perkembangan Lele di sekolah akhir-akhir ini?",
+                    listOf(
+                        WordToken("乐乐", "Lèlè", "Lele", "Nama anak murid"),
+                        WordToken("最近", "zuìjìn", "Akhir-akhir ini / belakangan ini", "Keterangan waktu baru-baru ini"),
+                        WordToken("在学校", "zài xuéxiào", "Di sekolah", "Keterangan tempat bersekolah"),
+                        WordToken("怎么样", "zěnmeyàng", "Bagaimana?", "Menanyakan kondisi atau performa")
+                    )
+                ),
+                Sentence(
+                    "s_hiigr_4",
+                    "他喜欢帮助大家，同学们也都很喜欢他，但是最近学习马马虎虎。",
+                    "Tā xǐhuan bāngzhù dàjiā, tóngxuémen yě dōu hěn xǐhuan tā, dànshì zuìjìn xuéxí mǎmahūhū.",
+                    "B: Dia suka membantu semua orang, teman-teman sekelas juga sangat menyukainya, tetapi belakangan ini belajarnya biasa-biasa saja / agak teledor.",
+                    listOf(
+                        WordToken("他喜欢", "tā xǐhuan", "Dia suka", "Karakter gemar membantu"),
+                        WordToken("帮助大家", "bāngzhù dàjiā", "Membantu semua orang", "Sifat peduli dan suka menolong"),
+                        WordToken("同学们", "tóngxuémen", "Teman-teman sekelas", "Sesama pelajar"),
+                        WordToken("也都很喜欢他", "yě dōu hěn xǐhuan tā", "Juga semua sangat menyukainya", "Disukai banyak teman"),
+                        WordToken("但是", "dànshì", "Tetapi / namun", "Konjungsi pertentangan"),
+                        WordToken("最近学习", "zuìjìn xuéxí", "Belajarnya akhir-akhir ini", "Prestasi belajar terkini"),
+                        WordToken("马马虎虎", "mǎmahūhū", "Biasa-biasa saja / asal-asalan", "Idiom chengyu untuk hal yang standar / kurang teliti")
+                    )
+                ),
+                Sentence(
+                    "s_hiigr_5",
+                    "他学习不努力，每天回家就喜欢看电视。",
+                    "Tā xuéxí bù nǔlì, měi tiān huí jiā jiù xǐhuan kàn diànshì.",
+                    "A: Dia tidak rajin belajar, setiap hari begitu pulang ke rumah langsung suka menonton TV.",
+                    listOf(
+                        WordToken("他学习", "tā xuéxí", "Dia belajar", "Aktivitas belajar anak"),
+                        WordToken("不努力", "bù nǔlì", "Kurang giat / tidak rajin", "Kurang kerja keras dan fokus"),
+                        WordToken("每天回家", "měi tiān huí jiā", "Setiap hari pulang ke rumah", "Rutinitas harian sepulang sekolah"),
+                        WordToken("就喜欢", "jiù xǐhuan", "Langsung suka", "Kecenderungan kegemaran"),
+                        WordToken("看电视", "kàn diànshì", "Menonton TV / televisi", "Menonton siaran televisi")
+                    )
+                ),
+                Sentence(
+                    "s_hiigr_6",
+                    "看太多电视不好。",
+                    "Kàn tài duō diànshì bù hǎo.",
+                    "B: Menonton terlalu banyak TV itu tidak baik.",
+                    listOf(
+                        WordToken("看太多", "kàn tài duō", "Menonton terlalu banyak", "Frekuensi dan durasi berlebihan"),
+                        WordToken("电视", "diànshì", "Televisi", "Media tayangan TV"),
+                        WordToken("不好", "bù hǎo", "Tidak baik", "Dampak negatif bagi perkembangan anak")
+                    )
+                ),
+                Sentence(
+                    "s_hiigr_7",
+                    "是呀。我说了，他不听。",
+                    "Shì ya. Wǒ shuō le, tā bù tīng.",
+                    "A: Betul sekali. Saya sudah beri tahu, tapi dia tidak mau mendengar.",
+                    listOf(
+                        WordToken("是呀", "shì ya", "Betul sekali / iya nih", "Penegasan persetujuan keluhan"),
+                        WordToken("我说了", "wǒ shuō le", "Saya sudah menasihati", "Usaha orang tua mengingatkan"),
+                        WordToken("他不听", "tā bù tīng", "Dia tidak mau mendengar", "Anak bersikap keras kepala / abai")
+                    )
+                ),
+                Sentence(
+                    "s_hiigr_8",
+                    "明天他来学校，我也跟他说说这个事。",
+                    "Míngtiān tā lái xuéxiào, wǒ yě gēn tā shuō shuo zhè gè shì.",
+                    "B: Besok saat dia datang ke sekolah, saya juga akan membicarakan hal ini dengannya.",
+                    listOf(
+                        WordToken("明天", "míngtiān", "Besok", "Keterangan waktu esok hari"),
+                        WordToken("他来学校", "tā lái xuéxiào", "Dia datang ke sekolah", "Kehadiran murid di sekolah"),
+                        WordToken("我也跟他说说", "wǒ yě gēn tā shuō shuo", "Saya juga akan berbicara dengannya", "Bantuan guru untuk membimbing murid"),
+                        WordToken("这个事", "zhè gè shì", "Masalah ini / hal ini", "Topik tentang belajar dan kebiasaan TV")
+                    )
+                ),
+                Sentence(
+                    "s_hiigr_9",
+                    "太好了！谢谢李老师。",
+                    "Tài hǎo le! Xièxie Lǐ lǎoshī.",
+                    "A: Bagus sekali! Terima kasih Guru Li.",
+                    listOf(
+                        WordToken("太好了", "tài hǎo le", "Bagus sekali! / syukurlah", "Ekspresi kelegaan dan kepuasan"),
+                        WordToken("谢谢", "xièxie", "Terima kasih", "Ungkapan terima kasih mendalam"),
+                        WordToken("李老师", "Lǐ lǎoshī", "Guru Li", "Panggilan hormat guru")
+                    )
+                )
+            ),
+            questions = listOf(
+                StoryQuestion(
+                    "q_hiigr_1",
+                    "故事中对话的两个人分别是谁？(Siapa kedua orang yang saling berbicara dalam cerita?)",
+                    listOf(
+                        "乐乐和他的同桌 (Lele dan teman sebangkunya)",
+                        "乐乐的妈妈和李老师 (Ibu Lele dan Guru Li)",
+                        "两位小学老师 (Dua orang guru SD)",
+                        "医生和病人 (Dokter dan pasien)"
+                    ),
+                    1,
+                    "Percakapan terjadi antara orang tua murid ('乐乐妈妈') dan wali kelas/guru di sekolah ('李老师')."
+                ),
+                StoryQuestion(
+                    "q_hiigr_2",
+                    "李老师觉得乐乐在学校表现如何？(Bagaimana sikap Lele di sekolah menurut Guru Li?)",
+                    listOf(
+                        "不愿意和同学说话 (Enggan berbicara dengan teman)",
+                        "喜欢帮助大家，很受同学欢迎 (Suka membantu semua orang, sangat disukai teman-teman)",
+                        "经常迟到 (Sering terlambat)",
+                        "上课总睡觉 (Selalu tidur saat jam pelajaran)"
+                    ),
+                    1,
+                    "Guru Li memuji karakter sosialnya: '他喜欢帮助大家，同学们也都很喜欢他' (Dia suka membantu semua orang dan teman-teman menyukainya)."
+                ),
+                StoryQuestion(
+                    "q_hiigr_3",
+                    "乐乐的妈妈为什么感到苦恼？(Mengapa ibu Lele merasa risau?)",
+                    listOf(
+                        "乐乐不肯去学校 (Lele tidak mau ke sekolah)",
+                        "乐乐生病了 (Lele sedang sakit)",
+                        "乐乐学习不努力，每天回家只喜欢看电视 (Lele kurang tekun belajar, pulang ke rumah langsung suka nonton TV)",
+                        "乐乐把书本弄丢了 (Lele menghilangkan buku pelajarannya)"
+                    ),
+                    2,
+                    "Sang ibu mengeluhkan: '他学习不努力，每天回家就喜欢看电视。我说了，他不听' (Belajarnya kurang giat dan tidak mendengarkan omongan ibunya)."
+                ),
+                StoryQuestion(
+                    "q_hiigr_4",
+                    "李老师打算明天怎样帮助乐乐妈妈？(Bagaimana Guru Li berencana membantu ibu Lele besok?)",
+                    listOf(
+                        "给乐乐布置大量作业 (Memberikan banyak PR)",
+                        "明天在学校找乐乐谈谈这件事 (Membicarakan dan menasihati Lele di sekolah tentang hal ini)",
+                        "给乐乐换一个座位 (Memindahkan tempat duduk Lele)",
+                        "去乐乐家里家访 (Melakukan kunjungan ke rumah)"
+                    ),
+                    1,
+                    "Guru Li menawarkan bantuan bijak: '明天他来学校，我也跟他说说这个事' (Besok dia datang ke sekolah, saya juga akan ikut mengajaknya bicara)."
+                )
+            )
+        ),
+
         // Cerita 1 - Sapaan & Murid Baru
         Story(
             id = "story_1",
