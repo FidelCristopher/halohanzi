@@ -34,8 +34,8 @@ import com.example.chineselearning.data.repository.hsk1VocabularyList
 import com.example.chineselearning.ui.components.bouncyClick
 import com.example.chineselearning.ui.theme.*
 
-private val ActivePurple = Color(0xFF6A4CE4)
-private val SoftPurpleBg = Color(0xFFF3EDFF)
+private val ActiveBrandColor = HanziGreenDark
+private val SoftBrandBg = PastelMint
 
 @Composable
 fun SavedVocabScreen(
@@ -112,15 +112,15 @@ fun SavedVocabScreen(
 
                 Surface(
                     shape = RoundedCornerShape(12.dp),
-                    color = SoftPurpleBg,
-                    border = BorderStroke(1.dp, ActivePurple.copy(alpha = 0.25f))
+                    color = PastelMint,
+                    border = BorderStroke(1.dp, PastelMintBorder)
                 ) {
                     Text(
                         text = "${filteredList.size} / 150",
                         fontFamily = NunitoFontFamily,
                         fontSize = 12.sp,
                         fontWeight = FontWeight.Bold,
-                        color = ActivePurple,
+                        color = PastelMintText,
                         modifier = Modifier.padding(horizontal = 10.dp, vertical = 6.dp)
                     )
                 }
@@ -167,9 +167,9 @@ fun SavedVocabScreen(
                 colors = OutlinedTextFieldDefaults.colors(
                     focusedContainerColor = Color.White,
                     unfocusedContainerColor = Color.White,
-                    focusedBorderColor = ActivePurple,
+                    focusedBorderColor = HanziGreen,
                     unfocusedBorderColor = BorderGray,
-                    cursorColor = ActivePurple
+                    cursorColor = HanziGreen
                 ),
                 singleLine = true
             )
@@ -187,8 +187,8 @@ fun SavedVocabScreen(
                     val isSelected = selectedCategory == cat
                     Surface(
                         shape = RoundedCornerShape(20.dp),
-                        color = if (isSelected) ActivePurple else Color.White,
-                        border = BorderStroke(1.dp, if (isSelected) ActivePurple else BorderGray),
+                        color = if (isSelected) PastelMint else Color.White,
+                        border = BorderStroke(1.dp, if (isSelected) HanziGreen else BorderGray),
                         shadowElevation = if (isSelected) 2.dp else 0.5.dp,
                         modifier = Modifier.bouncyClick(scaleDown = 0.94f) {
                             selectedCategory = cat
@@ -199,7 +199,7 @@ fun SavedVocabScreen(
                             fontFamily = NunitoFontFamily,
                             fontSize = 12.sp,
                             fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Medium,
-                            color = if (isSelected) Color.White else DeepNavy,
+                            color = if (isSelected) PastelMintText else DeepNavy,
                             modifier = Modifier.padding(horizontal = 14.dp, vertical = 7.dp)
                         )
                     }
@@ -311,7 +311,7 @@ private fun HskWordSmallTile(
                 Icon(
                     imageVector = Icons.AutoMirrored.Filled.VolumeUp,
                     contentDescription = "Audio",
-                    tint = ActivePurple.copy(alpha = 0.65f),
+                    tint = ActiveBrandColor.copy(alpha = 0.65f),
                     modifier = Modifier.size(14.dp)
                 )
             }
@@ -337,7 +337,7 @@ private fun HskWordSmallTile(
                 fontFamily = NunitoFontFamily,
                 fontSize = 11.5.sp,
                 fontWeight = FontWeight.SemiBold,
-                color = ActivePurple,
+                color = ActiveBrandColor,
                 textAlign = TextAlign.Center,
                 maxLines = 1,
                 overflow = TextOverflow.Ellipsis
@@ -394,14 +394,14 @@ private fun HskWordDetailDialog(
                 ) {
                     Surface(
                         shape = RoundedCornerShape(10.dp),
-                        color = SoftPurpleBg
+                        color = SoftBrandBg
                     ) {
                         Text(
                             text = word.category,
                             fontFamily = NunitoFontFamily,
                             fontSize = 12.sp,
                             fontWeight = FontWeight.Bold,
-                            color = ActivePurple,
+                            color = ActiveBrandColor,
                             modifier = Modifier.padding(horizontal = 10.dp, vertical = 4.dp)
                         )
                     }
@@ -439,7 +439,7 @@ private fun HskWordDetailDialog(
                         fontFamily = NunitoFontFamily,
                         fontSize = 20.sp,
                         fontWeight = FontWeight.Bold,
-                        color = ActivePurple
+                        color = ActiveBrandColor
                     )
                     Spacer(modifier = Modifier.width(8.dp))
                     IconButton(
@@ -447,12 +447,12 @@ private fun HskWordDetailDialog(
                         modifier = Modifier
                             .size(36.dp)
                             .clip(CircleShape)
-                            .background(SoftPurpleBg)
+                            .background(SoftBrandBg)
                     ) {
                         Icon(
                             imageVector = Icons.AutoMirrored.Filled.VolumeUp,
                             contentDescription = "Speak",
-                            tint = ActivePurple,
+                            tint = ActiveBrandColor,
                             modifier = Modifier.size(20.dp)
                         )
                     }
@@ -516,7 +516,7 @@ private fun HskWordDetailDialog(
                 Button(
                     onClick = onDismiss,
                     shape = RoundedCornerShape(16.dp),
-                    colors = ButtonDefaults.buttonColors(containerColor = ActivePurple),
+                    colors = ButtonDefaults.buttonColors(containerColor = HanziGreen),
                     modifier = Modifier.fillMaxWidth().height(48.dp)
                 ) {
                     Text(

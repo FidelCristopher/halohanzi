@@ -1,6 +1,7 @@
 package com.example.chineselearning.ui.screens
 
 import androidx.activity.compose.BackHandler
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
@@ -158,11 +159,11 @@ fun StoryReaderScreen(
             )
         },
         bottomBar = {
-            // Interactive Audio Player Dock
+            // Interactive Audio Player Dock with Pastel Accents
             Surface(
-                color = MaterialTheme.colorScheme.surface,
-                tonalElevation = 10.dp,
-                shadowElevation = 10.dp
+                color = Color.White,
+                border = BorderStroke(1.dp, BorderGray),
+                shadowElevation = 6.dp
             ) {
                 Column(
                     modifier = Modifier
@@ -287,7 +288,8 @@ fun StoryReaderScreen(
                         // Speed Button (1.0X pill)
                         Surface(
                             shape = RoundedCornerShape(12.dp),
-                            color = LightSlate,
+                            color = PastelMint,
+                            border = BorderStroke(1.dp, PastelMintBorder),
                             onClick = {
                                 speedIndex = (speedIndex + 1) % speedValues.size
                             }
@@ -296,8 +298,8 @@ fun StoryReaderScreen(
                                 text = speedLabels[speedIndex],
                                 fontSize = 12.sp,
                                 fontWeight = FontWeight.Bold,
-                                color = HanziGreenDark,
-                                modifier = Modifier.padding(horizontal = 8.dp, vertical = 6.dp)
+                                color = PastelMintText,
+                                modifier = Modifier.padding(horizontal = 10.dp, vertical = 6.dp)
                             )
                         }
                     }

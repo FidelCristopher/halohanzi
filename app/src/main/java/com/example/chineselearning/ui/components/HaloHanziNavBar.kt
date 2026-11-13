@@ -29,12 +29,12 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.chineselearning.R
-import com.example.chineselearning.ui.theme.NunitoFontFamily
+import com.example.chineselearning.ui.theme.*
 
-// Modern Brand Palette
-private val ActivePurple = Color(0xFF6A4CE4)
+// Modern Pastel Brand Palette (Unified with Belajar & Cerita)
+private val ActiveNavColor = Color(0xFF008C69)
 private val InactiveGray = Color(0xFF8E8E98)
-private val FloatingBorderColor = Color(0xFFECEAF6)
+private val FloatingBorderColor = Color(0xFFE2E8F0)
 
 data class NavTabItem(
     val title: String,
@@ -91,8 +91,8 @@ fun HaloHanziNavBar(
                 .shadow(
                     elevation = 16.dp,
                     shape = RoundedCornerShape(30.dp),
-                    spotColor = Color(0x356A4CE4),
-                    ambientColor = Color(0x1A000000)
+                    spotColor = Color(0x25008C69),
+                    ambientColor = Color(0x10000000)
                 ),
             shape = RoundedCornerShape(30.dp),
             color = Color.White,
@@ -128,7 +128,7 @@ fun HaloHanziNavBar(
                     )
 
                     val activeColor by animateColorAsState(
-                        targetValue = if (isSelected) ActivePurple else InactiveGray,
+                        targetValue = if (isSelected) ActiveNavColor else InactiveGray,
                         animationSpec = tween(durationMillis = 200),
                         label = "activeColor"
                     )
@@ -154,7 +154,7 @@ fun HaloHanziNavBar(
                                 .height(32.dp)
                                 .width(52.dp)
                         ) {
-                            // Subtle gradient pill with hairline border for selected tab
+                            // Subtle pastel gradient pill with hairline border for selected tab
                             if (pillAlpha > 0.01f) {
                                 Box(
                                     modifier = Modifier
@@ -163,14 +163,14 @@ fun HaloHanziNavBar(
                                         .background(
                                             Brush.verticalGradient(
                                                 listOf(
-                                                    Color(0xFFF3EDFF).copy(alpha = pillAlpha),
-                                                    Color(0xFFEBE0FE).copy(alpha = pillAlpha)
+                                                    PastelMint.copy(alpha = pillAlpha),
+                                                    PastelMintLight.copy(alpha = pillAlpha)
                                                 )
                                             )
                                         )
                                         .border(
                                             width = 1.dp,
-                                            color = ActivePurple.copy(alpha = 0.16f * pillAlpha),
+                                            color = HanziGreen.copy(alpha = 0.25f * pillAlpha),
                                             shape = RoundedCornerShape(16.dp)
                                         )
                                 )

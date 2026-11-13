@@ -338,15 +338,15 @@ private fun HskLevelFilterChip(
     onSelect: () -> Unit
 ) {
     val backgroundColor by animateColorAsState(
-        targetValue = if (isSelected) HanziGreenDark else Color.White,
+        targetValue = if (isSelected) PastelMint else Color.White,
         animationSpec = spring(),
         label = "chipBg"
     )
     val contentColor by animateColorAsState(
-        targetValue = if (isSelected) Color.White else DeepNavy,
+        targetValue = if (isSelected) PastelMintText else DeepNavy,
         label = "chipContent"
     )
-    val borderColor = if (isSelected) HanziGreenDark else BorderGray
+    val borderColor = if (isSelected) HanziGreen else BorderGray
 
     Surface(
         onClick = onSelect,
@@ -376,15 +376,15 @@ private fun HskLevelFilterChip(
             // Pill count
             Surface(
                 shape = CircleShape,
-                color = if (isSelected) Color.White.copy(alpha = 0.25f) else HanziMint
+                color = if (isSelected) PastelMintBorder else LightSlate
             ) {
                 Text(
                     text = count.toString(),
                     fontFamily = AppFontFamily,
                     fontSize = 11.sp,
                     fontWeight = FontWeight.Bold,
-                    color = if (isSelected) Color.White else HanziGreenDark,
-                    modifier = Modifier.padding(horizontal = 6.dp, vertical = 1.dp)
+                    color = if (isSelected) PastelMintText else SlateGray,
+                    modifier = Modifier.padding(horizontal = 7.dp, vertical = 1.dp)
                 )
             }
         }
@@ -400,9 +400,9 @@ private fun TopicFilterChip(
     isSelected: Boolean,
     onSelect: () -> Unit
 ) {
-    val backgroundColor = if (isSelected) SoftMint else Color.White
-    val contentColor = if (isSelected) DarkJade else SlateGray
-    val borderColor = if (isSelected) HanziGreen else BorderGray
+    val backgroundColor = if (isSelected) PastelCream else Color.White
+    val contentColor = if (isSelected) PastelCreamText else SlateGray
+    val borderColor = if (isSelected) PastelCreamBorder else BorderGray
 
     Surface(
         onClick = onSelect,
@@ -530,10 +530,16 @@ private fun ModernStoryCard(
                 }
 
                 // --- TOP OVERLAYS ON BANNER ---
-                // Top-Left: HSK Level Pill
+                // Top-Left: HSK Level Pill (Pastel Tonal Badge per HSK)
+                val (hskBg, hskText, hskBorder) = when {
+                    story.level.contains("1") -> Triple(PastelMint, PastelMintText, PastelMintBorder)
+                    story.level.contains("2") -> Triple(PastelCream, PastelCreamText, PastelCreamBorder)
+                    else -> Triple(PastelLavender, PastelLavenderText, PastelLavenderBorder)
+                }
                 Surface(
-                    color = HanziGreenDark,
+                    color = hskBg,
                     shape = RoundedCornerShape(10.dp),
+                    border = BorderStroke(1.dp, hskBorder),
                     modifier = Modifier
                         .align(Alignment.TopStart)
                         .padding(12.dp)
@@ -545,7 +551,7 @@ private fun ModernStoryCard(
                         Icon(
                             painter = painterResource(R.drawable.ic_story_level_badge),
                             contentDescription = null,
-                            tint = Color.White,
+                            tint = hskText,
                             modifier = Modifier.size(11.dp)
                         )
                         Spacer(modifier = Modifier.width(4.dp))
@@ -554,7 +560,7 @@ private fun ModernStoryCard(
                             fontFamily = AppFontFamily,
                             fontSize = 11.sp,
                             fontWeight = FontWeight.Bold,
-                            color = Color.White
+                            color = hskText
                         )
                     }
                 }
@@ -714,8 +720,8 @@ private fun ModernStoryCard(
                     // "Baca Cerita" Action Pill Button
                     Surface(
                         shape = RoundedCornerShape(12.dp),
-                        color = HanziMint,
-                        border = BorderStroke(1.dp, HanziGreen.copy(alpha = 0.3f))
+                        color = PastelMint,
+                        border = BorderStroke(1.dp, PastelMintBorder)
                     ) {
                         Row(
                             modifier = Modifier.padding(horizontal = 12.dp, vertical = 6.dp),
@@ -724,7 +730,7 @@ private fun ModernStoryCard(
                             Icon(
                                 painter = painterResource(R.drawable.ic_story_book_open),
                                 contentDescription = null,
-                                tint = HanziGreenDark,
+                                tint = PastelMintText,
                                 modifier = Modifier.size(13.dp)
                             )
                             Spacer(modifier = Modifier.width(6.dp))
@@ -733,13 +739,13 @@ private fun ModernStoryCard(
                                 fontFamily = AppFontFamily,
                                 fontSize = 12.sp,
                                 fontWeight = FontWeight.Bold,
-                                color = HanziGreenDark
+                                color = PastelMintText
                             )
                             Spacer(modifier = Modifier.width(4.dp))
                             Icon(
                                 imageVector = Icons.AutoMirrored.Filled.ArrowForward,
                                 contentDescription = null,
-                                tint = HanziGreenDark,
+                                tint = PastelMintText,
                                 modifier = Modifier.size(12.dp)
                             )
                         }
