@@ -2646,6 +2646,127 @@ object LearningRepository {
             )
         ),
 
+        // Cerita Mandarin Bean 17: Distribute Watermelon (分西瓜)
+        Story(
+            id = "story_distribute_watermelon",
+            titleHanzi = "分西瓜",
+            titlePinyin = "Fēn Xīguā",
+            titleTranslation = "Distribute Watermelon (Membagi Semangka)",
+            level = "HSK 1",
+            category = "Humor & Matematika",
+            description = "Anekdot jenaka tentang seorang anak yang salah paham tentang pecahan matematika saat membagi buah semangka bersama teman-temannya.",
+            coverEmoji = "🍉",
+            coverImageRes = R.drawable.cover_story_distribute_watermelon,
+            estimatedReadMinutes = 2,
+            sentences = listOf(
+                Sentence(
+                    "s_distwatermelon_1",
+                    "爸爸买了一个西瓜，儿子叫来了两个小朋友一起吃，一个说：“我要二分之一。”",
+                    "Bàba mǎi le yí gè xīguā, érzi jiào lái le liǎng gè xiǎo péngyou yīqǐ chī, yí gè shuō: “Wǒ yào èr fēn zhī yī.”",
+                    "Ayah membeli sebuah semangka, anak laki-lakinya memanggil dua teman kecil untuk makan bersama, satu teman berkata: “Aku mau seperdua (setengah).”",
+                    listOf(
+                        WordToken("爸爸", "bàba", "Ayah", "Orang tua laki-laki"),
+                        WordToken("买了", "mǎi le", "Membeli", "Tindakan membeli barang"),
+                        WordToken("一个", "yī gè", "Sebuah", "Bilangan + kata penggolong"),
+                        WordToken("西瓜", "xīguā", "Semangka", "Buah semangka manis"),
+                        WordToken("儿子", "érzi", "Anak laki-laki", "Putra kandung"),
+                        WordToken("叫来了", "jiào lái le", "Memanggil datang", "Mengajak orang datang berkumpul"),
+                        WordToken("两个", "liǎng gè", "Dua orang", "Bilangan + penggolong orang"),
+                        WordToken("小朋友", "xiǎo péngyou", "Teman kecil / anak-anak", "Sesama anak kecil"),
+                        WordToken("一起吃", "yīqǐ chī", "Makan bersama", "Bersantap secara bersama-sama"),
+                        WordToken("一个", "yí gè", "Satu anak", "Salah satu teman"),
+                        WordToken("说", "shuō", "Berkata", "Kata kerja tutur"),
+                        WordToken("我要", "wǒ yào", "Saya mau / minta", "Pernyataan permintaan"),
+                        WordToken("二分之一", "èr fēn zhī yī", "Setengah / 1/2", "Pecahan satu per dua")
+                    )
+                ),
+                Sentence(
+                    "s_distwatermelon_2",
+                    "另一个说：“我要三分之一。”",
+                    "Lìng yí gè shuō: “Wǒ yào sān fēn zhī yī.”",
+                    "Teman yang satu lagi berkata: “Aku mau sepertiga.”",
+                    listOf(
+                        WordToken("另一个", "lìng yí gè", "Yang satunya lagi", "Teman yang lain"),
+                        WordToken("说", "shuō", "Berkata", "Kata kerja tutur"),
+                        WordToken("我要", "wǒ yào", "Saya mau", "Permintaan"),
+                        WordToken("三分之一", "sān fēn zhī yī", "Sepertiga / 1/3", "Pecahan satu per tiga")
+                    )
+                ),
+                Sentence(
+                    "s_distwatermelon_3",
+                    "儿子最后说：“这个西瓜是我爸爸买的，我就多吃一点儿，我要百分之一！”",
+                    "Érzi zuìhòu shuō: “Zhè gè xīguā shì wǒ bàba mǎi de, wǒ jiù duō chī yīdiǎnr, wǒ yào bǎi fēn zhī yī!”",
+                    "Anak laki-laki itu terakhir berkata: “Semangka ini ayahku yang beli, jadi aku mau makan lebih banyak sedikit, aku mau seperseratus (1%)!”",
+                    listOf(
+                        WordToken("儿子", "érzi", "Anak laki-laki", "Subjek putra"),
+                        WordToken("最后", "zuìhòu", "Terakhir", "Urutan paling akhir"),
+                        WordToken("说", "shuō", "Berkata", "Kata kerja tutur"),
+                        WordToken("这个", "zhè gè", "Ini", "Kata penunjuk"),
+                        WordToken("西瓜", "xīguā", "Semangka", "Buah semangka"),
+                        WordToken("是", "shì", "Adalah", "Kopula"),
+                        WordToken("我爸爸", "wǒ bàba", "Ayah saya", "Subjek ayah penutur"),
+                        WordToken("买的", "mǎi de", "Yang membelinya", "Konstruksi penegas pembeli"),
+                        WordToken("我", "wǒ", "Saya / aku", "Pronomina orang pertama"),
+                        WordToken("就", "jiù", "Maka", "Adverbia penegas akibat wajar"),
+                        WordToken("多吃", "duō chī", "Makan lebih banyak", "Kuantitas makan bertambah"),
+                        WordToken("一点儿", "yīdiǎnr", "Sedikit", "Sedikit lebih banyak"),
+                        WordToken("我要", "wǒ yào", "Saya mau", "Permintaan"),
+                        WordToken("百分之一", "bǎi fēn zhī yī", "Seperseratus / 1%", "Pecahan satu per seratus")
+                    )
+                )
+            ),
+            questions = listOf(
+                StoryQuestion(
+                    "q_distwatermelon_1",
+                    "爸爸买了什么水果给孩子们吃？(Buah apa yang dibeli ayah untuk dimakan bersama anak-anak?)",
+                    listOf(
+                        "苹果 (Apel)",
+                        "西瓜 (Semangka)",
+                        "香蕉 (Pisang)",
+                        "草莓 (Stroberi)"
+                    ),
+                    1,
+                    "Di kalimat pertama dinyatakan: '爸爸买了一个西瓜，儿子叫来了两个小朋友一起吃' (Ayah membeli sebuah semangka)."
+                ),
+                StoryQuestion(
+                    "q_distwatermelon_2",
+                    "两个小朋友分别想要吃多少西瓜？(Berapa bagian semangka yang diminta oleh kedua teman kecil itu?)",
+                    listOf(
+                        "二分之一和三分之一 (1/2 dan 1/3)",
+                        "四分之一和五分之一 (1/4 dan 1/5)",
+                        "两个人都要吃全部 (Keduanya minta semuanya)",
+                        "他们都不想吃 (Mereka tidak mau makan)"
+                    ),
+                    0,
+                    "Satu teman berkata: '我要二分之一' (1/2), dan teman lainnya berkata: '我要三分之一' (1/3)."
+                ),
+                StoryQuestion(
+                    "q_distwatermelon_3",
+                    "儿子为什么觉得自己应该多吃一点儿？(Mengapa anak laki-laki itu merasa harus makan lebih banyak?)",
+                    listOf(
+                        "因为他年纪最大 (Karena dia paling tua)",
+                        "因为这个西瓜是他爸爸买的 (Karena semangka itu dibeli oleh ayahnya)",
+                        "因为他跑得最快 (Karena dia lari paling cepat)",
+                        "因为他很渴 (Karena dia sangat haus)"
+                    ),
+                    1,
+                    "Anak itu beralasan: '这个西瓜是我爸爸买的，我就多吃一点儿' (Semangka ini ayahku yang beli, jadi aku makan lebih banyak)."
+                ),
+                StoryQuestion(
+                    "q_distwatermelon_4",
+                    "故事的笑点在哪里？(Di mana letak kelucuan dari cerita ini?)",
+                    listOf(
+                        "西瓜太甜了 (Semangkanya terlalu manis)",
+                        "儿子以为“百分之一”比“二分之一”多，其实拿到的是最少最小的一块！(Anak itu mengira 1/100 lebih banyak dari 1/2 karena angka 100 lebih besar, padahal porsinya jadi yang paling sedikit!)",
+                        "西瓜掉在地上了 (Semangkanya jatuh ke tanah)",
+                        "爸爸把西瓜都吃光了 (Ayah menghabiskan semua semangkanya)"
+                    ),
+                    1,
+                    "Kelucuan puncaknya: anak itu gagal paham matematika pecahan; ia mengira angka 100 (百) lebih besar sehingga porsi '百分之一' (1%) paling banyak, padahal seperseratus justru potongan yang paling kecil sekali!"
+                )
+            )
+        ),
+
         // Cerita 1 - Sapaan & Murid Baru
         Story(
             id = "story_1",
