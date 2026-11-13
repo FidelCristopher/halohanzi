@@ -4981,7 +4981,7 @@ object LearningRepository {
             story = stories[1],
             nodes = listOf(
                 PathNode("u2_n1", "Mereka adalah teman-temanku", Color(0xFFFFC107), NodeIconType.CAP, isCompleted = false, lessonId = "u2_l1"),
-                PathNode("u2_n2", "Mereka adalah teman-temanku", Color(0xFFFFC107), NodeIconType.DUMBBELL, isCompleted = false, lessonId = "u2_l1"),
+                PathNode("u2_n2", "Mereka adalah teman-temanku", Color(0xFFFFC107), NodeIconType.DUMBBELL, isCompleted = false, lessonId = "u2_l2"),
                 PathNode("u2_n3", "Umur & Tahun", Color(0xFFFFC107), NodeIconType.CAP, isCompleted = false, lessonId = "u2_l1"),
                 PathNode("u2_n4", "Umur & Tahun", Color(0xFFFFC107), NodeIconType.DUMBBELL, isCompleted = false, lessonId = "u2_l1"),
                 PathNode("u2_n5", "Latihan Komprehensif", Color(0xFFFFC107), NodeIconType.SHUFFLE, isCompleted = false, lessonId = "u2_l1"),
@@ -5005,6 +5005,19 @@ object LearningRepository {
                     exercises = stage1Part1Exercises,
                     exercisesPart1 = stage1Part1Exercises,
                     exercisesPart2 = stage1Part2Exercises
+                ),
+                Lesson(
+                    id = "u2_l2",
+                    title = "Mereka adalah teman-temanku",
+                    subtitle = "Latihan Kosakata Teman & Jamak",
+                    grammarNote = "Latihan penguatan kata ganti jamak 们 (men), teman sekolah (同学), dan teman (朋友) dalam dialog sehari-hari.",
+                    newWords = listOf(
+                        Word("w2_1", "同学", "tóngxué", "Teman sekolah", "Kata benda", "我们是同学。", "Wǒmen shì tóngxué.", "Kami adalah teman sekolah."),
+                        Word("w2_2", "朋友", "péngyou", "Teman", "Kata benda", "我们是朋友。", "Wǒmen shì péngyou.", "Kami adalah teman."),
+                        Word("w2_3", "们", "men", "Penanda jamak", "Akhiran", "他们不是朋友。", "Tāmen bú shì péngyou.", "Mereka bukan teman.")
+                    ),
+                    exercises = stage2Part1Exercises,
+                    exercisesPart1 = stage2Part1Exercises
                 )
             )
         ),
