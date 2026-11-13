@@ -5777,7 +5777,8 @@ object LearningRepository {
                         Word("w2_3", "们", "men", "Penanda jamak", "Akhiran", "他们不是朋友。", "Tāmen bú shì péngyou.", "Mereka bukan teman.")
                     ),
                     exercises = stage2Part1Exercises,
-                    exercisesPart1 = stage2Part1Exercises
+                    exercisesPart1 = stage2Part1Exercises,
+                    exercisesPart2 = stage2Part2Exercises
                 )
             )
         ),
