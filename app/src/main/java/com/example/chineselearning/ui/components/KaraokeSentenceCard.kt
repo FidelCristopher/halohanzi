@@ -14,11 +14,13 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.chineselearning.data.model.Sentence
 import com.example.chineselearning.data.model.WordToken
+import com.example.chineselearning.data.repository.LearningRepository
 import com.example.chineselearning.ui.theme.*
 
 @OptIn(ExperimentalLayoutApi::class)
@@ -173,10 +175,8 @@ private fun parseSentenceItems(hanzi: String, tokens: List<WordToken>): Pair<Str
         val findIdx = trimmed.indexOf(token.hanzi, currIdx)
         if (findIdx != -1) {
             if (findIdx > currIdx) {
-                val punct = trimmed.substring(currIdx, findIdx).trim()
-                if (punct.isNotEmpty()) {
-                    items.add(SentenceItem.Punct(punct))
-                }
+                val segment = trimmed.substring(currIdx, findIdx)
+                splitSegmentIntoItems(segment, items)
             }
             items.add(SentenceItem.Token(token))
             currIdx = findIdx + token.hanzi.length
@@ -186,13 +186,45 @@ private fun parseSentenceItems(hanzi: String, tokens: List<WordToken>): Pair<Str
     }
 
     if (currIdx < trimmed.length) {
-        val trailingPunct = trimmed.substring(currIdx).trim()
-        if (trailingPunct.isNotEmpty()) {
-            items.add(SentenceItem.Punct(trailingPunct))
-        }
+        val trailingSegment = trimmed.substring(currIdx)
+        splitSegmentIntoItems(trailingSegment, items)
     }
 
     return Pair(speaker, items)
+}
+
+private fun splitSegmentIntoItems(segment: String, targetList: MutableList<SentenceItem>) {
+    var isChineseMode: Boolean? = null
+    val buffer = StringBuilder()
+
+    fun flush() {
+        if (buffer.isNotEmpty()) {
+            val text = buffer.toString()
+            if (isChineseMode == true) {
+                val token = LearningRepository.findToken(text)
+                targetList.add(SentenceItem.Token(token))
+            } else {
+                val punct = text.trim()
+                if (punct.isNotEmpty()) {
+                    targetList.add(SentenceItem.Punct(punct))
+                }
+            }
+            buffer.clear()
+        }
+    }
+
+    for (char in segment) {
+        if (char.isWhitespace()) {
+            continue
+        }
+        val isChinese = char in '\u4e00'..'\u9fa5'
+        if (isChinese != isChineseMode) {
+            flush()
+            isChineseMode = isChinese
+        }
+        buffer.append(char)
+    }
+    flush()
 }
 
 private fun splitPinyinIntoSyllables(pinyin: String, targetCount: Int): List<String> {
@@ -356,8 +388,8 @@ private fun PunctuationMark(
         }
         Text(
             text = punct,
-            fontFamily = KaiTiFontFamily,
-            fontSize = 24.sp,
+            fontFamily = FontFamily.Default,
+            fontSize = 22.sp,
             fontWeight = FontWeight.SemiBold,
             color = if (isActive) ActiveSentenceGreen else HanziColor
         )

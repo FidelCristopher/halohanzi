@@ -266,6 +266,7 @@ object LearningRepository {
                         WordToken("他", "tā", "Dia / -nya", "Kata ganti orang ketiga"),
                         WordToken("今天", "jīntiān", "Hari ini", "Waktu saat ini"),
                         WordToken("怎么样", "zěnmeyàng", "Bagaimana", "Menanyakan keadaan"),
+                        WordToken("他", "tā", "Dia / -nya", "Kata ganti orang ketiga"),
                         WordToken("告诉", "gàosu", "Memberitahu", "Menyampaikan informasi"),
                         WordToken("妈妈", "māma", "Ibu", "Orang tua perempuan")
                     )
@@ -654,6 +655,7 @@ object LearningRepository {
                         WordToken("一个", "yī gè", "Seorang", "Satuan jumlah"),
                         WordToken("女儿", "nǚ'ér", "Anak perempuan", "Anak kandung putri"),
                         WordToken("和", "hé", "Dan", "Kata hubung"),
+                        WordToken("一个", "yī gè", "Seorang", "Satuan jumlah"),
                         WordToken("儿子", "érzi", "Anak laki-laki", "Anak kandung putra")
                     )
                 ),
@@ -743,6 +745,7 @@ object LearningRepository {
                         WordToken("要钱", "yào qián", "Meminta uang", "Frasa kata kerja"),
                         WordToken("买东西", "mǎi dōngxi", "Membeli barang", "Aktivitas belanja"),
                         WordToken("这一天", "zhè yī tiān", "Pada suatu hari", "Keterangan waktu"),
+                        WordToken("孩子", "háizi", "Anak", "Subjek anak"),
                         WordToken("又", "yòu", "Kembali / lagi", "Adverbia pengulangan masa lampau"),
                         WordToken("找", "zhǎo", "Mencari / menemui", "Kata kerja"),
                         WordToken("爸爸", "bàba", "Ayah", "Orang tua laki-laki"),
@@ -1165,9 +1168,13 @@ object LearningRepository {
                         WordToken("那是", "nà shì", "Itu adalah", "Kata tunjuk jauh + kopula"),
                         WordToken("我的老公", "wǒ de lǎogōng", "Suami saya", "Panggilan akrab untuk suami"),
                         WordToken("小孙", "Xiǎo Sūn", "Xiao Sun", "Nama panggilan suami bermarga Sun"),
+                        WordToken("那个是", "nà gè shì", "Yang itu adalah", "Kata tunjuk jauh + kopula"),
+                        WordToken("我的", "wǒ de", "Milik saya", "Kepemilikan"),
                         WordToken("大儿子", "dà érzi", "Putra sulung", "Anak laki-laki pertama"),
                         WordToken("小宝", "Xiǎo Bǎo", "Xiao Bao", "Panggilan sayang untuk anak pertama"),
                         WordToken("今年7岁了", "jīnnián 7 suì le", "Tahun ini berusia 7 tahun", "Menyatakan umur"),
+                        WordToken("这是", "zhè shì", "Ini adalah", "Kata penunjuk dekat + kopula"),
+                        WordToken("我的", "wǒ de", "Milik saya", "Kepemilikan"),
                         WordToken("小女儿", "xiǎo nǚ'ér", "Putri bungsu", "Anak perempuan terkecil"),
                         WordToken("小贝", "Xiǎo Bèi", "Xiao Bei", "Panggilan sayang untuk anak kedua"),
                         WordToken("今年5岁了", "jīnnián 5 suì le", "Tahun ini berusia 5 tahun", "Menyatakan umur")
@@ -1338,6 +1345,7 @@ object LearningRepository {
                         WordToken("我想", "wǒ xiǎng", "Saya berniat", "Menyatakan rencana keinginan"),
                         WordToken("在家睡觉", "zài jiā shuìjiào", "Tidur di rumah", "Tempat dan aktivitas istirahat tidur"),
                         WordToken("下午", "xiàwǔ", "Sore hari", "Rentang waktu setelah siang"),
+                        WordToken("我想", "wǒ xiǎng", "Saya berniat", "Menyatakan rencana"),
                         WordToken("去书店买书", "qù shūdiàn mǎi shū", "Pergi ke toko buku membeli buku", "Aktivitas membeli literatur"),
                         WordToken("你呢", "nǐ ne", "Kalau kamu?", "Pertanyaan balik retoris santai")
                     )
@@ -2023,7 +2031,7 @@ object LearningRepository {
             estimatedReadMinutes = 2,
             sentences = listOf(
                 Sentence("s1_1", "你好！我叫大卫。", "Nǐ hǎo! Wǒ jiào Dàwèi.", "Halo! Nama saya David.", listOf(findToken("你好"), findToken("我"), findToken("叫"), findToken("大卫"))),
-                Sentence("s1_2", "我是学生，我不是老师。", "Wǒ shì xuésheng, wǒ bú shì lǎoshī.", "Saya murid, saya bukan guru.", listOf(findToken("我"), findToken("是"), findToken("学生"), findToken("不"), findToken("是"), findToken("老师"))),
+                Sentence("s1_2", "我是学生，我不是老师。", "Wǒ shì xuésheng, wǒ bú shì lǎoshī.", "Saya murid, saya bukan guru.", listOf(findToken("我"), findToken("是"), findToken("学生"), findToken("我"), findToken("不"), findToken("是"), findToken("老师"))),
                 Sentence("s1_3", "她是李华，她是中国人。", "Tā shì Lǐ Huá, tā shì Zhōngguó rén.", "Dia adalah Li Hua, dia orang Tiongkok.", listOf(findToken("她"), findToken("是"), WordToken("李华", "Lǐ Huá", "Li Hua"), findToken("她"), findToken("是"), findToken("中国人"))),
                 Sentence("s1_4", "我们在学校认识，我们是同学。", "Wǒmen zài xuéxiào rènshi, wǒmen shì tóngxué.", "Kami berkenalan di sekolah, kami teman sekelas.", listOf(findToken("我们"), findToken("在"), findToken("学校"), findToken("认识"), findToken("我们"), findToken("是"), findToken("同学"))),
                 Sentence("s1_5", "李华说：“很高兴认识你！”", "Lǐ Huá shuō: \"Hěn gāoxìng rènshi nǐ!\"", "Li Hua berkata: \"Senang berkenalan denganmu!\"", listOf(WordToken("李华", "Lǐ Huá", "Li Hua"), findToken("说"), findToken("很"), findToken("高兴"), findToken("认识"), findToken("你"))),
@@ -2049,9 +2057,9 @@ object LearningRepository {
             coverImageRes = R.drawable.img_student_boy,
             estimatedReadMinutes = 2,
             sentences = listOf(
-                Sentence("s2_1", "今天是一月十号，星期天。", "Jīntiān shì yī yuè shí hào, xīngqītiān.", "Hari ini tanggal 10 Januari, hari Minggu.", listOf(findToken("今天"), findToken("是"), findToken("一"), findToken("月"), findToken("十"), findToken("号"), findToken("星期"))),
+                Sentence("s2_1", "今天是一月十号，星期天。", "Jīntiān shì yī yuè shí hào, xīngqītiān.", "Hari ini tanggal 10 Januari, hari Minggu.", listOf(findToken("今天"), findToken("是"), findToken("一"), findToken("月"), findToken("十"), findToken("号"), WordToken("星期天", "xīngqītiān", "Hari Minggu"))),
                 Sentence("s2_2", "大卫今年二十岁。", "Dàwèi jīnnián èrshí suì.", "David tahun ini berumur 20 tahun.", listOf(findToken("大卫"), WordToken("今年", "jīnnián", "Tahun ini"), findToken("二"), findToken("十"), findToken("岁"))),
-                Sentence("s2_3", "上午八点三十分，他起床了。", "Shàngwǔ bā diǎn sānshí fēn, tā qǐchuáng le.", "Pukul 8 lewat 30 menit pagi, dia bangun tidur.", listOf(findToken("上午"), findToken("八"), findToken("点"), findToken("三"), findToken("十"), findToken("分钟"), findToken("他"), findToken("了"))),
+                Sentence("s2_3", "上午八点三十分，他起床了。", "Shàngwǔ bā diǎn sānshí fēn, tā qǐchuáng le.", "Pukul 8 lewat 30 menit pagi, dia bangun tidur.", listOf(findToken("上午"), findToken("八"), findToken("点"), findToken("三"), findToken("十"), WordToken("分", "fēn", "Menit"), findToken("他"), WordToken("起床", "qǐchuáng", "Bangun tidur"), findToken("了"))),
                 Sentence("s2_4", "中午十二点，他去看朋友。", "Zhōngwǔ shí'èr diǎn, tā qù kàn péngyou.", "Pukul 12 siang, dia pergi menemui teman.", listOf(findToken("中午"), findToken("十"), findToken("二"), findToken("点"), findToken("他"), findToken("去"), findToken("看"), findToken("朋友"))),
                 Sentence("s2_5", "现在下午三点，他很高兴！", "Xiànzài xiàwǔ sān diǎn, tā hěn gāoxìng!", "Sekarang pukul 3 sore, dia sangat senang!", listOf(findToken("现在"), findToken("下午"), findToken("三"), findToken("点"), findToken("他"), findToken("很"), findToken("高兴")))
             ),
@@ -2075,9 +2083,9 @@ object LearningRepository {
             sentences = listOf(
                 Sentence("s3_1", "这是大卫的家，家里有四个人。", "Zhè shì Dàwèi de jiā, jiā lǐ yǒu sì gè rén.", "Ini adalah rumah David, di dalam rumah ada empat orang.", listOf(findToken("这"), findToken("是"), findToken("大卫"), findToken("的"), findToken("家"), findToken("家"), findToken("里"), findToken("有"), findToken("四"), findToken("个"), findToken("人"))),
                 Sentence("s3_2", "有爸爸、妈妈、一个儿子和一个女儿。", "Yǒu bàba, māma, yí gè érzi hé yí gè nǚ'ér.", "Ada ayah, ibu, seorang anak laki-laki, dan seorang anak perempuan.", listOf(findToken("有"), findToken("爸爸"), findToken("妈妈"), findToken("一个"), findToken("儿子"), findToken("和"), findToken("一个"), findToken("女儿"))),
-                Sentence("s3_3", "大卫家有一只小猫，非常漂亮。", "Dàwèi jiā yǒu yì zhī xiǎomāo, fēicháng piàoliang.", "Keluarga David punya seekor anak kucing, sangat cantik.", listOf(findToken("大卫"), findToken("家"), findToken("有"), findToken("猫"), findToken("很"), findToken("漂亮"))),
-                Sentence("s3_4", "小猫在桌子下面睡觉。", "Xiǎomāo zài zhuōzi xiàmiàn shuìjiào.", "Anak kucing sedang tidur di bawah meja.", listOf(findToken("猫"), findToken("在"), findToken("桌子"), findToken("下"), findToken("后面"), findToken("睡觉"))),
-                Sentence("s3_5", "大家都爱这只可爱的小猫。", "Dàjiā dōu ài zhè zhī kě'ài de xiǎomāo.", "Semuanya sayang pada anak kucing yang imut ini.", listOf(findToken("都"), findToken("爱"), findToken("这"), findToken("猫")))
+                Sentence("s3_3", "大卫家有一只小猫，非常漂亮。", "Dàwèi jiā yǒu yì zhī xiǎomāo, fēicháng piàoliang.", "Keluarga David punya seekor anak kucing, sangat cantik.", listOf(findToken("大卫"), findToken("家"), findToken("有"), WordToken("一只", "yì zhī", "Seekor"), WordToken("小猫", "xiǎomāo", "Anak kucing"), WordToken("非常", "fēicháng", "Sangat"), findToken("漂亮"))),
+                Sentence("s3_4", "小猫在桌子下面睡觉。", "Xiǎomāo zài zhuōzi xiàmiàn shuìjiào.", "Anak kucing sedang tidur di bawah meja.", listOf(WordToken("小猫", "xiǎomāo", "Anak kucing"), findToken("在"), findToken("桌子"), WordToken("下面", "xiàmiàn", "Di bawah"), findToken("睡觉"))),
+                Sentence("s3_5", "大家都爱这只可爱的小猫。", "Dàjiā dōu ài zhè zhī kě'ài de xiǎomāo.", "Semuanya sayang pada anak kucing yang imut ini.", listOf(WordToken("大家", "dàjiā", "Semua orang"), findToken("都"), findToken("爱"), findToken("这"), WordToken("只", "zhī", "Ekor"), WordToken("可爱", "kě'ài", "Lucu"), findToken("的"), WordToken("小猫", "xiǎomāo", "Anak kucing")))
             ),
             questions = listOf(
                 StoryQuestion("q3_1", "大卫家里有几个人？(Berapa orang di rumah David?)", listOf("两个人 (2 orang)", "三个人 (3 orang)", "四个人 (4 orang)", "五个人 (5 orang)"), 2, "Kalimat 1: '家里有四个人' (ada 4 orang)."),
@@ -2100,8 +2108,8 @@ object LearningRepository {
                 Sentence("s4_1", "中午，我去中国饭馆吃菜。", "Zhōngwǔ, wǒ qù Zhōngguó fànguǎn chī cài.", "Siang hari, saya pergi ke restoran Tiongkok makan lauk pauk.", listOf(findToken("中午"), findToken("我"), findToken("去"), findToken("中国"), findToken("饭馆"), findToken("吃"), findToken("菜"))),
                 Sentence("s4_2", "服务员问：“你想吃什么？”", "Fúwùyuán wèn: \"Nǐ xiǎng chī shénme?\"", "Pelayan bertanya: \"Kamu ingin makan apa?\"", listOf(WordToken("服务员", "fúwùyuán", "Pelayan"), WordToken("问", "wèn", "Bertanya"), findToken("你"), findToken("想"), findToken("吃"), findToken("什么"))),
                 Sentence("s4_3", "我说：“我想吃米饭，喝一杯茶。”", "Wǒ shuō: \"Wǒ xiǎng chī mǐfàn, hē yì bēi chá.\"", "Saya berkata: \"Saya ingin makan nasi putih, minum secangkir teh.\"", listOf(findToken("我"), findToken("说"), findToken("我"), findToken("想"), findToken("吃"), findToken("米饭"), findToken("喝"), findToken("一"), findToken("杯子"), findToken("茶"))),
-                Sentence("s4_4", "这里的米饭和茶都很好吃，太好喝了！", "Zhèlǐ de mǐfàn hé chá dōu hěn hǎochī, tài hǎohē le!", "Nasi dan teh di sini semuanya enak, segar sekali!", listOf(findToken("这儿"), findToken("的"), findToken("米饭"), findToken("和"), findToken("茶"), findToken("都"), findToken("很"), findToken("好吃"), findToken("太"), findToken("了"))),
-                Sentence("s4_5", "一共多少钱？一共二十块。", "Yígòng duōshao qián? Yígòng èrshí kuài.", "Totalnya berapa harganya? Semuanya 20 yuan.", listOf(WordToken("一共", "yígòng", "Total"), findToken("多少"), findToken("钱"), findToken("二"), findToken("十"), findToken("块")))
+                Sentence("s4_4", "这里的米饭和茶都很好吃，太好喝了！", "Zhèlǐ de mǐfàn hé chá dōu hěn hǎochī, tài hǎohē le!", "Nasi dan teh di sini semuanya enak, segar sekali!", listOf(WordToken("这里", "zhèlǐ", "Di sini"), findToken("的"), findToken("米饭"), findToken("和"), findToken("茶"), findToken("都"), findToken("很"), findToken("好吃"), findToken("太"), WordToken("好喝", "hǎohē", "Enak diminum"), findToken("了"))),
+                Sentence("s4_5", "一共多少钱？一共二十块。", "Yígòng duōshao qián? Yígòng èrshí kuài.", "Totalnya berapa harganya? Semuanya 20 yuan.", listOf(WordToken("一共", "yígòng", "Total"), findToken("多少"), findToken("钱"), WordToken("一共", "yígòng", "Total"), findToken("二"), findToken("十"), findToken("块")))
             ),
             questions = listOf(
                 StoryQuestion("q4_1", "他想喝什么？(Dia ingin minum apa?)", listOf("喝茶 (Minum teh)", "喝水 (Minum air)", "喝牛奶 (Minum susu)", "喝咖啡 (Minum kopi)"), 0, "Di kalimat ke-3: '喝一杯茶' (minum secangkir teh)."),
@@ -2122,11 +2130,11 @@ object LearningRepository {
             coverImageRes = R.drawable.img_female_doctor_syringe,
             estimatedReadMinutes = 2,
             sentences = listOf(
-                Sentence("s5_1", "李先生是一位好医生，在医院工作。", "Lǐ xiānsheng shì yí wèi hǎo yīshēng, zài yīyuàn gōngzuò.", "Tuan Li adalah seorang dokter yang baik, bekerja di rumah sakit.", listOf(findToken("是"), findToken("好"), findToken("医生"), findToken("在"), findToken("医院"), findToken("工作"))),
-                Sentence("s5_2", "他每天都很忙，看见很多病人。", "Tā měitiān dōu hěn máng, kànjiàn hěn duō bìngrén.", "Dia setiap hari sangat sibuk, melihat banyak pasien.", listOf(findToken("他"), findToken("都"), findToken("很"), findToken("看见"), findToken("很"), findToken("多"), findToken("人"))),
+                Sentence("s5_1", "李先生是一位好医生，在医院工作。", "Lǐ xiānsheng shì yí wèi hǎo yīshēng, zài yīyuàn gōngzuò.", "Tuan Li adalah seorang dokter yang baik, bekerja di rumah sakit.", listOf(WordToken("李先生", "Lǐ xiānsheng", "Tuan Li"), findToken("是"), WordToken("一位", "yí wèi", "Seorang"), findToken("好"), findToken("医生"), findToken("在"), findToken("医院"), findToken("工作"))),
+                Sentence("s5_2", "他每天都很忙，看见很多病人。", "Tā měitiān dōu hěn máng, kànjiàn hěn duō bìngrén.", "Dia setiap hari sangat sibuk, melihat banyak pasien.", listOf(findToken("他"), WordToken("每天", "měitiān", "Setiap hari"), findToken("都"), findToken("很"), WordToken("忙", "máng", "Sibuk"), findToken("看见"), findToken("很"), findToken("多"), WordToken("病人", "bìngrén", "Pasien"))),
                 Sentence("s5_3", "下午不工作的时候，他喜欢看书。", "Xiàwǔ bù gōngzuò de shíhou, tā xǐhuan kàn shū.", "Sore hari saat tidak bekerja, dia suka membaca buku.", listOf(findToken("下午"), findToken("不"), findToken("工作"), findToken("的"), findToken("时候"), findToken("他"), findToken("喜欢"), findToken("看"), findToken("书"))),
-                Sentence("s5_4", "他在电脑上看电影，也写汉字。", "Tā zài diànnǎo shang kàn diànyǐng, yě xiě hànzì.", "Dia menonton film di komputer, dan juga menulis karakter Hanzi.", listOf(findToken("他"), findToken("在"), findToken("电脑"), findToken("上"), findToken("看"), findToken("电影"), findToken("也"), findToken("写"), findToken("汉语"), findToken("字"))),
-                Sentence("s5_5", "他会说汉语，说得很好听。", "Tā huì shuō hànyǔ, shuō de hěn hǎotīng.", "Dia bisa berbicara bahasa Mandarin, ucapannya sangat enak didengar.", listOf(findToken("他"), findToken("会"), findToken("说"), findToken("汉语"), findToken("很"), findToken("好"), findToken("听")))
+                Sentence("s5_4", "他在电脑上看电影，也写汉字。", "Tā zài diànnǎo shang kàn diànyǐng, yě xiě hànzì.", "Dia menonton film di komputer, dan juga menulis karakter Hanzi.", listOf(findToken("他"), findToken("在"), findToken("电脑"), findToken("上"), findToken("看"), findToken("电影"), findToken("也"), findToken("写"), WordToken("汉字", "hànzì", "Karakter Hanzi"))),
+                Sentence("s5_5", "他会说汉语，说得很好听。", "Tā huì shuō hànyǔ, shuō de hěn hǎotīng.", "Dia bisa berbicara bahasa Mandarin, ucapannya sangat enak didengar.", listOf(findToken("他"), findToken("会"), findToken("说"), findToken("汉语"), WordToken("说得", "shuō de", "Berbicara secara"), findToken("很"), findToken("好"), findToken("听")))
             ),
             questions = listOf(
                 StoryQuestion("q5_1", "李先生在哪里工作？(Di mana Tuan Li bekerja?)", listOf("在医院 (Di rumah sakit)", "在学校 (Di sekolah)", "在饭馆 (Di restoran)", "在商店 (Di toko)"), 0, "Kalimat 1: '在医院工作' (bekerja di rumah sakit)."),
@@ -2148,10 +2156,10 @@ object LearningRepository {
             estimatedReadMinutes = 2,
             sentences = listOf(
                 Sentence("s6_1", "今天天气很好，不太热，也不冷。", "Jīntiān tiānqì hěn hǎo, bú tài rè, yě bù lěng.", "Cuaca hari ini sangat bagus, tidak terlalu panas dan tidak dingin.", listOf(findToken("今天"), findToken("天气"), findToken("很"), findToken("好"), findToken("不"), findToken("太"), findToken("热"), findToken("也"), findToken("不"), findToken("冷"))),
-                Sentence("s6_2", "我们要坐出租车去火车站。", "Wǒmen yào zuò chūzūchē qù huǒchēzhàn.", "Kami mau naik taksi pergi ke stasiun kereta api.", listOf(findToken("我们"), findToken("坐"), findToken("出租车"), findToken("去"), findToken("火车站"))),
-                Sentence("s6_3", "前面有一辆车，司机开得很慢。", "Qiánmiàn yǒu yí liàng chē, sījī kāi de hěn màn.", "Di depan ada sebuah mobil, supir mengemudi perlahan.", listOf(findToken("前面"), findToken("有"), findToken("开"), findToken("很"))),
-                Sentence("s6_4", "火车站就在前面，我们到了吗？", "Huǒchēzhàn jiù zài qiánmiàn, wǒmen dào le ma?", "Stasiun kereta tepat di depan, apakah kita sudah sampai?", listOf(findToken("火车站"), findToken("在"), findToken("前面"), findToken("我们"), findToken("了"), findToken("吗"))),
-                Sentence("s6_5", "司机说：“前面就是，下车吧！”", "Sījī shuō: \"Qiánmiàn jiù shì, xià chē ba!\"", "Supir berkata: \"Depan sana sudah sampai, ayo turun mobil!\"", listOf(findToken("说"), findToken("前面"), findToken("是"), findToken("下"), findToken("吧")))
+                Sentence("s6_2", "我们要坐出租车去火车站。", "Wǒmen yào zuò chūzūchē qù huǒchēzhàn.", "Kami mau naik taksi pergi ke stasiun kereta api.", listOf(findToken("我们"), WordToken("要", "yào", "Mau"), findToken("坐"), findToken("出租车"), findToken("去"), findToken("火车站"))),
+                Sentence("s6_3", "前面有一辆车，司机开得很慢。", "Qiánmiàn yǒu yí liàng chē, sījī kāi de hěn màn.", "Di depan ada sebuah mobil, supir mengemudi perlahan.", listOf(findToken("前面"), findToken("有"), WordToken("一辆车", "yí liàng chē", "Sebuah mobil"), WordToken("司机", "sījī", "Supir"), WordToken("开得", "kāi de", "Mengemudi secara"), findToken("很"), WordToken("慢", "màn", "Lambat"))),
+                Sentence("s6_4", "火车站就在前面，我们到了吗？", "Huǒchēzhàn jiù zài qiánmiàn, wǒmen dào le ma?", "Stasiun kereta tepat di depan, apakah kita sudah sampai?", listOf(findToken("火车站"), WordToken("就", "jiù", "Tepat"), findToken("在"), findToken("前面"), findToken("我们"), WordToken("到了", "dào le", "Sampai"), findToken("吗"))),
+                Sentence("s6_5", "司机说：“前面就是，下车吧！”", "Sījī shuō: \"Qiánmiàn jiù shì, xià chē ba!\"", "Supir berkata: \"Depan sana sudah sampai, ayo turun mobil!\"", listOf(WordToken("司机", "sījī", "Supir"), findToken("说"), findToken("前面"), WordToken("就是", "jiù shì", "Tepat di situ"), WordToken("下车", "xià chē", "Turun mobil"), findToken("吧")))
             ),
             questions = listOf(
                 StoryQuestion("q6_1", "今天天气怎么样？(Bagaimana cuaca hari ini?)", listOf("很冷 (Sangat dingin)", "下雨 (Hujan)", "很好，不热也不冷 (Bagus, tidak panas/dingin)", "太热了 (Terlalu panas)"), 2, "Kalimat 1: '今天天气很好，不太热，也不冷'."),
@@ -2220,6 +2228,7 @@ object LearningRepository {
                     listOf(
                         WordToken("明明", "Míngming", "Mingming"),
                         WordToken("问", "wèn", "Bertanya"),
+                        WordToken("妈妈", "māma", "Ibu"),
                         WordToken("妈妈", "māma", "Ibu"),
                         WordToken("今天", "jīntiān", "Hari ini"),
                         WordToken("的", "de", "Partikel"),
@@ -2376,7 +2385,7 @@ object LearningRepository {
                         WordToken("我会", "wǒ huì", "Saya akan"),
                         WordToken("经常", "jīngcháng", "Sering / selalu"),
                         WordToken("想念", "xiǎngniàn", "Merindukan"),
-                        WordToken("你", "nǐ", "Kamu")
+                        WordToken("你的", "nǐ de", "Dirimu")
                     )
                 ),
                 Sentence(
