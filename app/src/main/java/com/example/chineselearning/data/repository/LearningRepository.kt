@@ -1508,6 +1508,214 @@ object LearningRepository {
             )
         ),
 
+        // Cerita Mandarin Bean 9: Shopping (买东西)
+        Story(
+            id = "story_shopping",
+            titleHanzi = "买东西",
+            titlePinyin = "Mǎi Dōngxi",
+            titleTranslation = "Shopping (Berbelanja)",
+            level = "HSK 1",
+            category = "Belanja & Transaksi",
+            description = "Percakapan praktis di toko saat membeli minuman pelepas dahaga dan roti, dilengkapi penyebutan harga serta pembayaran kasir.",
+            coverEmoji = "🛒",
+            coverImageRes = R.drawable.cover_story_shopping,
+            estimatedReadMinutes = 2,
+            sentences = listOf(
+                Sentence(
+                    "s_shop_1",
+                    "先生，你想买什么？",
+                    "Xiānsheng, nǐ xiǎng mǎi shénme?",
+                    "A: Tuan, Anda ingin membeli apa?",
+                    listOf(
+                        WordToken("先生", "xiānsheng", "Tuan / Bapak", "Panggilan sopan untuk pelanggan pria"),
+                        WordToken("你想买", "nǐ xiǎng mǎi", "Anda ingin membeli", "Pertanyaan ramah pramuniaga"),
+                        WordToken("什么", "shénme", "Apa", "Kata tanya barang yang dicari")
+                    )
+                ),
+                Sentence(
+                    "s_shop_2",
+                    "我很渴，有喝的东西吗？",
+                    "Wǒ hěn kě, yǒu hē de dōngxi ma?",
+                    "B: Saya sangat haus, apakah ada minuman?",
+                    listOf(
+                        WordToken("我很渴", "wǒ hěn kě", "Saya sangat haus", "Menyatakan kondisi haus"),
+                        WordToken("有", "yǒu", "Ada", "Kata kerja keberadaan"),
+                        WordToken("喝的东西", "hē de dōngxi", "Minuman / sesuatu untuk diminum", "Frasa nomina ragam minuman"),
+                        WordToken("吗", "ma", "Apakah", "Partikel tanya ya/tidak")
+                    )
+                ),
+                Sentence(
+                    "s_shop_3",
+                    "有。我们有水、茶、牛奶、咖啡、啤酒，你想喝什么？",
+                    "Yǒu. Wǒmen yǒu shuǐ, chá, niúnǎi, kāfēi, píjiǔ, nǐ xiǎng hē shénme?",
+                    "A: Ada. Kami ada air, teh, susu, kopi, bir, Anda ingin minum apa?",
+                    listOf(
+                        WordToken("有", "yǒu", "Ada", "Konfirmasi ketersediaan barang"),
+                        WordToken("我们有", "wǒmen yǒu", "Kami menyediakan", "Daftar produk yang dijual"),
+                        WordToken("水", "shuǐ", "Air", "Air mineral"),
+                        WordToken("茶", "chá", "Teh", "Minuman teh"),
+                        WordToken("牛奶", "niúnǎi", "Susu", "Susu sapi"),
+                        WordToken("咖啡", "kāfēi", "Kopi", "Minuman kopi"),
+                        WordToken("啤酒", "píjiǔ", "Bir", "Minuman bir"),
+                        WordToken("你想喝什么", "nǐ xiǎng hē shénme", "Anda ingin minum apa?", "Menanyakan pilihan minuman")
+                    )
+                ),
+                Sentence(
+                    "s_shop_4",
+                    "我要一瓶啤酒。",
+                    "Wǒ yào yī píng píjiǔ.",
+                    "B: Saya mau sebotol bir.",
+                    listOf(
+                        WordToken("我要", "wǒ yào", "Saya mau / pesan", "Pernyataan pilihan pesanan"),
+                        WordToken("一瓶啤酒", "yī píng píjiǔ", "Sebotol bir", "Bilangan + kata penggolong botol + bir")
+                    )
+                ),
+                Sentence(
+                    "s_shop_5",
+                    "好的，还要什么吗？",
+                    "Hǎo de, hái yào shénme ma?",
+                    "A: Baik, apakah masih mau yang lain?",
+                    listOf(
+                        WordToken("好的", "hǎo de", "Baik / siap", "Konfirmasi penerimaan pesanan"),
+                        WordToken("还要", "hái yào", "Masih perlu / ada lagi", "Menanyakan pesanan tambahan"),
+                        WordToken("什么吗", "shénme ma", "Apa lagi?", "Pertanyaan lanjutan ramah")
+                    )
+                ),
+                Sentence(
+                    "s_shop_6",
+                    "我也买些吃的东西吧。",
+                    "Wǒ yě mǎi xiē chī de dōngxi ba.",
+                    "B: Saya juga beli beberapa makanan deh.",
+                    listOf(
+                        WordToken("我也买", "wǒ yě mǎi", "Saya juga beli", "Keinginan menambah belanjaan"),
+                        WordToken("些", "xiē", "Beberapa", "Kuantitas jamak tak tentu"),
+                        WordToken("吃的东西", "chī de dōngxi", "Makanan / sesuatu untuk dimakan", "Frasa nomina panganan"),
+                        WordToken("吧", "ba", "Deh", "Partikel keputusan santai")
+                    )
+                ),
+                Sentence(
+                    "s_shop_7",
+                    "没问题。我们有米饭、面条，也有面包，你想要哪个？",
+                    "Méi wèntí. Wǒmen yǒu mǐfàn, miàntiáo, yě yǒu miànbāo, nǐ xiǎng yào něi gè?",
+                    "A: Tidak masalah. Kami ada nasi, mi, dan juga roti, Anda mau yang mana?",
+                    listOf(
+                        WordToken("没问题", "méi wèntí", "Tidak masalah", "Kesediaan melayani"),
+                        WordToken("我们有", "wǒmen yǒu", "Kami ada", "Daftar stok makanan"),
+                        WordToken("米饭", "mǐfàn", "Nasi", "Nasi putih matang"),
+                        WordToken("面条", "miàntiáo", "Mi", "Olahan mi"),
+                        WordToken("也有", "yě yǒu", "Juga ada", "Varian tambahan"),
+                        WordToken("面包", "miànbāo", "Roti", "Roti gandum / tawar"),
+                        WordToken("你想要哪个", "nǐ xiǎng yào něi gè", "Anda mau yang mana?", "Menanyakan opsi pilihan produk")
+                    )
+                ),
+                Sentence(
+                    "s_shop_8",
+                    "一个面包。一共多少钱？",
+                    "Yī gè miànbāo. Yīgòng duōshao qián?",
+                    "B: Satu buah roti. Berapa total semuanya?",
+                    listOf(
+                        WordToken("一个面包", "yī gè miànbāo", "Satu buah roti", "Bilangan + penggolong + roti"),
+                        WordToken("一共", "yīgòng", "Total / secara keseluruhan", "Jumlah total belanjaan"),
+                        WordToken("多少钱", "duōshao qián", "Berapa harganya / uangnya?", "Frasa baku menanyakan total biaya")
+                    )
+                ),
+                Sentence(
+                    "s_shop_9",
+                    "啤酒三块五，面包十块，一共十三块五。",
+                    "Píjiǔ sān kuài wǔ, miànbāo shí kuài, yīgòng shísān kuài wǔ.",
+                    "A: Bir 3,5 kuai, roti 10 kuai, totalnya 13,5 kuai.",
+                    listOf(
+                        WordToken("啤酒", "píjiǔ", "Bir", "Item minuman"),
+                        WordToken("三块五", "sān kuài wǔ", "3,5 kuai", "3.5 yuan"),
+                        WordToken("面包", "miànbāo", "Roti", "Item makanan"),
+                        WordToken("十块", "shí kuài", "10 kuai", "10 yuan"),
+                        WordToken("一共", "yīgòng", "Total", "Jumlah total"),
+                        WordToken("十三块五", "shísān kuài wǔ", "13,5 kuai", "13.5 yuan")
+                    )
+                ),
+                Sentence(
+                    "s_shop_10",
+                    "好的，给你钱。",
+                    "Hǎo de, gěi nǐ qián.",
+                    "B: Baik, ini uangnya.",
+                    listOf(
+                        WordToken("好的", "hǎo de", "Baik", "Persetujuan transaksi"),
+                        WordToken("给你钱", "gěi nǐ qián", "Ini uangnya / serahkan uang", "Tindakan penyerahan alat pembayaran")
+                    )
+                ),
+                Sentence(
+                    "s_shop_11",
+                    "这是你买的东西，再见。",
+                    "Zhè shì nǐ mǎi de dōngxi, zàijiàn.",
+                    "A: Ini barang belanjaan Anda, sampai jumpa.",
+                    listOf(
+                        WordToken("这是", "zhè shì", "Ini adalah", "Penyerahan bungkusan belanja"),
+                        WordToken("你买的东西", "nǐ mǎi de dōngxi", "Barang belanjaan Anda", "Barang yang telah dibayar"),
+                        WordToken("再见", "zàijiàn", "Sampai jumpa", "Salam penutup kasir")
+                    )
+                ),
+                Sentence(
+                    "s_shop_12",
+                    "再见。",
+                    "Zàijiàn.",
+                    "B: Sampai jumpa.",
+                    listOf(
+                        WordToken("再见", "zàijiàn", "Sampai jumpa", "Salam perpisahan pembeli")
+                    )
+                )
+            ),
+            questions = listOf(
+                StoryQuestion(
+                    "q_shop_1",
+                    "B一开始为什么向店员询问？(Mengapa B awalnya bertanya kepada kasir?)",
+                    listOf(
+                        "因为他很饿想要米饭 (Karena lapar ingin makan nasi)",
+                        "因为他很渴，想买喝的东西 (Karena sangat haus dan mencari minuman)",
+                        "因为要买书 (Karena ingin membeli buku)",
+                        "因为要换钱 (Karena ingin menukar uang)"
+                    ),
+                    1,
+                    "B menyampaikan kondisinya: '我很渴，有喝的东西吗？' (Saya sangat haus, apakah ada minuman?)."
+                ),
+                StoryQuestion(
+                    "q_shop_2",
+                    "在店员列出的饮料中，B最终选了哪一样？(Di antara daftar minuman yang disebutkan, apa yang dipilih B?)",
+                    listOf(
+                        "牛奶 (Susu)",
+                        "咖啡 (Kopi)",
+                        "一瓶啤酒 (Sebotol bir)",
+                        "茶 (Teh)"
+                    ),
+                    2,
+                    "B langsung memesan minuman: '我要一瓶啤酒' (Saya mau sebotol bir)."
+                ),
+                StoryQuestion(
+                    "q_shop_3",
+                    "B selain membeli minuman, juga membeli makanan apa? (Selain minuman, makanan apa yang dibeli B?)",
+                    listOf(
+                        "米饭 (Nasi)",
+                        "面条 (Mi)",
+                        "一个面包 (Satu buah roti)",
+                        "一些水果 (Beberapa buah)"
+                    ),
+                    2,
+                    "Dari pilihan nasi, mi, dan roti yang ditawarkan toko, B memutuskan membeli '一个面包' (satu buah roti)."
+                ),
+                StoryQuestion(
+                    "q_shop_4",
+                    "B一共需要支付多少钱？(Berapa total uang yang harus dibayar B?)",
+                    listOf(
+                        "十块钱 (10 kuai)",
+                        "十三块五 (13,5 kuai)",
+                        "三块五 (3,5 kuai)",
+                        "十五块 (15 kuai)"
+                    ),
+                    1,
+                    "Penjual merinci biaya: bir 3.5 kuai + roti 10 kuai = '一共十三块五' (total 13.5 kuai)."
+                )
+            )
+        ),
+
         // Cerita 1 - Sapaan & Murid Baru
         Story(
             id = "story_1",
