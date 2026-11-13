@@ -2260,6 +2260,129 @@ object LearningRepository {
             )
         ),
 
+        // Cerita Mandarin Bean 14: Fall Asleep (睡着)
+        Story(
+            id = "story_fall_asleep",
+            titleHanzi = "睡着",
+            titlePinyin = "Shuìzháo",
+            titleTranslation = "Fall Asleep (Tertidur)",
+            level = "HSK 1",
+            category = "Humor & Keluarga",
+            description = "Anekdot jenaka tentang seorang ayah yang membacakan cerita pengantar tidur untuk anaknya, tetapi justru ayahnya sendiri yang langsung tertidur lelap.",
+            coverEmoji = "💤",
+            coverImageRes = R.drawable.cover_story_fall_asleep,
+            estimatedReadMinutes = 2,
+            sentences = listOf(
+                Sentence(
+                    "s_fallasleep_1",
+                    "儿子不想睡觉，爸爸坐在他的旁边给他讲故事。一个小时过去了，房间里很安静，没有一点儿声音。",
+                    "Érzi bù xiǎng shuìjiào, bàba zuò zài tā de pángbiān gěi tā jiǎng gùshi. Yī gè xiǎoshí guòqù le, fángjiān lǐ hěn ānjìng, méiyǒu yīdiǎnr shēngyīn.",
+                    "Anak laki-laki tidak mau tidur, ayah duduk di sampingnya membacakan cerita untuknya. Satu jam telah berlalu, di dalam kamar sangat sunyi, tidak ada suara sedikit pun.",
+                    listOf(
+                        WordToken("儿子", "érzi", "Anak laki-laki", "Putra kandung"),
+                        WordToken("不想", "bù xiǎng", "Tidak ingin", "Negasi keinginan"),
+                        WordToken("睡觉", "shuìjiào", "Tidur", "Aktivitas istirahat tidur"),
+                        WordToken("爸爸", "bàba", "Ayah", "Orang tua laki-laki"),
+                        WordToken("坐在", "zuò zài", "Duduk di", "Posisi duduk di tempat"),
+                        WordToken("他的", "tā de", "Miliknya / -nya", "Pronomina kepemilikan orang ketiga"),
+                        WordToken("旁边", "pángbiān", "Samping / sebelah", "Penunjuk letak posisi"),
+                        WordToken("给他", "gěi tā", "Kepadanya / untuknya", "Preposisi penerima manfaat"),
+                        WordToken("讲故事", "jiǎng gùshi", "Bercerita / mendongeng", "Aktivitas menceritakan kisah"),
+                        WordToken("一个小时", "yī gè xiǎoshí", "Satu jam", "Rentang durasi waktu 60 menit"),
+                        WordToken("过去了", "guòqù le", "Telah berlalu", "Waktu yang sudah lewat"),
+                        WordToken("房间里", "fángjiān lǐ", "Di dalam kamar", "Keterangan ruang kamar"),
+                        WordToken("很", "hěn", "Sangat", "Tingkat intensitas"),
+                        WordToken("安静", "ānjìng", "Tenang / hening", "Kondisi sunyi tanpa kegaduhan"),
+                        WordToken("没有", "méiyǒu", "Tidak ada", "Negasi eksistensi"),
+                        WordToken("一点儿", "yīdiǎnr", "Sedikit pun", "Kuantitas minimal"),
+                        WordToken("声音", "shēngyīn", "Suara", "Bunyi suara")
+                    )
+                ),
+                Sentence(
+                    "s_fallasleep_2",
+                    "这时妈妈开门问：“他睡着了吗？”",
+                    "Zhè shí māma kāi mén wèn: “Tā shuìzháo le ma?”",
+                    "Pada saat ini ibu membuka pintu dan bertanya: “Apakah dia sudah tertidur?”",
+                    listOf(
+                        WordToken("这时", "zhè shí", "Saat ini / pada waktu itu", "Keterangan titik waktu"),
+                        WordToken("妈妈", "māma", "Ibu", "Panggilan orang tua perempuan"),
+                        WordToken("开门", "kāi mén", "Membuka pintu", "Tindakan membuka daun pintu"),
+                        WordToken("问", "wèn", "Bertanya", "Kata kerja tutur"),
+                        WordToken("他", "tā", "Dia", "Kata ganti orang ketiga"),
+                        WordToken("睡着了", "shuìzháo le", "Sudah tertidur", "Kondisi masuk ke alam tidur lelap"),
+                        WordToken("吗", "ma", "Apakah", "Partikel kalimat tanya ya/tidak")
+                    )
+                ),
+                Sentence(
+                    "s_fallasleep_3",
+                    "“睡着了，妈妈。”儿子说，“爸爸读了一分钟就睡着了。”",
+                    "“Shuìzháo le, māma.” Érzi shuō, “Bàba dú le yī fēnzhōng jiù shuìzháo le.”",
+                    "“Sudah tertidur, Ibu,” kata anak laki-laki itu, “Ayah baru membaca satu menit langsung tertidur.”",
+                    listOf(
+                        WordToken("睡着了", "shuìzháo le", "Sudah tertidur", "Kondisi tertidur pulas"),
+                        WordToken("妈妈", "māma", "Ibu", "Panggilan sayang kepada ibu"),
+                        WordToken("儿子", "érzi", "Anak laki-laki", "Subjek putra"),
+                        WordToken("说", "shuō", "Berkata", "Kata kerja tutur"),
+                        WordToken("爸爸", "bàba", "Ayah", "Subjek ayah"),
+                        WordToken("读了", "dú le", "Membaca selama", "Kata kerja membaca teks"),
+                        WordToken("一分钟", "yī fēnzhōng", "Satu menit", "Durasi waktu 60 detik yang sangat singkat"),
+                        WordToken("就", "jiù", "Langsung", "Adverbia kesegeraan tindakan"),
+                        WordToken("睡着了", "shuìzháo le", "Tertidur lelap", "Kondisi tertidur")
+                    )
+                )
+            ),
+            questions = listOf(
+                StoryQuestion(
+                    "q_fallasleep_1",
+                    "一开始为什么爸爸要给儿子讲故事？(Pada awalnya mengapa ayah membacakan cerita untuk anaknya?)",
+                    listOf(
+                        "因为儿子想学中文 (Karena anak ingin belajar Mandarin)",
+                        "因为儿子不想睡觉 (Karena anak tidak mau tidur)",
+                        "因为爸爸喜欢讲故事 (Karena ayah hobi mendongeng)",
+                        "因为妈妈不在家 (Karena ibu tidak ada di rumah)"
+                    ),
+                    1,
+                    "Di kalimat pertama dijelaskan: '儿子不想睡觉，爸爸坐在他的旁边给他讲故事' (Anak tidak mau tidur, sehingga ayah mendongeng untuknya)."
+                ),
+                StoryQuestion(
+                    "q_fallasleep_2",
+                    "一个小时后，房间里的情况怎么样？(Setelah satu jam berlalu, bagaimana keadaan di dalam kamar?)",
+                    listOf(
+                        "房间里很吵闹 (Kamar sangat bising)",
+                        "房间里很安静，没有一点儿声音 (Kamar sangat sunyi, tidak ada suara sedikit pun)",
+                        "爸爸和儿子在玩游戏 (Ayah dan anak sedang bermain game)",
+                        "电视机还开着 (Televisi masih menyala)"
+                    ),
+                    1,
+                    "Teks menyatakan: '一个小时过去了，房间里很安静，没有一点儿声音' (Kamar sangat tenang dan hening tanpa suara)."
+                ),
+                StoryQuestion(
+                    "q_fallasleep_3",
+                    "妈妈开门时问了什么？(Apa yang ditanyakan ibu saat membuka pintu?)",
+                    listOf(
+                        "晚饭做好了吗？ (Apakah makan malam sudah siap?)",
+                        "他睡着了吗？ (Apakah dia sudah tertidur?)",
+                        "你们在做什么？ (Kalian sedang melakukan apa?)",
+                        "该吃药了吗？ (Apakah sudah waktunya minum obat?)"
+                    ),
+                    1,
+                    "Ibu membuka pintu dan bertanya: '他睡着了吗？' (Apakah dia sudah tertidur? - mengira anaknya yang tidur)."
+                ),
+                StoryQuestion(
+                    "q_fallasleep_4",
+                    "故事最有趣的反转是什么？(Apa plot twist lucu dari akhir cerita ini?)",
+                    listOf(
+                        "妈妈也进去睡觉了 (Ibu ikut masuk tidur)",
+                        "其实是爸爸刚读了一分钟就睡着了 (Sebenarnya ayah yang baru membaca satu menit langsung tertidur pulas)",
+                        "儿子偷偷跑出房间 (Anak diam-diam kabur dari kamar)",
+                        "故事书找不到了 (Buku cerita hilang)"
+                    ),
+                    1,
+                    "Anak laki-laki yang masih segar bugar menjawab polos: '睡着了，妈妈。爸爸读了一分钟就睡着了。' (Bukan anak yang tidur, melainkan ayahnya yang baru membaca 1 menit langsung tertidur lelap!)."
+                )
+            )
+        ),
+
         // Cerita 1 - Sapaan & Murid Baru
         Story(
             id = "story_1",
