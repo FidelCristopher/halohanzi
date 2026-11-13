@@ -1887,6 +1887,128 @@ object LearningRepository {
             )
         ),
 
+        // Cerita Mandarin Bean 11: Dad and mom are not at home (爸妈不在家)
+        Story(
+            id = "story_parents_not_at_home",
+            titleHanzi = "爸妈不在家",
+            titlePinyin = "Bàmā Bù Zài Jiā",
+            titleTranslation = "Dad and mom are not at home (Ayah dan Ibu Tidak Ada di Rumah)",
+            level = "HSK 1",
+            category = "Keluarga & Rumah",
+            description = "Anekdot jenaka tentang seorang kakak yang menjaga adik-adiknya di rumah saat orang tua pergi, namun bingung menghadapi selera makanan yang berbeda.",
+            coverEmoji = "🏠",
+            coverImageRes = R.drawable.cover_story_parents_not_at_home,
+            estimatedReadMinutes = 2,
+            sentences = listOf(
+                Sentence(
+                    "s_pnah_1",
+                    "今天爸爸妈妈不在家，我和弟弟妹妹在家。",
+                    "Jīntiān bàba māma bù zài jiā, wǒ hé dìdi mèimei zài jiā.",
+                    "Hari ini ayah dan ibu tidak ada di rumah, saya bersama adik laki-laki dan adik perempuan di rumah.",
+                    listOf(
+                        WordToken("今天", "jīntiān", "Hari ini", "Keterangan waktu saat ini"),
+                        WordToken("爸爸妈妈", "bàba māma", "Ayah dan ibu", "Panggilan orang tua"),
+                        WordToken("不在家", "bù zài jiā", "Tidak ada di rumah", "Negasi keberadaan di kediaman"),
+                        WordToken("我和", "wǒ hé", "Saya dan", "Pronomina + kata hubung"),
+                        WordToken("弟弟妹妹", "dìdi mèimei", "Adik laki-laki dan adik perempuan", "Saudara-saudari yang lebih muda"),
+                        WordToken("在家", "zài jiā", "Di rumah", "Keterangan tempat tinggal")
+                    )
+                ),
+                Sentence(
+                    "s_pnah_2",
+                    "妹妹想喝可乐，吃米饭；弟弟想喝茶，吃面条；我想喝咖啡，吃面包。",
+                    "Mèimei xiǎng hē kělè, chī mǐfàn; dìdi xiǎng hē chá, chī miàntiáo; wǒ xiǎng hē kāfēi, chī miànbāo.",
+                    "Adik perempuan ingin minum kola dan makan nasi; adik laki-laki ingin minum teh dan makan mi; saya ingin minum kopi dan makan roti.",
+                    listOf(
+                        WordToken("妹妹想", "mèimei xiǎng", "Adik perempuan ingin", "Keinginan adik perempuan"),
+                        WordToken("喝可乐", "hē kělè", "Minum kola", "Minuman soda kola"),
+                        WordToken("吃米饭", "chī mǐfàn", "Makan nasi", "Makanan pokok nasi putih"),
+                        WordToken("弟弟想", "dìdi xiǎng", "Adik laki-laki ingin", "Keinginan adik laki-laki"),
+                        WordToken("喝茶", "hē chá", "Minum teh", "Minuman teh hangat"),
+                        WordToken("吃面条", "chī miàntiáo", "Makan mi", "Olahan mi"),
+                        WordToken("我想", "wǒ xiǎng", "Saya ingin", "Keinginan penutur/kakak"),
+                        WordToken("喝咖啡", "hē kāfēi", "Minum kopi", "Minuman kopi"),
+                        WordToken("吃面包", "chī miànbāo", "Makan roti", "Panganan roti gandum")
+                    )
+                ),
+                Sentence(
+                    "s_pnah_3",
+                    "但是我不会做米饭和面条，他们不喜欢面包，这是个问题。",
+                    "Dànshì wǒ bù huì zuò mǐfàn hé miàntiáo, tāmen bù xǐhuan miànbāo, zhè shì gè wèntí.",
+                    "Tetapi saya tidak bisa memasak nasi dan mi, dan mereka tidak suka roti, ini adalah sebuah masalah.",
+                    listOf(
+                        WordToken("但是", "dànshì", "Tetapi / namun", "Konjungsi pertentangan"),
+                        WordToken("我不会做", "wǒ bù huì zuò", "Saya tidak bisa membuat / masak", "Ketidakmampuan memasak hidangan panas"),
+                        WordToken("米饭和面条", "mǐfàn hé miàntiáo", "Nasi dan mi", "Makanan yang diinginkan adik-adik"),
+                        WordToken("他们", "tāmen", "Mereka", "Kata ganti orang ketiga jamak"),
+                        WordToken("不喜欢面包", "bù xǐhuan miànbāo", "Tidak suka roti", "Ketidaksukaan makanan"),
+                        WordToken("这是个问题", "zhè shì gè wèntí", "Ini adalah sebuah masalah", "Dilema situasi yang dihadapi")
+                    )
+                ),
+                Sentence(
+                    "s_pnah_4",
+                    "爸爸妈妈什么时候回家呢？",
+                    "Bàba māma shénme shíhou huí jiā ne?",
+                    "Kapan ya ayah dan ibu pulang ke rumah?",
+                    listOf(
+                        WordToken("爸爸妈妈", "bàba māma", "Ayah dan ibu", "Orang tua yang dinanti"),
+                        WordToken("什么时候", "shénme shíhou", "Kapan / jam berapa", "Kata tanya waktu kejadian"),
+                        WordToken("回家呢", "huí jiā ne", "Pulang ke rumah ya?", "Pertanyaan kepulangan dengan partikel ne yang penuh harap")
+                    )
+                )
+            ),
+            questions = listOf(
+                StoryQuestion(
+                    "q_pnah_1",
+                    "今天家里都有谁在？(Hari ini siapa saja yang ada di rumah?)",
+                    listOf(
+                        "爸爸、妈妈和我 (Ayah, ibu, dan saya)",
+                        "我和弟弟妹妹 (Saya, adik laki-laki, dan adik perempuan)",
+                        "只有爷爷奶奶 (Hanya kakek dan nenek)",
+                        "老师和同学们 (Guru dan teman-teman)"
+                    ),
+                    1,
+                    "Di awal cerita disebutkan: '今天爸爸妈妈不在家，我和弟弟妹妹在家'."
+                ),
+                StoryQuestion(
+                    "q_pnah_2",
+                    "妹妹想要吃什么和喝什么？(Apa yang ingin dimakan dan diminum oleh adik perempuan?)",
+                    listOf(
+                        "想喝茶，吃面条 (Ingin minum teh dan makan mi)",
+                        "想喝咖啡，吃面包 (Ingin minum kopi dan makan roti)",
+                        "想喝可乐，吃米饭 (Ingin minum kola dan makan nasi)",
+                        "想吃苹果，喝牛奶 (Ingin makan apel dan minum susu)"
+                    ),
+                    2,
+                    "Teks menyatakan: '妹妹想喝可乐，吃米饭' (Adik perempuan ingin minum kola dan makan nasi)."
+                ),
+                StoryQuestion(
+                    "q_pnah_3",
+                    "作者遇到了什么难题？(Masalah apa yang dihadapi oleh penulis/sang kakak?)",
+                    listOf(
+                        "家里没有水喝 (Tidak ada air minum di rumah)",
+                        "不会做米饭和面条，而弟弟妹妹不喜欢吃面包 (Tidak bisa masak nasi & mi, sedangkan adik-adik tidak suka roti)",
+                        "找不到电视遥控器 (Tidak menemukan remote TV)",
+                        "弟弟妹妹不肯写作业 (Adik-adik tidak mau mengerjakan PR)"
+                    ),
+                    1,
+                    "Sang kakak bingung: '但是我不会做米饭和面条，他们不喜欢面包，这是个问题'."
+                ),
+                StoryQuestion(
+                    "q_pnah_4",
+                    "故事结尾，作者最盼望的事情是什么？(Di akhir cerita, apa yang paling dinantikan oleh sang kakak?)",
+                    listOf(
+                        "盼望爸爸妈妈快点回家 (Berharap ayah dan ibu segera pulang ke rumah)",
+                        "盼望去商店买零食 (Berharap pergi belanja camilan)",
+                        "盼望明天去学校 (Berharap besok pergi ke sekolah)",
+                        "盼望自己学会做饭 (Berharap bisa belajar masak sendiri)"
+                    ),
+                    0,
+                    "Karena tidak bisa memasak untuk adik-adiknya, ia bertanya-tanya penuh harap: '爸爸妈妈什么时候回家呢？' (Kapan ya ayah dan ibu pulang?)."
+                )
+            )
+        ),
+
         // Cerita 1 - Sapaan & Murid Baru
         Story(
             id = "story_1",
