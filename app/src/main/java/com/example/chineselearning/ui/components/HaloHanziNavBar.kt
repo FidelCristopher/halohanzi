@@ -32,7 +32,7 @@ import com.example.chineselearning.R
 import com.example.chineselearning.ui.theme.*
 
 // Modern Pastel Brand Palette (Unified with Belajar & Cerita)
-private val ActiveNavColor = Color(0xFF008C69)
+private val ActiveNavColor = HanziGreenDark
 private val InactiveGray = Color(0xFF8E8E98)
 private val FloatingBorderColor = Color(0xFFE2E8F0)
 
@@ -170,7 +170,7 @@ fun HaloHanziNavBar(
                                         )
                                         .border(
                                             width = 1.dp,
-                                            color = HanziGreen.copy(alpha = 0.25f * pillAlpha),
+                                            color = PastelMintBorder.copy(alpha = 0.8f * pillAlpha),
                                             shape = RoundedCornerShape(16.dp)
                                         )
                                 )
