@@ -2508,6 +2508,144 @@ object LearningRepository {
             )
         ),
 
+        // Cerita Mandarin Bean 16: Wash the Face (洗脸)
+        Story(
+            id = "story_wash_the_face",
+            titleHanzi = "洗脸",
+            titlePinyin = "Xǐ Liǎn",
+            titleTranslation = "Wash the Face (Mencuci Muka)",
+            level = "HSK 1",
+            category = "Humor & Sekolah",
+            description = "Anekdot kocak tentang murid bernama Xiaobo yang malas mencuci muka dan membuat gurunya tercengang saat menebak sisa makanan di wajahnya.",
+            coverEmoji = "🧼",
+            coverImageRes = R.drawable.cover_story_wash_the_face,
+            estimatedReadMinutes = 2,
+            sentences = listOf(
+                Sentence(
+                    "s_washface_1",
+                    "7岁的小波不喜欢洗脸。有一天，老师看见他的脸很脏，就说：“你怎么每天不洗脸？吃的早饭渣还在脸上呢？”",
+                    "7 suì de Xiǎobō bù xǐhuan xǐ liǎn. Yǒu yì tiān, lǎoshī kànjiàn tā de liǎn hěn zāng, jiù shuō: “Nǐ zěnme měi tiān bù xǐ liǎn? Chī de zǎofàn zhā hái zài liǎn shàng ne?”",
+                    "Xiaobo yang berumur 7 tahun tidak suka mencuci muka. Suatu hari, guru melihat wajahnya sangat kotor, lalu berkata: “Mengapa kamu setiap hari tidak cuci muka? Sisa makanan sarapan bahkan masih menempel di wajahmu lho?”",
+                    listOf(
+                        WordToken("7岁的", "7 suì de", "Berusia 7 tahun", "Keterangan usia anak"),
+                        WordToken("小波", "Xiǎobō", "Xiaobo", "Nama anak murid"),
+                        WordToken("不喜欢", "bù xǐhuan", "Tidak suka", "Negasi kesukaan"),
+                        WordToken("洗脸", "xǐ liǎn", "Mencuci muka", "Membersihkan wajah dengan air"),
+                        WordToken("有一天", "yǒu yì tiān", "Suatu hari", "Keterangan waktu pada suatu hari"),
+                        WordToken("老师", "lǎoshī", "Guru", "Pendidik / pengajar"),
+                        WordToken("看见", "kànjiàn", "Melihat", "Menangkap dengan indera penglihatan"),
+                        WordToken("他的", "tā de", "Miliknya / -nya", "Pronomina kepemilikan orang ketiga"),
+                        WordToken("脸", "liǎn", "Wajah / muka", "Bagian muka"),
+                        WordToken("很脏", "hěn zāng", "Sangat kotor", "Kondisi bernoda/dekil"),
+                        WordToken("就说", "jiù shuō", "Lalu berkata", "Konjungsi akibat + kata kerja tutur"),
+                        WordToken("你怎么", "nǐ zěnme", "Mengapa kamu", "Pertanyaan heran menanyakan alasan"),
+                        WordToken("每天", "měi tiān", "Setiap hari", "Frekuensi harian"),
+                        WordToken("不洗脸", "bù xǐ liǎn", "Tidak cuci muka", "Tidak membersihkan wajah"),
+                        WordToken("吃的", "chī de", "Yang dimakan", "Makanan yang disantap"),
+                        WordToken("早饭", "zǎofàn", "Sarapan", "Makan pagi"),
+                        WordToken("渣", "zhā", "Sisa / remah", "Ampas atau remah makanan"),
+                        WordToken("还在", "hái zài", "Masih berada di", "Keterangan masih ada"),
+                        WordToken("脸上", "liǎn shàng", "Di wajah", "Posisi di atas permukaan muka"),
+                        WordToken("呢", "ne", "Lho", "Partikel penegas retoris di akhir kalimat")
+                    )
+                ),
+                Sentence(
+                    "s_washface_2",
+                    "小波说：“老师，那你猜猜我吃的是什么？”",
+                    "Xiǎobō shuō: “Lǎoshī, nà nǐ cāicai wǒ chī de shì shénme?”",
+                    "Xiaobo berkata: “Guru, kalau begitu coba tebak apa yang saya makan?”",
+                    listOf(
+                        WordToken("小波", "Xiǎobō", "Xiaobo", "Subjek murid"),
+                        WordToken("说", "shuō", "Berkata", "Kata kerja tutur"),
+                        WordToken("老师", "lǎoshī", "Guru", "Panggilan hormat guru"),
+                        WordToken("那你", "nà nǐ", "Kalau begitu Anda", "Konjungsi transisi + pronomina"),
+                        WordToken("猜猜", "cāicai", "Tebaklah", "Reduplikasi kata kerja menebak"),
+                        WordToken("我", "wǒ", "Saya / aku", "Kata ganti orang pertama"),
+                        WordToken("吃的", "chī de", "Yang dimakan", "Objek makanan"),
+                        WordToken("是", "shì", "Adalah", "Kopula"),
+                        WordToken("什么", "shénme", "Apa?", "Kata tanya benda")
+                    )
+                ),
+                Sentence(
+                    "s_washface_3",
+                    "老师说：“米饭。”",
+                    "Lǎoshī shuō: “Mǐfàn.”",
+                    "Guru berkata: “Nasi.”",
+                    listOf(
+                        WordToken("老师", "lǎoshī", "Guru", "Subjek guru"),
+                        WordToken("说", "shuō", "Berkata", "Kata kerja tutur"),
+                        WordToken("米饭", "mǐfàn", "Nasi", "Nasi putih matang")
+                    )
+                ),
+                Sentence(
+                    "s_washface_4",
+                    "小波说：“老师，你猜错了，那是昨天吃的。”",
+                    "Xiǎobō shuō: “Lǎoshī, nǐ cāi cuò le, nà shì zuótiān chī de.”",
+                    "Xiaobo berkata: “Guru, tebakan Anda salah, itu nasi yang saya makan kemarin.”",
+                    listOf(
+                        WordToken("小波", "Xiǎobō", "Xiaobo", "Subjek murid"),
+                        WordToken("说", "shuō", "Berkata", "Kata kerja tutur"),
+                        WordToken("老师", "lǎoshī", "Guru", "Panggilan hormat guru"),
+                        WordToken("你", "nǐ", "Anda / Ibu guru", "Pronomina orang kedua"),
+                        WordToken("猜错了", "cāi cuò le", "Tebakan Anda salah", "Salah menebak"),
+                        WordToken("那是", "nà shì", "Itu adalah", "Kata penunjuk jauh + kopula"),
+                        WordToken("昨天", "zuótiān", "Kemarin", "Keterangan waktu kemarin"),
+                        WordToken("吃的", "chī de", "Yang dimakan", "Makanan yang disantap kemarin")
+                    )
+                )
+            ),
+            questions = listOf(
+                StoryQuestion(
+                    "q_washface_1",
+                    "小波有什么不好的生活习惯？(Kebiasaan buruk apa yang dimiliki Xiaobo?)",
+                    listOf(
+                        "不喜欢写作业 (Tidak suka mengerjakan PR)",
+                        "不喜欢洗脸 (Tidak suka mencuci muka)",
+                        "不喜欢吃饭 (Tidak suka makan)",
+                        "经常迟到 (Sering terlambat)"
+                    ),
+                    1,
+                    "Di kalimat pertama dinyatakan: '7岁的小波不喜欢洗脸' (Xiaobo yang berumur 7 tahun tidak suka mencuci muka)."
+                ),
+                StoryQuestion(
+                    "q_washface_2",
+                    "老师看见小波脸上有什么？(Guru melihat apa yang menempel di wajah Xiaobo?)",
+                    listOf(
+                        "一滴墨水 (Setetes tinta)",
+                        "早饭的食物残渣 (Sisa / remah makanan)",
+                        "红色的颜料 (Cat merah)",
+                        "一片树叶 (Sehelai daun)"
+                    ),
+                    1,
+                    "Guru menegur: '吃的早饭渣还在脸上呢？' (Remah makanan sarapan bahkan masih menempel di wajahmu lho?)."
+                ),
+                StoryQuestion(
+                    "q_washface_3",
+                    "当小波让老师猜他吃了什么时，老师的回答是什么？(Saat Xiaobo menyuruh guru menebak apa yang dia makan, apa tebakan guru?)",
+                    listOf(
+                        "面包 (Roti)",
+                        "米饭 (Nasi)",
+                        "苹果 (Apel)",
+                        "面条 (Mi)"
+                    ),
+                    1,
+                    "Melihat butiran nasi yang menempel di wajah Xiaobo, guru menebak: '米饭' (Nasi)."
+                ),
+                StoryQuestion(
+                    "q_washface_4",
+                    "故事最搞笑的结局是什么？(Apa akhir cerita yang paling lucu?)",
+                    listOf(
+                        "Xiaobo langsung pergi mencuci muka ke wastafel",
+                        "Guru memberinya hadiah sarapan baru",
+                        "Xiaobo mengatakan nasi itu adalah makanan kemarin, bukan sarapan hari ini! (那是昨天吃的)",
+                        "Guru memanggil orang tua Xiaobo"
+                    ),
+                    2,
+                    "Xiaobo dengan polos mengoreksi tebakan gurunya: '老师，你猜错了，那是昨天吃的！' (Guru salah tebak, butiran nasi itu dimakan kemarin! — artinya Xiaobo sudah berhari-hari tidak cuci muka!)."
+                )
+            )
+        ),
+
         // Cerita 1 - Sapaan & Murid Baru
         Story(
             id = "story_1",
