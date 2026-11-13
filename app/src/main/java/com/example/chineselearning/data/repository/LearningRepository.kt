@@ -2383,6 +2383,131 @@ object LearningRepository {
             )
         ),
 
+        // Cerita Mandarin Bean 15: Result (结果)
+        Story(
+            id = "story_result",
+            titleHanzi = "结果",
+            titlePinyin = "Jiéguǒ",
+            titleTranslation = "Result (Hasil / Akibat)",
+            level = "HSK 1",
+            category = "Humor & Sekolah",
+            description = "Anekdot cerdas tentang seorang murid bernama Xiao Ming saat diajari pengurangan matematika dengan perumpamaan buah apel milik kakaknya.",
+            coverEmoji = "🍎",
+            coverImageRes = R.drawable.cover_story_result,
+            estimatedReadMinutes = 2,
+            sentences = listOf(
+                Sentence(
+                    "s_result_1",
+                    "老师说：“今天我们来学习减法。小明，你哥哥有五个苹果，你从那儿拿走三个，结果会怎样？”",
+                    "Lǎoshī shuō: “Jīntiān wǒmen lái xuéxí jiǎnfǎ. Xiǎomíng, nǐ gēge yǒu wǔ gè píngguǒ, nǐ cóng nàr názǒu sān gè, jiéguǒ huì zěnyàng?”",
+                    "Guru berkata: “Hari ini kita akan belajar pengurangan. Xiao Ming, kakak laki-lakimu punya lima buah apel, kamu mengambil tiga buah dari sana, bagaimana hasilnya?”",
+                    listOf(
+                        WordToken("老师", "lǎoshī", "Guru", "Pendidik / pengajar"),
+                        WordToken("说", "shuō", "Berkata", "Kata kerja tutur"),
+                        WordToken("今天", "jīntiān", "Hari ini", "Keterangan waktu saat ini"),
+                        WordToken("我们", "wǒmen", "Kita", "Kata ganti orang pertama jamak"),
+                        WordToken("来学习", "lái xuéxí", "Mari belajar", "Datang untuk mempelajari"),
+                        WordToken("减法", "jiǎnfǎ", "Pengurangan", "Operasi matematika pengurangan"),
+                        WordToken("小明", "Xiǎomíng", "Xiao Ming", "Nama murid laki-laki"),
+                        WordToken("你", "nǐ", "Kamu", "Pronomina orang kedua"),
+                        WordToken("哥哥", "gēge", "Kakak laki-laki", "Saudara laki-laki yang lebih tua"),
+                        WordToken("有", "yǒu", "Memiliki / ada", "Kata kerja kepemilikan"),
+                        WordToken("五个", "wǔ gè", "Lima buah", "Bilangan angka 5 + kata penggolong"),
+                        WordToken("苹果", "píngguǒ", "Apel", "Buah apel"),
+                        WordToken("你", "nǐ", "Kamu", "Pronomina orang kedua"),
+                        WordToken("从", "cóng", "Dari", "Preposisi asal"),
+                        WordToken("那儿", "nàr", "Sana", "Kata penunjuk tempat itu"),
+                        WordToken("拿走", "ná zǒu", "Mengambil pergi", "Kata kerja mengambil dan membawa pergi"),
+                        WordToken("三个", "sān gè", "Tiga buah", "Bilangan angka 3 + penggolong"),
+                        WordToken("结果", "jiéguǒ", "Hasilnya / akibatnya", "Hasil perhitungan atau akibat kejadian"),
+                        WordToken("会怎样", "huì zěnyàng", "Akan bagaimana?", "Menanyakan apa yang akan terjadi")
+                    )
+                ),
+                Sentence(
+                    "s_result_2",
+                    "小明回答：“老师，结果他一定会打我的！昨天我只吃了哥哥的一个苹果，他就打我了。所以我们可以不从哥哥那儿拿走苹果吗？”",
+                    "Xiǎomíng huídá: “Lǎoshī, jiéguǒ tā yīdìng huì dǎ wǒ de! Zuótiān wǒ zhǐ chī le gēge de yí gè píngguǒ, tā jiù dǎ wǒ le. Suǒyǐ wǒmen kěyǐ bù cóng gēge nàr názǒu píngguǒ ma?”",
+                    "Xiao Ming menjawab: “Guru, akibatnya dia pasti akan memukul saya! Kemarin saya cuma memakan satu buah apel milik kakak, dia langsung memukul saya. Jadi bisakah kita tidak mengambil apel dari tempat kakak?”",
+                    listOf(
+                        WordToken("小明", "Xiǎomíng", "Xiao Ming", "Subjek murid"),
+                        WordToken("回答", "huídá", "Menjawab", "Memberikan jawaban tutur"),
+                        WordToken("老师", "lǎoshī", "Guru", "Panggilan hormat guru"),
+                        WordToken("结果", "jiéguǒ", "Hasilnya / akibatnya", "Akibat yang terjadi"),
+                        WordToken("他", "tā", "Dia", "Pronomina orang ketiga"),
+                        WordToken("一定会", "yīdìng huì", "Pasti akan", "Kepastian mutlak"),
+                        WordToken("打我的", "dǎ wǒ de", "Memukul saya!", "Kata kerja memukul + objek + penegas"),
+                        WordToken("昨天", "zuótiān", "Kemarin", "Keterangan waktu kemarin"),
+                        WordToken("我", "wǒ", "Saya / aku", "Pronomina orang pertama"),
+                        WordToken("只吃了", "zhǐ chī le", "Hanya memakan", "Adverbia pembatas 'hanya' + makan + partikel aspek"),
+                        WordToken("哥哥的", "gēge de", "Milik kakak", "Kepemilikan kakak laki-laki"),
+                        WordToken("一个", "yī gè", "Satu buah", "Bilangan + penggolong"),
+                        WordToken("苹果", "píngguǒ", "Apel", "Buah apel"),
+                        WordToken("他", "tā", "Dia", "Subjek kakak"),
+                        WordToken("就打我了", "jiù dǎ wǒ le", "Langsung memukul saya", "Tindakan balasan seketika"),
+                        WordToken("所以", "suǒyǐ", "Oleh karena itu", "Konjungsi simpulan sebab-akibat"),
+                        WordToken("我们", "wǒmen", "Kita", "Pronomina jamak"),
+                        WordToken("可以", "kěyǐ", "Boleh / bisakah", "Modalitas izin"),
+                        WordToken("不从", "bù cóng", "Tidak dari", "Negasi preposisi"),
+                        WordToken("哥哥", "gēge", "Kakak", "Kakak laki-laki"),
+                        WordToken("那儿", "nàr", "Sana", "Tempat itu"),
+                        WordToken("拿走", "ná zǒu", "Mengambil", "Tindakan mengambil"),
+                        WordToken("苹果", "píngguǒ", "Apel", "Buah apel"),
+                        WordToken("吗", "ma", "Apakah boleh?", "Partikel kalimat tanya")
+                    )
+                )
+            ),
+            questions = listOf(
+                StoryQuestion(
+                    "q_result_1",
+                    "老师今天在课堂上要教学生们什么？(Apa materi pelajaran yang diajarkan guru hari ini di kelas?)",
+                    listOf(
+                        "学习汉字书写 (Menulis hanzi)",
+                        "学习减法算术 (Belajar hitungan pengurangan / matematika)",
+                        "学习唱中文歌 (Menyanyi lagu Mandarin)",
+                        "学习做饭 (Belajar memasak)"
+                    ),
+                    1,
+                    "Guru berkata: '今天我们来学习减法' (Hari ini kita belajar operasi pengurangan)."
+                ),
+                StoryQuestion(
+                    "q_result_2",
+                    "老师给小明出了怎样的数学题？(Soal matematika seperti apa yang diberikan guru kepada Xiao Ming?)",
+                    listOf(
+                        "哥哥有五个苹果，拿走三个 (Kakak punya 5 apel, diambil 3 apel)",
+                        "哥哥有十本书，借走两本 (Kakak punya 10 buku, dipinjam 2)",
+                        "妈妈买了三个苹果和两个橘子 (Ibu beli 3 apel dan 2 jeruk)",
+                        "弟弟吃了四个西瓜 (Adik makan 4 semangka)"
+                    ),
+                    0,
+                    "Guru memberi soal pengurangan: '你哥哥有五个苹果，你从那儿拿走三个，结果会怎样？'."
+                ),
+                StoryQuestion(
+                    "q_result_3",
+                    "小明认为拿走三个苹果的“结果”会是什么？(Menurut Xiao Ming, apa \"hasil\" jika dia mengambil 3 apel milik kakaknya?)",
+                    listOf(
+                        "哥哥还剩下两个苹果 (Kakak sisa 2 apel)",
+                        "哥哥一定会打他的！ (Kakak pasti akan memukulnya!)",
+                        "哥哥会再给他买苹果 (Kakak akan membelikan apel baru)",
+                        "老师会给他奖品 (Guru akan memberinya hadiah)"
+                    ),
+                    1,
+                    "Xiao Ming menjawab dengan cemas dan polos: '老师，结果他一定会打我的！' (Guru, hasilnya kakak pasti akan memukul saya!)."
+                ),
+                StoryQuestion(
+                    "q_result_4",
+                    "为什么小明这么肯定哥哥会打他？(Kenapa Xiao Ming begitu yakin kakaknya akan memukulnya?)",
+                    listOf(
+                        "因为昨天他只吃了一个苹果，哥哥就打他了 (Karena kemarin baru makan 1 apel saja sudah dipukul kakak)",
+                        "因为哥哥不喜欢吃水果 (Karena kakak tidak suka buah)",
+                        "因为苹果非常昂贵 (Karena apelnya sangat mahal)",
+                        "因为哥哥脾气不好 (Karena kakak pemarah pada semua orang)"
+                    ),
+                    0,
+                    "Xiao Ming menceritakan pengalamannya: '昨天我只吃了哥哥的一个苹果，他就打我了' (Kemarin cuma makan 1 apel saja sudah dipukul, apalagi kalau mengambil 3!)."
+                )
+            )
+        ),
+
         // Cerita 1 - Sapaan & Murid Baru
         Story(
             id = "story_1",
