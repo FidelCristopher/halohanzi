@@ -141,8 +141,8 @@ fun StoryReaderScreen(
                             )
                         },
                         colors = FilterChipDefaults.filterChipColors(
-                            selectedContainerColor = HanziMint,
-                            selectedLabelColor = HanziGreenDark
+                            selectedContainerColor = PastelYellow,
+                            selectedLabelColor = PastelYellowText
                         ),
                         modifier = Modifier.padding(end = 4.dp)
                     )
@@ -151,7 +151,7 @@ fun StoryReaderScreen(
                         Icon(
                             imageVector = if (showTranslation) Icons.Default.Translate else Icons.Default.GTranslate,
                             contentDescription = "Toggle Translation",
-                            tint = if (showTranslation) HanziGreen else SlateGray
+                            tint = if (showTranslation) PastelBlueBrand else SlateGray
                         )
                     }
                 },
@@ -199,9 +199,9 @@ fun StoryReaderScreen(
                                 .padding(horizontal = 10.dp)
                                 .height(20.dp),
                             colors = SliderDefaults.colors(
-                                thumbColor = HanziGreen,
-                                activeTrackColor = HanziGreen,
-                                inactiveTrackColor = LightSlate
+                                thumbColor = PastelBlueBrand,
+                                activeTrackColor = PastelBlueBrand,
+                                inactiveTrackColor = PastelBlueBorder
                             )
                         )
 
@@ -258,7 +258,7 @@ fun StoryReaderScreen(
                                     playSentence(startIdx, autoAdvance = true)
                                 }
                             },
-                            containerColor = HanziGreen,
+                            containerColor = PastelBlueBrand,
                             contentColor = Color.White,
                             shape = CircleShape,
                             modifier = Modifier.size(54.dp)
@@ -288,8 +288,8 @@ fun StoryReaderScreen(
                         // Speed Button (1.0X pill)
                         Surface(
                             shape = RoundedCornerShape(12.dp),
-                            color = PastelMint,
-                            border = BorderStroke(1.dp, PastelMintBorder),
+                            color = PastelYellow,
+                            border = BorderStroke(1.dp, PastelYellowBorder),
                             onClick = {
                                 speedIndex = (speedIndex + 1) % speedValues.size
                             }
@@ -298,8 +298,8 @@ fun StoryReaderScreen(
                                 text = speedLabels[speedIndex],
                                 fontSize = 12.sp,
                                 fontWeight = FontWeight.Bold,
-                                color = PastelMintText,
-                                modifier = Modifier.padding(horizontal = 10.dp, vertical = 6.dp)
+                                color = PastelYellowText,
+                                modifier = Modifier.padding(horizontal = 8.dp, vertical = 6.dp)
                             )
                         }
                     }

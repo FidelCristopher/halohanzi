@@ -34,9 +34,6 @@ import com.example.chineselearning.data.repository.hsk1VocabularyList
 import com.example.chineselearning.ui.components.bouncyClick
 import com.example.chineselearning.ui.theme.*
 
-private val ActiveBrandColor = HanziGreenDark
-private val SoftBrandBg = PastelMint
-
 @Composable
 fun SavedVocabScreen(
     ttsManager: TtsManager?
@@ -87,7 +84,7 @@ fun SavedVocabScreen(
         ) {
             Spacer(modifier = Modifier.height(14.dp))
 
-            // 1. HEADER (Title, Subtitle, Count Badge)
+            // 1. HEADER (Title, Subtitle, Count Badge in Pastel Yellow)
             Row(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.SpaceBetween,
@@ -112,15 +109,15 @@ fun SavedVocabScreen(
 
                 Surface(
                     shape = RoundedCornerShape(12.dp),
-                    color = PastelMint,
-                    border = BorderStroke(1.dp, PastelMintBorder)
+                    color = PastelYellow,
+                    border = BorderStroke(1.dp, PastelYellowBorder)
                 ) {
                     Text(
                         text = "${filteredList.size} / 150",
                         fontFamily = NunitoFontFamily,
                         fontSize = 12.sp,
                         fontWeight = FontWeight.Bold,
-                        color = PastelMintText,
+                        color = PastelYellowText,
                         modifier = Modifier.padding(horizontal = 10.dp, vertical = 6.dp)
                     )
                 }
@@ -167,16 +164,16 @@ fun SavedVocabScreen(
                 colors = OutlinedTextFieldDefaults.colors(
                     focusedContainerColor = Color.White,
                     unfocusedContainerColor = Color.White,
-                    focusedBorderColor = HanziGreen,
+                    focusedBorderColor = PastelBlueBrand,
                     unfocusedBorderColor = BorderGray,
-                    cursorColor = HanziGreen
+                    cursorColor = PastelBlueBrand
                 ),
                 singleLine = true
             )
 
             Spacer(modifier = Modifier.height(12.dp))
 
-            // 3. CATEGORY FILTER CHIPS
+            // 3. CATEGORY FILTER CHIPS (Pastel Blue & Yellow Accents)
             Row(
                 modifier = Modifier
                     .fillMaxWidth()
@@ -187,8 +184,8 @@ fun SavedVocabScreen(
                     val isSelected = selectedCategory == cat
                     Surface(
                         shape = RoundedCornerShape(20.dp),
-                        color = if (isSelected) PastelMint else Color.White,
-                        border = BorderStroke(1.dp, if (isSelected) HanziGreen else BorderGray),
+                        color = if (isSelected) PastelBlue else Color.White,
+                        border = BorderStroke(1.dp, if (isSelected) PastelBlueBorder else BorderGray),
                         shadowElevation = if (isSelected) 2.dp else 0.5.dp,
                         modifier = Modifier.bouncyClick(scaleDown = 0.94f) {
                             selectedCategory = cat
@@ -199,7 +196,7 @@ fun SavedVocabScreen(
                             fontFamily = NunitoFontFamily,
                             fontSize = 12.sp,
                             fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Medium,
-                            color = if (isSelected) PastelMintText else DeepNavy,
+                            color = if (isSelected) PastelBlueText else DeepNavy,
                             modifier = Modifier.padding(horizontal = 14.dp, vertical = 7.dp)
                         )
                     }
@@ -272,7 +269,7 @@ fun SavedVocabScreen(
 
 /**
  * HskWordSmallTile:
- * Kotak kecil modern untuk menampilkan setiap kosakata HSK 1.
+ * Kotak kecil per kata dalam 3-kolom grid (Desain Kartu Mini)
  */
 @Composable
 private fun HskWordSmallTile(
@@ -283,10 +280,10 @@ private fun HskWordSmallTile(
         shape = RoundedCornerShape(16.dp),
         color = Color.White,
         border = BorderStroke(1.dp, BorderGray),
-        shadowElevation = 1.5.dp,
+        shadowElevation = 1.dp,
         modifier = Modifier
             .fillMaxWidth()
-            .bouncyClick(scaleDown = 0.92f, onClick = onClick)
+            .bouncyClick(scaleDown = 0.95f, onClick = onClick)
     ) {
         Column(
             modifier = Modifier
@@ -294,7 +291,7 @@ private fun HskWordSmallTile(
                 .padding(horizontal = 8.dp, vertical = 10.dp),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            // Header baris atas kotak: Nomor Index & Badge Kategori Singkat
+            // Header Bar: ID Number & Audio Speaker Icon
             Row(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.SpaceBetween,
@@ -311,7 +308,7 @@ private fun HskWordSmallTile(
                 Icon(
                     imageVector = Icons.AutoMirrored.Filled.VolumeUp,
                     contentDescription = "Audio",
-                    tint = ActiveBrandColor.copy(alpha = 0.65f),
+                    tint = PastelBlueBrand.copy(alpha = 0.65f),
                     modifier = Modifier.size(14.dp)
                 )
             }
@@ -337,7 +334,7 @@ private fun HskWordSmallTile(
                 fontFamily = NunitoFontFamily,
                 fontSize = 11.5.sp,
                 fontWeight = FontWeight.SemiBold,
-                color = ActiveBrandColor,
+                color = PastelBlueBrand,
                 textAlign = TextAlign.Center,
                 maxLines = 1,
                 overflow = TextOverflow.Ellipsis
@@ -394,14 +391,15 @@ private fun HskWordDetailDialog(
                 ) {
                     Surface(
                         shape = RoundedCornerShape(10.dp),
-                        color = SoftBrandBg
+                        color = PastelPink,
+                        border = BorderStroke(1.dp, PastelPinkBorder)
                     ) {
                         Text(
                             text = word.category,
                             fontFamily = NunitoFontFamily,
                             fontSize = 12.sp,
                             fontWeight = FontWeight.Bold,
-                            color = ActiveBrandColor,
+                            color = PastelPinkText,
                             modifier = Modifier.padding(horizontal = 10.dp, vertical = 4.dp)
                         )
                     }
@@ -439,7 +437,7 @@ private fun HskWordDetailDialog(
                         fontFamily = NunitoFontFamily,
                         fontSize = 20.sp,
                         fontWeight = FontWeight.Bold,
-                        color = ActiveBrandColor
+                        color = PastelBlueBrand
                     )
                     Spacer(modifier = Modifier.width(8.dp))
                     IconButton(
@@ -447,12 +445,12 @@ private fun HskWordDetailDialog(
                         modifier = Modifier
                             .size(36.dp)
                             .clip(CircleShape)
-                            .background(SoftBrandBg)
+                            .background(PastelBlue)
                     ) {
                         Icon(
                             imageVector = Icons.AutoMirrored.Filled.VolumeUp,
                             contentDescription = "Speak",
-                            tint = ActiveBrandColor,
+                            tint = PastelBlueBrand,
                             modifier = Modifier.size(20.dp)
                         )
                     }
@@ -512,11 +510,11 @@ private fun HskWordDetailDialog(
 
                 Spacer(modifier = Modifier.height(24.dp))
 
-                // Close Button
+                // Close Button in Pastel Blue Brand
                 Button(
                     onClick = onDismiss,
                     shape = RoundedCornerShape(16.dp),
-                    colors = ButtonDefaults.buttonColors(containerColor = HanziGreen),
+                    colors = ButtonDefaults.buttonColors(containerColor = PastelBlueBrand),
                     modifier = Modifier.fillMaxWidth().height(48.dp)
                 ) {
                     Text(

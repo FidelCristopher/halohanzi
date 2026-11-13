@@ -216,15 +216,16 @@ fun StoryListScreen(
                 )
                 if (selectedHskFilter != "Semua") {
                     Surface(
-                        color = HanziMint,
+                        color = PastelYellow,
+                        border = BorderStroke(1.dp, PastelYellowBorder),
                         shape = RoundedCornerShape(12.dp)
                     ) {
                         Text(
                             text = "Filter: $selectedHskFilter",
                             fontFamily = AppFontFamily,
                             fontSize = 11.sp,
-                            fontWeight = FontWeight.SemiBold,
-                            color = HanziGreenDark,
+                            fontWeight = FontWeight.Bold,
+                            color = PastelYellowText,
                             modifier = Modifier.padding(horizontal = 8.dp, vertical = 3.dp)
                         )
                     }
@@ -338,15 +339,15 @@ private fun HskLevelFilterChip(
     onSelect: () -> Unit
 ) {
     val backgroundColor by animateColorAsState(
-        targetValue = if (isSelected) PastelMint else Color.White,
+        targetValue = if (isSelected) PastelBlue else Color.White,
         animationSpec = spring(),
         label = "chipBg"
     )
     val contentColor by animateColorAsState(
-        targetValue = if (isSelected) PastelMintText else DeepNavy,
+        targetValue = if (isSelected) PastelBlueText else DeepNavy,
         label = "chipContent"
     )
-    val borderColor = if (isSelected) HanziGreen else BorderGray
+    val borderColor = if (isSelected) Color(0xFF38BDF8) else BorderGray
 
     Surface(
         onClick = onSelect,
@@ -376,14 +377,14 @@ private fun HskLevelFilterChip(
             // Pill count
             Surface(
                 shape = CircleShape,
-                color = if (isSelected) PastelMintBorder else LightSlate
+                color = if (isSelected) PastelBlueBorder else LightSlate
             ) {
                 Text(
                     text = count.toString(),
                     fontFamily = AppFontFamily,
                     fontSize = 11.sp,
                     fontWeight = FontWeight.Bold,
-                    color = if (isSelected) PastelMintText else SlateGray,
+                    color = if (isSelected) PastelBlueText else SlateGray,
                     modifier = Modifier.padding(horizontal = 7.dp, vertical = 1.dp)
                 )
             }
@@ -400,9 +401,9 @@ private fun TopicFilterChip(
     isSelected: Boolean,
     onSelect: () -> Unit
 ) {
-    val backgroundColor = if (isSelected) PastelCream else Color.White
-    val contentColor = if (isSelected) PastelCreamText else SlateGray
-    val borderColor = if (isSelected) PastelCreamBorder else BorderGray
+    val backgroundColor = if (isSelected) PastelPink else Color.White
+    val contentColor = if (isSelected) PastelPinkText else SlateGray
+    val borderColor = if (isSelected) PastelPinkBorder else BorderGray
 
     Surface(
         onClick = onSelect,
@@ -720,8 +721,8 @@ private fun ModernStoryCard(
                     // "Baca Cerita" Action Pill Button
                     Surface(
                         shape = RoundedCornerShape(12.dp),
-                        color = PastelMint,
-                        border = BorderStroke(1.dp, PastelMintBorder)
+                        color = PastelBlue,
+                        border = BorderStroke(1.dp, PastelBlueBorder)
                     ) {
                         Row(
                             modifier = Modifier.padding(horizontal = 12.dp, vertical = 6.dp),
@@ -730,7 +731,7 @@ private fun ModernStoryCard(
                             Icon(
                                 painter = painterResource(R.drawable.ic_story_book_open),
                                 contentDescription = null,
-                                tint = PastelMintText,
+                                tint = PastelBlueBrand,
                                 modifier = Modifier.size(13.dp)
                             )
                             Spacer(modifier = Modifier.width(6.dp))
@@ -739,13 +740,13 @@ private fun ModernStoryCard(
                                 fontFamily = AppFontFamily,
                                 fontSize = 12.sp,
                                 fontWeight = FontWeight.Bold,
-                                color = PastelMintText
+                                color = PastelBlueBrand
                             )
                             Spacer(modifier = Modifier.width(4.dp))
                             Icon(
                                 imageVector = Icons.AutoMirrored.Filled.ArrowForward,
                                 contentDescription = null,
-                                tint = PastelMintText,
+                                tint = PastelBlueBrand,
                                 modifier = Modifier.size(12.dp)
                             )
                         }

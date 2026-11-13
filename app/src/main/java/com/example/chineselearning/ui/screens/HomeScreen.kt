@@ -86,10 +86,10 @@ fun HomeScreen(
     val chapterThemeColors = listOf(
         Pair(Color(0xFFFCE4EC), Color(0xFFF48FB1)), // Bab 1: Pink
         Pair(Color(0xFFFFF9E6), Color(0xFFEAD878)), // Bab 2: Warm Golden Cream & Yellow Connector
-        Pair(PastelMint, PastelMintBorder), // Bab 3: Fresh Bright Pastel Mint
-        Pair(Color(0xFFFFF3E0), Color(0xFFFFB74D)), // Bab 4: Warm Amber
-        Pair(Color(0xFFEDE7F6), Color(0xFFBA68C8)), // Bab 5: Purple
-        Pair(Color(0xFFE0F2F1), Color(0xFF4DB6AC))  // Bab 6: Teal
+        Pair(PastelBlue, PastelBlueBorder), // Bab 3: Soft Light Blue
+        Pair(Color(0xFFFFF3E0), Color(0xFFFFB74D)), // Bab 4: Warm Amber / Peach
+        Pair(Color(0xFFEDE7F6), Color(0xFFBA68C8)), // Bab 5: Soft Lavender
+        Pair(Color(0xFFE0F2FE), Color(0xFF38BDF8))  // Bab 6: Clear Sky Blue
     )
 
     LazyColumn(

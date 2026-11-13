@@ -31,8 +31,8 @@ import androidx.compose.ui.unit.sp
 import com.example.chineselearning.R
 import com.example.chineselearning.ui.theme.*
 
-// Modern Pastel Brand Palette (Unified with Belajar & Cerita)
-private val ActiveNavColor = HanziGreenDark
+// Modern Soft Pastel Palette (Biru Muda & Kuning Soft - Zero Green)
+private val ActiveNavColor = PastelBlueBrand
 private val InactiveGray = Color(0xFF8E8E98)
 private val FloatingBorderColor = Color(0xFFE2E8F0)
 
@@ -91,7 +91,7 @@ fun HaloHanziNavBar(
                 .shadow(
                     elevation = 16.dp,
                     shape = RoundedCornerShape(30.dp),
-                    spotColor = Color(0x25008C69),
+                    spotColor = Color(0x202563EB),
                     ambientColor = Color(0x10000000)
                 ),
             shape = RoundedCornerShape(30.dp),
@@ -154,7 +154,7 @@ fun HaloHanziNavBar(
                                 .height(32.dp)
                                 .width(52.dp)
                         ) {
-                            // Subtle pastel gradient pill with hairline border for selected tab
+                            // Subtle pastel blue gradient pill with hairline border for selected tab
                             if (pillAlpha > 0.01f) {
                                 Box(
                                     modifier = Modifier
@@ -163,14 +163,14 @@ fun HaloHanziNavBar(
                                         .background(
                                             Brush.verticalGradient(
                                                 listOf(
-                                                    PastelMint.copy(alpha = pillAlpha),
-                                                    PastelMintLight.copy(alpha = pillAlpha)
+                                                    PastelBlue.copy(alpha = pillAlpha),
+                                                    PastelBlueLight.copy(alpha = pillAlpha)
                                                 )
                                             )
                                         )
                                         .border(
                                             width = 1.dp,
-                                            color = PastelMintBorder.copy(alpha = 0.8f * pillAlpha),
+                                            color = PastelBlueBorder.copy(alpha = 0.8f * pillAlpha),
                                             shape = RoundedCornerShape(16.dp)
                                         )
                                 )
