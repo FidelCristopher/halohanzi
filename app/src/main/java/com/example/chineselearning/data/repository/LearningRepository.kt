@@ -2129,6 +2129,137 @@ object LearningRepository {
             )
         ),
 
+        // Cerita Mandarin Bean 13: Ride in a Car (坐车)
+        Story(
+            id = "story_ride_in_a_car",
+            titleHanzi = "坐车",
+            titlePinyin = "Zuò Chē",
+            titleTranslation = "Ride in a Car (Naik Kendaraan)",
+            level = "HSK 1",
+            category = "Humor & Transportasi",
+            description = "Anekdot kocak tentang seorang anak cerdik yang lelah berjalan kaki dan membuat perjanjian jenaka dengan ayahnya tentang naik bus atau taksi.",
+            coverEmoji = "🚌",
+            coverImageRes = R.drawable.cover_story_ride_in_a_car,
+            estimatedReadMinutes = 2,
+            sentences = listOf(
+                Sentence(
+                    "s_ridecar_1",
+                    "一天，爸爸带儿子去玩。回来的路上，儿子对爸爸说：“爸爸，我累了，我们坐车吧。”",
+                    "Yī tiān, bàba dài érzi qù wán. Huí lái de lù shang, érzi duì bàba shuō: “Bàba, wǒ lèi le, wǒmen zuò chē ba.”",
+                    "Suatu hari, ayah mengajak anak laki-lakinya pergi bermain. Di perjalanan pulang, anak itu berkata kepada ayahnya: “Ayah, aku lelah, ayo kita naik kendaraan.”",
+                    listOf(
+                        WordToken("一天", "yī tiān", "Suatu hari", "Keterangan waktu pada suatu hari"),
+                        WordToken("爸爸", "bàba", "Ayah", "Orang tua laki-laki"),
+                        WordToken("带", "dài", "Membawa / mengajak", "Kata kerja mendampingi pergi"),
+                        WordToken("儿子", "érzi", "Anak laki-laki", "Putra kandung"),
+                        WordToken("去玩", "qù wán", "Pergi bermain", "Aktivitas rekreasi bersenang-senang"),
+                        WordToken("回来的", "huí lái de", "Saat kembali", "Arah pulang perjalanan"),
+                        WordToken("路上", "lù shang", "Di perjalanan / di jalan", "Lokasi sepanjang jalan"),
+                        WordToken("儿子", "érzi", "Anak laki-laki", "Putra kandung"),
+                        WordToken("对", "duì", "Kepada", "Preposisi arah sasaran tutur"),
+                        WordToken("爸爸", "bàba", "Ayah", "Panggilan orang tua laki-laki"),
+                        WordToken("说", "shuō", "Berkata", "Kata kerja tutur"),
+                        WordToken("爸爸", "bàba", "Ayah", "Panggilan sayang anak"),
+                        WordToken("我", "wǒ", "Saya / aku", "Kata ganti orang pertama"),
+                        WordToken("累了", "lèi le", "Lelah / capek", "Kondisi fisik letih setelah beraktivitas"),
+                        WordToken("我们", "wǒmen", "Kita", "Kata ganti orang pertama jamak"),
+                        WordToken("坐车", "zuò chē", "Naik kendaraan", "Menaiki moda transportasi darat"),
+                        WordToken("吧", "ba", "Ayo / ya", "Partikel ajakan santai")
+                    )
+                ),
+                Sentence(
+                    "s_ridecar_2",
+                    "“那要看你表现。”爸爸说。",
+                    "“Nà yào kàn nǐ biǎoxiàn.” Bàba shuō.",
+                    "“Itu tergantung bagaimana sikap dan kelakuanmu,” kata ayah.",
+                    listOf(
+                        WordToken("那要看", "nà yào kàn", "Itu tergantung", "Frasa penentu syarat/kondisi"),
+                        WordToken("你", "nǐ", "Kamu", "Kata ganti orang kedua"),
+                        WordToken("表现", "biǎoxiàn", "Kelakuan / sikap", "Sikap dan perilaku seseorang"),
+                        WordToken("爸爸", "bàba", "Ayah", "Subjek ayah"),
+                        WordToken("说", "shuō", "Berkata", "Kata kerja tutur")
+                    )
+                ),
+                Sentence(
+                    "s_ridecar_3",
+                    "儿子说：“好的，如果我表现好，我们就坐公共汽车回去；如果我表现不好，我们就坐出租车回去。”",
+                    "Érzi shuō: “Hǎo de, rúguǒ wǒ biǎoxiàn hǎo, wǒmen jiù zuò gōnggòng qìchē huí qù; rúguǒ wǒ biǎoxiàn bù hǎo, wǒmen jiù zuò chūzūchē huí qù.”",
+                    "Anak itu berkata: “Baiklah, kalau sikapku baik, kita naik bus umum pulang; tapi kalau sikapku tidak baik, kita naik taksi pulang.”",
+                    listOf(
+                        WordToken("儿子", "érzi", "Anak laki-laki", "Subjek putra"),
+                        WordToken("说", "shuō", "Berkata", "Kata kerja tutur"),
+                        WordToken("好的", "hǎo de", "Baiklah", "Pernyataan sepakat cerdik"),
+                        WordToken("如果", "rúguǒ", "Jika / kalau", "Konjungsi pengandaian"),
+                        WordToken("我", "wǒ", "Saya / aku", "Kata ganti orang pertama"),
+                        WordToken("表现", "biǎoxiàn", "Sikap / kelakuan", "Perilaku"),
+                        WordToken("好", "hǎo", "Baik", "Kondisi positif"),
+                        WordToken("我们", "wǒmen", "Kita", "Pronomina jamak"),
+                        WordToken("就坐", "jiù zuò", "Maka naik", "Penegasan tindakan transportasi"),
+                        WordToken("公共汽车", "gōnggòng qìchē", "Bus umum", "Transportasi bus kota"),
+                        WordToken("回去", "huí qù", "Pulang", "Kembali ke rumah"),
+                        WordToken("如果", "rúguǒ", "Jika / kalau", "Konjungsi pengandaian"),
+                        WordToken("我", "wǒ", "Saya / aku", "Pronomina pertama"),
+                        WordToken("表现", "biǎoxiàn", "Sikap / perilaku", "Perilaku"),
+                        WordToken("不好", "bù hǎo", "Tidak baik / nakal", "Kondisi negatif"),
+                        WordToken("我们", "wǒmen", "Kita", "Pronomina jamak"),
+                        WordToken("就坐", "jiù zuò", "Maka naik", "Penegasan tindakan transportasi"),
+                        WordToken("出租车", "chūzūchē", "Taksi", "Mobil sewa penumpang yang lebih nyaman"),
+                        WordToken("回去", "huí qù", "Pulang", "Kembali ke kediaman")
+                    )
+                )
+            ),
+            questions = listOf(
+                StoryQuestion(
+                    "q_ridecar_1",
+                    "在回来的路上，儿子对爸爸说了什么？(Di perjalanan pulang, apa yang dikatakan anak itu kepada ayahnya?)",
+                    listOf(
+                        "他肚子饿了想吃米饭 (Dia lapar ingin makan nasi)",
+                        "他累了，想坐车回家 (Dia lelah dan ingin naik kendaraan pulang)",
+                        "他还想继续玩 (Dia masih ingin terus bermain)",
+                        "他想去买新衣服 (Dia ingin membeli baju baru)"
+                    ),
+                    1,
+                    "Anak itu berkata: '爸爸，我累了，我们坐车吧。' (Ayah, aku lelah, ayo kita naik kendaraan)."
+                ),
+                StoryQuestion(
+                    "q_ridecar_2",
+                    "爸爸原本的意思是什么？(Apa maksud awal ayah saat berkata '那要看你表现'?)",
+                    listOf(
+                        "表现好才可以坐车 (Berkelakuan baik barulah boleh naik kendaraan pulang)",
+                        "表现好可以买玩具 (Berkelakuan baik boleh membeli mainan)",
+                        "完全不打算回家 (Sama sekali tidak berencana pulang)",
+                        "必须马上走路回家 (Harus langsung berjalan kaki pulang)"
+                    ),
+                    0,
+                    "Ayah bermaksud memberi syarat kedisiplinan: kalau bersikap baik baru boleh naik kendaraan pulang."
+                ),
+                StoryQuestion(
+                    "q_ridecar_3",
+                    "按照儿子的计划，如果表现好他们要坐什么？(Menurut si anak, kalau sikapnya baik mereka akan naik apa?)",
+                    listOf(
+                        "坐出租车 (Naik taksi)",
+                        "坐公共汽车 (Naik bus umum)",
+                        "坐火车 (Naik kereta api)",
+                        "走路 (Jalan kaki)"
+                    ),
+                    1,
+                    "Anak itu berkata: '如果我表现好，我们就坐公共汽车回去' (Kalau sikapku baik, kita naik bus umum pulang)."
+                ),
+                StoryQuestion(
+                    "q_ridecar_4",
+                    "为什么儿子的回答让人觉得很好笑？(Mengapa jawaban anak laki-laki itu terdengar sangat lucu?)",
+                    listOf(
+                        "因为他害怕坐车 (Karena dia takut naik kendaraan)",
+                        "因为表现不好反而可以坐更贵更舒服的出租车 (Karena kalau nakal/tidak baik, dia malah minta naik taksi yang lebih mahal dan nyaman)",
+                        "因为他在路边大哭 (Karena dia menangis di pinggir jalan)",
+                        "因为他想自己开车 (Karena dia ingin menyetir sendiri)"
+                    ),
+                    1,
+                    "Kelucuan puncaknya: jika berkelakuan tidak baik, dia malah mengatur agar mereka pulang naik taksi ('出租车') yang jauh lebih nyaman daripada bus umum!"
+                )
+            )
+        ),
+
         // Cerita 1 - Sapaan & Murid Baru
         Story(
             id = "story_1",
