@@ -2017,6 +2017,118 @@ object LearningRepository {
             )
         ),
 
+        // Cerita Mandarin Bean 12: Never Seen (没见过)
+        Story(
+            id = "story_never_seen",
+            titleHanzi = "没见过",
+            titlePinyin = "Méi Jiànguo",
+            titleTranslation = "Never Seen (Belum Pernah Melihat)",
+            level = "HSK 1",
+            category = "Humor & Keluarga",
+            description = "Anekdot cerdas dan jenaka tentang seorang anak berusia 7 tahun yang tangannya kotor dan memberikan jawaban tak terduga kepada ibunya.",
+            coverEmoji = "👧",
+            coverImageRes = R.drawable.cover_story_never_seen,
+            estimatedReadMinutes = 2,
+            sentences = listOf(
+                Sentence(
+                    "s_neverseen_1",
+                    "7岁的女儿回家后，妈妈看见她的手很脏，就说：“看你的手，多脏呀！你什么时候看到过我的手这么脏了？”",
+                    "7 suì de nǚ'ér huí jiā hòu, māma kànjiàn tā de shǒu hěn zāng, jiù shuō: “Kàn nǐ de shǒu, duō zāng ya! Nǐ shénme shíhou kàn dào guo wǒ de shǒu zhème zāng le?”",
+                    "Setelah anak perempuan berusia 7 tahun pulang ke rumah, ibu melihat tangannya sangat kotor, lalu berkata: “Lihat tanganmu, kotor sekali ya! Kapan kamu pernah melihat tangan ibu sekotor ini?”",
+                    listOf(
+                        WordToken("7岁的", "7 suì de", "Berusia 7 tahun", "Keterangan usia anak"),
+                        WordToken("女儿", "nǚ'ér", "Anak perempuan", "Putri kandung"),
+                        WordToken("回家后", "huí jiā hòu", "Setelah pulang ke rumah", "Kembali ke kediaman + setelah"),
+                        WordToken("妈妈", "māma", "Ibu", "Panggilan orang tua perempuan"),
+                        WordToken("看见", "kànjiàn", "Melihat", "Menangkap dengan indera penglihatan"),
+                        WordToken("她的", "tā de", "Miliknya / -nya", "Pronomina kepemilikan orang ketiga perempuan"),
+                        WordToken("手", "shǒu", "Tangan", "Bagian tubuh tangan"),
+                        WordToken("很脏", "hěn zāng", "Sangat kotor", "Kondisi terkena noda atau tanah"),
+                        WordToken("就说", "jiù shuō", "Lalu berkata", "Konjungsi kelanjutan tutur"),
+                        WordToken("看", "kàn", "Lihatlah", "Seruan untuk memperhatikan"),
+                        WordToken("你的", "nǐ de", "Milikmu", "Kepemilikan orang kedua"),
+                        WordToken("手", "shǒu", "Tangan", "Bagian tubuh tangan"),
+                        WordToken("多脏呀", "duō zāng ya", "Kotor sekali ya!", "Seruan penegas derajat kotor"),
+                        WordToken("你", "nǐ", "Kamu", "Kata ganti orang kedua"),
+                        WordToken("什么时候", "shénme shíhou", "Kapan", "Kata tanya waktu kejadian"),
+                        WordToken("看到过", "kàn dào guo", "Pernah melihat", "Melihat + aspek pengalaman pernah"),
+                        WordToken("我的", "wǒ de", "Milik saya", "Kepemilikan penutur"),
+                        WordToken("手", "shǒu", "Tangan", "Bagian tubuh tangan"),
+                        WordToken("这么脏了", "zhème zāng le", "Sekotor ini", "Tingkat kotor yang ekstrem")
+                    )
+                ),
+                Sentence(
+                    "s_neverseen_2",
+                    "女儿回答：“没有，妈妈。因为我没有看到过你7岁的样子。”",
+                    "Nǚ'ér huídá: “Méiyǒu, māma. Yīnwèi wǒ méiyǒu kàn dào guo nǐ 7 suì de yàngzi.”",
+                    "Anak perempuan menjawab: “Belum pernah, Ibu. Karena aku belum pernah melihat penampilan Ibu saat berumur 7 tahun.”",
+                    listOf(
+                        WordToken("女儿", "nǚ'ér", "Anak perempuan", "Putri kandung"),
+                        WordToken("回答", "huídá", "Menjawab", "Memberikan jawaban atau sanggahan"),
+                        WordToken("没有", "méiyǒu", "Belum pernah / tidak", "Negasi pengalaman"),
+                        WordToken("妈妈", "māma", "Ibu", "Panggilan hormat sayang kepada ibu"),
+                        WordToken("因为", "yīnwèi", "Karena", "Konjungsi alasan atau sebab"),
+                        WordToken("我", "wǒ", "Saya / aku", "Kata ganti orang pertama"),
+                        WordToken("没有", "méiyǒu", "Tidak pernah", "Bentuk negasi"),
+                        WordToken("看到过", "kàn dào guo", "Pernah melihat", "Pengalaman melihat"),
+                        WordToken("你", "nǐ", "Kamu / Ibu", "Panggilan untuk lawan bicara"),
+                        WordToken("7岁的", "7 suì de", "Berusia 7 tahun", "Kondisi umur 7 tahun"),
+                        WordToken("样子", "yàngzi", "Penampilan / rupa", "Bentuk atau keadaan rupa seseorang")
+                    )
+                )
+            ),
+            questions = listOf(
+                StoryQuestion(
+                    "q_neverseen_1",
+                    "女儿今年多大？(Berapa umur anak perempuan itu?)",
+                    listOf(
+                        "5岁 (5 tahun)",
+                        "7岁 (7 tahun)",
+                        "9岁 (9 tahun)",
+                        "10岁 (10 tahun)"
+                    ),
+                    1,
+                    "Di kalimat pertama tertulis: '7岁的女儿回家后' (Anak perempuan berusia 7 tahun setelah pulang ke rumah)."
+                ),
+                StoryQuestion(
+                    "q_neverseen_2",
+                    "妈妈看见女儿的什么很脏？(Ibu melihat bagian tubuh anak perempuan yang mana yang sangat kotor?)",
+                    listOf(
+                        "衣服 (Pakaian)",
+                        "手 (Tangan)",
+                        "鞋子 (Sepatu)",
+                        "脸 (Wajah)"
+                    ),
+                    1,
+                    "Ibu melihat tangannya: '妈妈看见她的手很脏，就说：看你的手，多脏呀！'."
+                ),
+                StoryQuestion(
+                    "q_neverseen_3",
+                    "妈妈问了女儿什么问题？(Pertanyaan apa yang dilontarkan ibu?)",
+                    listOf(
+                        "作业写完了吗？ (Apakah sudah selesai mengerjakan PR?)",
+                        "你什么时候看到过我的手这么脏了？ (Kapan kamu pernah melihat tangan ibu sekotor ini?)",
+                        "今天在学校学了什么？ (Hari ini di sekolah belajar apa?)",
+                        "晚饭想吃什么？ (Makan malam ingin makan apa?)"
+                    ),
+                    1,
+                    "Ibu menegur: '你什么时候看到过我的手这么脏了？' (Kapan kamu pernah melihat tangan ibu sekotor ini?)."
+                ),
+                StoryQuestion(
+                    "q_neverseen_4",
+                    "女儿是如何机智回答妈妈的？(Bagaimana anak perempuan itu menjawab ibunya secara cerdik?)",
+                    listOf(
+                        "说自己马上就去洗手 (Mengatakan akan segera cuci tangan)",
+                        "说自己没看到过妈妈7岁时的样子 (Mengatakan belum pernah melihat rupa ibu waktu umur 7 tahun)",
+                        "说是弟弟弄脏的 (Menyalahkan adiknya)",
+                        "默不作声 (Hanya terdiam)"
+                    ),
+                    1,
+                    "Anak tersebut dengan polos dan cerdas berdalih: '没有，妈妈。因为我没有看到过你7岁的样子。' (Belum pernah bu, karena aku belum pernah lihat penampilan ibu saat berusia 7 tahun!)."
+                )
+            )
+        ),
+
         // Cerita 1 - Sapaan & Murid Baru
         Story(
             id = "story_1",
