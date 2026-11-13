@@ -90,7 +90,7 @@ fun MainAppContainer(
                 1 -> SavedVocabScreen(ttsManager = ttsManager)
                 2 -> StoryListScreen(onSelectStory = { story -> activeStory = story })
                 3 -> StoryListScreen(onSelectStory = { story -> activeStory = story })
-                4 -> SavedVocabScreen(ttsManager = ttsManager)
+                4 -> ProfileScreen()
             }
         }
     }
