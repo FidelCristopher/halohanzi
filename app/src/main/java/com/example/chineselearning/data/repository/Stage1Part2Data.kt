@@ -16,9 +16,9 @@ val stage1Part2Exercises = listOf<Exercise>(
         audioToSpeak = "男朋友",
         pictureOptions = listOf(
             PictureOption("u2_p2_q1_opt1", "teman sekolah", "同学", R.drawable.ill_cartoon_teman_sekolah, false),
-            PictureOption("u2_p2_q1_opt2", "(perempuan) pacar", "女朋友", R.drawable.ill_cartoon_dia_perempuan, false),
+            PictureOption("u2_p2_q1_opt2", "(perempuan) pacar", "女朋友", R.drawable.ill_cartoon_pacar_wanita, false),
             PictureOption("u2_p2_q1_opt3", "teman", "朋友", R.drawable.ill_cartoon_teman, false),
-            PictureOption("u2_p2_q1_opt4", "(laki-laki) pacar", "男朋友", R.drawable.ill_cartoon_dia_pria, true)
+            PictureOption("u2_p2_q1_opt4", "(laki-laki) pacar", "男朋友", R.drawable.ill_cartoon_pacar_pria, true)
         )
     ),
 
@@ -47,8 +47,8 @@ val stage1Part2Exercises = listOf<Exercise>(
         correctAnswer = "(perempuan) pacar",
         audioToSpeak = "女朋友",
         pictureOptions = listOf(
-            PictureOption("u2_p2_q3_opt1", "(laki-laki) pacar", "男朋友", R.drawable.ill_cartoon_dia_pria, false),
-            PictureOption("u2_p2_q3_opt2", "(perempuan) pacar", "女朋友", R.drawable.ill_cartoon_dia_perempuan, true),
+            PictureOption("u2_p2_q3_opt1", "(laki-laki) pacar", "男朋友", R.drawable.ill_cartoon_pacar_pria, false),
+            PictureOption("u2_p2_q3_opt2", "(perempuan) pacar", "女朋友", R.drawable.ill_cartoon_pacar_wanita, true),
             PictureOption("u2_p2_q3_opt3", "teman sekolah", "同学", R.drawable.ill_cartoon_teman_sekolah, false),
             PictureOption("u2_p2_q3_opt4", "teman", "朋友", R.drawable.ill_cartoon_teman, false)
         )
