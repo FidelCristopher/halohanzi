@@ -3,8 +3,10 @@ package com.example.chineselearning.ui.screens
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.lazy.LazyListState
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Modifier
 import com.example.chineselearning.audio.TtsManager
 import com.example.chineselearning.data.model.Lesson
@@ -21,6 +23,11 @@ fun MainAppContainer(
     var activeLesson by remember { mutableStateOf<Lesson?>(null) }
     var activeNodeId by remember { mutableStateOf<String?>(null) }
     var activePartNumber by remember { mutableStateOf(1) }
+
+    // Hoisted and saveable LazyListState to preserve exact scroll position across navigation
+    val homeListState = rememberSaveable(saver = LazyListState.Saver) {
+        LazyListState()
+    }
 
     // Graded Story Reader Mode
     if (activeStory != null) {
@@ -72,6 +79,7 @@ fun MainAppContainer(
         ) {
             when (selectedTab) {
                 0 -> HomeScreen(
+                    lazyListState = homeListState,
                     onSelectLesson = { lesson, nodeId ->
                         activeNodeId = nodeId
                         activePartNumber = com.example.chineselearning.data.repository.LearningRepository.getStageProgress(nodeId)

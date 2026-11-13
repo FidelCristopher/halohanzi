@@ -8,7 +8,9 @@ import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.LazyListState
 import androidx.compose.foundation.lazy.itemsIndexed
+import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
@@ -57,6 +59,7 @@ fun getNodeRimColor(color: Color): Color {
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun HomeScreen(
+    lazyListState: LazyListState = rememberLazyListState(),
     onSelectLesson: (Lesson, String) -> Unit,
     onSelectStory: (Story) -> Unit
 ) {
@@ -90,6 +93,7 @@ fun HomeScreen(
     )
 
     LazyColumn(
+        state = lazyListState,
         modifier = Modifier
             .fillMaxSize()
             .background(Color(0xFFFFFDFE)),
