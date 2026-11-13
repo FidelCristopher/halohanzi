@@ -727,31 +727,34 @@ fun LessonExerciseScreen(
 
                 Spacer(modifier = Modifier.height(36.dp))
 
-                // Sentence with slot and underline indicator
+                // Sentence with slot and underline indicator (FlowRow for seamless multi-line word wrapping)
                 val parts = exercise.sentenceWithBlank.split("________")
-                val prefix = parts.getOrNull(0) ?: ""
-                val suffix = parts.getOrNull(1) ?: ""
+                val prefix = parts.getOrNull(0)?.trim() ?: ""
+                val suffix = parts.getOrNull(1)?.trim() ?: ""
 
-                Row(
+                FlowRow(
                     modifier = Modifier.fillMaxWidth(),
-                    verticalAlignment = Alignment.Bottom,
-                    horizontalArrangement = Arrangement.Start
+                    horizontalArrangement = Arrangement.spacedBy(8.dp),
+                    verticalArrangement = Arrangement.spacedBy(10.dp)
                 ) {
                     if (prefix.isNotBlank()) {
-                        Text(
-                            text = prefix,
-                            fontSize = 20.sp,
-                            fontWeight = FontWeight.Normal,
-                            color = DeepNavy,
-                            modifier = Modifier.padding(bottom = 6.dp)
-                        )
-                        Spacer(modifier = Modifier.width(8.dp))
+                        prefix.split(" ").filter { it.isNotBlank() }.forEach { word ->
+                            Text(
+                                text = word,
+                                fontSize = 20.sp,
+                                fontWeight = FontWeight.Normal,
+                                color = DeepNavy,
+                                modifier = Modifier.align(Alignment.CenterVertically)
+                            )
+                        }
                     }
 
                     // Blank slot with underline
                     Column(
                         horizontalAlignment = Alignment.CenterHorizontally,
-                        modifier = Modifier.width(IntrinsicSize.Min)
+                        modifier = Modifier
+                            .width(IntrinsicSize.Min)
+                            .align(Alignment.CenterVertically)
                     ) {
                         if (selectedOption != null) {
                             Surface(
@@ -795,14 +798,15 @@ fun LessonExerciseScreen(
                     }
 
                     if (suffix.isNotBlank()) {
-                        Spacer(modifier = Modifier.width(10.dp))
-                        Text(
-                            text = suffix.trimStart(),
-                            fontSize = 20.sp,
-                            fontWeight = FontWeight.Normal,
-                            color = DeepNavy,
-                            modifier = Modifier.padding(bottom = 6.dp)
-                        )
+                        suffix.split(" ").filter { it.isNotBlank() }.forEach { word ->
+                            Text(
+                                text = word,
+                                fontSize = 20.sp,
+                                fontWeight = FontWeight.Normal,
+                                color = DeepNavy,
+                                modifier = Modifier.align(Alignment.CenterVertically)
+                            )
+                        }
                     }
                 }
 
