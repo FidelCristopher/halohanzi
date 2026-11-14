@@ -2652,5 +2652,152 @@ val mandarinBeanStories: List<Story> = listOf(
                     "Inilah kejeniusan pedagang: '我这样做，每次都能卖出三杯' (Dengan trik harga semu itu, orang yang tadinya hanya ingin beli 1 cangkir terdorong membeli 3 cangkir sekaligus!)."
                 )
             )
+        ),
+
+        // Cerita Mandarin Bean 19: Lost Girl (迷失的女孩)
+        Story(
+            id = "story_lost_girl",
+            titleHanzi = "迷失的女孩",
+            titlePinyin = "Míshī de Nǚhái",
+            titleTranslation = "Lost Girl (Gadis Kecil yang Tersesat)",
+            level = "Fun, HSK 1",
+            category = "Humor & Keluarga",
+            description = "Anekdot menggemaskan tentang seorang anak yang tersesat di jalan dan menjawab nama orang tuanya dengan panggilan sayang ayah dan ibunya di rumah.",
+            coverEmoji = "👧",
+            coverImageRes = R.drawable.cover_story_lost_girl,
+            estimatedReadMinutes = 2,
+            sentences = listOf(
+                Sentence(
+                    "s_lostgirl_1",
+                    "有一个小女孩在路边哭，警察过来问：“好孩子，怎么了？”",
+                    "Yǒu yí gè xiǎo nǚhái zài lù biān kū, jǐngchá guò lái wèn: “Hǎo háizi, zěnme le?”",
+                    "Ada seorang gadis kecil menangis di pinggir jalan, polisi datang menghampiri dan bertanya: “Anak baik, ada apa?”",
+                    listOf(
+                        WordToken("有一个", "yǒu yí gè", "Ada seorang", "Frasa keberadaan seorang anak"),
+                        WordToken("小女孩", "xiǎo nǚhái", "Gadis kecil", "Anak perempuan kecil"),
+                        WordToken("在", "zài", "Di", "Preposisi lokasi tempat"),
+                        WordToken("路边", "lù biān", "Pinggir jalan", "Sisi jalan umum"),
+                        WordToken("哭", "kū", "Menangis", "Mengeluarkan air mata kesedihan"),
+                        WordToken("警察", "jǐngchá", "Polisi", "Petugas kepolisian penolong"),
+                        WordToken("过来", "guò lái", "Datang menghampiri", "Mendekati anak tersebut"),
+                        WordToken("问", "wèn", "Bertanya", "Kata kerja tutur"),
+                        WordToken("好孩子", "hǎo háizi", "Anak baik", "Sapaan ramah kepada anak kecil"),
+                        WordToken("怎么了", "zěnme le", "Ada apa / kenapa?", "Pertanyaan menanyakan penyebab tangis")
+                    )
+                ),
+                Sentence(
+                    "s_lostgirl_2",
+                    "小女孩哭着说：“我想回家，但是我不知道回家的路了。”",
+                    "Xiǎo nǚhái kū zhe shuō: “Wǒ xiǎng huí jiā, dànshì wǒ bù zhīdào huí jiā de lù le.”",
+                    "Gadis kecil itu sambil menangis berkata: “Aku ingin pulang ke rumah, tetapi aku sudah tidak tahu jalan pulang ke rumah.”",
+                    listOf(
+                        WordToken("小女孩", "xiǎo nǚhái", "Gadis kecil", "Subjek anak perempuan"),
+                        WordToken("哭着说", "kū zhe shuō", "Berkata sambil menangis", "Tindakan tutur diiringi tangisan"),
+                        WordToken("我想", "wǒ xiǎng", "Saya ingin", "Keinginan kuat untuk pulang"),
+                        WordToken("回家", "huí jiā", "Pulang ke rumah", "Kembali ke kediaman keluarga"),
+                        WordToken("但是", "dànshì", "Tetapi / namun", "Konjungsi pertentangan"),
+                        WordToken("我不知道", "wǒ bù zhīdào", "Saya tidak tahu", "Ketidaktahuan rute"),
+                        WordToken("回家的", "huí jiā de", "Arah pulang", "Menuju arah ke rumah"),
+                        WordToken("路", "lù", "Jalan", "Jalanan / jalur arah pulang"),
+                        WordToken("了", "le", "Sudah", "Partikel aspek perubahan keadaan")
+                    )
+                ),
+                Sentence(
+                    "s_lostgirl_3",
+                    "警察问：“你爸爸叫什么？”",
+                    "Jǐngchá wèn: “Nǐ bàba jiào shénme?”",
+                    "Polisi bertanya: “Siapa nama ayahmu?”",
+                    listOf(
+                        WordToken("警察", "jǐngchá", "Polisi", "Subjek petugas polisi"),
+                        WordToken("问", "wèn", "Bertanya", "Kata kerja tutur"),
+                        WordToken("你爸爸", "nǐ bàba", "Ayahmu", "Orang tua laki-laki"),
+                        WordToken("叫什么", "jiào shénme", "Siapa namanya?", "Pertanyaan menanyakan nama")
+                    )
+                ),
+                Sentence(
+                    "s_lostgirl_4",
+                    "小女孩说：“亲爱的！”",
+                    "Xiǎo nǚhái shuō: “Qīn'ài de!”",
+                    "Gadis kecil berkata: “Sayang!”",
+                    listOf(
+                        WordToken("小女孩", "xiǎo nǚhái", "Gadis kecil", "Subjek anak"),
+                        WordToken("说", "shuō", "Berkata", "Kata kerja tutur"),
+                        WordToken("亲爱的", "qīn'ài de", "Sayang! / Darling", "Panggilan sayang mesra istri ke suami")
+                    )
+                ),
+                Sentence(
+                    "s_lostgirl_5",
+                    "警察问：“你妈妈叫什么？”",
+                    "Jǐngchá wèn: “Nǐ māma jiào shénme?”",
+                    "Polisi bertanya: “Siapa nama ibumu?”",
+                    listOf(
+                        WordToken("警察", "jǐngchá", "Polisi", "Subjek polisi"),
+                        WordToken("问", "wèn", "Bertanya", "Kata kerja tutur"),
+                        WordToken("你妈妈", "nǐ māma", "Ibumu", "Orang tua perempuan"),
+                        WordToken("叫什么", "jiào shénme", "Siapa namanya?", "Pertanyaan menanyakan nama")
+                    )
+                ),
+                Sentence(
+                    "s_lostgirl_6",
+                    "小女孩说：“宝贝！”",
+                    "Xiǎo nǚhái shuō: “Bǎobèi!”",
+                    "Gadis kecil berkata: “Baby / Sayang!”",
+                    listOf(
+                        WordToken("小女孩", "xiǎo nǚhái", "Gadis kecil", "Subjek anak"),
+                        WordToken("说", "shuō", "Berkata", "Kata kerja tutur"),
+                        WordToken("宝贝", "bǎobèi", "Baby! / Sayang", "Panggilan sayang manis suami ke istri")
+                    )
+                )
+            ),
+            questions = listOf(
+                StoryQuestion(
+                    "q_lostgirl_1",
+                    "小女孩为什么在路边哭？(Mengapa gadis kecil itu menangis di pinggir jalan?)",
+                    listOf(
+                        "迷路了，不知道回家的路 (Tersesat dan tidak tahu jalan pulang ke rumah)",
+                        "肚子饿了想吃东西 (Lapar ingin makan)",
+                        "没有零花钱 (Tidak punya uang saku)",
+                        "和同学吵架了 (Bertengkar dengan teman)"
+                    ),
+                    0,
+                    "Gadis kecil itu mengadu: '我想回家，但是我不知道回家的路了' (Saya ingin pulang, tapi tidak tahu jalan pulang)."
+                ),
+                StoryQuestion(
+                    "q_lostgirl_2",
+                    "谁过来热心帮助小女孩？(Siapa yang datang dengan ramah menolong gadis kecil itu?)",
+                    listOf(
+                        "医生 (Dokter)",
+                        "老师 (Guru)",
+                        "警察 (Polisi)",
+                        "邻居 (Tetangga)"
+                    ),
+                    2,
+                    "Teks menyatakan: '警察过来问：好孩子，怎么了？' (Petugas polisi datang menghampiri dan bertanya)."
+                ),
+                StoryQuestion(
+                    "q_lostgirl_3",
+                    "当警察问小女孩爸爸叫什么名字时，小女孩怎么回答？(Saat polisi menanyakan nama ayahnya, apa jawaban gadis kecil itu?)",
+                    listOf(
+                        "李大卫 (Li Dawei)",
+                        "亲爱的 (Sayang / Darling)",
+                        "王先生 (Tuan Wang)",
+                        "小孙 (Xiao Sun)"
+                    ),
+                    1,
+                    "Gadis kecil itu dengan polos menjawab: '亲爱的！' (karena itulah panggilan ibunya kepada sang ayah di rumah)."
+                ),
+                StoryQuestion(
+                    "q_lostgirl_4",
+                    "为什么小女孩会说妈妈的名字叫“宝贝”？(Mengapa gadis kecil itu mengatakan nama ibunya adalah 'Baby/Sayang'?)",
+                    listOf(
+                        "因为平时在家里爸爸都这么亲切地叫妈妈 (Karena sehari-hari di rumah ayahnya memanggil ibu dengan panggilan sayang tersebut)",
+                        "因为妈妈的名字很难念 (Karena nama ibu susah diucapkan)",
+                        "因为她不想告诉警察实话 (Karena tidak mau jujur ke polisi)",
+                        "因为她把朋友的名字记混了 (Karena tertukar dengan nama temannya)"
+                    ),
+                    0,
+                    "Inilah puncak kelucuan cerita: karena di rumah ayah dan ibunya selalu memanggil mesra satu sama lain dengan '亲爱的' (Darling) dan '宝贝' (Baby), anak kecil itu mengira itulah nama resmi orang tuanya!"
+                )
+            )
         )
 )
