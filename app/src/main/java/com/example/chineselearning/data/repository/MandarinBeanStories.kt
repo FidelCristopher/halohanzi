@@ -2799,5 +2799,539 @@ val mandarinBeanStories: List<Story> = listOf(
                     "Inilah puncak kelucuan cerita: karena di rumah ayah dan ibunya selalu memanggil mesra satu sama lain dengan '亲爱的' (Darling) dan '宝贝' (Baby), anak kecil itu mengira itulah nama resmi orang tuanya!"
                 )
             )
+        ),
+
+        // Cerita Mandarin Bean 20: Playing with Water (玩水)
+        Story(
+            id = "story_playing_with_water",
+            titleHanzi = "玩水",
+            titlePinyin = "Wán Shuǐ",
+            titleTranslation = "Playing with Water (Bermain Air)",
+            level = "Fun, HSK 1",
+            category = "Humor & Rumah",
+            description = "Anekdot lucu tentang seorang ibu yang dengan cerdik memanfaatkan kegemaran anaknya bermain air untuk menyuruhnya mencuci piring.",
+            coverEmoji = "🏊",
+            coverImageRes = R.drawable.cover_story_playing_with_water,
+            estimatedReadMinutes = 2,
+            sentences = listOf(
+                Sentence(
+                    "s_playwater_1",
+                    "星期六，妈妈和儿子在家看电视。妈妈说：“儿子，你很喜欢玩水，是不是？”",
+                    "Xīngqīliù, māma hé érzi zài jiā kàn diànshì. Māma shuō: “Érzi, nǐ hěn xǐhuan wán shuǐ, shì bu shì?”",
+                    "Hari Sabtu, ibu dan anak laki-lakinya menonton TV di rumah. Ibu berkata: “Nak, kamu sangat suka bermain air, benar kan?”",
+                    listOf(
+                        WordToken("星期六", "Xīngqīliù", "Hari Sabtu", "Nama hari ke-6 dalam sepekan"),
+                        WordToken("妈妈", "māma", "Ibu", "Orang tua perempuan"),
+                        WordToken("和", "hé", "Dan", "Kata penghubung"),
+                        WordToken("儿子", "érzi", "Anak laki-laki", "Putra kandung"),
+                        WordToken("在家", "zài jiā", "Di rumah", "Keterangan tempat kediaman"),
+                        WordToken("看电视", "kàn diànshì", "Menonton TV", "Aktivitas menonton televisi"),
+                        WordToken("妈妈", "māma", "Ibu", "Subjek ibu"),
+                        WordToken("说", "shuō", "Berkata", "Kata kerja tutur"),
+                        WordToken("儿子", "érzi", "Anakku / nak", "Panggilan sayang kepada putra"),
+                        WordToken("你", "nǐ", "Kamu", "Pronomina orang kedua"),
+                        WordToken("很喜欢", "hěn xǐhuan", "Sangat suka", "Derajat kesukaan tinggi"),
+                        WordToken("玩水", "wán shuǐ", "Bermain air", "Aktivitas bermain dengan air"),
+                        WordToken("是不是", "shì bu shì", "Benar bukan?", "Pola tanya penegasan konfirmasi")
+                    )
+                ),
+                Sentence(
+                    "s_playwater_2",
+                    "五岁的儿子以为妈妈要带他去游泳池玩，高兴地说：“是的，妈妈。”",
+                    "Wǔ suì de érzi yǐwéi māma yào dài tā qù yóuyǒngchí wán, gāoxìng de shuō: “Shì de, māma.”",
+                    "Anak berusia 5 tahun itu mengira ibu akan membawanya pergi bermain ke kolam renang, dengan gembira berkata: “Benar sekali, Ibu.”",
+                    listOf(
+                        WordToken("五岁的", "wǔ suì de", "Berusia 5 tahun", "Keterangan usia anak"),
+                        WordToken("儿子", "érzi", "Anak laki-laki", "Subjek putra"),
+                        WordToken("以为", "yǐwéi", "Mengira / menyangka", "Dugaan yang ternyata salah"),
+                        WordToken("妈妈", "māma", "Ibu", "Pihak yang disangka"),
+                        WordToken("要带他去", "yào dài tā qù", "Akan mengajaknya pergi ke", "Rencana membawa anak"),
+                        WordToken("游泳池", "yóuyǒngchí", "Kolam renang", "Tempat berenang"),
+                        WordToken("玩", "wán", "Bermain", "Aktivitas rekreasi"),
+                        WordToken("高兴地", "gāoxìng de", "Dengan gembira", "Adverbia perasaan senang riang"),
+                        WordToken("说", "shuō", "Berkata", "Kata kerja tutur"),
+                        WordToken("是的", "shì de", "Benar / ya", "Pernyataan pembenaran antusias"),
+                        WordToken("妈妈", "māma", "Ibu", "Panggilan sayang ibu")
+                    )
+                ),
+                Sentence(
+                    "s_playwater_3",
+                    "妈妈说：“那你一定也喜欢洗碗，今天你洗碗，怎么样？”",
+                    "Māma shuō: “Nà nǐ yídìng yě xǐhuan xǐ wǎn, jīntiān nǐ xǐ wǎn, zěnmeyàng?”",
+                    "Ibu berkata: “Kalau begitu kamu pasti juga suka mencuci mangkuk, hari ini kamu yang cuci mangkuk ya, bagaimana?”",
+                    listOf(
+                        WordToken("妈妈", "māma", "Ibu", "Subjek ibu"),
+                        WordToken("说", "shuō", "Berkata", "Kata kerja tutur"),
+                        WordToken("那你", "nà nǐ", "Kalau begitu kamu", "Konjungsi kesimpulan + pronomina"),
+                        WordToken("一定", "yídìng", "Pasti / tentu", "Kepastian logis"),
+                        WordToken("也喜欢", "yě xǐhuan", "Juga suka", "Adverbia kesamaan + gemar"),
+                        WordToken("洗碗", "xǐ wǎn", "Mencuci mangkuk / piring", "Pekerjaan rumah tangga mencuci perabot makan"),
+                        WordToken("今天", "jīntiān", "Hari ini", "Keterangan waktu saat ini"),
+                        WordToken("你", "nǐ", "Kamu", "Pronomina orang kedua"),
+                        WordToken("洗碗", "xǐ wǎn", "Cuci mangkuk", "Tugas mencuci piring"),
+                        WordToken("怎么样", "zěnmeyàng", "Bagaimana?", "Kalimat tanya penawaran/persetujuan")
+                    )
+                )
+            ),
+            questions = listOf(
+                StoryQuestion(
+                    "q_playwater_1",
+                    "故事发生在哪一天？他们在做什么？(Pada hari apa cerita ini terjadi dan apa yang mereka lakukan?)",
+                    listOf(
+                        "星期一在学校上课 (Hari Senin belajar di sekolah)",
+                        "星期六在家看电视 (Hari Sabtu menonton TV di rumah)",
+                        "星期天在公园跑步 (Hari Minggu jogging di taman)",
+                        "星期五去饭馆吃饭 (Hari Jumat makan di restoran)"
+                    ),
+                    1,
+                    "Di awal kalimat tertulis jelas: '星期六，妈妈和儿子在家看电视' (Hari Sabtu, ibu dan anak laki-lakinya di rumah menonton TV)."
+                ),
+                StoryQuestion(
+                    "q_playwater_2",
+                    "五岁的儿子一开始以为妈妈要带他去哪里？(Awalnya anak berusia 5 tahun itu mengira ibu akan mengajaknya ke mana?)",
+                    listOf(
+                        "去超市买零食 (Ke supermarket beli camilan)",
+                        "去游泳池玩水 (Ke kolam renang bermain air)",
+                        "去图书馆借书 (Ke perpustakaan pinjam buku)",
+                        "去动物园看小狗 (Ke kebun binatang lihat anjing)"
+                    ),
+                    1,
+                    "Teks menyatakan: '五岁的儿子以为妈妈要带他去游泳池玩' (Anak 5 tahun itu menyangka ibu mau mengajaknya ke kolam renang)."
+                ),
+                StoryQuestion(
+                    "q_playwater_3",
+                    "妈妈真正想让儿子做的事情是什么？(Apa yang sebenarnya ingin disuruh oleh ibu kepada anaknya?)",
+                    listOf(
+                        "去洗衣服 (Mencuci baju)",
+                        "今天去洗碗 (Hari ini mencuci mangkuk piring)",
+                        "去打扫房间 (Membersihkan kamar)",
+                        "马上去睡觉 (Segera tidur)"
+                    ),
+                    1,
+                    "Ibu menjebaknya dengan cerdik: '那你一定也喜欢洗碗，今天你洗碗，怎么样？' (Kalau begitu kamu pasti juga suka cuci piring, hari ini kamu yang cuci piring ya!)."
+                ),
+                StoryQuestion(
+                    "q_playwater_4",
+                    "这个故事的笑点是什么？(Di mana letak kelucuan dari cerita ini?)",
+                    listOf(
+                        "Ibu terpeleset di dapur",
+                        "Anak mengira diajak bersenang-senang renang, ternyata disuruh kerja rumah tangga mencuci piring!",
+                        "Televisi mereka tiba-tiba rusak",
+                        "Mangkuknya pecah semua"
+                    ),
+                    1,
+                    "Plot twist lucunya: anak yang mengira akan diajak bermain air di kolam renang ternyata diakali oleh ibunya untuk mencuci tumpukan piring kotor!"
+                )
+            )
+        ),
+
+        // Cerita Mandarin Bean 21: Climb Mountain (爬山)
+        Story(
+            id = "story_climb_mountain",
+            titleHanzi = "爬山",
+            titlePinyin = "Pá Shān",
+            titleTranslation = "Climb Mountain (Mendaki Gunung)",
+            level = "Fun, HSK 1",
+            category = "Humor & Alam",
+            description = "Anekdot jenaka tentang seorang anak yang mempertanyakan logika ayahnya saat bersusah payah mendaki gunung hanya untuk melihat pemandangan di bawah.",
+            coverEmoji = "⛰️",
+            coverImageRes = R.drawable.cover_story_climb_mountain,
+            estimatedReadMinutes = 2,
+            sentences = listOf(
+                Sentence(
+                    "s_climbmountain_1",
+                    "星期六，爸爸带着小儿子爬山，他们花了3个小时爬到了山顶。",
+                    "Xīngqīliù, bàba dài zhe xiǎo érzi pá shān, tāmen huā le 3 gè xiǎoshí pá dào le shāndǐng.",
+                    "Hari Sabtu, ayah mengajak putra kecilnya mendaki gunung, mereka menghabiskan waktu 3 jam mendaki hingga ke puncak gunung.",
+                    listOf(
+                        WordToken("星期六", "Xīngqīliù", "Hari Sabtu", "Keterangan waktu akhir pekan"),
+                        WordToken("爸爸", "bàba", "Ayah", "Orang tua laki-laki"),
+                        WordToken("带着", "dài zhe", "Mengajak / mendampingi", "Aspek berkelanjutan mendampingi"),
+                        WordToken("小儿子", "xiǎo érzi", "Putra kecil / bungsu", "Anak laki-laki yang masih kecil"),
+                        WordToken("爬山", "pá shān", "Mendaki gunung", "Aktivitas olahraga mendaki lereng gunung"),
+                        WordToken("他们", "tāmen", "Mereka", "Pronomina orang ketiga jamak"),
+                        WordToken("花了", "huā le", "Menghabiskan / memakan", "Penggunaan sumber daya waktu"),
+                        WordToken("3个", "sān gè", "Tiga", "Bilangan angka 3 + kata penggolong"),
+                        WordToken("小时", "xiǎoshí", "Jam", "Satuan durasi waktu jam"),
+                        WordToken("爬到了", "pá dào le", "Mendaki sampai di", "Berhasil tiba di ketinggian"),
+                        WordToken("山顶", "shāndǐng", "Puncak gunung", "Titik tertinggi gunung")
+                    )
+                ),
+                Sentence(
+                    "s_climbmountain_2",
+                    "爸爸说：“看，山下的景色多好！”",
+                    "Bàba shuō: “Kàn, shān xià de jǐngsè duō hǎo!”",
+                    "Ayah berkata: “Lihat, pemandangan di bawah gunung betapa indahnya!”",
+                    listOf(
+                        WordToken("爸爸", "bàba", "Ayah", "Subjek ayah"),
+                        WordToken("说", "shuō", "Berkata", "Kata kerja tutur"),
+                        WordToken("看", "kàn", "Lihatlah", "Seruan mengarahkan pandangan mata"),
+                        WordToken("山下的", "shān xià de", "Yang di bawah gunung", "Keterangan posisi di lembah/bawah"),
+                        WordToken("景色", "jǐngsè", "Pemandangan", "Panorama alam pemandangan"),
+                        WordToken("多好", "duō hǎo", "Betapa indahnya! / sangat bagus!", "Seruan kekaguman atas keindahan")
+                    )
+                ),
+                Sentence(
+                    "s_climbmountain_3",
+                    "儿子说：“爸爸，山下的景色那么好，我们为什么要花那么多时间爬上来呢？”",
+                    "Érzi shuō: “Bàba, shān xià de jǐngsè nàme hǎo, wǒmen wèi shénme yào huā nàme duō shíjiān pá shàng lái ne?”",
+                    "Putranya berkata: “Ayah, kalau pemandangan di bawah gunung seindah itu, kenapa kita harus menghabiskan begitu banyak waktu mendaki ke atas sini ya?”",
+                    listOf(
+                        WordToken("儿子", "érzi", "Putra / anak laki-laki", "Subjek anak"),
+                        WordToken("说", "shuō", "Berkata", "Kata kerja tutur"),
+                        WordToken("爸爸", "bàba", "Ayah", "Panggilan sayang kepada ayah"),
+                        WordToken("山下的", "shān xià de", "Di bawah gunung", "Posisi lembah"),
+                        WordToken("景色", "jǐngsè", "Pemandangan", "Panorama pemandangan"),
+                        WordToken("那么好", "nàme hǎo", "Begitu indah / sedemikian bagus", "Derajat kualitas sangat tinggi"),
+                        WordToken("我们", "wǒmen", "Kita", "Pronomina jamak penutur"),
+                        WordToken("为什么", "wèi shénme", "Mengapa / kenapa", "Kata tanya menanyakan alasan"),
+                        WordToken("要花", "yào huā", "Harus menghabiskan", "Keharusan mengorbankan waktu"),
+                        WordToken("那么多", "nàme duō", "Begitu banyak", "Kuantitas jumlah yang besar"),
+                        WordToken("时间", "shíjiān", "Waktu", "Waktu / durasi jam"),
+                        WordToken("爬上来", "pá shàng lái", "Mendaki naik ke atas sini", "Arah gerak mendaki ke puncak"),
+                        WordToken("呢", "ne", "Ya?", "Partikel tanya retoris polos")
+                    )
+                )
+            ),
+            questions = listOf(
+                StoryQuestion(
+                    "q_climbmountain_1",
+                    "爸爸带着儿子花了多长时间爬到山顶？(Berapa lama ayah dan putranya mendaki hingga ke puncak gunung?)",
+                    listOf(
+                        "1个小时 (1 jam)",
+                        "2个小时 (2 jam)",
+                        "3个小时 (3 jam)",
+                        "5个小时 (5 jam)"
+                    ),
+                    2,
+                    "Di kalimat pertama tertulis: '他们花了3个小时爬到了山顶' (Mereka menghabiskan waktu 3 jam mendaki ke puncak)."
+                ),
+                StoryQuestion(
+                    "q_climbmountain_2",
+                    "爬到山顶后，爸爸赞叹什么？(Setelah tiba di puncak, pemandangan apa yang dikagumi sang ayah?)",
+                    listOf(
+                        "天上的白云 (Awan putih di langit)",
+                        "山下的美丽景色 (Pemandangan indah di bawah gunung)",
+                        "山顶的饭馆 (Restoran di puncak gunung)",
+                        "路边的小动物 (Hewan kecil di jalan)"
+                    ),
+                    1,
+                    "Ayah berkata dengan bangga: '看，山下的景色多好！' (Lihat, betapa indahnya pemandangan di bawah gunung!)."
+                ),
+                StoryQuestion(
+                    "q_climbmountain_3",
+                    "儿子对爸爸的赞叹提出了什么疑问？(Pertanyaan apa yang dilontarkan sang anak menanggapi ucapan ayahnya?)",
+                    listOf(
+                        "什么时候可以吃午饭 (Kapan bisa makan siang)",
+                        "既然山下景色那么好，为什么还要花3小时费力爬上来？ (Kalau pemandangan di bawah seindah itu, kenapa harus repot mendaki 3 jam ke atas?)",
+                        "怎么坐索道下山 (Bagaimana naik kereta gantung untuk turun)",
+                        "还要再爬一座山吗 (Apakah mau mendaki gunung lain lagi)"
+                    ),
+                    1,
+                    "Anak itu berpikir kritis dan polos: '山下的景色那么好，我们为什么要花那么多时间爬上来呢？'."
+                ),
+                StoryQuestion(
+                    "q_climbmountain_4",
+                    "这个故事的幽默核心是什么？(Apa inti kelucuan dari cerita ini?)",
+                    listOf(
+                        "Anak kehilangan sepatunya di gunung",
+                        "Kepolosan anak yang menganggap capek-capek mendaki 3 jam hanya untuk melihat pemandangan tempat mereka berdiri semula adalah kesia-siaan!",
+                        "Ayah lupa membawa air minum",
+                        "Hujan turun sangat deras di puncak"
+                    ),
+                    1,
+                    "Humor terletak pada logika polos anak kecil yang mematahkan romantisme mendaki gunung: jika yang bagus adalah pemandangan di bawah, kenapa harus capek-capek naik ke atas!"
+                )
+            )
+        ),
+
+        // Cerita Mandarin Bean 22: Learn English (学英语)
+        Story(
+            id = "story_learn_english",
+            titleHanzi = "学英语",
+            titlePinyin = "Xué Yīngyǔ",
+            titleTranslation = "Learn English (Belajar Bahasa Inggris)",
+            level = "Fun, HSK 1",
+            category = "Humor & Sekolah",
+            description = "Anekdot cerdas tentang seorang murid yang membandingkan nasihat guru tentang mendengarkan bahasa Inggris dengan mendengar anjing menggonggong setiap hari.",
+            coverEmoji = "🇬🇧",
+            coverImageRes = R.drawable.cover_story_learn_english,
+            estimatedReadMinutes = 2,
+            sentences = listOf(
+                Sentence(
+                    "s_learneng_1",
+                    "老师说：“我们学校从下学期开始，用英语上课。”",
+                    "Lǎoshī shuō: “Wǒmen xuéxiào cóng xià xuéqī kāishǐ, yòng Yīngyǔ shàng kè.”",
+                    "Guru berkata: “Sekolah kita mulai semester depan akan menggunakan bahasa Inggris dalam kegiatan belajar mengajar.”",
+                    listOf(
+                        WordToken("老师", "lǎoshī", "Guru", "Pendidik / pengajar"),
+                        WordToken("说", "shuō", "Berkata", "Kata kerja tutur"),
+                        WordToken("我们", "wǒmen", "Kita / kami", "Pronomina jamak orang pertama"),
+                        WordToken("学校", "xuéxiào", "Sekolah", "Lembaga pendidikan sekolah"),
+                        WordToken("从", "cóng", "Mulai dari", "Preposisi titik awal waktu"),
+                        WordToken("下学期", "xià xuéqī", "Semester depan", "Masa periode sekolah berikutnya"),
+                        WordToken("开始", "kāishǐ", "Mulai", "Memulai suatu kegiatan"),
+                        WordToken("用英语", "yòng Yīngyǔ", "Menggunakan bahasa Inggris", "Memakai media bahasa Inggris"),
+                        WordToken("上课", "shàng kè", "Mengikuti pelajaran / mengajar", "Aktivitas belajar mengajar di kelas")
+                    )
+                ),
+                Sentence(
+                    "s_learneng_2",
+                    "学生说：“我们会听不懂的。”",
+                    "Xuésheng shuō: “Wǒmen huì tīng bù dǒng de.”",
+                    "Murid berkata: “Kami pasti tidak akan paham.”",
+                    listOf(
+                        WordToken("学生", "xuésheng", "Murid / siswa", "Pelajar di sekolah"),
+                        WordToken("说", "shuō", "Berkata", "Kata kerja tutur"),
+                        WordToken("我们会", "wǒmen huì", "Kami pasti akan", "Subjek jamak + modalitas kepastian"),
+                        WordToken("听不懂的", "tīng bù dǒng de", "Tidak mengerti bila mendengar", "Bentuk potensial negatif pemahaman dengar")
+                    )
+                ),
+                Sentence(
+                    "s_learneng_3",
+                    "老师说：“学英语就是要多听，听多了就会了。”",
+                    "Lǎoshī shuō: “Xué Yīngyǔ jiù shì yào duō tīng, tīng duō le jiù huì le.”",
+                    "Guru berkata: “Belajar bahasa Inggris kuncinya harus sering mendengarkan, kalau sudah sering mendengar lama-lama akan bisa.”",
+                    listOf(
+                        WordToken("老师", "lǎoshī", "Guru", "Subjek pengajar"),
+                        WordToken("说", "shuō", "Berkata", "Kata kerja tutur"),
+                        WordToken("学英语", "xué Yīngyǔ", "Belajar bahasa Inggris", "Mempelajari ilmu bahasa Inggris"),
+                        WordToken("就是", "jiù shì", "Yaitu / intinya", "Penegasan esensi"),
+                        WordToken("要多听", "yào duō tīng", "Harus banyak mendengarkan", "Anjuran memperbanyak intensitas menyimak"),
+                        WordToken("听多了", "tīng duō le", "Setelah sering mendengar", "Kondisi akumulasi pendengaran"),
+                        WordToken("就会了", "jiù huì le", "Pasti langsung bisa", "Hasil kemahiran yang akan dicapai")
+                    )
+                ),
+                Sentence(
+                    "s_learneng_4",
+                    "学生说：“我每天听家里的小狗叫，但是一直不知道它在说什么。”",
+                    "Xuésheng shuō: “Wǒ měi tiān tīng jiā lǐ de xiǎo gǒu jiào, dànshì yìzhí bù zhīdào tā zài shuō shénme.”",
+                    "Murid membalas: “Saya setiap hari mendengar anjing kecil di rumah menggonggong, tapi sampai sekarang tetap tidak tahu dia sedang bicara apa.”",
+                    listOf(
+                        WordToken("学生", "xuésheng", "Murid / siswa", "Subjek pelajar"),
+                        WordToken("说", "shuō", "Berkata", "Kata kerja tutur"),
+                        WordToken("我每天", "wǒ měi tiān", "Saya setiap hari", "Subjek + frekuensi harian"),
+                        WordToken("听", "tīng", "Mendengar", "Kata kerja menyimak indera pendengaran"),
+                        WordToken("家里的", "jiā lǐ de", "Yang di dalam rumah", "Keterangan lokasi kepemilikan"),
+                        WordToken("小狗", "xiǎo gǒu", "Anjing kecil", "Hewan peliharaan anjing"),
+                        WordToken("叫", "jiào", "Menggonggong / bersuara", "Suara bunyi hewan anjing"),
+                        WordToken("但是", "dànshì", "Tetapi / namun", "Konjungsi pertentangan tajam"),
+                        WordToken("一直", "yìzhí", "Terus-menerus / selalu", "Keterangan kelanjutan tanpa henti"),
+                        WordToken("不知道", "bù zhīdào", "Tidak tahu / tidak paham", "Ketidaktahuan makna"),
+                        WordToken("它在说什么", "tā zài shuō shénme", "Apa yang sedang diucapkannya", "Isi ucapan yang tidak dipahami")
+                    )
+                )
+            ),
+            questions = listOf(
+                StoryQuestion(
+                    "q_learneng_1",
+                    "学校从下学期开始有什么新教学计划？(Apa rencana baru sekolah mulai semester depan?)",
+                    listOf(
+                        "每天多上一节体育课 (Menambah 1 jam olahraga setiap hari)",
+                        "用英语上课 (Mengajar menggunakan bahasa Inggris)",
+                        "学生可以不用写作业 (Murid tidak perlu buat PR)",
+                        "学校搬到新的地方 (Sekolah pindah tempat baru)"
+                    ),
+                    1,
+                    "Guru mengumumkan: '我们学校从下学期开始，用英语上课' (Sekolah kita mulai semester depan menggunakan bahasa Inggris untuk mengajar)."
+                ),
+                StoryQuestion(
+                    "q_learneng_2",
+                    "学生们对英语上课有什么担心？(Apa kekhawatiran murid-murid terhadap kelas bahasa Inggris?)",
+                    listOf(
+                        "怕作业太多 (Takut PR terlalu banyak)",
+                        "怕听不懂 (Takut tidak mengerti apa yang dibicarakan)",
+                        "怕放学太晚 (Takut pulang terlalu sore)",
+                        "怕考试太难 (Takut ujian terlalu sulit)"
+                    ),
+                    1,
+                    "Murid mengeluh cemas: '学生说：我们会听不懂的' (Kami pasti tidak akan paham)."
+                ),
+                StoryQuestion(
+                    "q_learneng_3",
+                    "老师认为学好英语的关键是什么？(Menurut guru, apa kunci utama belajar bahasa Inggris?)",
+                    listOf(
+                        "多背单词 (Banyak menghafal kosakata)",
+                        "多听，听多了自然就会了 (Banyak mendengarkan, sering mendengar lama-lama akan bisa)",
+                        "每天看英文电影 (Setiap hari nonton film Inggris)",
+                        "多写汉字 (Banyak menulis hanzi)"
+                    ),
+                    1,
+                    "Guru menasihati: '学英语就是要多听，听多了就会了' (Kuncinya harus banyak mendengar)."
+                ),
+                StoryQuestion(
+                    "q_learneng_4",
+                    "学生是用什么巧妙的比喻反驳老师的？(Dengan perumpamaan cerdas apa murid membantah teori gurunya?)",
+                    listOf(
+                        "Dia mendengar burung bernyanyi",
+                        "Dia setiap hari mendengar anjingnya menggonggong di rumah tapi sampai sekarang tetap tidak paham anjingnya bicara apa! (每天听小狗叫，还是不知道它说什么)",
+                        "Dia sering mendengarkan musik tapi tidak bisa menyanyi",
+                        "Dia tidak suka memelihara anjing"
+                    ),
+                    1,
+                    "Murid membalas dengan cerdik: '我每天听家里的小狗叫，但是一直不知道它在说什么' (Kalau cuma mendengar bisa membuat paham, tentu saya sudah paham bahasa anjing di rumah!)."
+                )
+            )
+        ),
+
+        // Cerita Mandarin Bean 23: I'm thirsty (我渴了)
+        Story(
+            id = "story_im_thirsty",
+            titleHanzi = "我渴了",
+            titlePinyin = "Wǒ Kě Le",
+            titleTranslation = "I'm thirsty (Saya Haus)",
+            level = "HSK 1",
+            category = "Keluarga & Percakapan",
+            description = "Percakapan penuh kasih sayang antara seorang ibu dan anaknya yang kehausan dan kelelahan setelah berjalan, lalu disegarkan dengan sebotol kola manis.",
+            coverEmoji = "🥤",
+            coverImageRes = R.drawable.cover_story_im_thirsty,
+            estimatedReadMinutes = 2,
+            sentences = listOf(
+                Sentence(
+                    "s_imthirsty_1",
+                    "妈妈：你怎么啦？",
+                    "Māma: Nǐ zěnme la?",
+                    "Ibu: Kamu kenapa ya?",
+                    listOf(
+                        WordToken("你怎么啦", "nǐ zěnme la", "Kamu kenapa ya?", "Pertanyaan ramah menanyakan keadaan")
+                    )
+                ),
+                Sentence(
+                    "s_imthirsty_2",
+                    "孩子：妈妈，我累了……口也很渴。",
+                    "Háizi: Māma, wǒ lèi le... kǒu yě hěn kě.",
+                    "Anak: Ibu, aku lelah... dan tenggorokan juga sangat haus.",
+                    listOf(
+                        WordToken("妈妈", "māma", "Ibu", "Panggilan sayang kepada ibu"),
+                        WordToken("我累了", "wǒ lèi le", "Saya lelah / capek", "Kondisi tubuh letih"),
+                        WordToken("口也很渴", "kǒu yě hěn kě", "Mulut dan tenggorokan juga sangat haus", "Kondisi dahaga kering di mulut")
+                    )
+                ),
+                Sentence(
+                    "s_imthirsty_3",
+                    "妈妈：坐在这儿吧。你现在怎么样？",
+                    "Māma: Zuò zài zhèr ba. Nǐ xiànzài zěnmeyàng?",
+                    "Ibu: Duduklah di sini. Bagaimana keadaanmu sekarang?",
+                    listOf(
+                        WordToken("坐在这儿吧", "zuò zài zhèr ba", "Duduklah di sini ya", "Tawaran mengajak istirahat duduk di tempat ini"),
+                        WordToken("你现在", "nǐ xiànzài", "Kamu sekarang", "Pronomina + keterangan waktu kini"),
+                        WordToken("怎么样", "zěnmeyàng", "Bagaimana?", "Menanyakan kondisi tubuh terkini")
+                    )
+                ),
+                Sentence(
+                    "s_imthirsty_4",
+                    "孩子：好一点。",
+                    "Háizi: Hǎo yìdiǎn.",
+                    "Anak: Lumayan lebih baik.",
+                    listOf(
+                        WordToken("好一点", "hǎo yìdiǎn", "Lumayan lebih baik sedikit", "Perbaikan kondisi fisik berangsur reda")
+                    )
+                ),
+                Sentence(
+                    "s_imthirsty_5",
+                    "妈妈：看！那有可乐！我去买。",
+                    "Māma: Kàn! Nà yǒu kělè! Wǒ qù mǎi.",
+                    "Ibu: Lihat! Di sana ada kola! Ibu pergi membelinya.",
+                    listOf(
+                        WordToken("看", "kàn", "Lihatlah!", "Seruan mengarahkan pandangan"),
+                        WordToken("那有", "nà yǒu", "Di sana ada", "Menunjukkan keberadaan di kejauhan"),
+                        WordToken("可乐", "kělè", "Kola / minuman bersoda", "Minuman penyegar manis"),
+                        WordToken("我去买", "wǒ qù mǎi", "Saya akan pergi membelinya", "Niat segera berbelanja")
+                    )
+                ),
+                Sentence(
+                    "s_imthirsty_6",
+                    "妈妈：给你喝！",
+                    "Māma: Gěi nǐ hē!",
+                    "Ibu: Ini minum ya!",
+                    listOf(
+                        WordToken("给你喝", "gěi nǐ hē", "Diberikan padamu untuk diminum", "Tindakan menyodorkan minuman")
+                    )
+                ),
+                Sentence(
+                    "s_imthirsty_7",
+                    "孩子：谢谢，妈妈。真好喝。",
+                    "Háizi: Xièxie, māma. Zhēn hǎohē.",
+                    "Anak: Terima kasih, Ibu. Enak sekali.",
+                    listOf(
+                        WordToken("谢谢", "xièxie", "Terima kasih", "Ungkapan terima kasih hangat"),
+                        WordToken("妈妈", "māma", "Ibu", "Panggilan sayang kepada ibu"),
+                        WordToken("真好喝", "zhēn hǎohē", "Sangat enak dan segar diminum", "Pujian rasa minuman menyegarkan")
+                    )
+                ),
+                Sentence(
+                    "s_imthirsty_8",
+                    "妈妈：你现在好了吗？",
+                    "Māma: Nǐ xiànzài hǎo le ma?",
+                    "Ibu: Apakah kamu sekarang sudah baikan?",
+                    listOf(
+                        WordToken("你现在", "nǐ xiànzài", "Kamu sekarang", "Pronomina + waktu saat ini"),
+                        WordToken("好了吗", "hǎo le ma", "Apakah sudah pulih / segar?", "Pertanyaan konfirmasi kesehatan/kebugaran")
+                    )
+                ),
+                Sentence(
+                    "s_imthirsty_9",
+                    "孩子：是的，现在好了，谢谢妈妈！",
+                    "Háizi: Shì de, xiànzài hǎo le, xièxie māma!",
+                    "Anak: Iya, sekarang sudah segar kembali, terima kasih Ibu!",
+                    listOf(
+                        WordToken("是的", "shì de", "Benar / iya", "Konfirmasi pembenaran"),
+                        WordToken("现在", "xiànzài", "Sekarang", "Keterangan waktu saat ini"),
+                        WordToken("好了", "hǎo le", "Sudah baik / pulih", "Kondisi bugar kembali"),
+                        WordToken("谢谢", "xièxie", "Terima kasih", "Rasa syukur kasih sayang"),
+                        WordToken("妈妈", "māma", "Ibu", "Panggilan ibu tercinta")
+                    )
+                )
+            ),
+            questions = listOf(
+                StoryQuestion(
+                    "q_imthirsty_1",
+                    "孩子一开始对妈妈表达了什么感觉？(Awalnya apa yang dirasakan dan dikeluhkan oleh anak kepada ibunya?)",
+                    listOf(
+                        "肚子很疼 (Perutnya sangat sakit)",
+                        "又累又渴 (Kelelahan dan juga sangat haus)",
+                        "想去买新衣服 (Ingin membeli baju baru)",
+                        "觉得天气太冷 (Merasa cuaca terlalu dingin)"
+                    ),
+                    1,
+                    "Anak berkata: '妈妈，我累了……口也很渴' (Ibu, aku lelah dan tenggorokanku juga sangat haus)."
+                ),
+                StoryQuestion(
+                    "q_imthirsty_2",
+                    "妈妈让孩子先做什么？(Apa yang disuruh ibu pertama kali kepada anaknya?)",
+                    listOf(
+                        "坐在这儿休息一下 (Duduk di sini istirahat sebentar)",
+                        "继续快点走 (Lanjut jalan cepat)",
+                        "喝热水 (Minum air hangat)",
+                        "给爸爸打电话 (Menelepon ayah)"
+                    ),
+                    0,
+                    "Ibu dengan penuh perhatian mengajak istirahat: '坐在这儿吧。你现在怎么样？' (Duduklah di sini dulu)."
+                ),
+                StoryQuestion(
+                    "q_imthirsty_3",
+                    "妈妈看到什么后主动跑去买给孩子喝？(Ibu melihat apa lalu berinisiatif membelikannya untuk sang anak?)",
+                    listOf(
+                        "热茶 (Teh hangat)",
+                        "牛奶 (Susu sapi)",
+                        "可乐 (Minuman kola)",
+                        "西瓜汁 (Jus semangka)"
+                    ),
+                    2,
+                    "Ibu berseru gembira melihat kios minuman: '看！那有可乐！我去买' (Lihat! Di sana ada kola! Ibu belikan ya)."
+                ),
+                StoryQuestion(
+                    "q_imthirsty_4",
+                    "喝了可乐之后，孩子的感觉怎么样？(Bagaimana keadaan anak setelah meminum kola?)",
+                    listOf(
+                        "越来越累了 (Semakin lelah)",
+                        "觉得不好喝 (Merasa tidak enak)",
+                        "现在好了，感觉真好喝并感谢妈妈 (Sekarang sudah segar kembali, terasa sangat nikmat dan berterima kasih pada ibu)",
+                        "想再吃一碗面条 (Ingin makan semangkuk mi lagi)"
+                    ),
+                    2,
+                    "Anak bersyukur dengan ceria: '谢谢，妈妈。真好喝。是的，现在好了，谢谢妈妈！'."
+                )
+            )
         )
 )
