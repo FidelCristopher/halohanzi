@@ -3372,7 +3372,8 @@ object LearningRepository {
                     ),
                     exercises = stage2Part1Exercises,
                     exercisesPart1 = stage2Part1Exercises,
-                    exercisesPart2 = stage2Part2Exercises
+                    exercisesPart2 = stage2Part2Exercises,
+                    exercisesPart3 = stage2Part3Exercises
                 )
             )
         ),

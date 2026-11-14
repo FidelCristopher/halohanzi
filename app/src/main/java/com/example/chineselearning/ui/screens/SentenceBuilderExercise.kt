@@ -436,6 +436,254 @@ fun IllustrationSentenceBuilder(
                 modifier = Modifier.padding(bottom = 6.dp)
             )
         }
+    } else if (exercise.id == "u2_s2_p3_q3") {
+        // Tā [Slot 0: 是] nǐ [Slot 1: 的] [Slot 2: 女朋友] ma
+        // 她 [Slot 0: 是] 你 [Slot 1: 的] [Slot 2: 女朋友] 吗？
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(top = 16.dp),
+            horizontalArrangement = Arrangement.Center,
+            verticalAlignment = Alignment.Bottom
+        ) {
+            // Fixed: 她 (Tā)
+            Column(horizontalAlignment = Alignment.CenterHorizontally, modifier = Modifier.padding(bottom = 6.dp)) {
+                Text(text = "Tā", fontSize = 14.sp, color = SlateGray)
+                Spacer(modifier = Modifier.height(2.dp))
+                Text(text = "她", fontFamily = KaiTiFontFamily, fontSize = 24.sp, color = HanziColor)
+            }
+            Spacer(modifier = Modifier.width(8.dp))
+
+            // Slot 0 (是)
+            Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                if (selectedChips.isNotEmpty()) {
+                    val chip = selectedChips[0]
+                    val hanzi = chip.substringBefore(":")
+                    val pinyin = if (chip.contains(":")) chip.substringAfter(":") else ""
+                    Surface(
+                        shape = RoundedCornerShape(12.dp),
+                        color = Color.White,
+                        shadowElevation = 2.dp,
+                        border = androidx.compose.foundation.BorderStroke(1.dp, Color(0xFFE2E8F0)),
+                        modifier = Modifier.bouncyClick { if (!isSubmitted) onChipRemovedAt(0) }
+                    ) {
+                        Column(horizontalAlignment = Alignment.CenterHorizontally, modifier = Modifier.padding(horizontal = 10.dp, vertical = 6.dp)) {
+                            if (pinyin.isNotBlank()) Text(text = pinyin, fontSize = 13.sp, color = DeepNavy)
+                            Text(text = hanzi, fontFamily = KaiTiFontFamily, fontSize = 21.sp, color = DeepNavy)
+                        }
+                    }
+                } else {
+                    Box(modifier = Modifier.width(46.dp).height(48.dp))
+                }
+                Spacer(modifier = Modifier.height(4.dp))
+                Box(modifier = Modifier.width(46.dp).height(2.5.dp).background(Color(0xFF00C48C), shape = RoundedCornerShape(2.dp)))
+            }
+            Spacer(modifier = Modifier.width(8.dp))
+
+            // Fixed: 你 (nǐ)
+            Column(horizontalAlignment = Alignment.CenterHorizontally, modifier = Modifier.padding(bottom = 6.dp)) {
+                Text(text = "nǐ", fontSize = 14.sp, color = SlateGray)
+                Spacer(modifier = Modifier.height(2.dp))
+                Text(text = "你", fontFamily = KaiTiFontFamily, fontSize = 24.sp, color = HanziColor)
+            }
+            Spacer(modifier = Modifier.width(8.dp))
+
+            // Slot 1 (的)
+            Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                if (selectedChips.size > 1) {
+                    val chip = selectedChips[1]
+                    val hanzi = chip.substringBefore(":")
+                    val pinyin = if (chip.contains(":")) chip.substringAfter(":") else ""
+                    Surface(
+                        shape = RoundedCornerShape(12.dp),
+                        color = Color.White,
+                        shadowElevation = 2.dp,
+                        border = androidx.compose.foundation.BorderStroke(1.dp, Color(0xFFE2E8F0)),
+                        modifier = Modifier.bouncyClick { if (!isSubmitted) onChipRemovedAt(1) }
+                    ) {
+                        Column(horizontalAlignment = Alignment.CenterHorizontally, modifier = Modifier.padding(horizontal = 10.dp, vertical = 6.dp)) {
+                            if (pinyin.isNotBlank()) Text(text = pinyin, fontSize = 13.sp, color = DeepNavy)
+                            Text(text = hanzi, fontFamily = KaiTiFontFamily, fontSize = 21.sp, color = DeepNavy)
+                        }
+                    }
+                } else {
+                    Box(modifier = Modifier.width(46.dp).height(48.dp))
+                }
+                Spacer(modifier = Modifier.height(4.dp))
+                Box(modifier = Modifier.width(46.dp).height(2.5.dp).background(Color(0xFF00C48C), shape = RoundedCornerShape(2.dp)))
+            }
+            Spacer(modifier = Modifier.width(8.dp))
+
+            // Slot 2 (女朋友)
+            Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                if (selectedChips.size > 2) {
+                    val chip = selectedChips[2]
+                    val hanzi = chip.substringBefore(":")
+                    val pinyin = if (chip.contains(":")) chip.substringAfter(":") else ""
+                    Surface(
+                        shape = RoundedCornerShape(12.dp),
+                        color = Color.White,
+                        shadowElevation = 2.dp,
+                        border = androidx.compose.foundation.BorderStroke(1.dp, Color(0xFFE2E8F0)),
+                        modifier = Modifier.bouncyClick { if (!isSubmitted) onChipRemovedAt(2) }
+                    ) {
+                        Column(horizontalAlignment = Alignment.CenterHorizontally, modifier = Modifier.padding(horizontal = 10.dp, vertical = 6.dp)) {
+                            if (pinyin.isNotBlank()) Text(text = pinyin, fontSize = 13.sp, color = DeepNavy)
+                            Text(text = hanzi, fontFamily = KaiTiFontFamily, fontSize = 21.sp, color = DeepNavy)
+                        }
+                    }
+                } else {
+                    Box(modifier = Modifier.width(66.dp).height(48.dp))
+                }
+                Spacer(modifier = Modifier.height(4.dp))
+                Box(modifier = Modifier.width(66.dp).height(2.5.dp).background(Color(0xFF00C48C), shape = RoundedCornerShape(2.dp)))
+            }
+            Spacer(modifier = Modifier.width(6.dp))
+
+            // Fixed: 吗？ (ma)
+            Column(horizontalAlignment = Alignment.CenterHorizontally, modifier = Modifier.padding(bottom = 6.dp)) {
+                Text(text = "ma", fontSize = 14.sp, color = SlateGray)
+                Spacer(modifier = Modifier.height(2.dp))
+                Text(text = "吗？", fontFamily = KaiTiFontFamily, fontSize = 24.sp, color = HanziColor)
+            }
+        }
+    } else if (exercise.id == "u2_s2_p3_q6") {
+        // Tā [Slot 0: 们] [Slot 1: 是] tā [Slot 2: 的] [Slot 3: 男朋友] ma
+        // 他 [Slot 0: 们] [Slot 1: 是] 她 [Slot 2: 的] [Slot 3: 男朋友] 吗？
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(top = 16.dp),
+            horizontalArrangement = Arrangement.Center,
+            verticalAlignment = Alignment.Bottom
+        ) {
+            // Fixed: 他 (Tā)
+            Column(horizontalAlignment = Alignment.CenterHorizontally, modifier = Modifier.padding(bottom = 6.dp)) {
+                Text(text = "Tā", fontSize = 14.sp, color = SlateGray)
+                Spacer(modifier = Modifier.height(2.dp))
+                Text(text = "他", fontFamily = KaiTiFontFamily, fontSize = 24.sp, color = HanziColor)
+            }
+            Spacer(modifier = Modifier.width(6.dp))
+
+            // Slot 0 (们)
+            Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                if (selectedChips.isNotEmpty()) {
+                    val chip = selectedChips[0]
+                    val hanzi = chip.substringBefore(":")
+                    val pinyin = if (chip.contains(":")) chip.substringAfter(":") else ""
+                    Surface(
+                        shape = RoundedCornerShape(12.dp),
+                        color = Color.White,
+                        shadowElevation = 2.dp,
+                        border = androidx.compose.foundation.BorderStroke(1.dp, Color(0xFFE2E8F0)),
+                        modifier = Modifier.bouncyClick { if (!isSubmitted) onChipRemovedAt(0) }
+                    ) {
+                        Column(horizontalAlignment = Alignment.CenterHorizontally, modifier = Modifier.padding(horizontal = 8.dp, vertical = 6.dp)) {
+                            if (pinyin.isNotBlank()) Text(text = pinyin, fontSize = 13.sp, color = DeepNavy)
+                            Text(text = hanzi, fontFamily = KaiTiFontFamily, fontSize = 21.sp, color = DeepNavy)
+                        }
+                    }
+                } else {
+                    Box(modifier = Modifier.width(42.dp).height(48.dp))
+                }
+                Spacer(modifier = Modifier.height(4.dp))
+                Box(modifier = Modifier.width(42.dp).height(2.5.dp).background(Color(0xFF00C48C), shape = RoundedCornerShape(2.dp)))
+            }
+            Spacer(modifier = Modifier.width(6.dp))
+
+            // Slot 1 (是)
+            Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                if (selectedChips.size > 1) {
+                    val chip = selectedChips[1]
+                    val hanzi = chip.substringBefore(":")
+                    val pinyin = if (chip.contains(":")) chip.substringAfter(":") else ""
+                    Surface(
+                        shape = RoundedCornerShape(12.dp),
+                        color = Color.White,
+                        shadowElevation = 2.dp,
+                        border = androidx.compose.foundation.BorderStroke(1.dp, Color(0xFFE2E8F0)),
+                        modifier = Modifier.bouncyClick { if (!isSubmitted) onChipRemovedAt(1) }
+                    ) {
+                        Column(horizontalAlignment = Alignment.CenterHorizontally, modifier = Modifier.padding(horizontal = 8.dp, vertical = 6.dp)) {
+                            if (pinyin.isNotBlank()) Text(text = pinyin, fontSize = 13.sp, color = DeepNavy)
+                            Text(text = hanzi, fontFamily = KaiTiFontFamily, fontSize = 21.sp, color = DeepNavy)
+                        }
+                    }
+                } else {
+                    Box(modifier = Modifier.width(42.dp).height(48.dp))
+                }
+                Spacer(modifier = Modifier.height(4.dp))
+                Box(modifier = Modifier.width(42.dp).height(2.5.dp).background(Color(0xFF00C48C), shape = RoundedCornerShape(2.dp)))
+            }
+            Spacer(modifier = Modifier.width(6.dp))
+
+            // Fixed: 她 (tā)
+            Column(horizontalAlignment = Alignment.CenterHorizontally, modifier = Modifier.padding(bottom = 6.dp)) {
+                Text(text = "tā", fontSize = 14.sp, color = SlateGray)
+                Spacer(modifier = Modifier.height(2.dp))
+                Text(text = "她", fontFamily = KaiTiFontFamily, fontSize = 24.sp, color = HanziColor)
+            }
+            Spacer(modifier = Modifier.width(6.dp))
+
+            // Slot 2 (的)
+            Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                if (selectedChips.size > 2) {
+                    val chip = selectedChips[2]
+                    val hanzi = chip.substringBefore(":")
+                    val pinyin = if (chip.contains(":")) chip.substringAfter(":") else ""
+                    Surface(
+                        shape = RoundedCornerShape(12.dp),
+                        color = Color.White,
+                        shadowElevation = 2.dp,
+                        border = androidx.compose.foundation.BorderStroke(1.dp, Color(0xFFE2E8F0)),
+                        modifier = Modifier.bouncyClick { if (!isSubmitted) onChipRemovedAt(2) }
+                    ) {
+                        Column(horizontalAlignment = Alignment.CenterHorizontally, modifier = Modifier.padding(horizontal = 8.dp, vertical = 6.dp)) {
+                            if (pinyin.isNotBlank()) Text(text = pinyin, fontSize = 13.sp, color = DeepNavy)
+                            Text(text = hanzi, fontFamily = KaiTiFontFamily, fontSize = 21.sp, color = DeepNavy)
+                        }
+                    }
+                } else {
+                    Box(modifier = Modifier.width(42.dp).height(48.dp))
+                }
+                Spacer(modifier = Modifier.height(4.dp))
+                Box(modifier = Modifier.width(42.dp).height(2.5.dp).background(Color(0xFF00C48C), shape = RoundedCornerShape(2.dp)))
+            }
+            Spacer(modifier = Modifier.width(6.dp))
+
+            // Slot 3 (男朋友)
+            Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                if (selectedChips.size > 3) {
+                    val chip = selectedChips[3]
+                    val hanzi = chip.substringBefore(":")
+                    val pinyin = if (chip.contains(":")) chip.substringAfter(":") else ""
+                    Surface(
+                        shape = RoundedCornerShape(12.dp),
+                        color = Color.White,
+                        shadowElevation = 2.dp,
+                        border = androidx.compose.foundation.BorderStroke(1.dp, Color(0xFFE2E8F0)),
+                        modifier = Modifier.bouncyClick { if (!isSubmitted) onChipRemovedAt(3) }
+                    ) {
+                        Column(horizontalAlignment = Alignment.CenterHorizontally, modifier = Modifier.padding(horizontal = 8.dp, vertical = 6.dp)) {
+                            if (pinyin.isNotBlank()) Text(text = pinyin, fontSize = 13.sp, color = DeepNavy)
+                            Text(text = hanzi, fontFamily = KaiTiFontFamily, fontSize = 21.sp, color = DeepNavy)
+                        }
+                    }
+                } else {
+                    Box(modifier = Modifier.width(66.dp).height(48.dp))
+                }
+                Spacer(modifier = Modifier.height(4.dp))
+                Box(modifier = Modifier.width(66.dp).height(2.5.dp).background(Color(0xFF00C48C), shape = RoundedCornerShape(2.dp)))
+            }
+            Spacer(modifier = Modifier.width(6.dp))
+
+            // Fixed: 吗？ (ma)
+            Column(horizontalAlignment = Alignment.CenterHorizontally, modifier = Modifier.padding(bottom = 6.dp)) {
+                Text(text = "ma", fontSize = 14.sp, color = SlateGray)
+                Spacer(modifier = Modifier.height(2.dp))
+                Text(text = "吗？", fontFamily = KaiTiFontFamily, fontSize = 24.sp, color = HanziColor)
+            }
+        }
     } else {
         // Line with slots: [Slot 1] , [Slot 2] [Slot 3] [Trailing Text]
         Row(
@@ -443,6 +691,17 @@ fun IllustrationSentenceBuilder(
             verticalAlignment = Alignment.Bottom,
             horizontalArrangement = Arrangement.Start
         ) {
+            // Optional Leading Text
+            if (exercise.staticLeadingText.isNotBlank()) {
+                Column(horizontalAlignment = Alignment.CenterHorizontally, modifier = Modifier.padding(bottom = 6.dp)) {
+                    if (exercise.staticLeadingPinyin.isNotBlank()) {
+                        Text(text = exercise.staticLeadingPinyin, fontSize = 14.sp, color = SlateGray)
+                        Spacer(modifier = Modifier.height(2.dp))
+                    }
+                    Text(text = exercise.staticLeadingText, fontFamily = KaiTiFontFamily, fontSize = 24.sp, color = HanziColor)
+                }
+                Spacer(modifier = Modifier.width(8.dp))
+            }
             // Slot 1
             Column(horizontalAlignment = Alignment.CenterHorizontally) {
                 Row(verticalAlignment = Alignment.Bottom) {
