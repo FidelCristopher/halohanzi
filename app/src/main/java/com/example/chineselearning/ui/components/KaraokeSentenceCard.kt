@@ -119,6 +119,7 @@ fun KaraokeSentenceCard(
                         is SentenceItem.Token -> {
                             TokenChip(
                                 token = item.token,
+                                trailingPunct = item.trailingPunct,
                                 showPinyin = showPinyin,
                                 isActive = isActive,
                                 onClick = { onTokenClick(item.token) }
@@ -152,7 +153,7 @@ fun KaraokeSentenceCard(
 }
 
 private sealed interface SentenceItem {
-    data class Token(val token: WordToken) : SentenceItem
+    data class Token(val token: WordToken, val trailingPunct: String = "") : SentenceItem
     data class Punct(val text: String) : SentenceItem
 }
 
@@ -161,7 +162,7 @@ private fun parseSentenceItems(hanzi: String, tokens: List<WordToken>): Pair<Str
     var speaker: String? = null
     var startIdx = 0
 
-    val speakerRegex = Regex("^(?:[A-Za-z0-9]+|妈妈|孩子|妻子|丈夫)[:：]\\s*")
+    val speakerRegex = Regex("^[A-Za-z0-9]+[:：]\\s*")
     val match = speakerRegex.find(trimmed)
     if (match != null) {
         speaker = match.value.trim().replace('：', ':')
@@ -175,11 +176,17 @@ private fun parseSentenceItems(hanzi: String, tokens: List<WordToken>): Pair<Str
         val findIdx = trimmed.indexOf(token.hanzi, currIdx)
         if (findIdx != -1) {
             if (findIdx > currIdx) {
-                val segment = trimmed.substring(currIdx, findIdx)
-                splitSegmentIntoItems(segment, items)
+                val leadingSegment = trimmed.substring(currIdx, findIdx)
+                splitSegmentIntoItems(leadingSegment, items)
             }
-            items.add(SentenceItem.Token(token))
             currIdx = findIdx + token.hanzi.length
+
+            val punctBuffer = StringBuilder()
+            while (currIdx < trimmed.length && "，。？！：；”’、…".contains(trimmed[currIdx])) {
+                punctBuffer.append(trimmed[currIdx])
+                currIdx++
+            }
+            items.add(SentenceItem.Token(token, trailingPunct = punctBuffer.toString()))
         } else {
             items.add(SentenceItem.Token(token))
         }
@@ -299,40 +306,74 @@ private fun splitPinyinIntoSyllables(pinyin: String, targetCount: Int): List<Str
 @Composable
 fun TokenChip(
     token: WordToken,
+    trailingPunct: String = "",
     showPinyin: Boolean,
     isActive: Boolean,
     onClick: () -> Unit
 ) {
     val interactionSource = remember { MutableInteractionSource() }
-    val syllables = remember(token.pinyin, token.hanzi) {
-        splitPinyinIntoSyllables(token.pinyin, token.hanzi.length)
+    val isNumberOnly = remember(token.hanzi) {
+        token.hanzi.all { it.isDigit() || it == '.' }
+    }
+    val syllables = remember(token.pinyin, token.hanzi, isNumberOnly) {
+        if (isNumberOnly) emptyList() else splitPinyinIntoSyllables(token.pinyin, token.hanzi.length)
     }
 
-    Surface(
-        shape = RoundedCornerShape(8.dp),
-        color = Color.Transparent,
-        modifier = Modifier
-            .clip(RoundedCornerShape(8.dp))
-            .clickable(
-                interactionSource = interactionSource,
-                indication = null,
-                onClick = onClick
-            )
-            .padding(horizontal = 1.dp, vertical = 1.dp)
+    Row(
+        verticalAlignment = Alignment.Bottom,
+        horizontalArrangement = Arrangement.Center
     ) {
-        Row(
-            verticalAlignment = Alignment.Bottom,
-            horizontalArrangement = Arrangement.Center
-        ) {
-            token.hanzi.forEachIndexed { index, char ->
-                val pinyinSyllable = syllables.getOrElse(index) { "" }
-                RubyUnit(
-                    character = char.toString(),
-                    pinyin = pinyinSyllable,
-                    showPinyin = showPinyin,
-                    isActive = isActive
+        Surface(
+            shape = RoundedCornerShape(8.dp),
+            color = Color.Transparent,
+            modifier = Modifier
+                .clip(RoundedCornerShape(8.dp))
+                .clickable(
+                    interactionSource = interactionSource,
+                    indication = null,
+                    onClick = onClick
                 )
+                .padding(horizontal = 1.dp, vertical = 1.dp)
+        ) {
+            Row(
+                verticalAlignment = Alignment.Bottom,
+                horizontalArrangement = Arrangement.Center
+            ) {
+                if (isNumberOnly) {
+                    Column(
+                        horizontalAlignment = Alignment.CenterHorizontally,
+                        modifier = Modifier.padding(horizontal = 2.dp)
+                    ) {
+                        if (showPinyin) {
+                            Spacer(modifier = Modifier.height(15.dp))
+                        }
+                        Text(
+                            text = token.hanzi,
+                            fontSize = 22.sp,
+                            fontWeight = FontWeight.SemiBold,
+                            color = if (isActive) ActiveSentenceGreen else HanziColor
+                        )
+                    }
+                } else {
+                    token.hanzi.forEachIndexed { index, char ->
+                        val pinyinSyllable = syllables.getOrElse(index) { "" }
+                        RubyUnit(
+                            character = char.toString(),
+                            pinyin = pinyinSyllable,
+                            showPinyin = showPinyin,
+                            isActive = isActive
+                        )
+                    }
+                }
             }
+        }
+
+        if (trailingPunct.isNotEmpty()) {
+            PunctuationMark(
+                punct = trailingPunct,
+                showPinyin = showPinyin,
+                isActive = isActive
+            )
         }
     }
 }

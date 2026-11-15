@@ -1695,7 +1695,8 @@ val mandarinBeanStoriesPart3: List<Story> = listOf(
                     "Qīzi: Mǎshàng guò nián le, nǐ xiǎng sòng wǒ mā shénme dōngxi?",
                     "Istri: Sebentar lagi tahun baru Imlek, kamu ingin memberi kado apa untuk ibuku?",
                     listOf(
-                        WordToken("马上", "mǎshàng", "Sebentar lagi / segera", "Waktu yang mendekat"),
+                        WordToken("妻子", "qī zi", "Istri", "Panggilan istri"),
+                        WordToken("马上", "mǎ shàng", "Sebentar lagi / segera", "Waktu yang mendekat"),
                         WordToken("过年了", "guò nián le", "Tahun baru Imlek", "Perayaan pergantian tahun"),
                         WordToken("你想送", "nǐ xiǎng sòng", "Kamu ingin menghadiahkan", "Niat memberi hadiah"),
                         WordToken("我妈", "wǒ mā", "Ibuku", "Ibu mertua"),
@@ -1708,6 +1709,7 @@ val mandarinBeanStoriesPart3: List<Story> = listOf(
                     "Zhàngfu: Sòng yì píng hǎo jiǔ!",
                     "Suami: Hadiahkan sebotol arak bagus!",
                     listOf(
+                        WordToken("丈夫", "zhàng fu", "Suami", "Panggilan suami"),
                         WordToken("送", "sòng", "Memberi hadiah", "Tindakan menghadiahkan"),
                         WordToken("一瓶", "yì píng", "Sebotol", "Bilangan + penggolong botol"),
                         WordToken("好酒", "hǎo jiǔ", "Arak / minuman beralkohol bermutu", "Minuman anggur/arak lezat")
@@ -1719,6 +1721,7 @@ val mandarinBeanStoriesPart3: List<Story> = listOf(
                     "Qīzi: Wèi shénme? Wǒ bàba yǐjīng qùshì wǔ nián le, wǒ māma bù hē jiǔ, nǐ wèi shénme yào sòng jiǔ?",
                     "Istri: Kenapa begitu? Ayahku sudah meninggal lima tahun yang lalu, ibuku tidak minum alkohol, kenapa kamu harus memberi hadiah arak?",
                     listOf(
+                        WordToken("妻子", "qī zi", "Istri", "Panggilan istri"),
                         WordToken("为什么", "wèi shénme", "Kenapa?", "Pertanyaan keheranan"),
                         WordToken("我爸爸", "wǒ bàba", "Ayahku", "Almarhum ayah mertua"),
                         WordToken("已经去世", "yǐjīng qùshì", "Sudah meninggal dunia", "Wafat berpulang"),
@@ -1735,6 +1738,7 @@ val mandarinBeanStoriesPart3: List<Story> = listOf(
                     "Zhàngfu: Yīnwèi wǒ měi cì qù tā jiā, tā zhǐ gěi wǒ hē chá.",
                     "Suami: Karena setiap kali aku berkunjung ke rumahnya, ibu cuma menyuguhi aku minum teh.",
                     listOf(
+                        WordToken("丈夫", "zhàng fu", "Suami", "Panggilan suami"),
                         WordToken("因为我", "yīnwèi wǒ", "Karena saya", "Alasan suami"),
                         WordToken("每次去", "měi cì qù", "Setiap kali pergi ke", "Frekuensi kunjungan berkala"),
                         WordToken("她家", "tā jiā", "Rumahnya", "Rumah ibu mertua"),
@@ -1810,36 +1814,110 @@ val mandarinBeanStoriesPart3: List<Story> = listOf(
             sentences = listOf(
                 Sentence(
                     "s_hello2018_1",
-                    "新年，在中国也叫元旦。元旦有4000多年历史了。每年1月1日，新的一年到来。下个星期一是元旦节，2018年开始。12月30号到1月1号，放假三天。你们去哪儿？再见，2017。你好，2018。祝你们元旦节快乐！新年快乐！",
-                    "Xīnnián, zài Zhōngguó yě jiào Yuándàn. Yuándàn yǒu 4000 duō nián lìshǐ le. Měi nián 1 yuè 1 rì, xīn de yì nián dàolái. Xià gè xīngqīyī shì Yuándàn jié, 2018 nián kāishǐ. 12 yuè 30 hào dào 1 yuè 1 hào, fàng jià sān tiān. Nǐmen qù nǎr? Zàijiàn, 2017. Nǐ hǎo, 2018. Zhù nǐmen Yuándàn jié kuàilè! Xīnnián kuàilè!",
-                    "Tahun baru, di Tiongkok juga disebut Yuan Dan. Yuan Dan memiliki sejarah lebih dari 4000 tahun. Setiap tahun pada tanggal 1 Januari, tahun yang baru tiba. Hari Senin depan adalah Hari Yuan Dan, tahun 2018 dimulai. Dari tanggal 30 Desember sampai 1 Januari, libur tiga hari. Kalian hendak pergi ke mana? Selamat tinggal 2017. Halo 2018. Semoga kalian Selamat Hari Yuan Dan! Selamat Tahun Baru!",
+                    "新年，在中国也叫元旦。",
+                    "Xīnnián, zài Zhōngguó yě jiào Yuándàn.",
+                    "Tahun baru, di Tiongkok juga disebut Yuan Dan.",
                     listOf(
-                        WordToken("新年", "xīnnián", "Tahun baru", "Pergantian tahun"),
-                        WordToken("在中国", "zài Zhōngguó", "Di Tiongkok", "Negara Tiongkok"),
+                        WordToken("新年", "xīn nián", "Tahun baru", "Pergantian tahun"),
+                        WordToken("在", "zài", "Di", "Preposisi tempat"),
+                        WordToken("中国", "Zhōng guó", "Tiongkok", "Negara Tiongkok"),
                         WordToken("也叫", "yě jiào", "Juga disebut", "Nama sebutan"),
-                        WordToken("元旦", "Yuándàn", "Yuan Dan (Tahun Baru Masehi)", "Hari pertama tahun baru 1 Januari"),
-                        WordToken("元旦有", "Yuándàn yǒu", "Yuan Dan memiliki", "Tradisi tahun baru"),
-                        WordToken("4000多年", "4000 duō nián", "4000 tahun lebih", "Rentang sejarah panjang"),
-                        WordToken("历史了", "lìshǐ le", "Sejarah", "Catatan sejarah"),
-                        WordToken("每年", "měi nián", "Setiap tahun", "Frekuensi tahunan"),
-                        WordToken("1月1日", "yī yuè yī rì", "1 Januari", "Hari pertama Januari"),
-                        WordToken("新的一年", "xīn de yì nián", "Tahun yang baru", "Tahun baru"),
-                        WordToken("到来", "dàolái", "Tiba / datang", "Waktu yang hadir"),
-                        WordToken("下个星期一", "xià gè xīngqīyī", "Hari Senin depan", "Awal pekan depan"),
-                        WordToken("是元旦节", "shì Yuándàn jié", "Adalah festival Yuan Dan", "Hari perayaan"),
-                        WordToken("2018年", "2018 nián", "Tahun 2018", "Tahun 2018"),
-                        WordToken("开始", "kāishǐ", "Dimulai", "Awal masa"),
-                        WordToken("12月30号", "shí'èr yuè sānshí hào", "30 Desember", "Tanggal 30 Des"),
-                        WordToken("到1月1号", "dào yī yuè yī hào", "Sampai 1 Januari", "Rentang libur"),
-                        WordToken("放假三天", "fàng jià sān tiān", "Libur tiga hari", "Hari cuti libur"),
-                        WordToken("你们去哪儿", "nǐmen qù nǎr", "Kalian pergi ke mana?", "Pertanyaan rencana liburan"),
-                        WordToken("再见", "zàijiàn", "Selamat tinggal", "Perpisahan pada tahun lama"),
-                        WordToken("2017", "2017", "Tahun 2017", "Tahun 2017"),
+                        WordToken("元旦", "Yuán dàn", "Yuan Dan", "Hari Tahun Baru Masehi 1 Januari")
+                    )
+                ),
+                Sentence(
+                    "s_hello2018_2",
+                    "元旦有4000多年历史了。",
+                    "Yuándàn yǒu 4000 duō nián lìshǐ le.",
+                    "Yuan Dan memiliki sejarah lebih dari 4000 tahun.",
+                    listOf(
+                        WordToken("元旦", "Yuán dàn", "Yuan Dan", "Tradisi tahun baru"),
+                        WordToken("有", "yǒu", "Ada / memiliki", "Memiliki sejarah"),
+                        WordToken("4000", "4000", "4000", "Angka 4000"),
+                        WordToken("多", "duō", "Lebih", "Lebih dari"),
+                        WordToken("年", "nián", "Tahun", "Rentang tahun"),
+                        WordToken("历史", "lì shǐ", "Sejarah", "Catatan sejarah peradaban"),
+                        WordToken("了", "le", "Sudah", "Partikel penegas")
+                    )
+                ),
+                Sentence(
+                    "s_hello2018_3",
+                    "每年1月1日，新的一年到来。",
+                    "Měi nián 1 yuè 1 rì, xīn de yì nián dàolái.",
+                    "Setiap tahun pada tanggal 1 Januari, tahun yang baru tiba.",
+                    listOf(
+                        WordToken("每", "měi", "Setiap", "Frekuensi"),
+                        WordToken("年", "nián", "Tahun", "Tahun"),
+                        WordToken("1", "1", "1", "Angka 1"),
+                        WordToken("月", "yuè", "Bulan", "Bulan Januari"),
+                        WordToken("1", "1", "1", "Angka 1"),
+                        WordToken("日", "rì", "Hari / tanggal", "Tanggal satu"),
+                        WordToken("新的", "xīn de", "Yang baru", "Sifat baru"),
+                        WordToken("一年", "yī nián", "Satu tahun", "Tahun baru"),
+                        WordToken("到来", "dào lái", "Tiba / datang", "Kehadiran waktu baru")
+                    )
+                ),
+                Sentence(
+                    "s_hello2018_4",
+                    "下个星期一是元旦节，2018年开始。",
+                    "Xià gè xīngqīyī shì Yuándàn jié, 2018 nián kāishǐ.",
+                    "Hari Senin depan adalah Hari Yuan Dan, tahun 2018 dimulai.",
+                    listOf(
+                        WordToken("下个", "xià gè", "Depan / berikutnya", "Awal pekan depan"),
+                        WordToken("星期一", "xīng qī yī", "Hari Senin", "Hari pertama kerja"),
+                        WordToken("是", "shì", "Adalah", "Kopula"),
+                        WordToken("元旦节", "Yuán dàn jié", "Festival Yuan Dan", "Hari perayaan"),
+                        WordToken("2018", "2018", "2018", "Angka tahun 2018"),
+                        WordToken("年", "nián", "Tahun", "Tahun"),
+                        WordToken("开始", "kāi shǐ", "Dimulai", "Awal tahun")
+                    )
+                ),
+                Sentence(
+                    "s_hello2018_5",
+                    "12月30号到1月1号，放假三天。你们去哪儿？",
+                    "12 yuè 30 hào dào 1 yuè 1 hào, fàng jià sān tiān. Nǐmen qù nǎr?",
+                    "Dari tanggal 30 Desember sampai 1 Januari, libur tiga hari. Kalian hendak pergi ke mana?",
+                    listOf(
+                        WordToken("12", "12", "12", "Angka 12"),
+                        WordToken("月", "yuè", "Bulan", "Bulan Desember"),
+                        WordToken("30", "30", "30", "Angka 30"),
+                        WordToken("号", "hào", "Tanggal", "Tanggal 30"),
+                        WordToken("到", "dào", "Sampai", "Preposisi rentang hingga"),
+                        WordToken("1", "1", "1", "Angka 1"),
+                        WordToken("月", "yuè", "Bulan", "Bulan Januari"),
+                        WordToken("1", "1", "1", "Angka 1"),
+                        WordToken("号", "hào", "Tanggal", "Tanggal 1"),
+                        WordToken("放假", "fàng jià", "Libur / cuti", "Hari libur"),
+                        WordToken("三天", "sān tiān", "Tiga hari", "Durasi libur 3 hari"),
+                        WordToken("你们", "nǐ men", "Kalian", "Pronomina jamak"),
+                        WordToken("去", "qù", "Pergi ke", "Aktivitas bepergian"),
+                        WordToken("哪儿", "nǎ r", "Ke mana?", "Pertanyaan tujuan")
+                    )
+                ),
+                Sentence(
+                    "s_hello2018_6",
+                    "再见，2017。你好，2018。",
+                    "Zàijiàn, 2017. Nǐ hǎo, 2018.",
+                    "Selamat tinggal 2017. Halo 2018.",
+                    listOf(
+                        WordToken("再见", "zài jiàn", "Selamat tinggal", "Perpisahan tahun lalu"),
+                        WordToken("2017", "2017", "2017", "Angka tahun 2017"),
                         WordToken("你好", "nǐ hǎo", "Halo / selamat datang", "Menyambut tahun baru"),
-                        WordToken("2018", "2018", "Tahun 2018", "Tahun 2018"),
-                        WordToken("祝你们", "zhù nǐmen", "Mendoakan / mengucapkan pada kalian", "Ucapan selamat"),
-                        WordToken("元旦节快乐", "Yuándàn jié kuàilè", "Selamat Hari Yuan Dan!", "Salam festival"),
-                        WordToken("新年快乐", "xīnnián kuàilè", "Selamat Tahun Baru!", "Ucapan bahagia tahun baru")
+                        WordToken("2018", "2018", "2018", "Angka tahun 2018")
+                    )
+                ),
+                Sentence(
+                    "s_hello2018_7",
+                    "祝你们元旦节快乐！新年快乐！",
+                    "Zhù nǐmen Yuándàn jié kuàilè! Xīnnián kuàilè!",
+                    "Semoga kalian Selamat Hari Yuan Dan! Selamat Tahun Baru!",
+                    listOf(
+                        WordToken("祝", "zhù", "Mendoakan / mengucapkan", "Kata kerja tutur doa"),
+                        WordToken("你们", "nǐ men", "Kalian", "Pronomina jamak"),
+                        WordToken("元旦节", "Yuán dàn jié", "Hari Yuan Dan", "Perayaan"),
+                        WordToken("快乐", "kuài lè", "Selamat / bahagia", "Ungkapan selamat"),
+                        WordToken("新年", "xīn nián", "Tahun baru", "Tahun baru"),
+                        WordToken("快乐", "kuài lè", "Selamat / bahagia", "Ungkapan selamat")
                     )
                 )
             ),

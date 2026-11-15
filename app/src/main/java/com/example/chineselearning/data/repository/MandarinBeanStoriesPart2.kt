@@ -543,6 +543,7 @@ val mandarinBeanStoriesPart2: List<Story> = listOf(
                     "Māma: Nǐ zěnme la?",
                     "Ibu: Kamu kenapa ya?",
                     listOf(
+                        WordToken("妈妈", "mā ma", "Ibu", "Panggilan ibu"),
                         WordToken("你怎么啦", "nǐ zěnme la", "Kamu kenapa ya?", "Pertanyaan ramah menanyakan keadaan")
                     )
                 ),
@@ -552,7 +553,8 @@ val mandarinBeanStoriesPart2: List<Story> = listOf(
                     "Háizi: Māma, wǒ lèi le... kǒu yě hěn kě.",
                     "Anak: Ibu, aku lelah... dan tenggorokan juga sangat haus.",
                     listOf(
-                        WordToken("妈妈", "māma", "Ibu", "Panggilan sayang kepada ibu"),
+                        WordToken("孩子", "hái zi", "Anak", "Panggilan anak"),
+                        WordToken("妈妈", "mā ma", "Ibu", "Panggilan sayang kepada ibu"),
                         WordToken("我累了", "wǒ lèi le", "Saya lelah / capek", "Kondisi tubuh letih"),
                         WordToken("口也很渴", "kǒu yě hěn kě", "Mulut dan tenggorokan juga sangat haus", "Kondisi dahaga kering di mulut")
                     )
@@ -563,6 +565,7 @@ val mandarinBeanStoriesPart2: List<Story> = listOf(
                     "Māma: Zuò zài zhèr ba. Nǐ xiànzài zěnmeyàng?",
                     "Ibu: Duduklah di sini. Bagaimana keadaanmu sekarang?",
                     listOf(
+                        WordToken("妈妈", "mā ma", "Ibu", "Panggilan ibu"),
                         WordToken("坐在这儿吧", "zuò zài zhèr ba", "Duduklah di sini ya", "Tawaran mengajak istirahat duduk di tempat ini"),
                         WordToken("你现在", "nǐ xiànzài", "Kamu sekarang", "Pronomina + keterangan waktu kini"),
                         WordToken("怎么样", "zěnmeyàng", "Bagaimana?", "Menanyakan kondisi tubuh terkini")
@@ -574,6 +577,7 @@ val mandarinBeanStoriesPart2: List<Story> = listOf(
                     "Háizi: Hǎo yìdiǎn.",
                     "Anak: Lumayan lebih baik.",
                     listOf(
+                        WordToken("孩子", "hái zi", "Anak", "Panggilan anak"),
                         WordToken("好一点", "hǎo yìdiǎn", "Lumayan lebih baik sedikit", "Perbaikan kondisi fisik berangsur reda")
                     )
                 ),
@@ -583,6 +587,7 @@ val mandarinBeanStoriesPart2: List<Story> = listOf(
                     "Māma: Kàn! Nà yǒu kělè! Wǒ qù mǎi.",
                     "Ibu: Lihat! Di sana ada kola! Ibu pergi membelinya.",
                     listOf(
+                        WordToken("妈妈", "mā ma", "Ibu", "Panggilan ibu"),
                         WordToken("看", "kàn", "Lihatlah!", "Seruan mengarahkan pandangan"),
                         WordToken("那有", "nà yǒu", "Di sana ada", "Menunjukkan keberadaan di kejauhan"),
                         WordToken("可乐", "kělè", "Kola / minuman bersoda", "Minuman penyegar manis"),
@@ -595,6 +600,7 @@ val mandarinBeanStoriesPart2: List<Story> = listOf(
                     "Māma: Gěi nǐ hē!",
                     "Ibu: Ini minum ya!",
                     listOf(
+                        WordToken("妈妈", "mā ma", "Ibu", "Panggilan ibu"),
                         WordToken("给你喝", "gěi nǐ hē", "Diberikan padamu untuk diminum", "Tindakan menyodorkan minuman")
                     )
                 ),
@@ -604,8 +610,9 @@ val mandarinBeanStoriesPart2: List<Story> = listOf(
                     "Háizi: Xièxie, māma. Zhēn hǎohē.",
                     "Anak: Terima kasih, Ibu. Enak sekali.",
                     listOf(
+                        WordToken("孩子", "hái zi", "Anak", "Panggilan anak"),
                         WordToken("谢谢", "xièxie", "Terima kasih", "Ungkapan terima kasih hangat"),
-                        WordToken("妈妈", "māma", "Ibu", "Panggilan sayang kepada ibu"),
+                        WordToken("妈妈", "mā ma", "Ibu", "Panggilan sayang kepada ibu"),
                         WordToken("真好喝", "zhēn hǎohē", "Sangat enak dan segar diminum", "Pujian rasa minuman menyegarkan")
                     )
                 ),
@@ -615,6 +622,7 @@ val mandarinBeanStoriesPart2: List<Story> = listOf(
                     "Māma: Nǐ xiànzài hǎo le ma?",
                     "Ibu: Apakah kamu sekarang sudah baikan?",
                     listOf(
+                        WordToken("妈妈", "mā ma", "Ibu", "Panggilan ibu"),
                         WordToken("你现在", "nǐ xiànzài", "Kamu sekarang", "Pronomina + waktu saat ini"),
                         WordToken("好了吗", "hǎo le ma", "Apakah sudah pulih / segar?", "Pertanyaan konfirmasi kesehatan/kebugaran")
                     )
@@ -625,11 +633,12 @@ val mandarinBeanStoriesPart2: List<Story> = listOf(
                     "Háizi: Shì de, xiànzài hǎo le, xièxie māma!",
                     "Anak: Iya, sekarang sudah segar kembali, terima kasih Ibu!",
                     listOf(
+                        WordToken("孩子", "hái zi", "Anak", "Panggilan anak"),
                         WordToken("是的", "shì de", "Benar / iya", "Konfirmasi pembenaran"),
                         WordToken("现在", "xiànzài", "Sekarang", "Keterangan waktu saat ini"),
                         WordToken("好了", "hǎo le", "Sudah baik / pulih", "Kondisi bugar kembali"),
                         WordToken("谢谢", "xièxie", "Terima kasih", "Rasa syukur kasih sayang"),
-                        WordToken("妈妈", "māma", "Ibu", "Panggilan ibu tercinta")
+                        WordToken("妈妈", "mā ma", "Ibu", "Panggilan ibu tercinta")
                     )
                 )
             ),
