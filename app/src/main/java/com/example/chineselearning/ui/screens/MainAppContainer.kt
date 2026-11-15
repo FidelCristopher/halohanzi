@@ -28,6 +28,9 @@ fun MainAppContainer(
     val homeListState = rememberSaveable(saver = LazyListState.Saver) {
         LazyListState()
     }
+    val storyListState = rememberSaveable(saver = LazyListState.Saver) {
+        LazyListState()
+    }
 
     // Graded Story Reader Mode
     if (activeStory != null) {
@@ -88,8 +91,14 @@ fun MainAppContainer(
                     onSelectStory = { story -> activeStory = story }
                 )
                 1 -> SavedVocabScreen(ttsManager = ttsManager)
-                2 -> StoryListScreen(onSelectStory = { story -> activeStory = story })
-                3 -> StoryListScreen(onSelectStory = { story -> activeStory = story })
+                2 -> StoryListScreen(
+                    lazyListState = storyListState,
+                    onSelectStory = { story -> activeStory = story }
+                )
+                3 -> StoryListScreen(
+                    lazyListState = storyListState,
+                    onSelectStory = { story -> activeStory = story }
+                )
                 4 -> ProfileScreen()
             }
         }
