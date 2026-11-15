@@ -1095,7 +1095,7 @@ val mandarinBeanStoriesPart1: List<Story> = listOf(
                     "A: Besok hari Sabtu, libur istirahat.",
                     listOf(
                         WordToken("明天", "míngtiān", "Besok", "Waktu esok"),
-                        WordToken("星期六", "Xīngqīliù", "Hari Sabtu", "Nama hari ke-6 dalam sepekan"),
+                        WordToken("星期六", "Xīng qī liù", "Hari Sabtu", "Nama hari ke-6 dalam sepekan"),
                         WordToken("休息", "xiūxi", "Istirahat / libur", "Beristirahat dari rutinitas kerja/sekolah")
                     )
                 ),
@@ -1168,7 +1168,7 @@ val mandarinBeanStoriesPart1: List<Story> = listOf(
                         WordToken("我喜欢吃", "wǒ xǐhuan chī", "Saya suka makan", "Pernyataan selera"),
                         WordToken("香蕉", "xiāngjiāo", "Pisang", "Buah pisang kuning"),
                         WordToken("和", "hé", "Dan", "Kata penghubung setara"),
-                        WordToken("苹果", "píngguǒ", "Apel", "Buah apel segar")
+                        WordToken("苹果", "píng guǒ", "Apel", "Buah apel segar")
                     )
                 ),
                 Sentence(
@@ -1197,7 +1197,7 @@ val mandarinBeanStoriesPart1: List<Story> = listOf(
                         WordToken("我明天", "wǒ míngtiān", "Saya besok", "Subjek + waktu"),
                         WordToken("几点", "jǐ diǎn", "Jam berapa", "Menanyakan waktu spesifik"),
                         WordToken("给你", "gěi nǐ", "Memberikan padamu", "Menyerahkan barang"),
-                        WordToken("苹果", "píngguǒ", "Apel", "Objek buah apel")
+                        WordToken("苹果", "píng guǒ", "Apel", "Objek buah apel")
                     )
                 ),
                 Sentence(
@@ -2058,10 +2058,10 @@ val mandarinBeanStoriesPart1: List<Story> = listOf(
                         WordToken("过去了", "guòqù le", "Telah berlalu", "Waktu yang sudah lewat"),
                         WordToken("房间里", "fángjiān lǐ", "Di dalam kamar", "Keterangan ruang kamar"),
                         WordToken("很", "hěn", "Sangat", "Tingkat intensitas"),
-                        WordToken("安静", "ānjìng", "Tenang / hening", "Kondisi sunyi tanpa kegaduhan"),
+                        WordToken("安静", "ān jìng", "Tenang / hening", "Kondisi sunyi tanpa kegaduhan"),
                         WordToken("没有", "méiyǒu", "Tidak ada", "Negasi eksistensi"),
                         WordToken("一点儿", "yīdiǎnr", "Sedikit pun", "Kuantitas minimal"),
-                        WordToken("声音", "shēngyīn", "Suara", "Bunyi suara")
+                        WordToken("声音", "shēng yīn", "Suara", "Bunyi suara")
                     )
                 ),
                 Sentence(
@@ -2179,7 +2179,7 @@ val mandarinBeanStoriesPart1: List<Story> = listOf(
                         WordToken("哥哥", "gēge", "Kakak laki-laki", "Saudara laki-laki yang lebih tua"),
                         WordToken("有", "yǒu", "Memiliki / ada", "Kata kerja kepemilikan"),
                         WordToken("五个", "wǔ gè", "Lima buah", "Bilangan angka 5 + kata penggolong"),
-                        WordToken("苹果", "píngguǒ", "Apel", "Buah apel"),
+                        WordToken("苹果", "píng guǒ", "Apel", "Buah apel"),
                         WordToken("你", "nǐ", "Kamu", "Pronomina orang kedua"),
                         WordToken("从", "cóng", "Dari", "Preposisi asal"),
                         WordToken("那儿", "nàr", "Sana", "Kata penunjuk tempat itu"),
@@ -2207,7 +2207,7 @@ val mandarinBeanStoriesPart1: List<Story> = listOf(
                         WordToken("只吃了", "zhǐ chī le", "Hanya memakan", "Adverbia pembatas 'hanya' + makan + partikel aspek"),
                         WordToken("哥哥的", "gēge de", "Milik kakak", "Kepemilikan kakak laki-laki"),
                         WordToken("一个", "yī gè", "Satu buah", "Bilangan + penggolong"),
-                        WordToken("苹果", "píngguǒ", "Apel", "Buah apel"),
+                        WordToken("苹果", "píng guǒ", "Apel", "Buah apel"),
                         WordToken("他", "tā", "Dia", "Subjek kakak"),
                         WordToken("就打我了", "jiù dǎ wǒ le", "Langsung memukul saya", "Tindakan balasan seketika"),
                         WordToken("所以", "suǒyǐ", "Oleh karena itu", "Konjungsi simpulan sebab-akibat"),
@@ -2217,7 +2217,7 @@ val mandarinBeanStoriesPart1: List<Story> = listOf(
                         WordToken("哥哥", "gēge", "Kakak", "Kakak laki-laki"),
                         WordToken("那儿", "nàr", "Sana", "Tempat itu"),
                         WordToken("拿走", "ná zǒu", "Mengambil", "Tindakan mengambil"),
-                        WordToken("苹果", "píngguǒ", "Apel", "Buah apel"),
+                        WordToken("苹果", "píng guǒ", "Apel", "Buah apel"),
                         WordToken("吗", "ma", "Apakah boleh?", "Partikel kalimat tanya")
                     )
                 )
@@ -2434,7 +2434,7 @@ val mandarinBeanStoriesPart1: List<Story> = listOf(
                         WordToken("爸爸", "bàba", "Ayah", "Orang tua laki-laki"),
                         WordToken("买了", "mǎi le", "Membeli", "Tindakan membeli barang"),
                         WordToken("一个", "yī gè", "Sebuah", "Bilangan + kata penggolong"),
-                        WordToken("西瓜", "xīguā", "Semangka", "Buah semangka manis"),
+                        WordToken("西瓜", "xī guā", "Semangka", "Buah semangka manis"),
                         WordToken("儿子", "érzi", "Anak laki-laki", "Putra kandung"),
                         WordToken("叫来了", "jiào lái le", "Memanggil datang", "Mengajak orang datang berkumpul"),
                         WordToken("两个", "liǎng gè", "Dua orang", "Bilangan + penggolong orang"),
@@ -2468,7 +2468,7 @@ val mandarinBeanStoriesPart1: List<Story> = listOf(
                         WordToken("最后", "zuìhòu", "Terakhir", "Urutan paling akhir"),
                         WordToken("说", "shuō", "Berkata", "Kata kerja tutur"),
                         WordToken("这个", "zhè gè", "Ini", "Kata penunjuk"),
-                        WordToken("西瓜", "xīguā", "Semangka", "Buah semangka"),
+                        WordToken("西瓜", "xī guā", "Semangka", "Buah semangka"),
                         WordToken("是", "shì", "Adalah", "Kopula"),
                         WordToken("我爸爸", "wǒ bàba", "Ayah saya", "Subjek ayah penutur"),
                         WordToken("买的", "mǎi de", "Yang membelinya", "Konstruksi penegas pembeli"),

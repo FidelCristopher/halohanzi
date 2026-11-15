@@ -249,14 +249,31 @@ private fun splitPinyinIntoSyllables(pinyin: String, targetCount: Int): List<Str
         for (i in 1 until matches.size) {
             val prevEnd = matches[i - 1].range.last + 1
             val currStart = matches[i].range.first
-            val consonants = clean.substring(prevEnd, currStart).lowercase()
+            val between = clean.substring(prevEnd, currStart)
+            val lowerBetween = between.lowercase()
 
             val cut = when {
-                consonants.startsWith("zh") || consonants.startsWith("ch") || consonants.startsWith("sh") -> prevEnd
-                consonants.endsWith("ng") -> prevEnd + (consonants.length - 2).coerceAtLeast(0)
-                consonants.endsWith("n") || consonants.endsWith("r") -> if (consonants.length > 1) prevEnd + 1 else prevEnd
-                consonants.length > 1 -> prevEnd + (consonants.length / 2)
-                else -> prevEnd
+                lowerBetween.endsWith("zh") || lowerBetween.endsWith("ch") || lowerBetween.endsWith("sh") -> {
+                    currStart - 2
+                }
+                lowerBetween.isNotEmpty() && "bpmfdtnlgkhjqxrzcsyw".contains(lowerBetween.last()) -> {
+                    if (lowerBetween.contains("ng")) {
+                        prevEnd + lowerBetween.indexOf("ng") + 2
+                    } else if (lowerBetween.length >= 2 && (lowerBetween.first() == 'n' || lowerBetween.first() == 'r') && "bpmfdtnlgkhjqxrzcsyw".contains(lowerBetween[1])) {
+                        prevEnd + 1
+                    } else {
+                        currStart - 1
+                    }
+                }
+                else -> {
+                    if (lowerBetween.contains("ng")) {
+                        prevEnd + lowerBetween.indexOf("ng") + 2
+                    } else if (lowerBetween.contains("n") && !lowerBetween.startsWith("zh") && !lowerBetween.startsWith("ch") && !lowerBetween.startsWith("sh")) {
+                        prevEnd + lowerBetween.indexOf("n") + 1
+                    } else {
+                        prevEnd
+                    }
+                }
             }
             cuts.add(cut)
         }

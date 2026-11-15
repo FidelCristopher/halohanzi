@@ -279,7 +279,7 @@ object LearningRepository {
             coverImageRes = R.drawable.img_student_boy,
             estimatedReadMinutes = 2,
             sentences = listOf(
-                Sentence("s2_1", "今天是一月十号，星期天。", "Jīntiān shì yī yuè shí hào, xīngqītiān.", "Hari ini tanggal 10 Januari, hari Minggu.", listOf(findToken("今天"), findToken("是"), findToken("一"), findToken("月"), findToken("十"), findToken("号"), WordToken("星期天", "xīngqītiān", "Hari Minggu"))),
+                Sentence("s2_1", "今天是一月十号，星期天。", "Jīntiān shì yī yuè shí hào, xīngqītiān.", "Hari ini tanggal 10 Januari, hari Minggu.", listOf(findToken("今天"), findToken("是"), findToken("一"), findToken("月"), findToken("十"), findToken("号"), WordToken("星期天", "xīng qī tiān", "Hari Minggu"))),
                 Sentence("s2_2", "大卫今年二十岁。", "Dàwèi jīnnián èrshí suì.", "David tahun ini berumur 20 tahun.", listOf(findToken("大卫"), WordToken("今年", "jīnnián", "Tahun ini"), findToken("二"), findToken("十"), findToken("岁"))),
                 Sentence("s2_3", "上午八点三十分，他起床了。", "Shàngwǔ bā diǎn sānshí fēn, tā qǐchuáng le.", "Pukul 8 lewat 30 menit pagi, dia bangun tidur.", listOf(findToken("上午"), findToken("八"), findToken("点"), findToken("三"), findToken("十"), WordToken("分", "fēn", "Menit"), findToken("他"), WordToken("起床", "qǐchuáng", "Bangun tidur"), findToken("了"))),
                 Sentence("s2_4", "中午十二点，他去看朋友。", "Zhōngwǔ shí'èr diǎn, tā qù kàn péngyou.", "Pukul 12 siang, dia pergi menemui teman.", listOf(findToken("中午"), findToken("十"), findToken("二"), findToken("点"), findToken("他"), findToken("去"), findToken("看"), findToken("朋友"))),
@@ -409,7 +409,7 @@ object LearningRepository {
                     "Hari ini hari Sabtu, Mingming dan ibu bersama-sama pergi ke supermarket berbelanja.",
                     listOf(
                         WordToken("今天", "jīntiān", "Hari ini"),
-                        WordToken("星期六", "xīngqīliù", "Hari Sabtu"),
+                        WordToken("星期六", "xīng qī liù", "Hari Sabtu"),
                         WordToken("明明", "Míngming", "Mingming"),
                         WordToken("和", "hé", "Dan / bersama"),
                         WordToken("妈妈", "māma", "Ibu"),
@@ -435,11 +435,11 @@ object LearningRepository {
                         WordToken("有", "yǒu", "Ada"),
                         WordToken("红色", "hóngsè", "Warna merah"),
                         WordToken("的", "de", "Partikel"),
-                        WordToken("苹果", "píngguǒ", "Apel"),
+                        WordToken("苹果", "píng guǒ", "Apel"),
                         WordToken("也", "yě", "Juga"),
                         WordToken("有", "yǒu", "Ada"),
                         WordToken("大", "dà", "Besar"),
-                        WordToken("西瓜", "xīguā", "Semangka")
+                        WordToken("西瓜", "xī guā", "Semangka")
                     )
                 ),
                 Sentence(
@@ -454,7 +454,7 @@ object LearningRepository {
                         WordToken("妈妈", "māma", "Ibu"),
                         WordToken("今天", "jīntiān", "Hari ini"),
                         WordToken("的", "de", "Partikel"),
-                        WordToken("西瓜", "xīguā", "Semangka"),
+                        WordToken("西瓜", "xī guā", "Semangka"),
                         WordToken("甜不甜", "tián bu tián", "Manis atau tidak")
                     )
                 ),
@@ -471,7 +471,7 @@ object LearningRepository {
                         WordToken("看", "kàn", "Lihat"),
                         WordToken("这里", "zhèlǐ", "Di sini"),
                         WordToken("的", "de", "Partikel"),
-                        WordToken("西瓜", "xīguā", "Semangka"),
+                        WordToken("西瓜", "xī guā", "Semangka"),
                         WordToken("又大又新鲜", "yòu dà yòu xīnxiān", "Sudah besar juga segar"),
                         WordToken("一定", "yídìng", "Pasti"),
                         WordToken("很", "hěn", "Sangat"),
@@ -488,10 +488,10 @@ object LearningRepository {
                         WordToken("买", "mǎi", "Membeli"),
                         WordToken("了", "le", "Sudah"),
                         WordToken("两斤", "liǎng jīn", "Dua jin (1 kg)"),
-                        WordToken("苹果", "píngguǒ", "Apel"),
+                        WordToken("苹果", "píng guǒ", "Apel"),
                         WordToken("和", "hé", "Dan"),
                         WordToken("一个", "yí gè", "Satu buah"),
-                        WordToken("西瓜", "xīguā", "Semangka"),
+                        WordToken("西瓜", "xī guā", "Semangka"),
                         WordToken("高高兴兴地", "gāogāoxìngxìng de", "Dengan senang gembira"),
                         WordToken("回家", "huí jiā", "Pulang ke rumah"),
                         WordToken("了", "le", "Sudah")

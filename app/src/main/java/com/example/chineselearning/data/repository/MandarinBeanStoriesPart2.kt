@@ -170,7 +170,7 @@ val mandarinBeanStoriesPart2: List<Story> = listOf(
                     "Xīngqīliù, māma hé érzi zài jiā kàn diànshì. Māma shuō: “Érzi, nǐ hěn xǐhuan wán shuǐ, shì bu shì?”",
                     "Hari Sabtu, ibu dan anak laki-lakinya menonton TV di rumah. Ibu berkata: “Nak, kamu sangat suka bermain air, benar kan?”",
                     listOf(
-                        WordToken("星期六", "Xīngqīliù", "Hari Sabtu", "Nama hari ke-6 dalam sepekan"),
+                        WordToken("星期六", "Xīng qī liù", "Hari Sabtu", "Nama hari ke-6 dalam sepekan"),
                         WordToken("妈妈", "māma", "Ibu", "Orang tua perempuan"),
                         WordToken("和", "hé", "Dan", "Kata penghubung"),
                         WordToken("儿子", "érzi", "Anak laki-laki", "Putra kandung"),
@@ -294,7 +294,7 @@ val mandarinBeanStoriesPart2: List<Story> = listOf(
                     "Xīngqīliù, bàba dài zhe xiǎo érzi pá shān, tāmen huā le 3 gè xiǎoshí pá dào le shāndǐng.",
                     "Hari Sabtu, ayah mengajak putra kecilnya mendaki gunung, mereka menghabiskan waktu 3 jam mendaki hingga ke puncak gunung.",
                     listOf(
-                        WordToken("星期六", "Xīngqīliù", "Hari Sabtu", "Keterangan waktu akhir pekan"),
+                        WordToken("星期六", "Xīng qī liù", "Hari Sabtu", "Keterangan waktu akhir pekan"),
                         WordToken("爸爸", "bàba", "Ayah", "Orang tua laki-laki"),
                         WordToken("带着", "dài zhe", "Mengajak / mendampingi", "Aspek berkelanjutan mendampingi"),
                         WordToken("小儿子", "xiǎo érzi", "Putra kecil / bungsu", "Anak laki-laki yang masih kecil"),
@@ -1110,7 +1110,7 @@ val mandarinBeanStoriesPart2: List<Story> = listOf(
                     "Xīngqīrì, xuéxiào zǔzhī chūnyóu, měi rén yào jiāo yì bǎi yuán, érzi huí jiā shuō: “Māma, wǒ bú qù chūnyóu le, tài guì le.”",
                     "Hari Minggu, sekolah mengadakan piknik musim semi, setiap orang harus membayar 100 yuan, anak laki-laki pulang ke rumah dan berkata: “Ibu, aku tidak mau ikut piknik, terlalu mahal.”",
                     listOf(
-                        WordToken("星期日", "xīngqīrì", "Hari Minggu", "Hari akhir pekan"),
+                        WordToken("星期日", "xīng qī rì", "Hari Minggu", "Hari akhir pekan"),
                         WordToken("学校", "xuéxiào", "Sekolah", "Lembaga pendidikan"),
                         WordToken("组织", "zǔzhī", "Mengorganisir / mengadakan", "Mengadakan kegiatan bersama"),
                         WordToken("春游", "chūnyóu", "Wisata musim semi / piknik", "Kegiatan tur rekreasi musim semi"),
@@ -1503,7 +1503,7 @@ val mandarinBeanStoriesPart2: List<Story> = listOf(
                     "Xīngqīrì, bàba māma dōu bù zài jiā, zhǐ yǒu gēge hé dìdi liǎng gè rén.",
                     "Hari Minggu, ayah dan ibu semuanya tidak ada di rumah, hanya ada kakak dan adik laki-laki berdua.",
                     listOf(
-                        WordToken("星期日", "xīngqīrì", "Hari Minggu", "Hari akhir pekan"),
+                        WordToken("星期日", "xīng qī rì", "Hari Minggu", "Hari akhir pekan"),
                         WordToken("爸爸妈妈", "bàba māma", "Ayah dan ibu", "Orang tua"),
                         WordToken("都不在家", "dōu bù zài jiā", "Semua tidak di rumah", "Ketiadaan orang tua"),
                         WordToken("只有", "zhǐ yǒu", "Hanya ada", "Pembatasan subjek"),
@@ -1521,14 +1521,14 @@ val mandarinBeanStoriesPart2: List<Story> = listOf(
                     listOf(
                         WordToken("桌子上", "zhuōzi shang", "Di atas meja", "Keterangan letak di meja"),
                         WordToken("有一个", "yǒu yí gè", "Ada sebuah", "Keberadaan benda"),
-                        WordToken("苹果", "píngguǒ", "Apel", "Buah apel"),
+                        WordToken("苹果", "píng guǒ", "Apel", "Buah apel"),
                         WordToken("弟弟", "弟弟", "Adik laki-laki", "Subjek adik"),
                         WordToken("看见了", "kànjiàn le", "Melihatnya", "Melihat penampakan apel"),
                         WordToken("说", "shuō", "Berkata", "Kata kerja tutur"),
                         WordToken("哥哥", "gēge", "Kakak", "Panggilan hormat ke kakak"),
                         WordToken("我", "wǒ", "Saya / aku", "Pronomina pertama"),
                         WordToken("想吃", "xiǎng chī", "Ingin makan", "Keinginan santap"),
-                        WordToken("苹果", "píngguǒ", "Apel", "Buah apel")
+                        WordToken("苹果", "píng guǒ", "Apel", "Buah apel")
                     )
                 ),
                 Sentence(
@@ -1542,7 +1542,7 @@ val mandarinBeanStoriesPart2: List<Story> = listOf(
                         WordToken("可以啊", "kěyǐ a", "Boleh kok", "Memberi persetujuan awal"),
                         WordToken("但是", "dànshì", "Tetapi", "Konjungsi pertentangan"),
                         WordToken("不知道", "bù zhīdào", "Tidak tahu", "Ketidakpastian"),
-                        WordToken("苹果", "píngguǒ", "Apel", "Buah apel"),
+                        WordToken("苹果", "píng guǒ", "Apel", "Buah apel"),
                         WordToken("有没有坏", "yǒu méiyǒu huài", "Ada busuk atau tidak", "Kondisi kesegaran buah"),
                         WordToken("我先", "wǒ xiān", "Saya duluan", "Tindakan mendahului"),
                         WordToken("帮你", "bāng nǐ", "Membantumu", "Alasan menolong"),
@@ -2284,7 +2284,7 @@ val mandarinBeanStoriesPart2: List<Story> = listOf(
                         WordToken("他们", "tāmen", "Mereka", "Ayah dan anak"),
                         WordToken("听见", "tīngjiàn", "Mendengar", "Menangkap bunyi suara"),
                         WordToken("打破盘子的", "dǎ pò pánzi de", "Piring pecah", "Kerusakan piring pecah terbelah"),
-                        WordToken("声音", "shēngyīn", "Bunyi suara", "Suara pecahan piring"),
+                        WordToken("声音", "shēng yīn", "Bunyi suara", "Suara pecahan piring"),
                         WordToken("儿子", "érzi", "Anak laki-laki", "Subjek putra"),
                         WordToken("看着", "kàn zhe", "Memandangi", "Mengarahkan tatapan mata"),
                         WordToken("他父亲", "tā fùqīn", "Ayahnya", "Panggilan hormat ayah"),
