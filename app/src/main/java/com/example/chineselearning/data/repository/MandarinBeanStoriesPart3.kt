@@ -1971,5 +1971,128 @@ val mandarinBeanStoriesPart3: List<Story> = listOf(
                     "Ucapan penutup festival: '祝你们元旦节快乐！新年快乐！'."
                 )
             )
+        ),
+
+        // Cerita Mandarin Bean 55: Where is the father? (爸爸去哪儿了？)
+        Story(
+            id = "story_where_is_father",
+            titleHanzi = "爸爸去哪儿了？",
+            titlePinyin = "Bàba Qù Nǎr Le?",
+            titleTranslation = "Where is the father? (Ayah Pergi ke Mana?)",
+            level = "Fun, HSK 1",
+            category = "Humor & Seni",
+            description = "Anekdot cerdas tentang dua anak laki-laki yang menikmati lukisan keluarga dan mempertanyakan mengapa sosok ayah tidak ada di dalam lukisan.",
+            coverEmoji = "🎨",
+            coverImageRes = R.drawable.cover_story_where_is_father,
+            estimatedReadMinutes = 2,
+            sentences = listOf(
+                Sentence(
+                    "s_wherefather_1",
+                    "哥哥和弟弟两个人在看一些漂亮的画。",
+                    "Gēge hé dìdi liǎng gè rén zài kàn yìxiē piàoliang de huà.",
+                    "Kakak dan adik berdua sedang melihat beberapa lukisan yang indah.",
+                    listOf(
+                        WordToken("哥哥和弟弟", "gē ge hé dì di", "Kakak dan adik", "Dua bersaudara laki-laki"),
+                        WordToken("两个人", "liǎng gè rén", "Dua orang", "Kuantitas dua orang"),
+                        WordToken("在看", "zài kàn", "Sedang melihat", "Aktivitas menikmati lukisan"),
+                        WordToken("一些", "yì xiē", "Beberapa", "Kuantitas jamak"),
+                        WordToken("漂亮的", "piào liang de", "Yang indah / cantik", "Kualitas estetika"),
+                        WordToken("画", "huà", "Lukisan / gambar", "Karya seni lukis")
+                    )
+                ),
+                Sentence(
+                    "s_wherefather_2",
+                    "“看，”哥哥说，“这些画多漂亮啊！”",
+                    "“Kàn,” gēge shuō, “zhèxiē huà duō piàoliang a!”",
+                    "“Lihat,” kata kakak, “lukisan-lukisan ini betapa indahnya ya!”",
+                    listOf(
+                        WordToken("看", "kàn", "Lihatlah", "Seruan mengarahkan pandangan"),
+                        WordToken("哥哥", "gē ge", "Kakak laki-laki", "Subjek kakak"),
+                        WordToken("说", "shuō", "Berkata", "Kata kerja tutur"),
+                        WordToken("这些画", "zhè xiē huà", "Lukisan-lukisan ini", "Kumpulan karya lukis"),
+                        WordToken("多漂亮啊", "duō piào liang a", "Betapa cantiknya ya!", "Seruan kekaguman")
+                    )
+                ),
+                Sentence(
+                    "s_wherefather_3",
+                    "“是啊，”弟弟说，“但是这些画只有妈妈和孩子。”",
+                    "“Shì a,” dìdi shuō, “dànshì zhèxiē huà zhǐyǒu māma hé háizi.”",
+                    "“Iya ya,” kata adik, “tetapi lukisan-lukisan ini hanya ada ibu dan anak.”",
+                    listOf(
+                        WordToken("是啊", "shì a", "Benar ya", "Pernyataan persetujuan"),
+                        WordToken("弟弟", "dì di", "Adik laki-laki", "Subjek adik"),
+                        WordToken("说", "shuō", "Berkata", "Kata kerja tutur"),
+                        WordToken("但是", "dàn shì", "Tetapi / namun", "Konjungsi pertentangan"),
+                        WordToken("这些画", "zhè xiē huà", "Lukisan-lukisan ini", "Karya seni lukis"),
+                        WordToken("只有", "zhǐ yǒu", "Hanya ada", "Pembatasan subjek"),
+                        WordToken("妈妈和孩子", "mā ma hé hái zi", "Ibu dan anak", "Tokoh dalam lukisan")
+                    )
+                ),
+                Sentence(
+                    "s_wherefather_4",
+                    "“那爸爸去哪儿了呢？”哥哥想了想说：“他在画这些画啊。”",
+                    "“Nà bàba qù nǎr le ne?” Gēge xiǎng le xiǎng shuō: “Tā zài huà zhèxiē huà a.”",
+                    "“Lalu ayah pergi ke mana ya?” Kakak berpikir sejenak lalu berkata: “Ayah kan yang sedang melukis lukisan-lukisan ini!”",
+                    listOf(
+                        WordToken("那爸爸", "nà bà ba", "Lalu ayah", "Menanyakan keberadaan sosok ayah"),
+                        WordToken("去哪儿了呢", "qù nǎ r le ne", "Pergi ke mana ya?", "Pertanyaan keheranan"),
+                        WordToken("哥哥", "gē ge", "Kakak", "Subjek kakak"),
+                        WordToken("想了想", "xiǎng le xiǎng", "Berpikir sejenak", "Merenung sesaat"),
+                        WordToken("说", "shuō", "Berkata", "Kata kerja tutur"),
+                        WordToken("他在画", "tā zài huà", "Dia sedang melukis", "Aktivitas ayah yang sebenarnya"),
+                        WordToken("这些画啊", "zhè xiē huà a", "Lukisan-lukisan ini lho!", "Objek karya yang dilukis ayah")
+                    )
+                )
+            ),
+            questions = listOf(
+                StoryQuestion(
+                    "q_wherefather_1",
+                    "哥哥和弟弟在看什么？(Apa yang sedang dilihat oleh kakak dan adik?)",
+                    listOf(
+                        "电视机 (Televisi)",
+                        "一些漂亮的画 (Beberapa lukisan yang indah)",
+                        "新买的玩具 (Mainan baru)",
+                        "动物园里的小狗 (Anjing kecil)"
+                    ),
+                    1,
+                    "Di kalimat pertama dinyatakan: '哥哥和弟弟两个人在看一些漂亮的画' (Kakak dan adik berdua sedang melihat beberapa lukisan yang indah)."
+                ),
+                StoryQuestion(
+                    "q_wherefather_2",
+                    "弟弟看着画，发现了什么奇怪的事情？(Apa hal janggal yang disadari oleh sang adik saat melihat lukisan?)",
+                    listOf(
+                        "画里没有花 (Di lukisan tidak ada bunga)",
+                        "这些画里只有妈妈和孩子，没有爸爸 (Lukisan-lukisan itu hanya ada ibu dan anak, tidak ada sosok ayah)",
+                        "画上的颜色不好看 (Warnanya tidak bagus)",
+                        "画都被弄脏了 (Lukisannya kotor)"
+                    ),
+                    1,
+                    "Adik mengamati dengan jeli: '但是这些画只有妈妈和孩子。那爸爸去哪儿了呢？'."
+                ),
+                StoryQuestion(
+                    "q_wherefather_3",
+                    "哥哥想了想之后，给出了怎样机智的回答？(Setelah berpikir sejenak, jawaban cerdas apa yang diberikan sang kakak?)",
+                    listOf(
+                        "爸爸去上班了 (Ayah pergi kerja)",
+                        "爸爸正在画这些画呢！ (Ayah adalah orang yang sedang melukis lukisan-lukisan itu!)",
+                        "爸爸去买西瓜了 (Ayah pergi beli semangka)",
+                        "爸爸在睡觉 (Ayah sedang tidur)"
+                    ),
+                    1,
+                    "Kakak menjawab dengan analogi cerdas: '他在画这些画啊' (Ayah kan yang melukis semua lukisan ini, makanya beliau tidak ada di dalam gambar!)."
+                ),
+                StoryQuestion(
+                    "q_wherefather_4",
+                    "这个故事让人联想到日常家庭生活中的什么真实场景？(Cerita jenaka ini mengingatkan pada pemandangan nyata apa dalam kehidupan keluarga?)",
+                    listOf(
+                        "Ayah malas belajar",
+                        "Foto-foto keluarga yang selalu tidak ada ayahnya karena ayahlah yang selalu menjadi fotografer di balik kamera!",
+                        "Ibu yang jago melukis",
+                        "Kakak beradik yang sering bertengkar"
+                    ),
+                    1,
+                    "Puncak kehangatan humor: sama seperti foto keluarga di mana sosok ayah sering 'hilang' karena beliau yang memegang kamera, dalam lukisan keluarga ayahlah yang melukis anak dan istrinya!"
+                )
+            )
         )
 )
