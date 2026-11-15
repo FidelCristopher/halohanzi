@@ -24,6 +24,7 @@ import androidx.compose.material.icons.automirrored.filled.ArrowForward
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -50,9 +51,9 @@ fun StoryListScreen(
 ) {
     val allStories = LearningRepository.stories
 
-    var selectedHskFilter by remember { mutableStateOf("Semua") }
-    var selectedCategoryFilter by remember { mutableStateOf("Semua Topik") }
-    var searchQuery by remember { mutableStateOf("") }
+    var selectedHskFilter by rememberSaveable { mutableStateOf("Semua") }
+    var selectedCategoryFilter by rememberSaveable { mutableStateOf("Semua Topik") }
+    var searchQuery by rememberSaveable { mutableStateOf("") }
 
     val hskLevels = listOf("Semua", "HSK 1", "HSK 2", "HSK 3")
 
@@ -105,7 +106,7 @@ fun StoryListScreen(
         verticalArrangement = Arrangement.spacedBy(16.dp)
     ) {
         // --- 1. HERO HEADER SECTION ---
-        item {
+        item(key = "header_title") {
             Text(
                 text = "Pustaka Cerita Mandarin",
                 fontFamily = AppFontFamily,
@@ -117,7 +118,7 @@ fun StoryListScreen(
         }
 
         // --- 2. SEARCH BAR ---
-        item {
+        item(key = "header_search") {
             StorySearchBar(
                 query = searchQuery,
                 onQueryChange = { searchQuery = it },
@@ -126,7 +127,7 @@ fun StoryListScreen(
         }
 
         // --- 3. HSK LEVEL FILTER TABS ---
-        item {
+        item(key = "header_hsk_filter") {
             Column(modifier = Modifier.fillMaxWidth()) {
                 Row(
                     modifier = Modifier.fillMaxWidth(),
@@ -186,7 +187,7 @@ fun StoryListScreen(
         }
 
         // --- 4. TOPIC / CATEGORY CHIPS ---
-        item {
+        item(key = "header_topic_filter") {
             Row(
                 modifier = Modifier
                     .fillMaxWidth()
@@ -205,7 +206,7 @@ fun StoryListScreen(
         }
 
         // --- 5. RESULT COUNT HEADER ---
-        item {
+        item(key = "header_result_count") {
             Row(
                 modifier = Modifier.fillMaxWidth(),
                 verticalAlignment = Alignment.CenterVertically,
@@ -239,7 +240,7 @@ fun StoryListScreen(
 
         // --- 6. STORY CARDS OR EMPTY STATE ---
         if (filteredStories.isEmpty()) {
-            item {
+            item(key = "empty_state") {
                 StoryEmptyState(
                     selectedHsk = selectedHskFilter,
                     selectedCategory = selectedCategoryFilter,
@@ -252,7 +253,7 @@ fun StoryListScreen(
                 )
             }
         } else {
-            items(filteredStories, key = { it.id }) { story ->
+            items(filteredStories, key = { "story_${it.id}" }) { story ->
                 ModernStoryCard(
                     story = story,
                     onCardClick = { onSelectStory(story) }

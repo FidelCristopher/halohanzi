@@ -31,6 +31,9 @@ fun MainAppContainer(
     val storyListState = rememberSaveable(saver = LazyListState.Saver) {
         LazyListState()
     }
+    val imersiListState = rememberSaveable(saver = LazyListState.Saver) {
+        LazyListState()
+    }
 
     // Graded Story Reader Mode
     if (activeStory != null) {
@@ -96,7 +99,7 @@ fun MainAppContainer(
                     onSelectStory = { story -> activeStory = story }
                 )
                 3 -> StoryListScreen(
-                    lazyListState = storyListState,
+                    lazyListState = imersiListState,
                     onSelectStory = { story -> activeStory = story }
                 )
                 4 -> ProfileScreen()
