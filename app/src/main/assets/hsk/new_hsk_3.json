@@ -1,0 +1,3502 @@
+[
+  {
+    "id": 1,
+    "hanzi": "阿姨",
+    "pinyin": "āyí",
+    "category": "Kata Benda",
+    "en": "aunt"
+  },
+  {
+    "id": 2,
+    "hanzi": "矮",
+    "pinyin": "ǎi",
+    "category": "Kata Sifat",
+    "en": "short"
+  },
+  {
+    "id": 3,
+    "hanzi": "爱人",
+    "pinyin": "àiren",
+    "category": "Kata Benda",
+    "en": "spouse"
+  },
+  {
+    "id": 4,
+    "hanzi": "安静",
+    "pinyin": "ānjìng",
+    "category": "Kata Sifat",
+    "en": "quiet"
+  },
+  {
+    "id": 5,
+    "hanzi": "安全",
+    "pinyin": "ānquán",
+    "category": "Kata Sifat",
+    "en": "safe"
+  },
+  {
+    "id": 6,
+    "hanzi": "把",
+    "pinyin": "bǎ",
+    "category": "Satuan / Kata Depan",
+    "en": ""
+  },
+  {
+    "id": 7,
+    "hanzi": "搬",
+    "pinyin": "bān",
+    "category": "Kata Kerja",
+    "en": ""
+  },
+  {
+    "id": 8,
+    "hanzi": "班级",
+    "pinyin": "bānjí",
+    "category": "Kata Benda",
+    "en": ""
+  },
+  {
+    "id": 9,
+    "hanzi": "搬家",
+    "pinyin": "bānjiā",
+    "category": "Kata Kerja",
+    "en": ""
+  },
+  {
+    "id": 10,
+    "hanzi": "办",
+    "pinyin": "bàn",
+    "category": "Kata Kerja",
+    "en": ""
+  },
+  {
+    "id": 11,
+    "hanzi": "办法",
+    "pinyin": "bànfǎ",
+    "category": "Kata Benda",
+    "en": ""
+  },
+  {
+    "id": 12,
+    "hanzi": "办公室",
+    "pinyin": "bàngōngshì",
+    "category": "Kata Benda",
+    "en": "office"
+  },
+  {
+    "id": 13,
+    "hanzi": "半天",
+    "pinyin": "bàntiān",
+    "category": "number-classifier",
+    "en": ""
+  },
+  {
+    "id": 14,
+    "hanzi": "帮助",
+    "pinyin": "bāngzhù",
+    "category": "Kata Kerja",
+    "en": "help"
+  },
+  {
+    "id": 15,
+    "hanzi": "饱",
+    "pinyin": "bǎo",
+    "category": "Kata Sifat",
+    "en": "full"
+  },
+  {
+    "id": 16,
+    "hanzi": "报纸",
+    "pinyin": "bàozhǐ",
+    "category": "Kata Benda",
+    "en": "newspaper"
+  },
+  {
+    "id": 17,
+    "hanzi": "北",
+    "pinyin": "běi",
+    "category": "Kata Benda",
+    "en": "north"
+  },
+  {
+    "id": 18,
+    "hanzi": "北方",
+    "pinyin": "běifāng",
+    "category": "Kata Benda",
+    "en": "north"
+  },
+  {
+    "id": 19,
+    "hanzi": "被",
+    "pinyin": "bèi",
+    "category": "Kata Depan",
+    "en": "by"
+  },
+  {
+    "id": 20,
+    "hanzi": "笔记",
+    "pinyin": "bǐjì",
+    "category": "Kata Benda",
+    "en": "notes"
+  },
+  {
+    "id": 21,
+    "hanzi": "比较",
+    "pinyin": "bǐjiào",
+    "category": "Kata Kerja / Kata Depan / Kata Keterangan",
+    "en": ""
+  },
+  {
+    "id": 22,
+    "hanzi": "笔记本",
+    "pinyin": "bǐjìběn",
+    "category": "Kata Benda",
+    "en": "notebook"
+  },
+  {
+    "id": 23,
+    "hanzi": "比如",
+    "pinyin": "bǐrú",
+    "category": "Kata Kerja",
+    "en": "for example"
+  },
+  {
+    "id": 24,
+    "hanzi": "比赛",
+    "pinyin": "bǐsài",
+    "category": "Kata Kerja / Kata Benda",
+    "en": ""
+  },
+  {
+    "id": 25,
+    "hanzi": "必须",
+    "pinyin": "bìxū",
+    "category": "Kata Keterangan",
+    "en": "must"
+  },
+  {
+    "id": 26,
+    "hanzi": "变",
+    "pinyin": "biàn",
+    "category": "Kata Kerja",
+    "en": ""
+  },
+  {
+    "id": 27,
+    "hanzi": "遍",
+    "pinyin": "biàn",
+    "category": "Satuan",
+    "en": ""
+  },
+  {
+    "id": 28,
+    "hanzi": "变成",
+    "pinyin": "biànchéng",
+    "category": "Kata Kerja",
+    "en": ""
+  },
+  {
+    "id": 29,
+    "hanzi": "变化",
+    "pinyin": "biànhuà",
+    "category": "Kata Kerja / Kata Benda",
+    "en": ""
+  },
+  {
+    "id": 30,
+    "hanzi": "表演",
+    "pinyin": "biǎoyǎn",
+    "category": "Kata Kerja",
+    "en": ""
+  },
+  {
+    "id": 31,
+    "hanzi": "别的",
+    "pinyin": "biéde",
+    "category": "Kata Ganti",
+    "en": "other"
+  },
+  {
+    "id": 32,
+    "hanzi": "别人",
+    "pinyin": "biérén",
+    "category": "Kata Ganti",
+    "en": ""
+  },
+  {
+    "id": 33,
+    "hanzi": "宾馆",
+    "pinyin": "bīnguǎn",
+    "category": "Kata Benda",
+    "en": "hotel"
+  },
+  {
+    "id": 34,
+    "hanzi": "冰",
+    "pinyin": "bīng",
+    "category": "Kata Benda / （verb）",
+    "en": ""
+  },
+  {
+    "id": 35,
+    "hanzi": "冰激凌",
+    "pinyin": "bīngjīlíng",
+    "category": "Kata Benda",
+    "en": "ice cream"
+  },
+  {
+    "id": 36,
+    "hanzi": "冰箱",
+    "pinyin": "bīngxiāng",
+    "category": "Kata Benda",
+    "en": "refrigerator"
+  },
+  {
+    "id": 37,
+    "hanzi": "病人",
+    "pinyin": "bìngrén",
+    "category": "Kata Benda",
+    "en": "patient"
+  },
+  {
+    "id": 38,
+    "hanzi": "不但",
+    "pinyin": "búdàn",
+    "category": "Kata Sambung",
+    "en": "not only"
+  },
+  {
+    "id": 39,
+    "hanzi": "不见",
+    "pinyin": "bújiàn",
+    "category": "Kata Kerja",
+    "en": ""
+  },
+  {
+    "id": 40,
+    "hanzi": "不用",
+    "pinyin": "búyòng",
+    "category": "Kata Keterangan",
+    "en": "need not"
+  },
+  {
+    "id": 41,
+    "hanzi": "不同",
+    "pinyin": "bù tóng",
+    "category": "Kosakata",
+    "en": "different"
+  },
+  {
+    "id": 42,
+    "hanzi": "不久",
+    "pinyin": "bùjiǔ",
+    "category": "Kata Sifat",
+    "en": ""
+  },
+  {
+    "id": 43,
+    "hanzi": "不行",
+    "pinyin": "bùxíng",
+    "category": "Kata Kerja / Kata Sifat",
+    "en": ""
+  },
+  {
+    "id": 44,
+    "hanzi": "才",
+    "pinyin": "cái",
+    "category": "Kata Keterangan",
+    "en": "just, only"
+  },
+  {
+    "id": 45,
+    "hanzi": "菜单",
+    "pinyin": "càidān",
+    "category": "Kata Benda",
+    "en": "menu"
+  },
+  {
+    "id": 46,
+    "hanzi": "参加",
+    "pinyin": "cānjiā",
+    "category": "Kata Kerja",
+    "en": ""
+  },
+  {
+    "id": 47,
+    "hanzi": "草",
+    "pinyin": "cǎo",
+    "category": "Kata Benda",
+    "en": "grass"
+  },
+  {
+    "id": 48,
+    "hanzi": "草地",
+    "pinyin": "cǎodì",
+    "category": "Kata Benda",
+    "en": "grassland"
+  },
+  {
+    "id": 49,
+    "hanzi": "层",
+    "pinyin": "céng",
+    "category": "Satuan",
+    "en": ""
+  },
+  {
+    "id": 50,
+    "hanzi": "查",
+    "pinyin": "chá",
+    "category": "Kata Kerja",
+    "en": "to check"
+  },
+  {
+    "id": 51,
+    "hanzi": "差",
+    "pinyin": "chà",
+    "category": "Kata Sifat / Kata Kerja",
+    "en": ""
+  },
+  {
+    "id": 52,
+    "hanzi": "差不多",
+    "pinyin": "chàbuduō",
+    "category": "Kata Sifat / Kata Keterangan",
+    "en": ""
+  },
+  {
+    "id": 53,
+    "hanzi": "尝",
+    "pinyin": "cháng",
+    "category": "Kata Kerja",
+    "en": "to taste"
+  },
+  {
+    "id": 54,
+    "hanzi": "常",
+    "pinyin": "cháng",
+    "category": "Kata Keterangan",
+    "en": ""
+  },
+  {
+    "id": 55,
+    "hanzi": "常见",
+    "pinyin": "cháng jiàn",
+    "category": "Kosakata",
+    "en": "common"
+  },
+  {
+    "id": 56,
+    "hanzi": "常用",
+    "pinyin": "",
+    "category": "Kosakata",
+    "en": ""
+  },
+  {
+    "id": 57,
+    "hanzi": "常常",
+    "pinyin": "chángcháng",
+    "category": "Kata Keterangan",
+    "en": "often"
+  },
+  {
+    "id": 58,
+    "hanzi": "衬衫",
+    "pinyin": "chènshān",
+    "category": "Kata Benda",
+    "en": "shirt"
+  },
+  {
+    "id": 59,
+    "hanzi": "成绩",
+    "pinyin": "chéngjì",
+    "category": "Kata Benda",
+    "en": ""
+  },
+  {
+    "id": 60,
+    "hanzi": "城市",
+    "pinyin": "chéngshì",
+    "category": "Kata Benda",
+    "en": "city"
+  },
+  {
+    "id": 61,
+    "hanzi": "迟到",
+    "pinyin": "chídào",
+    "category": "Kata Kerja",
+    "en": "to be late"
+  },
+  {
+    "id": 62,
+    "hanzi": "出发",
+    "pinyin": "chūfā",
+    "category": "Kata Kerja",
+    "en": ""
+  },
+  {
+    "id": 63,
+    "hanzi": "出生",
+    "pinyin": "chūshēng",
+    "category": "Kata Kerja",
+    "en": "to be born"
+  },
+  {
+    "id": 64,
+    "hanzi": "出院",
+    "pinyin": "chūyuàn",
+    "category": "Kata Kerja",
+    "en": ""
+  },
+  {
+    "id": 65,
+    "hanzi": "初中",
+    "pinyin": "chūzhōng",
+    "category": "Kata Benda",
+    "en": ""
+  },
+  {
+    "id": 66,
+    "hanzi": "除了",
+    "pinyin": "chúle",
+    "category": "Kata Depan",
+    "en": ""
+  },
+  {
+    "id": 67,
+    "hanzi": "船",
+    "pinyin": "chuán",
+    "category": "Kata Benda",
+    "en": "boat"
+  },
+  {
+    "id": 68,
+    "hanzi": "春天",
+    "pinyin": "chūntiān",
+    "category": "Kata Benda",
+    "en": "spring"
+  },
+  {
+    "id": 69,
+    "hanzi": "词典",
+    "pinyin": "cídiǎn",
+    "category": "Kata Benda",
+    "en": "dictionary"
+  },
+  {
+    "id": 70,
+    "hanzi": "聪明",
+    "pinyin": "cōngmíng",
+    "category": "Kata Sifat",
+    "en": ""
+  },
+  {
+    "id": 71,
+    "hanzi": "打扫",
+    "pinyin": "dǎsǎo",
+    "category": "Kata Kerja",
+    "en": "to clean"
+  },
+  {
+    "id": 72,
+    "hanzi": "打算",
+    "pinyin": "dǎsuàn",
+    "category": "Kata Kerja / Kata Benda",
+    "en": ""
+  },
+  {
+    "id": 73,
+    "hanzi": "大概",
+    "pinyin": "dàgài",
+    "category": "Kata Sifat / Kata Keterangan / （noun）",
+    "en": ""
+  },
+  {
+    "id": 74,
+    "hanzi": "大人",
+    "pinyin": "dàren",
+    "category": "Kata Benda",
+    "en": "adult"
+  },
+  {
+    "id": 75,
+    "hanzi": "大小",
+    "pinyin": "dàxiǎo",
+    "category": "Kata Benda",
+    "en": "size"
+  },
+  {
+    "id": 76,
+    "hanzi": "大熊猫",
+    "pinyin": "dàxióngmāo",
+    "category": "Kata Benda",
+    "en": "giant panda"
+  },
+  {
+    "id": 77,
+    "hanzi": "大衣",
+    "pinyin": "dàyī",
+    "category": "Kata Benda",
+    "en": "coat"
+  },
+  {
+    "id": 78,
+    "hanzi": "带",
+    "pinyin": "dài",
+    "category": "Kata Kerja / （noun）",
+    "en": ""
+  },
+  {
+    "id": 79,
+    "hanzi": "担心",
+    "pinyin": "dānxīn",
+    "category": "Kata Kerja",
+    "en": "to worry"
+  },
+  {
+    "id": 80,
+    "hanzi": "蛋糕",
+    "pinyin": "dàngāo",
+    "category": "Kata Benda",
+    "en": "cake"
+  },
+  {
+    "id": 81,
+    "hanzi": "当然",
+    "pinyin": "dāngrán",
+    "category": "Kata Keterangan",
+    "en": "of course"
+  },
+  {
+    "id": 82,
+    "hanzi": "到处",
+    "pinyin": "dàochù",
+    "category": "Kata Keterangan",
+    "en": "everywhere"
+  },
+  {
+    "id": 83,
+    "hanzi": "得",
+    "pinyin": "dé",
+    "category": "Kata Kerja",
+    "en": ""
+  },
+  {
+    "id": 84,
+    "hanzi": "得到",
+    "pinyin": "dédào",
+    "category": "Kata Kerja",
+    "en": ""
+  },
+  {
+    "id": 85,
+    "hanzi": "得分",
+    "pinyin": "défēn",
+    "category": "Kata Kerja / Kata Benda",
+    "en": ""
+  },
+  {
+    "id": 86,
+    "hanzi": "的话",
+    "pinyin": "dehuà",
+    "category": "Partikel",
+    "en": ""
+  },
+  {
+    "id": 87,
+    "hanzi": "得",
+    "pinyin": "děi",
+    "category": "Kata Kerja",
+    "en": "must, need"
+  },
+  {
+    "id": 88,
+    "hanzi": "灯",
+    "pinyin": "dēng",
+    "category": "Kata Benda",
+    "en": "lamp, light"
+  },
+  {
+    "id": 89,
+    "hanzi": "地",
+    "pinyin": "dì",
+    "category": "Kata Benda",
+    "en": ""
+  },
+  {
+    "id": 90,
+    "hanzi": "地点",
+    "pinyin": "dìdiǎn",
+    "category": "Kata Benda",
+    "en": ""
+  },
+  {
+    "id": 91,
+    "hanzi": "地方",
+    "pinyin": "dìfang",
+    "category": "Kata Benda",
+    "en": "place"
+  },
+  {
+    "id": 92,
+    "hanzi": "地图",
+    "pinyin": "dìtú",
+    "category": "Kata Benda",
+    "en": "map"
+  },
+  {
+    "id": 93,
+    "hanzi": "电",
+    "pinyin": "diàn",
+    "category": "Kata Benda / （verb）",
+    "en": ""
+  },
+  {
+    "id": 94,
+    "hanzi": "电梯",
+    "pinyin": "diàntī",
+    "category": "Kata Benda",
+    "en": "elevator"
+  },
+  {
+    "id": 95,
+    "hanzi": "电子书",
+    "pinyin": "diànzǐshū",
+    "category": "Kata Benda",
+    "en": "e-book"
+  },
+  {
+    "id": 96,
+    "hanzi": "丢",
+    "pinyin": "diū",
+    "category": "Kata Kerja",
+    "en": ""
+  },
+  {
+    "id": 97,
+    "hanzi": "东",
+    "pinyin": "dōng",
+    "category": "Kata Benda",
+    "en": "east"
+  },
+  {
+    "id": 98,
+    "hanzi": "东北",
+    "pinyin": "dōngběi",
+    "category": "Kata Benda",
+    "en": "northeast"
+  },
+  {
+    "id": 99,
+    "hanzi": "东方",
+    "pinyin": "dōngfāng",
+    "category": "Kata Benda",
+    "en": "east"
+  },
+  {
+    "id": 100,
+    "hanzi": "东南",
+    "pinyin": "dōngnán",
+    "category": "Kata Benda",
+    "en": "southeast"
+  },
+  {
+    "id": 101,
+    "hanzi": "冬天",
+    "pinyin": "dōngtiān",
+    "category": "Kata Benda",
+    "en": "winter"
+  },
+  {
+    "id": 102,
+    "hanzi": "懂得",
+    "pinyin": "dǒngde",
+    "category": "Kata Kerja",
+    "en": ""
+  },
+  {
+    "id": 103,
+    "hanzi": "动物",
+    "pinyin": "dòngwù",
+    "category": "Kata Benda",
+    "en": "animal"
+  },
+  {
+    "id": 104,
+    "hanzi": "动物园",
+    "pinyin": "dòngwùyuán",
+    "category": "Kata Benda",
+    "en": "zoo"
+  },
+  {
+    "id": 105,
+    "hanzi": "短",
+    "pinyin": "duǎn",
+    "category": "Kata Sifat",
+    "en": "short"
+  },
+  {
+    "id": 106,
+    "hanzi": "短裤",
+    "pinyin": "duǎnkù",
+    "category": "Kata Benda",
+    "en": "shorts"
+  },
+  {
+    "id": 107,
+    "hanzi": "段",
+    "pinyin": "duàn",
+    "category": "Satuan",
+    "en": ""
+  },
+  {
+    "id": 108,
+    "hanzi": "锻炼",
+    "pinyin": "duànliàn",
+    "category": "Kata Kerja",
+    "en": "to exercise"
+  },
+  {
+    "id": 109,
+    "hanzi": "对话",
+    "pinyin": "duìhuà",
+    "category": "Kata Kerja",
+    "en": ""
+  },
+  {
+    "id": 110,
+    "hanzi": "饿",
+    "pinyin": "è",
+    "category": "Kata Sifat",
+    "en": "hungry"
+  },
+  {
+    "id": 111,
+    "hanzi": "而且",
+    "pinyin": "érqiě",
+    "category": "Kata Sambung",
+    "en": ""
+  },
+  {
+    "id": 112,
+    "hanzi": "耳朵",
+    "pinyin": "ěrduo",
+    "category": "Kata Benda",
+    "en": "ear"
+  },
+  {
+    "id": 113,
+    "hanzi": "耳机",
+    "pinyin": "ěrjī",
+    "category": "Kata Benda",
+    "en": "earphone"
+  },
+  {
+    "id": 114,
+    "hanzi": "发",
+    "pinyin": "fā",
+    "category": "Kata Kerja",
+    "en": ""
+  },
+  {
+    "id": 115,
+    "hanzi": "发烧",
+    "pinyin": "fāshāo",
+    "category": "Kata Kerja",
+    "en": ""
+  },
+  {
+    "id": 116,
+    "hanzi": "发生",
+    "pinyin": "fāshēng",
+    "category": "Kata Kerja",
+    "en": "to happen"
+  },
+  {
+    "id": 117,
+    "hanzi": "发现",
+    "pinyin": "fāxiàn",
+    "category": "Kata Kerja",
+    "en": ""
+  },
+  {
+    "id": 118,
+    "hanzi": "发展",
+    "pinyin": "fāzhǎn",
+    "category": "Kata Kerja",
+    "en": "to develop"
+  },
+  {
+    "id": 119,
+    "hanzi": "方便",
+    "pinyin": "fāngbiàn",
+    "category": "Kata Sifat",
+    "en": "convenient"
+  },
+  {
+    "id": 120,
+    "hanzi": "方便面",
+    "pinyin": "fāngbiànmiàn",
+    "category": "Kata Benda",
+    "en": ""
+  },
+  {
+    "id": 121,
+    "hanzi": "方法",
+    "pinyin": "fāngfǎ",
+    "category": "Kata Benda",
+    "en": "method"
+  },
+  {
+    "id": 122,
+    "hanzi": "方向",
+    "pinyin": "fāngxiàng",
+    "category": "Kata Benda",
+    "en": "direction"
+  },
+  {
+    "id": 123,
+    "hanzi": "房子",
+    "pinyin": "fángzi",
+    "category": "Kata Benda",
+    "en": "house"
+  },
+  {
+    "id": 124,
+    "hanzi": "放",
+    "pinyin": "fàng",
+    "category": "Kata Kerja",
+    "en": ""
+  },
+  {
+    "id": 125,
+    "hanzi": "放假",
+    "pinyin": "fàngjià",
+    "category": "Kata Kerja",
+    "en": ""
+  },
+  {
+    "id": 126,
+    "hanzi": "放心",
+    "pinyin": "fàngxīn",
+    "category": "Kata Kerja",
+    "en": ""
+  },
+  {
+    "id": 127,
+    "hanzi": "放学",
+    "pinyin": "fàngxué",
+    "category": "Kata Kerja",
+    "en": ""
+  },
+  {
+    "id": 128,
+    "hanzi": "分开",
+    "pinyin": "fēnkāi",
+    "category": "Kata Kerja",
+    "en": "to separate"
+  },
+  {
+    "id": 129,
+    "hanzi": "风",
+    "pinyin": "fēng",
+    "category": "Kata Benda",
+    "en": "wind"
+  },
+  {
+    "id": 130,
+    "hanzi": "封",
+    "pinyin": "fēng",
+    "category": "Satuan / （verb）",
+    "en": ""
+  },
+  {
+    "id": 131,
+    "hanzi": "夫妻",
+    "pinyin": "fūqī",
+    "category": "Kata Benda",
+    "en": ""
+  },
+  {
+    "id": 132,
+    "hanzi": "服务",
+    "pinyin": "fúwù",
+    "category": "Kata Kerja",
+    "en": "to serve"
+  },
+  {
+    "id": 133,
+    "hanzi": "附近",
+    "pinyin": "fùjìn",
+    "category": "Kata Benda",
+    "en": "nearby"
+  },
+  {
+    "id": 134,
+    "hanzi": "复习",
+    "pinyin": "fùxí",
+    "category": "Kata Kerja",
+    "en": "to review"
+  },
+  {
+    "id": 135,
+    "hanzi": "该",
+    "pinyin": "gāi",
+    "category": "Kata Kerja",
+    "en": "should"
+  },
+  {
+    "id": 136,
+    "hanzi": "干净",
+    "pinyin": "gānjìng",
+    "category": "Kata Sifat",
+    "en": "clean"
+  },
+  {
+    "id": 137,
+    "hanzi": "感兴趣",
+    "pinyin": "gǎn xìngqù",
+    "category": "Kosakata",
+    "en": ""
+  },
+  {
+    "id": 138,
+    "hanzi": "感到",
+    "pinyin": "gǎndào",
+    "category": "Kata Kerja",
+    "en": "to feel"
+  },
+  {
+    "id": 139,
+    "hanzi": "感冒",
+    "pinyin": "gǎnmào",
+    "category": "Kata Benda / Kata Kerja",
+    "en": ""
+  },
+  {
+    "id": 140,
+    "hanzi": "干",
+    "pinyin": "gàn",
+    "category": "Kata Kerja",
+    "en": ""
+  },
+  {
+    "id": 141,
+    "hanzi": "刚",
+    "pinyin": "gāng",
+    "category": "Kata Keterangan",
+    "en": ""
+  },
+  {
+    "id": 142,
+    "hanzi": "刚才",
+    "pinyin": "gāngcái",
+    "category": "Kata Benda",
+    "en": "just now"
+  },
+  {
+    "id": 143,
+    "hanzi": "刚刚",
+    "pinyin": "gānggāng",
+    "category": "Kata Keterangan",
+    "en": ""
+  },
+  {
+    "id": 144,
+    "hanzi": "高铁",
+    "pinyin": "gāotiě",
+    "category": "Kata Benda",
+    "en": ""
+  },
+  {
+    "id": 145,
+    "hanzi": "根据",
+    "pinyin": "gēnjù",
+    "category": "Kata Kerja / Kata Depan / （noun）",
+    "en": ""
+  },
+  {
+    "id": 146,
+    "hanzi": "更",
+    "pinyin": "gèng",
+    "category": "Kata Keterangan",
+    "en": "more"
+  },
+  {
+    "id": 147,
+    "hanzi": "公斤",
+    "pinyin": "gōngjīn",
+    "category": "Satuan",
+    "en": "kilogram"
+  },
+  {
+    "id": 148,
+    "hanzi": "公园",
+    "pinyin": "gōngyuán",
+    "category": "Kata Benda",
+    "en": "park"
+  },
+  {
+    "id": 149,
+    "hanzi": "工作日",
+    "pinyin": "gōngzuòrì",
+    "category": "Kata Benda",
+    "en": "workday"
+  },
+  {
+    "id": 150,
+    "hanzi": "故事",
+    "pinyin": "gùshi",
+    "category": "Kata Benda",
+    "en": "story"
+  },
+  {
+    "id": 151,
+    "hanzi": "刮",
+    "pinyin": "guā",
+    "category": "Kata Kerja",
+    "en": ""
+  },
+  {
+    "id": 152,
+    "hanzi": "关",
+    "pinyin": "guān",
+    "category": "Kata Kerja / （noun）",
+    "en": ""
+  },
+  {
+    "id": 153,
+    "hanzi": "关机",
+    "pinyin": "guānjī",
+    "category": "Kata Kerja",
+    "en": ""
+  },
+  {
+    "id": 154,
+    "hanzi": "关系",
+    "pinyin": "guānxì",
+    "category": "Kata Benda / （verb）",
+    "en": ""
+  },
+  {
+    "id": 155,
+    "hanzi": "关心",
+    "pinyin": "guānxīn",
+    "category": "Kata Kerja",
+    "en": ""
+  },
+  {
+    "id": 156,
+    "hanzi": "关于",
+    "pinyin": "guānyú",
+    "category": "Kata Depan",
+    "en": ""
+  },
+  {
+    "id": 157,
+    "hanzi": "关注",
+    "pinyin": "guānzhù",
+    "category": "Kata Kerja",
+    "en": ""
+  },
+  {
+    "id": 158,
+    "hanzi": "国家",
+    "pinyin": "guójiā",
+    "category": "Kata Benda",
+    "en": "country"
+  },
+  {
+    "id": 159,
+    "hanzi": "过节",
+    "pinyin": "guòjié",
+    "category": "Kata Kerja",
+    "en": ""
+  },
+  {
+    "id": 160,
+    "hanzi": "过去",
+    "pinyin": "guòqù",
+    "category": "Kata Benda",
+    "en": "past"
+  },
+  {
+    "id": 161,
+    "hanzi": "海",
+    "pinyin": "hǎi",
+    "category": "Kata Benda",
+    "en": "sea"
+  },
+  {
+    "id": 162,
+    "hanzi": "害怕",
+    "pinyin": "hàipà",
+    "category": "Kata Kerja",
+    "en": "to be afraid"
+  },
+  {
+    "id": 163,
+    "hanzi": "好多",
+    "pinyin": "hǎoduō",
+    "category": "Angka",
+    "en": "many, a lot"
+  },
+  {
+    "id": 164,
+    "hanzi": "好久",
+    "pinyin": "hǎojiǔ",
+    "category": "Kata Sifat",
+    "en": "a long time"
+  },
+  {
+    "id": 165,
+    "hanzi": "好像",
+    "pinyin": "hǎoxiàng",
+    "category": "Kata Kerja / Kata Keterangan",
+    "en": ""
+  },
+  {
+    "id": 166,
+    "hanzi": "号码",
+    "pinyin": "hàomǎ",
+    "category": "Kata Benda",
+    "en": ""
+  },
+  {
+    "id": 167,
+    "hanzi": "河",
+    "pinyin": "hé",
+    "category": "Kata Benda",
+    "en": "river"
+  },
+  {
+    "id": 168,
+    "hanzi": "合适",
+    "pinyin": "héshì",
+    "category": "Kata Sifat",
+    "en": "suitable"
+  },
+  {
+    "id": 169,
+    "hanzi": "黑板",
+    "pinyin": "hēibǎn",
+    "category": "Kata Benda",
+    "en": "blackboard"
+  },
+  {
+    "id": 170,
+    "hanzi": "红绿灯",
+    "pinyin": "hóng-lǜdēng",
+    "category": "Kata Benda",
+    "en": "traffic light"
+  },
+  {
+    "id": 171,
+    "hanzi": "后来",
+    "pinyin": "hòulái",
+    "category": "Kata Benda",
+    "en": ""
+  },
+  {
+    "id": 172,
+    "hanzi": "后年",
+    "pinyin": "hòunián",
+    "category": "Kata Benda",
+    "en": ""
+  },
+  {
+    "id": 173,
+    "hanzi": "后天",
+    "pinyin": "hòutiān",
+    "category": "Kata Benda",
+    "en": ""
+  },
+  {
+    "id": 174,
+    "hanzi": "护照",
+    "pinyin": "hùzhào",
+    "category": "Kata Benda",
+    "en": "passport"
+  },
+  {
+    "id": 175,
+    "hanzi": "花园",
+    "pinyin": "huāyuán",
+    "category": "Kata Benda",
+    "en": "garden"
+  },
+  {
+    "id": 176,
+    "hanzi": "画家",
+    "pinyin": "huàjiā",
+    "category": "Kata Benda",
+    "en": ""
+  },
+  {
+    "id": 177,
+    "hanzi": "欢迎",
+    "pinyin": "huānyíng",
+    "category": "Kata Kerja",
+    "en": "to welcome"
+  },
+  {
+    "id": 178,
+    "hanzi": "还",
+    "pinyin": "huán",
+    "category": "Kata Kerja",
+    "en": ""
+  },
+  {
+    "id": 179,
+    "hanzi": "环境",
+    "pinyin": "huánjìng",
+    "category": "Kata Benda",
+    "en": ""
+  },
+  {
+    "id": 180,
+    "hanzi": "换",
+    "pinyin": "huàn",
+    "category": "Kata Kerja",
+    "en": ""
+  },
+  {
+    "id": 181,
+    "hanzi": "黄色",
+    "pinyin": "huángsè",
+    "category": "Kata Benda",
+    "en": "yellow"
+  },
+  {
+    "id": 182,
+    "hanzi": "回答",
+    "pinyin": "huídá",
+    "category": "Kata Kerja",
+    "en": "to answer"
+  },
+  {
+    "id": 183,
+    "hanzi": "会",
+    "pinyin": "huì",
+    "category": "Kata Benda",
+    "en": "meeting"
+  },
+  {
+    "id": 184,
+    "hanzi": "会议",
+    "pinyin": "huìyì",
+    "category": "Kata Benda",
+    "en": "meeting"
+  },
+  {
+    "id": 185,
+    "hanzi": "或",
+    "pinyin": "huò",
+    "category": "Kata Sambung / （adverb）",
+    "en": "or; (perhaps, maybe)"
+  },
+  {
+    "id": 186,
+    "hanzi": "或者",
+    "pinyin": "huòzhě",
+    "category": "Kata Sambung",
+    "en": "or"
+  },
+  {
+    "id": 187,
+    "hanzi": "鸡",
+    "pinyin": "jī",
+    "category": "Kata Benda",
+    "en": "chicken"
+  },
+  {
+    "id": 188,
+    "hanzi": "几乎",
+    "pinyin": "jīhū",
+    "category": "Kata Keterangan",
+    "en": "almost"
+  },
+  {
+    "id": 189,
+    "hanzi": "机会",
+    "pinyin": "jīhuì",
+    "category": "Kata Benda",
+    "en": "opportunity"
+  },
+  {
+    "id": 190,
+    "hanzi": "极",
+    "pinyin": "jí",
+    "category": "Kata Keterangan",
+    "en": "extremely"
+  },
+  {
+    "id": 191,
+    "hanzi": "急",
+    "pinyin": "jí",
+    "category": "Kata Sifat / Kata Kerja",
+    "en": ""
+  },
+  {
+    "id": 192,
+    "hanzi": "记",
+    "pinyin": "jì",
+    "category": "Kata Kerja",
+    "en": ""
+  },
+  {
+    "id": 193,
+    "hanzi": "季",
+    "pinyin": "jì",
+    "category": "Kata Benda",
+    "en": "season"
+  },
+  {
+    "id": 194,
+    "hanzi": "季节",
+    "pinyin": "jìjié",
+    "category": "Kata Benda",
+    "en": "season"
+  },
+  {
+    "id": 195,
+    "hanzi": "加",
+    "pinyin": "jiā",
+    "category": "Kata Kerja",
+    "en": "to add"
+  },
+  {
+    "id": 196,
+    "hanzi": "假期",
+    "pinyin": "jiàqī",
+    "category": "Kata Benda",
+    "en": "vacation"
+  },
+  {
+    "id": 197,
+    "hanzi": "坚持",
+    "pinyin": "jiānchí",
+    "category": "Kata Kerja",
+    "en": "to persist"
+  },
+  {
+    "id": 198,
+    "hanzi": "检查",
+    "pinyin": "jiǎnchá",
+    "category": "Kata Kerja",
+    "en": ""
+  },
+  {
+    "id": 199,
+    "hanzi": "简单",
+    "pinyin": "jiǎndān",
+    "category": "Kata Sifat",
+    "en": "simple"
+  },
+  {
+    "id": 200,
+    "hanzi": "检票",
+    "pinyin": "jiǎnpiào",
+    "category": "Kata Kerja",
+    "en": ""
+  },
+  {
+    "id": 201,
+    "hanzi": "健康",
+    "pinyin": "jiànkāng",
+    "category": "Kata Sifat",
+    "en": "healthy"
+  },
+  {
+    "id": 202,
+    "hanzi": "见面",
+    "pinyin": "jiànmiàn",
+    "category": "Kata Kerja",
+    "en": "to meet"
+  },
+  {
+    "id": 203,
+    "hanzi": "讲",
+    "pinyin": "jiǎng",
+    "category": "Kata Kerja",
+    "en": ""
+  },
+  {
+    "id": 204,
+    "hanzi": "角",
+    "pinyin": "jiǎo",
+    "category": "Satuan",
+    "en": ""
+  },
+  {
+    "id": 205,
+    "hanzi": "脚",
+    "pinyin": "jiǎo",
+    "category": "Kata Benda",
+    "en": "foot"
+  },
+  {
+    "id": 206,
+    "hanzi": "接",
+    "pinyin": "jiē",
+    "category": "Kata Kerja",
+    "en": ""
+  },
+  {
+    "id": 207,
+    "hanzi": "街",
+    "pinyin": "jiē",
+    "category": "Kata Benda",
+    "en": "street"
+  },
+  {
+    "id": 208,
+    "hanzi": "节",
+    "pinyin": "jié",
+    "category": "Satuan / Kata Benda / （verb）",
+    "en": ""
+  },
+  {
+    "id": 209,
+    "hanzi": "结婚",
+    "pinyin": "jiéhūn",
+    "category": "Kata Kerja",
+    "en": "to marry"
+  },
+  {
+    "id": 210,
+    "hanzi": "节目",
+    "pinyin": "jiémù",
+    "category": "Kata Benda",
+    "en": "program"
+  },
+  {
+    "id": 211,
+    "hanzi": "节日",
+    "pinyin": "jiérì",
+    "category": "Kata Benda",
+    "en": "festival"
+  },
+  {
+    "id": 212,
+    "hanzi": "结束",
+    "pinyin": "jiéshù",
+    "category": "Kata Kerja",
+    "en": "to end"
+  },
+  {
+    "id": 213,
+    "hanzi": "解决",
+    "pinyin": "jiějué",
+    "category": "Kata Kerja",
+    "en": "to solve"
+  },
+  {
+    "id": 214,
+    "hanzi": "姐妹",
+    "pinyin": "jiěmèi",
+    "category": "Kata Benda",
+    "en": "sister"
+  },
+  {
+    "id": 215,
+    "hanzi": "借",
+    "pinyin": "jiè",
+    "category": "Kata Kerja",
+    "en": "to borrow"
+  },
+  {
+    "id": 216,
+    "hanzi": "斤",
+    "pinyin": "jīn",
+    "category": "Satuan",
+    "en": "catty"
+  },
+  {
+    "id": 217,
+    "hanzi": "经过",
+    "pinyin": "jīngguò",
+    "category": "Kata Kerja / Kata Benda",
+    "en": ""
+  },
+  {
+    "id": 218,
+    "hanzi": "经理",
+    "pinyin": "jīnglǐ",
+    "category": "Kata Benda",
+    "en": "manager"
+  },
+  {
+    "id": 219,
+    "hanzi": "久",
+    "pinyin": "jiǔ",
+    "category": "Kata Sifat",
+    "en": "long"
+  },
+  {
+    "id": 220,
+    "hanzi": "酒",
+    "pinyin": "jiǔ",
+    "category": "Kata Benda",
+    "en": "alcohol"
+  },
+  {
+    "id": 221,
+    "hanzi": "旧",
+    "pinyin": "jiù",
+    "category": "Kata Sifat",
+    "en": "old"
+  },
+  {
+    "id": 222,
+    "hanzi": "句",
+    "pinyin": "jù",
+    "category": "Satuan",
+    "en": ""
+  },
+  {
+    "id": 223,
+    "hanzi": "句子",
+    "pinyin": "jùzi",
+    "category": "Kata Benda",
+    "en": "sentence"
+  },
+  {
+    "id": 224,
+    "hanzi": "决定",
+    "pinyin": "juédìng",
+    "category": "Kata Kerja / Kata Benda",
+    "en": ""
+  },
+  {
+    "id": 225,
+    "hanzi": "卡",
+    "pinyin": "kǎ",
+    "category": "Kata Benda",
+    "en": "card"
+  },
+  {
+    "id": 226,
+    "hanzi": "开花",
+    "pinyin": "kāihuā",
+    "category": "Kata Kerja",
+    "en": "to bloom"
+  },
+  {
+    "id": 227,
+    "hanzi": "开会",
+    "pinyin": "kāihuì",
+    "category": "Kata Kerja",
+    "en": ""
+  },
+  {
+    "id": 228,
+    "hanzi": "开机",
+    "pinyin": "kāijī",
+    "category": "Kata Kerja",
+    "en": ""
+  },
+  {
+    "id": 229,
+    "hanzi": "开心",
+    "pinyin": "kāixīn",
+    "category": "Kata Sifat",
+    "en": "happy"
+  },
+  {
+    "id": 230,
+    "hanzi": "看来",
+    "pinyin": "kànlái",
+    "category": "Kata Kerja",
+    "en": ""
+  },
+  {
+    "id": 231,
+    "hanzi": "可",
+    "pinyin": "kě",
+    "category": "Kata Sambung / （adverb）",
+    "en": "but; (yet)"
+  },
+  {
+    "id": 232,
+    "hanzi": "渴",
+    "pinyin": "kě",
+    "category": "Kata Sifat",
+    "en": "thirsty"
+  },
+  {
+    "id": 233,
+    "hanzi": "可爱",
+    "pinyin": "kě’ài",
+    "category": "Kata Sifat",
+    "en": "lovely"
+  },
+  {
+    "id": 234,
+    "hanzi": "可是",
+    "pinyin": "kěshì",
+    "category": "Kata Sambung",
+    "en": "but"
+  },
+  {
+    "id": 235,
+    "hanzi": "刻",
+    "pinyin": "kè",
+    "category": "Satuan / （verb）",
+    "en": ""
+  },
+  {
+    "id": 236,
+    "hanzi": "课本",
+    "pinyin": "kèběn",
+    "category": "Kata Benda",
+    "en": "textbook"
+  },
+  {
+    "id": 237,
+    "hanzi": "客人",
+    "pinyin": "kèrén",
+    "category": "Kata Benda",
+    "en": "guest"
+  },
+  {
+    "id": 238,
+    "hanzi": "课文",
+    "pinyin": "kèwén",
+    "category": "Kata Benda",
+    "en": "text"
+  },
+  {
+    "id": 239,
+    "hanzi": "空调",
+    "pinyin": "kōngtiáo",
+    "category": "Kata Benda",
+    "en": ""
+  },
+  {
+    "id": 240,
+    "hanzi": "哭",
+    "pinyin": "kū",
+    "category": "Kata Kerja",
+    "en": "to cry"
+  },
+  {
+    "id": 241,
+    "hanzi": "筷子",
+    "pinyin": "kuàizi",
+    "category": "Kata Benda",
+    "en": "chopsticks"
+  },
+  {
+    "id": 242,
+    "hanzi": "矿泉水",
+    "pinyin": "kuàngquánshuǐ",
+    "category": "Kata Benda",
+    "en": ""
+  },
+  {
+    "id": 243,
+    "hanzi": "来自",
+    "pinyin": "láizì",
+    "category": "Kata Kerja",
+    "en": ""
+  },
+  {
+    "id": 244,
+    "hanzi": "蓝",
+    "pinyin": "lán",
+    "category": "Kata Sifat",
+    "en": "blue"
+  },
+  {
+    "id": 245,
+    "hanzi": "老",
+    "pinyin": "lǎo",
+    "category": "Kata Sifat / Awalan / （adverb）",
+    "en": ""
+  },
+  {
+    "id": 246,
+    "hanzi": "老人",
+    "pinyin": "lǎorén",
+    "category": "Kata Benda",
+    "en": ""
+  },
+  {
+    "id": 247,
+    "hanzi": "离开",
+    "pinyin": "líkāi",
+    "category": "Kata Kerja",
+    "en": "to leave"
+  },
+  {
+    "id": 248,
+    "hanzi": "礼物",
+    "pinyin": "lǐwù",
+    "category": "Kata Benda",
+    "en": "gift"
+  },
+  {
+    "id": 249,
+    "hanzi": "历史",
+    "pinyin": "lìshǐ",
+    "category": "Kata Benda",
+    "en": "history"
+  },
+  {
+    "id": 250,
+    "hanzi": "脸",
+    "pinyin": "liǎn",
+    "category": "Kata Benda",
+    "en": "face"
+  },
+  {
+    "id": 251,
+    "hanzi": "练",
+    "pinyin": "liàn",
+    "category": "Kata Kerja",
+    "en": "to practice"
+  },
+  {
+    "id": 252,
+    "hanzi": "练习",
+    "pinyin": "liànxí",
+    "category": "Kata Kerja / Kata Benda",
+    "en": ""
+  },
+  {
+    "id": 253,
+    "hanzi": "凉快",
+    "pinyin": "liángkuai",
+    "category": "Kata Sifat",
+    "en": "cool"
+  },
+  {
+    "id": 254,
+    "hanzi": "辆",
+    "pinyin": "liàng",
+    "category": "Satuan",
+    "en": ""
+  },
+  {
+    "id": 255,
+    "hanzi": "聊",
+    "pinyin": "liáo",
+    "category": "Kata Kerja",
+    "en": "to chat"
+  },
+  {
+    "id": 256,
+    "hanzi": "聊天儿",
+    "pinyin": "liáotiānr",
+    "category": "Kata Kerja",
+    "en": "to chat"
+  },
+  {
+    "id": 257,
+    "hanzi": "了解",
+    "pinyin": "liǎojiě",
+    "category": "Kata Kerja",
+    "en": ""
+  },
+  {
+    "id": 258,
+    "hanzi": "邻居",
+    "pinyin": "línjū",
+    "category": "Kata Benda",
+    "en": "neighbor"
+  },
+  {
+    "id": 259,
+    "hanzi": "留学",
+    "pinyin": "liúxué",
+    "category": "Kata Kerja",
+    "en": ""
+  },
+  {
+    "id": 260,
+    "hanzi": "留学生",
+    "pinyin": "liúxuéshēng",
+    "category": "Kata Benda",
+    "en": ""
+  },
+  {
+    "id": 261,
+    "hanzi": "楼梯",
+    "pinyin": "lóutī",
+    "category": "Kata Benda",
+    "en": "stairs"
+  },
+  {
+    "id": 262,
+    "hanzi": "路边",
+    "pinyin": "lùbiān",
+    "category": "Kata Benda",
+    "en": "roadside"
+  },
+  {
+    "id": 263,
+    "hanzi": "路口",
+    "pinyin": "lùkǒu",
+    "category": "Kata Benda",
+    "en": "intersection"
+  },
+  {
+    "id": 264,
+    "hanzi": "马",
+    "pinyin": "mǎ",
+    "category": "Kata Benda",
+    "en": "horse"
+  },
+  {
+    "id": 265,
+    "hanzi": "马路",
+    "pinyin": "mǎlù",
+    "category": "Kata Benda",
+    "en": "road"
+  },
+  {
+    "id": 266,
+    "hanzi": "马上",
+    "pinyin": "mǎshàng",
+    "category": "Kata Keterangan",
+    "en": ""
+  },
+  {
+    "id": 267,
+    "hanzi": "满意",
+    "pinyin": "mǎnyì",
+    "category": "Kata Kerja",
+    "en": "satisfied"
+  },
+  {
+    "id": 268,
+    "hanzi": "毛",
+    "pinyin": "máo",
+    "category": "Satuan / （noun）",
+    "en": ""
+  },
+  {
+    "id": 269,
+    "hanzi": "米",
+    "pinyin": "mǐ",
+    "category": "Satuan",
+    "en": "meter"
+  },
+  {
+    "id": 270,
+    "hanzi": "面前",
+    "pinyin": "miànqián",
+    "category": "Kata Benda",
+    "en": "in front of"
+  },
+  {
+    "id": 271,
+    "hanzi": "明白",
+    "pinyin": "míngbai",
+    "category": "Kata Sifat / Kata Kerja",
+    "en": ""
+  },
+  {
+    "id": 272,
+    "hanzi": "名单",
+    "pinyin": "míngdān",
+    "category": "Kata Benda",
+    "en": "name list"
+  },
+  {
+    "id": 273,
+    "hanzi": "名人",
+    "pinyin": "míngrén",
+    "category": "Kata Benda",
+    "en": ""
+  },
+  {
+    "id": 274,
+    "hanzi": "南",
+    "pinyin": "nán",
+    "category": "Kata Benda",
+    "en": "south"
+  },
+  {
+    "id": 275,
+    "hanzi": "难",
+    "pinyin": "nán",
+    "category": "Kata Sifat / （verb）",
+    "en": ""
+  },
+  {
+    "id": 276,
+    "hanzi": "南方",
+    "pinyin": "nánfāng",
+    "category": "Kata Benda",
+    "en": "south"
+  },
+  {
+    "id": 277,
+    "hanzi": "难过",
+    "pinyin": "nánguò",
+    "category": "Kata Sifat",
+    "en": "sad"
+  },
+  {
+    "id": 278,
+    "hanzi": "难看",
+    "pinyin": "nánkàn",
+    "category": "Kata Sifat",
+    "en": "ugly"
+  },
+  {
+    "id": 279,
+    "hanzi": "男人",
+    "pinyin": "nánrén",
+    "category": "Kata Benda",
+    "en": "man"
+  },
+  {
+    "id": 280,
+    "hanzi": "男生",
+    "pinyin": "nánshēng",
+    "category": "Kata Benda",
+    "en": "boy student"
+  },
+  {
+    "id": 281,
+    "hanzi": "难题",
+    "pinyin": "nántí",
+    "category": "Kata Benda",
+    "en": ""
+  },
+  {
+    "id": 282,
+    "hanzi": "难听",
+    "pinyin": "nántīng",
+    "category": "Kata Sifat",
+    "en": ""
+  },
+  {
+    "id": 283,
+    "hanzi": "年级",
+    "pinyin": "niánjí",
+    "category": "Kata Benda",
+    "en": "grade"
+  },
+  {
+    "id": 284,
+    "hanzi": "年轻",
+    "pinyin": "niánqīng",
+    "category": "Kata Sifat",
+    "en": "young"
+  },
+  {
+    "id": 285,
+    "hanzi": "牛",
+    "pinyin": "niú",
+    "category": "Kata Benda / （adjective）",
+    "en": ""
+  },
+  {
+    "id": 286,
+    "hanzi": "努力",
+    "pinyin": "nǔlì",
+    "category": "Kata Kerja / Kata Sifat",
+    "en": ""
+  },
+  {
+    "id": 287,
+    "hanzi": "女人",
+    "pinyin": "nǚrén",
+    "category": "Kata Benda",
+    "en": "woman"
+  },
+  {
+    "id": 288,
+    "hanzi": "女生",
+    "pinyin": "nǚshēng",
+    "category": "Kata Benda",
+    "en": "girl student"
+  },
+  {
+    "id": 289,
+    "hanzi": "爬",
+    "pinyin": "pá",
+    "category": "Kata Kerja",
+    "en": "to climb"
+  },
+  {
+    "id": 290,
+    "hanzi": "怕",
+    "pinyin": "pà",
+    "category": "Kata Kerja / （adverb）",
+    "en": ""
+  },
+  {
+    "id": 291,
+    "hanzi": "拍照",
+    "pinyin": "pāizhào",
+    "category": "Kata Kerja",
+    "en": ""
+  },
+  {
+    "id": 292,
+    "hanzi": "盘子",
+    "pinyin": "pánzi",
+    "category": "Kata Benda",
+    "en": "plate"
+  },
+  {
+    "id": 293,
+    "hanzi": "胖",
+    "pinyin": "pàng",
+    "category": "Kata Sifat",
+    "en": "fat"
+  },
+  {
+    "id": 294,
+    "hanzi": "啤酒",
+    "pinyin": "píjiǔ",
+    "category": "Kata Benda",
+    "en": "beer"
+  },
+  {
+    "id": 295,
+    "hanzi": "平时",
+    "pinyin": "píngshí",
+    "category": "Kata Benda",
+    "en": "usually"
+  },
+  {
+    "id": 296,
+    "hanzi": "瓶子",
+    "pinyin": "píngzi",
+    "category": "Kata Benda",
+    "en": "bottle"
+  },
+  {
+    "id": 297,
+    "hanzi": "骑",
+    "pinyin": "qí",
+    "category": "Kata Kerja",
+    "en": "to ride"
+  },
+  {
+    "id": 298,
+    "hanzi": "奇怪",
+    "pinyin": "qíguài",
+    "category": "Kata Sifat",
+    "en": "strange"
+  },
+  {
+    "id": 299,
+    "hanzi": "其实",
+    "pinyin": "qíshí",
+    "category": "Kata Keterangan",
+    "en": "actually"
+  },
+  {
+    "id": 300,
+    "hanzi": "其他",
+    "pinyin": "qítā",
+    "category": "Kata Ganti",
+    "en": "other"
+  },
+  {
+    "id": 301,
+    "hanzi": "起",
+    "pinyin": "qǐ",
+    "category": "Kata Kerja / （classifier）",
+    "en": ""
+  },
+  {
+    "id": 302,
+    "hanzi": "起飞",
+    "pinyin": "qǐfēi",
+    "category": "Kata Kerja",
+    "en": "to take off"
+  },
+  {
+    "id": 303,
+    "hanzi": "汽车",
+    "pinyin": "qìchē",
+    "category": "Kata Benda",
+    "en": "car"
+  },
+  {
+    "id": 304,
+    "hanzi": "铅笔",
+    "pinyin": "qiānbǐ",
+    "category": "Kata Benda",
+    "en": "pencil"
+  },
+  {
+    "id": 305,
+    "hanzi": "前年",
+    "pinyin": "qiánnián",
+    "category": "Kata Benda",
+    "en": ""
+  },
+  {
+    "id": 306,
+    "hanzi": "前天",
+    "pinyin": "qiántiān",
+    "category": "Kata Benda",
+    "en": ""
+  },
+  {
+    "id": 307,
+    "hanzi": "清楚",
+    "pinyin": "qīngchu",
+    "category": "Kata Sifat / Kata Kerja",
+    "en": ""
+  },
+  {
+    "id": 308,
+    "hanzi": "请假",
+    "pinyin": "qǐngjià",
+    "category": "Kata Kerja",
+    "en": ""
+  },
+  {
+    "id": 309,
+    "hanzi": "请客",
+    "pinyin": "qǐngkè",
+    "category": "Kata Kerja",
+    "en": ""
+  },
+  {
+    "id": 310,
+    "hanzi": "秋天",
+    "pinyin": "qiūtiān",
+    "category": "Kata Benda",
+    "en": "autumn"
+  },
+  {
+    "id": 311,
+    "hanzi": "球场",
+    "pinyin": "qiúchǎng",
+    "category": "Kata Benda",
+    "en": ""
+  },
+  {
+    "id": 312,
+    "hanzi": "裙子",
+    "pinyin": "qúnzi",
+    "category": "Kata Benda",
+    "en": "skirt"
+  },
+  {
+    "id": 313,
+    "hanzi": "然后",
+    "pinyin": "ránhòu",
+    "category": "Kata Sambung",
+    "en": ""
+  },
+  {
+    "id": 314,
+    "hanzi": "热情",
+    "pinyin": "rèqíng",
+    "category": "Kata Sifat",
+    "en": ""
+  },
+  {
+    "id": 315,
+    "hanzi": "认得",
+    "pinyin": "rènde",
+    "category": "Kata Kerja",
+    "en": ""
+  },
+  {
+    "id": 316,
+    "hanzi": "认为",
+    "pinyin": "rènwéi",
+    "category": "Kata Kerja",
+    "en": ""
+  },
+  {
+    "id": 317,
+    "hanzi": "认真",
+    "pinyin": "rènzhēn",
+    "category": "Kata Sifat",
+    "en": ""
+  },
+  {
+    "id": 318,
+    "hanzi": "容易",
+    "pinyin": "róngyì",
+    "category": "Kata Sifat",
+    "en": "easy"
+  },
+  {
+    "id": 319,
+    "hanzi": "如果",
+    "pinyin": "rúguǒ",
+    "category": "Kata Sambung",
+    "en": "if"
+  },
+  {
+    "id": 320,
+    "hanzi": "伞",
+    "pinyin": "sǎn",
+    "category": "Kata Benda",
+    "en": "umbrella"
+  },
+  {
+    "id": 321,
+    "hanzi": "扫",
+    "pinyin": "sǎo",
+    "category": "Kata Kerja",
+    "en": "to sweep"
+  },
+  {
+    "id": 322,
+    "hanzi": "沙发",
+    "pinyin": "shāfā",
+    "category": "Kata Benda",
+    "en": "sofa"
+  },
+  {
+    "id": 323,
+    "hanzi": "山",
+    "pinyin": "shān",
+    "category": "Kata Benda",
+    "en": "mountain"
+  },
+  {
+    "id": 324,
+    "hanzi": "上衣",
+    "pinyin": "shàngyī",
+    "category": "Kata Benda",
+    "en": ""
+  },
+  {
+    "id": 325,
+    "hanzi": "勺子",
+    "pinyin": "sháozi",
+    "category": "Kata Benda",
+    "en": "spoon"
+  },
+  {
+    "id": 326,
+    "hanzi": "身边",
+    "pinyin": "shēnbiān",
+    "category": "Kata Benda",
+    "en": ""
+  },
+  {
+    "id": 327,
+    "hanzi": "身高",
+    "pinyin": "shēngāo",
+    "category": "Kata Benda",
+    "en": "height"
+  },
+  {
+    "id": 328,
+    "hanzi": "声",
+    "pinyin": "shēng",
+    "category": "Kata Benda / Satuan",
+    "en": ""
+  },
+  {
+    "id": 329,
+    "hanzi": "生活",
+    "pinyin": "shēnghuó",
+    "category": "Kata Benda / Kata Kerja",
+    "en": "life; to live"
+  },
+  {
+    "id": 330,
+    "hanzi": "生气",
+    "pinyin": "shēngqì",
+    "category": "Kata Kerja",
+    "en": "to get angry"
+  },
+  {
+    "id": 331,
+    "hanzi": "声音",
+    "pinyin": "shēngyīn",
+    "category": "Kata Benda",
+    "en": "sound"
+  },
+  {
+    "id": 332,
+    "hanzi": "市",
+    "pinyin": "shì",
+    "category": "Kata Benda",
+    "en": "city"
+  },
+  {
+    "id": 333,
+    "hanzi": "试",
+    "pinyin": "shì",
+    "category": "Kata Kerja",
+    "en": "to try"
+  },
+  {
+    "id": 334,
+    "hanzi": "室",
+    "pinyin": "shì",
+    "category": "Kata Benda",
+    "en": "room"
+  },
+  {
+    "id": 335,
+    "hanzi": "世界",
+    "pinyin": "shìjiè",
+    "category": "Kata Benda",
+    "en": "world"
+  },
+  {
+    "id": 336,
+    "hanzi": "收",
+    "pinyin": "shōu",
+    "category": "Kata Kerja",
+    "en": "to receive"
+  },
+  {
+    "id": 337,
+    "hanzi": "收到",
+    "pinyin": "shōudào",
+    "category": "Kata Kerja",
+    "en": "to receive"
+  },
+  {
+    "id": 338,
+    "hanzi": "受",
+    "pinyin": "shòu",
+    "category": "Kata Kerja",
+    "en": ""
+  },
+  {
+    "id": 339,
+    "hanzi": "瘦",
+    "pinyin": "shòu",
+    "category": "Kata Sifat",
+    "en": "thin, slim"
+  },
+  {
+    "id": 340,
+    "hanzi": "受到",
+    "pinyin": "shòudào",
+    "category": "Kata Kerja",
+    "en": ""
+  },
+  {
+    "id": 341,
+    "hanzi": "叔叔",
+    "pinyin": "shūshu",
+    "category": "Kata Benda",
+    "en": "uncle"
+  },
+  {
+    "id": 342,
+    "hanzi": "树",
+    "pinyin": "shù",
+    "category": "Kata Benda",
+    "en": "tree"
+  },
+  {
+    "id": 343,
+    "hanzi": "数学",
+    "pinyin": "shùxué",
+    "category": "Kata Benda",
+    "en": ""
+  },
+  {
+    "id": 344,
+    "hanzi": "刷",
+    "pinyin": "shuā",
+    "category": "Kata Kerja",
+    "en": ""
+  },
+  {
+    "id": 345,
+    "hanzi": "双",
+    "pinyin": "shuāng",
+    "category": "Satuan",
+    "en": ""
+  },
+  {
+    "id": 346,
+    "hanzi": "水平",
+    "pinyin": "shuǐpíng",
+    "category": "Kata Benda",
+    "en": ""
+  },
+  {
+    "id": 347,
+    "hanzi": "司机",
+    "pinyin": "sījī",
+    "category": "Kata Benda",
+    "en": "driver"
+  },
+  {
+    "id": 348,
+    "hanzi": "四季",
+    "pinyin": "sìjì",
+    "category": "Kata Benda",
+    "en": ""
+  },
+  {
+    "id": 349,
+    "hanzi": "太阳",
+    "pinyin": "tàiyáng",
+    "category": "Kata Benda",
+    "en": "sun"
+  },
+  {
+    "id": 350,
+    "hanzi": "糖",
+    "pinyin": "táng",
+    "category": "Kata Benda",
+    "en": ""
+  },
+  {
+    "id": 351,
+    "hanzi": "特别",
+    "pinyin": "tèbié",
+    "category": "Kata Sifat / Kata Keterangan",
+    "en": ""
+  },
+  {
+    "id": 352,
+    "hanzi": "提高",
+    "pinyin": "tígāo",
+    "category": "Kata Kerja",
+    "en": ""
+  },
+  {
+    "id": 353,
+    "hanzi": "体育",
+    "pinyin": "tǐyù",
+    "category": "Kata Benda",
+    "en": ""
+  },
+  {
+    "id": 354,
+    "hanzi": "体育馆",
+    "pinyin": "tǐyùguǎn",
+    "category": "Kata Benda",
+    "en": "gymnasium"
+  },
+  {
+    "id": 355,
+    "hanzi": "甜",
+    "pinyin": "tián",
+    "category": "Kata Sifat",
+    "en": "sweet"
+  },
+  {
+    "id": 356,
+    "hanzi": "跳",
+    "pinyin": "tiào",
+    "category": "Kata Kerja",
+    "en": "to jump"
+  },
+  {
+    "id": 357,
+    "hanzi": "听说",
+    "pinyin": "tīngshuō",
+    "category": "Kata Kerja",
+    "en": "to hear said"
+  },
+  {
+    "id": 358,
+    "hanzi": "挺",
+    "pinyin": "tǐng",
+    "category": "Kata Keterangan / （verb）",
+    "en": ""
+  },
+  {
+    "id": 359,
+    "hanzi": "同事",
+    "pinyin": "tóngshì",
+    "category": "Kata Benda",
+    "en": "colleague"
+  },
+  {
+    "id": 360,
+    "hanzi": "同意",
+    "pinyin": "tóngyì",
+    "category": "Kata Kerja",
+    "en": "to agree"
+  },
+  {
+    "id": 361,
+    "hanzi": "头发",
+    "pinyin": "tóufa",
+    "category": "Kata Benda",
+    "en": "hair"
+  },
+  {
+    "id": 362,
+    "hanzi": "突然",
+    "pinyin": "tūrán",
+    "category": "Kata Sifat",
+    "en": "sudden"
+  },
+  {
+    "id": 363,
+    "hanzi": "图书馆",
+    "pinyin": "túshūguǎn",
+    "category": "Kata Benda",
+    "en": "library"
+  },
+  {
+    "id": 364,
+    "hanzi": "腿",
+    "pinyin": "tuǐ",
+    "category": "Kata Benda",
+    "en": "leg"
+  },
+  {
+    "id": 365,
+    "hanzi": "外地",
+    "pinyin": "wàidì",
+    "category": "Kata Benda",
+    "en": "other place"
+  },
+  {
+    "id": 366,
+    "hanzi": "外卖",
+    "pinyin": "wàimài",
+    "category": "Kata Kerja / Kata Benda",
+    "en": ""
+  },
+  {
+    "id": 367,
+    "hanzi": "外语",
+    "pinyin": "wàiyǔ",
+    "category": "Kata Benda",
+    "en": ""
+  },
+  {
+    "id": 368,
+    "hanzi": "完成",
+    "pinyin": "wánchéng",
+    "category": "Kata Kerja",
+    "en": "to complete"
+  },
+  {
+    "id": 369,
+    "hanzi": "碗",
+    "pinyin": "wǎn",
+    "category": "Kata Benda",
+    "en": "bowl"
+  },
+  {
+    "id": 370,
+    "hanzi": "晚点",
+    "pinyin": "wǎndiǎn",
+    "category": "Kata Kerja",
+    "en": "to be late"
+  },
+  {
+    "id": 371,
+    "hanzi": "晚会",
+    "pinyin": "wǎnhuì",
+    "category": "Kata Benda",
+    "en": ""
+  },
+  {
+    "id": 372,
+    "hanzi": "网球",
+    "pinyin": "wǎngqiú",
+    "category": "Kata Benda",
+    "en": "tennis"
+  },
+  {
+    "id": 373,
+    "hanzi": "网站",
+    "pinyin": "wǎngzhàn",
+    "category": "Kata Benda",
+    "en": "website"
+  },
+  {
+    "id": 374,
+    "hanzi": "忘记",
+    "pinyin": "wàngjì",
+    "category": "Kata Kerja",
+    "en": "to forget"
+  },
+  {
+    "id": 375,
+    "hanzi": "为",
+    "pinyin": "wèi",
+    "category": "Kata Depan",
+    "en": ""
+  },
+  {
+    "id": 376,
+    "hanzi": "为了",
+    "pinyin": "wèile",
+    "category": "Kata Depan",
+    "en": "in order to"
+  },
+  {
+    "id": 377,
+    "hanzi": "卫生间",
+    "pinyin": "wèishēngjiān",
+    "category": "Kata Benda",
+    "en": ""
+  },
+  {
+    "id": 378,
+    "hanzi": "文化",
+    "pinyin": "wénhuà",
+    "category": "Kata Benda",
+    "en": "culture"
+  },
+  {
+    "id": 379,
+    "hanzi": "屋子",
+    "pinyin": "wūzi",
+    "category": "Kata Benda",
+    "en": ""
+  },
+  {
+    "id": 380,
+    "hanzi": "西",
+    "pinyin": "xī",
+    "category": "Kata Benda",
+    "en": "west"
+  },
+  {
+    "id": 381,
+    "hanzi": "西北",
+    "pinyin": "xīběi",
+    "category": "Kata Benda",
+    "en": "northwest"
+  },
+  {
+    "id": 382,
+    "hanzi": "西方",
+    "pinyin": "xīfāng",
+    "category": "Kata Benda",
+    "en": "west"
+  },
+  {
+    "id": 383,
+    "hanzi": "西瓜",
+    "pinyin": "xīguā",
+    "category": "Kata Benda",
+    "en": "watermelon"
+  },
+  {
+    "id": 384,
+    "hanzi": "西南",
+    "pinyin": "xīnán",
+    "category": "Kata Benda",
+    "en": "southwest"
+  },
+  {
+    "id": 385,
+    "hanzi": "习惯",
+    "pinyin": "xíguàn",
+    "category": "Kata Kerja / Kata Benda",
+    "en": ""
+  },
+  {
+    "id": 386,
+    "hanzi": "喜爱",
+    "pinyin": "xǐ’ài",
+    "category": "Kata Kerja",
+    "en": ""
+  },
+  {
+    "id": 387,
+    "hanzi": "洗衣机",
+    "pinyin": "xǐyījī",
+    "category": "Kata Benda",
+    "en": ""
+  },
+  {
+    "id": 388,
+    "hanzi": "洗澡",
+    "pinyin": "xǐzǎo",
+    "category": "Kata Kerja",
+    "en": ""
+  },
+  {
+    "id": 389,
+    "hanzi": "夏天",
+    "pinyin": "xiàtiān",
+    "category": "Kata Benda",
+    "en": "summer"
+  },
+  {
+    "id": 390,
+    "hanzi": "先",
+    "pinyin": "xiān",
+    "category": "Kata Keterangan",
+    "en": "first, before"
+  },
+  {
+    "id": 391,
+    "hanzi": "香蕉",
+    "pinyin": "xiāngjiāo",
+    "category": "Kata Benda",
+    "en": "banana"
+  },
+  {
+    "id": 392,
+    "hanzi": "相信",
+    "pinyin": "xiāngxìn",
+    "category": "Kata Kerja",
+    "en": "to believe"
+  },
+  {
+    "id": 393,
+    "hanzi": "箱子",
+    "pinyin": "xiāngzi",
+    "category": "Kata Benda",
+    "en": "box, case"
+  },
+  {
+    "id": 394,
+    "hanzi": "向",
+    "pinyin": "xiàng",
+    "category": "Kata Kerja / Kata Depan",
+    "en": ""
+  },
+  {
+    "id": 395,
+    "hanzi": "像",
+    "pinyin": "xiàng",
+    "category": "Kata Kerja / （adverb） / （noun）",
+    "en": ""
+  },
+  {
+    "id": 396,
+    "hanzi": "相机",
+    "pinyin": "xiàngjī",
+    "category": "Kata Benda",
+    "en": "camera"
+  },
+  {
+    "id": 397,
+    "hanzi": "小区",
+    "pinyin": "xiǎoqū",
+    "category": "Kata Benda",
+    "en": ""
+  },
+  {
+    "id": 398,
+    "hanzi": "小心",
+    "pinyin": "xiǎoxīn",
+    "category": "Kata Kerja / Kata Sifat",
+    "en": ""
+  },
+  {
+    "id": 399,
+    "hanzi": "校园",
+    "pinyin": "xiàoyuán",
+    "category": "Kata Benda",
+    "en": "campus"
+  },
+  {
+    "id": 400,
+    "hanzi": "校长",
+    "pinyin": "xiàozhǎng",
+    "category": "Kata Benda",
+    "en": ""
+  },
+  {
+    "id": 401,
+    "hanzi": "鞋",
+    "pinyin": "xié",
+    "category": "Kata Benda",
+    "en": "shoe"
+  },
+  {
+    "id": 402,
+    "hanzi": "心里",
+    "pinyin": "xīnlǐ",
+    "category": "Kata Benda",
+    "en": "heart, mind"
+  },
+  {
+    "id": 403,
+    "hanzi": "新年",
+    "pinyin": "xīnnián",
+    "category": "Kata Benda",
+    "en": "New Year"
+  },
+  {
+    "id": 404,
+    "hanzi": "新闻",
+    "pinyin": "xīnwén",
+    "category": "Kata Benda",
+    "en": "news"
+  },
+  {
+    "id": 405,
+    "hanzi": "新鲜",
+    "pinyin": "xīnxiān",
+    "category": "Kata Sifat",
+    "en": "fresh"
+  },
+  {
+    "id": 406,
+    "hanzi": "信",
+    "pinyin": "xìn",
+    "category": "Kata Kerja / Kata Benda",
+    "en": ""
+  },
+  {
+    "id": 407,
+    "hanzi": "信用卡",
+    "pinyin": "xìnyòngkǎ",
+    "category": "Kata Benda",
+    "en": "credit card"
+  },
+  {
+    "id": 408,
+    "hanzi": "行",
+    "pinyin": "xíng",
+    "category": "Kata Kerja / Kata Sifat",
+    "en": ""
+  },
+  {
+    "id": 409,
+    "hanzi": "行李",
+    "pinyin": "xíngli",
+    "category": "Kata Benda",
+    "en": "luggage"
+  },
+  {
+    "id": 410,
+    "hanzi": "兴趣",
+    "pinyin": "xìngqù",
+    "category": "Kata Benda",
+    "en": "interest"
+  },
+  {
+    "id": 411,
+    "hanzi": "休假",
+    "pinyin": "xiūjià",
+    "category": "Kata Kerja",
+    "en": ""
+  },
+  {
+    "id": 412,
+    "hanzi": "需要",
+    "pinyin": "xūyào",
+    "category": "Kata Kerja / Kata Benda",
+    "en": ""
+  },
+  {
+    "id": 413,
+    "hanzi": "选",
+    "pinyin": "xuǎn",
+    "category": "Kata Kerja",
+    "en": "to choose"
+  },
+  {
+    "id": 414,
+    "hanzi": "选择",
+    "pinyin": "xuǎnzé",
+    "category": "Kata Kerja",
+    "en": "to choose"
+  },
+  {
+    "id": 415,
+    "hanzi": "学期",
+    "pinyin": "xuéqī",
+    "category": "Kata Benda",
+    "en": "semester"
+  },
+  {
+    "id": 416,
+    "hanzi": "牙",
+    "pinyin": "yá",
+    "category": "Kata Benda",
+    "en": "tooth"
+  },
+  {
+    "id": 417,
+    "hanzi": "牙刷",
+    "pinyin": "yáshuā",
+    "category": "Kata Benda",
+    "en": "toothbrush"
+  },
+  {
+    "id": 418,
+    "hanzi": "羊",
+    "pinyin": "yáng",
+    "category": "Kata Benda",
+    "en": "sheep"
+  },
+  {
+    "id": 419,
+    "hanzi": "养",
+    "pinyin": "yǎng",
+    "category": "Kata Kerja",
+    "en": ""
+  },
+  {
+    "id": 420,
+    "hanzi": "要求",
+    "pinyin": "yāoqiú",
+    "category": "Kata Kerja / Kata Benda",
+    "en": ""
+  },
+  {
+    "id": 421,
+    "hanzi": "页",
+    "pinyin": "yè",
+    "category": "Satuan",
+    "en": ""
+  },
+  {
+    "id": 422,
+    "hanzi": "一定",
+    "pinyin": "yídìng",
+    "category": "Kata Sifat / Kata Keterangan",
+    "en": ""
+  },
+  {
+    "id": 423,
+    "hanzi": "一共",
+    "pinyin": "yígòng",
+    "category": "Kata Keterangan",
+    "en": ""
+  },
+  {
+    "id": 424,
+    "hanzi": "一块儿",
+    "pinyin": "yíkuàir",
+    "category": "Kata Benda / Kata Keterangan",
+    "en": "the same place; together"
+  },
+  {
+    "id": 425,
+    "hanzi": "一样",
+    "pinyin": "yíyàng",
+    "category": "Kata Sifat",
+    "en": "same"
+  },
+  {
+    "id": 426,
+    "hanzi": "以后",
+    "pinyin": "yǐhòu",
+    "category": "Kata Benda",
+    "en": "later, after"
+  },
+  {
+    "id": 427,
+    "hanzi": "以前",
+    "pinyin": "yǐqián",
+    "category": "Kata Benda",
+    "en": "before"
+  },
+  {
+    "id": 428,
+    "hanzi": "以上",
+    "pinyin": "yǐshàng",
+    "category": "Kata Benda",
+    "en": ""
+  },
+  {
+    "id": 429,
+    "hanzi": "以外",
+    "pinyin": "yǐwài",
+    "category": "Kata Benda",
+    "en": ""
+  },
+  {
+    "id": 430,
+    "hanzi": "以为",
+    "pinyin": "yǐwéi",
+    "category": "Kata Kerja",
+    "en": ""
+  },
+  {
+    "id": 431,
+    "hanzi": "以下",
+    "pinyin": "yǐxià",
+    "category": "Kata Benda",
+    "en": ""
+  },
+  {
+    "id": 432,
+    "hanzi": "一般",
+    "pinyin": "yìbān",
+    "category": "Kata Sifat",
+    "en": ""
+  },
+  {
+    "id": 433,
+    "hanzi": "一边",
+    "pinyin": "yìbiān",
+    "category": "Kata Keterangan",
+    "en": ""
+  },
+  {
+    "id": 434,
+    "hanzi": "一直",
+    "pinyin": "yìzhí",
+    "category": "Kata Keterangan",
+    "en": ""
+  },
+  {
+    "id": 435,
+    "hanzi": "音乐",
+    "pinyin": "yīnyuè",
+    "category": "Kata Benda",
+    "en": "music"
+  },
+  {
+    "id": 436,
+    "hanzi": "银行",
+    "pinyin": "yínháng",
+    "category": "Kata Benda",
+    "en": "bank"
+  },
+  {
+    "id": 437,
+    "hanzi": "银行卡",
+    "pinyin": "yínhángkǎ",
+    "category": "Kata Benda",
+    "en": "bank card"
+  },
+  {
+    "id": 438,
+    "hanzi": "饮料",
+    "pinyin": "yǐnliào",
+    "category": "Kata Benda",
+    "en": "beverage"
+  },
+  {
+    "id": 439,
+    "hanzi": "应该",
+    "pinyin": "yīnggāi",
+    "category": "Kata Kerja",
+    "en": ""
+  },
+  {
+    "id": 440,
+    "hanzi": "影响",
+    "pinyin": "yǐngxiǎng",
+    "category": "Kata Kerja / Kata Benda",
+    "en": ""
+  },
+  {
+    "id": 441,
+    "hanzi": "用",
+    "pinyin": "yòng",
+    "category": "Kata Kerja",
+    "en": "to use"
+  },
+  {
+    "id": 442,
+    "hanzi": "邮件",
+    "pinyin": "yóujiàn",
+    "category": "Kata Benda",
+    "en": "mail"
+  },
+  {
+    "id": 443,
+    "hanzi": "游客",
+    "pinyin": "yóukè",
+    "category": "Kata Benda",
+    "en": "tourist"
+  },
+  {
+    "id": 444,
+    "hanzi": "游戏",
+    "pinyin": "yóuxì",
+    "category": "Kata Benda",
+    "en": "game"
+  },
+  {
+    "id": 445,
+    "hanzi": "邮箱",
+    "pinyin": "yóuxiāng",
+    "category": "Kata Benda",
+    "en": "mailbox"
+  },
+  {
+    "id": 446,
+    "hanzi": "有关",
+    "pinyin": "yǒuguān",
+    "category": "Kata Kerja / Kata Depan",
+    "en": ""
+  },
+  {
+    "id": 447,
+    "hanzi": "有名",
+    "pinyin": "yǒumíng",
+    "category": "Kata Sifat",
+    "en": "famous"
+  },
+  {
+    "id": 448,
+    "hanzi": "有用",
+    "pinyin": "yǒuyòng",
+    "category": "Kata Sifat",
+    "en": "useful"
+  },
+  {
+    "id": 449,
+    "hanzi": "又",
+    "pinyin": "yòu",
+    "category": "Kata Keterangan",
+    "en": "again, also"
+  },
+  {
+    "id": 450,
+    "hanzi": "羽毛球",
+    "pinyin": "yǔmáoqiú",
+    "category": "Kata Benda",
+    "en": "badminton"
+  },
+  {
+    "id": 451,
+    "hanzi": "语言",
+    "pinyin": "yǔyán",
+    "category": "Kata Benda",
+    "en": "language"
+  },
+  {
+    "id": 452,
+    "hanzi": "雨衣",
+    "pinyin": "yǔyī",
+    "category": "Kata Benda",
+    "en": "raincoat"
+  },
+  {
+    "id": 453,
+    "hanzi": "遇到",
+    "pinyin": "yùdào",
+    "category": "Kata Kerja",
+    "en": ""
+  },
+  {
+    "id": 454,
+    "hanzi": "遇见",
+    "pinyin": "yùjiàn",
+    "category": "Kata Kerja",
+    "en": "to meet"
+  },
+  {
+    "id": 455,
+    "hanzi": "园",
+    "pinyin": "yuán",
+    "category": "Kata Benda",
+    "en": "garden"
+  },
+  {
+    "id": 456,
+    "hanzi": "员",
+    "pinyin": "yuán",
+    "category": "Akhiran",
+    "en": ""
+  },
+  {
+    "id": 457,
+    "hanzi": "愿意",
+    "pinyin": "yuànyì",
+    "category": "Kata Kerja",
+    "en": "willing"
+  },
+  {
+    "id": 458,
+    "hanzi": "越",
+    "pinyin": "yuè",
+    "category": "Kata Keterangan",
+    "en": ""
+  },
+  {
+    "id": 459,
+    "hanzi": "月亮",
+    "pinyin": "yuèliang",
+    "category": "Kata Benda",
+    "en": "moon"
+  },
+  {
+    "id": 460,
+    "hanzi": "运动会",
+    "pinyin": "yùndònghuì",
+    "category": "Kata Benda",
+    "en": "sports meet"
+  },
+  {
+    "id": 461,
+    "hanzi": "运动员",
+    "pinyin": "yùndòngyuán",
+    "category": "Kata Benda",
+    "en": "athlete"
+  },
+  {
+    "id": 462,
+    "hanzi": "咱们",
+    "pinyin": "zánmen",
+    "category": "Kata Ganti",
+    "en": "we"
+  },
+  {
+    "id": 463,
+    "hanzi": "脏",
+    "pinyin": "zāng",
+    "category": "Kata Sifat",
+    "en": "dirty"
+  },
+  {
+    "id": 464,
+    "hanzi": "怎么办",
+    "pinyin": "zěnme bàn",
+    "category": "Kosakata",
+    "en": "what to do"
+  },
+  {
+    "id": 465,
+    "hanzi": "怎样",
+    "pinyin": "zěnyàng",
+    "category": "Kata Ganti",
+    "en": "how"
+  },
+  {
+    "id": 466,
+    "hanzi": "站",
+    "pinyin": "zhàn",
+    "category": "Kata Kerja",
+    "en": ""
+  },
+  {
+    "id": 467,
+    "hanzi": "张",
+    "pinyin": "zhāng",
+    "category": "Kata Kerja / Satuan",
+    "en": ""
+  },
+  {
+    "id": 468,
+    "hanzi": "长",
+    "pinyin": "zhǎng",
+    "category": "Kata Kerja / Akhiran",
+    "en": ""
+  },
+  {
+    "id": 469,
+    "hanzi": "着急",
+    "pinyin": "zháojí",
+    "category": "Kata Sifat",
+    "en": "anxious"
+  },
+  {
+    "id": 470,
+    "hanzi": "照",
+    "pinyin": "zhào",
+    "category": "Kata Kerja",
+    "en": ""
+  },
+  {
+    "id": 471,
+    "hanzi": "照顾",
+    "pinyin": "zhàogù",
+    "category": "Kata Kerja",
+    "en": ""
+  },
+  {
+    "id": 472,
+    "hanzi": "照片",
+    "pinyin": "zhàopiàn",
+    "category": "Kata Benda",
+    "en": "photo"
+  },
+  {
+    "id": 473,
+    "hanzi": "照相",
+    "pinyin": "zhàoxiàng",
+    "category": "Kata Kerja",
+    "en": ""
+  },
+  {
+    "id": 474,
+    "hanzi": "直到",
+    "pinyin": "zhídào",
+    "category": "Kata Kerja",
+    "en": "until"
+  },
+  {
+    "id": 475,
+    "hanzi": "只",
+    "pinyin": "zhǐ",
+    "category": "Kata Keterangan",
+    "en": ""
+  },
+  {
+    "id": 476,
+    "hanzi": "纸",
+    "pinyin": "zhǐ",
+    "category": "Kata Benda",
+    "en": "paper"
+  },
+  {
+    "id": 477,
+    "hanzi": "只能",
+    "pinyin": "zhǐ néng",
+    "category": "Kosakata",
+    "en": "can only"
+  },
+  {
+    "id": 478,
+    "hanzi": "只是",
+    "pinyin": "zhǐshì",
+    "category": "Kata Keterangan / Kata Sambung",
+    "en": ""
+  },
+  {
+    "id": 479,
+    "hanzi": "只要",
+    "pinyin": "zhǐyào",
+    "category": "Kata Sambung",
+    "en": "as long as"
+  },
+  {
+    "id": 480,
+    "hanzi": "只有",
+    "pinyin": "zhǐyǒu",
+    "category": "Kata Sambung",
+    "en": "only if"
+  },
+  {
+    "id": 481,
+    "hanzi": "中",
+    "pinyin": "zhōng",
+    "category": "Kata Benda",
+    "en": "middle"
+  },
+  {
+    "id": 482,
+    "hanzi": "中间",
+    "pinyin": "zhōngjiān",
+    "category": "Kata Benda",
+    "en": ""
+  },
+  {
+    "id": 483,
+    "hanzi": "终于",
+    "pinyin": "zhōngyú",
+    "category": "Kata Keterangan",
+    "en": "finally"
+  },
+  {
+    "id": 484,
+    "hanzi": "种",
+    "pinyin": "zhǒng",
+    "category": "Satuan",
+    "en": ""
+  },
+  {
+    "id": 485,
+    "hanzi": "重要",
+    "pinyin": "zhòngyào",
+    "category": "Kata Sifat",
+    "en": "important"
+  },
+  {
+    "id": 486,
+    "hanzi": "周末",
+    "pinyin": "zhōumò",
+    "category": "Kata Benda",
+    "en": "weekend"
+  },
+  {
+    "id": 487,
+    "hanzi": "主要",
+    "pinyin": "zhǔyào",
+    "category": "Kata Sifat",
+    "en": "main"
+  },
+  {
+    "id": 488,
+    "hanzi": "注意",
+    "pinyin": "zhùyì",
+    "category": "Kata Kerja",
+    "en": ""
+  },
+  {
+    "id": 489,
+    "hanzi": "住院",
+    "pinyin": "zhùyuàn",
+    "category": "Kata Kerja",
+    "en": ""
+  },
+  {
+    "id": 490,
+    "hanzi": "字典",
+    "pinyin": "zìdiǎn",
+    "category": "Kata Benda",
+    "en": "dictionary"
+  },
+  {
+    "id": 491,
+    "hanzi": "自行车",
+    "pinyin": "zìxíngchē",
+    "category": "Kata Benda",
+    "en": "bicycle"
+  },
+  {
+    "id": 492,
+    "hanzi": "子",
+    "pinyin": "zi",
+    "category": "Akhiran",
+    "en": "noun suffix"
+  },
+  {
+    "id": 493,
+    "hanzi": "总",
+    "pinyin": "zǒng",
+    "category": "Kata Keterangan / （verb / adjective）",
+    "en": ""
+  },
+  {
+    "id": 494,
+    "hanzi": "总是",
+    "pinyin": "zǒngshì",
+    "category": "Kata Keterangan",
+    "en": "always"
+  },
+  {
+    "id": 495,
+    "hanzi": "嘴",
+    "pinyin": "zuǐ",
+    "category": "Kata Benda",
+    "en": "mouth"
+  },
+  {
+    "id": 496,
+    "hanzi": "最好",
+    "pinyin": "zuìhǎo",
+    "category": "Kata Keterangan",
+    "en": "best"
+  },
+  {
+    "id": 497,
+    "hanzi": "最后",
+    "pinyin": "zuìhòu",
+    "category": "Kata Benda",
+    "en": "last, final"
+  },
+  {
+    "id": 498,
+    "hanzi": "最近",
+    "pinyin": "zuìjìn",
+    "category": "Kata Benda",
+    "en": "recently"
+  },
+  {
+    "id": 499,
+    "hanzi": "做客",
+    "pinyin": "zuòkè",
+    "category": "Kata Kerja",
+    "en": ""
+  },
+  {
+    "id": 500,
+    "hanzi": "作业",
+    "pinyin": "zuòyè",
+    "category": "Kata Benda",
+    "en": "homework"
+  }
+]
