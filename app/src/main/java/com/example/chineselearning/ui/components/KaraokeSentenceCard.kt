@@ -161,7 +161,7 @@ private fun parseSentenceItems(hanzi: String, tokens: List<WordToken>): Pair<Str
     var speaker: String? = null
     var startIdx = 0
 
-    val speakerRegex = Regex("^(?:[A-Za-z0-9]+|妈妈|孩子)[:：]\\s*")
+    val speakerRegex = Regex("^(?:[A-Za-z0-9]+|妈妈|孩子|妻子|丈夫)[:：]\\s*")
     val match = speakerRegex.find(trimmed)
     if (match != null) {
         speaker = match.value.trim().replace('：', ':')
