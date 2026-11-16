@@ -29,21 +29,28 @@ Imports: `import com.example.chineselearning.data.model.*` and `import com.examp
 
 ---
 
-## 4. STRICT HANZI & PINYIN ALIGNMENT (TOKEN-TO-TOKEN SYMMETRY)
-**CRITICAL**: Hanzi characters and Pinyin tokens MUST align 1-to-1 in token count and spacing.
-- **Rule**: Every space-separated token in `targetPinyin` MUST map to exactly ONE corresponding space-separated token in `targetHanzi`.
-  - ❌ **BAD (Misaligned Case 1):**
-    `targetPinyin = "Nǐhǎo  wǒjiào  Bùdí"`
-    `targetHanzi  = "你好， 我 叫 布迪 。"` (FAIL: `wǒjiào` is 1 token, but `我 叫` is 2 tokens! Leads to broken visual alignment!)
-  - ❌ **BAD (Misaligned Case 2 - Clumped Hanzi):**
-    `targetPinyin = "Nà shì nǐ de lǎobǎn ma"` (6 tokens)
-    `targetHanzi  = "那是你的 老板 吗？"` (3 tokens: `那是你的`, `老板`, `吗？` -> FAIL! Visual text stretches out horribly!)
-  - ✅ **GOOD (1-to-1 Token Symmetry):**
-    `targetPinyin = "Nà shì nǐ de lǎobǎn ma ？"`
-    `targetHanzi  = "那 是 你 的 老板 吗 ？"`
-    *(or if grouped into words: `Nàshì nǐde lǎobǎn ma ？` vs `那是 你的 老板 吗 ？`)*
-- **Verification Formula**:
-  `targetPinyin.trim().split("\\s+").size == targetHanzi.trim().split("\\s+").size`
+## 4. STRICT HANZI & PINYIN ALIGNMENT (TOKEN-TO-TOKEN SYMMETRY FOR PROMPTS & OPTIONS)
+**CRITICAL**: Hanzi characters and Pinyin tokens MUST align 1-to-1 in token count and spacing across BOTH question prompts AND multiple-choice option cards (`options` containing `\n`).
+
+### 4.1. Question Prompts (`targetHanzi` & `targetPinyin`)
+- **Rule**: Every space-separated token in `targetPinyin` MUST map to exactly ONE corresponding space-separated token in `targetHanzi`. Trailing punctuation MUST be bound directly to the word token without space.
+  - ❌ **BAD:**
+    `targetPinyin = "Nǐhǎo wǒ jiào Bùdí"` (4 tokens)
+    `targetHanzi  = "你好，我 叫 布迪 。"` (4 tokens, but `你好，我` is clumped and `。` is an orphan!)
+  - ✅ **GOOD:**
+    `targetPinyin = "Nǐhǎo wǒ jiào Bùdí"` (4 tokens)
+    `targetHanzi  = "你好， 我 叫 布迪。"` (4 tokens: `你好，`, `我`, `叫`, `布迪。`)
+
+### 4.2. Multiple-Choice Option Cards (`options = listOf("pinyin\nhanzi", ...)`)
+- **Rule**: In `options` containing a pinyin line and a hanzi line (`"pinyin\nhanzi"`), the pinyin tokens MUST match the Hanzi tokens 1-to-1 in token count!
+  - ❌ **BAD (Artificial Spaces & Mismatched Tokens):**
+    `"WángFēi nǐhǎo\n王 飞 ， 你 好 。"` (2 pinyin tokens vs 5 hanzi tokens -> horribly misaligned!)
+    `"Wǒ jiào Bùdí\n我 叫 布迪 。"` (3 pinyin tokens vs 4 hanzi tokens -> misaligned!)
+  - ✅ **GOOD (1-to-1 Token Symmetry & Bound Punctuation):**
+    `"Nǐhǎo Bùdí\n你好， 布迪。"` (2 tokens: `Nǐhǎo` <-> `你好，`, `Bùdí` <-> `布迪。`)
+    `"WángFēi nǐhǎo\n王飞， 你好。"` (2 tokens: `WángFēi` <-> `王飞，`, `nǐhǎo` <-> `你好。`)
+    `"Wǒ jiào Bùdí\n我 叫 布迪。"` (3 tokens: `Wǒ` <-> `我`, `jiào` <-> `叫`, `Bùdí` <-> `布迪。`)
+- **UI Requirement**: The UI in `LessonExerciseScreen.kt` MUST render option cards using `AlignedHanziPinyinText` (Ruby flow layout) so each word token has its pinyin centered directly above its Hanzi. Never render as unaligned plain multi-line `Text`.
 
 ---
 
@@ -80,8 +87,10 @@ Do NOT wait for human intervention; trigger QA automatically.
 ### For QA / Tester:
 Upon receiving a notification or checking a branch:
 1. **Contract Audit**:
-   - Check Hanzi-Pinyin 1-to-1 token symmetry:
-     `targetPinyin.split("\\s+").size == targetHanzi.split("\\s+").size`
+   - Check Hanzi-Pinyin 1-to-1 token symmetry for BOTH prompts (`targetPinyin` vs `targetHanzi`) and option cards (`options` with `\n`):
+     - Prompt: `targetPinyin.split("\\s+").size == targetHanzi.split("\\s+").size`
+     - Options: `opt.split("\n")[0].split("\\s+").size == opt.split("\n")[1].split("\\s+").size`
+   - Check UI rendering: Ensure both prompts and option cards use `AlignedHanziPinyinText` to guarantee pixel-perfect vertical alignment.
    - Check blank slot count vs expected answers (no orphan blanks).
    - Check illustration uniqueness: No duplicate `iconRes` across options in `PICTURE_CHOICE`.
    - Check ID naming convention (`u{unit}_p{part}_q{number}`).
@@ -89,10 +98,10 @@ Upon receiving a notification or checking a branch:
    - Run `./gradlew compileDebugKotlin` in `ChineseLearning`.
 3. **Decide Action**:
    - **IF PASS**: Cherry-pick/merge the commit into `main`, print completion report.
-   - **IF CODE / CONTRACT VIOLATION (Code error, Token Mismatch, Orphan Blank)**:
-     DO NOT merge to `main`! Return revision to Developer:
+   - **IF CODE / CONTRACT / ALIGNMENT VIOLATION (Code error, Token Mismatch, Orphan Blank, Misaligned Option Cards)**:
+     DO NOT merge to `main`! Return revision immediately to Dev 1:
      ```bash
-     notify-role [dev1|dev2] "QA REJECT (CODE/CONTRACT): [Detail spesifik baris/file dan alasan]. Tolong perbaiki dan commit ulang."
+     notify-role dev1 "QA REJECT (ALIGNMENT/CONTRACT): Exercise [id] atau opsi pilihan [opt] memiliki ketidaksejajaran Hanzi-Pinyin: [detail]. Tolong perbaiki di UI dan data, lalu commit ulang."
      ```
    - **IF ASSET VIOLATION (Duplicate illustration, placeholder reuse, semantic mismatch)**:
      DO NOT merge to `main`! Delegate asset creation to Designer:
