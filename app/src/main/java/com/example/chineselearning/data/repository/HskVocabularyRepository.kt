@@ -8,7 +8,8 @@ data class HskWordItem(
     val hanzi: String,
     val pinyin: String,
     val category: String,
-    val meaning: String
+    val meaning: String, // Arti dalam Bahasa Indonesia
+    val englishMeaning: String = "" // Arti dalam Bahasa Inggris (referensi)
 )
 
 object HskVocabularyRepository {
@@ -30,7 +31,8 @@ object HskVocabularyRepository {
                             hanzi = obj.optString("hanzi", ""),
                             pinyin = obj.optString("pinyin", ""),
                             category = obj.optString("category", "Kosakata"),
-                            meaning = obj.optString("en", "")
+                            meaning = obj.optString("meaning", obj.optString("id_meaning", obj.optString("en", ""))),
+                            englishMeaning = obj.optString("en", "")
                         )
                     )
                 }

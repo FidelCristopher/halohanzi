@@ -119,6 +119,7 @@ fun SavedVocabScreen(
                     word.hanzi.contains(query) ||
                             word.pinyin.lowercase().contains(query) ||
                             word.meaning.lowercase().contains(query) ||
+                            word.englishMeaning.lowercase().contains(query) ||
                             word.id.toString() == query
                 }
 
@@ -617,10 +618,10 @@ private fun HskWordDetailDialog(
                 // Meaning Details
                 Column(
                     modifier = Modifier.fillMaxWidth(),
-                    verticalArrangement = Arrangement.spacedBy(8.dp)
+                    verticalArrangement = Arrangement.spacedBy(6.dp)
                 ) {
                     Text(
-                        text = "Arti / Definisi",
+                        text = "Arti (Bahasa Indonesia)",
                         fontFamily = NunitoFontFamily,
                         fontSize = 12.sp,
                         color = SlateGray
@@ -628,10 +629,18 @@ private fun HskWordDetailDialog(
                     Text(
                         text = word.meaning,
                         fontFamily = NunitoFontFamily,
-                        fontSize = 14.5.sp,
+                        fontSize = 15.sp,
                         fontWeight = FontWeight.SemiBold,
                         color = DeepNavy
                     )
+                    if (word.englishMeaning.isNotBlank()) {
+                        Text(
+                            text = "English: ${word.englishMeaning}",
+                            fontFamily = NunitoFontFamily,
+                            fontSize = 12.sp,
+                            color = SlateGray.copy(alpha = 0.8f)
+                        )
+                    }
                 }
 
                 Spacer(modifier = Modifier.height(20.dp))
@@ -791,6 +800,16 @@ fun HanziWritingPracticeDialog(
                         color = DeepNavy,
                         textAlign = TextAlign.Center
                     )
+                    if (word.englishMeaning.isNotBlank()) {
+                        Spacer(modifier = Modifier.height(2.dp))
+                        Text(
+                            text = "English: ${word.englishMeaning}",
+                            fontFamily = NunitoFontFamily,
+                            fontSize = 12.sp,
+                            color = SlateGray,
+                            textAlign = TextAlign.Center
+                        )
+                    }
                 }
 
                 Spacer(modifier = Modifier.height(16.dp))

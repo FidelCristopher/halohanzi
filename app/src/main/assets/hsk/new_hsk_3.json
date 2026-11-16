@@ -4,6 +4,8 @@
     "hanzi": "阿姨",
     "pinyin": "āyí",
     "category": "Kata Benda",
+    "meaning": "bibi / tante",
+    "id_meaning": "bibi / tante",
     "en": "aunt"
   },
   {
@@ -11,6 +13,8 @@
     "hanzi": "矮",
     "pinyin": "ǎi",
     "category": "Kata Sifat",
+    "meaning": "pendek",
+    "id_meaning": "pendek",
     "en": "short"
   },
   {
@@ -18,6 +22,8 @@
     "hanzi": "爱人",
     "pinyin": "àiren",
     "category": "Kata Benda",
+    "meaning": "pasangan",
+    "id_meaning": "pasangan",
     "en": "spouse"
   },
   {
@@ -25,6 +31,8 @@
     "hanzi": "安静",
     "pinyin": "ānjìng",
     "category": "Kata Sifat",
+    "meaning": "tenang / sunyi",
+    "id_meaning": "tenang / sunyi",
     "en": "quiet"
   },
   {
@@ -32,6 +40,8 @@
     "hanzi": "安全",
     "pinyin": "ānquán",
     "category": "Kata Sifat",
+    "meaning": "aman",
+    "id_meaning": "aman",
     "en": "safe"
   },
   {
@@ -39,6 +49,8 @@
     "hanzi": "把",
     "pinyin": "bǎ",
     "category": "Satuan / Kata Depan",
+    "meaning": "menggenggam / partikel objek",
+    "id_meaning": "menggenggam / partikel objek",
     "en": ""
   },
   {
@@ -46,6 +58,8 @@
     "hanzi": "搬",
     "pinyin": "bān",
     "category": "Kata Kerja",
+    "meaning": "pindah / mengangkut",
+    "id_meaning": "pindah / mengangkut",
     "en": ""
   },
   {
@@ -53,6 +67,8 @@
     "hanzi": "班级",
     "pinyin": "bānjí",
     "category": "Kata Benda",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -60,6 +76,8 @@
     "hanzi": "搬家",
     "pinyin": "bānjiā",
     "category": "Kata Kerja",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -67,6 +85,8 @@
     "hanzi": "办",
     "pinyin": "bàn",
     "category": "Kata Kerja",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -74,6 +94,8 @@
     "hanzi": "办法",
     "pinyin": "bànfǎ",
     "category": "Kata Benda",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -81,6 +103,8 @@
     "hanzi": "办公室",
     "pinyin": "bàngōngshì",
     "category": "Kata Benda",
+    "meaning": "kantor",
+    "id_meaning": "kantor",
     "en": "office"
   },
   {
@@ -88,6 +112,8 @@
     "hanzi": "半天",
     "pinyin": "bàntiān",
     "category": "number-classifier",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -95,6 +121,8 @@
     "hanzi": "帮助",
     "pinyin": "bāngzhù",
     "category": "Kata Kerja",
+    "meaning": "membantu / menolong",
+    "id_meaning": "membantu / menolong",
     "en": "help"
   },
   {
@@ -102,6 +130,8 @@
     "hanzi": "饱",
     "pinyin": "bǎo",
     "category": "Kata Sifat",
+    "meaning": "kenyang",
+    "id_meaning": "kenyang",
     "en": "full"
   },
   {
@@ -109,6 +139,8 @@
     "hanzi": "报纸",
     "pinyin": "bàozhǐ",
     "category": "Kata Benda",
+    "meaning": "koran",
+    "id_meaning": "koran",
     "en": "newspaper"
   },
   {
@@ -116,6 +148,8 @@
     "hanzi": "北",
     "pinyin": "běi",
     "category": "Kata Benda",
+    "meaning": "utara",
+    "id_meaning": "utara",
     "en": "north"
   },
   {
@@ -123,6 +157,8 @@
     "hanzi": "北方",
     "pinyin": "běifāng",
     "category": "Kata Benda",
+    "meaning": "bagian utara",
+    "id_meaning": "bagian utara",
     "en": "north"
   },
   {
@@ -130,6 +166,8 @@
     "hanzi": "被",
     "pinyin": "bèi",
     "category": "Kata Depan",
+    "meaning": "oleh",
+    "id_meaning": "oleh",
     "en": "by"
   },
   {
@@ -137,6 +175,8 @@
     "hanzi": "笔记",
     "pinyin": "bǐjì",
     "category": "Kata Benda",
+    "meaning": "catatan",
+    "id_meaning": "catatan",
     "en": "notes"
   },
   {
@@ -144,6 +184,8 @@
     "hanzi": "比较",
     "pinyin": "bǐjiào",
     "category": "Kata Kerja / Kata Depan / Kata Keterangan",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -151,6 +193,8 @@
     "hanzi": "笔记本",
     "pinyin": "bǐjìběn",
     "category": "Kata Benda",
+    "meaning": "buku catatan",
+    "id_meaning": "buku catatan",
     "en": "notebook"
   },
   {
@@ -158,6 +202,8 @@
     "hanzi": "比如",
     "pinyin": "bǐrú",
     "category": "Kata Kerja",
+    "meaning": "misalnya",
+    "id_meaning": "misalnya",
     "en": "for example"
   },
   {
@@ -165,6 +211,8 @@
     "hanzi": "比赛",
     "pinyin": "bǐsài",
     "category": "Kata Kerja / Kata Benda",
+    "meaning": "pertandingan / lomba",
+    "id_meaning": "pertandingan / lomba",
     "en": ""
   },
   {
@@ -172,6 +220,8 @@
     "hanzi": "必须",
     "pinyin": "bìxū",
     "category": "Kata Keterangan",
+    "meaning": "harus / wajib",
+    "id_meaning": "harus / wajib",
     "en": "must"
   },
   {
@@ -179,6 +229,8 @@
     "hanzi": "变",
     "pinyin": "biàn",
     "category": "Kata Kerja",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -186,6 +238,8 @@
     "hanzi": "遍",
     "pinyin": "biàn",
     "category": "Satuan",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -193,6 +247,8 @@
     "hanzi": "变成",
     "pinyin": "biànchéng",
     "category": "Kata Kerja",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -200,6 +256,8 @@
     "hanzi": "变化",
     "pinyin": "biànhuà",
     "category": "Kata Kerja / Kata Benda",
+    "meaning": "perubahan",
+    "id_meaning": "perubahan",
     "en": ""
   },
   {
@@ -207,6 +265,8 @@
     "hanzi": "表演",
     "pinyin": "biǎoyǎn",
     "category": "Kata Kerja",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -214,6 +274,8 @@
     "hanzi": "别的",
     "pinyin": "biéde",
     "category": "Kata Ganti",
+    "meaning": "lainnya",
+    "id_meaning": "lainnya",
     "en": "other"
   },
   {
@@ -221,6 +283,8 @@
     "hanzi": "别人",
     "pinyin": "biérén",
     "category": "Kata Ganti",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -228,6 +292,8 @@
     "hanzi": "宾馆",
     "pinyin": "bīnguǎn",
     "category": "Kata Benda",
+    "meaning": "hotel",
+    "id_meaning": "hotel",
     "en": "hotel"
   },
   {
@@ -235,6 +301,8 @@
     "hanzi": "冰",
     "pinyin": "bīng",
     "category": "Kata Benda / （verb）",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -242,6 +310,8 @@
     "hanzi": "冰激凌",
     "pinyin": "bīngjīlíng",
     "category": "Kata Benda",
+    "meaning": "es krim",
+    "id_meaning": "es krim",
     "en": "ice cream"
   },
   {
@@ -249,6 +319,8 @@
     "hanzi": "冰箱",
     "pinyin": "bīngxiāng",
     "category": "Kata Benda",
+    "meaning": "lemari es",
+    "id_meaning": "lemari es",
     "en": "refrigerator"
   },
   {
@@ -256,6 +328,8 @@
     "hanzi": "病人",
     "pinyin": "bìngrén",
     "category": "Kata Benda",
+    "meaning": "sabar",
+    "id_meaning": "sabar",
     "en": "patient"
   },
   {
@@ -263,6 +337,8 @@
     "hanzi": "不但",
     "pinyin": "búdàn",
     "category": "Kata Sambung",
+    "meaning": "tidak hanya",
+    "id_meaning": "tidak hanya",
     "en": "not only"
   },
   {
@@ -270,6 +346,8 @@
     "hanzi": "不见",
     "pinyin": "bújiàn",
     "category": "Kata Kerja",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -277,6 +355,8 @@
     "hanzi": "不用",
     "pinyin": "búyòng",
     "category": "Kata Keterangan",
+    "meaning": "tak perlu",
+    "id_meaning": "tak perlu",
     "en": "need not"
   },
   {
@@ -284,6 +364,8 @@
     "hanzi": "不同",
     "pinyin": "bù tóng",
     "category": "Kosakata",
+    "meaning": "berbeda",
+    "id_meaning": "berbeda",
     "en": "different"
   },
   {
@@ -291,6 +373,8 @@
     "hanzi": "不久",
     "pinyin": "bùjiǔ",
     "category": "Kata Sifat",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -298,6 +382,8 @@
     "hanzi": "不行",
     "pinyin": "bùxíng",
     "category": "Kata Kerja / Kata Sifat",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -305,6 +391,8 @@
     "hanzi": "才",
     "pinyin": "cái",
     "category": "Kata Keterangan",
+    "meaning": "hanya saja",
+    "id_meaning": "hanya saja",
     "en": "just, only"
   },
   {
@@ -312,6 +400,8 @@
     "hanzi": "菜单",
     "pinyin": "càidān",
     "category": "Kata Benda",
+    "meaning": "menu",
+    "id_meaning": "menu",
     "en": "menu"
   },
   {
@@ -319,6 +409,8 @@
     "hanzi": "参加",
     "pinyin": "cānjiā",
     "category": "Kata Kerja",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -326,6 +418,8 @@
     "hanzi": "草",
     "pinyin": "cǎo",
     "category": "Kata Benda",
+    "meaning": "rumput",
+    "id_meaning": "rumput",
     "en": "grass"
   },
   {
@@ -333,6 +427,8 @@
     "hanzi": "草地",
     "pinyin": "cǎodì",
     "category": "Kata Benda",
+    "meaning": "padang rumput",
+    "id_meaning": "padang rumput",
     "en": "grassland"
   },
   {
@@ -340,6 +436,8 @@
     "hanzi": "层",
     "pinyin": "céng",
     "category": "Satuan",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -347,6 +445,8 @@
     "hanzi": "查",
     "pinyin": "chá",
     "category": "Kata Kerja",
+    "meaning": "memeriksa",
+    "id_meaning": "memeriksa",
     "en": "to check"
   },
   {
@@ -354,6 +454,8 @@
     "hanzi": "差",
     "pinyin": "chà",
     "category": "Kata Sifat / Kata Kerja",
+    "meaning": "kurang / buruk",
+    "id_meaning": "kurang / buruk",
     "en": ""
   },
   {
@@ -361,6 +463,8 @@
     "hanzi": "差不多",
     "pinyin": "chàbuduō",
     "category": "Kata Sifat / Kata Keterangan",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -368,6 +472,8 @@
     "hanzi": "尝",
     "pinyin": "cháng",
     "category": "Kata Kerja",
+    "meaning": "secukupnya",
+    "id_meaning": "secukupnya",
     "en": "to taste"
   },
   {
@@ -375,6 +481,8 @@
     "hanzi": "常",
     "pinyin": "cháng",
     "category": "Kata Keterangan",
+    "meaning": "sering",
+    "id_meaning": "sering",
     "en": ""
   },
   {
@@ -382,6 +490,8 @@
     "hanzi": "常见",
     "pinyin": "cháng jiàn",
     "category": "Kosakata",
+    "meaning": "umum",
+    "id_meaning": "umum",
     "en": "common"
   },
   {
@@ -389,6 +499,8 @@
     "hanzi": "常用",
     "pinyin": "",
     "category": "Kosakata",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -396,6 +508,8 @@
     "hanzi": "常常",
     "pinyin": "chángcháng",
     "category": "Kata Keterangan",
+    "meaning": "sering / kerap",
+    "id_meaning": "sering / kerap",
     "en": "often"
   },
   {
@@ -403,6 +517,8 @@
     "hanzi": "衬衫",
     "pinyin": "chènshān",
     "category": "Kata Benda",
+    "meaning": "kemeja",
+    "id_meaning": "kemeja",
     "en": "shirt"
   },
   {
@@ -410,6 +526,8 @@
     "hanzi": "成绩",
     "pinyin": "chéngjì",
     "category": "Kata Benda",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -417,6 +535,8 @@
     "hanzi": "城市",
     "pinyin": "chéngshì",
     "category": "Kata Benda",
+    "meaning": "kota",
+    "id_meaning": "kota",
     "en": "city"
   },
   {
@@ -424,6 +544,8 @@
     "hanzi": "迟到",
     "pinyin": "chídào",
     "category": "Kata Kerja",
+    "meaning": "terlambat",
+    "id_meaning": "terlambat",
     "en": "to be late"
   },
   {
@@ -431,6 +553,8 @@
     "hanzi": "出发",
     "pinyin": "chūfā",
     "category": "Kata Kerja",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -438,6 +562,8 @@
     "hanzi": "出生",
     "pinyin": "chūshēng",
     "category": "Kata Kerja",
+    "meaning": "dilahirkan",
+    "id_meaning": "dilahirkan",
     "en": "to be born"
   },
   {
@@ -445,6 +571,8 @@
     "hanzi": "出院",
     "pinyin": "chūyuàn",
     "category": "Kata Kerja",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -452,6 +580,8 @@
     "hanzi": "初中",
     "pinyin": "chūzhōng",
     "category": "Kata Benda",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -459,6 +589,8 @@
     "hanzi": "除了",
     "pinyin": "chúle",
     "category": "Kata Depan",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -466,6 +598,8 @@
     "hanzi": "船",
     "pinyin": "chuán",
     "category": "Kata Benda",
+    "meaning": "kapal",
+    "id_meaning": "kapal",
     "en": "boat"
   },
   {
@@ -473,6 +607,8 @@
     "hanzi": "春天",
     "pinyin": "chūntiān",
     "category": "Kata Benda",
+    "meaning": "musim semi",
+    "id_meaning": "musim semi",
     "en": "spring"
   },
   {
@@ -480,6 +616,8 @@
     "hanzi": "词典",
     "pinyin": "cídiǎn",
     "category": "Kata Benda",
+    "meaning": "kamus",
+    "id_meaning": "kamus",
     "en": "dictionary"
   },
   {
@@ -487,6 +625,8 @@
     "hanzi": "聪明",
     "pinyin": "cōngmíng",
     "category": "Kata Sifat",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -494,6 +634,8 @@
     "hanzi": "打扫",
     "pinyin": "dǎsǎo",
     "category": "Kata Kerja",
+    "meaning": "membersihkan",
+    "id_meaning": "membersihkan",
     "en": "to clean"
   },
   {
@@ -501,6 +643,8 @@
     "hanzi": "打算",
     "pinyin": "dǎsuàn",
     "category": "Kata Kerja / Kata Benda",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -508,6 +652,8 @@
     "hanzi": "大概",
     "pinyin": "dàgài",
     "category": "Kata Sifat / Kata Keterangan / （noun）",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -515,6 +661,8 @@
     "hanzi": "大人",
     "pinyin": "dàren",
     "category": "Kata Benda",
+    "meaning": "dewasa",
+    "id_meaning": "dewasa",
     "en": "adult"
   },
   {
@@ -522,6 +670,8 @@
     "hanzi": "大小",
     "pinyin": "dàxiǎo",
     "category": "Kata Benda",
+    "meaning": "ukuran",
+    "id_meaning": "ukuran",
     "en": "size"
   },
   {
@@ -529,6 +679,8 @@
     "hanzi": "大熊猫",
     "pinyin": "dàxióngmāo",
     "category": "Kata Benda",
+    "meaning": "panda raksasa",
+    "id_meaning": "panda raksasa",
     "en": "giant panda"
   },
   {
@@ -536,6 +688,8 @@
     "hanzi": "大衣",
     "pinyin": "dàyī",
     "category": "Kata Benda",
+    "meaning": "mantel",
+    "id_meaning": "mantel",
     "en": "coat"
   },
   {
@@ -543,6 +697,8 @@
     "hanzi": "带",
     "pinyin": "dài",
     "category": "Kata Kerja / （noun）",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -550,6 +706,8 @@
     "hanzi": "担心",
     "pinyin": "dānxīn",
     "category": "Kata Kerja",
+    "meaning": "khawatir",
+    "id_meaning": "khawatir",
     "en": "to worry"
   },
   {
@@ -557,6 +715,8 @@
     "hanzi": "蛋糕",
     "pinyin": "dàngāo",
     "category": "Kata Benda",
+    "meaning": "kue",
+    "id_meaning": "kue",
     "en": "cake"
   },
   {
@@ -564,6 +724,8 @@
     "hanzi": "当然",
     "pinyin": "dāngrán",
     "category": "Kata Keterangan",
+    "meaning": "tentu saja",
+    "id_meaning": "tentu saja",
     "en": "of course"
   },
   {
@@ -571,6 +733,8 @@
     "hanzi": "到处",
     "pinyin": "dàochù",
     "category": "Kata Keterangan",
+    "meaning": "di mana pun",
+    "id_meaning": "di mana pun",
     "en": "everywhere"
   },
   {
@@ -578,6 +742,8 @@
     "hanzi": "得",
     "pinyin": "dé",
     "category": "Kata Kerja",
+    "meaning": "partikel pelengkap hasil/tingkat",
+    "id_meaning": "partikel pelengkap hasil/tingkat",
     "en": ""
   },
   {
@@ -585,6 +751,8 @@
     "hanzi": "得到",
     "pinyin": "dédào",
     "category": "Kata Kerja",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -592,6 +760,8 @@
     "hanzi": "得分",
     "pinyin": "défēn",
     "category": "Kata Kerja / Kata Benda",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -599,6 +769,8 @@
     "hanzi": "的话",
     "pinyin": "dehuà",
     "category": "Partikel",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -606,6 +778,8 @@
     "hanzi": "得",
     "pinyin": "děi",
     "category": "Kata Kerja",
+    "meaning": "partikel pelengkap hasil/tingkat",
+    "id_meaning": "partikel pelengkap hasil/tingkat",
     "en": "must, need"
   },
   {
@@ -613,6 +787,8 @@
     "hanzi": "灯",
     "pinyin": "dēng",
     "category": "Kata Benda",
+    "meaning": "lampu, cahaya",
+    "id_meaning": "lampu, cahaya",
     "en": "lamp, light"
   },
   {
@@ -620,6 +796,8 @@
     "hanzi": "地",
     "pinyin": "dì",
     "category": "Kata Benda",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -627,6 +805,8 @@
     "hanzi": "地点",
     "pinyin": "dìdiǎn",
     "category": "Kata Benda",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -634,6 +814,8 @@
     "hanzi": "地方",
     "pinyin": "dìfang",
     "category": "Kata Benda",
+    "meaning": "tempat",
+    "id_meaning": "tempat",
     "en": "place"
   },
   {
@@ -641,6 +823,8 @@
     "hanzi": "地图",
     "pinyin": "dìtú",
     "category": "Kata Benda",
+    "meaning": "peta",
+    "id_meaning": "peta",
     "en": "map"
   },
   {
@@ -648,6 +832,8 @@
     "hanzi": "电",
     "pinyin": "diàn",
     "category": "Kata Benda / （verb）",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -655,6 +841,8 @@
     "hanzi": "电梯",
     "pinyin": "diàntī",
     "category": "Kata Benda",
+    "meaning": "lift",
+    "id_meaning": "lift",
     "en": "elevator"
   },
   {
@@ -662,6 +850,8 @@
     "hanzi": "电子书",
     "pinyin": "diànzǐshū",
     "category": "Kata Benda",
+    "meaning": "buku elektronik",
+    "id_meaning": "buku elektronik",
     "en": "e-book"
   },
   {
@@ -669,6 +859,8 @@
     "hanzi": "丢",
     "pinyin": "diū",
     "category": "Kata Kerja",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -676,6 +868,8 @@
     "hanzi": "东",
     "pinyin": "dōng",
     "category": "Kata Benda",
+    "meaning": "timur",
+    "id_meaning": "timur",
     "en": "east"
   },
   {
@@ -683,6 +877,8 @@
     "hanzi": "东北",
     "pinyin": "dōngběi",
     "category": "Kata Benda",
+    "meaning": "timur laut",
+    "id_meaning": "timur laut",
     "en": "northeast"
   },
   {
@@ -690,6 +886,8 @@
     "hanzi": "东方",
     "pinyin": "dōngfāng",
     "category": "Kata Benda",
+    "meaning": "timur",
+    "id_meaning": "timur",
     "en": "east"
   },
   {
@@ -697,6 +895,8 @@
     "hanzi": "东南",
     "pinyin": "dōngnán",
     "category": "Kata Benda",
+    "meaning": "tenggara",
+    "id_meaning": "tenggara",
     "en": "southeast"
   },
   {
@@ -704,6 +904,8 @@
     "hanzi": "冬天",
     "pinyin": "dōngtiān",
     "category": "Kata Benda",
+    "meaning": "musim dingin",
+    "id_meaning": "musim dingin",
     "en": "winter"
   },
   {
@@ -711,6 +913,8 @@
     "hanzi": "懂得",
     "pinyin": "dǒngde",
     "category": "Kata Kerja",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -718,6 +922,8 @@
     "hanzi": "动物",
     "pinyin": "dòngwù",
     "category": "Kata Benda",
+    "meaning": "hewan",
+    "id_meaning": "hewan",
     "en": "animal"
   },
   {
@@ -725,6 +931,8 @@
     "hanzi": "动物园",
     "pinyin": "dòngwùyuán",
     "category": "Kata Benda",
+    "meaning": "kebun binatang",
+    "id_meaning": "kebun binatang",
     "en": "zoo"
   },
   {
@@ -732,6 +940,8 @@
     "hanzi": "短",
     "pinyin": "duǎn",
     "category": "Kata Sifat",
+    "meaning": "pendek",
+    "id_meaning": "pendek",
     "en": "short"
   },
   {
@@ -739,6 +949,8 @@
     "hanzi": "短裤",
     "pinyin": "duǎnkù",
     "category": "Kata Benda",
+    "meaning": "celana pendek",
+    "id_meaning": "celana pendek",
     "en": "shorts"
   },
   {
@@ -746,6 +958,8 @@
     "hanzi": "段",
     "pinyin": "duàn",
     "category": "Satuan",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -753,6 +967,8 @@
     "hanzi": "锻炼",
     "pinyin": "duànliàn",
     "category": "Kata Kerja",
+    "meaning": "berolahraga",
+    "id_meaning": "berolahraga",
     "en": "to exercise"
   },
   {
@@ -760,6 +976,8 @@
     "hanzi": "对话",
     "pinyin": "duìhuà",
     "category": "Kata Kerja",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -767,6 +985,8 @@
     "hanzi": "饿",
     "pinyin": "è",
     "category": "Kata Sifat",
+    "meaning": "lapar",
+    "id_meaning": "lapar",
     "en": "hungry"
   },
   {
@@ -774,6 +994,8 @@
     "hanzi": "而且",
     "pinyin": "érqiě",
     "category": "Kata Sambung",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -781,6 +1003,8 @@
     "hanzi": "耳朵",
     "pinyin": "ěrduo",
     "category": "Kata Benda",
+    "meaning": "telinga",
+    "id_meaning": "telinga",
     "en": "ear"
   },
   {
@@ -788,6 +1012,8 @@
     "hanzi": "耳机",
     "pinyin": "ěrjī",
     "category": "Kata Benda",
+    "meaning": "earphone",
+    "id_meaning": "earphone",
     "en": "earphone"
   },
   {
@@ -795,6 +1021,8 @@
     "hanzi": "发",
     "pinyin": "fā",
     "category": "Kata Kerja",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -802,6 +1030,8 @@
     "hanzi": "发烧",
     "pinyin": "fāshāo",
     "category": "Kata Kerja",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -809,6 +1039,8 @@
     "hanzi": "发生",
     "pinyin": "fāshēng",
     "category": "Kata Kerja",
+    "meaning": "terjadi",
+    "id_meaning": "terjadi",
     "en": "to happen"
   },
   {
@@ -816,6 +1048,8 @@
     "hanzi": "发现",
     "pinyin": "fāxiàn",
     "category": "Kata Kerja",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -823,6 +1057,8 @@
     "hanzi": "发展",
     "pinyin": "fāzhǎn",
     "category": "Kata Kerja",
+    "meaning": "berkembang",
+    "id_meaning": "berkembang",
     "en": "to develop"
   },
   {
@@ -830,6 +1066,8 @@
     "hanzi": "方便",
     "pinyin": "fāngbiàn",
     "category": "Kata Sifat",
+    "meaning": "nyaman",
+    "id_meaning": "nyaman",
     "en": "convenient"
   },
   {
@@ -837,6 +1075,8 @@
     "hanzi": "方便面",
     "pinyin": "fāngbiànmiàn",
     "category": "Kata Benda",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -844,6 +1084,8 @@
     "hanzi": "方法",
     "pinyin": "fāngfǎ",
     "category": "Kata Benda",
+    "meaning": "metode",
+    "id_meaning": "metode",
     "en": "method"
   },
   {
@@ -851,6 +1093,8 @@
     "hanzi": "方向",
     "pinyin": "fāngxiàng",
     "category": "Kata Benda",
+    "meaning": "arah",
+    "id_meaning": "arah",
     "en": "direction"
   },
   {
@@ -858,6 +1102,8 @@
     "hanzi": "房子",
     "pinyin": "fángzi",
     "category": "Kata Benda",
+    "meaning": "rumah",
+    "id_meaning": "rumah",
     "en": "house"
   },
   {
@@ -865,6 +1111,8 @@
     "hanzi": "放",
     "pinyin": "fàng",
     "category": "Kata Kerja",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -872,6 +1120,8 @@
     "hanzi": "放假",
     "pinyin": "fàngjià",
     "category": "Kata Kerja",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -879,6 +1129,8 @@
     "hanzi": "放心",
     "pinyin": "fàngxīn",
     "category": "Kata Kerja",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -886,6 +1138,8 @@
     "hanzi": "放学",
     "pinyin": "fàngxué",
     "category": "Kata Kerja",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -893,6 +1147,8 @@
     "hanzi": "分开",
     "pinyin": "fēnkāi",
     "category": "Kata Kerja",
+    "meaning": "memisahkan",
+    "id_meaning": "memisahkan",
     "en": "to separate"
   },
   {
@@ -900,6 +1156,8 @@
     "hanzi": "风",
     "pinyin": "fēng",
     "category": "Kata Benda",
+    "meaning": "angin",
+    "id_meaning": "angin",
     "en": "wind"
   },
   {
@@ -907,6 +1165,8 @@
     "hanzi": "封",
     "pinyin": "fēng",
     "category": "Satuan / （verb）",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -914,6 +1174,8 @@
     "hanzi": "夫妻",
     "pinyin": "fūqī",
     "category": "Kata Benda",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -921,6 +1183,8 @@
     "hanzi": "服务",
     "pinyin": "fúwù",
     "category": "Kata Kerja",
+    "meaning": "melayani",
+    "id_meaning": "melayani",
     "en": "to serve"
   },
   {
@@ -928,6 +1192,8 @@
     "hanzi": "附近",
     "pinyin": "fùjìn",
     "category": "Kata Benda",
+    "meaning": "di dekat sini",
+    "id_meaning": "di dekat sini",
     "en": "nearby"
   },
   {
@@ -935,6 +1201,8 @@
     "hanzi": "复习",
     "pinyin": "fùxí",
     "category": "Kata Kerja",
+    "meaning": "meninjau",
+    "id_meaning": "meninjau",
     "en": "to review"
   },
   {
@@ -942,6 +1210,8 @@
     "hanzi": "该",
     "pinyin": "gāi",
     "category": "Kata Kerja",
+    "meaning": "sebaiknya",
+    "id_meaning": "sebaiknya",
     "en": "should"
   },
   {
@@ -949,6 +1219,8 @@
     "hanzi": "干净",
     "pinyin": "gānjìng",
     "category": "Kata Sifat",
+    "meaning": "membersihkan",
+    "id_meaning": "membersihkan",
     "en": "clean"
   },
   {
@@ -956,6 +1228,8 @@
     "hanzi": "感兴趣",
     "pinyin": "gǎn xìngqù",
     "category": "Kosakata",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -963,6 +1237,8 @@
     "hanzi": "感到",
     "pinyin": "gǎndào",
     "category": "Kata Kerja",
+    "meaning": "merasakan",
+    "id_meaning": "merasakan",
     "en": "to feel"
   },
   {
@@ -970,6 +1246,8 @@
     "hanzi": "感冒",
     "pinyin": "gǎnmào",
     "category": "Kata Benda / Kata Kerja",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -977,6 +1255,8 @@
     "hanzi": "干",
     "pinyin": "gàn",
     "category": "Kata Kerja",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -984,6 +1264,8 @@
     "hanzi": "刚",
     "pinyin": "gāng",
     "category": "Kata Keterangan",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -991,6 +1273,8 @@
     "hanzi": "刚才",
     "pinyin": "gāngcái",
     "category": "Kata Benda",
+    "meaning": "baru saja",
+    "id_meaning": "baru saja",
     "en": "just now"
   },
   {
@@ -998,6 +1282,8 @@
     "hanzi": "刚刚",
     "pinyin": "gānggāng",
     "category": "Kata Keterangan",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -1005,6 +1291,8 @@
     "hanzi": "高铁",
     "pinyin": "gāotiě",
     "category": "Kata Benda",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -1012,6 +1300,8 @@
     "hanzi": "根据",
     "pinyin": "gēnjù",
     "category": "Kata Kerja / Kata Depan / （noun）",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -1019,6 +1309,8 @@
     "hanzi": "更",
     "pinyin": "gèng",
     "category": "Kata Keterangan",
+    "meaning": "lagi",
+    "id_meaning": "lagi",
     "en": "more"
   },
   {
@@ -1026,6 +1318,8 @@
     "hanzi": "公斤",
     "pinyin": "gōngjīn",
     "category": "Satuan",
+    "meaning": "kilogram",
+    "id_meaning": "kilogram",
     "en": "kilogram"
   },
   {
@@ -1033,6 +1327,8 @@
     "hanzi": "公园",
     "pinyin": "gōngyuán",
     "category": "Kata Benda",
+    "meaning": "taman",
+    "id_meaning": "taman",
     "en": "park"
   },
   {
@@ -1040,6 +1336,8 @@
     "hanzi": "工作日",
     "pinyin": "gōngzuòrì",
     "category": "Kata Benda",
+    "meaning": "hari kerja",
+    "id_meaning": "hari kerja",
     "en": "workday"
   },
   {
@@ -1047,6 +1345,8 @@
     "hanzi": "故事",
     "pinyin": "gùshi",
     "category": "Kata Benda",
+    "meaning": "cerita",
+    "id_meaning": "cerita",
     "en": "story"
   },
   {
@@ -1054,6 +1354,8 @@
     "hanzi": "刮",
     "pinyin": "guā",
     "category": "Kata Kerja",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -1061,6 +1363,8 @@
     "hanzi": "关",
     "pinyin": "guān",
     "category": "Kata Kerja / （noun）",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -1068,6 +1372,8 @@
     "hanzi": "关机",
     "pinyin": "guānjī",
     "category": "Kata Kerja",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -1075,6 +1381,8 @@
     "hanzi": "关系",
     "pinyin": "guānxì",
     "category": "Kata Benda / （verb）",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -1082,6 +1390,8 @@
     "hanzi": "关心",
     "pinyin": "guānxīn",
     "category": "Kata Kerja",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -1089,6 +1399,8 @@
     "hanzi": "关于",
     "pinyin": "guānyú",
     "category": "Kata Depan",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -1096,6 +1408,8 @@
     "hanzi": "关注",
     "pinyin": "guānzhù",
     "category": "Kata Kerja",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -1103,6 +1417,8 @@
     "hanzi": "国家",
     "pinyin": "guójiā",
     "category": "Kata Benda",
+    "meaning": "negara",
+    "id_meaning": "negara",
     "en": "country"
   },
   {
@@ -1110,6 +1426,8 @@
     "hanzi": "过节",
     "pinyin": "guòjié",
     "category": "Kata Kerja",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -1117,6 +1435,8 @@
     "hanzi": "过去",
     "pinyin": "guòqù",
     "category": "Kata Benda",
+    "meaning": "masa lalu",
+    "id_meaning": "masa lalu",
     "en": "past"
   },
   {
@@ -1124,6 +1444,8 @@
     "hanzi": "海",
     "pinyin": "hǎi",
     "category": "Kata Benda",
+    "meaning": "laut",
+    "id_meaning": "laut",
     "en": "sea"
   },
   {
@@ -1131,6 +1453,8 @@
     "hanzi": "害怕",
     "pinyin": "hàipà",
     "category": "Kata Kerja",
+    "meaning": "menjadi takut",
+    "id_meaning": "menjadi takut",
     "en": "to be afraid"
   },
   {
@@ -1138,6 +1462,8 @@
     "hanzi": "好多",
     "pinyin": "hǎoduō",
     "category": "Angka",
+    "meaning": "banyak, banyak",
+    "id_meaning": "banyak, banyak",
     "en": "many, a lot"
   },
   {
@@ -1145,6 +1471,8 @@
     "hanzi": "好久",
     "pinyin": "hǎojiǔ",
     "category": "Kata Sifat",
+    "meaning": "waktu yang lama",
+    "id_meaning": "waktu yang lama",
     "en": "a long time"
   },
   {
@@ -1152,6 +1480,8 @@
     "hanzi": "好像",
     "pinyin": "hǎoxiàng",
     "category": "Kata Kerja / Kata Keterangan",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -1159,6 +1489,8 @@
     "hanzi": "号码",
     "pinyin": "hàomǎ",
     "category": "Kata Benda",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -1166,6 +1498,8 @@
     "hanzi": "河",
     "pinyin": "hé",
     "category": "Kata Benda",
+    "meaning": "sungai",
+    "id_meaning": "sungai",
     "en": "river"
   },
   {
@@ -1173,6 +1507,8 @@
     "hanzi": "合适",
     "pinyin": "héshì",
     "category": "Kata Sifat",
+    "meaning": "sesuai",
+    "id_meaning": "sesuai",
     "en": "suitable"
   },
   {
@@ -1180,6 +1516,8 @@
     "hanzi": "黑板",
     "pinyin": "hēibǎn",
     "category": "Kata Benda",
+    "meaning": "papan tulis",
+    "id_meaning": "papan tulis",
     "en": "blackboard"
   },
   {
@@ -1187,6 +1525,8 @@
     "hanzi": "红绿灯",
     "pinyin": "hóng-lǜdēng",
     "category": "Kata Benda",
+    "meaning": "lampu lalu lintas",
+    "id_meaning": "lampu lalu lintas",
     "en": "traffic light"
   },
   {
@@ -1194,6 +1534,8 @@
     "hanzi": "后来",
     "pinyin": "hòulái",
     "category": "Kata Benda",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -1201,6 +1543,8 @@
     "hanzi": "后年",
     "pinyin": "hòunián",
     "category": "Kata Benda",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -1208,6 +1552,8 @@
     "hanzi": "后天",
     "pinyin": "hòutiān",
     "category": "Kata Benda",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -1215,6 +1561,8 @@
     "hanzi": "护照",
     "pinyin": "hùzhào",
     "category": "Kata Benda",
+    "meaning": "paspor",
+    "id_meaning": "paspor",
     "en": "passport"
   },
   {
@@ -1222,6 +1570,8 @@
     "hanzi": "花园",
     "pinyin": "huāyuán",
     "category": "Kata Benda",
+    "meaning": "kebun",
+    "id_meaning": "kebun",
     "en": "garden"
   },
   {
@@ -1229,6 +1579,8 @@
     "hanzi": "画家",
     "pinyin": "huàjiā",
     "category": "Kata Benda",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -1236,6 +1588,8 @@
     "hanzi": "欢迎",
     "pinyin": "huānyíng",
     "category": "Kata Kerja",
+    "meaning": "menyambut",
+    "id_meaning": "menyambut",
     "en": "to welcome"
   },
   {
@@ -1243,6 +1597,8 @@
     "hanzi": "还",
     "pinyin": "huán",
     "category": "Kata Kerja",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -1250,6 +1606,8 @@
     "hanzi": "环境",
     "pinyin": "huánjìng",
     "category": "Kata Benda",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -1257,6 +1615,8 @@
     "hanzi": "换",
     "pinyin": "huàn",
     "category": "Kata Kerja",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -1264,6 +1624,8 @@
     "hanzi": "黄色",
     "pinyin": "huángsè",
     "category": "Kata Benda",
+    "meaning": "kuning",
+    "id_meaning": "kuning",
     "en": "yellow"
   },
   {
@@ -1271,6 +1633,8 @@
     "hanzi": "回答",
     "pinyin": "huídá",
     "category": "Kata Kerja",
+    "meaning": "menjawab",
+    "id_meaning": "menjawab",
     "en": "to answer"
   },
   {
@@ -1278,6 +1642,8 @@
     "hanzi": "会",
     "pinyin": "huì",
     "category": "Kata Benda",
+    "meaning": "bisa / akan / rapat",
+    "id_meaning": "bisa / akan / rapat",
     "en": "meeting"
   },
   {
@@ -1285,6 +1651,8 @@
     "hanzi": "会议",
     "pinyin": "huìyì",
     "category": "Kata Benda",
+    "meaning": "pertemuan",
+    "id_meaning": "pertemuan",
     "en": "meeting"
   },
   {
@@ -1292,6 +1660,8 @@
     "hanzi": "或",
     "pinyin": "huò",
     "category": "Kata Sambung / （adverb）",
+    "meaning": "atau; (mungkin, mungkin)",
+    "id_meaning": "atau; (mungkin, mungkin)",
     "en": "or; (perhaps, maybe)"
   },
   {
@@ -1299,6 +1669,8 @@
     "hanzi": "或者",
     "pinyin": "huòzhě",
     "category": "Kata Sambung",
+    "meaning": "atau",
+    "id_meaning": "atau",
     "en": "or"
   },
   {
@@ -1306,6 +1678,8 @@
     "hanzi": "鸡",
     "pinyin": "jī",
     "category": "Kata Benda",
+    "meaning": "ayam",
+    "id_meaning": "ayam",
     "en": "chicken"
   },
   {
@@ -1313,6 +1687,8 @@
     "hanzi": "几乎",
     "pinyin": "jīhū",
     "category": "Kata Keterangan",
+    "meaning": "hampir",
+    "id_meaning": "hampir",
     "en": "almost"
   },
   {
@@ -1320,6 +1696,8 @@
     "hanzi": "机会",
     "pinyin": "jīhuì",
     "category": "Kata Benda",
+    "meaning": "peluang",
+    "id_meaning": "peluang",
     "en": "opportunity"
   },
   {
@@ -1327,6 +1705,8 @@
     "hanzi": "极",
     "pinyin": "jí",
     "category": "Kata Keterangan",
+    "meaning": "sangat",
+    "id_meaning": "sangat",
     "en": "extremely"
   },
   {
@@ -1334,6 +1714,8 @@
     "hanzi": "急",
     "pinyin": "jí",
     "category": "Kata Sifat / Kata Kerja",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -1341,6 +1723,8 @@
     "hanzi": "记",
     "pinyin": "jì",
     "category": "Kata Kerja",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -1348,6 +1732,8 @@
     "hanzi": "季",
     "pinyin": "jì",
     "category": "Kata Benda",
+    "meaning": "musim",
+    "id_meaning": "musim",
     "en": "season"
   },
   {
@@ -1355,6 +1741,8 @@
     "hanzi": "季节",
     "pinyin": "jìjié",
     "category": "Kata Benda",
+    "meaning": "musim",
+    "id_meaning": "musim",
     "en": "season"
   },
   {
@@ -1362,6 +1750,8 @@
     "hanzi": "加",
     "pinyin": "jiā",
     "category": "Kata Kerja",
+    "meaning": "menambahkan",
+    "id_meaning": "menambahkan",
     "en": "to add"
   },
   {
@@ -1369,6 +1759,8 @@
     "hanzi": "假期",
     "pinyin": "jiàqī",
     "category": "Kata Benda",
+    "meaning": "liburan",
+    "id_meaning": "liburan",
     "en": "vacation"
   },
   {
@@ -1376,6 +1768,8 @@
     "hanzi": "坚持",
     "pinyin": "jiānchí",
     "category": "Kata Kerja",
+    "meaning": "bertahan",
+    "id_meaning": "bertahan",
     "en": "to persist"
   },
   {
@@ -1383,6 +1777,8 @@
     "hanzi": "检查",
     "pinyin": "jiǎnchá",
     "category": "Kata Kerja",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -1390,6 +1786,8 @@
     "hanzi": "简单",
     "pinyin": "jiǎndān",
     "category": "Kata Sifat",
+    "meaning": "sederhana",
+    "id_meaning": "sederhana",
     "en": "simple"
   },
   {
@@ -1397,6 +1795,8 @@
     "hanzi": "检票",
     "pinyin": "jiǎnpiào",
     "category": "Kata Kerja",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -1404,6 +1804,8 @@
     "hanzi": "健康",
     "pinyin": "jiànkāng",
     "category": "Kata Sifat",
+    "meaning": "sehat",
+    "id_meaning": "sehat",
     "en": "healthy"
   },
   {
@@ -1411,6 +1813,8 @@
     "hanzi": "见面",
     "pinyin": "jiànmiàn",
     "category": "Kata Kerja",
+    "meaning": "bertemu",
+    "id_meaning": "bertemu",
     "en": "to meet"
   },
   {
@@ -1418,6 +1822,8 @@
     "hanzi": "讲",
     "pinyin": "jiǎng",
     "category": "Kata Kerja",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -1425,6 +1831,8 @@
     "hanzi": "角",
     "pinyin": "jiǎo",
     "category": "Satuan",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -1432,6 +1840,8 @@
     "hanzi": "脚",
     "pinyin": "jiǎo",
     "category": "Kata Benda",
+    "meaning": "kaki",
+    "id_meaning": "kaki",
     "en": "foot"
   },
   {
@@ -1439,6 +1849,8 @@
     "hanzi": "接",
     "pinyin": "jiē",
     "category": "Kata Kerja",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -1446,6 +1858,8 @@
     "hanzi": "街",
     "pinyin": "jiē",
     "category": "Kata Benda",
+    "meaning": "jalan",
+    "id_meaning": "jalan",
     "en": "street"
   },
   {
@@ -1453,6 +1867,8 @@
     "hanzi": "节",
     "pinyin": "jié",
     "category": "Satuan / Kata Benda / （verb）",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -1460,6 +1876,8 @@
     "hanzi": "结婚",
     "pinyin": "jiéhūn",
     "category": "Kata Kerja",
+    "meaning": "menikah",
+    "id_meaning": "menikah",
     "en": "to marry"
   },
   {
@@ -1467,6 +1885,8 @@
     "hanzi": "节目",
     "pinyin": "jiémù",
     "category": "Kata Benda",
+    "meaning": "program",
+    "id_meaning": "program",
     "en": "program"
   },
   {
@@ -1474,6 +1894,8 @@
     "hanzi": "节日",
     "pinyin": "jiérì",
     "category": "Kata Benda",
+    "meaning": "festival",
+    "id_meaning": "festival",
     "en": "festival"
   },
   {
@@ -1481,6 +1903,8 @@
     "hanzi": "结束",
     "pinyin": "jiéshù",
     "category": "Kata Kerja",
+    "meaning": "mengakhiri",
+    "id_meaning": "mengakhiri",
     "en": "to end"
   },
   {
@@ -1488,6 +1912,8 @@
     "hanzi": "解决",
     "pinyin": "jiějué",
     "category": "Kata Kerja",
+    "meaning": "memecahkan",
+    "id_meaning": "memecahkan",
     "en": "to solve"
   },
   {
@@ -1495,6 +1921,8 @@
     "hanzi": "姐妹",
     "pinyin": "jiěmèi",
     "category": "Kata Benda",
+    "meaning": "saudari",
+    "id_meaning": "saudari",
     "en": "sister"
   },
   {
@@ -1502,6 +1930,8 @@
     "hanzi": "借",
     "pinyin": "jiè",
     "category": "Kata Kerja",
+    "meaning": "meminjam",
+    "id_meaning": "meminjam",
     "en": "to borrow"
   },
   {
@@ -1509,6 +1939,8 @@
     "hanzi": "斤",
     "pinyin": "jīn",
     "category": "Satuan",
+    "meaning": "tajam",
+    "id_meaning": "tajam",
     "en": "catty"
   },
   {
@@ -1516,6 +1948,8 @@
     "hanzi": "经过",
     "pinyin": "jīngguò",
     "category": "Kata Kerja / Kata Benda",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -1523,6 +1957,8 @@
     "hanzi": "经理",
     "pinyin": "jīnglǐ",
     "category": "Kata Benda",
+    "meaning": "manajer",
+    "id_meaning": "manajer",
     "en": "manager"
   },
   {
@@ -1530,6 +1966,8 @@
     "hanzi": "久",
     "pinyin": "jiǔ",
     "category": "Kata Sifat",
+    "meaning": "panjang",
+    "id_meaning": "panjang",
     "en": "long"
   },
   {
@@ -1537,6 +1975,8 @@
     "hanzi": "酒",
     "pinyin": "jiǔ",
     "category": "Kata Benda",
+    "meaning": "alkohol",
+    "id_meaning": "alkohol",
     "en": "alcohol"
   },
   {
@@ -1544,6 +1984,8 @@
     "hanzi": "旧",
     "pinyin": "jiù",
     "category": "Kata Sifat",
+    "meaning": "tua",
+    "id_meaning": "tua",
     "en": "old"
   },
   {
@@ -1551,6 +1993,8 @@
     "hanzi": "句",
     "pinyin": "jù",
     "category": "Satuan",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -1558,6 +2002,8 @@
     "hanzi": "句子",
     "pinyin": "jùzi",
     "category": "Kata Benda",
+    "meaning": "kalimat",
+    "id_meaning": "kalimat",
     "en": "sentence"
   },
   {
@@ -1565,6 +2011,8 @@
     "hanzi": "决定",
     "pinyin": "juédìng",
     "category": "Kata Kerja / Kata Benda",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -1572,6 +2020,8 @@
     "hanzi": "卡",
     "pinyin": "kǎ",
     "category": "Kata Benda",
+    "meaning": "kartu",
+    "id_meaning": "kartu",
     "en": "card"
   },
   {
@@ -1579,6 +2029,8 @@
     "hanzi": "开花",
     "pinyin": "kāihuā",
     "category": "Kata Kerja",
+    "meaning": "mekar",
+    "id_meaning": "mekar",
     "en": "to bloom"
   },
   {
@@ -1586,6 +2038,8 @@
     "hanzi": "开会",
     "pinyin": "kāihuì",
     "category": "Kata Kerja",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -1593,6 +2047,8 @@
     "hanzi": "开机",
     "pinyin": "kāijī",
     "category": "Kata Kerja",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -1600,6 +2056,8 @@
     "hanzi": "开心",
     "pinyin": "kāixīn",
     "category": "Kata Sifat",
+    "meaning": "senang",
+    "id_meaning": "senang",
     "en": "happy"
   },
   {
@@ -1607,6 +2065,8 @@
     "hanzi": "看来",
     "pinyin": "kànlái",
     "category": "Kata Kerja",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -1614,6 +2074,8 @@
     "hanzi": "可",
     "pinyin": "kě",
     "category": "Kata Sambung / （adverb）",
+    "meaning": "tetapi; (belum)",
+    "id_meaning": "tetapi; (belum)",
     "en": "but; (yet)"
   },
   {
@@ -1621,6 +2083,8 @@
     "hanzi": "渴",
     "pinyin": "kě",
     "category": "Kata Sifat",
+    "meaning": "haus",
+    "id_meaning": "haus",
     "en": "thirsty"
   },
   {
@@ -1628,6 +2092,8 @@
     "hanzi": "可爱",
     "pinyin": "kě’ài",
     "category": "Kata Sifat",
+    "meaning": "cantik",
+    "id_meaning": "cantik",
     "en": "lovely"
   },
   {
@@ -1635,6 +2101,8 @@
     "hanzi": "可是",
     "pinyin": "kěshì",
     "category": "Kata Sambung",
+    "meaning": "tetapi",
+    "id_meaning": "tetapi",
     "en": "but"
   },
   {
@@ -1642,6 +2110,8 @@
     "hanzi": "刻",
     "pinyin": "kè",
     "category": "Satuan / （verb）",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -1649,6 +2119,8 @@
     "hanzi": "课本",
     "pinyin": "kèběn",
     "category": "Kata Benda",
+    "meaning": "buku pelajaran",
+    "id_meaning": "buku pelajaran",
     "en": "textbook"
   },
   {
@@ -1656,6 +2128,8 @@
     "hanzi": "客人",
     "pinyin": "kèrén",
     "category": "Kata Benda",
+    "meaning": "tamu",
+    "id_meaning": "tamu",
     "en": "guest"
   },
   {
@@ -1663,6 +2137,8 @@
     "hanzi": "课文",
     "pinyin": "kèwén",
     "category": "Kata Benda",
+    "meaning": "teks",
+    "id_meaning": "teks",
     "en": "text"
   },
   {
@@ -1670,6 +2146,8 @@
     "hanzi": "空调",
     "pinyin": "kōngtiáo",
     "category": "Kata Benda",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -1677,6 +2155,8 @@
     "hanzi": "哭",
     "pinyin": "kū",
     "category": "Kata Kerja",
+    "meaning": "menangis",
+    "id_meaning": "menangis",
     "en": "to cry"
   },
   {
@@ -1684,6 +2164,8 @@
     "hanzi": "筷子",
     "pinyin": "kuàizi",
     "category": "Kata Benda",
+    "meaning": "sumpit",
+    "id_meaning": "sumpit",
     "en": "chopsticks"
   },
   {
@@ -1691,6 +2173,8 @@
     "hanzi": "矿泉水",
     "pinyin": "kuàngquánshuǐ",
     "category": "Kata Benda",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -1698,6 +2182,8 @@
     "hanzi": "来自",
     "pinyin": "láizì",
     "category": "Kata Kerja",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -1705,6 +2191,8 @@
     "hanzi": "蓝",
     "pinyin": "lán",
     "category": "Kata Sifat",
+    "meaning": "biru",
+    "id_meaning": "biru",
     "en": "blue"
   },
   {
@@ -1712,6 +2200,8 @@
     "hanzi": "老",
     "pinyin": "lǎo",
     "category": "Kata Sifat / Awalan / （adverb）",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -1719,6 +2209,8 @@
     "hanzi": "老人",
     "pinyin": "lǎorén",
     "category": "Kata Benda",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -1726,6 +2218,8 @@
     "hanzi": "离开",
     "pinyin": "líkāi",
     "category": "Kata Kerja",
+    "meaning": "pergi",
+    "id_meaning": "pergi",
     "en": "to leave"
   },
   {
@@ -1733,6 +2227,8 @@
     "hanzi": "礼物",
     "pinyin": "lǐwù",
     "category": "Kata Benda",
+    "meaning": "hadiah",
+    "id_meaning": "hadiah",
     "en": "gift"
   },
   {
@@ -1740,6 +2236,8 @@
     "hanzi": "历史",
     "pinyin": "lìshǐ",
     "category": "Kata Benda",
+    "meaning": "sejarah",
+    "id_meaning": "sejarah",
     "en": "history"
   },
   {
@@ -1747,6 +2245,8 @@
     "hanzi": "脸",
     "pinyin": "liǎn",
     "category": "Kata Benda",
+    "meaning": "menghadapi",
+    "id_meaning": "menghadapi",
     "en": "face"
   },
   {
@@ -1754,6 +2254,8 @@
     "hanzi": "练",
     "pinyin": "liàn",
     "category": "Kata Kerja",
+    "meaning": "berlatih",
+    "id_meaning": "berlatih",
     "en": "to practice"
   },
   {
@@ -1761,6 +2263,8 @@
     "hanzi": "练习",
     "pinyin": "liànxí",
     "category": "Kata Kerja / Kata Benda",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -1768,6 +2272,8 @@
     "hanzi": "凉快",
     "pinyin": "liángkuai",
     "category": "Kata Sifat",
+    "meaning": "dingin",
+    "id_meaning": "dingin",
     "en": "cool"
   },
   {
@@ -1775,6 +2281,8 @@
     "hanzi": "辆",
     "pinyin": "liàng",
     "category": "Satuan",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -1782,6 +2290,8 @@
     "hanzi": "聊",
     "pinyin": "liáo",
     "category": "Kata Kerja",
+    "meaning": "mengobrol",
+    "id_meaning": "mengobrol",
     "en": "to chat"
   },
   {
@@ -1789,6 +2299,8 @@
     "hanzi": "聊天儿",
     "pinyin": "liáotiānr",
     "category": "Kata Kerja",
+    "meaning": "mengobrol",
+    "id_meaning": "mengobrol",
     "en": "to chat"
   },
   {
@@ -1796,6 +2308,8 @@
     "hanzi": "了解",
     "pinyin": "liǎojiě",
     "category": "Kata Kerja",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -1803,6 +2317,8 @@
     "hanzi": "邻居",
     "pinyin": "línjū",
     "category": "Kata Benda",
+    "meaning": "tetangga",
+    "id_meaning": "tetangga",
     "en": "neighbor"
   },
   {
@@ -1810,6 +2326,8 @@
     "hanzi": "留学",
     "pinyin": "liúxué",
     "category": "Kata Kerja",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -1817,6 +2335,8 @@
     "hanzi": "留学生",
     "pinyin": "liúxuéshēng",
     "category": "Kata Benda",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -1824,6 +2344,8 @@
     "hanzi": "楼梯",
     "pinyin": "lóutī",
     "category": "Kata Benda",
+    "meaning": "tangga",
+    "id_meaning": "tangga",
     "en": "stairs"
   },
   {
@@ -1831,6 +2353,8 @@
     "hanzi": "路边",
     "pinyin": "lùbiān",
     "category": "Kata Benda",
+    "meaning": "pinggir jalan",
+    "id_meaning": "pinggir jalan",
     "en": "roadside"
   },
   {
@@ -1838,6 +2362,8 @@
     "hanzi": "路口",
     "pinyin": "lùkǒu",
     "category": "Kata Benda",
+    "meaning": "persimpangan",
+    "id_meaning": "persimpangan",
     "en": "intersection"
   },
   {
@@ -1845,6 +2371,8 @@
     "hanzi": "马",
     "pinyin": "mǎ",
     "category": "Kata Benda",
+    "meaning": "kuda",
+    "id_meaning": "kuda",
     "en": "horse"
   },
   {
@@ -1852,6 +2380,8 @@
     "hanzi": "马路",
     "pinyin": "mǎlù",
     "category": "Kata Benda",
+    "meaning": "jalan",
+    "id_meaning": "jalan",
     "en": "road"
   },
   {
@@ -1859,6 +2389,8 @@
     "hanzi": "马上",
     "pinyin": "mǎshàng",
     "category": "Kata Keterangan",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -1866,6 +2398,8 @@
     "hanzi": "满意",
     "pinyin": "mǎnyì",
     "category": "Kata Kerja",
+    "meaning": "puas",
+    "id_meaning": "puas",
     "en": "satisfied"
   },
   {
@@ -1873,6 +2407,8 @@
     "hanzi": "毛",
     "pinyin": "máo",
     "category": "Satuan / （noun）",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -1880,6 +2416,8 @@
     "hanzi": "米",
     "pinyin": "mǐ",
     "category": "Satuan",
+    "meaning": "meter",
+    "id_meaning": "meter",
     "en": "meter"
   },
   {
@@ -1887,6 +2425,8 @@
     "hanzi": "面前",
     "pinyin": "miànqián",
     "category": "Kata Benda",
+    "meaning": "di depan",
+    "id_meaning": "di depan",
     "en": "in front of"
   },
   {
@@ -1894,6 +2434,8 @@
     "hanzi": "明白",
     "pinyin": "míngbai",
     "category": "Kata Sifat / Kata Kerja",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -1901,6 +2443,8 @@
     "hanzi": "名单",
     "pinyin": "míngdān",
     "category": "Kata Benda",
+    "meaning": "daftar nama",
+    "id_meaning": "daftar nama",
     "en": "name list"
   },
   {
@@ -1908,6 +2452,8 @@
     "hanzi": "名人",
     "pinyin": "míngrén",
     "category": "Kata Benda",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -1915,6 +2461,8 @@
     "hanzi": "南",
     "pinyin": "nán",
     "category": "Kata Benda",
+    "meaning": "selatan",
+    "id_meaning": "selatan",
     "en": "south"
   },
   {
@@ -1922,6 +2470,8 @@
     "hanzi": "难",
     "pinyin": "nán",
     "category": "Kata Sifat / （verb）",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -1929,6 +2479,8 @@
     "hanzi": "南方",
     "pinyin": "nánfāng",
     "category": "Kata Benda",
+    "meaning": "selatan",
+    "id_meaning": "selatan",
     "en": "south"
   },
   {
@@ -1936,6 +2488,8 @@
     "hanzi": "难过",
     "pinyin": "nánguò",
     "category": "Kata Sifat",
+    "meaning": "sedih",
+    "id_meaning": "sedih",
     "en": "sad"
   },
   {
@@ -1943,6 +2497,8 @@
     "hanzi": "难看",
     "pinyin": "nánkàn",
     "category": "Kata Sifat",
+    "meaning": "jelek",
+    "id_meaning": "jelek",
     "en": "ugly"
   },
   {
@@ -1950,6 +2506,8 @@
     "hanzi": "男人",
     "pinyin": "nánrén",
     "category": "Kata Benda",
+    "meaning": "pria",
+    "id_meaning": "pria",
     "en": "man"
   },
   {
@@ -1957,6 +2515,8 @@
     "hanzi": "男生",
     "pinyin": "nánshēng",
     "category": "Kata Benda",
+    "meaning": "murid laki-laki",
+    "id_meaning": "murid laki-laki",
     "en": "boy student"
   },
   {
@@ -1964,6 +2524,8 @@
     "hanzi": "难题",
     "pinyin": "nántí",
     "category": "Kata Benda",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -1971,6 +2533,8 @@
     "hanzi": "难听",
     "pinyin": "nántīng",
     "category": "Kata Sifat",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -1978,6 +2542,8 @@
     "hanzi": "年级",
     "pinyin": "niánjí",
     "category": "Kata Benda",
+    "meaning": "nilai",
+    "id_meaning": "nilai",
     "en": "grade"
   },
   {
@@ -1985,6 +2551,8 @@
     "hanzi": "年轻",
     "pinyin": "niánqīng",
     "category": "Kata Sifat",
+    "meaning": "muda",
+    "id_meaning": "muda",
     "en": "young"
   },
   {
@@ -1992,6 +2560,8 @@
     "hanzi": "牛",
     "pinyin": "niú",
     "category": "Kata Benda / （adjective）",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -1999,6 +2569,8 @@
     "hanzi": "努力",
     "pinyin": "nǔlì",
     "category": "Kata Kerja / Kata Sifat",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -2006,6 +2578,8 @@
     "hanzi": "女人",
     "pinyin": "nǚrén",
     "category": "Kata Benda",
+    "meaning": "wanita",
+    "id_meaning": "wanita",
     "en": "woman"
   },
   {
@@ -2013,6 +2587,8 @@
     "hanzi": "女生",
     "pinyin": "nǚshēng",
     "category": "Kata Benda",
+    "meaning": "murid perempuan",
+    "id_meaning": "murid perempuan",
     "en": "girl student"
   },
   {
@@ -2020,6 +2596,8 @@
     "hanzi": "爬",
     "pinyin": "pá",
     "category": "Kata Kerja",
+    "meaning": "mendaki",
+    "id_meaning": "mendaki",
     "en": "to climb"
   },
   {
@@ -2027,6 +2605,8 @@
     "hanzi": "怕",
     "pinyin": "pà",
     "category": "Kata Kerja / （adverb）",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -2034,6 +2614,8 @@
     "hanzi": "拍照",
     "pinyin": "pāizhào",
     "category": "Kata Kerja",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -2041,6 +2623,8 @@
     "hanzi": "盘子",
     "pinyin": "pánzi",
     "category": "Kata Benda",
+    "meaning": "piring",
+    "id_meaning": "piring",
     "en": "plate"
   },
   {
@@ -2048,6 +2632,8 @@
     "hanzi": "胖",
     "pinyin": "pàng",
     "category": "Kata Sifat",
+    "meaning": "gemuk",
+    "id_meaning": "gemuk",
     "en": "fat"
   },
   {
@@ -2055,6 +2641,8 @@
     "hanzi": "啤酒",
     "pinyin": "píjiǔ",
     "category": "Kata Benda",
+    "meaning": "bir",
+    "id_meaning": "bir",
     "en": "beer"
   },
   {
@@ -2062,6 +2650,8 @@
     "hanzi": "平时",
     "pinyin": "píngshí",
     "category": "Kata Benda",
+    "meaning": "biasanya",
+    "id_meaning": "biasanya",
     "en": "usually"
   },
   {
@@ -2069,6 +2659,8 @@
     "hanzi": "瓶子",
     "pinyin": "píngzi",
     "category": "Kata Benda",
+    "meaning": "botol",
+    "id_meaning": "botol",
     "en": "bottle"
   },
   {
@@ -2076,6 +2668,8 @@
     "hanzi": "骑",
     "pinyin": "qí",
     "category": "Kata Kerja",
+    "meaning": "naik",
+    "id_meaning": "naik",
     "en": "to ride"
   },
   {
@@ -2083,6 +2677,8 @@
     "hanzi": "奇怪",
     "pinyin": "qíguài",
     "category": "Kata Sifat",
+    "meaning": "aneh",
+    "id_meaning": "aneh",
     "en": "strange"
   },
   {
@@ -2090,6 +2686,8 @@
     "hanzi": "其实",
     "pinyin": "qíshí",
     "category": "Kata Keterangan",
+    "meaning": "sebenarnya",
+    "id_meaning": "sebenarnya",
     "en": "actually"
   },
   {
@@ -2097,6 +2695,8 @@
     "hanzi": "其他",
     "pinyin": "qítā",
     "category": "Kata Ganti",
+    "meaning": "lainnya",
+    "id_meaning": "lainnya",
     "en": "other"
   },
   {
@@ -2104,6 +2704,8 @@
     "hanzi": "起",
     "pinyin": "qǐ",
     "category": "Kata Kerja / （classifier）",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -2111,6 +2713,8 @@
     "hanzi": "起飞",
     "pinyin": "qǐfēi",
     "category": "Kata Kerja",
+    "meaning": "lepas landas",
+    "id_meaning": "lepas landas",
     "en": "to take off"
   },
   {
@@ -2118,6 +2722,8 @@
     "hanzi": "汽车",
     "pinyin": "qìchē",
     "category": "Kata Benda",
+    "meaning": "mobil",
+    "id_meaning": "mobil",
     "en": "car"
   },
   {
@@ -2125,6 +2731,8 @@
     "hanzi": "铅笔",
     "pinyin": "qiānbǐ",
     "category": "Kata Benda",
+    "meaning": "pensil",
+    "id_meaning": "pensil",
     "en": "pencil"
   },
   {
@@ -2132,6 +2740,8 @@
     "hanzi": "前年",
     "pinyin": "qiánnián",
     "category": "Kata Benda",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -2139,6 +2749,8 @@
     "hanzi": "前天",
     "pinyin": "qiántiān",
     "category": "Kata Benda",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -2146,6 +2758,8 @@
     "hanzi": "清楚",
     "pinyin": "qīngchu",
     "category": "Kata Sifat / Kata Kerja",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -2153,6 +2767,8 @@
     "hanzi": "请假",
     "pinyin": "qǐngjià",
     "category": "Kata Kerja",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -2160,6 +2776,8 @@
     "hanzi": "请客",
     "pinyin": "qǐngkè",
     "category": "Kata Kerja",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -2167,6 +2785,8 @@
     "hanzi": "秋天",
     "pinyin": "qiūtiān",
     "category": "Kata Benda",
+    "meaning": "musim gugur",
+    "id_meaning": "musim gugur",
     "en": "autumn"
   },
   {
@@ -2174,6 +2794,8 @@
     "hanzi": "球场",
     "pinyin": "qiúchǎng",
     "category": "Kata Benda",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -2181,6 +2803,8 @@
     "hanzi": "裙子",
     "pinyin": "qúnzi",
     "category": "Kata Benda",
+    "meaning": "rok",
+    "id_meaning": "rok",
     "en": "skirt"
   },
   {
@@ -2188,6 +2812,8 @@
     "hanzi": "然后",
     "pinyin": "ránhòu",
     "category": "Kata Sambung",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -2195,6 +2821,8 @@
     "hanzi": "热情",
     "pinyin": "rèqíng",
     "category": "Kata Sifat",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -2202,6 +2830,8 @@
     "hanzi": "认得",
     "pinyin": "rènde",
     "category": "Kata Kerja",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -2209,6 +2839,8 @@
     "hanzi": "认为",
     "pinyin": "rènwéi",
     "category": "Kata Kerja",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -2216,6 +2848,8 @@
     "hanzi": "认真",
     "pinyin": "rènzhēn",
     "category": "Kata Sifat",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -2223,6 +2857,8 @@
     "hanzi": "容易",
     "pinyin": "róngyì",
     "category": "Kata Sifat",
+    "meaning": "mudah",
+    "id_meaning": "mudah",
     "en": "easy"
   },
   {
@@ -2230,6 +2866,8 @@
     "hanzi": "如果",
     "pinyin": "rúguǒ",
     "category": "Kata Sambung",
+    "meaning": "jika",
+    "id_meaning": "jika",
     "en": "if"
   },
   {
@@ -2237,6 +2875,8 @@
     "hanzi": "伞",
     "pinyin": "sǎn",
     "category": "Kata Benda",
+    "meaning": "payung",
+    "id_meaning": "payung",
     "en": "umbrella"
   },
   {
@@ -2244,6 +2884,8 @@
     "hanzi": "扫",
     "pinyin": "sǎo",
     "category": "Kata Kerja",
+    "meaning": "menyapu",
+    "id_meaning": "menyapu",
     "en": "to sweep"
   },
   {
@@ -2251,6 +2893,8 @@
     "hanzi": "沙发",
     "pinyin": "shāfā",
     "category": "Kata Benda",
+    "meaning": "sofa",
+    "id_meaning": "sofa",
     "en": "sofa"
   },
   {
@@ -2258,6 +2902,8 @@
     "hanzi": "山",
     "pinyin": "shān",
     "category": "Kata Benda",
+    "meaning": "gunung",
+    "id_meaning": "gunung",
     "en": "mountain"
   },
   {
@@ -2265,6 +2911,8 @@
     "hanzi": "上衣",
     "pinyin": "shàngyī",
     "category": "Kata Benda",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -2272,6 +2920,8 @@
     "hanzi": "勺子",
     "pinyin": "sháozi",
     "category": "Kata Benda",
+    "meaning": "sendok",
+    "id_meaning": "sendok",
     "en": "spoon"
   },
   {
@@ -2279,6 +2929,8 @@
     "hanzi": "身边",
     "pinyin": "shēnbiān",
     "category": "Kata Benda",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -2286,6 +2938,8 @@
     "hanzi": "身高",
     "pinyin": "shēngāo",
     "category": "Kata Benda",
+    "meaning": "tinggi",
+    "id_meaning": "tinggi",
     "en": "height"
   },
   {
@@ -2293,6 +2947,8 @@
     "hanzi": "声",
     "pinyin": "shēng",
     "category": "Kata Benda / Satuan",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -2300,6 +2956,8 @@
     "hanzi": "生活",
     "pinyin": "shēnghuó",
     "category": "Kata Benda / Kata Kerja",
+    "meaning": "kehidupan; untuk hidup",
+    "id_meaning": "kehidupan; untuk hidup",
     "en": "life; to live"
   },
   {
@@ -2307,6 +2965,8 @@
     "hanzi": "生气",
     "pinyin": "shēngqì",
     "category": "Kata Kerja",
+    "meaning": "marah",
+    "id_meaning": "marah",
     "en": "to get angry"
   },
   {
@@ -2314,6 +2974,8 @@
     "hanzi": "声音",
     "pinyin": "shēngyīn",
     "category": "Kata Benda",
+    "meaning": "suara",
+    "id_meaning": "suara",
     "en": "sound"
   },
   {
@@ -2321,6 +2983,8 @@
     "hanzi": "市",
     "pinyin": "shì",
     "category": "Kata Benda",
+    "meaning": "kota",
+    "id_meaning": "kota",
     "en": "city"
   },
   {
@@ -2328,6 +2992,8 @@
     "hanzi": "试",
     "pinyin": "shì",
     "category": "Kata Kerja",
+    "meaning": "mencoba",
+    "id_meaning": "mencoba",
     "en": "to try"
   },
   {
@@ -2335,6 +3001,8 @@
     "hanzi": "室",
     "pinyin": "shì",
     "category": "Kata Benda",
+    "meaning": "ruang",
+    "id_meaning": "ruang",
     "en": "room"
   },
   {
@@ -2342,6 +3010,8 @@
     "hanzi": "世界",
     "pinyin": "shìjiè",
     "category": "Kata Benda",
+    "meaning": "dunia",
+    "id_meaning": "dunia",
     "en": "world"
   },
   {
@@ -2349,6 +3019,8 @@
     "hanzi": "收",
     "pinyin": "shōu",
     "category": "Kata Kerja",
+    "meaning": "menerima",
+    "id_meaning": "menerima",
     "en": "to receive"
   },
   {
@@ -2356,6 +3028,8 @@
     "hanzi": "收到",
     "pinyin": "shōudào",
     "category": "Kata Kerja",
+    "meaning": "menerima",
+    "id_meaning": "menerima",
     "en": "to receive"
   },
   {
@@ -2363,6 +3037,8 @@
     "hanzi": "受",
     "pinyin": "shòu",
     "category": "Kata Kerja",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -2370,6 +3046,8 @@
     "hanzi": "瘦",
     "pinyin": "shòu",
     "category": "Kata Sifat",
+    "meaning": "tipis, langsing",
+    "id_meaning": "tipis, langsing",
     "en": "thin, slim"
   },
   {
@@ -2377,6 +3055,8 @@
     "hanzi": "受到",
     "pinyin": "shòudào",
     "category": "Kata Kerja",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -2384,6 +3064,8 @@
     "hanzi": "叔叔",
     "pinyin": "shūshu",
     "category": "Kata Benda",
+    "meaning": "paman",
+    "id_meaning": "paman",
     "en": "uncle"
   },
   {
@@ -2391,6 +3073,8 @@
     "hanzi": "树",
     "pinyin": "shù",
     "category": "Kata Benda",
+    "meaning": "pohon",
+    "id_meaning": "pohon",
     "en": "tree"
   },
   {
@@ -2398,6 +3082,8 @@
     "hanzi": "数学",
     "pinyin": "shùxué",
     "category": "Kata Benda",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -2405,6 +3091,8 @@
     "hanzi": "刷",
     "pinyin": "shuā",
     "category": "Kata Kerja",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -2412,6 +3100,8 @@
     "hanzi": "双",
     "pinyin": "shuāng",
     "category": "Satuan",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -2419,6 +3109,8 @@
     "hanzi": "水平",
     "pinyin": "shuǐpíng",
     "category": "Kata Benda",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -2426,6 +3118,8 @@
     "hanzi": "司机",
     "pinyin": "sījī",
     "category": "Kata Benda",
+    "meaning": "pengemudi",
+    "id_meaning": "pengemudi",
     "en": "driver"
   },
   {
@@ -2433,6 +3127,8 @@
     "hanzi": "四季",
     "pinyin": "sìjì",
     "category": "Kata Benda",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -2440,6 +3136,8 @@
     "hanzi": "太阳",
     "pinyin": "tàiyáng",
     "category": "Kata Benda",
+    "meaning": "matahari",
+    "id_meaning": "matahari",
     "en": "sun"
   },
   {
@@ -2447,6 +3145,8 @@
     "hanzi": "糖",
     "pinyin": "táng",
     "category": "Kata Benda",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -2454,6 +3154,8 @@
     "hanzi": "特别",
     "pinyin": "tèbié",
     "category": "Kata Sifat / Kata Keterangan",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -2461,6 +3163,8 @@
     "hanzi": "提高",
     "pinyin": "tígāo",
     "category": "Kata Kerja",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -2468,6 +3172,8 @@
     "hanzi": "体育",
     "pinyin": "tǐyù",
     "category": "Kata Benda",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -2475,6 +3181,8 @@
     "hanzi": "体育馆",
     "pinyin": "tǐyùguǎn",
     "category": "Kata Benda",
+    "meaning": "ruang olahraga",
+    "id_meaning": "ruang olahraga",
     "en": "gymnasium"
   },
   {
@@ -2482,6 +3190,8 @@
     "hanzi": "甜",
     "pinyin": "tián",
     "category": "Kata Sifat",
+    "meaning": "manis",
+    "id_meaning": "manis",
     "en": "sweet"
   },
   {
@@ -2489,6 +3199,8 @@
     "hanzi": "跳",
     "pinyin": "tiào",
     "category": "Kata Kerja",
+    "meaning": "melompat",
+    "id_meaning": "melompat",
     "en": "to jump"
   },
   {
@@ -2496,6 +3208,8 @@
     "hanzi": "听说",
     "pinyin": "tīngshuō",
     "category": "Kata Kerja",
+    "meaning": "mendengar berkata",
+    "id_meaning": "mendengar berkata",
     "en": "to hear said"
   },
   {
@@ -2503,6 +3217,8 @@
     "hanzi": "挺",
     "pinyin": "tǐng",
     "category": "Kata Keterangan / （verb）",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -2510,6 +3226,8 @@
     "hanzi": "同事",
     "pinyin": "tóngshì",
     "category": "Kata Benda",
+    "meaning": "kolega",
+    "id_meaning": "kolega",
     "en": "colleague"
   },
   {
@@ -2517,6 +3235,8 @@
     "hanzi": "同意",
     "pinyin": "tóngyì",
     "category": "Kata Kerja",
+    "meaning": "setuju",
+    "id_meaning": "setuju",
     "en": "to agree"
   },
   {
@@ -2524,6 +3244,8 @@
     "hanzi": "头发",
     "pinyin": "tóufa",
     "category": "Kata Benda",
+    "meaning": "rambut",
+    "id_meaning": "rambut",
     "en": "hair"
   },
   {
@@ -2531,6 +3253,8 @@
     "hanzi": "突然",
     "pinyin": "tūrán",
     "category": "Kata Sifat",
+    "meaning": "tiba-tiba",
+    "id_meaning": "tiba-tiba",
     "en": "sudden"
   },
   {
@@ -2538,6 +3262,8 @@
     "hanzi": "图书馆",
     "pinyin": "túshūguǎn",
     "category": "Kata Benda",
+    "meaning": "perpustakaan",
+    "id_meaning": "perpustakaan",
     "en": "library"
   },
   {
@@ -2545,6 +3271,8 @@
     "hanzi": "腿",
     "pinyin": "tuǐ",
     "category": "Kata Benda",
+    "meaning": "kaki",
+    "id_meaning": "kaki",
     "en": "leg"
   },
   {
@@ -2552,6 +3280,8 @@
     "hanzi": "外地",
     "pinyin": "wàidì",
     "category": "Kata Benda",
+    "meaning": "tempat lain",
+    "id_meaning": "tempat lain",
     "en": "other place"
   },
   {
@@ -2559,6 +3289,8 @@
     "hanzi": "外卖",
     "pinyin": "wàimài",
     "category": "Kata Kerja / Kata Benda",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -2566,6 +3298,8 @@
     "hanzi": "外语",
     "pinyin": "wàiyǔ",
     "category": "Kata Benda",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -2573,6 +3307,8 @@
     "hanzi": "完成",
     "pinyin": "wánchéng",
     "category": "Kata Kerja",
+    "meaning": "menyelesaikan",
+    "id_meaning": "menyelesaikan",
     "en": "to complete"
   },
   {
@@ -2580,6 +3316,8 @@
     "hanzi": "碗",
     "pinyin": "wǎn",
     "category": "Kata Benda",
+    "meaning": "mangkuk",
+    "id_meaning": "mangkuk",
     "en": "bowl"
   },
   {
@@ -2587,6 +3325,8 @@
     "hanzi": "晚点",
     "pinyin": "wǎndiǎn",
     "category": "Kata Kerja",
+    "meaning": "terlambat",
+    "id_meaning": "terlambat",
     "en": "to be late"
   },
   {
@@ -2594,6 +3334,8 @@
     "hanzi": "晚会",
     "pinyin": "wǎnhuì",
     "category": "Kata Benda",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -2601,6 +3343,8 @@
     "hanzi": "网球",
     "pinyin": "wǎngqiú",
     "category": "Kata Benda",
+    "meaning": "tenis",
+    "id_meaning": "tenis",
     "en": "tennis"
   },
   {
@@ -2608,6 +3352,8 @@
     "hanzi": "网站",
     "pinyin": "wǎngzhàn",
     "category": "Kata Benda",
+    "meaning": "situs web",
+    "id_meaning": "situs web",
     "en": "website"
   },
   {
@@ -2615,6 +3361,8 @@
     "hanzi": "忘记",
     "pinyin": "wàngjì",
     "category": "Kata Kerja",
+    "meaning": "melupakan",
+    "id_meaning": "melupakan",
     "en": "to forget"
   },
   {
@@ -2622,6 +3370,8 @@
     "hanzi": "为",
     "pinyin": "wèi",
     "category": "Kata Depan",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -2629,6 +3379,8 @@
     "hanzi": "为了",
     "pinyin": "wèile",
     "category": "Kata Depan",
+    "meaning": "untuk",
+    "id_meaning": "untuk",
     "en": "in order to"
   },
   {
@@ -2636,6 +3388,8 @@
     "hanzi": "卫生间",
     "pinyin": "wèishēngjiān",
     "category": "Kata Benda",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -2643,6 +3397,8 @@
     "hanzi": "文化",
     "pinyin": "wénhuà",
     "category": "Kata Benda",
+    "meaning": "budaya",
+    "id_meaning": "budaya",
     "en": "culture"
   },
   {
@@ -2650,6 +3406,8 @@
     "hanzi": "屋子",
     "pinyin": "wūzi",
     "category": "Kata Benda",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -2657,6 +3415,8 @@
     "hanzi": "西",
     "pinyin": "xī",
     "category": "Kata Benda",
+    "meaning": "barat",
+    "id_meaning": "barat",
     "en": "west"
   },
   {
@@ -2664,6 +3424,8 @@
     "hanzi": "西北",
     "pinyin": "xīběi",
     "category": "Kata Benda",
+    "meaning": "barat laut",
+    "id_meaning": "barat laut",
     "en": "northwest"
   },
   {
@@ -2671,6 +3433,8 @@
     "hanzi": "西方",
     "pinyin": "xīfāng",
     "category": "Kata Benda",
+    "meaning": "barat",
+    "id_meaning": "barat",
     "en": "west"
   },
   {
@@ -2678,6 +3442,8 @@
     "hanzi": "西瓜",
     "pinyin": "xīguā",
     "category": "Kata Benda",
+    "meaning": "semangka",
+    "id_meaning": "semangka",
     "en": "watermelon"
   },
   {
@@ -2685,6 +3451,8 @@
     "hanzi": "西南",
     "pinyin": "xīnán",
     "category": "Kata Benda",
+    "meaning": "barat daya",
+    "id_meaning": "barat daya",
     "en": "southwest"
   },
   {
@@ -2692,6 +3460,8 @@
     "hanzi": "习惯",
     "pinyin": "xíguàn",
     "category": "Kata Kerja / Kata Benda",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -2699,6 +3469,8 @@
     "hanzi": "喜爱",
     "pinyin": "xǐ’ài",
     "category": "Kata Kerja",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -2706,6 +3478,8 @@
     "hanzi": "洗衣机",
     "pinyin": "xǐyījī",
     "category": "Kata Benda",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -2713,6 +3487,8 @@
     "hanzi": "洗澡",
     "pinyin": "xǐzǎo",
     "category": "Kata Kerja",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -2720,6 +3496,8 @@
     "hanzi": "夏天",
     "pinyin": "xiàtiān",
     "category": "Kata Benda",
+    "meaning": "musim panas",
+    "id_meaning": "musim panas",
     "en": "summer"
   },
   {
@@ -2727,6 +3505,8 @@
     "hanzi": "先",
     "pinyin": "xiān",
     "category": "Kata Keterangan",
+    "meaning": "pertama, sebelumnya",
+    "id_meaning": "pertama, sebelumnya",
     "en": "first, before"
   },
   {
@@ -2734,6 +3514,8 @@
     "hanzi": "香蕉",
     "pinyin": "xiāngjiāo",
     "category": "Kata Benda",
+    "meaning": "pisang",
+    "id_meaning": "pisang",
     "en": "banana"
   },
   {
@@ -2741,6 +3523,8 @@
     "hanzi": "相信",
     "pinyin": "xiāngxìn",
     "category": "Kata Kerja",
+    "meaning": "percaya",
+    "id_meaning": "percaya",
     "en": "to believe"
   },
   {
@@ -2748,6 +3532,8 @@
     "hanzi": "箱子",
     "pinyin": "xiāngzi",
     "category": "Kata Benda",
+    "meaning": "kotak, kasing",
+    "id_meaning": "kotak, kasing",
     "en": "box, case"
   },
   {
@@ -2755,6 +3541,8 @@
     "hanzi": "向",
     "pinyin": "xiàng",
     "category": "Kata Kerja / Kata Depan",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -2762,6 +3550,8 @@
     "hanzi": "像",
     "pinyin": "xiàng",
     "category": "Kata Kerja / （adverb） / （noun）",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -2769,6 +3559,8 @@
     "hanzi": "相机",
     "pinyin": "xiàngjī",
     "category": "Kata Benda",
+    "meaning": "kamera",
+    "id_meaning": "kamera",
     "en": "camera"
   },
   {
@@ -2776,6 +3568,8 @@
     "hanzi": "小区",
     "pinyin": "xiǎoqū",
     "category": "Kata Benda",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -2783,6 +3577,8 @@
     "hanzi": "小心",
     "pinyin": "xiǎoxīn",
     "category": "Kata Kerja / Kata Sifat",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -2790,6 +3586,8 @@
     "hanzi": "校园",
     "pinyin": "xiàoyuán",
     "category": "Kata Benda",
+    "meaning": "kampus",
+    "id_meaning": "kampus",
     "en": "campus"
   },
   {
@@ -2797,6 +3595,8 @@
     "hanzi": "校长",
     "pinyin": "xiàozhǎng",
     "category": "Kata Benda",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -2804,6 +3604,8 @@
     "hanzi": "鞋",
     "pinyin": "xié",
     "category": "Kata Benda",
+    "meaning": "sepatu",
+    "id_meaning": "sepatu",
     "en": "shoe"
   },
   {
@@ -2811,6 +3613,8 @@
     "hanzi": "心里",
     "pinyin": "xīnlǐ",
     "category": "Kata Benda",
+    "meaning": "hati, pikiran",
+    "id_meaning": "hati, pikiran",
     "en": "heart, mind"
   },
   {
@@ -2818,6 +3622,8 @@
     "hanzi": "新年",
     "pinyin": "xīnnián",
     "category": "Kata Benda",
+    "meaning": "tahun Baru",
+    "id_meaning": "tahun Baru",
     "en": "New Year"
   },
   {
@@ -2825,6 +3631,8 @@
     "hanzi": "新闻",
     "pinyin": "xīnwén",
     "category": "Kata Benda",
+    "meaning": "berita",
+    "id_meaning": "berita",
     "en": "news"
   },
   {
@@ -2832,6 +3640,8 @@
     "hanzi": "新鲜",
     "pinyin": "xīnxiān",
     "category": "Kata Sifat",
+    "meaning": "segar",
+    "id_meaning": "segar",
     "en": "fresh"
   },
   {
@@ -2839,6 +3649,8 @@
     "hanzi": "信",
     "pinyin": "xìn",
     "category": "Kata Kerja / Kata Benda",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -2846,6 +3658,8 @@
     "hanzi": "信用卡",
     "pinyin": "xìnyòngkǎ",
     "category": "Kata Benda",
+    "meaning": "kartu kredit",
+    "id_meaning": "kartu kredit",
     "en": "credit card"
   },
   {
@@ -2853,6 +3667,8 @@
     "hanzi": "行",
     "pinyin": "xíng",
     "category": "Kata Kerja / Kata Sifat",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -2860,6 +3676,8 @@
     "hanzi": "行李",
     "pinyin": "xíngli",
     "category": "Kata Benda",
+    "meaning": "bagasi",
+    "id_meaning": "bagasi",
     "en": "luggage"
   },
   {
@@ -2867,6 +3685,8 @@
     "hanzi": "兴趣",
     "pinyin": "xìngqù",
     "category": "Kata Benda",
+    "meaning": "minat",
+    "id_meaning": "minat",
     "en": "interest"
   },
   {
@@ -2874,6 +3694,8 @@
     "hanzi": "休假",
     "pinyin": "xiūjià",
     "category": "Kata Kerja",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -2881,6 +3703,8 @@
     "hanzi": "需要",
     "pinyin": "xūyào",
     "category": "Kata Kerja / Kata Benda",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -2888,6 +3712,8 @@
     "hanzi": "选",
     "pinyin": "xuǎn",
     "category": "Kata Kerja",
+    "meaning": "memilih",
+    "id_meaning": "memilih",
     "en": "to choose"
   },
   {
@@ -2895,6 +3721,8 @@
     "hanzi": "选择",
     "pinyin": "xuǎnzé",
     "category": "Kata Kerja",
+    "meaning": "memilih",
+    "id_meaning": "memilih",
     "en": "to choose"
   },
   {
@@ -2902,6 +3730,8 @@
     "hanzi": "学期",
     "pinyin": "xuéqī",
     "category": "Kata Benda",
+    "meaning": "semester",
+    "id_meaning": "semester",
     "en": "semester"
   },
   {
@@ -2909,6 +3739,8 @@
     "hanzi": "牙",
     "pinyin": "yá",
     "category": "Kata Benda",
+    "meaning": "gigi",
+    "id_meaning": "gigi",
     "en": "tooth"
   },
   {
@@ -2916,6 +3748,8 @@
     "hanzi": "牙刷",
     "pinyin": "yáshuā",
     "category": "Kata Benda",
+    "meaning": "sikat gigi",
+    "id_meaning": "sikat gigi",
     "en": "toothbrush"
   },
   {
@@ -2923,6 +3757,8 @@
     "hanzi": "羊",
     "pinyin": "yáng",
     "category": "Kata Benda",
+    "meaning": "domba",
+    "id_meaning": "domba",
     "en": "sheep"
   },
   {
@@ -2930,6 +3766,8 @@
     "hanzi": "养",
     "pinyin": "yǎng",
     "category": "Kata Kerja",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -2937,6 +3775,8 @@
     "hanzi": "要求",
     "pinyin": "yāoqiú",
     "category": "Kata Kerja / Kata Benda",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -2944,6 +3784,8 @@
     "hanzi": "页",
     "pinyin": "yè",
     "category": "Satuan",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -2951,6 +3793,8 @@
     "hanzi": "一定",
     "pinyin": "yídìng",
     "category": "Kata Sifat / Kata Keterangan",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -2958,6 +3802,8 @@
     "hanzi": "一共",
     "pinyin": "yígòng",
     "category": "Kata Keterangan",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -2965,6 +3811,8 @@
     "hanzi": "一块儿",
     "pinyin": "yíkuàir",
     "category": "Kata Benda / Kata Keterangan",
+    "meaning": "tempat yang sama; bersama",
+    "id_meaning": "tempat yang sama; bersama",
     "en": "the same place; together"
   },
   {
@@ -2972,6 +3820,8 @@
     "hanzi": "一样",
     "pinyin": "yíyàng",
     "category": "Kata Sifat",
+    "meaning": "sama",
+    "id_meaning": "sama",
     "en": "same"
   },
   {
@@ -2979,6 +3829,8 @@
     "hanzi": "以后",
     "pinyin": "yǐhòu",
     "category": "Kata Benda",
+    "meaning": "nanti, setelahnya",
+    "id_meaning": "nanti, setelahnya",
     "en": "later, after"
   },
   {
@@ -2986,6 +3838,8 @@
     "hanzi": "以前",
     "pinyin": "yǐqián",
     "category": "Kata Benda",
+    "meaning": "sebelum",
+    "id_meaning": "sebelum",
     "en": "before"
   },
   {
@@ -2993,6 +3847,8 @@
     "hanzi": "以上",
     "pinyin": "yǐshàng",
     "category": "Kata Benda",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -3000,6 +3856,8 @@
     "hanzi": "以外",
     "pinyin": "yǐwài",
     "category": "Kata Benda",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -3007,6 +3865,8 @@
     "hanzi": "以为",
     "pinyin": "yǐwéi",
     "category": "Kata Kerja",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -3014,6 +3874,8 @@
     "hanzi": "以下",
     "pinyin": "yǐxià",
     "category": "Kata Benda",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -3021,6 +3883,8 @@
     "hanzi": "一般",
     "pinyin": "yìbān",
     "category": "Kata Sifat",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -3028,6 +3892,8 @@
     "hanzi": "一边",
     "pinyin": "yìbiān",
     "category": "Kata Keterangan",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -3035,6 +3901,8 @@
     "hanzi": "一直",
     "pinyin": "yìzhí",
     "category": "Kata Keterangan",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -3042,6 +3910,8 @@
     "hanzi": "音乐",
     "pinyin": "yīnyuè",
     "category": "Kata Benda",
+    "meaning": "musik",
+    "id_meaning": "musik",
     "en": "music"
   },
   {
@@ -3049,6 +3919,8 @@
     "hanzi": "银行",
     "pinyin": "yínháng",
     "category": "Kata Benda",
+    "meaning": "bank",
+    "id_meaning": "bank",
     "en": "bank"
   },
   {
@@ -3056,6 +3928,8 @@
     "hanzi": "银行卡",
     "pinyin": "yínhángkǎ",
     "category": "Kata Benda",
+    "meaning": "kartu bank",
+    "id_meaning": "kartu bank",
     "en": "bank card"
   },
   {
@@ -3063,6 +3937,8 @@
     "hanzi": "饮料",
     "pinyin": "yǐnliào",
     "category": "Kata Benda",
+    "meaning": "minuman",
+    "id_meaning": "minuman",
     "en": "beverage"
   },
   {
@@ -3070,6 +3946,8 @@
     "hanzi": "应该",
     "pinyin": "yīnggāi",
     "category": "Kata Kerja",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -3077,6 +3955,8 @@
     "hanzi": "影响",
     "pinyin": "yǐngxiǎng",
     "category": "Kata Kerja / Kata Benda",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -3084,6 +3964,8 @@
     "hanzi": "用",
     "pinyin": "yòng",
     "category": "Kata Kerja",
+    "meaning": "digunakan",
+    "id_meaning": "digunakan",
     "en": "to use"
   },
   {
@@ -3091,6 +3973,8 @@
     "hanzi": "邮件",
     "pinyin": "yóujiàn",
     "category": "Kata Benda",
+    "meaning": "surat",
+    "id_meaning": "surat",
     "en": "mail"
   },
   {
@@ -3098,6 +3982,8 @@
     "hanzi": "游客",
     "pinyin": "yóukè",
     "category": "Kata Benda",
+    "meaning": "turis",
+    "id_meaning": "turis",
     "en": "tourist"
   },
   {
@@ -3105,6 +3991,8 @@
     "hanzi": "游戏",
     "pinyin": "yóuxì",
     "category": "Kata Benda",
+    "meaning": "permainan",
+    "id_meaning": "permainan",
     "en": "game"
   },
   {
@@ -3112,6 +4000,8 @@
     "hanzi": "邮箱",
     "pinyin": "yóuxiāng",
     "category": "Kata Benda",
+    "meaning": "kotak surat",
+    "id_meaning": "kotak surat",
     "en": "mailbox"
   },
   {
@@ -3119,6 +4009,8 @@
     "hanzi": "有关",
     "pinyin": "yǒuguān",
     "category": "Kata Kerja / Kata Depan",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -3126,6 +4018,8 @@
     "hanzi": "有名",
     "pinyin": "yǒumíng",
     "category": "Kata Sifat",
+    "meaning": "terkenal",
+    "id_meaning": "terkenal",
     "en": "famous"
   },
   {
@@ -3133,6 +4027,8 @@
     "hanzi": "有用",
     "pinyin": "yǒuyòng",
     "category": "Kata Sifat",
+    "meaning": "berguna",
+    "id_meaning": "berguna",
     "en": "useful"
   },
   {
@@ -3140,6 +4036,8 @@
     "hanzi": "又",
     "pinyin": "yòu",
     "category": "Kata Keterangan",
+    "meaning": "lagi, juga",
+    "id_meaning": "lagi, juga",
     "en": "again, also"
   },
   {
@@ -3147,6 +4045,8 @@
     "hanzi": "羽毛球",
     "pinyin": "yǔmáoqiú",
     "category": "Kata Benda",
+    "meaning": "bulutangkis",
+    "id_meaning": "bulutangkis",
     "en": "badminton"
   },
   {
@@ -3154,6 +4054,8 @@
     "hanzi": "语言",
     "pinyin": "yǔyán",
     "category": "Kata Benda",
+    "meaning": "bahasa",
+    "id_meaning": "bahasa",
     "en": "language"
   },
   {
@@ -3161,6 +4063,8 @@
     "hanzi": "雨衣",
     "pinyin": "yǔyī",
     "category": "Kata Benda",
+    "meaning": "jas hujan",
+    "id_meaning": "jas hujan",
     "en": "raincoat"
   },
   {
@@ -3168,6 +4072,8 @@
     "hanzi": "遇到",
     "pinyin": "yùdào",
     "category": "Kata Kerja",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -3175,6 +4081,8 @@
     "hanzi": "遇见",
     "pinyin": "yùjiàn",
     "category": "Kata Kerja",
+    "meaning": "bertemu",
+    "id_meaning": "bertemu",
     "en": "to meet"
   },
   {
@@ -3182,6 +4090,8 @@
     "hanzi": "园",
     "pinyin": "yuán",
     "category": "Kata Benda",
+    "meaning": "kebun",
+    "id_meaning": "kebun",
     "en": "garden"
   },
   {
@@ -3189,6 +4099,8 @@
     "hanzi": "员",
     "pinyin": "yuán",
     "category": "Akhiran",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -3196,6 +4108,8 @@
     "hanzi": "愿意",
     "pinyin": "yuànyì",
     "category": "Kata Kerja",
+    "meaning": "bersedia",
+    "id_meaning": "bersedia",
     "en": "willing"
   },
   {
@@ -3203,6 +4117,8 @@
     "hanzi": "越",
     "pinyin": "yuè",
     "category": "Kata Keterangan",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -3210,6 +4126,8 @@
     "hanzi": "月亮",
     "pinyin": "yuèliang",
     "category": "Kata Benda",
+    "meaning": "bulan",
+    "id_meaning": "bulan",
     "en": "moon"
   },
   {
@@ -3217,6 +4135,8 @@
     "hanzi": "运动会",
     "pinyin": "yùndònghuì",
     "category": "Kata Benda",
+    "meaning": "pertemuan olahraga",
+    "id_meaning": "pertemuan olahraga",
     "en": "sports meet"
   },
   {
@@ -3224,6 +4144,8 @@
     "hanzi": "运动员",
     "pinyin": "yùndòngyuán",
     "category": "Kata Benda",
+    "meaning": "atlet",
+    "id_meaning": "atlet",
     "en": "athlete"
   },
   {
@@ -3231,6 +4153,8 @@
     "hanzi": "咱们",
     "pinyin": "zánmen",
     "category": "Kata Ganti",
+    "meaning": "kami",
+    "id_meaning": "kami",
     "en": "we"
   },
   {
@@ -3238,6 +4162,8 @@
     "hanzi": "脏",
     "pinyin": "zāng",
     "category": "Kata Sifat",
+    "meaning": "kotor",
+    "id_meaning": "kotor",
     "en": "dirty"
   },
   {
@@ -3245,6 +4171,8 @@
     "hanzi": "怎么办",
     "pinyin": "zěnme bàn",
     "category": "Kosakata",
+    "meaning": "apa yang harus dilakukan",
+    "id_meaning": "apa yang harus dilakukan",
     "en": "what to do"
   },
   {
@@ -3252,6 +4180,8 @@
     "hanzi": "怎样",
     "pinyin": "zěnyàng",
     "category": "Kata Ganti",
+    "meaning": "bagaimana",
+    "id_meaning": "bagaimana",
     "en": "how"
   },
   {
@@ -3259,6 +4189,8 @@
     "hanzi": "站",
     "pinyin": "zhàn",
     "category": "Kata Kerja",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -3266,6 +4198,8 @@
     "hanzi": "张",
     "pinyin": "zhāng",
     "category": "Kata Kerja / Satuan",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -3273,6 +4207,8 @@
     "hanzi": "长",
     "pinyin": "zhǎng",
     "category": "Kata Kerja / Akhiran",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -3280,6 +4216,8 @@
     "hanzi": "着急",
     "pinyin": "zháojí",
     "category": "Kata Sifat",
+    "meaning": "cemas",
+    "id_meaning": "cemas",
     "en": "anxious"
   },
   {
@@ -3287,6 +4225,8 @@
     "hanzi": "照",
     "pinyin": "zhào",
     "category": "Kata Kerja",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -3294,6 +4234,8 @@
     "hanzi": "照顾",
     "pinyin": "zhàogù",
     "category": "Kata Kerja",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -3301,6 +4243,8 @@
     "hanzi": "照片",
     "pinyin": "zhàopiàn",
     "category": "Kata Benda",
+    "meaning": "foto",
+    "id_meaning": "foto",
     "en": "photo"
   },
   {
@@ -3308,6 +4252,8 @@
     "hanzi": "照相",
     "pinyin": "zhàoxiàng",
     "category": "Kata Kerja",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -3315,6 +4261,8 @@
     "hanzi": "直到",
     "pinyin": "zhídào",
     "category": "Kata Kerja",
+    "meaning": "sampai",
+    "id_meaning": "sampai",
     "en": "until"
   },
   {
@@ -3322,6 +4270,8 @@
     "hanzi": "只",
     "pinyin": "zhǐ",
     "category": "Kata Keterangan",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -3329,6 +4279,8 @@
     "hanzi": "纸",
     "pinyin": "zhǐ",
     "category": "Kata Benda",
+    "meaning": "kertas",
+    "id_meaning": "kertas",
     "en": "paper"
   },
   {
@@ -3336,6 +4288,8 @@
     "hanzi": "只能",
     "pinyin": "zhǐ néng",
     "category": "Kosakata",
+    "meaning": "hanya bisa",
+    "id_meaning": "hanya bisa",
     "en": "can only"
   },
   {
@@ -3343,6 +4297,8 @@
     "hanzi": "只是",
     "pinyin": "zhǐshì",
     "category": "Kata Keterangan / Kata Sambung",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -3350,6 +4306,8 @@
     "hanzi": "只要",
     "pinyin": "zhǐyào",
     "category": "Kata Sambung",
+    "meaning": "selama",
+    "id_meaning": "selama",
     "en": "as long as"
   },
   {
@@ -3357,6 +4315,8 @@
     "hanzi": "只有",
     "pinyin": "zhǐyǒu",
     "category": "Kata Sambung",
+    "meaning": "hanya jika",
+    "id_meaning": "hanya jika",
     "en": "only if"
   },
   {
@@ -3364,6 +4324,8 @@
     "hanzi": "中",
     "pinyin": "zhōng",
     "category": "Kata Benda",
+    "meaning": "tengah",
+    "id_meaning": "tengah",
     "en": "middle"
   },
   {
@@ -3371,6 +4333,8 @@
     "hanzi": "中间",
     "pinyin": "zhōngjiān",
     "category": "Kata Benda",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -3378,6 +4342,8 @@
     "hanzi": "终于",
     "pinyin": "zhōngyú",
     "category": "Kata Keterangan",
+    "meaning": "akhirnya",
+    "id_meaning": "akhirnya",
     "en": "finally"
   },
   {
@@ -3385,6 +4351,8 @@
     "hanzi": "种",
     "pinyin": "zhǒng",
     "category": "Satuan",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -3392,6 +4360,8 @@
     "hanzi": "重要",
     "pinyin": "zhòngyào",
     "category": "Kata Sifat",
+    "meaning": "penting",
+    "id_meaning": "penting",
     "en": "important"
   },
   {
@@ -3399,6 +4369,8 @@
     "hanzi": "周末",
     "pinyin": "zhōumò",
     "category": "Kata Benda",
+    "meaning": "akhir pekan",
+    "id_meaning": "akhir pekan",
     "en": "weekend"
   },
   {
@@ -3406,6 +4378,8 @@
     "hanzi": "主要",
     "pinyin": "zhǔyào",
     "category": "Kata Sifat",
+    "meaning": "utama",
+    "id_meaning": "utama",
     "en": "main"
   },
   {
@@ -3413,6 +4387,8 @@
     "hanzi": "注意",
     "pinyin": "zhùyì",
     "category": "Kata Kerja",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -3420,6 +4396,8 @@
     "hanzi": "住院",
     "pinyin": "zhùyuàn",
     "category": "Kata Kerja",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -3427,6 +4405,8 @@
     "hanzi": "字典",
     "pinyin": "zìdiǎn",
     "category": "Kata Benda",
+    "meaning": "kamus",
+    "id_meaning": "kamus",
     "en": "dictionary"
   },
   {
@@ -3434,6 +4414,8 @@
     "hanzi": "自行车",
     "pinyin": "zìxíngchē",
     "category": "Kata Benda",
+    "meaning": "sepeda",
+    "id_meaning": "sepeda",
     "en": "bicycle"
   },
   {
@@ -3441,6 +4423,8 @@
     "hanzi": "子",
     "pinyin": "zi",
     "category": "Akhiran",
+    "meaning": "akhiran kata benda",
+    "id_meaning": "akhiran kata benda",
     "en": "noun suffix"
   },
   {
@@ -3448,6 +4432,8 @@
     "hanzi": "总",
     "pinyin": "zǒng",
     "category": "Kata Keterangan / （verb / adjective）",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -3455,6 +4441,8 @@
     "hanzi": "总是",
     "pinyin": "zǒngshì",
     "category": "Kata Keterangan",
+    "meaning": "selalu",
+    "id_meaning": "selalu",
     "en": "always"
   },
   {
@@ -3462,6 +4450,8 @@
     "hanzi": "嘴",
     "pinyin": "zuǐ",
     "category": "Kata Benda",
+    "meaning": "mulut",
+    "id_meaning": "mulut",
     "en": "mouth"
   },
   {
@@ -3469,6 +4459,8 @@
     "hanzi": "最好",
     "pinyin": "zuìhǎo",
     "category": "Kata Keterangan",
+    "meaning": "terbaik",
+    "id_meaning": "terbaik",
     "en": "best"
   },
   {
@@ -3476,6 +4468,8 @@
     "hanzi": "最后",
     "pinyin": "zuìhòu",
     "category": "Kata Benda",
+    "meaning": "terakhir, terakhir",
+    "id_meaning": "terakhir, terakhir",
     "en": "last, final"
   },
   {
@@ -3483,6 +4477,8 @@
     "hanzi": "最近",
     "pinyin": "zuìjìn",
     "category": "Kata Benda",
+    "meaning": "baru-baru ini",
+    "id_meaning": "baru-baru ini",
     "en": "recently"
   },
   {
@@ -3490,6 +4486,8 @@
     "hanzi": "做客",
     "pinyin": "zuòkè",
     "category": "Kata Kerja",
+    "meaning": "",
+    "id_meaning": "",
     "en": ""
   },
   {
@@ -3497,6 +4495,8 @@
     "hanzi": "作业",
     "pinyin": "zuòyè",
     "category": "Kata Benda",
+    "meaning": "pekerjaan rumah",
+    "id_meaning": "pekerjaan rumah",
     "en": "homework"
   }
 ]
