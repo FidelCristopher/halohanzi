@@ -32,13 +32,16 @@ Imports: `import com.example.chineselearning.data.model.*` and `import com.examp
 ## 4. STRICT HANZI & PINYIN ALIGNMENT (TOKEN-TO-TOKEN SYMMETRY)
 **CRITICAL**: Hanzi characters and Pinyin tokens MUST align 1-to-1 in token count and spacing.
 - **Rule**: Every space-separated token in `targetPinyin` MUST map to exactly ONE corresponding space-separated token in `targetHanzi`.
-  - BAD (Misaligned):
+  - ❌ **BAD (Misaligned Case 1):**
     `targetPinyin = "Nǐhǎo  wǒjiào  Bùdí"`
     `targetHanzi  = "你好， 我 叫 布迪 。"` (FAIL: `wǒjiào` is 1 token, but `我 叫` is 2 tokens! Leads to broken visual alignment!)
-  - GOOD (1-to-1 Token Symmetry):
-    `targetPinyin = "Nǐhǎo ， wǒ jiào Bùdí 。"`
-    `targetHanzi  = "你好 ， 我 叫 布迪 。"`
-    *(or if compound word is joined in Hanzi, join it in Pinyin as well: `wǒjiào` with `我叫`)*.
+  - ❌ **BAD (Misaligned Case 2 - Clumped Hanzi):**
+    `targetPinyin = "Nà shì nǐ de lǎobǎn ma"` (6 tokens)
+    `targetHanzi  = "那是你的 老板 吗？"` (3 tokens: `那是你的`, `老板`, `吗？` -> FAIL! Visual text stretches out horribly!)
+  - ✅ **GOOD (1-to-1 Token Symmetry):**
+    `targetPinyin = "Nà shì nǐ de lǎobǎn ma ？"`
+    `targetHanzi  = "那 是 你 的 老板 吗 ？"`
+    *(or if grouped into words: `Nàshì nǐde lǎobǎn ma ？` vs `那是 你的 老板 吗 ？`)*
 - **Verification Formula**:
   `targetPinyin.trim().split("\\s+").size == targetHanzi.trim().split("\\s+").size`
 
@@ -52,7 +55,20 @@ Imports: `import com.example.chineselearning.data.model.*` and `import com.examp
 
 ---
 
-## 6. AUTONOMOUS TWO-WAY HAND-OFF PROTOCOL (NO HUMAN WAITING)
+## 6. ILLUSTRATION UNIQUENESS & SEMANTIC ACCURACY (NO DUPLICATES / NO LAZY REUSE)
+**CRITICAL**: In `ExerciseType.PICTURE_CHOICE`, all 4 options MUST have distinct, non-duplicate illustration drawables (`iconRes`).
+- **Rule 1 (Zero Duplicates)**: No two options in the same exercise may share the same `iconRes`.
+  - ❌ **BAD**: "bos" and "guru" both using `R.drawable.ic_teacher`, or "rekan kerja" and "teman sekolah" both using `R.drawable.ic_classmates`.
+  - ✅ **GOOD**: 
+    - "bos": `R.drawable.ic_boss` (gambar eksekutif / kantor)
+    - "guru": `R.drawable.ic_teacher` (gambar guru / papan tulis)
+    - "rekan kerja, kolega": `R.drawable.ic_colleagues` (gambar rekan kerja dewasa di kantor)
+    - "teman sekolah": `R.drawable.ic_classmates` (gambar murid sekolah berseragam)
+- **Rule 2 (Semantic Matching)**: The illustration MUST accurately represent the meaning of the Indonesian label (e.g. "rekan kerja" MUST NOT be depicted as elementary school children in uniform).
+
+---
+
+## 7. AUTONOMOUS TWO-WAY HAND-OFF PROTOCOL (NO HUMAN WAITING)
 
 ### For Developers (Dev 1 / Dev 2) & Designer:
 Immediately after completing code generation and committing changes:
@@ -64,14 +80,22 @@ Do NOT wait for human intervention; trigger QA automatically.
 ### For QA / Tester:
 Upon receiving a notification or checking a branch:
 1. **Contract Audit**:
-   - Check Hanzi-Pinyin 1-to-1 token symmetry (`targetPinyin` vs `targetHanzi`).
-   - Check blank slot count vs expected answers.
+   - Check Hanzi-Pinyin 1-to-1 token symmetry:
+     `targetPinyin.split("\\s+").size == targetHanzi.split("\\s+").size`
+   - Check blank slot count vs expected answers (no orphan blanks).
+   - Check illustration uniqueness: No duplicate `iconRes` across options in `PICTURE_CHOICE`.
    - Check ID naming convention (`u{unit}_p{part}_q{number}`).
 2. **Build Verification**:
    - Run `./gradlew compileDebugKotlin` in `ChineseLearning`.
 3. **Decide Action**:
    - **IF PASS**: Cherry-pick/merge the commit into `main`, print completion report.
-   - **IF FAIL / CONTRACT VIOLATION**: DO NOT merge to `main`! Automatically return the revision to the author:
+   - **IF CODE / CONTRACT VIOLATION (Code error, Token Mismatch, Orphan Blank)**:
+     DO NOT merge to `main`! Return revision to Developer:
      ```bash
-     notify-role [dev1|dev2|designer] "QA REJECT: [Detail spesifik baris/file dan alasan kegagalan]. Tolong perbaiki dan commit ulang."
+     notify-role [dev1|dev2] "QA REJECT (CODE/CONTRACT): [Detail spesifik baris/file dan alasan]. Tolong perbaiki dan commit ulang."
+     ```
+   - **IF ASSET VIOLATION (Duplicate illustration, placeholder reuse, semantic mismatch)**:
+     DO NOT merge to `main`! Delegate asset creation to Designer:
+     ```bash
+     notify-role designer "QA REJECT (ASSET): Exercise [id] memiliki gambar duplikat/tidak sesuai untuk opsi: [daftar opsi]. Tolong buatkan VectorDrawable unik di res/drawable dan commit."
      ```
