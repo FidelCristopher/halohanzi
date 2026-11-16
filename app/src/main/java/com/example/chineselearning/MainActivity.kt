@@ -9,6 +9,7 @@ import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
 import com.example.chineselearning.audio.TtsManager
 import com.example.chineselearning.ui.screens.MainAppContainer
+import com.example.chineselearning.ui.theme.AppBg
 import com.example.chineselearning.ui.theme.ChineseLearningTheme
 
 class MainActivity : ComponentActivity() {
@@ -21,8 +22,11 @@ class MainActivity : ComponentActivity() {
         ttsManager = TtsManager(this)
 
         setContent {
-            ChineseLearningTheme {
-                Surface(modifier = Modifier.fillMaxSize()) {
+            ChineseLearningTheme(darkTheme = false) {
+                Surface(
+                    modifier = Modifier.fillMaxSize(),
+                    color = AppBg
+                ) {
                     MainAppContainer(ttsManager = ttsManager)
                 }
             }

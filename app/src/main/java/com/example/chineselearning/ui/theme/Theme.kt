@@ -8,36 +8,40 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 
 private val LightColorScheme = lightColorScheme(
-    primary = HanziGreen,
+    primary = PastelBlueBrand,
     onPrimary = Color.White,
-    primaryContainer = HanziMint,
-    onPrimaryContainer = HanziGreenDark,
-    secondary = WarmAmber,
-    onSecondary = Color.White,
-    secondaryContainer = SoftAmber,
-    onSecondaryContainer = Color(0xFF8C5300),
-    tertiary = RubyCoral,
+    primaryContainer = PastelBlue,
+    onPrimaryContainer = PastelBlueText,
+    secondary = PastelYellow,
+    onSecondary = PastelYellowText,
+    secondaryContainer = PastelYellow,
+    onSecondaryContainer = PastelYellowText,
+    tertiary = PastelPink,
     background = AppBg,
-    surface = CardBg,
+    surface = Color.White,
     onBackground = DeepNavy,
     onSurface = DeepNavy
 )
 
 private val DarkColorScheme = darkColorScheme(
-    primary = HanziGreen,
+    primary = PastelBlueBrand,
     onPrimary = Color.White,
-    primaryContainer = Color(0xFF00382B),
-    onPrimaryContainer = HanziMint,
-    secondary = WarmAmber,
-    background = Color(0xFF101820),
-    surface = Color(0xFF1A232E),
-    onBackground = Color(0xFFF1F5F9),
-    onSurface = Color(0xFFF1F5F9)
+    primaryContainer = PastelBlue,
+    onPrimaryContainer = PastelBlueText,
+    secondary = PastelYellow,
+    onSecondary = PastelYellowText,
+    secondaryContainer = PastelYellow,
+    onSecondaryContainer = PastelYellowText,
+    tertiary = PastelPink,
+    background = AppBg,
+    surface = Color.White,
+    onBackground = DeepNavy,
+    onSurface = DeepNavy
 )
 
 @Composable
 fun ChineseLearningTheme(
-    darkTheme: Boolean = isSystemInDarkTheme(),
+    darkTheme: Boolean = false,
     content: @Composable () -> Unit
 ) {
     val colorScheme = if (darkTheme) DarkColorScheme else LightColorScheme

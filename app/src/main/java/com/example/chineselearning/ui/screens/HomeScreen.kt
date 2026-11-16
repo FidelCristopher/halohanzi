@@ -96,8 +96,8 @@ fun HomeScreen(
         state = lazyListState,
         modifier = Modifier
             .fillMaxSize()
-            .background(Color(0xFFFFFDFE)),
-        contentPadding = PaddingValues(bottom = 90.dp),
+            .background(AppBg),
+        contentPadding = PaddingValues(bottom = 110.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         // TOP APP BAR: Modern Header with Refined HSK Level Selector

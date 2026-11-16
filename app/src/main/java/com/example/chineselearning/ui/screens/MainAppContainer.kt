@@ -1,19 +1,20 @@
 package com.example.chineselearning.ui.screens
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.lazy.LazyListState
-import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import com.example.chineselearning.audio.TtsManager
 import com.example.chineselearning.data.model.Lesson
 import com.example.chineselearning.data.model.Story
 import com.example.chineselearning.ui.components.HaloHanziNavBar
+import com.example.chineselearning.ui.theme.AppBg
 
-@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun MainAppContainer(
     ttsManager: TtsManager?
@@ -69,20 +70,14 @@ fun MainAppContainer(
         return
     }
 
-    Scaffold(
-        bottomBar = {
-            // Floating rounded bottom navigation bar
-            HaloHanziNavBar(
-                selectedTab = selectedTab,
-                onTabSelected = { selectedTab = it }
-            )
-        }
-    ) { innerPadding ->
-        Box(
-            modifier = Modifier
-                .fillMaxSize()
-                .padding(innerPadding)
-        ) {
+    // Edge-to-edge Fullscreen container with seamless floating bottom navigation bar
+    Box(
+        modifier = Modifier
+            .fillMaxSize()
+            .background(AppBg)
+    ) {
+        // Main Screen Content (flows edge-to-edge behind the floating navbar)
+        Box(modifier = Modifier.fillMaxSize()) {
             when (selectedTab) {
                 0 -> HomeScreen(
                     lazyListState = homeListState,
@@ -104,6 +99,18 @@ fun MainAppContainer(
                 )
                 4 -> ProfileScreen()
             }
+        }
+
+        // Floating rounded bottom navigation bar overlay
+        Box(
+            modifier = Modifier
+                .align(Alignment.BottomCenter)
+                .fillMaxWidth()
+        ) {
+            HaloHanziNavBar(
+                selectedTab = selectedTab,
+                onTabSelected = { selectedTab = it }
+            )
         }
     }
 }
