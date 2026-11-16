@@ -434,23 +434,14 @@ fun LessonExerciseScreen(
                         }
                     } else if (exercise.targetHanzi.isNotBlank()) {
                         Spacer(modifier = Modifier.height(6.dp))
-                        if (exercise.targetPinyin.isNotBlank()) {
-                            Text(
-                                text = exercise.targetPinyin,
-                                fontSize = 13.sp,
-                                color = SlateGray,
-                                modifier = Modifier.fillMaxWidth(),
-                                textAlign = TextAlign.Center
-                            )
-                        }
-                        Text(
-                            text = exercise.targetHanzi,
-                            fontFamily = KaiTiFontFamily,
-                            fontSize = 22.sp,
-                            fontWeight = FontWeight.Bold,
-                            color = HanziColor,
+                        AlignedHanziPinyinText(
+                            targetHanzi = exercise.targetHanzi,
+                            targetPinyin = exercise.targetPinyin,
+                            hanziFontSize = 22.sp,
+                            pinyinFontSize = 13.sp,
+                            hanziFontWeight = FontWeight.Bold,
                             modifier = Modifier.fillMaxWidth(),
-                            textAlign = TextAlign.Center
+                            horizontalAlignment = Alignment.CenterHorizontally
                         )
                         if (exercise.targetTranslation.isNotBlank()) {
                             Text(
@@ -603,21 +594,13 @@ fun LessonExerciseScreen(
 
                     Spacer(modifier = Modifier.width(14.dp))
 
-                    Column {
-                        Text(
-                            text = exercise.targetPinyin,
-                            fontSize = 15.sp,
-                            color = SlateGray,
-                            fontWeight = FontWeight.Medium
-                        )
-                        Text(
-                            text = exercise.targetHanzi,
-                            fontFamily = KaiTiFontFamily,
-                            fontSize = 28.sp,
-                            fontWeight = FontWeight.Bold,
-                            color = HanziColor
-                        )
-                    }
+                    AlignedHanziPinyinText(
+                        targetHanzi = exercise.targetHanzi,
+                        targetPinyin = exercise.targetPinyin,
+                        hanziFontSize = 28.sp,
+                        pinyinFontSize = 15.sp,
+                        hanziFontWeight = FontWeight.Bold
+                    )
                 }
 
                 Spacer(modifier = Modifier.height(24.dp))
@@ -718,11 +701,13 @@ fun LessonExerciseScreen(
                         Icon(imageVector = Icons.AutoMirrored.Filled.VolumeUp, contentDescription = "Dengarkan", tint = Color.White)
                     }
                     Spacer(modifier = Modifier.width(16.dp))
-                    Column {
-                        Text(text = exercise.targetPinyin, fontSize = 16.sp, color = SlateGray)
-                        Spacer(modifier = Modifier.height(2.dp))
-                        Text(text = exercise.targetHanzi, fontFamily = KaiTiFontFamily, fontSize = 26.sp, fontWeight = FontWeight.SemiBold, color = HanziColor)
-                    }
+                    AlignedHanziPinyinText(
+                        targetHanzi = exercise.targetHanzi,
+                        targetPinyin = exercise.targetPinyin,
+                        hanziFontSize = 26.sp,
+                        pinyinFontSize = 15.sp,
+                        hanziFontWeight = FontWeight.SemiBold
+                    )
                 }
 
                 Spacer(modifier = Modifier.height(36.dp))
@@ -929,13 +914,13 @@ fun LessonExerciseScreen(
                             }
                             Spacer(modifier = Modifier.width(16.dp))
                         }
-                        Column {
-                            if (exercise.targetPinyin.isNotBlank()) {
-                                Text(text = exercise.targetPinyin, fontSize = 16.sp, color = SlateGray)
-                                Spacer(modifier = Modifier.height(2.dp))
-                            }
-                            Text(text = exercise.targetHanzi, fontFamily = KaiTiFontFamily, fontSize = 26.sp, fontWeight = FontWeight.SemiBold, color = HanziColor)
-                        }
+                        AlignedHanziPinyinText(
+                            targetHanzi = exercise.targetHanzi,
+                            targetPinyin = exercise.targetPinyin,
+                            hanziFontSize = 26.sp,
+                            pinyinFontSize = 15.sp,
+                            hanziFontWeight = FontWeight.SemiBold
+                        )
                     }
 
                     Spacer(modifier = Modifier.height(28.dp))
@@ -1776,6 +1761,99 @@ fun LessonCelebrationScreen(
                     fontSize = 16.sp,
                     color = Color.White
                 )
+            }
+        }
+    }
+}
+
+@OptIn(ExperimentalLayoutApi::class)
+@Composable
+fun AlignedHanziPinyinText(
+    targetHanzi: String,
+    targetPinyin: String,
+    modifier: Modifier = Modifier,
+    hanziFontSize: androidx.compose.ui.unit.TextUnit = 26.sp,
+    pinyinFontSize: androidx.compose.ui.unit.TextUnit = 15.sp,
+    hanziFontWeight: FontWeight = FontWeight.SemiBold,
+    hanziColor: Color = HanziColor,
+    pinyinColor: Color = SlateGray,
+    horizontalAlignment: Alignment.Horizontal = Alignment.Start
+) {
+    val punctuationChars = "，。？！,?.!："
+
+    val rawHzTokens = targetHanzi.trim().split("\\s+".toRegex()).filter { it.isNotBlank() }
+    val rawPyTokens = targetPinyin.trim().split("\\s+".toRegex()).filter { it.isNotBlank() }
+
+    if (rawHzTokens.isEmpty()) return
+
+    val pairs: List<Pair<String, String>> = if (rawHzTokens.size == rawPyTokens.size) {
+        rawHzTokens.zip(rawPyTokens)
+    } else {
+        rawHzTokens.mapIndexed { idx, hz ->
+            val py = rawPyTokens.getOrNull(idx) ?: ""
+            Pair(hz, py)
+        }
+    }
+
+    FlowRow(
+        modifier = modifier,
+        horizontalArrangement = when (horizontalAlignment) {
+            Alignment.CenterHorizontally -> Arrangement.spacedBy(6.dp, Alignment.CenterHorizontally)
+            Alignment.End -> Arrangement.spacedBy(6.dp, Alignment.End)
+            else -> Arrangement.spacedBy(6.dp, Alignment.Start)
+        },
+        verticalArrangement = Arrangement.spacedBy(6.dp)
+    ) {
+        pairs.forEach { (hzToken, pyToken) ->
+            val leadingPunct = hzToken.takeWhile { it in punctuationChars }
+            val withoutLeading = hzToken.drop(leadingPunct.length)
+
+            val trailingPunct = withoutLeading.takeLastWhile { it in punctuationChars }
+            val coreHanzi = withoutLeading.dropLast(trailingPunct.length)
+
+            val cleanPinyin = pyToken.trim().trim(*punctuationChars.toCharArray()).trim()
+
+            Row(verticalAlignment = Alignment.Bottom) {
+                if (leadingPunct.isNotBlank()) {
+                    Text(
+                        text = leadingPunct,
+                        fontFamily = KaiTiFontFamily,
+                        fontSize = hanziFontSize,
+                        color = hanziColor,
+                        modifier = Modifier.padding(bottom = 2.dp)
+                    )
+                }
+                if (coreHanzi.isNotBlank()) {
+                    Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                        if (cleanPinyin.isNotBlank()) {
+                            Text(
+                                text = cleanPinyin,
+                                fontSize = pinyinFontSize,
+                                color = pinyinColor,
+                                maxLines = 1,
+                                softWrap = false
+                            )
+                            Spacer(modifier = Modifier.height(2.dp))
+                        }
+                        Text(
+                            text = coreHanzi,
+                            fontFamily = KaiTiFontFamily,
+                            fontSize = hanziFontSize,
+                            fontWeight = hanziFontWeight,
+                            color = hanziColor,
+                            maxLines = 1
+                        )
+                    }
+                }
+                if (trailingPunct.isNotBlank()) {
+                    Text(
+                        text = trailingPunct,
+                        fontFamily = KaiTiFontFamily,
+                        fontSize = hanziFontSize,
+                        color = hanziColor,
+                        modifier = Modifier.padding(bottom = 2.dp)
+                    )
+                }
             }
         }
     }
