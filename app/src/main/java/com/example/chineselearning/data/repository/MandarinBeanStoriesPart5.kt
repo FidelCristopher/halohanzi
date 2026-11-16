@@ -25,7 +25,7 @@ val mandarinBeanStoriesPart5: List<Story> by lazy {
                     id = "s_hotday_1",
                     hanzi = "今天天气很热， 早上中文老师上了三节课， 非常渴。",
                     pinyin = "jīn tiān tiān qì hěn rè zǎo shang Zhōng wén lǎo shī shàng le sān jié kè fēi cháng kě",
-                    translation = "Hari ini Weather Sangat Panas Pagi hari Chinese language Guru To attend (class or university) Sudah (partikel perubahan situasi) Three Classifier for segments: lessons, train wagons, biblical verses etc Subject Sangat / Amat Haus",
+                    translation = "Hari ini cuaca sangat panas, pagi hari guru bahasa Mandarin mengajar tiga sesi kelas dan merasa sangat haus.",
                     tokens = listOf(
                         WordToken("今天", "jīn tiān", "Hari ini", "Keterangan waktu sekarang"),
                         WordToken("天气", "tiān qì", "Weather", "Kosakata HSK 2: 天气 (tiān qì)"),
@@ -47,7 +47,7 @@ val mandarinBeanStoriesPart5: List<Story> by lazy {
                     id = "s_hotday_2",
                     hanzi = "她去超市买了一瓶水， 又回办公室喝了两杯茶， 舒服多了。",
                     pinyin = "tā qù chāo shì mǎi le yī píng shuǐ yòu huí bàn gōng shì hē le liǎng bēi chá shū fu duō le",
-                    translation = "Dia (perempuan) Pergi Supermarket Membeli Sudah (partikel perubahan situasi) One Classifier for wine and liquids Air Lagi (telah terjadi) Kembali / Pulang Kantor Minum Sudah (partikel perubahan situasi) Two Classifier for certain containers of liquids Teh Nyaman / Enak badan Banyak Sudah (partikel perubahan situasi)",
+                    translation = "Dia pergi ke supermarket membeli sebotol air, lalu kembali ke kantor minum dua cangkir teh, rasanya jauh lebih nyaman dan segar.",
                     tokens = listOf(
                         WordToken("她", "tā", "Dia (perempuan)", "Kata ganti orang ketiga tunggal perempuan"),
                         WordToken("去", "qù", "Pergi", "Berpindah tempat menjauhi pembicara"),
@@ -119,7 +119,7 @@ val mandarinBeanStoriesPart5: List<Story> by lazy {
                     id = "s_eattoday_1",
                     hanzi = "今天早上我说：妈妈，早餐我想吃面包、汉堡和可乐。",
                     pinyin = "jīn tiān zǎo shang wǒ shuō mā ma zǎo cān wǒ xiǎng chī miàn bāo hàn bǎo hé kě lè",
-                    translation = "Hari ini Pagi hari Saya Berbicara / Berkata Ibu Breakfast Saya Ingin / Berpikir / Rindu Makan Roti Hamburger Dan Kola",
+                    translation = "Pagi ini saya berkata: Ibu, untuk sarapan saya ingin makan roti, hamburger, dan kola.",
                     tokens = listOf(
                         WordToken("今天", "jīn tiān", "Hari ini", "Keterangan waktu sekarang"),
                         WordToken("早上", "zǎo shang", "Pagi hari", "Waktu fajar hingga pagi"),
@@ -140,7 +140,7 @@ val mandarinBeanStoriesPart5: List<Story> by lazy {
                     id = "s_eattoday_2",
                     hanzi = "妈妈说：不行，你只能吃面包、鸡蛋和热牛奶。",
                     pinyin = "mā ma shuō bù xíng nǐ zhǐ néng chī miàn bāo jī dàn hé rè niú nǎi",
-                    translation = "Ibu Berbicara / Berkata Won&#x27;t do Kamu Only; merely; just Bisa / Mampu / Boleh Makan Roti Telur ayam Dan Panas Susu",
+                    translation = "Ibu berkata: Tidak boleh, kamu hanya boleh makan roti, telur, dan susu hangat.",
                     tokens = listOf(
                         WordToken("妈妈", "mā ma", "Ibu", "Anggota keluarga"),
                         WordToken("说", "shuō", "Berbicara / Berkata", "Menyampaikan ucapan"),
@@ -160,7 +160,7 @@ val mandarinBeanStoriesPart5: List<Story> by lazy {
                     id = "s_eattoday_3",
                     hanzi = "我说：中午能吃汉堡和可乐吗？",
                     pinyin = "wǒ shuō zhōng wǔ néng chī hàn bǎo hé kě lè ma",
-                    translation = "Saya Berbicara / Berkata Siang hari Bisa / Mampu / Boleh Makan Hamburger Dan Kola Apakah (partikel tanya)",
+                    translation = "Saya bertanya: Siang hari apakah boleh makan hamburger dan kola?",
                     tokens = listOf(
                         WordToken("我", "wǒ", "Saya", "Kata ganti orang pertama tunggal"),
                         WordToken("说", "shuō", "Berbicara / Berkata", "Menyampaikan ucapan"),
@@ -177,7 +177,7 @@ val mandarinBeanStoriesPart5: List<Story> by lazy {
                     id = "s_eattoday_4",
                     hanzi = "妈妈说：中午可以吃汉堡，不可以喝可乐。",
                     pinyin = "mā ma shuō zhōng wǔ kě yǐ chī hàn bǎo bù kě yǐ hē kě lè",
-                    translation = "Ibu Berbicara / Berkata Siang hari Boleh / Dapat Makan Hamburger Tidak Boleh / Dapat Minum Kola",
+                    translation = "Ibu berkata: Siang hari boleh makan hamburger, tidak boleh minum kola.",
                     tokens = listOf(
                         WordToken("妈妈", "mā ma", "Ibu", "Anggota keluarga"),
                         WordToken("说", "shuō", "Berbicara / Berkata", "Menyampaikan ucapan"),
@@ -195,7 +195,7 @@ val mandarinBeanStoriesPart5: List<Story> by lazy {
                     id = "s_eattoday_5",
                     hanzi = "我说：好吧。",
                     pinyin = "wǒ shuō hǎo ba",
-                    translation = "Saya Berbicara / Berkata Bagus / Baik Kan / Mari (partikel saran)",
+                    translation = "Saya berkata: Baiklah.",
                     tokens = listOf(
                         WordToken("我", "wǒ", "Saya", "Kata ganti orang pertama tunggal"),
                         WordToken("说", "shuō", "Berbicara / Berkata", "Menyampaikan ucapan"),
@@ -252,7 +252,7 @@ val mandarinBeanStoriesPart5: List<Story> by lazy {
                     id = "s_mybday2_1",
                     hanzi = "今天是我的生日。",
                     pinyin = "jīn tiān shì wǒ de shēng rì",
-                    translation = "Hari ini Adalah My; mine Hari ulang tahun",
+                    translation = "Hari ini adalah hari ulang tahun saya.",
                     tokens = listOf(
                         WordToken("今天", "jīn tiān", "Hari ini", "Keterangan waktu sekarang"),
                         WordToken("是", "shì", "Adalah", "Kopula penjelas"),
@@ -264,7 +264,7 @@ val mandarinBeanStoriesPart5: List<Story> by lazy {
                     id = "s_mybday2_2",
                     hanzi = "我送给自己的礼物是一双鞋，那双鞋有点儿贵，但是我喜欢很久了。",
                     pinyin = "wǒ sòng gěi zì jǐ de lǐ wù shì yī shuāng xié nà shuāng xié yǒu diǎn r guì dàn shì wǒ xǐ huan hěn jiǔ le",
-                    translation = "Saya Menghadiahkan / Mengantar Memberi / Kepada Oneself; (attributive) one&#x27;s own Punya / Yang (partikel posesif) Gift; present Adalah One Pair Shoe (specifier) that; the; those Pair Shoe Slightly Mahal Tetapi / Namun Saya Menyukai / Gemar Sangat (of a period of time) long Sudah (partikel perubahan situasi)",
+                    translation = "Kado yang saya berikan untuk diri sendiri adalah sepasang sepatu, sepatu itu agak mahal, tetapi saya sudah menyukainya sejak lama.",
                     tokens = listOf(
                         WordToken("我", "wǒ", "Saya", "Kata ganti orang pertama tunggal"),
                         WordToken("送", "sòng", "Menghadiahkan / Mengantar", "Memberikan bingkisan atau mengantar"),
@@ -293,7 +293,7 @@ val mandarinBeanStoriesPart5: List<Story> by lazy {
                     id = "s_mybday2_3",
                     hanzi = "朋友们送给我一束花、一瓶香水、一个大蛋糕，这些东西我都很喜欢。",
                     pinyin = "péng you men sòng gěi wǒ yī shù huā yī píng xiāng shuǐ yī gè dà dàn gāo zhè xiē dōng xi wǒ dōu hěn xǐ huan",
-                    translation = "Teman / Sahabat Plural marker for pronouns, and nouns referring to individuals Menghadiahkan / Mengantar Memberi / Kepada Saya One Classifier for bunches, bundles, beams of light etc Flower One Classifier for wine and liquids Perfume One Classifier for people or objects in general Besar Kue tart / Cake These Thing Saya Semua / Seluruhnya Sangat Menyukai / Gemar",
+                    translation = "Teman-teman menghadiahkan saya sebuket bunga, sebotol parfum, dan sebuah kue tart besar, barang-barang ini semuanya sangat saya sukai.",
                     tokens = listOf(
                         WordToken("朋友", "péng you", "Teman / Sahabat", "Orang dekat"),
                         WordToken("们", "men", "Plural marker for pronouns, and nouns referring to individuals", "Kosakata HSK 2: 们 (men)"),
@@ -322,7 +322,7 @@ val mandarinBeanStoriesPart5: List<Story> by lazy {
                     id = "s_mybday2_4",
                     hanzi = "我的爸爸妈妈给我发了一个红包，里面有八百块钱。",
                     pinyin = "wǒ de bà ba mā ma gěi wǒ fā le yī gè hóng bāo lǐ miàn yǒu bā bǎi kuài qián",
-                    translation = "My; mine Ayah Ibu Memberi / Kepada Saya To send out Sudah (partikel perubahan situasi) One Classifier for people or objects in general Money wrapped in red as a gift Inside Mempunyai / Ada Eight Hundred Classifier for pieces of cloth, cake, soap etc Coin",
+                    translation = "Ayah dan ibu saya mengirimi saya sebuah angpao, di dalamnya ada uang delapan ratus yuan.",
                     tokens = listOf(
                         WordToken("我的", "wǒ de", "My; mine", "Kosakata HSK 2: 我的 (wǒ de)"),
                         WordToken("爸爸", "bà ba", "Ayah", "Anggota keluarga"),
@@ -346,7 +346,7 @@ val mandarinBeanStoriesPart5: List<Story> by lazy {
                     id = "s_mybday2_5",
                     hanzi = "我想用这些钱请朋友们吃饭，然后去唱歌。",
                     pinyin = "wǒ xiǎng yòng zhè xiē qián qǐng péng you men chī fàn rán hòu qù chàng gē",
-                    translation = "Saya Ingin / Berpikir / Rindu To use; to make use of; to employ These Coin Silakan / Mengundang Teman / Sahabat Plural marker for pronouns, and nouns referring to individuals To have a meal Then; after that; afterwards Pergi To sing a song",
+                    translation = "Saya ingin menggunakan uang ini untuk mentraktir teman-teman makan, lalu pergi berkaraoke bersama.",
                     tokens = listOf(
                         WordToken("我", "wǒ", "Saya", "Kata ganti orang pertama tunggal"),
                         WordToken("想", "xiǎng", "Ingin / Berpikir / Rindu", "Keinginan atau pemikiran batin"),
@@ -366,7 +366,7 @@ val mandarinBeanStoriesPart5: List<Story> by lazy {
                     id = "s_mybday2_6",
                     hanzi = "这就是我的生日。",
                     pinyin = "zhè jiù shì wǒ de shēng rì",
-                    translation = "This; these Langsung / Segera / Maka Adalah My; mine Hari ulang tahun",
+                    translation = "Inilah hari ulang tahun saya.",
                     tokens = listOf(
                         WordToken("这", "zhè", "This; these", "Kosakata HSK 2: 这 (zhè)"),
                         WordToken("就", "jiù", "Langsung / Segera / Maka", "Menyatakan ketepatan waktu atau kelogisan"),
@@ -424,7 +424,7 @@ val mandarinBeanStoriesPart5: List<Story> by lazy {
                     id = "s_lilychn_1",
                     hanzi = "Lily是一个法国人，李丽是她的中文名字。",
                     pinyin = "shì yī gè Fǎ guó rén Lǐ Lì shì tā de Zhōng wén míng zi",
-                    translation = "Adalah One Classifier for people or objects in general Prancis Person; people A chinese personal name, li li Adalah Her; hers Chinese language Name (of a person or thing)",
+                    translation = "Lily adalah orang Prancis, Li Li adalah nama Tionghoanya.",
                     tokens = listOf(
                         WordToken("是", "shì", "Adalah", "Kopula penjelas"),
                         WordToken("一", "yī", "One", "Kosakata HSK 2: 一 (yī)"),
@@ -442,7 +442,7 @@ val mandarinBeanStoriesPart5: List<Story> by lazy {
                     id = "s_lilychn_2",
                     hanzi = "她在法国学习中文。",
                     pinyin = "tā zài Fǎ guó xué xí Zhōng wén",
-                    translation = "Dia (perempuan) Di / Berada di Prancis Belajar / Studi Chinese language",
+                    translation = "Dia belajar bahasa Mandarin di Prancis.",
                     tokens = listOf(
                         WordToken("她", "tā", "Dia (perempuan)", "Kata ganti orang ketiga tunggal perempuan"),
                         WordToken("在", "zài", "Di / Berada di", "Preposisi lokasi atau aspek progresif"),
@@ -455,7 +455,7 @@ val mandarinBeanStoriesPart5: List<Story> by lazy {
                     id = "s_lilychn_3",
                     hanzi = "她有两个来自中国的中文老师，一个是男老师，一个是女老师。",
                     pinyin = "tā yǒu liǎng gè lái zì Zhōng guó de Zhōng wén lǎo shī yī gè shì nán lǎo shī yī gè shì nǚ lǎo shī",
-                    translation = "Dia (perempuan) Mempunyai / Ada Two Classifier for people or objects in general To come from (a place) China / Tiongkok Punya / Yang (partikel posesif) Chinese language Guru One Classifier for people or objects in general Adalah (bound form) male Guru One Classifier for people or objects in general Adalah Female Guru",
+                    translation = "Dia memiliki dua orang guru bahasa Mandarin asal Tiongkok, satu guru pria dan satu guru wanita.",
                     tokens = listOf(
                         WordToken("她", "tā", "Dia (perempuan)", "Kata ganti orang ketiga tunggal perempuan"),
                         WordToken("有", "yǒu", "Mempunyai / Ada", "Menyatakan kepemilikan atau eksistensi"),
@@ -482,7 +482,7 @@ val mandarinBeanStoriesPart5: List<Story> by lazy {
                     id = "s_lilychn_4",
                     hanzi = "他们一起上课，一起说汉语，也一起喝咖啡、看电影，变成了很好的朋友。",
                     pinyin = "tā men yī qǐ shàng kè yī qǐ shuō Hàn yǔ yě yī qǐ hē kā fēi kàn diàn yǐng biàn chéng le hěn hǎo de péng you",
-                    translation = "Mereka Together; in company (with) To go to class Together; in company (with) Berbicara / Berkata Chinese language Juga / Pun Together; in company (with) Minum Kopi Melihat / Membaca Movie; film To change into Sudah (partikel perubahan situasi) Sangat Bagus / Baik Punya / Yang (partikel posesif) Teman / Sahabat",
+                    translation = "Mereka belajar bersama di kelas, berbicara bahasa Mandarin bersama, dan juga minum kopi serta menonton film bersama, menjadi sahabat yang sangat baik.",
                     tokens = listOf(
                         WordToken("他们", "tā men", "Mereka", "Kata ganti orang ketiga jamak"),
                         WordToken("一起", "yī qǐ", "Together; in company (with)", "Kosakata HSK 2: 一起 (yī qǐ)"),
@@ -553,7 +553,7 @@ val mandarinBeanStoriesPart5: List<Story> by lazy {
                     id = "s_doyouknw_1",
                     hanzi = "你知道吗？",
                     pinyin = "nǐ zhī dào ma",
-                    translation = "Kamu Tahu / Mengetahui Apakah (partikel tanya)",
+                    translation = "Tahukah kamu?",
                     tokens = listOf(
                         WordToken("你", "nǐ", "Kamu", "Kata ganti orang kedua tunggal"),
                         WordToken("知道", "zhī dào", "Tahu / Mengetahui", "Memiliki informasi"),
@@ -564,7 +564,7 @@ val mandarinBeanStoriesPart5: List<Story> by lazy {
                     id = "s_doyouknw_2",
                     hanzi = "我家旁边有一所大学。",
                     pinyin = "wǒ jiā páng biān yǒu yī suǒ dà xué",
-                    translation = "Saya Rumah / Keluarga Side; adjacent place Mempunyai / Ada One Classifier for houses, small buildings, institutions etc Universitas",
+                    translation = "Di sebelah rumah saya ada sebuah universitas.",
                     tokens = listOf(
                         WordToken("我", "wǒ", "Saya", "Kata ganti orang pertama tunggal"),
                         WordToken("家", "jiā", "Rumah / Keluarga", "Tempat tinggal"),
@@ -579,7 +579,7 @@ val mandarinBeanStoriesPart5: List<Story> by lazy {
                     id = "s_doyouknw_3",
                     hanzi = "这所大学有三万个学生，两千多名老师，是这个城市最好的学校。",
                     pinyin = "zhè suǒ dà xué yǒu sān wàn gè xué shēng liǎng qiān duō míng lǎo shī shì zhè gè chéng shì zuì hǎo de xué xiào",
-                    translation = "This; these Classifier for houses, small buildings, institutions etc Universitas Mempunyai / Ada Three Ten thousand Classifier for people or objects in general Siswa / Mahasiswa Two Thousand Banyak Classifier for people Guru Adalah This; these Classifier for people or objects in general City; town Best Punya / Yang (partikel posesif) Sekolah",
+                    translation = "Universitas ini memiliki tiga puluh ribu mahasiswa dan dua ribu lebih dosen, merupakan kampus terbaik di kota ini.",
                     tokens = listOf(
                         WordToken("这", "zhè", "This; these", "Kosakata HSK 2: 这 (zhè)"),
                         WordToken("所", "suǒ", "Classifier for houses, small buildings, institutions etc", "Kosakata HSK 2: 所 (suǒ)"),
@@ -607,7 +607,7 @@ val mandarinBeanStoriesPart5: List<Story> by lazy {
                     id = "s_doyouknw_4",
                     hanzi = "也因为我家在大学旁边，所以吃东西、买东西都很方便。",
                     pinyin = "yě yīn wèi wǒ jiā zài dà xué páng biān suǒ yǐ chī dōng xi mǎi dōng xi dōu hěn fāng biàn",
-                    translation = "Juga / Pun Karena Saya Rumah / Keluarga Di / Berada di Universitas Side; adjacent place Sehingga / Oleh karena itu Makan Thing Membeli Thing Semua / Seluruhnya Sangat Convenient; suitable",
+                    translation = "Juga karena rumah saya berada di sebelah universitas, urusan mencari makan dan berbelanja menjadi sangat praktis.",
                     tokens = listOf(
                         WordToken("也", "yě", "Juga / Pun", "Partikel penanda kesamaan"),
                         WordToken("因为", "yīn wèi", "Karena", "Menyatakan alasan sebab"),
@@ -630,7 +630,7 @@ val mandarinBeanStoriesPart5: List<Story> by lazy {
                     id = "s_doyouknw_5",
                     hanzi = "周围有很多商店和饭馆，云南菜、四川菜、广东菜……你想吃什么就有什么。",
                     pinyin = "zhōu wéi yǒu hěn duō shāng diàn hé fàn guǎn Yún nán cài Sì chuān cài Guǎng dōng cài nǐ xiǎng chī shén me jiù yǒu shén me",
-                    translation = "Environs; surroundings; periphery Mempunyai / Ada Many; a lot of Toko Dan Restaurant Yunnan province, a province in southwest china Sayuran / Hidangan Sichuan; a province in southwest china. Sayuran / Hidangan Guangdong; a province in southern china. Sayuran / Hidangan Kamu Ingin / Berpikir / Rindu Makan Something; anything Langsung / Segera / Maka Mempunyai / Ada Something; anything",
+                    translation = "Di sekitarnya ada banyak toko dan restoran, masakan Yunnan, masakan Sichuan, masakan Kanton…… apa pun yang ingin kamu makan semua tersedia.",
                     tokens = listOf(
                         WordToken("周围", "zhōu wéi", "Environs; surroundings; periphery", "Kosakata HSK 2: 周围 (zhōu wéi)"),
                         WordToken("有", "yǒu", "Mempunyai / Ada", "Menyatakan kepemilikan atau eksistensi"),
@@ -657,7 +657,7 @@ val mandarinBeanStoriesPart5: List<Story> by lazy {
                     id = "s_doyouknw_6",
                     hanzi = "这个大学后面有一座山，很有名。",
                     pinyin = "zhè gè dà xué hòu miàn yǒu yī zuò shān hěn yǒu míng",
-                    translation = "This; these Classifier for people or objects in general Universitas Behind; near the end; at the back Mempunyai / Ada One Classifier for large immovable objects Mountain; hill Sangat Famous",
+                    translation = "Di belakang universitas ini ada sebuah gunung yang sangat terkenal.",
                     tokens = listOf(
                         WordToken("这", "zhè", "This; these", "Kosakata HSK 2: 这 (zhè)"),
                         WordToken("个", "gè", "Classifier for people or objects in general", "Kosakata HSK 2: 个 (gè)"),
@@ -675,7 +675,7 @@ val mandarinBeanStoriesPart5: List<Story> by lazy {
                     id = "s_doyouknw_7",
                     hanzi = "很多人来这儿旅游，中国人、外国人都喜欢来这里爬山。",
                     pinyin = "hěn duō rén lái zhè r lǚ yóu Zhōng guó rén wài guó rén dōu xǐ huan lái zhè lǐ pá shān",
-                    translation = "Many; a lot of Person; people Datang Sini To travel Chinese person Foreigner Semua / Seluruhnya Menyukai / Gemar Datang Here To go for a hike (esp. in the hills or mountains)",
+                    translation = "Banyak orang datang ke sini untuk berwisata, baik orang Tiongkok maupun orang asing suka datang mendaki gunung di sini.",
                     tokens = listOf(
                         WordToken("很多", "hěn duō", "Many; a lot of", "Kosakata HSK 2: 很多 (hěn duō)"),
                         WordToken("人", "rén", "Person; people", "Kosakata HSK 2: 人 (rén)"),
@@ -695,7 +695,7 @@ val mandarinBeanStoriesPart5: List<Story> by lazy {
                     id = "s_doyouknw_8",
                     hanzi = "因为我很喜欢爬山，也喜欢和不同的人聊天，所以我成为了一名导游，每天都很快乐。",
                     pinyin = "yīn wèi wǒ hěn xǐ huan pá shān yě xǐ huan hé bù tóng de rén liáo tiān suǒ yǐ wǒ chéng wéi le yī míng dǎo yóu měi tiān dōu hěn kuài lè",
-                    translation = "Karena Saya Sangat Menyukai / Gemar To go for a hike (esp. in the hills or mountains) Juga / Pun Menyukai / Gemar Dan Different Punya / Yang (partikel posesif) Person; people To chat; to gossip Sehingga / Oleh karena itu Saya To become; to turn into Sudah (partikel perubahan situasi) One Classifier for people Tour guide Each Hari Semua / Seluruhnya Sangat Happy; joyful",
+                    translation = "Karena saya sangat suka mendaki gunung dan juga suka mengobrol dengan berbagai orang, saya menjadi seorang pemandu wisata, setiap hari sangat bahagia.",
                     tokens = listOf(
                         WordToken("因为", "yīn wèi", "Karena", "Menyatakan alasan sebab"),
                         WordToken("我", "wǒ", "Saya", "Kata ganti orang pertama tunggal"),
@@ -772,7 +772,7 @@ val mandarinBeanStoriesPart5: List<Story> by lazy {
                     id = "s_thisbf_1",
                     hanzi = "我有男朋友了，他的名字叫张阳。",
                     pinyin = "wǒ yǒu nán péng you le tā de míng zi jiào Zhāng Yáng",
-                    translation = "Saya Mempunyai / Ada Pacar laki-laki Sudah (partikel perubahan situasi) His; belonging to him Name (of a person or thing) Memanggil / Bernama A person&#x27;s name, zhang yang",
+                    translation = "Saya sudah punya pacar, namanya Zhang Yang.",
                     tokens = listOf(
                         WordToken("我", "wǒ", "Saya", "Kata ganti orang pertama tunggal"),
                         WordToken("有", "yǒu", "Mempunyai / Ada", "Menyatakan kepemilikan atau eksistensi"),
@@ -788,7 +788,7 @@ val mandarinBeanStoriesPart5: List<Story> by lazy {
                     id = "s_thisbf_2",
                     hanzi = "他不胖也不瘦，个子很高，喜欢运动。",
                     pinyin = "tā bù pàng yě bù shòu gè zi hěn gāo xǐ huan yùn dòng",
-                    translation = "Dia (laki-laki) Tidak Gemuk Juga / Pun Tidak Kurus Stature; height; size (of a person or object) Sangat Tinggi Menyukai / Gemar To exercise",
+                    translation = "Dia tidak gemuk dan tidak kurus, postur tubuhnya tinggi, dan dia suka berolahraga.",
                     tokens = listOf(
                         WordToken("他", "tā", "Dia (laki-laki)", "Kata ganti orang ketiga tunggal"),
                         WordToken("不", "bù", "Tidak", "Kata sangkalan untuk masa kini atau masa depan"),
@@ -807,7 +807,7 @@ val mandarinBeanStoriesPart5: List<Story> by lazy {
                     id = "s_thisbf_3",
                     hanzi = "我们认识三年半了。",
                     pinyin = "wǒ men rèn shi sān nián bàn le",
-                    translation = "Kami / Kita Mengenal Three Tahun (after a number) and a half Sudah (partikel perubahan situasi)",
+                    translation = "Kami sudah saling mengenal selama tiga setengah tahun.",
                     tokens = listOf(
                         WordToken("我们", "wǒ men", "Kami / Kita", "Kata ganti orang pertama jamak"),
                         WordToken("认识", "rèn shi", "Mengenal", "Mengetahui seseorang secara akrab"),
@@ -821,7 +821,7 @@ val mandarinBeanStoriesPart5: List<Story> by lazy {
                     id = "s_thisbf_4",
                     hanzi = "张阳是我哥哥的同学，但是哥哥对他不满意，因为他没有工作。",
                     pinyin = "Zhāng Yáng shì wǒ gē ge de tóng xué dàn shì gē ge duì tā bù mǎn yì yīn wèi tā méi yǒu gōng zuò",
-                    translation = "A person&#x27;s name, zhang yang Adalah Saya Kakak laki-laki Punya / Yang (partikel posesif) Teman sekelas Tetapi / Namun Kakak laki-laki Towards; at; for Dia (laki-laki) Tidak Satisfied Karena Dia (laki-laki) Tidak ada / Tidak punya Bekerja",
+                    translation = "Zhang Yang adalah teman sekelas kakak laki-laki saya, tetapi kakak kurang sreg dengannya karena dia belum punya pekerjaan.",
                     tokens = listOf(
                         WordToken("张阳", "Zhāng Yáng", "A person&#x27;s name, zhang yang", "Kosakata HSK 2: 张阳 (Zhāng Yáng)"),
                         WordToken("是", "shì", "Adalah", "Kopula penjelas"),
@@ -845,7 +845,7 @@ val mandarinBeanStoriesPart5: List<Story> by lazy {
                     id = "s_thisbf_5",
                     hanzi = "张阳有一个妹妹，还是个中学生，我很喜欢这个女孩，非常聪明可爱。",
                     pinyin = "Zhāng Yáng yǒu yī gè mèi mei hái shì gè zhōng xué shēng wǒ hěn xǐ huan zhè gè nǚ hái fēi cháng cōng míng kě ài",
-                    translation = "A person&#x27;s name, zhang yang Mempunyai / Ada One Classifier for people or objects in general Adik perempuan Masih / Malahan Adalah Classifier for people or objects in general Middle-school student Saya Sangat Menyukai / Gemar This; these Classifier for people or objects in general Girl; lass Sangat / Amat Intelligent; clever; bright Adorable",
+                    translation = "Zhang Yang memiliki seorang adik perempuan yang masih duduk di bangku SMP, saya sangat menyukai gadis ini, sangat pintar dan lucu.",
                     tokens = listOf(
                         WordToken("张阳", "Zhāng Yáng", "A person&#x27;s name, zhang yang", "Kosakata HSK 2: 张阳 (Zhāng Yáng)"),
                         WordToken("有", "yǒu", "Mempunyai / Ada", "Menyatakan kepemilikan atau eksistensi"),
@@ -871,7 +871,7 @@ val mandarinBeanStoriesPart5: List<Story> by lazy {
                     id = "s_thisbf_6",
                     hanzi = "张阳的妈妈是护士，他的爸爸在一个小公司工作，我还没见过他们。",
                     pinyin = "Zhāng Yáng de mā ma shì hù shi tā de bà ba zài yī gè xiǎo gōng sī gōng zuò wǒ hái méi jiàn guo tā men",
-                    translation = "A person&#x27;s name, zhang yang Punya / Yang (partikel posesif) Ibu Adalah Perawat His; belonging to him Ayah Di / Berada di One Classifier for people or objects in general Kecil Perusahaan Bekerja Saya Masih / Malahan Belum / Tidak To see (experienced action marker) Mereka",
+                    translation = "Ibu Zhang Yang adalah seorang perawat, ayahnya bekerja di sebuah perusahaan kecil, saya belum pernah bertemu dengan mereka.",
                     tokens = listOf(
                         WordToken("张阳", "Zhāng Yáng", "A person&#x27;s name, zhang yang", "Kosakata HSK 2: 张阳 (Zhāng Yáng)"),
                         WordToken("的", "de", "Punya / Yang (partikel posesif)", "Partikel penjelas modifikasi atau kepemilikan"),
@@ -898,7 +898,7 @@ val mandarinBeanStoriesPart5: List<Story> by lazy {
                     id = "s_thisbf_7",
                     hanzi = "这就是我的男朋友和他的家人，你觉得怎么样？",
                     pinyin = "zhè jiù shì wǒ de nán péng you hé tā de jiā rén nǐ jué de zěn me yàng",
-                    translation = "This; these Langsung / Segera / Maka Adalah My; mine Pacar laki-laki Dan His; belonging to him Family member Kamu To think that ...; to feel that ... How?",
+                    translation = "Inilah pacar saya dan keluarganya, bagaimana menurutmu?",
                     tokens = listOf(
                         WordToken("这", "zhè", "This; these", "Kosakata HSK 2: 这 (zhè)"),
                         WordToken("就", "jiù", "Langsung / Segera / Maka", "Menyatakan ketepatan waktu atau kelogisan"),
@@ -962,7 +962,7 @@ val mandarinBeanStoriesPart5: List<Story> by lazy {
                     id = "s_worldcit_1",
                     hanzi = "我是哪里人？",
                     pinyin = "wǒ shì nǎ lǐ rén",
-                    translation = "Saya Adalah Where? Person; people",
+                    translation = "Saya orang mana?",
                     tokens = listOf(
                         WordToken("我", "wǒ", "Saya", "Kata ganti orang pertama tunggal"),
                         WordToken("是", "shì", "Adalah", "Kopula penjelas"),
@@ -974,7 +974,7 @@ val mandarinBeanStoriesPart5: List<Story> by lazy {
                     id = "s_worldcit_2",
                     hanzi = "这个问题很难回答。",
                     pinyin = "zhè gè wèn tí hěn nán huí dá",
-                    translation = "This; these Classifier for people or objects in general Question Sangat Difficult (to...) To reply; to answer",
+                    translation = "Pertanyaan ini sangat sulit dijawab.",
                     tokens = listOf(
                         WordToken("这", "zhè", "This; these", "Kosakata HSK 2: 这 (zhè)"),
                         WordToken("个", "gè", "Classifier for people or objects in general", "Kosakata HSK 2: 个 (gè)"),
@@ -988,7 +988,7 @@ val mandarinBeanStoriesPart5: List<Story> by lazy {
                     id = "s_worldcit_3",
                     hanzi = "我的爸爸是美国人，妈妈是韩国人。",
                     pinyin = "wǒ de bà ba shì Měi guó rén mā ma shì Hán guó rén",
-                    translation = "My; mine Ayah Adalah Amerika Serikat Person; people Ibu Adalah Korea Selatan Person; people",
+                    translation = "Ayah saya orang Amerika, ibu saya orang Korea.",
                     tokens = listOf(
                         WordToken("我的", "wǒ de", "My; mine", "Kosakata HSK 2: 我的 (wǒ de)"),
                         WordToken("爸爸", "bà ba", "Ayah", "Anggota keluarga"),
@@ -1005,7 +1005,7 @@ val mandarinBeanStoriesPart5: List<Story> by lazy {
                     id = "s_worldcit_4",
                     hanzi = "我在泰国出生，在中国长大，现在在法国读大学。",
                     pinyin = "wǒ zài Tài guó chū shēng zài Zhōng guó zhǎng dà xiàn zài zài Fǎ guó dú dà xué",
-                    translation = "Saya Di / Berada di Thailand To be born Di / Berada di China / Tiongkok To grow up Sekarang Di / Berada di Prancis To attend (school); to study (a subject in school) Universitas",
+                    translation = "Saya lahir di Thailand, tumbuh besar di Tiongkok, dan sekarang sedang kuliah di Prancis.",
                     tokens = listOf(
                         WordToken("我", "wǒ", "Saya", "Kata ganti orang pertama tunggal"),
                         WordToken("在", "zài", "Di / Berada di", "Preposisi lokasi atau aspek progresif"),
@@ -1025,7 +1025,7 @@ val mandarinBeanStoriesPart5: List<Story> by lazy {
                     id = "s_worldcit_5",
                     hanzi = "我爱每个地方的文化，也会说不同国家的语言，还有很多不同国家的朋友。",
                     pinyin = "wǒ ài měi gè dì fang de wén huà yě huì shuō bù tóng guó jiā de yǔ yán hái yǒu hěn duō bù tóng guó jiā de péng you",
-                    translation = "Saya Mencintai / Cinta Each Classifier for people or objects in general Place; location; area; space; territory Punya / Yang (partikel posesif) Culture Juga / Pun Can; to have the skill; to know how to Berbicara / Berkata Different Country; nation; state Punya / Yang (partikel posesif) Language Masih / Malahan Mempunyai / Ada Many; a lot of Different Country; nation; state Punya / Yang (partikel posesif) Teman / Sahabat",
+                    translation = "Saya mencintai budaya setiap tempat, bisa berbicara bahasa berbagai negara, dan juga memiliki banyak teman dari berbagai negara.",
                     tokens = listOf(
                         WordToken("我", "wǒ", "Saya", "Kata ganti orang pertama tunggal"),
                         WordToken("爱", "ài", "Mencintai / Cinta", "Perasaan kasih sayang mendalam"),
@@ -1054,7 +1054,7 @@ val mandarinBeanStoriesPart5: List<Story> by lazy {
                     id = "s_worldcit_6",
                     hanzi = "你问我是哪里人，我会说我是世界公民。",
                     pinyin = "nǐ wèn wǒ shì nǎ lǐ rén wǒ huì shuō wǒ shì shì jiè gōng mín",
-                    translation = "Kamu To ask; to inquire Saya Adalah Where? Person; people Saya Can; to have the skill; to know how to Berbicara / Berkata Saya Adalah World Citizen",
+                    translation = "Jika kamu bertanya saya orang mana, saya akan menjawab bahwa saya adalah warga dunia.",
                     tokens = listOf(
                         WordToken("你", "nǐ", "Kamu", "Kata ganti orang kedua tunggal"),
                         WordToken("问", "wèn", "To ask; to inquire", "Kosakata HSK 2: 问 (wèn)"),
@@ -1075,7 +1075,7 @@ val mandarinBeanStoriesPart5: List<Story> by lazy {
                     id = "s_worldcit_7",
                     hanzi = "你呢？",
                     pinyin = "nǐ ne",
-                    translation = "Kamu Bagaimana dengan / sedang (partikel modal)",
+                    translation = "Bagaimana denganmu?",
                     tokens = listOf(
                         WordToken("你", "nǐ", "Kamu", "Kata ganti orang kedua tunggal"),
                         WordToken("呢", "ne", "Bagaimana dengan / sedang (partikel modal)", "Partikel tanya atau penanda sedang berlangsung")
@@ -1085,7 +1085,7 @@ val mandarinBeanStoriesPart5: List<Story> by lazy {
                     id = "s_worldcit_8",
                     hanzi = "你是哪里人？",
                     pinyin = "nǐ shì nǎ lǐ rén",
-                    translation = "Kamu Adalah Where? Person; people",
+                    translation = "Kamu orang mana?",
                     tokens = listOf(
                         WordToken("你", "nǐ", "Kamu", "Kata ganti orang kedua tunggal"),
                         WordToken("是", "shì", "Adalah", "Kopula penjelas"),
@@ -1142,7 +1142,7 @@ val mandarinBeanStoriesPart5: List<Story> by lazy {
                     id = "s_hometown_1",
                     hanzi = "我有一个朋友，他的家乡不是这个城市。",
                     pinyin = "wǒ yǒu yī gè péng you tā de jiā xiāng bù shì zhè gè chéng shì",
-                    translation = "Saya Mempunyai / Ada One Classifier for people or objects in general Teman / Sahabat His; belonging to him Kampung halaman Tidak Adalah This; these Classifier for people or objects in general City; town",
+                    translation = "Saya mempunyai seorang teman, kampung halamannya bukan di kota ini.",
                     tokens = listOf(
                         WordToken("我", "wǒ", "Saya", "Kata ganti orang pertama tunggal"),
                         WordToken("有", "yǒu", "Mempunyai / Ada", "Menyatakan kepemilikan atau eksistensi"),
@@ -1162,7 +1162,7 @@ val mandarinBeanStoriesPart5: List<Story> by lazy {
                     id = "s_hometown_2",
                     hanzi = "他经常说，他的家乡和这个城市很不一样。",
                     pinyin = "tā jīng cháng shuō tā de jiā xiāng hé zhè gè chéng shì hěn bù yī yàng",
-                    translation = "Dia (laki-laki) Frequently; constantly; regularly; often Berbicara / Berkata His; belonging to him Kampung halaman Dan This; these Classifier for people or objects in general City; town Sangat Tidak Same",
+                    translation = "Dia sering bercerita bahwa kampung halamannya dan kota ini sangat berbeda.",
                     tokens = listOf(
                         WordToken("他", "tā", "Dia (laki-laki)", "Kata ganti orang ketiga tunggal"),
                         WordToken("经常", "jīng cháng", "Frequently; constantly; regularly; often", "Kosakata HSK 2: 经常 (jīng cháng)"),
@@ -1182,7 +1182,7 @@ val mandarinBeanStoriesPart5: List<Story> by lazy {
                     id = "s_hometown_3",
                     hanzi = "我以为他会不开心，因为家人都不在这儿。",
                     pinyin = "wǒ yǐ wéi tā huì bù kāi xīn yīn wèi jiā rén dōu bù zài zhè r",
-                    translation = "Saya To think; to believe Dia (laki-laki) To be likely to; to be sure to Tidak To feel happy Karena Family member Semua / Seluruhnya Tidak Di / Berada di Sini",
+                    translation = "Semula saya mengira dia akan merasa tidak bahagia karena keluarganya tidak ada di sini.",
                     tokens = listOf(
                         WordToken("我", "wǒ", "Saya", "Kata ganti orang pertama tunggal"),
                         WordToken("以为", "yǐ wéi", "To think; to believe", "Kosakata HSK 2: 以为 (yǐ wéi)"),
@@ -1202,7 +1202,7 @@ val mandarinBeanStoriesPart5: List<Story> by lazy {
                     id = "s_hometown_4",
                     hanzi = "但是他告诉我，无论在哪儿，只要有好邻居、好朋友，就像在家一样。",
                     pinyin = "dàn shì tā gào su wǒ wú lùn zài nǎ r zhǐ yào yǒu hǎo lín jū hǎo péng you jiù xiàng zài jiā yī yàng",
-                    translation = "Tetapi / Namun Dia (laki-laki) To tell; to inform; to let know Saya No matter what or how Di / Berada di Di mana So long as; provided; if Mempunyai / Ada Bagus / Baik Neighbor Bagus / Baik Teman / Sahabat Langsung / Segera / Maka To resemble Di / Berada di Rumah / Keluarga Just like",
+                    translation = "Tetapi dia mengatakan kepada saya bahwa di mana pun berada, asalkan ada tetangga yang baik dan teman yang baik, rasanya seperti di rumah sendiri.",
                     tokens = listOf(
                         WordToken("但是", "dàn shì", "Tetapi / Namun", "Kata hubung pertentangan"),
                         WordToken("他", "tā", "Dia (laki-laki)", "Kata ganti orang ketiga tunggal"),
@@ -1228,7 +1228,7 @@ val mandarinBeanStoriesPart5: List<Story> by lazy {
                     id = "s_hometown_5",
                     hanzi = "他也经常说家乡话，我觉得太有趣了，我一定要学几句。",
                     pinyin = "tā yě jīng cháng shuō jiā xiāng huà wǒ jué de tài yǒu qù le wǒ yī dìng yào xué jǐ jù",
-                    translation = "Dia (laki-laki) Juga / Pun Frequently; constantly; regularly; often Berbicara / Berkata Kampung halaman Dialect Saya To think that ...; to feel that ... Terlalu Interesting; fascinating; amusing Sudah (partikel perubahan situasi) Saya Surely; certainly; definitely Mau / Akan / Harus Belajar Several Classifier for phrases or lines of verse",
+                    translation = "Dia juga sering berbicara dialek kampung halamannya, menurut saya sangat menarik, saya pasti akan belajar beberapa kalimat.",
                     tokens = listOf(
                         WordToken("他", "tā", "Dia (laki-laki)", "Kata ganti orang ketiga tunggal"),
                         WordToken("也", "yě", "Juga / Pun", "Partikel penanda kesamaan"),
@@ -1298,7 +1298,7 @@ val mandarinBeanStoriesPart5: List<Story> by lazy {
                     id = "s_chinayears_1",
                     hanzi = "我来中国学习和工作三年了。",
                     pinyin = "wǒ lái Zhōng guó xué xí hé gōng zuò sān nián le",
-                    translation = "Saya Datang China / Tiongkok Belajar / Studi Dan Bekerja Three Tahun Sudah (partikel perubahan situasi)",
+                    translation = "Sudah tiga tahun saya datang ke Tiongkok untuk belajar dan bekerja.",
                     tokens = listOf(
                         WordToken("我", "wǒ", "Saya", "Kata ganti orang pertama tunggal"),
                         WordToken("来", "lái", "Datang", "Menuju ke arah pembicara"),
@@ -1315,7 +1315,7 @@ val mandarinBeanStoriesPart5: List<Story> by lazy {
                     id = "s_chinayears_2",
                     hanzi = "五年前，我第一次来中国旅游，爱上了这里吃的东西。",
                     pinyin = "wǔ nián qián wǒ dì yī cì lái Zhōng guó lǚ yóu ài shàng le zhè lǐ chī de dōng xi",
-                    translation = "Five Tahun Ago Saya First Classifier for enumerated events: time Datang China / Tiongkok To travel Mencintai / Cinta (directional complement) up Sudah (partikel perubahan situasi) Here Makan Punya / Yang (partikel posesif) Thing",
+                    translation = "Lima tahun yang lalu, saya pertama kali berkunjung ke Tiongkok untuk berwisata, dan langsung jatuh cinta pada makanan di sini.",
                     tokens = listOf(
                         WordToken("五", "wǔ", "Five", "Kosakata HSK 2: 五 (wǔ)"),
                         WordToken("年", "nián", "Tahun", "Satuan tahun"),
@@ -1339,7 +1339,7 @@ val mandarinBeanStoriesPart5: List<Story> by lazy {
                     id = "s_chinayears_3",
                     hanzi = "回国后，我开始在网上学习汉语，一开始自己学习，后来又在网上找了一位汉语老师帮助我。",
                     pinyin = "huí guó hòu wǒ kāi shǐ zài wǎng shang xué xí Hàn yǔ yī kāi shǐ zì jǐ xué xí hòu lái yòu zài wǎng shang zhǎo le yī wèi Hàn yǔ lǎo shī bāng zhù wǒ",
-                    translation = "Kembali / Pulang Country; nation; state Afterwards Saya To begin Di / Berada di Online Belajar / Studi Chinese language As soon as Beginning Oneself; (attributive) one&#x27;s own Belajar / Studi Afterwards; later Lagi (telah terjadi) Di / Berada di Online To try to find Sudah (partikel perubahan situasi) One Classifier for people (honorific) Chinese language Guru To help; to assist Saya",
+                    translation = "Setelah pulang ke negara asal, saya mulai belajar bahasa Mandarin di internet; awalnya belajar mandiri, kemudian mencari seorang guru bahasa Mandarin daring untuk membantu saya.",
                     tokens = listOf(
                         WordToken("回", "huí", "Kembali / Pulang", "Menuju ke tempat asal"),
                         WordToken("国", "guó", "Country; nation; state", "Kosakata HSK 2: 国 (guó)"),
@@ -1372,7 +1372,7 @@ val mandarinBeanStoriesPart5: List<Story> by lazy {
                     id = "s_chinayears_4",
                     hanzi = "我考过了HSK4级考试以后，就想来中国继续学习。",
                     pinyin = "wǒ kǎo guo le jí kǎo shì yǐ hòu jiù xiǎng lái Zhōng guó jì xù xué xí",
-                    translation = "Saya To check (experienced action marker) Sudah (partikel perubahan situasi) Level Exam After Langsung / Segera / Maka Ingin / Berpikir / Rindu Datang China / Tiongkok To continue; to proceed with; to go on with Belajar / Studi",
+                    translation = "Setelah lulus ujian HSK level 4, saya ingin datang ke Tiongkok untuk melanjutkan belajar.",
                     tokens = listOf(
                         WordToken("我", "wǒ", "Saya", "Kata ganti orang pertama tunggal"),
                         WordToken("考", "kǎo", "To check", "Kosakata HSK 2: 考 (kǎo)"),
@@ -1393,7 +1393,7 @@ val mandarinBeanStoriesPart5: List<Story> by lazy {
                     id = "s_chinayears_5",
                     hanzi = "到了中国以后，我先在北京学习汉语，后来找到了上海的工作，就来上海生活了。",
                     pinyin = "dào le Zhōng guó yǐ hòu wǒ xiān zài Běi jīng xué xí Hàn yǔ hòu lái zhǎo dào le Shàng hǎi de gōng zuò jiù lái Shàng hǎi shēng huó le",
-                    translation = "To reach; to arrive Sudah (partikel perubahan situasi) China / Tiongkok After Saya Beforehand; first; earlier Di / Berada di Beijing municipality, capital of the people&#x27;s republic of china Belajar / Studi Chinese language Afterwards; later To try to find To reach; to arrive Sudah (partikel perubahan situasi) Shanghai municipality Punya / Yang (partikel posesif) Bekerja Langsung / Segera / Maka Datang Shanghai municipality To live Sudah (partikel perubahan situasi)",
+                    translation = "Setelah tiba di Tiongkok, mula-mula saya belajar bahasa Mandarin di Beijing, kemudian mendapatkan pekerjaan di Shanghai, lalu datang dan tinggal di Shanghai.",
                     tokens = listOf(
                         WordToken("到", "dào", "To reach; to arrive", "Kosakata HSK 2: 到 (dào)"),
                         WordToken("了", "le", "Sudah (partikel perubahan situasi)", "Partikel aspek selesainya tindakan"),
@@ -1423,7 +1423,7 @@ val mandarinBeanStoriesPart5: List<Story> by lazy {
                     id = "s_chinayears_6",
                     hanzi = "三年了，我越来越了解中国文化，也交了很多中国朋友。",
                     pinyin = "sān nián le wǒ yuè lái yuè liǎo jiě Zhōng guó wén huà yě jiāo le hěn duō Zhōng guó péng you",
-                    translation = "Three Tahun Sudah (partikel perubahan situasi) Saya More and more To understand China / Tiongkok Culture Juga / Pun To make friends Sudah (partikel perubahan situasi) Many; a lot of China / Tiongkok Teman / Sahabat",
+                    translation = "Sudah tiga tahun berjalan, saya semakin memahami kebudayaan Tiongkok dan juga berteman dengan banyak orang Tiongkok.",
                     tokens = listOf(
                         WordToken("三", "sān", "Three", "Kosakata HSK 2: 三 (sān)"),
                         WordToken("年", "nián", "Tahun", "Satuan tahun"),
@@ -1445,7 +1445,7 @@ val mandarinBeanStoriesPart5: List<Story> by lazy {
                     id = "s_chinayears_7",
                     hanzi = "我想明年去广东工作。",
                     pinyin = "wǒ xiǎng míng nián qù Guǎng dōng gōng zuò",
-                    translation = "Saya Ingin / Berpikir / Rindu Next year Pergi Guangdong; a province in southern china. Bekerja",
+                    translation = "Tahun depan saya ingin pergi bekerja ke Guangdong.",
                     tokens = listOf(
                         WordToken("我", "wǒ", "Saya", "Kata ganti orang pertama tunggal"),
                         WordToken("想", "xiǎng", "Ingin / Berpikir / Rindu", "Keinginan atau pemikiran batin"),
@@ -1459,7 +1459,7 @@ val mandarinBeanStoriesPart5: List<Story> by lazy {
                     id = "s_chinayears_8",
                     hanzi = "广东是个暖和的地方，还有很多好吃的东西，我应该会很快乐。",
                     pinyin = "Guǎng dōng shì gè nuǎn huo de dì fang hái yǒu hěn duō hǎo chī de dōng xi wǒ yīng gāi huì hěn kuài lè",
-                    translation = "Guangdong; a province in southern china. Adalah Classifier for people or objects in general Warm Punya / Yang (partikel posesif) Place; location; area; space; territory Masih / Malahan Mempunyai / Ada Many; a lot of Tasty; delicious Punya / Yang (partikel posesif) Thing Saya Ought to; should; must To be likely to; to be sure to Sangat Happy; joyful",
+                    translation = "Guangdong adalah tempat yang hangat dan banyak makanan lezat, saya pasti akan sangat bahagia di sana.",
                     tokens = listOf(
                         WordToken("广东", "Guǎng dōng", "Guangdong; a province in southern china.", "Kosakata HSK 2: 广东 (Guǎng dōng)"),
                         WordToken("是", "shì", "Adalah", "Kopula penjelas"),
