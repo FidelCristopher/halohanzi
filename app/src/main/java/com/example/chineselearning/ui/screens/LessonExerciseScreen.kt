@@ -433,20 +433,21 @@ fun LessonExerciseScreen(
                             }
                         }
                     } else if (exercise.targetHanzi.isNotBlank()) {
-                        Spacer(modifier = Modifier.height(6.dp))
+                        Spacer(modifier = Modifier.height(8.dp))
                         AlignedHanziPinyinText(
                             targetHanzi = exercise.targetHanzi,
                             targetPinyin = exercise.targetPinyin,
-                            hanziFontSize = 22.sp,
-                            pinyinFontSize = 13.sp,
+                            hanziFontSize = 28.sp,
+                            pinyinFontSize = 16.sp,
                             hanziFontWeight = FontWeight.Bold,
                             modifier = Modifier.fillMaxWidth(),
                             horizontalAlignment = Alignment.CenterHorizontally
                         )
                         if (exercise.targetTranslation.isNotBlank()) {
+                            Spacer(modifier = Modifier.height(6.dp))
                             Text(
                                 text = exercise.targetTranslation,
-                                fontSize = 13.sp,
+                                fontSize = 16.sp,
                                 color = SlateGray,
                                 modifier = Modifier.fillMaxWidth(),
                                 textAlign = TextAlign.Center
@@ -1415,8 +1416,8 @@ fun LessonExerciseScreen(
                                                 AlignedHanziPinyinText(
                                                     targetHanzi = hanzi,
                                                     targetPinyin = pinyin,
-                                                    hanziFontSize = 22.sp,
-                                                    pinyinFontSize = 13.sp,
+                                                    hanziFontSize = 25.sp,
+                                                    pinyinFontSize = 14.5.sp,
                                                     hanziColor = if (isSelected) Color(0xFF007AFF) else HanziColor,
                                                     pinyinColor = if (isSelected) Color(0xFF007AFF) else SlateGray,
                                                     horizontalAlignment = Alignment.CenterHorizontally
@@ -1424,7 +1425,7 @@ fun LessonExerciseScreen(
                                             } else {
                                                 Text(
                                                     text = opt,
-                                                    fontSize = 18.sp,
+                                                    fontSize = 19.sp,
                                                     fontWeight = if (isSelected) FontWeight.Medium else FontWeight.Normal,
                                                     color = if (isSelected) Color(0xFF007AFF) else DeepNavy,
                                                     textAlign = TextAlign.Center
@@ -1467,18 +1468,18 @@ fun LessonExerciseScreen(
                                     AlignedHanziPinyinText(
                                         targetHanzi = hanziPart,
                                         targetPinyin = pinyinPart,
-                                        hanziFontSize = 24.sp,
-                                        pinyinFontSize = 14.sp,
+                                        hanziFontSize = 27.sp,
+                                        pinyinFontSize = 16.sp,
                                         hanziColor = if (isSelected) Color(0xFF007AFF) else DeepNavy,
                                         pinyinColor = if (isSelected) Color(0xFF007AFF) else SlateGray
                                     )
                                 } else {
                                     Text(
                                         text = opt,
-                                        fontSize = 17.sp,
+                                        fontSize = 19.sp,
                                         fontWeight = if (isSelected) FontWeight.Medium else FontWeight.Normal,
                                         color = if (isSelected) Color(0xFF007AFF) else DeepNavy,
-                                        lineHeight = 24.sp
+                                        lineHeight = 26.sp
                                     )
                                 }
                             }

@@ -862,13 +862,13 @@ fun IllustrationSentenceBuilder(
                     val isWide = hanzi.length >= 2
 
                     val chipModifier = if (rowChips.size <= 2 && chipRows.size > 1) {
-                        Modifier.width(66.dp).height(64.dp)
+                        Modifier.width(66.dp).height(70.dp)
                     } else if (isWide && rowChips.size <= 5) {
-                        Modifier.weight(1.5f).height(64.dp)
+                        Modifier.weight(1.5f).height(70.dp)
                     } else if (isWide && rowChips.size > 5) {
-                        Modifier.weight(1.35f).height(64.dp)
+                        Modifier.weight(1.35f).height(70.dp)
                     } else {
-                        Modifier.weight(1f).height(64.dp)
+                        Modifier.weight(1f).height(70.dp)
                     }
 
                     if (isUsed) {
@@ -899,17 +899,24 @@ fun IllustrationSentenceBuilder(
                                     .padding(horizontal = 2.dp, vertical = 4.dp)
                             ) {
                                 if (pinyin.isNotBlank()) {
+                                    val chipPinyinSize = when {
+                                        rowChips.size >= 7 -> 11.5.sp
+                                        pinyin.length >= 10 -> 11.5.sp
+                                        pinyin.length >= 8 -> 13.5.sp
+                                        else -> 15.sp
+                                    }
                                     Text(
                                         text = pinyin,
-                                        fontSize = if (rowChips.size >= 7) 10.sp else 12.sp,
+                                        fontSize = chipPinyinSize,
                                         color = DeepNavy,
-                                        maxLines = 1
+                                        maxLines = 1,
+                                        softWrap = false
                                     )
                                 }
                                 Text(
                                     text = hanzi,
                                     fontFamily = KaiTiFontFamily,
-                                    fontSize = if (rowChips.size >= 7) 16.sp else if (isWide) 17.sp else 20.sp,
+                                    fontSize = if (rowChips.size >= 7) 18.sp else if (isWide) 20.sp else 25.sp,
                                     fontWeight = FontWeight.Normal,
                                     color = DeepNavy,
                                     maxLines = 1
@@ -1692,9 +1699,9 @@ fun ImmersiveSentenceBuilder(
                             val pinyin = if (chip.contains(":")) chip.substringAfter(":") else ""
 
                             val chipModifier = if (rowChips.size == 1 && chipRows.size > 1) {
-                                Modifier.width(66.dp).height(64.dp)
+                                Modifier.width(66.dp).height(70.dp)
                             } else {
-                                Modifier.weight(1f).height(64.dp)
+                                Modifier.weight(1f).height(70.dp)
                             }
 
                             if (isUsed) {
@@ -1722,15 +1729,15 @@ fun ImmersiveSentenceBuilder(
                                         verticalArrangement = Arrangement.Center,
                                         modifier = Modifier.fillMaxSize().padding(horizontal = 2.dp, vertical = 4.dp)
                                     ) {
-                                if (pinyin.isNotBlank()) {
-                                    val chipPinyinSize = when {
-                                        pinyin.length >= 10 -> 9.5.sp
-                                        pinyin.length >= 8 -> 11.sp
-                                        else -> 12.sp
-                                    }
-                                    Text(text = pinyin, fontSize = chipPinyinSize, color = DeepNavy, maxLines = 1, softWrap = false)
-                                }
-                                Text(text = hanzi, fontFamily = KaiTiFontFamily, fontSize = 20.sp, fontWeight = FontWeight.Normal, color = DeepNavy, maxLines = 1)
+                                        if (pinyin.isNotBlank()) {
+                                            val chipPinyinSize = when {
+                                                pinyin.length >= 10 -> 11.5.sp
+                                                pinyin.length >= 8 -> 13.5.sp
+                                                else -> 15.sp
+                                            }
+                                            Text(text = pinyin, fontSize = chipPinyinSize, color = DeepNavy, maxLines = 1, softWrap = false)
+                                        }
+                                        Text(text = hanzi, fontFamily = KaiTiFontFamily, fontSize = 25.sp, fontWeight = FontWeight.Normal, color = DeepNavy, maxLines = 1)
                                     }
                                 }
                             }
@@ -1853,8 +1860,8 @@ fun FullTranslationSentenceBuilder(
                         horizontalAlignment = Alignment.CenterHorizontally,
                         modifier = Modifier.padding(horizontal = 12.dp, vertical = 6.dp)
                     ) {
-                        if (pinyin.isNotBlank()) Text(text = pinyin, fontSize = 13.sp, color = DeepNavy)
-                        Text(text = hanzi, fontFamily = KaiTiFontFamily, fontSize = 21.sp, fontWeight = FontWeight.Normal, color = DeepNavy)
+                        if (pinyin.isNotBlank()) Text(text = pinyin, fontSize = 14.5.sp, color = DeepNavy)
+                        Text(text = hanzi, fontFamily = KaiTiFontFamily, fontSize = 24.sp, fontWeight = FontWeight.Normal, color = DeepNavy)
                     }
                 }
             }
@@ -1886,7 +1893,7 @@ fun FullTranslationSentenceBuilder(
                     val hanzi = chip.substringBefore(":")
                     val pinyin = if (chip.contains(":")) chip.substringAfter(":") else ""
                     val isWide = hanzi.length >= 4
-                    val chipModifier = if (isWide) Modifier.weight(1.8f).height(64.dp) else Modifier.weight(1f).height(64.dp)
+                    val chipModifier = if (isWide) Modifier.weight(1.8f).height(70.dp) else Modifier.weight(1f).height(70.dp)
 
                     if (isUsed) {
                         Box(modifier = chipModifier.clip(RoundedCornerShape(14.dp)).background(Color(0xFFE2E8F0)))
@@ -1911,13 +1918,13 @@ fun FullTranslationSentenceBuilder(
                             ) {
                                 if (pinyin.isNotBlank()) {
                                     val chipPinyinSize = when {
-                                        pinyin.length >= 10 -> 9.5.sp
-                                        pinyin.length >= 8 -> 11.sp
-                                        else -> 12.sp
+                                        pinyin.length >= 10 -> 11.5.sp
+                                        pinyin.length >= 8 -> 13.5.sp
+                                        else -> 15.sp
                                     }
                                     Text(text = pinyin, fontSize = chipPinyinSize, color = DeepNavy, maxLines = 1, softWrap = false)
                                 }
-                                Text(text = hanzi, fontFamily = KaiTiFontFamily, fontSize = if (isWide) 16.sp else 20.sp, fontWeight = FontWeight.Normal, color = DeepNavy, maxLines = 1)
+                                Text(text = hanzi, fontFamily = KaiTiFontFamily, fontSize = if (isWide) 20.sp else 25.sp, fontWeight = FontWeight.Normal, color = DeepNavy, maxLines = 1)
                             }
                         }
                     }
@@ -1965,17 +1972,17 @@ private fun BuilderSlot(
                     ) {
                         if (pinyin.isNotBlank()) {
                             val slotPinyinSize = when {
-                                pinyin.length >= 10 -> 10.sp
-                                pinyin.length >= 8 -> 11.5.sp
-                                else -> 13.sp
+                                pinyin.length >= 10 -> 12.sp
+                                pinyin.length >= 8 -> 13.5.sp
+                                else -> 15.sp
                             }
                             Text(text = pinyin, fontSize = slotPinyinSize, color = DeepNavy, maxLines = 1, softWrap = false)
                         }
-                        Text(text = hanzi, fontFamily = KaiTiFontFamily, fontSize = 21.sp, fontWeight = FontWeight.Normal, color = DeepNavy)
+                        Text(text = hanzi, fontFamily = KaiTiFontFamily, fontSize = 25.sp, fontWeight = FontWeight.Normal, color = DeepNavy)
                     }
                 }
             } else {
-                Box(modifier = Modifier.width(width).height(48.dp))
+                Box(modifier = Modifier.width(width).height(54.dp))
             }
             if (hasCommaAfter) {
                 Text(text = " ，", fontFamily = KaiTiFontFamily, fontSize = 22.sp, color = DeepNavy, modifier = Modifier.padding(bottom = 6.dp))
@@ -2445,9 +2452,9 @@ fun StandardSentenceBuilder(
                     val pinyin = if (chip.contains(":")) chip.substringAfter(":") else ""
 
                     val chipModifier = if (rowChips.size <= 2 && chipRows.size > 1) {
-                        Modifier.width(66.dp).height(64.dp)
+                        Modifier.width(66.dp).height(70.dp)
                     } else {
-                        Modifier.weight(1f).height(64.dp)
+                        Modifier.weight(1f).height(70.dp)
                     }
 
                     if (isUsed) {
@@ -2473,13 +2480,13 @@ fun StandardSentenceBuilder(
                             ) {
                                 if (pinyin.isNotBlank()) {
                                     val chipPinyinSize = when {
-                                        pinyin.length >= 10 -> 9.5.sp
-                                        pinyin.length >= 8 -> 11.sp
-                                        else -> 12.sp
+                                        pinyin.length >= 10 -> 11.5.sp
+                                        pinyin.length >= 8 -> 13.5.sp
+                                        else -> 15.sp
                                     }
                                     Text(text = pinyin, fontSize = chipPinyinSize, color = DeepNavy, maxLines = 1, softWrap = false)
                                 }
-                                Text(text = hanzi, fontFamily = KaiTiFontFamily, fontSize = 20.sp, fontWeight = FontWeight.Normal, color = DeepNavy, maxLines = 1)
+                                Text(text = hanzi, fontFamily = KaiTiFontFamily, fontSize = 25.sp, fontWeight = FontWeight.Normal, color = DeepNavy, maxLines = 1)
                             }
                         }
                     }
@@ -2579,9 +2586,9 @@ fun DialogueBuilderExercise(
                                     modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp)
                                 ) {
                                     if (pinyin.isNotBlank()) {
-                                        Text(text = pinyin, fontSize = 12.sp, color = DeepNavy)
+                                        Text(text = pinyin, fontSize = 14.5.sp, color = DeepNavy)
                                     }
-                                    Text(text = hanzi, fontFamily = KaiTiFontFamily, fontSize = 19.sp, fontWeight = FontWeight.Normal, color = DeepNavy)
+                                    Text(text = hanzi, fontFamily = KaiTiFontFamily, fontSize = 24.sp, fontWeight = FontWeight.Normal, color = DeepNavy)
                                 }
                             }
                         }
@@ -2654,7 +2661,7 @@ fun DialogueBuilderExercise(
             val pinyin = if (chip.contains(":")) chip.substringAfter(":") else ""
             val isWide = hanzi.length >= 2
 
-            val chipModifier = if (isWide) Modifier.weight(1.5f).height(64.dp) else Modifier.weight(1f).height(64.dp)
+            val chipModifier = if (isWide) Modifier.weight(1.5f).height(70.dp) else Modifier.weight(1f).height(70.dp)
 
             if (isUsed) {
                 Box(
@@ -2683,12 +2690,12 @@ fun DialogueBuilderExercise(
                             .padding(horizontal = 2.dp, vertical = 4.dp)
                     ) {
                         if (pinyin.isNotBlank()) {
-                            Text(text = pinyin, fontSize = 12.sp, color = DeepNavy, maxLines = 1)
+                            Text(text = pinyin, fontSize = 15.sp, color = DeepNavy, maxLines = 1)
                         }
                         Text(
                             text = hanzi,
                             fontFamily = KaiTiFontFamily,
-                            fontSize = if (isWide) 17.sp else 20.sp,
+                            fontSize = if (isWide) 20.sp else 25.sp,
                             fontWeight = FontWeight.Normal,
                             color = DeepNavy,
                             maxLines = 1
