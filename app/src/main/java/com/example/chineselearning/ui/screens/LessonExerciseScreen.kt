@@ -1409,25 +1409,18 @@ fun LessonExerciseScreen(
                                                 .padding(if (hasIllustration) 8.dp else 12.dp),
                                             contentAlignment = Alignment.Center
                                         ) {
-                                            if (hasIllustration && opt.contains("\n")) {
+                                            if (opt.contains("\n")) {
                                                 val pinyin = opt.substringBefore("\n")
                                                 val hanzi = opt.substringAfter("\n")
-                                                Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                                                    Text(
-                                                        text = pinyin,
-                                                        fontSize = 14.sp,
-                                                        fontWeight = FontWeight.Normal,
-                                                        color = DeepNavy
-                                                    )
-                                                    Spacer(modifier = Modifier.height(2.dp))
-                                                    Text(
-                                                        text = hanzi,
-                                                        fontFamily = KaiTiFontFamily,
-                                                        fontSize = 22.sp,
-                                                        fontWeight = FontWeight.SemiBold,
-                                                        color = HanziColor
-                                                    )
-                                                }
+                                                AlignedHanziPinyinText(
+                                                    targetHanzi = hanzi,
+                                                    targetPinyin = pinyin,
+                                                    hanziFontSize = 22.sp,
+                                                    pinyinFontSize = 13.sp,
+                                                    hanziColor = if (isSelected) Color(0xFF007AFF) else HanziColor,
+                                                    pinyinColor = if (isSelected) Color(0xFF007AFF) else SlateGray,
+                                                    horizontalAlignment = Alignment.CenterHorizontally
+                                                )
                                             } else {
                                                 Text(
                                                     text = opt,
@@ -1469,27 +1462,16 @@ fun LessonExerciseScreen(
                                     .padding(horizontal = 20.dp, vertical = 18.dp)
                             ) {
                                 if (opt.contains("\n")) {
-                                    val lines = opt.split("\n")
-                                    val pinyinPart = lines.getOrNull(0) ?: ""
-                                    val hanziPart = lines.getOrNull(1) ?: ""
-                                    Column {
-                                        if (pinyinPart.isNotBlank()) {
-                                            Text(
-                                                text = pinyinPart,
-                                                fontSize = 15.sp,
-                                                fontWeight = FontWeight.Normal,
-                                                color = if (isSelected) Color(0xFF007AFF) else SlateGray
-                                            )
-                                            Spacer(modifier = Modifier.height(4.dp))
-                                        }
-                                        Text(
-                                            text = hanziPart,
-                                            fontFamily = KaiTiFontFamily,
-                                            fontSize = 24.sp,
-                                            fontWeight = FontWeight.Normal,
-                                            color = if (isSelected) Color(0xFF007AFF) else DeepNavy
-                                        )
-                                    }
+                                    val pinyinPart = opt.substringBefore("\n")
+                                    val hanziPart = opt.substringAfter("\n")
+                                    AlignedHanziPinyinText(
+                                        targetHanzi = hanziPart,
+                                        targetPinyin = pinyinPart,
+                                        hanziFontSize = 24.sp,
+                                        pinyinFontSize = 14.sp,
+                                        hanziColor = if (isSelected) Color(0xFF007AFF) else DeepNavy,
+                                        pinyinColor = if (isSelected) Color(0xFF007AFF) else SlateGray
+                                    )
                                 } else {
                                     Text(
                                         text = opt,

@@ -75,10 +75,10 @@ val stage4Part1Exercises = listOf<Exercise>(
         type = ExerciseType.SENTENCE_CHOICE,
         title = "Pilih kalimat yang benar secara tata bahasa",
         options = listOf(
-            "Zhè shì lǎobǎn de péngyou\n这是 老板 的 朋友 。",
-            "Lǎobǎn de péngyou shì zhè\n老板 的 朋友 是 这 。"
+            "Zhè shì lǎobǎn de péngyou\n这 是 老板 的 朋友。",
+            "Lǎobǎn de péngyou shì zhè\n老板 的 朋友 是 这。"
         ),
-        correctAnswer = "Zhè shì lǎobǎn de péngyou\n这是 老板 的 朋友 。",
+        correctAnswer = "Zhè shì lǎobǎn de péngyou\n这 是 老板 的 朋友。",
         audioToSpeak = "这是老板的朋友。"
     ),
 
@@ -137,10 +137,10 @@ val stage4Part1Exercises = listOf<Exercise>(
         dialogueSpeakerText = "那是你们 的 老板 吗？",
         dialogueSpeakerPinyin = "Nà shì nǐ men de lǎobǎn ma",
         options = listOf(
-            "Bú shì nà bú shì wǒ men de lǎobǎn\n不是 ， 那 不是 我们 的 老板 。",
-            "Shì tā shì wǒ de xuéshēng\n是 ， 他是我的 学生 。"
+            "Bú shì nà bú shì wǒ men de lǎobǎn\n不 是， 那 不 是 我 们 的 老板。",
+            "Shì tā shì wǒ de xuéshēng\n是， 他 是 我 的 学生。"
         ),
-        correctAnswer = "Bú shì nà bú shì wǒ men de lǎobǎn\n不是 ， 那 不是 我们 的 老板 。",
+        correctAnswer = "Bú shì nà bú shì wǒ men de lǎobǎn\n不 是， 那 不 是 我 们 的 老板。",
         audioToSpeak = "不是，那不是我们的老板。"
     ),
 

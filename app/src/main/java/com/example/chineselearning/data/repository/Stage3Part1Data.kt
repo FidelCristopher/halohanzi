@@ -108,12 +108,12 @@ val stage3Part1Exercises = listOf<Exercise>(
         title = "Pilih terjemahan yang benar",
         targetTranslation = "Ini adalah bos kami.",
         options = listOf(
-            "Zhè shì wǒ de péngyou\n这是我的 朋友 。",
-            "Zhè shì lǎobǎn de péngyou\n这是 老板 的 朋友 。",
-            "Zhè bú shì wǒ men de tóngshì\n这不是我们 的 同事 。",
-            "Zhè shì wǒ men de lǎobǎn\n这是我们 的 老板 。"
+            "Zhè shì wǒ de péngyou\n这 是 我 的 朋友。",
+            "Zhè shì lǎobǎn de péngyou\n这 是 老板 的 朋友。",
+            "Zhè bú shì wǒ men de tóngshì\n这 不 是 我 们 的 同事。",
+            "Zhè shì wǒ men de lǎobǎn\n这 是 我 们 的 老板。"
         ),
-        correctAnswer = "Zhè shì wǒ men de lǎobǎn\n这是我们 的 老板 。",
+        correctAnswer = "Zhè shì wǒ men de lǎobǎn\n这 是 我 们 的 老板。",
         audioToSpeak = "这是我们的老板。"
     ),
 

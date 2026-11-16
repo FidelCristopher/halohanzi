@@ -109,12 +109,12 @@ val stage1Part1Exercises = listOf<Exercise>(
         title = "Pilih terjemahan yang benar",
         targetTranslation = "Apakah mereka(L) teman kelas?",
         options = listOf(
-            "Nǐ men shì lǎoshī ma\n你们 是 老师 吗？",
-            "Tā men shì péngyou ma\n她们 是 朋友 吗？",
-            "Nǐ men shì péngyou ma\n你们 是 朋友 吗？",
-            "Tā men shì tóngxué ma\n他们 是 同学 吗？"
+            "Nǐ men shì lǎoshī ma\n你 们 是 老师 吗？",
+            "Tā men shì péngyou ma\n她 们 是 朋友 吗？",
+            "Nǐ men shì péngyou ma\n你 们 是 朋友 吗？",
+            "Tā men shì tóngxué ma\n他 们 是 同学 吗？"
         ),
-        correctAnswer = "Tā men shì tóngxué ma\n他们 是 同学 吗？",
+        correctAnswer = "Tā men shì tóngxué ma\n他 们 是 同学 吗？",
         audioToSpeak = "他们是同学吗？"
     ),
 

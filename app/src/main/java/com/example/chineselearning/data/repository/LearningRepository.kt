@@ -367,11 +367,11 @@ object LearningRepository {
                             targetPinyin = "",
                             targetTranslation = "Nama saya Budi.",
                             options = listOf(
-                                "Nǐhǎo Bùdí\n你好，布迪。",
-                                "WángFēi nǐhǎo\n王 飞 ， 你 好 。",
-                                "Wǒ jiào Bùdí\n我 叫 布迪 。"
+                                "Nǐhǎo Bùdí\n你好， 布迪。",
+                                "WángFēi nǐhǎo\n王飞， 你好。",
+                                "Wǒ jiào Bùdí\n我 叫 布迪。"
                             ),
-                            correctAnswer = "Wǒ jiào Bùdí\n我 叫 布迪 。",
+                            correctAnswer = "Wǒ jiào Bùdí\n我 叫 布迪。",
                             audioToSpeak = "我叫布迪。"
                         ),
                         // 7. Soal 7: Susun Kalimat Audio Imersif (你好，我叫王飞。)
@@ -554,12 +554,12 @@ object LearningRepository {
                             targetPinyin = "",
                             targetTranslation = "Budi adalah seorang murid.",
                             options = listOf(
-                                "Bùdí shì xuéshēng\n布迪 是 学生 。",
-                                "Bùdí shì lǎoshī\n布迪 是 老师 。",
-                                "WángFēi shì xuéshēng\n王 飞 是 学生 。",
-                                "Wǒ shì xuéshēng\n我 是 学生 。"
+                                "Bùdí shì xuéshēng\n布迪 是 学生。",
+                                "Bùdí shì lǎoshī\n布迪 是 老师。",
+                                "WángFēi shì xuéshēng\n王飞 是 学生。",
+                                "Wǒ shì xuéshēng\n我 是 学生。"
                             ),
-                            correctAnswer = "Bùdí shì xuéshēng\n布迪 是 学生 。",
+                            correctAnswer = "Bùdí shì xuéshēng\n布迪 是 学生。",
                             audioToSpeak = "布迪是学生。"
                         ),
                         // 10. Soal 10: Ketuk Pasangan yang Sesuai (5 Pasang Kartu)
@@ -672,11 +672,11 @@ object LearningRepository {
                             dialogueSpeakerPinyin = "Nǐhǎo, wǒ jiào WángFēi",
                             dialogueSpeakerTranslation = "Halo, nama saya Wang Fei.",
                             options = listOf(
-                                "Nǐhǎo wǒ jiào Bùdí\n你好，我叫布迪。",
-                                "Nǐhǎo Bùdí\n你好，布迪。",
-                                "Wǒ jiào WángFēi\n我叫王飞。"
+                                "Nǐhǎo wǒ jiào Bùdí\n你好， 我 叫 布迪。",
+                                "Nǐhǎo Bùdí\n你好， 布迪。",
+                                "Wǒ jiào WángFēi\n我 叫 王飞。"
                             ),
-                            correctAnswer = "Nǐhǎo wǒ jiào Bùdí\n你好，我叫布迪。",
+                            correctAnswer = "Nǐhǎo wǒ jiào Bùdí\n你好， 我 叫 布迪。",
                             audioToSpeak = "你好，我叫王飞。"
                         ),
                         // 6. Soal 6: Tata Bahasa Susunan Kata (我叫布迪。)
@@ -685,10 +685,10 @@ object LearningRepository {
                             type = ExerciseType.SENTENCE_CHOICE,
                             title = "Pilih kalimat yang benar secara tata bahasa",
                             options = listOf(
-                                "Wǒ jiào Bùdí\n我 叫 布迪 。",
-                                "Wǒ Bùdí jiào\n我 布迪 叫 。"
+                                "Wǒ jiào Bùdí\n我 叫 布迪。",
+                                "Wǒ Bùdí jiào\n我 布迪 叫。"
                             ),
-                            correctAnswer = "Wǒ jiào Bùdí\n我 叫 布迪 。"
+                            correctAnswer = "Wǒ jiào Bùdí\n我 叫 布迪。"
                         ),
                         // 7. Soal 7: Pasangan Kartu dengan Audio Slot (你好, 叫, Audio [我])
                         Exercise(
@@ -775,10 +775,10 @@ object LearningRepository {
                             type = ExerciseType.SENTENCE_CHOICE,
                             title = "Pilih kalimat yang benar secara tata bahasa",
                             options = listOf(
-                                "Nǐhǎo lǎoshī shì wǒ\n你好 ， 老师 是 我 。",
-                                "Nǐhǎo wǒ shì lǎoshī\n你好 ， 我 是 老师 。"
+                                "Nǐhǎo lǎoshī shì wǒ\n你好， 老师 是 我。",
+                                "Nǐhǎo wǒ shì lǎoshī\n你好， 我 是 老师。"
                             ),
-                            correctAnswer = "Nǐhǎo wǒ shì lǎoshī\n你好 ， 我 是 老师 。"
+                            correctAnswer = "Nǐhǎo wǒ shì lǎoshī\n你好， 我 是 老师。"
                         ),
                         // 6. Soal 6: Dengarkan Kalimat Audio (我是学生。)
                         Exercise(
@@ -974,12 +974,12 @@ object LearningRepository {
                             title = "Pilih terjemahan yang benar",
                             targetTranslation = "Apakah Budi orang Tiongkok?",
                             options = listOf(
-                                "Bùdí shì Yìnní rén ma\n布迪是印尼人吗？",
-                                "Bùdí shì Zhōngguó rén ma\n布迪是 中国 人吗？",
-                                "Tā shì Zhōngguó rén ma\n他是 中国 人吗？",
-                                "Nǐ shì Zhōngguó rén ma\n你是 中国 人吗？"
+                                "Bùdí shì Yìnní rén ma\n布迪 是 印尼 人 吗？",
+                                "Bùdí shì Zhōngguó rén ma\n布迪 是 中国 人 吗？",
+                                "Tā shì Zhōngguó rén ma\n他 是 中国 人 吗？",
+                                "Nǐ shì Zhōngguó rén ma\n你 是 中国 人 吗？"
                             ),
-                            correctAnswer = "Bùdí shì Zhōngguó rén ma\n布迪是 中国 人吗？",
+                            correctAnswer = "Bùdí shì Zhōngguó rén ma\n布迪 是 中国 人 吗？",
                             audioToSpeak = "布迪是中国人吗？"
                         ),
                         // 6. Soal 6: Pilihan Gambar 2x2 (他 -> (pria) dia)
@@ -1120,12 +1120,12 @@ object LearningRepository {
                             title = "Pilih terjemahan yang benar",
                             targetTranslation = "Apakah Budi orang Tiongkok?",
                             options = listOf(
-                                "Bùdí shì Yìnní rén ma\n布迪是印尼人吗？",
-                                "Bùdí shì Zhōngguó rén ma\n布迪是 中国 人吗？",
-                                "Wǒ shì Zhōngguó rén ma\n我是中国 人吗？",
-                                "Bùdí shì lǎoshī ma\n布迪是老师吗？"
+                                "Bùdí shì Yìnní rén ma\n布迪 是 印尼 人 吗？",
+                                "Bùdí shì Zhōngguó rén ma\n布迪 是 中国 人 吗？",
+                                "Wǒ shì Zhōngguó rén ma\n我 是 中国 人 吗？",
+                                "Bùdí shì lǎoshī ma\n布迪 是 老师 吗？"
                             ),
-                            correctAnswer = "Bùdí shì Zhōngguó rén ma\n布迪是 中国 人吗？",
+                            correctAnswer = "Bùdí shì Zhōngguó rén ma\n布迪 是 中国 人 吗？",
                             audioToSpeak = "布迪中国人吗？"
                         ),
                         // 6. Soal 6: Pilihan Gambar 2x2 (他 -> (pria) dia)
@@ -1300,12 +1300,12 @@ object LearningRepository {
                             title = "Pilih terjemahan yang benar",
                             targetTranslation = "Dia(P) bukan seorang guru.",
                             options = listOf(
-                                "Wǒ bú shì yīshēng\n我不是 医生 。",
-                                "Tā bú jiào WángFēi\n她不叫 王飞 。",
-                                "Tā bú shì lǎoshī\n她不是 老师 。",
-                                "Wǒ bú shì xuéshēng\n我不是 学生 。"
+                                "Wǒ bú shì yīshēng\n我 不 是 医生。",
+                                "Tā bú jiào WángFēi\n她 不 叫 王飞。",
+                                "Tā bú shì lǎoshī\n她 不 是 老师。",
+                                "Wǒ bú shì xuéshēng\n我 不 是 学生。"
                             ),
-                            correctAnswer = "Tā bú shì lǎoshī\n她不是 老师 。",
+                            correctAnswer = "Tā bú shì lǎoshī\n她 不 是 老师。",
                             audioToSpeak = "她不是老师。"
                         ),
                         // 8. Soal 8: Pilih kata yang sesuai dengan gambar (Gambar Dokter -> yīshēng / 医生)
@@ -1442,11 +1442,11 @@ object LearningRepository {
                             dialogueSpeakerPinyin = "Tā shì Yìnní rén",
                             audioToSpeak = "他是印尼人。",
                             options = listOf(
-                                "Bùdí shì Yìnní rén ma\n布迪是印尼人吗？",
-                                "Nǐ jiào Bùdí ma\n你叫布迪吗？",
-                                "Bùdí shì lǎoshī ma\n布迪是老师吗？"
+                                "Bùdí shì Yìnní rén ma\n布迪 是 印尼 人 吗？",
+                                "Nǐ jiào Bùdí ma\n你 叫 布迪 吗？",
+                                "Bùdí shì lǎoshī ma\n布迪 是 老师 吗？"
                             ),
-                            correctAnswer = "Bùdí shì Yìnní rén ma\n布迪是印尼人吗？"
+                            correctAnswer = "Bùdí shì Yìnní rén ma\n布迪 是 印尼 人 吗？"
                         ),
                         // 5. Soal 5: Pilih kalimat yang benar secara tata bahasa
                         Exercise(
@@ -1454,10 +1454,10 @@ object LearningRepository {
                             type = ExerciseType.SENTENCE_CHOICE,
                             title = "Pilih kalimat yang benar secara tata bahasa",
                             options = listOf(
-                                "Shì nǐ Zhōngguó rén ma\n是你 中国 人吗？",
-                                "Nǐ shì Zhōngguó rén ma\n你是 中国 人吗？"
+                                "Shì nǐ Zhōngguó rén ma\n是 你 中国 人 吗？",
+                                "Nǐ shì Zhōngguó rén ma\n你 是 中国 人 吗？"
                             ),
-                            correctAnswer = "Nǐ shì Zhōngguó rén ma\n你是 中国 人吗？",
+                            correctAnswer = "Nǐ shì Zhōngguó rén ma\n你 是 中国 人 吗？",
                             audioToSpeak = "你是中国人吗？"
                         ),
                         // 6. Soal 6: Ketuk pasangan yang sesuai (中国, 你, audio-only 他)
@@ -1483,11 +1483,11 @@ object LearningRepository {
                             dialogueSpeakerPinyin = "Nǐ shì Zhōngguó rén ma",
                             audioToSpeak = "你是中国人吗？",
                             options = listOf(
-                                "Wǒ shì Zhōngguó rén\n我是 中国 人。",
-                                "Wǒ shì lǎoshī\n我是 老师 。",
-                                "Tā jiào Wáng Fēi\n他叫 王飞 。"
+                                "Wǒ shì Zhōngguó rén\n我 是 中国 人。",
+                                "Wǒ shì lǎoshī\n我 是 老师。",
+                                "Tā jiào Wáng Fēi\n他 叫 王 飞。"
                             ),
-                            correctAnswer = "Wǒ shì Zhōngguó rén\n我是 中国 人。"
+                            correctAnswer = "Wǒ shì Zhōngguó rén\n我 是 中国 人。"
                         ),
                         // 8. Soal 8: Terjemahkan kalimat ini (Apakah kamu seorang murid? -> 你是学生吗？)
                         Exercise(
@@ -1554,11 +1554,11 @@ object LearningRepository {
                             dialogueSpeakerPinyin = "Tā shì Yìnní rén",
                             audioToSpeak = "他是印尼人。",
                             options = listOf(
-                                "Bùdí shì Yìnní rén ma\n布迪是印尼人吗？",
-                                "Nǐ jiào Bùdí ma\n你叫布迪吗？",
-                                "Bùdí shì lǎoshī ma\n布迪是老师吗？"
+                                "Bùdí shì Yìnní rén ma\n布迪 是 印尼 人 吗？",
+                                "Nǐ jiào Bùdí ma\n你 叫 布迪 吗？",
+                                "Bùdí shì lǎoshī ma\n布迪 是 老师 吗？"
                             ),
-                            correctAnswer = "Bùdí shì Yìnní rén ma\n布迪是印尼人吗？"
+                            correctAnswer = "Bùdí shì Yìnní rén ma\n布迪 是 印尼 人 吗？"
                         ),
                         // 5. Soal 5: Pilih kalimat yang benar secara tata bahasa
                         Exercise(
@@ -1566,10 +1566,10 @@ object LearningRepository {
                             type = ExerciseType.SENTENCE_CHOICE,
                             title = "Pilih kalimat yang benar secara tata bahasa",
                             options = listOf(
-                                "Shì nǐ Zhōngguó rén ma\n是你 中国 人吗？",
-                                "Nǐ shì Zhōngguó rén ma\n你是 中国 人吗？"
+                                "Shì nǐ Zhōngguó rén ma\n是 你 中国 人 吗？",
+                                "Nǐ shì Zhōngguó rén ma\n你 是 中国 人 吗？"
                             ),
-                            correctAnswer = "Nǐ shì Zhōngguó rén ma\n你是 中国 人吗？",
+                            correctAnswer = "Nǐ shì Zhōngguó rén ma\n你 是 中国 人 吗？",
                             audioToSpeak = "你是中国人吗？"
                         ),
                         // 6. Soal 6: Ketuk pasangan yang sesuai (中国, 你, audio-only 他)
@@ -1595,11 +1595,11 @@ object LearningRepository {
                             dialogueSpeakerPinyin = "Nǐ shì Zhōngguó rén ma",
                             audioToSpeak = "你是中国人吗？",
                             options = listOf(
-                                "Wǒ shì Zhōngguó rén\n我是 中国 人。",
-                                "Wǒ shì lǎoshī\n我是 老师 。",
-                                "Tā jiào Wáng Fēi\n他叫 王飞 。"
+                                "Wǒ shì Zhōngguó rén\n我 是 中国 人。",
+                                "Wǒ shì lǎoshī\n我 是 老师。",
+                                "Tā jiào Wáng Fēi\n他 叫 王 飞。"
                             ),
-                            correctAnswer = "Wǒ shì Zhōngguó rén\n我是 中国 人。"
+                            correctAnswer = "Wǒ shì Zhōngguó rén\n我 是 中国 人。"
                         ),
                         // 8. Soal 8: Terjemahkan kalimat ini (Apakah kamu seorang murid? -> 你是学生吗？)
                         Exercise(
@@ -1625,11 +1625,11 @@ object LearningRepository {
                             dialogueSpeakerPinyin = "Tā jiào WángFēi ma",
                             audioToSpeak = "她叫王飞吗？",
                             options = listOf(
-                                "Tā bú shì yīshēng\n她不是 医生 。",
-                                "Tā bú jiào WángFēi\n她不叫 王飞 。",
-                                "WángFēi bú shì Zhōngguó rén\n王飞 不是 中国 人。"
+                                "Tā bú shì yīshēng\n她 不 是 医生。",
+                                "Tā bú jiào WángFēi\n她 不 叫 王飞。",
+                                "WángFēi bú shì Zhōngguó rén\n王飞 不 是 中国 人。"
                             ),
-                            correctAnswer = "Tā bú jiào WángFēi\n她不叫 王飞 。"
+                            correctAnswer = "Tā bú jiào WángFēi\n她 不 叫 王飞。"
                         ),
                         // 2. Soal 2: Lengkapi terjemahan (Sampai jumpa, Wang Fei. -> 王飞，[再见] 。)
                         Exercise(
@@ -1675,11 +1675,11 @@ object LearningRepository {
                             type = ExerciseType.SENTENCE_CHOICE,
                             title = "Pilih kalimat yang benar secara tata bahasa",
                             options = listOf(
-                                "Tā bú jiào WángFēi\n她不叫 王飞 。",
-                                "Tā jiào bù WángFēi\n她叫不 王飞 。",
-                                "Tā bù WángFēi\n她不 王飞 。"
+                                "Tā bú jiào WángFēi\n她 不 叫 王飞。",
+                                "Tā jiào bù WángFēi\n她 叫 不 王飞。",
+                                "Tā bù WángFēi\n她 不 王飞。"
                             ),
-                            correctAnswer = "Tā bú jiào WángFēi\n她不叫 王飞 。",
+                            correctAnswer = "Tā bú jiào WángFēi\n她 不 叫 王飞。",
                             audioToSpeak = "她不叫王飞。"
                         ),
                         // 6. Soal 6: Ketuk pasangan yang sesuai (不, 医生, 再见, audio-only 她)
@@ -1890,12 +1890,12 @@ object LearningRepository {
                             title = "Pilih terjemahan yang benar",
                             targetTranslation = "Apakah Budi orang Tiongkok?",
                             options = listOf(
-                                "Bùdí shì Yìnní rén ma\n布迪是印尼人吗？",
-                                "Bùdí shì Zhōngguó rén ma\n布迪是 中国 人吗？",
-                                "Tā shì Zhōngguó rén ma\n他是 中国 人吗？",
-                                "Nǐ shì Zhōngguó rén ma\n你是 中国 人吗？"
+                                "Bùdí shì Yìnní rén ma\n布迪 是 印尼 人 吗？",
+                                "Bùdí shì Zhōngguó rén ma\n布迪 是 中国 人 吗？",
+                                "Tā shì Zhōngguó rén ma\n他 是 中国 人 吗？",
+                                "Nǐ shì Zhōngguó rén ma\n你 是 中国 人 吗？"
                             ),
-                            correctAnswer = "Bùdí shì Zhōngguó rén ma\n布迪是 中国 人吗？",
+                            correctAnswer = "Bùdí shì Zhōngguó rén ma\n布迪 是 中国 人 吗？",
                             audioToSpeak = "布迪是中国人吗？"
                         ),
                         // 6. Soal 6: Pilihan Gambar 2x2 (他 -> (pria) dia)
@@ -2036,12 +2036,12 @@ object LearningRepository {
                             title = "Pilih terjemahan yang benar",
                             targetTranslation = "Apakah Budi orang Tiongkok?",
                             options = listOf(
-                                "Bùdí shì Yìnní rén ma\n布迪是印尼人吗？",
-                                "Bùdí shì Zhōngguó rén ma\n布迪是 中国 人吗？",
-                                "Wǒ shì Zhōngguó rén ma\n我是中国 人吗？",
-                                "Bùdí shì lǎoshī ma\n布迪是老师吗？"
+                                "Bùdí shì Yìnní rén ma\n布迪 是 印尼 人 吗？",
+                                "Bùdí shì Zhōngguó rén ma\n布迪 是 中国 人 吗？",
+                                "Wǒ shì Zhōngguó rén ma\n我 是 中国 人 吗？",
+                                "Bùdí shì lǎoshī ma\n布迪 是 老师 吗？"
                             ),
-                            correctAnswer = "Bùdí shì Zhōngguó rén ma\n布迪是 中国 人吗？",
+                            correctAnswer = "Bùdí shì Zhōngguó rén ma\n布迪 是 中国 人 吗？",
                             audioToSpeak = "布迪中国人吗？"
                         ),
                         // 6. Soal 6: Pilihan Gambar 2x2 (他 -> (pria) dia)
@@ -2216,12 +2216,12 @@ object LearningRepository {
                             title = "Pilih terjemahan yang benar",
                             targetTranslation = "Dia(P) bukan seorang guru.",
                             options = listOf(
-                                "Wǒ bú shì yīshēng\n我不是 医生 。",
-                                "Tā bú jiào WángFēi\n她不叫 王飞 。",
-                                "Tā bú shì lǎoshī\n她不是 老师 。",
-                                "Wǒ bú shì xuéshēng\n我不是 学生 。"
+                                "Wǒ bú shì yīshēng\n我 不 是 医生。",
+                                "Tā bú jiào WángFēi\n她 不 叫 王飞。",
+                                "Tā bú shì lǎoshī\n她 不 是 老师。",
+                                "Wǒ bú shì xuéshēng\n我 不 是 学生。"
                             ),
-                            correctAnswer = "Tā bú shì lǎoshī\n她不是 老师 。",
+                            correctAnswer = "Tā bú shì lǎoshī\n她 不 是 老师。",
                             audioToSpeak = "她不是老师。"
                         ),
                         // 8. Soal 8: Pilih kata yang sesuai dengan gambar (Gambar Dokter -> yīshēng / 医生)
@@ -2358,11 +2358,11 @@ object LearningRepository {
                             dialogueSpeakerPinyin = "Tā shì Yìnní rén",
                             audioToSpeak = "他是印尼人。",
                             options = listOf(
-                                "Bùdí shì Yìnní rén ma\n布迪是印尼人吗？",
-                                "Nǐ jiào Bùdí ma\n你叫布迪吗？",
-                                "Bùdí shì lǎoshī ma\n布迪是老师吗？"
+                                "Bùdí shì Yìnní rén ma\n布迪 是 印尼 人 吗？",
+                                "Nǐ jiào Bùdí ma\n你 叫 布迪 吗？",
+                                "Bùdí shì lǎoshī ma\n布迪 是 老师 吗？"
                             ),
-                            correctAnswer = "Bùdí shì Yìnní rén ma\n布迪是印尼人吗？"
+                            correctAnswer = "Bùdí shì Yìnní rén ma\n布迪 是 印尼 人 吗？"
                         ),
                         // 5. Soal 5: Pilih kalimat yang benar secara tata bahasa
                         Exercise(
@@ -2370,10 +2370,10 @@ object LearningRepository {
                             type = ExerciseType.SENTENCE_CHOICE,
                             title = "Pilih kalimat yang benar secara tata bahasa",
                             options = listOf(
-                                "Shì nǐ Zhōngguó rén ma\n是你 中国 人吗？",
-                                "Nǐ shì Zhōngguó rén ma\n你是 中国 人吗？"
+                                "Shì nǐ Zhōngguó rén ma\n是 你 中国 人 吗？",
+                                "Nǐ shì Zhōngguó rén ma\n你 是 中国 人 吗？"
                             ),
-                            correctAnswer = "Nǐ shì Zhōngguó rén ma\n你是 中国 人吗？",
+                            correctAnswer = "Nǐ shì Zhōngguó rén ma\n你 是 中国 人 吗？",
                             audioToSpeak = "你是中国人吗？"
                         ),
                         // 6. Soal 6: Ketuk pasangan yang sesuai (中国, 你, audio-only 他)
@@ -2399,11 +2399,11 @@ object LearningRepository {
                             dialogueSpeakerPinyin = "Nǐ shì Zhōngguó rén ma",
                             audioToSpeak = "你是中国人吗？",
                             options = listOf(
-                                "Wǒ shì Zhōngguó rén\n我是 中国 人。",
-                                "Wǒ shì lǎoshī\n我是 老师 。",
-                                "Tā jiào Wáng Fēi\n他叫 王飞 。"
+                                "Wǒ shì Zhōngguó rén\n我 是 中国 人。",
+                                "Wǒ shì lǎoshī\n我 是 老师。",
+                                "Tā jiào Wáng Fēi\n他 叫 王 飞。"
                             ),
-                            correctAnswer = "Wǒ shì Zhōngguó rén\n我是 中国 人。"
+                            correctAnswer = "Wǒ shì Zhōngguó rén\n我 是 中国 人。"
                         ),
                         // 8. Soal 8: Terjemahkan kalimat ini (Apakah kamu seorang murid? -> 你是学生吗？)
                         Exercise(
@@ -2470,11 +2470,11 @@ object LearningRepository {
                             dialogueSpeakerPinyin = "Tā shì Yìnní rén",
                             audioToSpeak = "他是印尼人。",
                             options = listOf(
-                                "Bùdí shì Yìnní rén ma\n布迪是印尼人吗？",
-                                "Nǐ jiào Bùdí ma\n你叫布迪吗？",
-                                "Bùdí shì lǎoshī ma\n布迪是老师吗？"
+                                "Bùdí shì Yìnní rén ma\n布迪 是 印尼 人 吗？",
+                                "Nǐ jiào Bùdí ma\n你 叫 布迪 吗？",
+                                "Bùdí shì lǎoshī ma\n布迪 是 老师 吗？"
                             ),
-                            correctAnswer = "Bùdí shì Yìnní rén ma\n布迪是印尼人吗？"
+                            correctAnswer = "Bùdí shì Yìnní rén ma\n布迪 是 印尼 人 吗？"
                         ),
                         // 5. Soal 5: Pilih kalimat yang benar secara tata bahasa
                         Exercise(
@@ -2482,10 +2482,10 @@ object LearningRepository {
                             type = ExerciseType.SENTENCE_CHOICE,
                             title = "Pilih kalimat yang benar secara tata bahasa",
                             options = listOf(
-                                "Shì nǐ Zhōngguó rén ma\n是你 中国 人吗？",
-                                "Nǐ shì Zhōngguó rén ma\n你是 中国 人吗？"
+                                "Shì nǐ Zhōngguó rén ma\n是 你 中国 人 吗？",
+                                "Nǐ shì Zhōngguó rén ma\n你 是 中国 人 吗？"
                             ),
-                            correctAnswer = "Nǐ shì Zhōngguó rén ma\n你是 中国 人吗？",
+                            correctAnswer = "Nǐ shì Zhōngguó rén ma\n你 是 中国 人 吗？",
                             audioToSpeak = "你是中国人吗？"
                         ),
                         // 6. Soal 6: Ketuk pasangan yang sesuai (中国, 你, audio-only 他)
@@ -2511,11 +2511,11 @@ object LearningRepository {
                             dialogueSpeakerPinyin = "Nǐ shì Zhōngguó rén ma",
                             audioToSpeak = "你是中国人吗？",
                             options = listOf(
-                                "Wǒ shì Zhōngguó rén\n我是 中国 人。",
-                                "Wǒ shì lǎoshī\n我是 老师 。",
-                                "Tā jiào Wáng Fēi\n他叫 王飞 。"
+                                "Wǒ shì Zhōngguó rén\n我 是 中国 人。",
+                                "Wǒ shì lǎoshī\n我 是 老师。",
+                                "Tā jiào Wáng Fēi\n他 叫 王 飞。"
                             ),
-                            correctAnswer = "Wǒ shì Zhōngguó rén\n我是 中国 人。"
+                            correctAnswer = "Wǒ shì Zhōngguó rén\n我 是 中国 人。"
                         ),
                         // 8. Soal 8: Terjemahkan kalimat ini (Apakah kamu seorang murid? -> 你是学生吗？)
                         Exercise(
@@ -2541,11 +2541,11 @@ object LearningRepository {
                             dialogueSpeakerPinyin = "Tā jiào WángFēi ma",
                             audioToSpeak = "她叫王飞吗？",
                             options = listOf(
-                                "Tā bú shì yīshēng\n她不是 医生 。",
-                                "Tā bú jiào WángFēi\n她不叫 王飞 。",
-                                "WángFēi bú shì Zhōngguó rén\n王飞 不是 中国 人。"
+                                "Tā bú shì yīshēng\n她 不 是 医生。",
+                                "Tā bú jiào WángFēi\n她 不 叫 王飞。",
+                                "WángFēi bú shì Zhōngguó rén\n王飞 不 是 中国 人。"
                             ),
-                            correctAnswer = "Tā bú jiào WángFēi\n她不叫 王飞 。"
+                            correctAnswer = "Tā bú jiào WángFēi\n她 不 叫 王飞。"
                         ),
                         // 2. Soal 2: Lengkapi terjemahan (Sampai jumpa, Wang Fei. -> 王飞，[再见] 。)
                         Exercise(
@@ -2591,11 +2591,11 @@ object LearningRepository {
                             type = ExerciseType.SENTENCE_CHOICE,
                             title = "Pilih kalimat yang benar secara tata bahasa",
                             options = listOf(
-                                "Tā bú jiào WángFēi\n她不叫 王飞 。",
-                                "Tā jiào bù WángFēi\n她叫不 王飞 。",
-                                "Tā bù WángFēi\n她不 王飞 。"
+                                "Tā bú jiào WángFēi\n她 不 叫 王飞。",
+                                "Tā jiào bù WángFēi\n她 叫 不 王飞。",
+                                "Tā bù WángFēi\n她 不 王飞。"
                             ),
-                            correctAnswer = "Tā bú jiào WángFēi\n她不叫 王飞 。",
+                            correctAnswer = "Tā bú jiào WángFēi\n她 不 叫 王飞。",
                             audioToSpeak = "她不叫王飞。"
                         ),
                         // 6. Soal 6: Ketuk pasangan yang sesuai (不, 医生, 再见, audio-only 她)
@@ -2738,11 +2738,11 @@ object LearningRepository {
                             title = "Pilih kalimat yang benar untuk melengkapi dialog",
                             audioToSpeak = "你好，布迪，你是印尼人吗？",
                             options = listOf(
-                                "Wǒ bú shì lǎoshī\n我不是老师。",
-                                "Wǒ bú shì Zhōngguó rén\n我不是 中国 人。",
-                                "Wǒ shì Yìnní rén\n我是 印尼 人。"
+                                "Wǒ bú shì lǎoshī\n我 不 是 老师。",
+                                "Wǒ bú shì Zhōngguó rén\n我 不 是 中国 人。",
+                                "Wǒ shì Yìnní rén\n我 是 印尼 人。"
                             ),
-                            correctAnswer = "Wǒ shì Yìnní rén\n我是 印尼 人。"
+                            correctAnswer = "Wǒ shì Yìnní rén\n我 是 印尼 人。"
                         ),
                         // 3. Soal 3: Masukkan kata yang hilang (nǐhǎo -> 你好，我叫布迪，我是医生。)
                         Exercise(
@@ -2761,11 +2761,11 @@ object LearningRepository {
                             type = ExerciseType.SENTENCE_CHOICE,
                             title = "Kamu sudah bekerja selama setengah tahun, tetapi bosmu masih sering salah memanggil namamu. Hari ini, ketika makan siang, kamu tidak ingin menahannya lagi. Maka, kamu dengan sungkan memberi tahu bosmu bahwa...",
                             options = listOf(
-                                "Wǒ bú shì Zhōngguó rén\n我不是 中国 人。",
-                                "Wǒ bú jiào WángFēi\n我不叫 王飞 。",
-                                "Wǒ bú shì lǎoshī\n我不是老师。"
+                                "Wǒ bú shì Zhōngguó rén\n我 不 是 中国 人。",
+                                "Wǒ bú jiào WángFēi\n我 不 叫 王飞。",
+                                "Wǒ bú shì lǎoshī\n我 不 是 老师。"
                             ),
-                            correctAnswer = "Wǒ bú jiào WángFēi\n我不叫 王飞 。",
+                            correctAnswer = "Wǒ bú jiào WángFēi\n我 不 叫 王飞。",
                             audioToSpeak = "我不叫王飞。"
                         ),
                         // 5. Soal 5: Ketuk pasangan yang sesuai (人, 再见, 叫, audio-only 你好)

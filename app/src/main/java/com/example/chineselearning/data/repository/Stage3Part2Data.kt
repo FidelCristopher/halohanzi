@@ -110,12 +110,12 @@ val stage3Part2Exercises = listOf<Exercise>(
         title = "Pilih terjemahan yang benar",
         targetTranslation = "Itu siapa?",
         options = listOf(
-            "Nǐ de wǎngyǒu shì shéi?\n你的 网友 是 谁 ？",
-            "Nà shì shéi?\n那是 谁 ？",
-            "Tā de nánpéngyou shì shéi?\n她的 男朋友 是 谁 ？",
-            "Shéi shì nǐ de nánpéngyou?\n谁 是你的 男朋友 ？"
+            "Nǐ de wǎngyǒu shì shéi?\n你 的 网友 是 谁？",
+            "Nà shì shéi?\n那 是 谁？",
+            "Tā de nánpéngyou shì shéi?\n她 的 男朋友 是 谁？",
+            "Shéi shì nǐ de nánpéngyou?\n谁 是 你 的 男朋友？"
         ),
-        correctAnswer = "Nà shì shéi?\n那是 谁 ？",
+        correctAnswer = "Nà shì shéi?\n那 是 谁？",
         audioToSpeak = "那是谁？"
     ),
 

@@ -94,12 +94,12 @@ val stage1Part2Exercises = listOf<Exercise>(
         title = "Pilih terjemahan yang benar",
         targetTranslation = "Apakah pacarmu(P) seorang guru?",
         options = listOf(
-            "Nǐ de nánpéngyou shì Zhōngguó rén ma\n你的 男朋友 是 中国 人 吗？",
-            "Nǐ de nǚpéngyou shì yīshēng ma\n你的 女朋友 是 医生 吗？",
-            "Nǐ de nǚpéngyou shì lǎoshī ma\n你的 女朋友 是 老师 吗？",
-            "Tā shì nǐ de nánpéngyou ma\n他是你的 男朋友 吗？"
+            "Nǐ de nánpéngyou shì Zhōngguó rén ma\n你 的 男朋友 是 中国 人 吗？",
+            "Nǐ de nǚpéngyou shì yīshēng ma\n你 的 女朋友 是 医生 吗？",
+            "Nǐ de nǚpéngyou shì lǎoshī ma\n你 的 女朋友 是 老师 吗？",
+            "Tā shì nǐ de nánpéngyou ma\n他 是 你 的 男朋友 吗？"
         ),
-        correctAnswer = "Nǐ de nǚpéngyou shì lǎoshī ma\n你的 女朋友 是 老师 吗？",
+        correctAnswer = "Nǐ de nǚpéngyou shì lǎoshī ma\n你 的 女朋友 是 老师 吗？",
         audioToSpeak = "你的女朋友是老师吗？"
     ),
 

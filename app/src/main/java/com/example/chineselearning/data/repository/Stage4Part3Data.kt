@@ -51,11 +51,11 @@ val stage4Part3Exercises = listOf<Exercise>(
         type = ExerciseType.SENTENCE_CHOICE,
         title = "Hari ini, kamu melihat seorang laki-laki mengantar teman sekamarmu pulang. Rasa penasaranmu memuncak, bagaimana cara kamu menanyakan hubungan mereka pada temanmu?",
         options = listOf(
-            "Nǐ de nánpéngyou shì Zhōngguó rén ma\n你的 男朋友 是 中国 人 吗？",
+            "Nǐ de nánpéngyou shì Zhōngguó rén ma\n你 的 男朋友 是 中国 人 吗？",
             "Tā shì xuéshēng ma\n他 是 学生 吗？",
-            "Nà shì nǐ de nánpéngyou ma\n那是你的 男朋友 吗？"
+            "Nà shì nǐ de nánpéngyou ma\n那 是 你 的 男朋友 吗？"
         ),
-        correctAnswer = "Nà shì nǐ de nánpéngyou ma\n那是你的 男朋友 吗？",
+        correctAnswer = "Nà shì nǐ de nánpéngyou ma\n那 是 你 的 男朋友 吗？",
         audioToSpeak = "那是你的男朋友吗？"
     ),
 

@@ -42,10 +42,10 @@ val stage4Part2Exercises = listOf<Exercise>(
         type = ExerciseType.SENTENCE_CHOICE,
         title = "Pilih kalimat yang benar secara tata bahasa",
         options = listOf(
-            "Zhè shì shéi\n这是 谁 ？",
-            "Zhè shì shéi ma\n这是 谁 吗？"
+            "Zhè shì shéi\n这 是 谁？",
+            "Zhè shì shéi ma\n这 是 谁 吗？"
         ),
-        correctAnswer = "Zhè shì shéi\n这是 谁 ？",
+        correctAnswer = "Zhè shì shéi\n这 是 谁？",
         audioToSpeak = "这是谁？"
     ),
 
@@ -103,11 +103,11 @@ val stage4Part2Exercises = listOf<Exercise>(
         dialogueSpeakerText = "这是 谁 ？",
         dialogueSpeakerPinyin = "Zhè shì shéi",
         options = listOf(
-            "Zhè shì wǒ de wǎngyǒu\n这是我的 网友 。",
-            "Wǒ bú shì nǐ de péngyou\n我 不是 你的 朋友 。",
-            "Wǒ men bú shì tóngshì\n我们 不是 同事 。"
+            "Zhè shì wǒ de wǎngyǒu\n这 是 我 的 网友。",
+            "Wǒ bú shì nǐ de péngyou\n我 不 是 你 的 朋友。",
+            "Wǒ men bú shì tóngshì\n我 们 不 是 同事。"
         ),
-        correctAnswer = "Zhè shì wǒ de wǎngyǒu\n这是我的 网友 。",
+        correctAnswer = "Zhè shì wǒ de wǎngyǒu\n这 是 我 的 网友。",
         audioToSpeak = "这是我的网友。"
     ),
 

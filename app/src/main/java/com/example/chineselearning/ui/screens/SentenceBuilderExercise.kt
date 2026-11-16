@@ -1598,7 +1598,7 @@ fun ImmersiveSentenceBuilder(
                 }
             } else {
                 val expectedImmersiveSlots = if (exercise.correctAnswer.contains(",")) exercise.correctAnswer.split(",").size else 1
-                val slot1Width = if (expectedImmersiveSlots == 1) 92.dp else if (exercise.staticLeadingText.isNotBlank()) 48.dp else 62.dp
+                val slotWidth = if (expectedImmersiveSlots == 1) 84.dp else if (expectedImmersiveSlots >= 3) 48.dp else 56.dp
 
                 Row(
                     modifier = Modifier
@@ -1608,135 +1608,59 @@ fun ImmersiveSentenceBuilder(
                     verticalAlignment = Alignment.Bottom
                 ) {
                     if (exercise.staticLeadingText.isNotBlank()) {
-                        Column(
-                            horizontalAlignment = Alignment.CenterHorizontally,
-                            modifier = Modifier.padding(bottom = 6.dp)
-                        ) {
-                            if (exercise.staticLeadingPinyin.isNotBlank()) {
-                                Text(text = exercise.staticLeadingPinyin, fontSize = 14.sp, color = DeepNavy)
-                                Spacer(modifier = Modifier.height(2.dp))
-                            }
-                            Text(text = exercise.staticLeadingText, fontFamily = KaiTiFontFamily, fontSize = 24.sp, fontWeight = FontWeight.Normal, color = DeepNavy)
-                        }
-                        Spacer(modifier = Modifier.width(10.dp))
+                        BuilderFixedText(exercise.staticLeadingText, exercise.staticLeadingPinyin)
+                        Spacer(modifier = Modifier.width(8.dp))
                     }
 
+                    // Slot 0
+                    BuilderSlot(
+                        index = 0,
+                        selectedChips = selectedChips,
+                        width = slotWidth,
+                        hasCommaAfter = exercise.hasCommaAfterSlot1,
+                        isSubmitted = isSubmitted,
+                        onChipRemovedAt = onChipRemovedAt
+                    )
+
                     // Slot 1
-                    Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                        Row(verticalAlignment = Alignment.Bottom) {
-                            if (selectedChips.isNotEmpty()) {
-                                val chip = selectedChips[0]
-                                val hanzi = chip.substringBefore(":")
-                                val pinyin = if (chip.contains(":")) chip.substringAfter(":") else ""
-                                Surface(
-                                    shape = RoundedCornerShape(12.dp),
-                                    color = Color.White,
-                                    shadowElevation = 2.dp,
-                                    border = androidx.compose.foundation.BorderStroke(1.dp, Color(0xFFE2E8F0)),
-                                    modifier = Modifier.bouncyClick {
-                                        if (!isSubmitted) onChipRemovedAt(0)
-                                    }
-                                ) {
-                                    Column(
-                                        horizontalAlignment = Alignment.CenterHorizontally,
-                                        modifier = Modifier.padding(horizontal = 12.dp, vertical = 6.dp)
-                                    ) {
-                                        if (pinyin.isNotBlank()) Text(text = pinyin, fontSize = 13.sp, color = DeepNavy)
-                                        Text(text = hanzi, fontFamily = KaiTiFontFamily, fontSize = 21.sp, fontWeight = FontWeight.Normal, color = DeepNavy)
-                                    }
-                                }
-                            } else {
-                                Box(modifier = Modifier.width(slot1Width).height(48.dp))
-                            }
-                            if (exercise.hasCommaAfterSlot1) {
-                                Text(text = " ，", fontSize = 22.sp, color = DeepNavy, modifier = Modifier.padding(bottom = 6.dp))
-                            }
-                        }
-                        Spacer(modifier = Modifier.height(4.dp))
-                        Box(
-                            modifier = Modifier
-                                .width(slot1Width)
-                                .height(2.5.dp)
-                                .background(Color(0xFF00C48C), shape = RoundedCornerShape(2.dp))
+                    if (expectedImmersiveSlots >= 2) {
+                        Spacer(modifier = Modifier.width(6.dp))
+                        BuilderSlot(
+                            index = 1,
+                            selectedChips = selectedChips,
+                            width = slotWidth,
+                            isSubmitted = isSubmitted,
+                            onChipRemovedAt = onChipRemovedAt
                         )
                     }
 
-                    if (expectedImmersiveSlots >= 2) {
-                        Spacer(modifier = Modifier.width(8.dp))
-                        Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                            if (selectedChips.size > 1) {
-                                val chip = selectedChips[1]
-                                val hanzi = chip.substringBefore(":")
-                                val pinyin = if (chip.contains(":")) chip.substringAfter(":") else ""
-                                Surface(
-                                    shape = RoundedCornerShape(12.dp),
-                                    color = Color.White,
-                                    shadowElevation = 2.dp,
-                                    border = androidx.compose.foundation.BorderStroke(1.dp, Color(0xFFE2E8F0)),
-                                    modifier = Modifier.bouncyClick {
-                                        if (!isSubmitted) onChipRemovedAt(1)
-                                    }
-                                ) {
-                                    Column(
-                                        horizontalAlignment = Alignment.CenterHorizontally,
-                                        modifier = Modifier.padding(horizontal = 10.dp, vertical = 6.dp)
-                                    ) {
-                                        if (pinyin.isNotBlank()) Text(text = pinyin, fontSize = 13.sp, color = DeepNavy)
-                                        Text(text = hanzi, fontFamily = KaiTiFontFamily, fontSize = 21.sp, fontWeight = FontWeight.Normal, color = DeepNavy)
-                                    }
-                                }
-                            } else {
-                                Box(modifier = Modifier.width(48.dp).height(48.dp))
-                            }
-                            Spacer(modifier = Modifier.height(4.dp))
-                            Box(modifier = Modifier.width(48.dp).height(2.5.dp).background(Color(0xFF00C48C), shape = RoundedCornerShape(2.dp)))
-                        }
+                    // Slot 2
+                    if (expectedImmersiveSlots >= 3) {
+                        Spacer(modifier = Modifier.width(6.dp))
+                        BuilderSlot(
+                            index = 2,
+                            selectedChips = selectedChips,
+                            width = slotWidth,
+                            isSubmitted = isSubmitted,
+                            onChipRemovedAt = onChipRemovedAt
+                        )
                     }
 
-                    if (expectedImmersiveSlots >= 3) {
-                        Spacer(modifier = Modifier.width(8.dp))
-                        Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                            if (selectedChips.size > 2) {
-                                val chip = selectedChips[2]
-                                val hanzi = chip.substringBefore(":")
-                                val pinyin = if (chip.contains(":")) chip.substringAfter(":") else ""
-                                Surface(
-                                    shape = RoundedCornerShape(12.dp),
-                                    color = Color.White,
-                                    shadowElevation = 2.dp,
-                                    border = androidx.compose.foundation.BorderStroke(1.dp, Color(0xFFE2E8F0)),
-                                    modifier = Modifier.bouncyClick {
-                                        if (!isSubmitted) onChipRemovedAt(2)
-                                    }
-                                ) {
-                                    Column(
-                                        horizontalAlignment = Alignment.CenterHorizontally,
-                                        modifier = Modifier.padding(horizontal = 10.dp, vertical = 6.dp)
-                                    ) {
-                                        if (pinyin.isNotBlank()) Text(text = pinyin, fontSize = 13.sp, color = DeepNavy)
-                                        Text(text = hanzi, fontFamily = KaiTiFontFamily, fontSize = 21.sp, fontWeight = FontWeight.Normal, color = DeepNavy)
-                                    }
-                                }
-                            } else {
-                                Box(modifier = Modifier.width(48.dp).height(48.dp))
-                            }
-                            Spacer(modifier = Modifier.height(4.dp))
-                            Box(modifier = Modifier.width(48.dp).height(2.5.dp).background(Color(0xFF00C48C), shape = RoundedCornerShape(2.dp)))
-                        }
+                    // Slot 3
+                    if (expectedImmersiveSlots >= 4) {
+                        Spacer(modifier = Modifier.width(6.dp))
+                        BuilderSlot(
+                            index = 3,
+                            selectedChips = selectedChips,
+                            width = slotWidth,
+                            isSubmitted = isSubmitted,
+                            onChipRemovedAt = onChipRemovedAt
+                        )
                     }
 
                     if (exercise.staticTrailingText.isNotBlank()) {
-                        Spacer(modifier = Modifier.width(12.dp))
-                        Column(
-                            horizontalAlignment = Alignment.CenterHorizontally,
-                            modifier = Modifier.padding(bottom = 6.dp)
-                        ) {
-                            if (exercise.staticTrailingPinyin.isNotBlank()) {
-                                Text(text = exercise.staticTrailingPinyin, fontSize = 14.sp, color = DeepNavy)
-                                Spacer(modifier = Modifier.height(2.dp))
-                            }
-                            Text(text = exercise.staticTrailingText, fontFamily = KaiTiFontFamily, fontSize = 24.sp, fontWeight = FontWeight.Normal, color = DeepNavy)
-                        }
+                        Spacer(modifier = Modifier.width(8.dp))
+                        BuilderFixedText(exercise.staticTrailingText, exercise.staticTrailingPinyin)
                     }
                 }
             }

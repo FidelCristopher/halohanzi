@@ -61,11 +61,11 @@ val stage5Part2Exercises = listOf<Exercise>(
         dialogueSpeakerText = "你们 的 老板 是 谁 ？",
         dialogueSpeakerPinyin = "Nǐ men de lǎobǎn shì shéi",
         options = listOf(
-            "Wǒ men de lǎobǎn shì WángFēi\n我们 的 老板 是 王飞 。",
-            "Nà bú shì wǒ men de lǎobǎn\n那 不是 我们 的 老板 。",
-            "Nà shì wǒ de nǚpéngyou\n那是我的 女朋友 。"
+            "Wǒ men de lǎobǎn shì WángFēi\n我 们 的 老板 是 王飞。",
+            "Nà bú shì wǒ men de lǎobǎn\n那 不 是 我 们 的 老板。",
+            "Nà shì wǒ de nǚpéngyou\n那 是 我 的 女朋友。"
         ),
-        correctAnswer = "Wǒ men de lǎobǎn shì WángFēi\n我们 的 老板 是 王飞 。",
+        correctAnswer = "Wǒ men de lǎobǎn shì WángFēi\n我 们 的 老板 是 王飞。",
         audioToSpeak = "我们的老板是王飞。"
     ),
 

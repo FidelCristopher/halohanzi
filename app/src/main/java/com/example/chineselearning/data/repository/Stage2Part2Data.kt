@@ -45,11 +45,11 @@ val stage2Part2Exercises = listOf<Exercise>(
         dialogueSpeakerText = "不是 ， 我们 是 朋友 。",
         dialogueSpeakerPinyin = "Bú shì wǒ men shì péngyou",
         options = listOf(
-            "WángFēi shì nǐ de nǚpéngyou ma\n王飞 是 你的 女朋友 吗？",
-            "Nǐ shì xuéshēng ma\n你是 学生 吗？",
-            "Nǐ de nǚpéngyou shì lǎoshī ma\n你的 女朋友 是 老师 吗？"
+            "WángFēi shì nǐ de nǚpéngyou ma\n王飞 是 你 的 女朋友 吗？",
+            "Nǐ shì xuéshēng ma\n你 是 学生 吗？",
+            "Nǐ de nǚpéngyou shì lǎoshī ma\n你 的 女朋友 是 老师 吗？"
         ),
-        correctAnswer = "WángFēi shì nǐ de nǚpéngyou ma\n王飞 是 你的 女朋友 吗？",
+        correctAnswer = "WángFēi shì nǐ de nǚpéngyou ma\n王飞 是 你 的 女朋友 吗？",
         audioToSpeak = "王飞是你的女朋友吗？"
     ),
 
@@ -59,10 +59,10 @@ val stage2Part2Exercises = listOf<Exercise>(
         type = ExerciseType.SENTENCE_CHOICE,
         title = "Pilih kalimat yang benar secara tata bahasa",
         options = listOf(
-            "Tā shì péngyou de wǒ\n他是 朋友 的 我 。",
-            "Tā shì wǒ de péngyou\n他是我的 朋友 。"
+            "Tā shì péngyou de wǒ\n他 是 朋友 的 我。",
+            "Tā shì wǒ de péngyou\n他 是 我 的 朋友。"
         ),
-        correctAnswer = "Tā shì wǒ de péngyou\n他是我的 朋友 。",
+        correctAnswer = "Tā shì wǒ de péngyou\n他 是 我 的 朋友。",
         audioToSpeak = "他是我的朋友。"
     ),
 
@@ -124,11 +124,11 @@ val stage2Part2Exercises = listOf<Exercise>(
         dialogueSpeakerText = "她是你的 女朋友 吗？",
         dialogueSpeakerPinyin = "Tā shì nǐ de nǚpéngyou ma",
         options = listOf(
-            "Shì tā bú shì yīshēng\n是 ， 她 不是 医生 。",
-            "Bú shì tā bú shì wǒ de nǚpéngyou\n不是 ， 她 不是 我的 女朋友 。",
-            "Bú shì tā bú shì wǒ de lǎoshī\n不是 ， 她 不是 我的 老师 。"
+            "Shì tā bú shì yīshēng\n是， 她 不 是 医生。",
+            "Bú shì tā bú shì wǒ de nǚpéngyou\n不 是， 她 不 是 我 的 女朋友。",
+            "Bú shì tā bú shì wǒ de lǎoshī\n不 是， 她 不 是 我 的 老师。"
         ),
-        correctAnswer = "Bú shì tā bú shì wǒ de nǚpéngyou\n不是 ， 她 不是 我的 女朋友 。",
+        correctAnswer = "Bú shì tā bú shì wǒ de nǚpéngyou\n不 是， 她 不 是 我 的 女朋友。",
         audioToSpeak = "不是，她不是我的女朋友。"
     ),
 
