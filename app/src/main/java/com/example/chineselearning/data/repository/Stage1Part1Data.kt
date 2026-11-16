@@ -127,7 +127,7 @@ val stage1Part1Exercises = listOf<Exercise>(
         matchPairs = listOf(
             MatchPairItem("u2_p1_m1", "同学", "tóngxué", "teman sekolah"),
             MatchPairItem("u2_p1_m2", "朋友", "péngyou", "teman"),
-            MatchPairItem("u2_p1_m3", "们", "men", "kata penanda jamak yang digunakan untuk kata ganti atau beberapa kat...")
+            MatchPairItem("u2_p1_m3", "们", "men", "akhiran jamak (orang)")
         )
     ),
 
