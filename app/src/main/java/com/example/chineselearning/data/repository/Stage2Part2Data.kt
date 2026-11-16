@@ -43,7 +43,7 @@ val stage2Part2Exercises = listOf<Exercise>(
         title = "Selesaikan percakapan",
         dialogueBlankIsFirst = true,
         dialogueSpeakerText = "不是 ， 我们 是 朋友 。",
-        dialogueSpeakerPinyin = "Bú shì  wǒ men shì péngyou",
+        dialogueSpeakerPinyin = "Bú shì wǒ men shì péngyou",
         options = listOf(
             "WángFēi shì nǐ de nǚpéngyou ma\n王飞 是 你的 女朋友 吗？",
             "Nǐ shì xuéshēng ma\n你是 学生 吗？",
@@ -124,11 +124,11 @@ val stage2Part2Exercises = listOf<Exercise>(
         dialogueSpeakerText = "她是你的 女朋友 吗？",
         dialogueSpeakerPinyin = "Tā shì nǐ de nǚpéngyou ma",
         options = listOf(
-            "Shì  tā bú shì yīshēng\n是 ， 她 不是 医生 。",
-            "Bú shì  tā bú shì wǒ de nǚpéngyou\n不是 ， 她 不是 我的 女朋友 。",
-            "Bú shì  tā bú shì wǒ de lǎoshī\n不是 ， 她 不是 我的 老师 。"
+            "Shì tā bú shì yīshēng\n是 ， 她 不是 医生 。",
+            "Bú shì tā bú shì wǒ de nǚpéngyou\n不是 ， 她 不是 我的 女朋友 。",
+            "Bú shì tā bú shì wǒ de lǎoshī\n不是 ， 她 不是 我的 老师 。"
         ),
-        correctAnswer = "Bú shì  tā bú shì wǒ de nǚpéngyou\n不是 ， 她 不是 我的 女朋友 。",
+        correctAnswer = "Bú shì tā bú shì wǒ de nǚpéngyou\n不是 ， 她 不是 我的 女朋友 。",
         audioToSpeak = "不是，她不是我的女朋友。"
     ),
 

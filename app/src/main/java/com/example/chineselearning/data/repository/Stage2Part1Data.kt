@@ -60,11 +60,11 @@ val stage2Part1Exercises = listOf<Exercise>(
         dialogueSpeakerText = "你们 是 同学 吗？",
         dialogueSpeakerPinyin = "Nǐ men shì tóngxué ma",
         options = listOf(
-            "Bú shì  wǒ men shì Zhōngguó rén\n不是 ， 我们 是 中国 人 。",
-            "Bú shì  wǒ men bú shì yīshēng\n不是 ， 我们 不是 医生 。",
-            "Bú shì  wǒ men bú shì tóngxué\n不是 ， 我们 不是 同学 。"
+            "Bú shì wǒ men shì Zhōngguó rén\n不是 ， 我们 是 中国 人 。",
+            "Bú shì wǒ men bú shì yīshēng\n不是 ， 我们 不是 医生 。",
+            "Bú shì wǒ men bú shì tóngxué\n不是 ， 我们 不是 同学 。"
         ),
-        correctAnswer = "Bú shì  wǒ men bú shì tóngxué\n不是 ， 我们 不是 同学 。",
+        correctAnswer = "Bú shì wǒ men bú shì tóngxué\n不是 ， 我们 不是 同学 。",
         audioToSpeak = "不是，我们不是同学。"
     ),
 
@@ -124,11 +124,11 @@ val stage2Part1Exercises = listOf<Exercise>(
         dialogueSpeakerText = "你们 是 朋友 吗？",
         dialogueSpeakerPinyin = "Nǐ men shì péngyou ma",
         options = listOf(
-            "Shì  tā men shì tóngxué\n是 ， 他们 是 同学 。",
-            "Shì  wǒ men shì péngyou\n是 ， 我们 是 朋友 。",
-            "Bú shì  wǒ men bú shì xuéshēng\n不是 ， 我们 不是 学生 。"
+            "Shì tā men shì tóngxué\n是 ， 他们 是 同学 。",
+            "Shì wǒ men shì péngyou\n是 ， 我们 是 朋友 。",
+            "Bú shì wǒ men bú shì xuéshēng\n不是 ， 我们 不是 学生 。"
         ),
-        correctAnswer = "Shì  wǒ men shì péngyou\n是 ， 我们 是 朋友 。",
+        correctAnswer = "Shì wǒ men shì péngyou\n是 ， 我们 是 朋友 。",
         audioToSpeak = "是，我们是朋友。"
     ),
 

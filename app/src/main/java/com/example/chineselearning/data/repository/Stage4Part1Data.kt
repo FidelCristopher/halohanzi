@@ -137,10 +137,10 @@ val stage4Part1Exercises = listOf<Exercise>(
         dialogueSpeakerText = "那是你们 的 老板 吗？",
         dialogueSpeakerPinyin = "Nà shì nǐ men de lǎobǎn ma",
         options = listOf(
-            "Bú shì  nà bú shì wǒ men de lǎobǎn\n不是 ， 那 不是 我们 的 老板 。",
-            "Shì  tā shì wǒ de xuéshēng\n是 ， 他是我的 学生 。"
+            "Bú shì nà bú shì wǒ men de lǎobǎn\n不是 ， 那 不是 我们 的 老板 。",
+            "Shì tā shì wǒ de xuéshēng\n是 ， 他是我的 学生 。"
         ),
-        correctAnswer = "Bú shì  nà bú shì wǒ men de lǎobǎn\n不是 ， 那 不是 我们 的 老板 。",
+        correctAnswer = "Bú shì nà bú shì wǒ men de lǎobǎn\n不是 ， 那 不是 我们 的 老板 。",
         audioToSpeak = "不是，那不是我们的老板。"
     ),
 

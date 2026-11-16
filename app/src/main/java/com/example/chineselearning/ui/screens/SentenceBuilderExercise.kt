@@ -1798,8 +1798,15 @@ fun ImmersiveSentenceBuilder(
                                         verticalArrangement = Arrangement.Center,
                                         modifier = Modifier.fillMaxSize().padding(horizontal = 2.dp, vertical = 4.dp)
                                     ) {
-                                        if (pinyin.isNotBlank()) Text(text = pinyin, fontSize = 12.sp, color = DeepNavy, maxLines = 1)
-                                        Text(text = hanzi, fontFamily = KaiTiFontFamily, fontSize = 20.sp, fontWeight = FontWeight.Normal, color = DeepNavy, maxLines = 1)
+                                if (pinyin.isNotBlank()) {
+                                    val chipPinyinSize = when {
+                                        pinyin.length >= 10 -> 9.5.sp
+                                        pinyin.length >= 8 -> 11.sp
+                                        else -> 12.sp
+                                    }
+                                    Text(text = pinyin, fontSize = chipPinyinSize, color = DeepNavy, maxLines = 1, softWrap = false)
+                                }
+                                Text(text = hanzi, fontFamily = KaiTiFontFamily, fontSize = 20.sp, fontWeight = FontWeight.Normal, color = DeepNavy, maxLines = 1)
                                     }
                                 }
                             }
@@ -1978,7 +1985,14 @@ fun FullTranslationSentenceBuilder(
                                 verticalArrangement = Arrangement.Center,
                                 modifier = Modifier.fillMaxSize().padding(horizontal = 2.dp, vertical = 4.dp)
                             ) {
-                                if (pinyin.isNotBlank()) Text(text = pinyin, fontSize = 12.sp, color = DeepNavy, maxLines = 1)
+                                if (pinyin.isNotBlank()) {
+                                    val chipPinyinSize = when {
+                                        pinyin.length >= 10 -> 9.5.sp
+                                        pinyin.length >= 8 -> 11.sp
+                                        else -> 12.sp
+                                    }
+                                    Text(text = pinyin, fontSize = chipPinyinSize, color = DeepNavy, maxLines = 1, softWrap = false)
+                                }
                                 Text(text = hanzi, fontFamily = KaiTiFontFamily, fontSize = if (isWide) 16.sp else 20.sp, fontWeight = FontWeight.Normal, color = DeepNavy, maxLines = 1)
                             }
                         }
@@ -2025,7 +2039,14 @@ private fun BuilderSlot(
                         horizontalAlignment = Alignment.CenterHorizontally,
                         modifier = Modifier.padding(horizontal = 10.dp, vertical = 6.dp)
                     ) {
-                        if (pinyin.isNotBlank()) Text(text = pinyin, fontSize = 13.sp, color = DeepNavy)
+                        if (pinyin.isNotBlank()) {
+                            val slotPinyinSize = when {
+                                pinyin.length >= 10 -> 10.sp
+                                pinyin.length >= 8 -> 11.5.sp
+                                else -> 13.sp
+                            }
+                            Text(text = pinyin, fontSize = slotPinyinSize, color = DeepNavy, maxLines = 1, softWrap = false)
+                        }
                         Text(text = hanzi, fontFamily = KaiTiFontFamily, fontSize = 21.sp, fontWeight = FontWeight.Normal, color = DeepNavy)
                     }
                 }
@@ -2048,12 +2069,58 @@ private fun BuilderFixedText(
     fontSize: Int = 25,
     alignment: Alignment.Horizontal = Alignment.CenterHorizontally
 ) {
-    Column(horizontalAlignment = alignment) {
-        if (pinyin.isNotBlank()) {
-            Text(text = pinyin, fontSize = 15.sp, color = SlateGray)
-            Spacer(modifier = Modifier.height(2.dp))
+    val punctuationChars = "，。？！,?.!"
+
+    // Extract leading punctuation (e.g. "， ")
+    val leadingPunct = hanzi.takeWhile { it in punctuationChars || it.isWhitespace() }
+    val withoutLeading = hanzi.drop(leadingPunct.length)
+
+    // Extract trailing punctuation (e.g. " ，", " 。", "？")
+    val trailingPunct = withoutLeading.takeLastWhile { it in punctuationChars || it.isWhitespace() }
+    val coreHanzi = withoutLeading.dropLast(trailingPunct.length)
+
+    // Strip trailing/leading punctuation from pinyin as well
+    val cleanPinyin = pinyin.trim().trim(*punctuationChars.toCharArray()).trim()
+
+    Row(
+        verticalAlignment = Alignment.Bottom,
+        horizontalArrangement = Arrangement.Start
+    ) {
+        if (leadingPunct.isNotBlank()) {
+            Text(
+                text = leadingPunct,
+                fontFamily = KaiTiFontFamily,
+                fontSize = fontSize.sp,
+                fontWeight = FontWeight.Normal,
+                color = HanziColor,
+                modifier = Modifier.padding(bottom = 6.dp)
+            )
         }
-        Text(text = hanzi, fontFamily = KaiTiFontFamily, fontSize = fontSize.sp, fontWeight = FontWeight.Normal, color = HanziColor)
+        if (coreHanzi.isNotBlank()) {
+            Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                if (cleanPinyin.isNotBlank()) {
+                    Text(text = cleanPinyin, fontSize = 15.sp, color = SlateGray)
+                    Spacer(modifier = Modifier.height(2.dp))
+                }
+                Text(
+                    text = coreHanzi,
+                    fontFamily = KaiTiFontFamily,
+                    fontSize = fontSize.sp,
+                    fontWeight = FontWeight.Normal,
+                    color = HanziColor
+                )
+            }
+        }
+        if (trailingPunct.isNotBlank()) {
+            Text(
+                text = trailingPunct,
+                fontFamily = KaiTiFontFamily,
+                fontSize = fontSize.sp,
+                fontWeight = FontWeight.Normal,
+                color = HanziColor,
+                modifier = Modifier.padding(bottom = 6.dp)
+            )
+        }
     }
 }
 
@@ -2062,7 +2129,13 @@ private fun Layout_u1_l2_p2_q4(selectedChips: List<String>, isSubmitted: Boolean
     Row(modifier = Modifier.fillMaxWidth(), verticalAlignment = Alignment.Bottom) {
         BuilderSlot(0, selectedChips, 66.dp, isSubmitted = isSubmitted, onChipRemovedAt = onChipRemovedAt)
         Spacer(modifier = Modifier.width(6.dp))
-        BuilderFixedText(" ， 你好 ， 我", "       nǐhǎo       wǒ", 24)
+        Text(text = " ，", fontFamily = KaiTiFontFamily, fontSize = 24.sp, color = HanziColor, modifier = Modifier.padding(bottom = 6.dp))
+        Spacer(modifier = Modifier.width(6.dp))
+        BuilderFixedText("你好", "nǐhǎo", 24)
+        Spacer(modifier = Modifier.width(6.dp))
+        Text(text = " ，", fontFamily = KaiTiFontFamily, fontSize = 24.sp, color = HanziColor, modifier = Modifier.padding(bottom = 6.dp))
+        Spacer(modifier = Modifier.width(6.dp))
+        BuilderFixedText("我", "wǒ", 24)
         Spacer(modifier = Modifier.width(8.dp))
         BuilderSlot(1, selectedChips, 50.dp, isSubmitted = isSubmitted, onChipRemovedAt = onChipRemovedAt)
     }
@@ -2474,7 +2547,14 @@ fun StandardSentenceBuilder(
                                 verticalArrangement = Arrangement.Center,
                                 modifier = Modifier.fillMaxSize().padding(horizontal = 2.dp, vertical = 4.dp)
                             ) {
-                                if (pinyin.isNotBlank()) Text(text = pinyin, fontSize = 12.sp, color = DeepNavy, maxLines = 1)
+                                if (pinyin.isNotBlank()) {
+                                    val chipPinyinSize = when {
+                                        pinyin.length >= 10 -> 9.5.sp
+                                        pinyin.length >= 8 -> 11.sp
+                                        else -> 12.sp
+                                    }
+                                    Text(text = pinyin, fontSize = chipPinyinSize, color = DeepNavy, maxLines = 1, softWrap = false)
+                                }
                                 Text(text = hanzi, fontFamily = KaiTiFontFamily, fontSize = 20.sp, fontWeight = FontWeight.Normal, color = DeepNavy, maxLines = 1)
                             }
                         }

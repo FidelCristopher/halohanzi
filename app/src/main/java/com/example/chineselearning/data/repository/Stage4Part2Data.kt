@@ -31,8 +31,8 @@ val stage4Part2Exercises = listOf<Exercise>(
         targetHanzi = "她的男朋友是谁？",
         targetPinyin = "Tā de nánpéngyou shì shéi?",
         targetTranslation = "Siapa pacar(L)-nya?",
-        wordChips = listOf("她的:tā de", "男朋友:nánpéngyou", "是:shì", "谁:shéi", "你:nǐ", "们:men", "我:wǒ"),
-        correctAnswer = "她的,男朋友,是,谁",
+        wordChips = listOf("她:tā", "的:de", "男朋友:nánpéngyou", "是:shì", "谁:shéi", "你:nǐ", "们:men", "我:wǒ"),
+        correctAnswer = "她,的,男朋友,是,谁",
         audioToSpeak = "她的男朋友是谁？"
     ),
 
@@ -119,8 +119,8 @@ val stage4Part2Exercises = listOf<Exercise>(
         targetTranslation = "Siapa tetanggamu?",
         targetHanzi = "你的邻居是谁？",
         targetPinyin = "Nǐ de línjū shì shéi?",
-        wordChips = listOf("你的:nǐ de", "邻居:línjū", "是:shì", "人:rén", "们:men", "网友:wǎngyǒu", "谁:shéi"),
-        correctAnswer = "你的,邻居,是,谁",
+        wordChips = listOf("你:nǐ", "的:de", "邻居:línjū", "是:shì", "人:rén", "们:men", "网友:wǎngyǒu", "谁:shéi"),
+        correctAnswer = "你,的,邻居,是,谁",
         audioToSpeak = "你的邻居是谁？"
     )
 )

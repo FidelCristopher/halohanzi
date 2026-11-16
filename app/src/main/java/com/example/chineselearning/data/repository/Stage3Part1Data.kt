@@ -96,8 +96,8 @@ val stage3Part1Exercises = listOf<Exercise>(
         targetHanzi = "那是我的同事。",
         targetPinyin = "Nà shì wǒ de tóngshì.",
         targetTranslation = "Itu adalah rekan kerja saya.",
-        wordChips = listOf("那:nà", "是:shì", "我的:wǒ de", "同事:tóngshì", "男朋友:nánpéngyou", "同学:tóngxué", "这:zhè", "老师:lǎoshī"),
-        correctAnswer = "那,是,我的,同事",
+        wordChips = listOf("那:nà", "是我的:shì wǒ de", "同事:tóngshì", "男朋友:nánpéngyou", "同学:tóngxué", "这:zhè", "老师:lǎoshī"),
+        correctAnswer = "那,是我的,同事",
         audioToSpeak = "那是我的同事。"
     ),
 
@@ -155,11 +155,11 @@ val stage3Part1Exercises = listOf<Exercise>(
         targetHanzi = "那是我们的同事吗？",
         targetPinyin = "Nà shì wǒmen de tóngshì ma?",
         staticLeadingText = "",
-        staticTrailingText = "是 我们 的",
-        hasTrailingLine2 = true,
-        trailingLine2Text = "吗？",
-        wordChips = listOf("那:nà", "这:zhè", "同事:tóngshì", "你:nǐ", "同学:tóngxué", "老师:lǎoshī"),
-        correctAnswer = "那,同事",
-        audioToSpeak = "那是我们的同事吗？"
+ staticTrailingText = "是 我们 的",
+ hasTrailingLine2 = true,
+ trailingLine2Text = "吗？",
+ wordChips = listOf("那:nà", "这:zhè", "同事:tóngshì", "你:nǐ", "同学:tóngxué", "老师:lǎoshī"),
+ correctAnswer = "那,同事",
+ audioToSpeak = "那是我们的同事吗？"
     )
 )
