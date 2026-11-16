@@ -28,7 +28,7 @@ val stage5Part1Exercises = listOf<Exercise>(
         correctAnswer = "ALL_MATCHED",
         matchPairs = listOf(
             MatchPairItem("u2_s5_p1_q2_m1", "同事", "tóngshì", "rekan kerja, kolega"),
-            MatchPairItem("u2_s5_p1_q2_m2", "们", "men", "kata penanda jamak yang digunakan untuk kata ganti atau beberapa kat..."),
+            MatchPairItem("u2_s5_p1_q2_m2", "们", "men", "akhiran jamak (orang)"),
             MatchPairItem("u2_s5_p1_q2_m3", "网友", "wǎngyǒu", "teman online"),
             MatchPairItem("u2_s5_p1_q2_m4", "老板", "lǎobǎn", "bos")
         )

@@ -54,15 +54,31 @@ Imports: `import com.example.chineselearning.data.model.*` and `import com.examp
 
 ---
 
-## 5. UNDERLINE & SLOT CONSISTENCY (NO ORPHAN BLANKS)
-- **Rule**: The number of blank slots (`________`) in `sentenceWithBlank` MUST EXACTLY match the number of selections expected from the user.
-- **NEVER** leave a second blank empty/orphan! If the original screenshot has two blanks:
-  - If the UI only supports selecting 1 answer, combine the phrase into a single slot (e.g. `________`) so no blank is left unresolved.
-  - If 2 slots are needed, ensure the exercise type and answer format explicitly handle both slots.
+## 5. UNDERLINE & SLOT CONSISTENCY (NO ORPHAN BLANKS & NO STRIKE-THROUGH UNDERLINES)
+- **Rule 1 (No Orphan Blanks)**: The number of blank slots (`________`) in `sentenceWithBlank` MUST EXACTLY match the number of selections expected from the user.
+- **Rule 2 (Underline Parking)**: Underlines in `SENTENCE_BUILDER` and full-sentence drop zones MUST ALWAYS be positioned directly and solely beneath each chip (using per-chip/per-slot underline layout). Underlines must NEVER be rendered as fixed background lines that slice through the middle of chips.
+- **Rule 3 (Dynamic Slot Rendering - 5+ Words)**: In `SENTENCE_BUILDER`, slot rendering MUST dynamically loop through all expected slots (`0 until expectedSlots`). NEVER hardcode a maximum of 4 slots; exercises with 5, 6, or 7+ words (e.g. `u2_s5_p2_q5`, `u2_s5_p2_q2`) must render all slots seamlessly without truncation.
+- **Rule 4 (Mid-Sentence Fixed Words)**: Fixed words that appear in the middle of a sentence (e.g. `们` in `我们是邻居`, `你的` in `我是你的老板`, `我们的` in `那是我们的邻居`) MUST be positioned as mid-sentence fixed elements between slots. NEVER displace mid-sentence words into `staticTrailingText` or `staticLeadingText` inappropriately.
 
 ---
 
-## 6. ILLUSTRATION UNIQUENESS & SEMANTIC ACCURACY (NO DUPLICATES / NO LAZY REUSE)
+## 6. PINYIN KEYBOARD GENERIC ARCHITECTURE (ZERO BLANK SCREENS)
+- **Rule**: Every `ExerciseType.PINYIN_KEYBOARD` exercise MUST use a generic modular layout fallback. It MUST dynamically render:
+  1. Target translation at the top (if present).
+  2. Audio speaker button (if `audioToSpeak` is present).
+  3. Interactive sentence where the missing word token is replaced by the interactive typing slot with animated cursor, while all other words display their Pinyin centered above Hanzi.
+  4. On-screen Pinyin keyboard at the bottom.
+- **NEVER** use hardcoded `if (exercise.id == ...)` without a universal `else` fallback that renders the prompt for new exercises.
+
+---
+
+## 7. MATCH PAIRS CONCISENESS & SCALING
+- **Rule 1 (Concise Definitions)**: Indonesian translation labels in `matchPairs` MUST be concise (e.g. `们` -> `"akhiran jamak (orang)"`, NOT lengthy multi-line dictionary paragraphs).
+- **Rule 2 (Responsive Auto-Scaling)**: Card text must dynamically scale font size (`12sp` - `17sp`) and adjust line height based on character length so no text is ever clipped.
+
+---
+
+## 8. ILLUSTRATION UNIQUENESS & SEMANTIC ACCURACY (NO DUPLICATES / NO LAZY REUSE)
 **CRITICAL**: In `ExerciseType.PICTURE_CHOICE`, all 4 options MUST have distinct, non-duplicate illustration drawables (`iconRes`).
 - **Rule 1 (Zero Duplicates)**: No two options in the same exercise may share the same `iconRes`.
   - ❌ **BAD**: "bos" and "guru" both using `R.drawable.ic_teacher`, or "rekan kerja" and "teman sekolah" both using `R.drawable.ic_classmates`.
@@ -75,7 +91,7 @@ Imports: `import com.example.chineselearning.data.model.*` and `import com.examp
 
 ---
 
-## 7. AUTONOMOUS TWO-WAY HAND-OFF PROTOCOL (NO HUMAN WAITING)
+## 9. AUTONOMOUS TWO-WAY HAND-OFF PROTOCOL (NO HUMAN WAITING)
 
 ### For Developers (Dev 1 / Dev 2) & Designer:
 Immediately after completing code generation and committing changes:

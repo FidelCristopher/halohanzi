@@ -384,6 +384,149 @@ fun PinyinKeyboardExercise(
                     )
                 }
             }
+        } else {
+            // GENERIC MODULAR PINYIN KEYBOARD LAYOUT FOR ALL EXERCISES
+            if (exercise.targetTranslation.isNotBlank()) {
+                Text(
+                    text = exercise.targetTranslation,
+                    fontSize = 19.sp,
+                    color = DeepNavy,
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(top = 4.dp, bottom = 20.dp),
+                    textAlign = TextAlign.Start
+                )
+            }
+
+            if (exercise.audioToSpeak.isNotBlank()) {
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(bottom = 16.dp),
+                    horizontalArrangement = Arrangement.Start,
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    Box(
+                        modifier = Modifier
+                            .size(52.dp)
+                            .clip(CircleShape)
+                            .background(Color(0xFF00C48C))
+                            .bouncyClick { ttsManager?.speak(exercise.audioToSpeak) },
+                        contentAlignment = Alignment.Center
+                    ) {
+                        Icon(
+                            imageVector = Icons.AutoMirrored.Filled.VolumeUp,
+                            contentDescription = "Audio",
+                            tint = Color.White,
+                            modifier = Modifier.size(28.dp)
+                        )
+                    }
+                }
+            }
+
+            // Interactive Sentence with Pinyin Slot (Aligned per word token)
+            val punctuationChars = "，。？！,?.!："
+            val hzTokens = exercise.targetHanzi.trim().split("\\s+".toRegex()).filter { it.isNotBlank() }
+            val pyTokens = exercise.targetPinyin.trim().split("\\s+".toRegex()).filter { it.isNotBlank() }
+            val answerClean = exercise.correctAnswer.trim().lowercase()
+
+            FlowRow(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(vertical = 12.dp),
+                horizontalArrangement = Arrangement.spacedBy(8.dp, Alignment.Start),
+                verticalArrangement = Arrangement.spacedBy(14.dp)
+            ) {
+                hzTokens.forEachIndexed { idx, hzToken ->
+                    val pyToken = pyTokens.getOrNull(idx) ?: ""
+                    val cleanPy = pyToken.trim().trim(*punctuationChars.toCharArray()).trim().lowercase()
+                    val isSlot = cleanPy == answerClean || pyToken.contains("____")
+
+                    val leadingPunct = hzToken.takeWhile { it in punctuationChars }
+                    val withoutLeading = hzToken.drop(leadingPunct.length)
+                    val trailingPunct = withoutLeading.takeLastWhile { it in punctuationChars }
+                    val coreHanzi = withoutLeading.dropLast(trailingPunct.length)
+
+                    Row(verticalAlignment = Alignment.Bottom) {
+                        if (leadingPunct.isNotBlank()) {
+                            Text(
+                                text = leadingPunct,
+                                fontFamily = KaiTiFontFamily,
+                                fontSize = 25.sp,
+                                color = HanziColor,
+                                modifier = Modifier.padding(bottom = 4.dp)
+                            )
+                        }
+
+                        if (isSlot) {
+                            Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                                Row(
+                                    verticalAlignment = Alignment.CenterVertically,
+                                    modifier = Modifier.height(28.dp)
+                                ) {
+                                    Text(
+                                        text = typedPinyin,
+                                        fontSize = 17.sp,
+                                        fontWeight = FontWeight.SemiBold,
+                                        color = DeepNavy
+                                    )
+                                    if (!isSubmitted) {
+                                        Box(
+                                            modifier = Modifier
+                                                .width(2.dp)
+                                                .height(20.dp)
+                                                .background(DeepNavy.copy(alpha = cursorAlpha))
+                                        )
+                                    }
+                                }
+                                Spacer(modifier = Modifier.height(4.dp))
+                                Box(
+                                    modifier = Modifier
+                                        .width(maxOf(58.dp, (typedPinyin.length * 14).dp))
+                                        .height(2.5.dp)
+                                        .background(Color(0xFF00C48C), shape = RoundedCornerShape(2.dp))
+                                )
+                                Spacer(modifier = Modifier.height(4.dp))
+                                Text(
+                                    text = coreHanzi,
+                                    fontFamily = KaiTiFontFamily,
+                                    fontSize = 25.sp,
+                                    fontWeight = FontWeight.Normal,
+                                    color = HanziColor
+                                )
+                            }
+                        } else if (coreHanzi.isNotBlank()) {
+                            Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                                if (cleanPy.isNotBlank()) {
+                                    Text(
+                                        text = pyToken.trim().trim(*punctuationChars.toCharArray()),
+                                        fontSize = 15.sp,
+                                        color = SlateGray
+                                    )
+                                    Spacer(modifier = Modifier.height(2.dp))
+                                }
+                                Text(
+                                    text = coreHanzi,
+                                    fontFamily = KaiTiFontFamily,
+                                    fontSize = 25.sp,
+                                    fontWeight = FontWeight.Normal,
+                                    color = HanziColor
+                                )
+                            }
+                        }
+
+                        if (trailingPunct.isNotBlank()) {
+                            Text(
+                                text = trailingPunct,
+                                fontFamily = KaiTiFontFamily,
+                                fontSize = 25.sp,
+                                color = HanziColor,
+                                modifier = Modifier.padding(bottom = 4.dp)
+                            )
+                        }
+                    }
+                }
+            }
         }
 
         Spacer(modifier = Modifier.weight(1f, fill = false))

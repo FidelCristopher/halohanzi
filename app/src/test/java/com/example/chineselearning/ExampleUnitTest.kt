@@ -1,17 +1,81 @@
 package com.example.chineselearning
 
+import com.example.chineselearning.data.model.ExerciseType
+import com.example.chineselearning.data.repository.LearningRepository
+import org.junit.Assert.*
 import org.junit.Test
 
-import org.junit.Assert.*
+class ComprehensiveExerciseAuditTest {
 
-/**
- * Example local unit test, which will execute on the development machine (host).
- *
- * See [testing documentation](http://d.android.com/tools/testing).
- */
-class ExampleUnitTest {
     @Test
-    fun addition_isCorrect() {
-        assertEquals(4, 2 + 2)
+    fun auditAllChaptersAndStages() {
+        val allUnits = LearningRepository.units
+        assertNotNull("Units must not be null", allUnits)
+        assertTrue("Must have at least 2 units", allUnits.size >= 2)
+
+        val errors = mutableListOf<String>()
+
+        allUnits.forEach { unit ->
+            unit.lessons.forEach { lesson ->
+                val allExercises = lesson.exercisesPart1 + lesson.exercisesPart2
+                allExercises.forEach { ex ->
+                    // 1. Audit SENTENCE_BUILDER
+                    if (ex.type == ExerciseType.SENTENCE_BUILDER) {
+                        val expectedWords = ex.correctAnswer.split(",").map { it.trim() }
+                        val chipWords = ex.wordChips.map { it.substringBefore(":").trim() }
+                        expectedWords.forEach { word ->
+                            if (!chipWords.contains(word)) {
+                                errors.add("[${lesson.id} - ${ex.id}] Correct word '$word' not found in wordChips: $chipWords")
+                            }
+                        }
+                    }
+
+                    // 2. Audit PINYIN_KEYBOARD
+                    if (ex.type == ExerciseType.PINYIN_KEYBOARD) {
+                        if (ex.targetTranslation.isBlank()) {
+                            errors.add("[${lesson.id} - ${ex.id}] PINYIN_KEYBOARD missing targetTranslation")
+                        }
+                        if (ex.sentenceWithBlank.isBlank()) {
+                            errors.add("[${lesson.id} - ${ex.id}] PINYIN_KEYBOARD missing sentenceWithBlank")
+                        }
+                        val correctChars = ex.correctAnswer.trim().lowercase().toCharArray()
+                        correctChars.forEach { ch ->
+                            if (ch.isLetter() && !ex.keyboardKeys.contains(ch.toString())) {
+                                errors.add("[${lesson.id} - ${ex.id}] Key '$ch' missing in keyboardKeys: ${ex.keyboardKeys}")
+                            }
+                        }
+                    }
+
+                    // 3. Audit MATCH_PAIRS
+                    if (ex.type == ExerciseType.MATCH_PAIRS) {
+                        ex.matchPairs.forEach { pair ->
+                            if (pair.translation.length > 30) {
+                                errors.add("[${lesson.id} - ${ex.id}] Match pair translation too long (${pair.translation.length} chars): '${pair.translation}'")
+                            }
+                        }
+                    }
+
+                    // 4. Audit SENTENCE_CHOICE options
+                    if (ex.type == ExerciseType.SENTENCE_CHOICE) {
+                        ex.options.forEach { opt ->
+                            if (opt.contains("\n")) {
+                                val lines = opt.split("\n")
+                                if (lines.size == 2) {
+                                    val pTokens = lines[0].split("\\s+").filter { it.isNotBlank() }
+                                    val hTokens = lines[1].split("\\s+").filter { it.isNotBlank() }
+                                    if (pTokens.size != hTokens.size) {
+                                        errors.add("[${lesson.id} - ${ex.id}] Option token asymmetry (${pTokens.size} vs ${hTokens.size}): '$opt'")
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        if (errors.isNotEmpty()) {
+            fail("Comprehensive Exercise Audit Failed with ${errors.size} errors:\n" + errors.joinToString("\n"))
+        }
     }
 }

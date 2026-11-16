@@ -227,9 +227,16 @@ fun MatchPairsContent(
                         modifier = Modifier.fillMaxSize(),
                         contentAlignment = Alignment.Center
                     ) {
+                        val transFontSize = when {
+                            item.translation.length > 25 -> 12.sp
+                            item.translation.length > 16 -> 13.5.sp
+                            isFivePairs -> 15.sp
+                            else -> 17.sp
+                        }
                         Text(
                             text = item.translation,
-                            fontSize = if (isFivePairs) 15.sp else 18.sp,
+                            fontSize = transFontSize,
+                            lineHeight = (transFontSize.value * 1.25f).sp,
                             fontWeight = FontWeight.Normal,
                             color = when {
                                 isWrong -> Color(0xFFFF5252)
@@ -238,7 +245,8 @@ fun MatchPairsContent(
                                 isSelected -> Color(0xFF007AFF)
                                 else -> DeepNavy
                             },
-                            textAlign = TextAlign.Center
+                            textAlign = TextAlign.Center,
+                            modifier = Modifier.padding(horizontal = 6.dp, vertical = 4.dp)
                         )
 
                         if (isJustMatched) {

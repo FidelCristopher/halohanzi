@@ -2749,8 +2749,10 @@ object LearningRepository {
                             id = "u1_l5_p1_q3",
                             type = ExerciseType.PINYIN_KEYBOARD,
                             title = "Masukkan kata yang hilang",
+                            targetTranslation = "Halo, nama saya Budi, saya adalah seorang dokter.",
                             targetHanzi = "你好， 我 叫 布迪， 我 是 医生。",
                             targetPinyin = "Nǐhǎo, wǒ jiào Bùdí, wǒ shì yīshēng.",
+                            sentenceWithBlank = "________ wǒ jiào Bùdí, wǒ shì yīshēng\n你好， 我 叫 布迪， 我 是 医生。",
                             audioToSpeak = "你好，我叫布迪，我是医生。",
                             keyboardKeys = listOf("ǎ", "d", "h", "ǐ", "n", "o", "ǚ", "w", "y"),
                             correctAnswer = "nǐhǎo"
@@ -2801,6 +2803,7 @@ object LearningRepository {
                             targetTranslation = "Nama dia(L) bukan Budi.",
                             targetHanzi = "他 不 叫 布迪。",
                             targetPinyin = "Tā bú jiào Bùdí.",
+                            sentenceWithBlank = "Tā ________ jiào Bùdí\n他 不 叫 布迪。",
                             audioToSpeak = "他不叫布迪。",
                             keyboardKeys = listOf("b", "c", "é", "k", "o", "t", "ú", "w", "y"),
                             correctAnswer = "bú"
@@ -2889,6 +2892,7 @@ object LearningRepository {
                             targetTranslation = "Dia(P) orang Tiongkok.",
                             targetHanzi = "她 是 中国 人。",
                             targetPinyin = "Tā shì Zhōngguó rén.",
+                            sentenceWithBlank = "Tā ________ Zhōngguó rén\n她 是 中国 人。",
                             audioToSpeak = "她是中国人。",
                             keyboardKeys = listOf("ā", "b", "é", "h", "ì", "ǒ", "q", "s", "u"),
                             correctAnswer = "shì"
