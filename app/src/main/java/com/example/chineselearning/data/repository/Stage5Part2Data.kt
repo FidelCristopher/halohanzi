@@ -4,7 +4,7 @@ import com.example.chineselearning.R
 import com.example.chineselearning.data.model.*
 
 val stage5Part2Exercises = listOf<Exercise>(
-    // 1. Soal 1: Lengkapi kalimat (我 [们] [是] [邻居] 。)
+    // 1. Soal 1: Lengkapi kalimat (我们 [是] [邻居] 。)
     Exercise(
         id = "u2_s5_p2_q1",
         type = ExerciseType.SENTENCE_BUILDER,
@@ -13,8 +13,11 @@ val stage5Part2Exercises = listOf<Exercise>(
         targetTranslation = "Kami adalah tetangga.",
         targetHanzi = "我们 是 邻居。",
         targetPinyin = "Wǒmen shì línjū.",
-        wordChips = listOf("我:wǒ", "是:shì", "邻居:línjū"),
-        correctAnswer = "我,是,邻居",
+        staticLeadingText = "我们",
+        staticLeadingPinyin = "Wǒmen",
+        staticTrailingText = "。",
+        wordChips = listOf("是:shì", "邻居:línjū", "网友:wǎngyǒu", "同学:tóngxué"),
+        correctAnswer = "是,邻居",
         audioToSpeak = "我们是邻居。"
     ),
 
@@ -33,7 +36,7 @@ val stage5Part2Exercises = listOf<Exercise>(
         audioToSpeak = "你是我的网友吗？"
     ),
 
-    // 3. Soal 3: Lengkapi kalimat (我 [是] 你的 [老板] 。)
+    // 3. Soal 3: Lengkapi kalimat (我 是 你的 [老板] 。)
     Exercise(
         id = "u2_s5_p2_q3",
         type = ExerciseType.SENTENCE_BUILDER,
@@ -42,8 +45,11 @@ val stage5Part2Exercises = listOf<Exercise>(
         targetTranslation = "Saya adalah bosmu.",
         targetHanzi = "我 是 你 的 老板。",
         targetPinyin = "Wǒ shì nǐ de lǎobǎn.",
-        wordChips = listOf("老板:lǎobǎn", "我:wǒ", "是:shì"),
-        correctAnswer = "我,是,老板",
+        staticLeadingText = "我 是 你的",
+        staticLeadingPinyin = "Wǒ shì nǐ de",
+        staticTrailingText = "。",
+        wordChips = listOf("老板:lǎobǎn", "邻居:línjū", "网友:wǎngyǒu"),
+        correctAnswer = "老板",
         audioToSpeak = "我是你的老板。"
     ),
 
@@ -92,7 +98,7 @@ val stage5Part2Exercises = listOf<Exercise>(
         audioToSpeak = "你是谁？"
     ),
 
-    // 7. Soal 7: Lengkapi kalimat (那 [是] 我们 的 [邻居] 。)
+    // 7. Soal 7: Lengkapi kalimat (那 是 我们 的 [邻居] 。)
     Exercise(
         id = "u2_s5_p2_q7",
         type = ExerciseType.SENTENCE_BUILDER,
@@ -101,8 +107,11 @@ val stage5Part2Exercises = listOf<Exercise>(
         targetTranslation = "Itu adalah tetangga kita.",
         targetHanzi = "那 是 我们 的 邻居。",
         targetPinyin = "Nà shì wǒmen de línjū.",
-        wordChips = listOf("邻居:línjū", "是:shì", "那:nà"),
-        correctAnswer = "那,是,邻居",
+        staticLeadingText = "那 是 我们 的",
+        staticLeadingPinyin = "Nà shì wǒmen de",
+        staticTrailingText = "。",
+        wordChips = listOf("邻居:línjū", "同学:tóngxué", "老板:lǎobǎn"),
+        correctAnswer = "邻居",
         audioToSpeak = "那是我们的邻居。"
     ),
 

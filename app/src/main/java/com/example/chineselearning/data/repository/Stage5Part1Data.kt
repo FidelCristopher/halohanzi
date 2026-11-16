@@ -4,7 +4,7 @@ import com.example.chineselearning.R
 import com.example.chineselearning.data.model.*
 
 val stage5Part1Exercises = listOf<Exercise>(
-    // 1. Soal 1: Lengkapi terjemahan (Kami adalah teman sekamar. -> 我 [们] [是] [室友] 。)
+    // 1. Soal 1: Lengkapi terjemahan (Kami adalah teman sekamar. -> 我们 [是] [室友] 。)
     Exercise(
         id = "u2_s5_p1_q1",
         type = ExerciseType.SENTENCE_BUILDER,
@@ -12,11 +12,11 @@ val stage5Part1Exercises = listOf<Exercise>(
         targetTranslation = "Kami adalah teman sekamar.",
         targetHanzi = "我们 是 室友。",
         targetPinyin = "Wǒmen shì shìyǒu.",
-        staticLeadingText = "我",
-        staticLeadingPinyin = "Wǒ",
+        staticLeadingText = "我们",
+        staticLeadingPinyin = "Wǒmen",
         staticTrailingText = "。",
-        wordChips = listOf("是:shì", "不:bù", "们:men", "人:rén", "室友:shìyǒu", "邻居:línjū", "网友:wǎngyǒu"),
-        correctAnswer = "们,是,室友",
+        wordChips = listOf("是:shì", "不:bù", "人:rén", "室友:shìyǒu", "邻居:línjū", "网友:wǎngyǒu"),
+        correctAnswer = "是,室友",
         audioToSpeak = "我们是室友。"
     ),
 
@@ -65,10 +65,10 @@ val stage5Part1Exercises = listOf<Exercise>(
         id = "u2_s5_p1_q5",
         type = ExerciseType.PINYIN_KEYBOARD,
         title = "Masukkan kata yang hilang",
-        targetHanzi = "王飞 是 我们 的 邻居。",
-        targetPinyin = "WángFēi shì wǒmen de línjū.",
+        targetHanzi = "王飞 是 我 们 的 邻居。",
+        targetPinyin = "WángFēi shì wǒ men de línjū.",
         targetTranslation = "Wang Fei adalah tetangga kita.",
-        sentenceWithBlank = "WángFēi shì wǒ ________ de línjū\n王 飞 是 我 们 的 邻居 。",
+        sentenceWithBlank = "WángFēi shì wǒ ________ de línjū\n王飞 是 我 们 的 邻居。",
         correctAnswer = "men",
         keyboardKeys = listOf("a", "e", "g", "m", "n", "ò", "s", "ǔ", "z"),
         audioToSpeak = "王飞是我们的邻居。"
