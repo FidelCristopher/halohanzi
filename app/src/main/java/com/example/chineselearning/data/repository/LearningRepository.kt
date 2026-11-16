@@ -2923,9 +2923,9 @@ object LearningRepository {
             nodes = listOf(
                 PathNode("u2_n1", "Mereka adalah teman-temanku", Color(0xFFFFC107), NodeIconType.CAP, isCompleted = false, lessonId = "u2_l1"),
                 PathNode("u2_n2", "Mereka adalah teman-temanku", Color(0xFFFFC107), NodeIconType.DUMBBELL, isCompleted = false, lessonId = "u2_l2"),
-                PathNode("u2_n3", "Umur & Tahun", Color(0xFFFFC107), NodeIconType.CAP, isCompleted = false, lessonId = "u2_l1"),
-                PathNode("u2_n4", "Umur & Tahun", Color(0xFFFFC107), NodeIconType.DUMBBELL, isCompleted = false, lessonId = "u2_l1"),
-                PathNode("u2_n5", "Latihan Komprehensif", Color(0xFFFFC107), NodeIconType.SHUFFLE, isCompleted = false, lessonId = "u2_l1"),
+                PathNode("u2_n3", "Siapa ini?", Color(0xFFFFC107), NodeIconType.CAP, isCompleted = false, lessonId = "u2_l3"),
+                PathNode("u2_n4", "Siapa ini?", Color(0xFFFFC107), NodeIconType.DUMBBELL, isCompleted = false, lessonId = "u2_l4"),
+                PathNode("u2_n5", "Latihan Komprehensif", Color(0xFFFFC107), NodeIconType.SHUFFLE, isCompleted = false, lessonId = "u2_l5"),
                 PathNode("u2_n6", "Kuis Cerita", Color(0xFFFFC107), NodeIconType.BOOK, isCompleted = false, lessonId = "u2_l1"),
                 PathNode("u2_n7", "Checkpoint Bab", Color(0xFFFFB300), NodeIconType.CHEST, isCompleted = false, lessonId = "u2_l1"),
                 PathNode("u2_n8", "Rest area", Color(0xFF03A9F4), NodeIconType.REST_AREA, isCompleted = false, lessonId = "u2_l1")
@@ -2961,6 +2961,57 @@ object LearningRepository {
                     exercisesPart1 = stage2Part1Exercises,
                     exercisesPart2 = stage2Part2Exercises,
                     exercisesPart3 = stage2Part3Exercises
+                ),
+                Lesson(
+                    id = "u2_l3",
+                    title = "Siapa ini?",
+                    subtitle = "Kata tanya 谁 & Kosakata Kolega / Tetangga",
+                    grammarNote = "Kata tanya 谁 (shéi) digunakan untuk menanyakan identitas seseorang. Kata tunjuk 这 (zhè) berarti 'ini' dan 那 (nà) berarti 'itu'.",
+                    newWords = listOf(
+                        Word("w2_6", "同事", "tóngshì", "Rekan kerja / kolega", "Kata benda", "那是我们的同事。", "Nà shì wǒmen de tóngshì.", "Itu adalah rekan kerja kita."),
+                        Word("w2_7", "老板", "lǎobǎn", "Bos / majikan", "Kata benda", "这是老板的朋友。", "Zhè shì lǎobǎn de péngyou.", "Ini adalah teman bos."),
+                        Word("w2_8", "这", "zhè", "Ini", "Kata tunjuk", "这是我的朋友。", "Zhè shì wǒ de péngyou.", "Ini adalah teman saya."),
+                        Word("w2_9", "那", "nà", "Itu", "Kata tunjuk", "那是谁？", "Nà shì shéi?", "Itu siapa?"),
+                        Word("w2_10", "谁", "shéi", "Siapa", "Kata tanya", "王飞是谁？", "WángFēi shì shéi?", "Siapa Wang Fei?"),
+                        Word("w2_11", "邻居", "línjū", "Tetangga", "Kata benda", "你的邻居是谁？", "Nǐ de línjū shì shéi?", "Siapa tetanggamu?"),
+                        Word("w2_12", "网友", "wǎngyǒu", "Teman online", "Kata benda", "这是我的网友。", "Zhè shì wǒ de wǎngyǒu.", "Ini adalah teman online saya."),
+                        Word("w2_13", "室友", "shìyǒu", "Teman sekamar", "Kata benda", "我的室友是中国人。", "Wǒ de shìyǒu shì Zhōngguó rén.", "Teman sekamar saya adalah orang Tiongkok.")
+                    ),
+                    exercises = stage3Part1Exercises,
+                    exercisesPart1 = stage3Part1Exercises,
+                    exercisesPart2 = stage3Part2Exercises
+                ),
+                Lesson(
+                    id = "u2_l4",
+                    title = "Siapa ini?",
+                    subtitle = "Latihan Kosakata Identitas & Hubungan",
+                    grammarNote = "Latihan komprehensif struktur kalimat kepemilikan 的, kata tunjuk 这 / 那, dan kata tanya 谁.",
+                    newWords = listOf(
+                        Word("w2_6", "同事", "tóngshì", "Rekan kerja / kolega", "Kata benda", "那是我们的同事。", "Nà shì wǒmen de tóngshì.", "Itu adalah rekan kerja kita."),
+                        Word("w2_7", "老板", "lǎobǎn", "Bos / majikan", "Kata benda", "这是老板的朋友。", "Zhè shì lǎobǎn de péngyou.", "Ini adalah teman bos."),
+                        Word("w2_11", "邻居", "línjū", "Tetangga", "Kata benda", "你的邻居是谁？", "Nǐ de línjū shì shéi?", "Siapa tetanggamu?"),
+                        Word("w2_13", "室友", "shìyǒu", "Teman sekamar", "Kata benda", "我的室友是中国人。", "Wǒ de shìyǒu shì Zhōngguó rén.", "Teman sekamar saya adalah orang Tiongkok.")
+                    ),
+                    exercises = stage4Part1Exercises,
+                    exercisesPart1 = stage4Part1Exercises,
+                    exercisesPart2 = stage4Part2Exercises,
+                    exercisesPart3 = stage4Part3Exercises
+                ),
+                Lesson(
+                    id = "u2_l5",
+                    title = "Latihan Komprehensif",
+                    subtitle = "Review Seluruh Kosakata & Dialog Bab 2",
+                    grammarNote = "Uji pemahaman gabungan bentuk jamak 们, kata ganti kepemilikan 的, kata tunjuk 这/那, kata tanya 谁/吗, dan seluruh kosakata hubungan.",
+                    newWords = listOf(
+                        Word("w2_1", "同学", "tóngxué", "Teman sekolah", "Kata benda", "我们是同学。", "Wǒmen shì tóngxué.", "Kami adalah teman sekolah."),
+                        Word("w2_2", "朋友", "péngyou", "Teman", "Kata benda", "我们是朋友。", "Wǒmen shì péngyou.", "Kami adalah teman."),
+                        Word("w2_6", "同事", "tóngshì", "Rekan kerja", "Kata benda", "她们是我的同事。", "Tāmen shì wǒ de tóngshì.", "Mereka adalah rekan kerja saya."),
+                        Word("w2_11", "邻居", "línjū", "Tetangga", "Kata benda", "我们是邻居。", "Wǒmen shì línjū.", "Kami adalah tetangga."),
+                        Word("w2_13", "室友", "shìyǒu", "Teman sekamar", "Kata benda", "这是我的室友。", "Zhè shì wǒ de shìyǒu.", "Ini adalah teman sekamarku.")
+                    ),
+                    exercises = stage5Part1Exercises,
+                    exercisesPart1 = stage5Part1Exercises,
+                    exercisesPart2 = stage5Part2Exercises
                 )
             )
         ),
