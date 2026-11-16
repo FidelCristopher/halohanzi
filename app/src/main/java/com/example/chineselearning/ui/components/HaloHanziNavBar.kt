@@ -68,7 +68,7 @@ fun HaloHanziNavBar(
             title = "Imersi",
             selectedIconRes = R.drawable.ic_nav_imersi_active,
             unselectedIconRes = R.drawable.ic_nav_imersi,
-            hasNotificationDot = true
+            hasNotificationDot = false
         ),
         NavTabItem(
             title = "Saya",
