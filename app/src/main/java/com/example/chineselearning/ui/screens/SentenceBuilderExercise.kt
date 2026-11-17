@@ -684,63 +684,6 @@ fun IllustrationSentenceBuilder(
                 Text(text = "吗？", fontFamily = KaiTiFontFamily, fontSize = 24.sp, color = HanziColor)
             }
         }
-    } else if (exercise.id == "u2_s5_p2_q1") {
-        // [Slot 0: 我] men / 们 [Slot 1: 是] [Slot 2: 邻居] 。
-        Row(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(top = 16.dp),
-            horizontalArrangement = Arrangement.Center,
-            verticalAlignment = Alignment.Bottom
-        ) {
-            BuilderSlot(0, selectedChips, 48.dp, isSubmitted = isSubmitted, onChipRemovedAt = onChipRemovedAt)
-            Spacer(modifier = Modifier.width(6.dp))
-            BuilderFixedText("们", "men")
-            Spacer(modifier = Modifier.width(6.dp))
-            BuilderSlot(1, selectedChips, 48.dp, isSubmitted = isSubmitted, onChipRemovedAt = onChipRemovedAt)
-            Spacer(modifier = Modifier.width(6.dp))
-            BuilderSlot(2, selectedChips, 54.dp, isSubmitted = isSubmitted, onChipRemovedAt = onChipRemovedAt)
-            Spacer(modifier = Modifier.width(4.dp))
-            Text(text = " 。", fontFamily = KaiTiFontFamily, fontSize = 24.sp, color = HanziColor, modifier = Modifier.padding(bottom = 6.dp))
-        }
-    } else if (exercise.id == "u2_s5_p2_q3") {
-        // [Slot 0: 我] [Slot 1: 是] nǐ de / 你的 [Slot 2: 老板] 。
-        Row(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(top = 16.dp),
-            horizontalArrangement = Arrangement.Center,
-            verticalAlignment = Alignment.Bottom
-        ) {
-            BuilderSlot(0, selectedChips, 48.dp, isSubmitted = isSubmitted, onChipRemovedAt = onChipRemovedAt)
-            Spacer(modifier = Modifier.width(6.dp))
-            BuilderSlot(1, selectedChips, 48.dp, isSubmitted = isSubmitted, onChipRemovedAt = onChipRemovedAt)
-            Spacer(modifier = Modifier.width(6.dp))
-            BuilderFixedText("你的", "nǐ de")
-            Spacer(modifier = Modifier.width(6.dp))
-            BuilderSlot(2, selectedChips, 54.dp, isSubmitted = isSubmitted, onChipRemovedAt = onChipRemovedAt)
-            Spacer(modifier = Modifier.width(4.dp))
-            Text(text = " 。", fontFamily = KaiTiFontFamily, fontSize = 24.sp, color = HanziColor, modifier = Modifier.padding(bottom = 6.dp))
-        }
-    } else if (exercise.id == "u2_s5_p2_q7") {
-        // [Slot 0: 那] [Slot 1: 是] wǒmen de / 我们 的 [Slot 2: 邻居] 。
-        Row(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(top = 16.dp),
-            horizontalArrangement = Arrangement.Center,
-            verticalAlignment = Alignment.Bottom
-        ) {
-            BuilderSlot(0, selectedChips, 48.dp, isSubmitted = isSubmitted, onChipRemovedAt = onChipRemovedAt)
-            Spacer(modifier = Modifier.width(6.dp))
-            BuilderSlot(1, selectedChips, 48.dp, isSubmitted = isSubmitted, onChipRemovedAt = onChipRemovedAt)
-            Spacer(modifier = Modifier.width(6.dp))
-            BuilderFixedText("我们 的", "wǒmen de")
-            Spacer(modifier = Modifier.width(6.dp))
-            BuilderSlot(2, selectedChips, 54.dp, isSubmitted = isSubmitted, onChipRemovedAt = onChipRemovedAt)
-            Spacer(modifier = Modifier.width(4.dp))
-            Text(text = " 。", fontFamily = KaiTiFontFamily, fontSize = 24.sp, color = HanziColor, modifier = Modifier.padding(bottom = 6.dp))
-        }
     } else {
         val slotWidth = when {
             expectedSlots == 1 -> 68.dp
