@@ -1,0 +1,52 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Cyan Card Badge -->
+    <path
+        android:fillColor="#CFFAFE"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Welcoming Open Palm Gesture (Bu Ke Qi - Sama-sama / You're welcome) -->
+    <!-- Arm Sleeve (Cyan/Teal Jacket) -->
+    <path
+        android:fillColor="#0E7490"
+        android:pathData="M16,78 L38,78 L35,58 L19,62 Z" />
+    <path
+        android:fillColor="#0891B2"
+        android:pathData="M17,76 L36,76 L34,60 L20,63 Z" />
+    <!-- White Cuff -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M20,63 L34,60 L35,57 L21,60 Z" />
+
+    <!-- Open Welcoming Upright Palm -->
+    <path
+        android:fillColor="#C2410C"
+        android:pathData="M34,58 L46,55 C52,53 62,49 68,43 C72,39 76,34 78,28 C79,25 76,23 74,24 C72,25 70,27 67,30 L56,38 C54,36 50,34 45,36 C40,38 37,42 35,46 Z" />
+    <path
+        android:fillColor="#FDBA74"
+        android:pathData="M34,57 L45,54 C51,52 60,48 67,42 C70.5,38.5 74.5,33.5 76.5,28 C77.2,26 75,24.5 73.5,25.5 C71.5,26.5 69.5,28.5 66.5,31.5 L55.5,39 C53.5,37 49.5,35.5 45,37 C40.5,39 37.5,43 35.5,47 Z" />
+
+    <!-- Fingers Spreading in Welcome Warmth -->
+    <path
+        android:fillColor="#FED7AA"
+        android:pathData="M52,43 C58,38 68,30 73,26 C74.5,25 76,26.5 75,28 C70,33 60,41 54,46 Z" />
+    <path
+        android:fillColor="#FED7AA"
+        android:pathData="M49,46 C55,42 63,35 68,32 C69.5,31 70.5,32.5 69.5,34 C65,38 57,45 51,49 Z" />
+
+    <!-- Goodwill Smile Wave Accent (Top Right) -->
+    <path
+        android:fillColor="#0284C7"
+        android:pathData="M60,62 C68,70 78,66 84,58 L82,56 C77,63 69,66 62,59 Z" />
+
+    <!-- Sparkle Accents -->
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M78,16 L79.5,12 L81,16 L85,17.5 L81,19 L79.5,23 L78,19 L74,17.5 Z" />
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M24,32 L25,29 L26,32 L29,33 L26,34 L25,37 L24,34 L21,33 Z" />
+</vector>

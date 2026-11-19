@@ -1,0 +1,59 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Lavender Card Badge -->
+    <path
+        android:fillColor="#EDE9FE"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Sincere Apology (Dui Bu Qi - Head Bowed in Apology) -->
+    <!-- Head Shadow -->
+    <path
+        android:fillColor="#4338CA"
+        android:pathData="M48,16 C38,16 30,24 30,34 C30,44 38,52 48,52 C58,52 66,44 66,34 C66,24 58,16 48,16 Z" />
+
+    <!-- Neat Hair -->
+    <path
+        android:fillColor="#1E1B4B"
+        android:pathData="M48,16 C38,16 30,24 30,34 C34,26 42,24 48,24 C54,24 62,26 66,34 C66,24 58,16 48,16 Z" />
+
+    <!-- Face (Gentle Contemplative Tilt) -->
+    <path
+        android:fillColor="#FDBA74"
+        android:pathData="M48,24 C40,24 34,30 34,37 C34,44 40,50 48,50 C56,50 62,44 62,37 C62,30 56,24 48,24 Z" />
+
+    <!-- Apologetic Closed Eyes (Curved downward softly) -->
+    <path
+        android:fillColor="#1E1B4B"
+        android:pathData="M38,36 C40,38 43,38 45,36 L44,35 C42.5,36.5 40.5,36.5 39,35 Z M51,36 C53,38 56,38 58,36 L57,35 C55.5,36.5 53.5,36.5 52,35 Z" />
+
+    <!-- Gentle Soft Mouth -->
+    <path
+        android:fillColor="#EA580C"
+        android:pathData="M45,43 C47,44 49,44 51,43 Z" />
+
+    <!-- Bowing Shoulders & Torso (Deep Indigo Shirt) -->
+    <path
+        android:fillColor="#3730A3"
+        android:pathData="M48,52 C34,52 20,62 18,78 L78,78 C76,62 62,52 48,52 Z" />
+    <path
+        android:fillColor="#4F46E5"
+        android:pathData="M48,54 C36,54 24,63 21,76 L75,76 C72,63 60,54 48,54 Z" />
+
+    <!-- White Collar -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M48,54 L42,64 L48,68 L54,64 Z" />
+
+    <!-- Sincere Hand Over Heart -->
+    <path
+        android:fillColor="#FDBA74"
+        android:pathData="M40,64 C42,61 46,62 48,65 L54,67 C56,68 56,71 54,73 C51,75 44,75 40,71 C38,69 38,66 40,64 Z" />
+
+    <!-- Droplet / Gentle Sweat of Sincerity -->
+    <path
+        android:fillColor="#38BDF8"
+        android:pathData="M66,24 C64,28 64,30 66,32 C68,30 68,28 66,24 Z" />
+</vector>

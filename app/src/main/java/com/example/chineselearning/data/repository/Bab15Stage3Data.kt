@@ -18,10 +18,10 @@ val bab15Stage3Part1Exercises = listOf(
         correctAnswer = "terima kasih",
         audioToSpeak = "谢谢",
         pictureOptions = listOf(
-            PictureOption("u15_s3_p1_opt1", "terima kasih", "🙏", R.drawable.ic_coin, true),
-            PictureOption("u15_s3_p1_opt2", "maaf", "🙇", R.drawable.ic_target, false),
-            PictureOption("u15_s3_p1_opt3", "halo", "👋", R.drawable.ic_book, false),
-            PictureOption("u15_s3_p1_opt4", "selamat tinggal", "🚪", R.drawable.ic_crown, false)
+            PictureOption("u15_s3_p1_opt1", "terima kasih", "", R.drawable.ic_etq_thanks, true),
+            PictureOption("u15_s3_p1_opt2", "maaf", "", R.drawable.ic_etq_sorry, false),
+            PictureOption("u15_s3_p1_opt3", "halo", "", R.drawable.ic_comm_hello, false),
+            PictureOption("u15_s3_p1_opt4", "selamat tinggal", "", R.drawable.ic_etq_goodbye, false)
         )
     ),
 
@@ -108,10 +108,10 @@ val bab15Stage3Part1Exercises = listOf(
         correctAnswer = "sama-sama",
         audioToSpeak = "不客气",
         pictureOptions = listOf(
-            PictureOption("u15_s3_p1_opt7_1", "sama-sama", "🤝", R.drawable.ic_coin, true),
-            PictureOption("u15_s3_p1_opt7_2", "terima kasih", "🙏", R.drawable.ic_target, false),
-            PictureOption("u15_s3_p1_opt7_3", "maaf", "🙇", R.drawable.ic_book, false),
-            PictureOption("u15_s3_p1_opt7_4", "halo", "👋", R.drawable.ic_crown, false)
+            PictureOption("u15_s3_p1_opt7_1", "sama-sama", "", R.drawable.ic_etq_welcome, true),
+            PictureOption("u15_s3_p1_opt7_2", "terima kasih", "", R.drawable.ic_etq_thanks, false),
+            PictureOption("u15_s3_p1_opt7_3", "maaf", "", R.drawable.ic_etq_sorry, false),
+            PictureOption("u15_s3_p1_opt7_4", "halo", "", R.drawable.ic_comm_hello, false)
         )
     ),
 
@@ -169,10 +169,10 @@ val bab15Stage3Part2Exercises = listOf(
         correctAnswer = "maaf",
         audioToSpeak = "对不起",
         pictureOptions = listOf(
-            PictureOption("u15_s3_p2_opt1", "maaf", "🙇", R.drawable.ic_coin, true),
-            PictureOption("u15_s3_p2_opt2", "terima kasih", "🙏", R.drawable.ic_target, false),
-            PictureOption("u15_s3_p2_opt3", "halo", "👋", R.drawable.ic_book, false),
-            PictureOption("u15_s3_p2_opt4", "selamat tinggal", "🚪", R.drawable.ic_crown, false)
+            PictureOption("u15_s3_p2_opt1", "maaf", "", R.drawable.ic_etq_sorry, true),
+            PictureOption("u15_s3_p2_opt2", "terima kasih", "", R.drawable.ic_etq_thanks, false),
+            PictureOption("u15_s3_p2_opt3", "halo", "", R.drawable.ic_comm_hello, false),
+            PictureOption("u15_s3_p2_opt4", "selamat tinggal", "", R.drawable.ic_etq_goodbye, false)
         )
     ),
 
@@ -259,10 +259,10 @@ val bab15Stage3Part2Exercises = listOf(
         correctAnswer = "tidak apa-apa",
         audioToSpeak = "没关系",
         pictureOptions = listOf(
-            PictureOption("u15_s3_p2_opt7_1", "tidak apa-apa", "🤝", R.drawable.ic_coin, true),
-            PictureOption("u15_s3_p2_opt7_2", "maaf", "🙇", R.drawable.ic_target, false),
-            PictureOption("u15_s3_p2_opt7_3", "terima kasih", "🙏", R.drawable.ic_book, false),
-            PictureOption("u15_s3_p2_opt7_4", "halo", "👋", R.drawable.ic_crown, false)
+            PictureOption("u15_s3_p2_opt7_1", "tidak apa-apa", "", R.drawable.ic_etq_no_problem, true),
+            PictureOption("u15_s3_p2_opt7_2", "maaf", "", R.drawable.ic_etq_sorry, false),
+            PictureOption("u15_s3_p2_opt7_3", "terima kasih", "", R.drawable.ic_etq_thanks, false),
+            PictureOption("u15_s3_p2_opt7_4", "halo", "", R.drawable.ic_comm_hello, false)
         )
     ),
 

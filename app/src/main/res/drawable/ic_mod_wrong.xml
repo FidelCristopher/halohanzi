@@ -1,0 +1,31 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Rose / Red Card Badge -->
+    <path
+        android:fillColor="#FFE4E6"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Bold Crimson Error Cross X (Cuo - Salah / Keliru) -->
+    <!-- X Shadow / Bevel -->
+    <path
+        android:fillColor="#881337"
+        android:pathData="M32,22 L48,38 L64,22 L74,32 L58,48 L74,64 L64,74 L48,58 L32,74 L22,64 L38,48 L22,32 Z" />
+
+    <!-- Main Vibrant Red Cross Body -->
+    <path
+        android:fillColor="#E11D48"
+        android:pathData="M32,24 L48,40 L64,24 L72,32 L56,48 L72,64 L64,72 L48,56 L32,72 L24,64 L40,48 L24,32 Z" />
+
+    <!-- Inner Highlights on Upper Edges -->
+    <path
+        android:fillColor="#FB7185"
+        android:pathData="M32,24 L48,40 L45,41 L30,26 Z M64,24 L72,32 L70,34 L62,26 Z M24,64 L40,48 L41,51 L26,66 Z M48,56 L64,72 L62,74 L47,59 Z" />
+
+    <!-- Warning Caution Puffs -->
+    <path
+        android:fillColor="#FDA4AF"
+        android:pathData="M18,18 A3,3 0 1,1 18,24 A3,3 0 1,1 18,18 Z M78,72 A3,3 0 1,1 78,78 A3,3 0 1,1 78,72 Z" />
+</vector>

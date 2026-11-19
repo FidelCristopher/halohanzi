@@ -1,0 +1,91 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Warm Amber Card Badge -->
+    <path
+        android:fillColor="#FEF3C7"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Dog Ears (Triangular Pointed / Floppy) -->
+    <!-- Left Ear Shadow & Body -->
+    <path
+        android:fillColor="#B45309"
+        android:pathData="M26,18 C20,20 18,36 24,44 L32,32 Z" />
+    <path
+        android:fillColor="#D97706"
+        android:pathData="M27,20 C22,22 20,35 25,42 L31,32 Z" />
+    <path
+        android:fillColor="#FDE68A"
+        android:pathData="M26,24 C23,26 22,33 25,37 L29,31 Z" />
+
+    <!-- Right Ear Shadow & Body -->
+    <path
+        android:fillColor="#B45309"
+        android:pathData="M70,18 C76,20 78,36 72,44 L64,32 Z" />
+    <path
+        android:fillColor="#D97706"
+        android:pathData="M69,20 C74,22 76,35 71,42 L65,32 Z" />
+    <path
+        android:fillColor="#FDE68A"
+        android:pathData="M70,24 C73,26 74,33 71,37 L67,31 Z" />
+
+    <!-- Dog Head Shape (Golden Shiba Inu Face) -->
+    <path
+        android:fillColor="#B45309"
+        android:pathData="M48,22 C32,22 24,32 24,48 C24,64 34,74 48,74 C62,74 72,64 72,48 C72,32 64,22 48,22 Z" />
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M48,24 C34,24 26,34 26,48 C26,62 35,72 48,72 C61,72 70,62 70,48 C70,34 62,24 48,24 Z" />
+
+    <!-- Cute Shiba White Eyebrow Spots -->
+    <path
+        android:fillColor="#FFFBEB"
+        android:pathData="M37,34 A3.5,3.5 0 1,1 37,41 A3.5,3.5 0 1,1 37,34 Z" />
+    <path
+        android:fillColor="#FFFBEB"
+        android:pathData="M59,34 A3.5,3.5 0 1,1 59,41 A3.5,3.5 0 1,1 59,34 Z" />
+
+    <!-- White Snout / Cheeks -->
+    <path
+        android:fillColor="#FFFBEB"
+        android:pathData="M48,46 C41,46 34,51 34,60 C34,68 40,72 48,72 C56,72 62,68 62,60 C62,51 55,46 48,46 Z" />
+
+    <!-- Eyes (Bright Curious Dark Eyes) -->
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="M37,44 A3.5,3.5 0 1,1 37,51 A3.5,3.5 0 1,1 37,44 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M36,45 A1.2,1.2 0 1,1 36,47.4 A1.2,1.2 0 1,1 36,45 Z" />
+
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="M59,44 A3.5,3.5 0 1,1 59,51 A3.5,3.5 0 1,1 59,44 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M58,45 A1.2,1.2 0 1,1 58,47.4 A1.2,1.2 0 1,1 58,45 Z" />
+
+    <!-- Nose (Black rounded triangle) -->
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="M48,51 C45,51 44,53 45,55 L47.5,58.5 C47.8,59 48.2,59 48.5,58.5 L51,55 C52,53 51,51 48,51 Z" />
+
+    <!-- Cute Smiling Mouth -->
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="M48,58 L48,63 M48,63 C45,63 43,61.5 41,60.5 M48,63 C51,63 53,61.5 55,60.5" />
+    <!-- Pink Tongue -->
+    <path
+        android:fillColor="#FDA4AF"
+        android:pathData="M46,63 C46,67 50,67 50,63 Z" />
+
+    <!-- Red Collar with Golden Bell -->
+    <path
+        android:fillColor="#DC2626"
+        android:pathData="M34,72 L62,72 C63,72 64,74 62,75 L34,75 C32,74 33,72 34,72 Z" />
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M48,73 A3,3 0 1,1 48,79 A3,3 0 1,1 48,73 Z" />
+</vector>

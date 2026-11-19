@@ -18,10 +18,10 @@ val bab14Stage6Part1Exercises = listOf(
         correctAnswer = "film",
         audioToSpeak = "电影",
         pictureOptions = listOf(
-            PictureOption("u14_s6_p1_opt1", "film", "🎬", R.drawable.ic_coin, true),
-            PictureOption("u14_s6_p1_opt2", "buku", "📖", R.drawable.ic_book, false),
-            PictureOption("u14_s6_p1_opt3", "mobil", "🚗", R.drawable.ic_target, false),
-            PictureOption("u14_s6_p1_opt4", "teh", "🍵", R.drawable.ic_crown, false)
+            PictureOption("u14_s6_p1_opt1", "film", "", R.drawable.ic_hobby_movie, true),
+            PictureOption("u14_s6_p1_opt2", "buku", "", R.drawable.ic_book_chinese, false),
+            PictureOption("u14_s6_p1_opt3", "mobil", "", R.drawable.ic_trans_car, false),
+            PictureOption("u14_s6_p1_opt4", "teh", "", R.drawable.ic_food_tea, false)
         )
     ),
 
@@ -108,10 +108,10 @@ val bab14Stage6Part1Exercises = listOf(
         correctAnswer = "bioskop",
         audioToSpeak = "电影院",
         pictureOptions = listOf(
-            PictureOption("u14_s6_p1_opt7_1", "bioskop", "🎦", R.drawable.ic_coin, true),
-            PictureOption("u14_s6_p1_opt7_2", "sekolah", "🏫", R.drawable.ic_cap, false),
-            PictureOption("u14_s6_p1_opt7_3", "rumah", "🏠", R.drawable.ic_people_group, false),
-            PictureOption("u14_s6_p1_opt7_4", "toko", "🏪", R.drawable.ic_book, false)
+            PictureOption("u14_s6_p1_opt7_1", "bioskop", "", R.drawable.ic_hobby_cinema, true),
+            PictureOption("u14_s6_p1_opt7_2", "sekolah", "", R.drawable.ic_edu_school, false),
+            PictureOption("u14_s6_p1_opt7_3", "rumah", "", R.drawable.ic_fam_home, false),
+            PictureOption("u14_s6_p1_opt7_4", "toko", "", R.drawable.ic_shop_store, false)
         )
     ),
 
@@ -169,10 +169,10 @@ val bab14Stage6Part2Exercises = listOf(
         correctAnswer = "kucing",
         audioToSpeak = "猫",
         pictureOptions = listOf(
-            PictureOption("u14_s6_p2_opt1", "kucing", "🐱", R.drawable.ic_coin, true),
-            PictureOption("u14_s6_p2_opt2", "anjing", "🐶", R.drawable.ic_target, false),
-            PictureOption("u14_s6_p2_opt3", "ikan", "🐟", R.drawable.ic_book, false),
-            PictureOption("u14_s6_p2_opt4", "burung", "🐦", R.drawable.ic_crown, false)
+            PictureOption("u14_s6_p2_opt1", "kucing", "", R.drawable.ic_pet_cat, true),
+            PictureOption("u14_s6_p2_opt2", "anjing", "", R.drawable.ic_pet_dog, false),
+            PictureOption("u14_s6_p2_opt3", "buah", "", R.drawable.ic_food_fruits, false),
+            PictureOption("u14_s6_p2_opt4", "apel", "", R.drawable.ic_food_apple, false)
         )
     ),
 
@@ -259,10 +259,10 @@ val bab14Stage6Part2Exercises = listOf(
         correctAnswer = "cantik / indah",
         audioToSpeak = "漂亮",
         pictureOptions = listOf(
-            PictureOption("u14_s6_p2_opt7_1", "cantik", "🌸", R.drawable.ic_coin, true),
-            PictureOption("u14_s6_p2_opt7_2", "buruk", "🗑️", R.drawable.ic_target, false),
-            PictureOption("u14_s6_p2_opt7_3", "makanan", "🍚", R.drawable.ic_book, false),
-            PictureOption("u14_s6_p2_opt7_4", "mobil", "🚗", R.drawable.ic_crown, false)
+            PictureOption("u14_s6_p2_opt7_1", "cantik", "", R.drawable.ic_hobby_pretty, true),
+            PictureOption("u14_s6_p2_opt7_2", "buruk", "", R.drawable.ic_mod_wrong, false),
+            PictureOption("u14_s6_p2_opt7_3", "makanan", "", R.drawable.ic_food_rice, false),
+            PictureOption("u14_s6_p2_opt7_4", "mobil", "", R.drawable.ic_trans_car, false)
         )
     ),
 

@@ -1,0 +1,47 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Amber / Sky Blue Card Badge -->
+    <path
+        android:fillColor="#E0F2FE"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Cheerful Waving Hand (Zaijian - Sampai Jumpa / Goodbye) -->
+    <!-- Arm Sleeve (Navy/Blue Jacket) -->
+    <path
+        android:fillColor="#0369A1"
+        android:pathData="M38,82 L58,82 L56,66 L40,66 Z" />
+    <path
+        android:fillColor="#0284C7"
+        android:pathData="M40,82 L56,82 L54,68 L42,68 Z" />
+    <!-- White Shirt Cuff -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M41,67 L55,67 L54,64 L42,64 Z" />
+
+    <!-- Open Friendly Palm & Waving Fingers (Tilted & Gesturing) -->
+    <!-- Hand Shadow -->
+    <path
+        android:fillColor="#C2410C"
+        android:pathData="M36,64 L58,64 C62,56 68,48 68,36 C68,32 65,30 62,30 C60,30 58.5,31 58,32 C57.5,30 55.5,29 53.5,29 C51.5,29 50,30 49.5,32 C49,30.5 47,29.5 45,30 C42.5,30.5 41,33 41.5,37 L42,45 L38,42 C35,39 31,41 31.5,45 C32,49 34,58 36,64 Z" />
+
+    <!-- Hand Body (Warm Peach Skin Tone) -->
+    <path
+        android:fillColor="#FDBA74"
+        android:pathData="M37,63 L57,63 C61,55 67,47 67,36 C67,33.5 64.5,31.5 62,31.5 C60,31.5 58.5,32.5 58,34 L58,45 L56.5,45 L56.5,33 C56.5,31 54.5,30 53,30 C51.5,30 50,31 49.5,33 L49.5,45 L48,45 L48,34 C48,32 46,31 44.5,31.5 C42.5,32 41.5,34 42,37 L42.5,48 L39,44.5 C36.5,42 33,43.5 33.5,46.5 C34,50 35.5,58 37,63 Z" />
+
+    <!-- Motion Waving Arcs (Right Side) -->
+    <path
+        android:fillColor="#0284C7"
+        android:pathData="M72,34 C76,38 76,46 72,50 L74,51.5 C79,46.5 79,37.5 74,32.5 Z" />
+    <path
+        android:fillColor="#38BDF8"
+        android:pathData="M78,28 C84,35 84,49 78,56 L80,57.5 C87,49.5 87,34.5 80,26.5 Z" />
+
+    <!-- Sparkle Accents -->
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M24,24 L25.5,20 L27,24 L31,25.5 L27,27 L25.5,31 L24,27 L20,25.5 Z" />
+</vector>

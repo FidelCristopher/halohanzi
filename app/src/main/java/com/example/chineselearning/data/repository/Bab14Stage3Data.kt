@@ -18,10 +18,10 @@ val bab14Stage3Part1Exercises = listOf(
         correctAnswer = "televisi",
         audioToSpeak = "电视",
         pictureOptions = listOf(
-            PictureOption("u14_s3_p1_opt1", "televisi", "📺", R.drawable.ic_coin, true),
-            PictureOption("u14_s3_p1_opt2", "komputer", "💻", R.drawable.ic_target, false),
-            PictureOption("u14_s3_p1_opt3", "telepon", "📱", R.drawable.ic_book, false),
-            PictureOption("u14_s3_p1_opt4", "buku", "📖", R.drawable.ic_crown, false)
+            PictureOption("u14_s3_p1_opt1", "televisi", "", R.drawable.ic_hobby_tv, true),
+            PictureOption("u14_s3_p1_opt2", "komputer", "", R.drawable.ic_work_computer, false),
+            PictureOption("u14_s3_p1_opt3", "telepon", "", R.drawable.ic_comm_phone, false),
+            PictureOption("u14_s3_p1_opt4", "buku", "", R.drawable.ic_book_chinese, false)
         )
     ),
 
@@ -108,10 +108,10 @@ val bab14Stage3Part1Exercises = listOf(
         correctAnswer = "televisi",
         audioToSpeak = "电视",
         pictureOptions = listOf(
-            PictureOption("u14_s3_p1_opt7_1", "televisi", "📺", R.drawable.ic_coin, true),
-            PictureOption("u14_s3_p1_opt7_2", "buku", "📖", R.drawable.ic_book, false),
-            PictureOption("u14_s3_p1_opt7_3", "mobil", "🚗", R.drawable.ic_target, false),
-            PictureOption("u14_s3_p1_opt7_4", "komputer", "💻", R.drawable.ic_crown, false)
+            PictureOption("u14_s3_p1_opt7_1", "televisi", "", R.drawable.ic_hobby_tv, true),
+            PictureOption("u14_s3_p1_opt7_2", "buku", "", R.drawable.ic_book_chinese, false),
+            PictureOption("u14_s3_p1_opt7_3", "mobil", "", R.drawable.ic_trans_car, false),
+            PictureOption("u14_s3_p1_opt7_4", "komputer", "", R.drawable.ic_work_computer, false)
         )
     ),
 
@@ -169,10 +169,10 @@ val bab14Stage3Part2Exercises = listOf(
         correctAnswer = "film",
         audioToSpeak = "电影",
         pictureOptions = listOf(
-            PictureOption("u14_s3_p2_opt1", "film", "🎬", R.drawable.ic_coin, true),
-            PictureOption("u14_s3_p2_opt2", "televisi", "📺", R.drawable.ic_target, false),
-            PictureOption("u14_s3_p2_opt3", "buku", "📖", R.drawable.ic_book, false),
-            PictureOption("u14_s3_p2_opt4", "komputer", "💻", R.drawable.ic_crown, false)
+            PictureOption("u14_s3_p2_opt1", "film", "", R.drawable.ic_hobby_movie, true),
+            PictureOption("u14_s3_p2_opt2", "televisi", "", R.drawable.ic_hobby_tv, false),
+            PictureOption("u14_s3_p2_opt3", "buku", "", R.drawable.ic_book_chinese, false),
+            PictureOption("u14_s3_p2_opt4", "komputer", "", R.drawable.ic_work_computer, false)
         )
     ),
 
@@ -259,10 +259,10 @@ val bab14Stage3Part2Exercises = listOf(
         correctAnswer = "bioskop",
         audioToSpeak = "电影院",
         pictureOptions = listOf(
-            PictureOption("u14_s3_p2_opt7_1", "bioskop", "🎦", R.drawable.ic_coin, true),
-            PictureOption("u14_s3_p2_opt7_2", "sekolah", "🏫", R.drawable.ic_cap, false),
-            PictureOption("u14_s3_p2_opt7_3", "rumah", "🏠", R.drawable.ic_people_group, false),
-            PictureOption("u14_s3_p2_opt7_4", "rumah sakit", "🏥", R.drawable.ic_book, false)
+            PictureOption("u14_s3_p2_opt7_1", "bioskop", "", R.drawable.ic_hobby_cinema, true),
+            PictureOption("u14_s3_p2_opt7_2", "sekolah", "", R.drawable.ic_edu_school, false),
+            PictureOption("u14_s3_p2_opt7_3", "rumah", "", R.drawable.ic_fam_home, false),
+            PictureOption("u14_s3_p2_opt7_4", "rumah sakit", "", R.drawable.ic_med_hospital, false)
         )
     ),
 

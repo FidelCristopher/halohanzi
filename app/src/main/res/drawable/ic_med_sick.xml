@@ -1,0 +1,66 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Warm Amber Card Badge -->
+    <path
+        android:fillColor="#FEF3C7"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Sick Face / Person Resting with Fever (Shengbing - Jatuh Sakit) -->
+    <!-- Head Shadow -->
+    <path
+        android:fillColor="#D97706"
+        android:pathData="M48,22 A28,28 0 1,1 48,78 A28,28 0 1,1 48,22 Z" />
+    <!-- Head Base (Pale Warm Sickly Glow) -->
+    <path
+        android:fillColor="#FDE68A"
+        android:pathData="M48,24 A26,26 0 1,1 48,76 A26,26 0 1,1 48,24 Z" />
+
+    <!-- Cooling Wet Towel / Ice Pack on Forehead (Cyan/Blue) -->
+    <path
+        android:fillColor="#0284C7"
+        android:pathData="M32,22 L64,22 C67,22 69,24 68,27 L66,35 C65,37 63,38 61,38 L35,38 C33,38 31,37 30,35 L28,27 C27,24 29,22 32,22 Z" />
+    <path
+        android:fillColor="#38BDF8"
+        android:pathData="M33,24 L63,24 C65,24 66.5,25.5 66,28 L64.5,34 C64,35.5 62.5,36 61,36 L35,36 C33.5,36 32,35.5 31.5,34 L30,28 C29.5,25.5 31,24 33,24 Z" />
+    <path
+        android:fillColor="#BAE6FD"
+        android:pathData="M35,26 L61,26 L60,30 L36,30 Z" />
+
+    <!-- Fever Flushed Cheeks (Rose Red) -->
+    <path
+        android:fillColor="#F87171"
+        android:pathData="M26,50 A6,4 0 1,1 26,58 A6,4 0 1,1 26,50 Z" />
+    <path
+        android:fillColor="#F87171"
+        android:pathData="M70,50 A6,4 0 1,1 70,58 A6,4 0 1,1 70,50 Z" />
+
+    <!-- Droopy Tired Closed Eyes -->
+    <path
+        android:fillColor="#78350F"
+        android:pathData="M34,44 C36,46 40,46 42,44 L41,43 C39.5,44.5 36.5,44.5 35,43 Z M54,44 C56,46 60,46 62,44 L61,43 C59.5,44.5 56.5,44.5 55,43 Z" />
+
+    <!-- Clinical Fever Thermometer in Mouth -->
+    <!-- Thermometer Glass Stem -->
+    <path
+        android:fillColor="#94A3B8"
+        android:pathData="M48,58 L72,50 L73,53 L49,61 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M49,59 L71,51.5 L72,53.5 L50,61 Z" />
+    <!-- Red Mercury Column -->
+    <path
+        android:fillColor="#EF4444"
+        android:pathData="M48,59 L62,54.5 L62.5,56.5 L48.5,61 Z" />
+    <!-- Thermometer Bulb Tip in Mouth -->
+    <path
+        android:fillColor="#DC2626"
+        android:pathData="M47,58 A2.5,2.5 0 1,1 47,63 A2.5,2.5 0 1,1 47,58 Z" />
+
+    <!-- Sad Mouth Line -->
+    <path
+        android:fillColor="#78350F"
+        android:pathData="M42,65 C45,63 51,63 54,65 L53,66 C51,64.5 45,64.5 43,66 Z" />
+</vector>

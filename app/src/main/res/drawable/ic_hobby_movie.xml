@@ -1,0 +1,56 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Slate Card Badge -->
+    <path
+        android:fillColor="#F1F5F9"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Cinema Film Reel (Behind Clapperboard - Top Right) -->
+    <path
+        android:fillColor="#475569"
+        android:pathData="M66,16 A16,16 0 1,1 66,48 A16,16 0 1,1 66,16 Z" />
+    <path
+        android:fillColor="#64748B"
+        android:pathData="M66,18 A14,14 0 1,1 66,46 A14,14 0 1,1 66,18 Z" />
+    <!-- Film Reel Holes -->
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="M66,22 A3,3 0 1,1 66,28 A3,3 0 1,1 66,22 Z M66,36 A3,3 0 1,1 66,42 A3,3 0 1,1 66,36 Z M57,29 A3,3 0 1,1 57,35 A3,3 0 1,1 57,29 Z M75,29 A3,3 0 1,1 75,35 A3,3 0 1,1 75,29 Z" />
+
+    <!-- Director's Clapperboard Base -->
+    <path
+        android:fillColor="#0F172A"
+        android:pathData="M18,46 L76,46 C78.5,46 80,47.5 80,50 L80,78 C80,80.5 78.5,82 76,82 L18,82 C15.5,82 14,80.5 14,78 L14,50 C14,47.5 15.5,46 18,46 Z" />
+
+    <!-- Clapperboard Production Fields (White/Slate Slate Lines) -->
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="M18,50 L76,50 L76,78 L18,78 Z" />
+    <path
+        android:fillColor="#94A3B8"
+        android:pathData="M22,55 L46,55 L46,57 L22,57 Z M22,62 L40,62 L40,64 L22,64 Z M22,69 L36,69 L36,71 L22,71 Z" />
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M52,56 L72,56 C73,56 74,57 74,58 L74,72 C74,73 73,74 72,74 L52,74 C51,74 50,73 50,72 L50,58 C50,57 51,56 52,56 Z" />
+    <path
+        android:fillColor="#FEF3C7"
+        android:pathData="M57,60 L67,65 L57,70 Z" />
+
+    <!-- Angled Top Clapper Stick (Open Action Position) -->
+    <path
+        android:fillColor="#0F172A"
+        android:pathData="M16,42 L74,27 C76,26.5 78,28 78.5,30 L79.5,34 C80,36 78.5,38 76.5,38.5 L18.5,53.5 L15,45 Z" />
+
+    <!-- Clapperboard Diagonal Stripes -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M24,40 L30,38.5 L27,47 L21,48.5 Z M37,36.5 L43,35 L40,43.5 L34,45 Z M50,33 L56,31.5 L53,40 L47,41.5 Z M63,29.5 L69,28 L66,36.5 L60,38 Z" />
+
+    <!-- Hinge Pin -->
+    <path
+        android:fillColor="#EF4444"
+        android:pathData="M16,43 A3.5,3.5 0 1,1 16,50 A3.5,3.5 0 1,1 16,43 Z" />
+</vector>

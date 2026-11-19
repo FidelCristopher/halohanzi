@@ -1,0 +1,51 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Mint / Emerald Card Badge -->
+    <path
+        android:fillColor="#ECFDF5"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Circular Approval Seal (Keyi - Boleh / Permitted) -->
+    <!-- Outer Rim Shadow -->
+    <path
+        android:fillColor="#065F46"
+        android:pathData="M48,16 A32,32 0 1,1 48,80 A32,32 0 1,1 48,16 Z" />
+
+    <!-- Emerald Green Seal Base -->
+    <path
+        android:fillColor="#10B981"
+        android:pathData="M48,18 A30,30 0 1,1 48,78 A30,30 0 1,1 48,18 Z" />
+
+    <!-- Inner Concentric Ring -->
+    <path
+        android:fillColor="#059669"
+        android:pathData="M48,24 A24,24 0 1,1 48,72 A24,24 0 1,1 48,24 Z" />
+    <path
+        android:fillColor="#D1FAE5"
+        android:pathData="M48,26 A22,22 0 1,1 48,70 A22,22 0 1,1 48,26 Z" />
+
+    <!-- Bold Centered Checkmark (Approved / Allowed) -->
+    <!-- Shadow -->
+    <path
+        android:fillColor="#047857"
+        android:pathData="M42,59 L31,48 L36,43 L42,49 L58,33 L63,38 Z" />
+    <path
+        android:fillColor="#059669"
+        android:pathData="M42,57 L32,47 L37,42 L42,47 L58,31 L63,36 Z" />
+
+    <!-- Seal Glow Ring Highlight -->
+    <path
+        android:fillColor="#A7F3D0"
+        android:pathData="M48,20 C34,20 22,30 20,44 C24,32 35,24 48,24 C61,24 72,32 76,44 C74,30 62,20 48,20 Z" />
+
+    <!-- Sparkle Accents -->
+    <path
+        android:fillColor="#34D399"
+        android:pathData="M16,24 L17.5,20 L19,24 L23,25.5 L19,27 L17.5,31 L16,27 L12,25.5 Z" />
+    <path
+        android:fillColor="#34D399"
+        android:pathData="M78,24 L79.5,20 L81,24 L85,25.5 L81,27 L79.5,31 L78,27 L74,25.5 Z" />
+</vector>

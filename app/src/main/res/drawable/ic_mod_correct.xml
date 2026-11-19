@@ -1,0 +1,41 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Mint / Emerald Card Badge -->
+    <path
+        android:fillColor="#ECFDF5"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Double Checkmark of Correctness (Dui - Benar / Betul) -->
+    <!-- First Checkmark (Background Subtle Shadow/Aura) -->
+    <path
+        android:fillColor="#065F46"
+        android:pathData="M38,64 L22,48 L28,42 L38,52 L68,22 L74,28 Z" />
+    <path
+        android:fillColor="#059669"
+        android:pathData="M38,62 L24,48 L28,44 L38,54 L68,24 L72,28 Z" />
+
+    <!-- Main Front Checkmark (Vibrant Emerald with 3D Depth) -->
+    <!-- Bevel Shadow -->
+    <path
+        android:fillColor="#047857"
+        android:pathData="M44,72 L26,54 L33,47 L44,58 L77,25 L84,32 Z" />
+    <!-- Main Green Body -->
+    <path
+        android:fillColor="#10B981"
+        android:pathData="M44,70 L28,54 L34,48 L44,58 L76,26 L82,32 Z" />
+    <!-- Highlight Line -->
+    <path
+        android:fillColor="#6EE7B7"
+        android:pathData="M44,67 L30,53 L33,50 L44,61 L76,29 L79,32 Z" />
+
+    <!-- Golden Sparkles of Success -->
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M20,24 L21.5,20 L23,24 L27,25.5 L23,27 L21.5,31 L20,27 L16,25.5 Z" />
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M78,60 L79.5,56 L81,60 L85,61.5 L81,63 L79.5,67 L78,63 L74,61.5 Z" />
+</vector>

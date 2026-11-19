@@ -1,0 +1,56 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Peach Card Badge -->
+    <path
+        android:fillColor="#FFEDD5"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Cute Fluffy Animal Tail (Curving C-Shape) -->
+    <!-- Tail Shadow -->
+    <path
+        android:fillColor="#C2410C"
+        android:pathData="M24,78 C22,65 30,52 38,44 C48,34 60,30 68,36 C76,42 74,52 66,54 C60,55 56,50 56,46 C56,43 58,41 61,41 C63,41 65,43 64,45 C64,46 63,47 61,47 C57,47 52,53 46,60 C40,68 34,74 30,80 Z" />
+    <!-- Tail Body (Warm Ginger Orange) -->
+    <path
+        android:fillColor="#EA580C"
+        android:pathData="M25,76 C23,64 31,52 40,43 C50,33 61,31 68,37 C74,42 72,50 66,52 C61,53 57,49 57,45 C57,42 59,40 62,40 C64,40 66,42 65,44 C65,45 64,46 62,46 C58,46 53,52 47,59 C41,67 35,73 31,78 Z" />
+    <!-- Fluffy White Tail Tip -->
+    <path
+        android:fillColor="#FFF7ED"
+        android:pathData="M64,36 C68,39 71,44 68,48 C64,50 60,47 60,44 C60,40 61,38 64,36 Z" />
+
+    <!-- Sweet Animal Paw Print Badge (Bottom Left / Center) -->
+    <!-- Main Pad -->
+    <path
+        android:fillColor="#9A3412"
+        android:pathData="M56,58 C51,58 47,63 47,68 C47,73 52,77 58,77 C64,77 68,73 68,68 C68,63 62,58 56,58 Z" />
+    <path
+        android:fillColor="#FB923C"
+        android:pathData="M56,60 C52,60 49,64 49,68 C49,72 53,75 58,75 C63,75 66,72 66,68 C66,64 61,60 56,60 Z" />
+
+    <!-- 4 Toe Beans -->
+    <!-- Toe 1 -->
+    <path
+        android:fillColor="#FB923C"
+        android:pathData="M46,50 A3.5,4.5 0 1,1 46,59 A3.5,4.5 0 1,1 46,50 Z" />
+    <!-- Toe 2 -->
+    <path
+        android:fillColor="#FB923C"
+        android:pathData="M54,47 A3.5,4.5 0 1,1 54,56 A3.5,4.5 0 1,1 54,47 Z" />
+    <!-- Toe 3 -->
+    <path
+        android:fillColor="#FB923C"
+        android:pathData="M64,48 A3.5,4.5 0 1,1 64,57 A3.5,4.5 0 1,1 64,48 Z" />
+    <!-- Toe 4 -->
+    <path
+        android:fillColor="#FB923C"
+        android:pathData="M72,54 A3.5,4.5 0 1,1 72,63 A3.5,4.5 0 1,1 72,54 Z" />
+
+    <!-- Sparkle Accent -->
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M24,30 L25.5,26 L27,30 L31,31.5 L27,33 L25.5,37 L24,33 L20,31.5 Z" />
+</vector>

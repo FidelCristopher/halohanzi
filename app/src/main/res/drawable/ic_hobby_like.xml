@@ -1,0 +1,33 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Pink Card Badge -->
+    <path
+        android:fillColor="#FCE4EC"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Outer Heart Shadow/Bevel -->
+    <path
+        android:fillColor="#C2185B"
+        android:pathData="M48,78 C46,76 22,56 22,38 C22,26 31,18 43,20 C45.5,20.4 47,21.5 48,23 C49,21.5 50.5,20.4 53,20 C65,18 74,26 74,38 C74,56 50,76 48,78 Z" />
+
+    <!-- Vibrant Main Heart -->
+    <path
+        android:fillColor="#E91E63"
+        android:pathData="M48,74 C46,72 24,54 24,38 C24,28 32,22 43,23 C45,23.3 46.8,24.5 48,26 C49.2,24.5 51,23.3 53,23 C64,22 72,28 72,38 C72,54 50,72 48,74 Z" />
+
+    <!-- Soft Inner Highlight -->
+    <path
+        android:fillColor="#F48FB1"
+        android:pathData="M32,30 C30,34 30,40 34,46 C35,47.5 37,47 36,45 C33,40 33,34 36,30 C37,28.5 35,27.5 33,28.5 C32.6,28.9 32.2,29.4 32,30 Z" />
+
+    <!-- Golden Sparkles of Delight -->
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M70,22 L72,16 L74,22 L80,24 L74,26 L72,32 L70,26 L64,24 Z" />
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M20,62 L21.5,58 L23,62 L27,63.5 L23,65 L21.5,69 L20,65 L16,63.5 Z" />
+</vector>

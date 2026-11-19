@@ -18,10 +18,10 @@ val bab16Stage2Part1Exercises = listOf(
         correctAnswer = "bisa / sanggup",
         audioToSpeak = "能",
         pictureOptions = listOf(
-            PictureOption("u16_s2_p1_opt1", "bisa / sanggup", "💪", R.drawable.ic_coin, true),
-            PictureOption("u16_s2_p1_opt2", "tidak bisa", "❌", R.drawable.ic_target, false),
-            PictureOption("u16_s2_p1_opt3", "tidur", "🛌", R.drawable.ic_book, false),
-            PictureOption("u16_s2_p1_opt4", "makan", "🍜", R.drawable.ic_crown, false)
+            PictureOption("u16_s2_p1_opt1", "bisa / sanggup", "", R.drawable.ic_mod_can, true),
+            PictureOption("u16_s2_p1_opt2", "tidak bisa", "", R.drawable.ic_mod_forbidden, false),
+            PictureOption("u16_s2_p1_opt3", "tidur", "", R.drawable.ic_action_sleep, false),
+            PictureOption("u16_s2_p1_opt4", "makan", "", R.drawable.ic_action_eat, false)
         )
     ),
 
@@ -108,10 +108,10 @@ val bab16Stage2Part1Exercises = listOf(
         correctAnswer = "bisa (keterampilan)",
         audioToSpeak = "会",
         pictureOptions = listOf(
-            PictureOption("u16_s2_p1_opt7_1", "bisa", "🎓", R.drawable.ic_coin, true),
-            PictureOption("u16_s2_p1_opt7_2", "tidak", "❌", R.drawable.ic_target, false),
-            PictureOption("u16_s2_p1_opt7_3", "buku", "📖", R.drawable.ic_book, false),
-            PictureOption("u16_s2_p1_opt7_4", "tidur", "🛌", R.drawable.ic_crown, false)
+            PictureOption("u16_s2_p1_opt7_1", "bisa", "", R.drawable.ic_mod_can, true),
+            PictureOption("u16_s2_p1_opt7_2", "tidak", "", R.drawable.ic_mod_wrong, false),
+            PictureOption("u16_s2_p1_opt7_3", "buku", "", R.drawable.ic_book_chinese, false),
+            PictureOption("u16_s2_p1_opt7_4", "tidur", "", R.drawable.ic_action_sleep, false)
         )
     ),
 
@@ -169,10 +169,10 @@ val bab16Stage2Part2Exercises = listOf(
         correctAnswer = "boleh / bisa",
         audioToSpeak = "可以",
         pictureOptions = listOf(
-            PictureOption("u16_s2_p2_opt1", "boleh / bisa", "🆗", R.drawable.ic_coin, true),
-            PictureOption("u16_s2_p2_opt2", "jangan", "🚫", R.drawable.ic_target, false),
-            PictureOption("u16_s2_p2_opt3", "makan", "🍜", R.drawable.ic_book, false),
-            PictureOption("u16_s2_p2_opt4", "tidur", "🛌", R.drawable.ic_crown, false)
+            PictureOption("u16_s2_p2_opt1", "boleh / bisa", "", R.drawable.ic_mod_allow, true),
+            PictureOption("u16_s2_p2_opt2", "jangan", "", R.drawable.ic_mod_dont, false),
+            PictureOption("u16_s2_p2_opt3", "makan", "", R.drawable.ic_action_eat, false),
+            PictureOption("u16_s2_p2_opt4", "tidur", "", R.drawable.ic_action_sleep, false)
         )
     ),
 
@@ -259,10 +259,10 @@ val bab16Stage2Part2Exercises = listOf(
         correctAnswer = "tidak boleh",
         audioToSpeak = "不可以",
         pictureOptions = listOf(
-            PictureOption("u16_s2_p2_opt7_1", "tidak boleh", "🚫", R.drawable.ic_coin, true),
-            PictureOption("u16_s2_p2_opt7_2", "boleh", "🆗", R.drawable.ic_target, false),
-            PictureOption("u16_s2_p2_opt7_3", "makan", "🍜", R.drawable.ic_book, false),
-            PictureOption("u16_s2_p2_opt7_4", "tidur", "🛌", R.drawable.ic_crown, false)
+            PictureOption("u16_s2_p2_opt7_1", "tidak boleh", "", R.drawable.ic_mod_forbidden, true),
+            PictureOption("u16_s2_p2_opt7_2", "boleh", "", R.drawable.ic_mod_allow, false),
+            PictureOption("u16_s2_p2_opt7_3", "makan", "", R.drawable.ic_action_eat, false),
+            PictureOption("u16_s2_p2_opt7_4", "tidur", "", R.drawable.ic_action_sleep, false)
         )
     ),
 

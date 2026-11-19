@@ -1,0 +1,58 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Warm Amber Card Badge -->
+    <path
+        android:fillColor="#FEF3C7"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Party Popper Cone Shadow -->
+    <path
+        android:fillColor="#B45309"
+        android:pathData="M20,76 L25,52 L50,77 L26,82 C22,83 19,80 20,76 Z" />
+
+    <!-- Party Popper Cone Striped -->
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M21,75 L26,53 L49,76 L27,81 C23.5,82 20.5,79 21,75 Z" />
+    <path
+        android:fillColor="#F43F5E"
+        android:pathData="M24,63 L32,59 L40,67 L36,75 Z" />
+    <path
+        android:fillColor="#3B82F6"
+        android:pathData="M22,71 L28,67 L34,73 L28,79 Z" />
+
+    <!-- Confetti Streamers & Ribbons -->
+    <!-- Violet Ribbon Swirl -->
+    <path
+        android:fillColor="#8B5CF6"
+        android:pathData="M38,48 C42,42 48,46 54,40 C56,38 55,35 52,36 C46,38 42,32 46,26 C48,23 45,21 43,23 C38,28 42,36 36,42 C34,44 35,47 38,48 Z" />
+    <!-- Pink Ribbon Swirl -->
+    <path
+        android:fillColor="#EC407A"
+        android:pathData="M52,56 C58,54 60,46 68,48 C71,49 72,46 69,44 C63,41 64,32 72,32 C75,32 75,28 72,28 C62,28 60,38 52,42 C49,44 50,47 52,56 Z" />
+
+    <!-- Bursting Confetti Stars & Dots -->
+    <!-- Gold Star (Top Center) -->
+    <path
+        android:fillColor="#EAB308"
+        android:pathData="M58,22 L60,16 L62,22 L68,24 L62,26 L60,32 L58,26 L52,24 Z" />
+    <!-- Cyan Diamond (Right) -->
+    <path
+        android:fillColor="#06B6D4"
+        android:pathData="M76,46 L80,42 L84,46 L80,50 Z" />
+    <!-- Emerald Circle (Top Left) -->
+    <path
+        android:fillColor="#10B981"
+        android:pathData="M36,24 A3,3 0 1,1 36,30 A3,3 0 1,1 36,24 Z" />
+    <!-- Red Square (Center) -->
+    <path
+        android:fillColor="#EF4444"
+        android:pathData="M48,34 L53,32 L55,37 L50,39 Z" />
+    <!-- Amber Dot -->
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M68,60 A2.5,2.5 0 1,1 68,65 A2.5,2.5 0 1,1 68,60 Z" />
+</vector>

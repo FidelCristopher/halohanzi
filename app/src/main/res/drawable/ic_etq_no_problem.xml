@@ -1,0 +1,62 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Mint Green Card Badge -->
+    <path
+        android:fillColor="#ECFDF5"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Harmonious Handshake (Mei Guanxi - No Problem / It's alright) -->
+    <!-- Circular Shield of Peace (Center) -->
+    <path
+        android:fillColor="#D1FAE5"
+        android:pathData="M48,18 A30,30 0 1,1 48,78 A30,30 0 1,1 48,18 Z" />
+    <path
+        android:fillColor="#A7F3D0"
+        android:pathData="M48,22 A26,26 0 1,1 48,74 A26,26 0 1,1 48,22 Z" />
+
+    <!-- Left Hand (Blue Sleeve) -->
+    <path
+        android:fillColor="#1E40AF"
+        android:pathData="M16,40 L34,44 L31,60 L14,56 Z" />
+    <path
+        android:fillColor="#3B82F6"
+        android:pathData="M16,42 L33,45 L31,58 L15,55 Z" />
+    <!-- White Cuff -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M33,44 L36,45 L34,59 L31,58 Z" />
+
+    <!-- Right Hand (Warm Orange/Amber Sleeve) -->
+    <path
+        android:fillColor="#B45309"
+        android:pathData="M80,40 L62,44 L65,60 L82,56 Z" />
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M80,42 L63,45 L65,58 L81,55 Z" />
+    <!-- White Cuff -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M63,44 L60,45 L62,59 L65,58 Z" />
+
+    <!-- Handshake Grip (Clasped Fingers) -->
+    <!-- Left Hand Palm & Thumb (Reaching right) -->
+    <path
+        android:fillColor="#FDBA74"
+        android:pathData="M36,46 L46,43 C49,42 51,44 50,47 L47,51 L56,53 C58,53.5 59,56 57,58 L52,62 L43,62 L34,58 Z" />
+
+    <!-- Right Hand Palm & Interlocking Fingers -->
+    <path
+        android:fillColor="#FB923C"
+        android:pathData="M60,46 L50,43 C48,42 46,44 47,47 L51,51 L44,53 C42,53.5 41,56 43,58 L48,62 L57,62 L62,58 Z" />
+
+    <!-- Reassuring Green Peace Checkmark / Sparkle of Agreement -->
+    <path
+        android:fillColor="#059669"
+        android:pathData="M48,26 L51,32 L58,34 L53,38 L54,45 L48,42 L42,45 L43,38 L38,34 L45,32 Z" />
+    <path
+        android:fillColor="#34D399"
+        android:pathData="M48,29 L50,33 L55,34.5 L51,37.5 L52,42 L48,40 L44,42 L45,37.5 L41,34.5 L46,33 Z" />
+</vector>

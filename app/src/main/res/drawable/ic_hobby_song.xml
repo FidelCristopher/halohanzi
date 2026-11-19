@@ -1,0 +1,44 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Sky Blue Card Badge -->
+    <path
+        android:fillColor="#E0F2FE"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Harmonic Sound Wave Ripples -->
+    <path
+        android:fillColor="#BAE6FD"
+        android:pathData="M16,48 C24,40 32,56 40,48 C48,40 56,56 64,48 C72,40 80,56 84,48 L84,52 C78,60 70,44 64,52 C56,60 48,44 40,52 C32,60 24,44 16,52 Z" />
+    <path
+        android:fillColor="#7DD3FC"
+        android:pathData="M18,34 C26,26 34,42 42,34 C50,26 58,42 66,34 C74,26 80,38 82,34 L82,37 C78,43 72,31 66,38 C58,46 50,30 42,38 C34,46 26,30 18,37 Z" />
+
+    <!-- Musical Note Shadow -->
+    <path
+        android:fillColor="#075985"
+        android:pathData="M38,20 L74,14 L74,22 L44,27 L44,57 C41,55 36,54 31,56 C23,59 18,67 21,74 C24,81 32,83 40,80 C46,77 46,71 46,65 L46,31 L70,26 L70,51 C67,49 62,48 57,50 C49,53 44,61 47,68 C50,75 58,77 66,74 C72,71 72,65 72,59 L72,16 C72,13 70,11 67,12 L35,17 C32,18 31,20 31,23 L31,58 L38,58 Z" />
+
+    <!-- Beaming Double Eighth Notes (Vibrant Cyan-Blue) -->
+    <path
+        android:fillColor="#0284C7"
+        android:pathData="M38,22 L72,16 L72,24 L42,29 L42,60 C39.5,58 35,57 31,58.5 C24,61 20,68 22.5,74 C25,80 32.5,81.5 39,78.5 C44.5,76 44.5,70.5 44.5,65 L44.5,33 L68,28 L68,54 C65.5,52 61,51 57,52.5 C50,55 46,62 48.5,68 C51,74 58.5,75.5 65,72.5 C70.5,70 70.5,64.5 70.5,59 L70.5,18 C70.5,15.5 69,14 66.5,14.5 L36,19.5 C33.5,20 32.5,21.5 32.5,24 L32.5,60 L38,60 Z" />
+
+    <!-- Note Highlights -->
+    <path
+        android:fillColor="#38BDF8"
+        android:pathData="M39,24 L70,18.5 L70,21 L39,26.5 Z" />
+    <path
+        android:fillColor="#E0F2FE"
+        android:pathData="M27,65 C26,69 29,73 33,74 C34,74.2 34.5,73 34,72.5 C31,71.5 28.5,68.5 29,65 C29.3,64 27.5,63.5 27,65 Z" />
+    <path
+        android:fillColor="#E0F2FE"
+        android:pathData="M53,59 C52,63 55,67 59,68 C60,68.2 60.5,67 60,66.5 C57,65.5 54.5,62.5 55,59 C55.3,58 53.5,57.5 53,59 Z" />
+
+    <!-- Golden Sparkle Accents -->
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M78,30 L79.5,26 L81,30 L85,31.5 L81,33 L79.5,37 L78,33 L74,31.5 Z" />
+</vector>

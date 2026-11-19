@@ -1,0 +1,52 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Cyan Card Badge -->
+    <path
+        android:fillColor="#CFFAFE"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Headphone Arch (Outer Shadow) -->
+    <path
+        android:fillColor="#0E7490"
+        android:pathData="M48,16 C31,16 18,28 18,45 L18,54 L24,54 L24,45 C24,32 35,22 48,22 C61,22 72,32 72,45 L72,54 L78,54 L78,45 C78,28 65,16 48,16 Z" />
+
+    <!-- Headphone Cushion Band -->
+    <path
+        android:fillColor="#0891B2"
+        android:pathData="M48,18 C33,18 22,29 20,44 C21,44 23,44 24,44 C25,32 35,24 48,24 C61,24 71,32 72,44 C73,44 75,44 76,44 C74,29 63,18 48,18 Z" />
+
+    <!-- Left Ear Cup Housing -->
+    <path
+        android:fillColor="#155E75"
+        android:pathData="M16,46 L28,46 C30,46 32,48 32,51 L32,69 C32,72 30,74 28,74 L16,74 C14,74 12,72 12,69 L12,51 C12,48 14,46 16,46 Z" />
+    <path
+        android:fillColor="#06B6D4"
+        android:pathData="M18,48 L26,48 C27.5,48 29,49.5 29,52 L29,67 C29,69.5 27.5,71 26,71 L18,71 C16.5,71 15,69.5 15,67 L15,52 C15,49.5 16.5,48 18,48 Z" />
+    <!-- Left Cushion Pill -->
+    <path
+        android:fillColor="#67E8F9"
+        android:pathData="M27,51 L31,51 C32,51 33,52 33,54 L33,65 C33,67 32,68 31,68 L27,68 Z" />
+
+    <!-- Right Ear Cup Housing -->
+    <path
+        android:fillColor="#155E75"
+        android:pathData="M68,46 L80,46 C82,46 84,48 84,51 L84,69 C84,72 82,74 80,74 L68,74 C66,74 64,72 64,69 L64,51 C64,48 66,46 68,46 Z" />
+    <path
+        android:fillColor="#06B6D4"
+        android:pathData="M70,48 L78,48 C79.5,48 81,49.5 81,52 L81,67 C81,69.5 79.5,71 78,71 L70,71 C68.5,71 67,69.5 67,67 L67,52 C67,49.5 68.5,48 70,48 Z" />
+    <!-- Right Cushion Pill -->
+    <path
+        android:fillColor="#67E8F9"
+        android:pathData="M65,51 L69,51 L69,68 L65,68 C64,68 63,67 63,65 L63,54 C63,52 64,51 65,51 Z" />
+
+    <!-- Radiating Sound Waves in the Center -->
+    <path
+        android:fillColor="#0891B2"
+        android:pathData="M44,46 L46,46 L46,72 L44,72 Z M47,40 L49,40 L49,78 L47,78 Z M50,44 L52,44 L52,74 L50,74 Z" />
+    <path
+        android:fillColor="#06B6D4"
+        android:pathData="M38,52 L40,52 L40,66 L38,66 Z M41,48 L43,48 L43,70 L41,70 Z M53,49 L55,49 L55,69 L53,69 Z M56,53 L58,53 L58,65 L56,65 Z" />
+</vector>

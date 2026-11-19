@@ -1,0 +1,38 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Warm Amber Card Badge -->
+    <path
+        android:fillColor="#FEF3C7"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Big Friendly Dialogue Bubble Shadow -->
+    <path
+        android:fillColor="#D97706"
+        android:pathData="M24,20 L72,20 C80,20 84,24 84,32 L84,56 C84,64 80,68 72,68 L44,68 L28,78 L30,68 L24,68 C16,68 12,64 12,56 L12,32 C12,24 16,20 24,20 Z" />
+
+    <!-- Big Dialogue Bubble Body -->
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M24,22 L72,22 C79,22 82,25 82,32 L82,54 C82,61 79,64 72,64 L43,64 L29,73 L31,64 L24,64 C17,64 14,61 14,54 L14,32 C14,25 17,22 24,22 Z" />
+
+    <!-- Telephone Handset Icon Inside Bubble -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M32,32 C34,30 38,31 40,34 L42,37 C43,38.5 42,40 40,41 L38,42 C39.5,46 43,49.5 47,51 L48,49 C49.5,47 51,46 52.5,47 L55.5,49 C58.5,51 59.5,55 57.5,57 L54,60 C51.5,62.5 45,61 38.5,54.5 C32,48 30.5,41.5 33,39 L36,36 Z" />
+
+    <!-- Animated Voice Soundwaves (Wei / Hello!) -->
+    <path
+        android:fillColor="#78350F"
+        android:pathData="M64,36 C67,39 67,47 64,50 L66,51.5 C70,47.5 70,38.5 66,34.5 Z" />
+    <path
+        android:fillColor="#78350F"
+        android:pathData="M70,30 C75,36 75,54 70,60 L72,61.5 C78,54.5 78,35.5 72,28.5 Z" />
+
+    <!-- Friendly Sparkle -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M24,26 L25,23 L26,26 L29,27 L26,28 L25,31 L24,28 L21,27 Z" />
+</vector>

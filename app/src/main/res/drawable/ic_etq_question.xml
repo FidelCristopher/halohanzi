@@ -1,0 +1,33 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Warm Amber Card Badge -->
+    <path
+        android:fillColor="#FEF3C7"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Big Circular Thought/Question Bubble -->
+    <path
+        android:fillColor="#D97706"
+        android:pathData="M48,16 C30,16 16,29 16,46 C16,56 22,64 30,69 L26,80 L39,74 C42,75.3 45,76 48,76 C66,76 80,63 80,46 C80,29 66,16 48,16 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M48,18 C32,18 19,30 19,46 C19,55 24.5,63 32,67.5 L28.5,76.5 L39.5,71.5 C42,72.5 45,73 48,73 C64,73 77,61 77,46 C77,30 64,18 48,18 Z" />
+
+    <!-- 3D Gold Question Mark (Center) -->
+    <!-- Shadow -->
+    <path
+        android:fillColor="#B45309"
+        android:pathData="M48,25 C40,25 34,31 34,39 L42,39 C42,35.5 44.5,33 48,33 C51.5,33 54,35.5 54,39 C54,42.5 51,46 47,49 C43,52 42,56 42,61 L50,61 C50,58 51,55.5 54.5,53 C59,50 62,45.5 62,39 C62,31 56,25 48,25 Z M44,65 L52,65 L52,73 L44,73 Z" />
+    <!-- Golden Body -->
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M48,27 C41,27 36,32 36,39 L42,39 C42,36 44.5,34 48,34 C51.5,34 54,36 54,39 C54,42 51.5,45 48,47.5 C44,50.5 43,54.5 43,59 L49,59 C49,56.5 50.5,54 53.5,51.5 C57.5,48.5 60,44.5 60,39 C60,32 55,27 48,27 Z M44,63 L50,63 L50,69 L44,69 Z" />
+
+    <!-- Question Mark Inner Glint -->
+    <path
+        android:fillColor="#FEF08A"
+        android:pathData="M48,29 C52,29 55,31 55,34 L53,34 C53,32.5 51,31 48,31 Z M45,64 L48,64 L48,67 L45,67 Z" />
+</vector>

@@ -1,0 +1,40 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Warm Amber / Peach Card Badge -->
+    <path
+        android:fillColor="#FFEDD5"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Open Stopping Hand in Caution Hexagon (Bie - Jangan / Stop) -->
+    <!-- Caution Octagon/Circle Shadow -->
+    <path
+        android:fillColor="#9A3412"
+        android:pathData="M48,16 A32,32 0 1,1 48,80 A32,32 0 1,1 48,16 Z" />
+    <path
+        android:fillColor="#EA580C"
+        android:pathData="M48,18 A30,30 0 1,1 48,78 A30,30 0 1,1 48,18 Z" />
+
+    <!-- Pure White Stopping Palm (Clean Graphic Silhouette) -->
+    <!-- Palm Shadow -->
+    <path
+        android:fillColor="#C2410C"
+        android:pathData="M40,68 L56,68 C58,68 59,66 58,63 L58,54 C60,54 62,52 62,50 L62,38 C62,35 60,33 57.5,33 C56,33 55,34 54.5,35 C54,34 52.5,33 51,33 C49.5,33 48.5,34 48,35 C47.5,34 46,33 44.5,33 C42,33 40,35 40,38 L40,46 C38,46 36,44 34,44 C31,44 29,46 30,49 C31,52 35,63 40,68 Z" />
+
+    <!-- White Stopping Hand -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M40,66 L56,66 C57.5,66 58,64.5 57.5,62 L57,53 C59,53 60.5,51.5 60.5,49.5 L60.5,38 C60.5,36 59,34.5 57,34.5 C55.5,34.5 54.5,35.5 54,36.5 L54,34 C54,32 52.5,30.5 50.5,30.5 C49,30.5 48,31.5 47.5,32.5 L47.5,34 C47.5,32 46,30.5 44,30.5 C42,30.5 40.5,32 40.5,34 L40.5,45 C38.5,45 36.5,43 34.5,43 C32,43 30.5,45 31.5,48 C32.5,51 36,61 40,66 Z" />
+
+    <!-- Finger Joint Creases -->
+    <path
+        android:fillColor="#E2E8F0"
+        android:pathData="M42,42 L46,42 L46,43 L42,43 Z M49,38 L53,38 L53,39 L49,39 Z M55,42 L59,42 L59,43 L55,43 Z" />
+
+    <!-- Soft Aura Ring -->
+    <path
+        android:fillColor="#FED7AA"
+        android:pathData="M48,20 C34,20 22,30 20,44 C24,32 35,24 48,24 C61,24 72,32 76,44 C74,30 62,20 48,20 Z" />
+</vector>

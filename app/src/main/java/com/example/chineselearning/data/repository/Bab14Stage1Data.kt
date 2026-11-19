@@ -18,10 +18,10 @@ val bab14Stage1Part1Exercises = listOf(
         correctAnswer = "suka / gemar",
         audioToSpeak = "喜欢",
         pictureOptions = listOf(
-            PictureOption("u14_s1_p1_opt1", "suka / gemar", "❤️", R.drawable.ic_coin, true),
-            PictureOption("u14_s1_p1_opt2", "benci", "💔", R.drawable.ic_target, false),
-            PictureOption("u14_s1_p1_opt3", "tidur", "🛌", R.drawable.ic_book, false),
-            PictureOption("u14_s1_p1_opt4", "makan", "🍜", R.drawable.ic_crown, false)
+            PictureOption("u14_s1_p1_opt1", "suka / gemar", "", R.drawable.ic_hobby_like, true),
+            PictureOption("u14_s1_p1_opt2", "benci", "", R.drawable.ic_mod_wrong, false),
+            PictureOption("u14_s1_p1_opt3", "tidur", "", R.drawable.ic_action_sleep, false),
+            PictureOption("u14_s1_p1_opt4", "makan", "", R.drawable.ic_action_eat, false)
         )
     ),
 
@@ -108,10 +108,10 @@ val bab14Stage1Part1Exercises = listOf(
         correctAnswer = "cinta / menyayangi",
         audioToSpeak = "爱",
         pictureOptions = listOf(
-            PictureOption("u14_s1_p1_opt7_1", "cinta", "💖", R.drawable.ic_coin, true),
-            PictureOption("u14_s1_p1_opt7_2", "uang", "💰", R.drawable.ic_target, false),
-            PictureOption("u14_s1_p1_opt3", "buku", "📖", R.drawable.ic_book, false),
-            PictureOption("u14_s1_p1_opt4", "mobil", "🚗", R.drawable.ic_crown, false)
+            PictureOption("u14_s1_p1_opt7_1", "cinta", "", R.drawable.ic_hobby_love, true),
+            PictureOption("u14_s1_p1_opt7_2", "uang", "", R.drawable.ic_yuan_currency, false),
+            PictureOption("u14_s1_p1_opt3", "buku", "", R.drawable.ic_book_chinese, false),
+            PictureOption("u14_s1_p1_opt4", "mobil", "", R.drawable.ic_trans_car, false)
         )
     ),
 
@@ -169,10 +169,10 @@ val bab14Stage1Part2Exercises = listOf(
         correctAnswer = "bermain",
         audioToSpeak = "玩",
         pictureOptions = listOf(
-            PictureOption("u14_s1_p2_opt1", "bermain", "🎮", R.drawable.ic_coin, true),
-            PictureOption("u14_s1_p2_opt2", "belajar", "📖", R.drawable.ic_book, false),
-            PictureOption("u14_s1_p2_opt3", "tidur", "🛌", R.drawable.ic_target, false),
-            PictureOption("u14_s1_p2_opt4", "makan", "🍜", R.drawable.ic_crown, false)
+            PictureOption("u14_s1_p2_opt1", "bermain", "", R.drawable.ic_hobby_play, true),
+            PictureOption("u14_s1_p2_opt2", "belajar", "", R.drawable.ic_edu_study, false),
+            PictureOption("u14_s1_p2_opt3", "tidur", "", R.drawable.ic_action_sleep, false),
+            PictureOption("u14_s1_p2_opt4", "makan", "", R.drawable.ic_action_eat, false)
         )
     ),
 
@@ -259,10 +259,10 @@ val bab14Stage1Part2Exercises = listOf(
         correctAnswer = "menyenangkan / asyik",
         audioToSpeak = "好玩儿",
         pictureOptions = listOf(
-            PictureOption("u14_s1_p2_opt7_1", "menyenangkan", "🎉", R.drawable.ic_coin, true),
-            PictureOption("u14_s1_p2_opt7_2", "membosankan", "🥱", R.drawable.ic_target, false),
-            PictureOption("u14_s1_p2_opt7_3", "makanan", "🍜", R.drawable.ic_book, false),
-            PictureOption("u14_s1_p2_opt7_4", "tidur", "🛌", R.drawable.ic_crown, false)
+            PictureOption("u14_s1_p2_opt7_1", "menyenangkan", "", R.drawable.ic_hobby_fun, true),
+            PictureOption("u14_s1_p2_opt7_2", "membosankan", "", R.drawable.ic_mod_wrong, false),
+            PictureOption("u14_s1_p2_opt7_3", "makanan", "", R.drawable.ic_food_chinese_cuisine, false),
+            PictureOption("u14_s1_p2_opt7_4", "tidur", "", R.drawable.ic_action_sleep, false)
         )
     ),
 

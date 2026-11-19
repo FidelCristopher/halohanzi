@@ -1,0 +1,51 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Teal-Cyan Card Badge -->
+    <path
+        android:fillColor="#CCFBF1"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Hospital Main Building Shadow -->
+    <path
+        android:fillColor="#0F766E"
+        android:pathData="M22,24 L74,24 C76.5,24 78,25.5 78,28 L78,82 L18,82 L18,28 C18,25.5 19.5,24 22,24 Z" />
+
+    <!-- Hospital Main Building (Clean Medical White/Teal) -->
+    <path
+        android:fillColor="#F0FDFA"
+        android:pathData="M23,26 L73,26 C75,26 76,27 76,29 L76,80 L20,80 L20,29 C20,27 21,26 23,26 Z" />
+
+    <!-- Red Cross Medical Emblem (Top Roof Crest) -->
+    <path
+        android:fillColor="#DC2626"
+        android:pathData="M44,14 L52,14 L52,18 L56,18 L56,26 L52,26 L52,30 L44,30 L44,26 L40,26 L40,18 L44,18 Z" />
+    <path
+        android:fillColor="#EF4444"
+        android:pathData="M45,15 L51,15 L51,19 L55,19 L55,25 L51,25 L51,29 L45,29 L45,25 L41,25 L41,19 L45,19 Z" />
+
+    <!-- Hospital Windows (Sky Blue Glass Grid) -->
+    <!-- Row 1 -->
+    <path
+        android:fillColor="#38BDF8"
+        android:pathData="M26,36 L34,36 L34,44 L26,44 Z M38,36 L46,36 L46,44 L38,44 Z M50,36 L58,36 L58,44 L50,44 Z M62,36 L70,36 L70,44 L62,44 Z" />
+    <!-- Row 2 -->
+    <path
+        android:fillColor="#38BDF8"
+        android:pathData="M26,48 L34,48 L34,56 L26,56 Z M38,48 L46,48 L46,56 L38,56 Z M50,48 L58,48 L58,56 L50,56 Z M62,48 L70,48 L70,56 L62,56 Z" />
+    <!-- Row 3 Side Windows -->
+    <path
+        android:fillColor="#38BDF8"
+        android:pathData="M26,60 L34,60 L34,68 L26,68 Z M62,60 L70,60 L70,68 L62,68 Z" />
+
+    <!-- Hospital Main Glass Entrance / Emergency Bay (Center) -->
+    <path
+        android:fillColor="#0D9488"
+        android:pathData="M40,58 L56,58 C57,58 58,59 58,60 L58,80 L38,80 L38,60 C38,59 39,58 40,58 Z" />
+    <!-- Glass Sliding Doors -->
+    <path
+        android:fillColor="#99F6E4"
+        android:pathData="M41,61 L47,61 L47,79 L41,79 Z M49,61 L55,61 L55,79 L49,79 Z" />
+</vector>

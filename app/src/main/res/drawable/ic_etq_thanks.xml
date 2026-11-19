@@ -1,0 +1,64 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Warm Amber Card Badge -->
+    <path
+        android:fillColor="#FEF3C7"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Two Hands Clasped in Prayer / Sincere Gratitude (Namaste / Xie Xie) -->
+    <!-- Hand Shadow -->
+    <path
+        android:fillColor="#C2410C"
+        android:pathData="M48,16 C46,16 43,20 42,26 L38,42 L34,48 L32,60 C31,68 34,76 38,82 L58,82 C62,76 65,68 64,60 L62,48 L58,42 L54,26 C53,20 50,16 48,16 Z" />
+
+    <!-- Left Hand Base -->
+    <path
+        android:fillColor="#FB923C"
+        android:pathData="M48,18 C47,18 44,22 43,28 L39,44 L35,50 L34,62 C33,68 36,75 40,80 L48,80 L48,18 Z" />
+    <!-- Left Hand Thumb -->
+    <path
+        android:fillColor="#FDBA74"
+        android:pathData="M39,46 C37,48 37,52 39,56 L44,64 L48,64 L48,56 L42,48 Z" />
+
+    <!-- Right Hand Base -->
+    <path
+        android:fillColor="#FDBA74"
+        android:pathData="M48,18 C49,18 52,22 53,28 L57,44 L61,50 L62,62 C63,68 60,75 56,80 L48,80 L48,18 Z" />
+    <!-- Right Hand Thumb -->
+    <path
+        android:fillColor="#FED7AA"
+        android:pathData="M57,46 C59,48 59,52 57,56 L52,64 L48,64 L48,56 L54,48 Z" />
+
+    <!-- Center Contact Seam of Palms -->
+    <path
+        android:fillColor="#EA580C"
+        android:pathData="M47,20 L49,20 L49,80 L47,80 Z" />
+
+    <!-- Radiant Rays of Thankfulness (Golden) -->
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M48,12 L46,6 L50,6 Z" />
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M34,18 L28,14 L30,12 Z" />
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M62,18 L68,14 L66,12 Z" />
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M24,30 L16,28 L18,26 Z" />
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M72,30 L80,28 L78,26 Z" />
+
+    <!-- Gratitude Sparkles -->
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M22,46 L23.5,42 L25,46 L29,47.5 L25,49 L23.5,53 L22,49 L18,47.5 Z" />
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M72,46 L73.5,42 L75,46 L79,47.5 L75,49 L73.5,53 L72,49 L68,47.5 Z" />
+</vector>

@@ -1,0 +1,39 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Rose-Red Card Badge -->
+    <path
+        android:fillColor="#FFE4E6"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Universal Prohibition Sign (Bu Xing / Bu Neng - Dilarang / Tidak Boleh) -->
+    <!-- Outer Shadow -->
+    <path
+        android:fillColor="#881337"
+        android:pathData="M48,16 A32,32 0 1,1 48,80 A32,32 0 1,1 48,16 Z" />
+
+    <!-- Pure White Inner Center Base -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M48,18 A30,30 0 1,1 48,78 A30,30 0 1,1 48,18 Z" />
+
+    <!-- Bold Crimson Prohibition Circle Ring -->
+    <path
+        android:fillColor="#E11D48"
+        android:pathData="M48,20 A28,28 0 1,0 48,76 A28,28 0 1,0 48,20 Z M48,28 A20,20 0 1,1 48,68 A20,20 0 1,1 48,28 Z" />
+
+    <!-- Bold Diagonal Slash (Top-Left to Bottom-Right) -->
+    <path
+        android:fillColor="#BE123C"
+        android:pathData="M31,31 L37,25 L69,63 L63,69 Z" />
+    <path
+        android:fillColor="#E11D48"
+        android:pathData="M32,32 L38,26 L70,64 L64,70 Z" />
+
+    <!-- Highlighting Ring Curve -->
+    <path
+        android:fillColor="#FB7185"
+        android:pathData="M48,20 C34,20 23,30 20,44 L25,44 C27,33 36,25 48,25 Z" />
+</vector>

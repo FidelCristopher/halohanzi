@@ -1,0 +1,62 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Sky Blue Card Badge -->
+    <path
+        android:fillColor="#E0F2FE"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Two People Meeting & Getting Acquainted (Renshi - Mengenal / Kenal) -->
+    <!-- Person 1 (Left - Blue Theme) -->
+    <!-- Head -->
+    <path
+        android:fillColor="#0369A1"
+        android:pathData="M32,20 A9,9 0 1,1 32,38 A9,9 0 1,1 32,20 Z" />
+    <path
+        android:fillColor="#0284C7"
+        android:pathData="M32,22 A7,7 0 1,1 32,36 A7,7 0 1,1 32,22 Z" />
+    <!-- Torso -->
+    <path
+        android:fillColor="#0369A1"
+        android:pathData="M32,42 C22,42 16,50 16,62 L42,62 C42,50 38,42 32,42 Z" />
+    <path
+        android:fillColor="#38BDF8"
+        android:pathData="M32,44 C24,44 18,51 18,60 L40,60 C40,51 36,44 32,44 Z" />
+
+    <!-- Person 2 (Right - Warm Amber Theme) -->
+    <!-- Head -->
+    <path
+        android:fillColor="#B45309"
+        android:pathData="M64,20 A9,9 0 1,1 64,38 A9,9 0 1,1 64,20 Z" />
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M64,22 A7,7 0 1,1 64,36 A7,7 0 1,1 64,22 Z" />
+    <!-- Torso -->
+    <path
+        android:fillColor="#B45309"
+        android:pathData="M64,42 C58,42 54,50 54,62 L80,62 C80,50 74,42 64,42 Z" />
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M64,44 C60,44 56,51 56,60 L78,60 C78,51 72,44 64,44 Z" />
+
+    <!-- Handshake Bridge between them (Center Bottom) -->
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="M36,66 L60,66 C62,66 63,68 61,70 L52,78 L44,78 L35,70 C33,68 34,66 36,66 Z" />
+    <path
+        android:fillColor="#FDBA74"
+        android:pathData="M38,68 L48,68 L50,74 L42,74 Z" />
+    <path
+        android:fillColor="#FB923C"
+        android:pathData="M58,68 L48,68 L46,74 L54,74 Z" />
+
+    <!-- Spark of Acquaintance & Friendship (Top Center) -->
+    <path
+        android:fillColor="#E11D48"
+        android:pathData="M48,34 C47,33 42,28 42,24 C42,21 44,19 46.5,20 C47.5,20.5 48,21 48,21.5 C48,21 48.5,20.5 49.5,20 C52,19 54,21 54,24 C54,28 49,33 48,34 Z" />
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M48,12 L49,9 L50,12 L53,13 L50,14 L49,17 L48,14 L45,13 Z" />
+</vector>

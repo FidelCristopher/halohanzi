@@ -1,0 +1,64 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Warm Amber Card Badge -->
+    <path
+        android:fillColor="#FEF3C7"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Radiant Joyful Face (Gaoxing - Happy / Glad) -->
+    <!-- Head Shadow -->
+    <path
+        android:fillColor="#D97706"
+        android:pathData="M48,16 A32,32 0 1,1 48,80 A32,32 0 1,1 48,16 Z" />
+    <!-- Head Base (Golden Yellow) -->
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M48,18 A30,30 0 1,1 48,78 A30,30 0 1,1 48,18 Z" />
+
+    <!-- Radiant Smile Highlight -->
+    <path
+        android:fillColor="#FEF08A"
+        android:pathData="M48,20 C34,20 22,30 20,44 C24,32 35,24 48,24 C61,24 72,32 76,44 C74,30 62,20 48,20 Z" />
+
+    <!-- Happy Laughing Crescent Eyes (Curved upward happily) -->
+    <!-- Left Eye -->
+    <path
+        android:fillColor="#78350F"
+        android:pathData="M31,39 C31,34 37,32 43,37 L41,39 C37,35 34,36 33,39 Z" />
+    <!-- Right Eye -->
+    <path
+        android:fillColor="#78350F"
+        android:pathData="M53,37 C59,32 65,34 65,39 L63,39 C62,36 59,35 55,39 Z" />
+
+    <!-- Rosy Cheeks (Blushing pink) -->
+    <path
+        android:fillColor="#FDA4AF"
+        android:pathData="M24,46 A6,4 0 1,1 24,54 A6,4 0 1,1 24,46 Z" />
+    <path
+        android:fillColor="#FDA4AF"
+        android:pathData="M72,46 A6,4 0 1,1 72,54 A6,4 0 1,1 72,46 Z" />
+
+    <!-- Wide Joyful Open Mouth Smile -->
+    <path
+        android:fillColor="#78350F"
+        android:pathData="M34,48 C34,48 37,68 48,68 C59,68 62,48 62,48 Z" />
+    <!-- Teeth Row -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M35,48 L61,48 C60,53 55,56 48,56 C41,56 36,53 35,48 Z" />
+    <!-- Pink Tongue -->
+    <path
+        android:fillColor="#F43F5E"
+        android:pathData="M42,60 C44,65 52,65 54,60 C51,58 45,58 42,60 Z" />
+
+    <!-- Joyful Sparkles Around Face -->
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M16,24 L17.5,20 L19,24 L23,25.5 L19,27 L17.5,31 L16,27 L12,25.5 Z" />
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M78,24 L79.5,20 L81,24 L85,25.5 L81,27 L79.5,31 L78,27 L74,25.5 Z" />
+</vector>

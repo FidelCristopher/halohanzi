@@ -1,0 +1,58 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Rose / Lavender Card Badge -->
+    <path
+        android:fillColor="#FCE7F3"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Pharmaceutical Capsule Pill (Angled at 45 degrees) -->
+    <!-- Capsule Shadow -->
+    <path
+        android:fillColor="#881337"
+        android:pathData="M28,68 C22,62 22,50 28,44 L50,22 C56,16 68,16 74,22 C80,28 80,40 74,46 L52,68 C46,74 34,74 28,68 Z" />
+
+    <!-- Top Half of Capsule (Vibrant Red) -->
+    <path
+        android:fillColor="#EF4444"
+        android:pathData="M51,21 C57,15 67,15 73,21 C79,27 79,37 73,43 L62,54 L40,32 Z" />
+    <path
+        android:fillColor="#F87171"
+        android:pathData="M52,24 C56,20 64,20 68,24 C72,28 72,36 68,40 L60,48 L44,32 Z" />
+
+    <!-- Bottom Half of Capsule (Pure White) -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M29,67 C23,61 23,51 29,45 L40,34 L62,56 L51,67 C45,73 35,73 29,67 Z" />
+    <path
+        android:fillColor="#F1F5F9"
+        android:pathData="M31,65 C26,60 26,52 31,47 L39,39 L57,57 L49,65 C44,70 36,70 31,65 Z" />
+
+    <!-- Capsule Seam Band -->
+    <path
+        android:fillColor="#E2E8F0"
+        android:pathData="M38,32 L42,36 L64,58 L60,54 Z" />
+
+    <!-- Round Tablet Pill (Bottom Right) -->
+    <!-- Tablet Shadow -->
+    <path
+        android:fillColor="#0E7490"
+        android:pathData="M66,54 A16,16 0 1,1 66,86 A16,16 0 1,1 66,54 Z" />
+    <path
+        android:fillColor="#06B6D4"
+        android:pathData="M66,56 A14,14 0 1,1 66,84 A14,14 0 1,1 66,56 Z" />
+    <!-- Center Score Notch Line -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M56,70 L76,70 L76,72 L56,72 Z" />
+    <path
+        android:fillColor="#CFFAFE"
+        android:pathData="M62,60 A4,4 0 1,1 62,68 A4,4 0 1,1 62,60 Z" />
+
+    <!-- Sparkle Accent -->
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M20,24 L21.5,20 L23,24 L27,25.5 L23,27 L21.5,31 L20,27 L16,25.5 Z" />
+</vector>

@@ -1,0 +1,77 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Rose-Pink Card Badge -->
+    <path
+        android:fillColor="#FCE7F3"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Blooming Cherry Blossom / Lotus Flower -->
+    <!-- Shadow Base -->
+    <path
+        android:fillColor="#9D174D"
+        android:pathData="M48,16 C43,26 43,36 48,46 C53,36 53,26 48,16 Z" />
+
+    <!-- Top Petal -->
+    <path
+        android:fillColor="#F43F5E"
+        android:pathData="M48,18 C41,27 42,39 48,48 C54,39 55,27 48,18 Z" />
+    <path
+        android:fillColor="#FDA4AF"
+        android:pathData="M48,22 C44,28 45,36 48,42 C51,36 52,28 48,22 Z" />
+
+    <!-- Top-Right Petal -->
+    <path
+        android:fillColor="#F43F5E"
+        android:pathData="M74,34 C63,33 53,40 48,48 C58,50 69,45 74,34 Z" />
+    <path
+        android:fillColor="#FDA4AF"
+        android:pathData="M69,36 C61,35 54,41 50,47 C57,48 65,44 69,36 Z" />
+
+    <!-- Bottom-Right Petal -->
+    <path
+        android:fillColor="#E11D48"
+        android:pathData="M66,72 C61,62 53,55 48,48 C48,58 52,69 66,72 Z" />
+    <path
+        android:fillColor="#FB7185"
+        android:pathData="M62,67 C58,60 52,54 48,50 C49,57 52,64 62,67 Z" />
+
+    <!-- Bottom-Left Petal -->
+    <path
+        android:fillColor="#E11D48"
+        android:pathData="M30,72 C44,69 48,58 48,48 C43,55 35,62 30,72 Z" />
+    <path
+        android:fillColor="#FB7185"
+        android:pathData="M34,67 C44,64 47,57 48,50 C44,54 38,60 34,67 Z" />
+
+    <!-- Top-Left Petal -->
+    <path
+        android:fillColor="#F43F5E"
+        android:pathData="M22,34 C27,45 38,50 48,48 C43,40 33,33 22,34 Z" />
+    <path
+        android:fillColor="#FDA4AF"
+        android:pathData="M27,36 C31,44 39,48 46,47 C42,41 35,35 27,36 Z" />
+
+    <!-- Flower Pistil / Golden Center -->
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M48,42 A6,6 0 1,1 48,54 A6,6 0 1,1 48,42 Z" />
+    <path
+        android:fillColor="#FEF08A"
+        android:pathData="M48,44 A4,4 0 1,1 48,52 A4,4 0 1,1 48,44 Z" />
+
+    <!-- Floating Elegant Petals -->
+    <path
+        android:fillColor="#F43F5E"
+        android:pathData="M22,60 C18,63 18,67 22,69 C25,67 27,63 22,60 Z" />
+    <path
+        android:fillColor="#F43F5E"
+        android:pathData="M76,60 C73,63 74,67 78,67 C80,64 79,61 76,60 Z" />
+
+    <!-- Sparkling Glints -->
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M72,20 L73.5,16 L75,20 L79,21.5 L75,23 L73.5,27 L72,23 L68,21.5 Z" />
+</vector>
