@@ -3020,65 +3020,101 @@ object LearningRepository {
             )
         ),
 
-        // BAB 3: Keluarga & Rumah
+        // BAB 3: Angka, Kuantitas & Berhitung Dasar (数字、数量与基数)
         UnitCourse(
             id = "unit_3",
             unitNumber = 3,
-            title = "Keluarga & Rumah",
-            subtitle = "Anggota keluarga, kepemilikan 有, dan hewan peliharaan",
-            bannerTitle = "Keluarga & Hewan Peliharaan",
-            emoji = "🏡",
+            title = "Angka & Kuantitas",
+            subtitle = "Sistem bilangan 0 - 9999, satuan 个, kuantitas, uang, dan umur",
+            bannerTitle = "Angka & Berhitung",
+            emoji = "🔢",
             level = "Level 3",
             story = stories[2],
             nodes = listOf(
-                PathNode("u3_n1", "Ayah & Ibu", Color(0xFF4CAF50), NodeIconType.CAP, isCompleted = false, lessonId = "u3_l1"),
-                PathNode("u3_n2", "Anak & Saudara", Color(0xFFFFC107), NodeIconType.CAP, isCompleted = false, lessonId = "u3_l1"),
-                PathNode("u3_n3", "Latihan Keluarga", Color(0xFFFFC107), NodeIconType.DUMBBELL, isCompleted = false, lessonId = "u3_l1"),
-                PathNode("u3_n4", "Kucing & Rumah", Color(0xFFFFC107), NodeIconType.CAP, isCompleted = false, lessonId = "u3_l1"),
-                PathNode("u3_n5", "Checkpoint", Color(0xFFFFB300), NodeIconType.CHEST, isCompleted = false, lessonId = "u3_l1")
+                PathNode("u3_n1", "Angka 1 - 10", Color(0xFFFFC107), NodeIconType.CAP, isCompleted = false, lessonId = "u3_l1"),
+                PathNode("u3_n2", "Puluhan & Ratusan", Color(0xFFFFC107), NodeIconType.DUMBBELL, isCompleted = false, lessonId = "u3_l2"),
+                PathNode("u3_n3", "Berapa & Uang", Color(0xFFFFC107), NodeIconType.CAP, isCompleted = false, lessonId = "u3_l3"),
+                PathNode("u3_n4", "Berapa Umurmu?", Color(0xFFFFC107), NodeIconType.DUMBBELL, isCompleted = false, lessonId = "u3_l4"),
+                PathNode("u3_n5", "Latihan Komprehensif", Color(0xFFFFC107), NodeIconType.SHUFFLE, isCompleted = false, lessonId = "u3_l5"),
+                PathNode("u3_n6", "Kuis Cerita", Color(0xFFFFC107), NodeIconType.BOOK, isCompleted = false, lessonId = "u3_l1"),
+                PathNode("u3_n7", "Checkpoint Bab", Color(0xFFFFB300), NodeIconType.CHEST, isCompleted = false, lessonId = "u3_l1"),
+                PathNode("u3_n8", "Rest area", Color(0xFF03A9F4), NodeIconType.REST_AREA, isCompleted = false, lessonId = "u3_l1")
             ),
             lessons = listOf(
                 Lesson(
                     id = "u3_l1",
-                    title = "Anggota Keluarga",
-                    subtitle = "Ayah, ibu, dan hewan peliharaan",
-                    grammarNote = "Menyatakan ada / punya: 'Subjek + 有 (yǒu) + Benda/Orang'. Negasi: '没有 (méiyǒu)'. Contoh: 我家有一只猫 (Rumah saya ada seekor kucing).",
+                    title = "Angka 1 - 10",
+                    subtitle = "Angka dasar & Satuan 个",
+                    grammarNote = "Satuan penggolong 个 (gè) digunakan setelah angka dan sebelum kata benda orang/benda umum. Rumus: Angka + 个 + Kata Benda (一个人 = satu orang, 三个学生 = tiga murid).",
                     newWords = listOf(
-                        Word("w3_1", "爸爸", "bàba", "Ayah", "Keluarga", "我爸爸很好。", "Wǒ bàba hěn hǎo.", "Ayah saya sangat baik."),
-                        Word("w3_2", "妈妈", "māma", "Ibu", "Keluarga", "妈妈爱我。", "Māma ài wǒ.", "Ibu menyayangi saya."),
-                        Word("w3_3", "猫", "māo", "Kucing", "Hewan", "小猫很漂亮。", "Xiǎomāo hěn piàoliang.", "Anak kucing sangat cantik.")
+                        Word("w3_1", "一", "yī", "Satu", "Angka", "一个人。", "Yí gè rén.", "Satu orang."),
+                        Word("w3_2", "二", "èr", "Dua", "Angka", "二、三、四。", "Èr, sān, sì.", "Dua, tiga, empat."),
+                        Word("w3_3", "三", "sān", "Tiga", "Angka", "三个朋友。", "Sān gè péngyou.", "Tiga orang teman."),
+                        Word("w3_4", "四", "sì", "Empat", "Angka", "四个老师。", "Sì gè lǎoshī.", "Empat orang guru."),
+                        Word("w3_5", "五", "wǔ", "Lima", "Angka", "五个人。", "Wǔ gè rén.", "Lima orang."),
+                        Word("w3_6", "个", "gè", "Buah / Orang (satuan)", "Satuan", "一个学生。", "Yí gè xuéshēng.", "Seorang murid.")
                     ),
-                    exercises = listOf(
-                        Exercise(
-                            id = "u3_ex1",
-                            type = ExerciseType.PICTURE_CHOICE,
-                            title = "Pilih gambar yang benar",
-                            targetHanzi = "猫",
-                            targetPinyin = "māo",
-                            targetTranslation = "Kucing",
-                            correctAnswer = "kucing",
-                            audioToSpeak = "猫",
-                            pictureOptions = listOf(
-                                PictureOption("p3_1", "kucing", "🐱", isCorrect = true),
-                                PictureOption("p3_2", "anjing", "🐶", isCorrect = false),
-                                PictureOption("p3_3", "rumah", "🏠", isCorrect = false),
-                                PictureOption("p3_4", "ayah", "👨", isCorrect = false)
-                            )
-                        ),
-                        Exercise(
-                            id = "u3_ex2",
-                            type = ExerciseType.MATCH_PAIRS,
-                            title = "Ketuk pasangan yang sesuai",
-                            correctAnswer = "ALL_MATCHED",
-                            matchPairs = listOf(
-                                MatchPairItem("m3_1", "爸爸", "bàba", "ayah"),
-                                MatchPairItem("m3_2", "妈妈", "māma", "ibu"),
-                                MatchPairItem("m3_3", "猫", "māo", "kucing"),
-                                MatchPairItem("m3_4", "狗", "gǒu", "anjing"),
-                                MatchPairItem("m3_5", "家", "jiā", "rumah")
-                            )
-                        )
-                    )
+                    exercises = bab3Stage1Part1Exercises,
+                    exercisesPart1 = bab3Stage1Part1Exercises,
+                    exercisesPart2 = bab3Stage1Part2Exercises
+                ),
+                Lesson(
+                    id = "u3_l2",
+                    title = "Puluhan, Ratusan & Ribuan",
+                    subtitle = "Sistem puluhan & Perbedaan 两 vs 二",
+                    grammarNote = "二 (èr) digunakan untuk menghitung nomor urut dan matematika. 两 (liǎng) wajib digunakan di depan kata penggolong kuantitas (两个, 两百, 两千).",
+                    newWords = listOf(
+                        Word("w3_7", "两", "liǎng", "Dua (kuantitas)", "Angka", "两个人。", "Liǎng gè rén.", "Dua orang."),
+                        Word("w3_8", "零", "líng", "Nol", "Angka", "一百零五。", "Yìbǎi líng wǔ.", "Seratus lima."),
+                        Word("w3_9", "百", "bǎi", "Ratus", "Angka", "一百个学生。", "Yìbǎi gè xuéshēng.", "Seratus orang murid."),
+                        Word("w3_10", "千", "qiān", "Ribu", "Angka", "一千个人。", "Yìqiān gè rén.", "Seribu orang.")
+                    ),
+                    exercises = bab3Stage2Part1Exercises,
+                    exercisesPart1 = bab3Stage2Part1Exercises,
+                    exercisesPart2 = bab3Stage2Part2Exercises
+                ),
+                Lesson(
+                    id = "u3_l3",
+                    title = "Kata Tanya Kuantitas & Uang",
+                    subtitle = "Kata tanya 几 vs 多少 & Mata uang 块/元",
+                    grammarNote = "几 (jǐ) untuk menanyakan kuantitas kecil (<10) dan diikuti satuan (几个). 多少 (duōshao) untuk kuantitas umum/besar (多少钱？). 块 (kuài) adalah yuan lisan, 元 (yuán) adalah yuan tulisan.",
+                    newWords = listOf(
+                        Word("w3_11", "几", "jǐ", "Berapa (< 10)", "Kata tanya", "你有几个朋友？", "Nǐ yǒu jǐ gè péngyou?", "Kamu punya berapa teman?"),
+                        Word("w3_12", "多少", "duōshao", "Berapa banyak", "Kata tanya", "这个多少钱？", "Zhège duōshao qián?", "Ini berapa harganya?"),
+                        Word("w3_13", "块", "kuài", "Yuan (uang lisan)", "Satuan", "五块钱。", "Wǔ kuài qián.", "Lima yuan."),
+                        Word("w3_14", "元", "yuán", "Yuan (uang resmi)", "Satuan", "二十元。", "Èrshí yuán.", "Dua puluh yuan.")
+                    ),
+                    exercises = bab3Stage3Part1Exercises,
+                    exercisesPart1 = bab3Stage3Part1Exercises,
+                    exercisesPart2 = bab3Stage3Part2Exercises
+                ),
+                Lesson(
+                    id = "u3_l4",
+                    title = "Menanyakan Umur & Usia",
+                    subtitle = "Pola usia: 几岁 / 多大 / 岁",
+                    grammarNote = "Menanyakan anak kecil (<10 tahun): 你几岁？. Menanyakan orang dewasa: 你多大？ / 你今年多大？. Menyatakan usia: Subjek + Angka + 岁 (我二十岁).",
+                    newWords = listOf(
+                        Word("w3_15", "岁", "suì", "Tahun (umur)", "Satuan", "我二十岁。", "Wǒ èrshí suì.", "Saya berumur dua puluh tahun."),
+                        Word("w3_16", "今年", "jīnnián", "Tahun ini", "Waktu", "他今年多大？", "Tā jīnnián duō dà?", "Berapa usianya tahun ini?")
+                    ),
+                    exercises = bab3Stage4Part1Exercises,
+                    exercisesPart1 = bab3Stage4Part1Exercises,
+                    exercisesPart2 = bab3Stage4Part2Exercises
+                ),
+                Lesson(
+                    id = "u3_l5",
+                    title = "Latihan Komprehensif Bab 3",
+                    subtitle = "Review seluruh 20 kosakata angka & kuantitas",
+                    grammarNote = "Uji pemahaman komprehensif angka 1-9999, satuan 个, kuantitas 几/多少, harga 块/元, dan usia 岁.",
+                    newWords = listOf(
+                        Word("w3_1", "一", "yī", "Satu", "Angka", "一个人。", "Yí gè rén.", "Satu orang."),
+                        Word("w3_7", "两", "liǎng", "Dua (kuantitas)", "Angka", "两块钱。", "Liǎng kuài qián.", "Dua yuan uang."),
+                        Word("w3_12", "多少", "duōshao", "Berapa banyak", "Kata tanya", "这个多少钱？", "Zhège duōshao qián?", "Ini berapa harganya?"),
+                        Word("w3_15", "岁", "suì", "Tahun (umur)", "Satuan", "王飞二十岁。", "WángFēi èrshí suì.", "Wang Fei berumur dua puluh tahun.")
+                    ),
+                    exercises = bab3Stage5Part1Exercises,
+                    exercisesPart1 = bab3Stage5Part1Exercises,
+                    exercisesPart2 = bab3Stage5Part2Exercises
                 )
             )
         ),
