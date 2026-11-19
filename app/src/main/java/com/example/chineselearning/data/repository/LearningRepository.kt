@@ -3235,65 +3235,103 @@ object LearningRepository {
             )
         ),
 
-        // BAB 5: Belajar, Menulis Hanzi & Bekerja
+        // BAB 5: Aktivitas Harian: Pagi Hingga Malam (从早到晚的日常作息)
         UnitCourse(
             id = "unit_5",
             unitNumber = 5,
-            title = "Belajar & Profesi",
-            subtitle = "Menulis karakter Hanzi, membaca buku, dan profesi dokter",
-            bannerTitle = "Di Sekolah & Rumah Sakit",
-            emoji = "💻",
+            title = "Aktivitas Harian",
+            subtitle = "Rutinitas bangun, sarapan, bekerja, hingga tidur malam",
+            bannerTitle = "Aktivitas Pagi Hingga Malam",
+            emoji = "🌅",
             level = "Level 5",
             story = stories[4],
             nodes = listOf(
-                PathNode("u5_n1", "Belajar Hanzi", Color(0xFF9C27B0), NodeIconType.CAP, isCompleted = false, lessonId = "u5_l1"),
-                PathNode("u5_n2", "Dokter & RS", Color(0xFFFFC107), NodeIconType.CAP, isCompleted = false, lessonId = "u5_l1"),
-                PathNode("u5_n3", "Latihan Komputer", Color(0xFFFFC107), NodeIconType.DUMBBELL, isCompleted = false, lessonId = "u5_l1"),
-                PathNode("u5_n4", "Buku & TV", Color(0xFFFFC107), NodeIconType.CAP, isCompleted = false, lessonId = "u5_l1"),
-                PathNode("u5_n5", "Checkpoint", Color(0xFFFFB300), NodeIconType.CHEST, isCompleted = false, lessonId = "u5_l1")
+                PathNode("u5_n1", "Pagi & Malam", Color(0xFFFFC107), NodeIconType.CAP, isCompleted = false, lessonId = "u5_l1"),
+                PathNode("u5_n2", "Bangun & Tidur", Color(0xFFFFC107), NodeIconType.DUMBBELL, isCompleted = false, lessonId = "u5_l2"),
+                PathNode("u5_n3", "3 Waktu Makan", Color(0xFFFFC107), NodeIconType.CAP, isCompleted = false, lessonId = "u5_l3"),
+                PathNode("u5_n4", "Sedang Berlangsung", Color(0xFFFFC107), NodeIconType.DUMBBELL, isCompleted = false, lessonId = "u5_l4"),
+                PathNode("u5_n5", "Evaluasi Harian", Color(0xFFFFC107), NodeIconType.SHUFFLE, isCompleted = false, lessonId = "u5_l5"),
+                PathNode("u5_n6", "Kuis Cerita", Color(0xFFFFC107), NodeIconType.BOOK, isCompleted = false, lessonId = "u5_l1"),
+                PathNode("u5_n7", "Checkpoint Bab", Color(0xFFFFB300), NodeIconType.CHEST, isCompleted = false, lessonId = "u5_l1"),
+                PathNode("u5_n8", "Rest area", Color(0xFF03A9F4), NodeIconType.REST_AREA, isCompleted = false, lessonId = "u5_l1")
             ),
             lessons = listOf(
                 Lesson(
                     id = "u5_l1",
-                    title = "Belajar Bahasa Mandarin",
-                    subtitle = "Menulis karakter dan membaca buku",
-                    grammarNote = "Menyatakan keahlian: '会 (huì) + Kata kerja'. Contoh: 我会写汉字 (Saya bisa menulis aksara Hanzi).",
+                    title = "Pagi, Siang & Malam",
+                    subtitle = "Pembagian waktu dalam sehari dan salam sapaan",
+                    grammarNote = "Keterangan segmen hari diletakkan sebelum jam: 早上 (pagi), 上午 (pagi menjelang siang), 中午 (siang), 下午 (sore), 晚上 (malam). Contoh: 早上八点 (jam 8 pagi).",
                     newWords = listOf(
-                        Word("w5_1", "学习", "xuéxí", "Belajar", "Kata kerja", "我在学习汉语。", "Wǒ zài xuéxí hànyǔ.", "Saya sedang belajar bahasa Mandarin."),
-                        Word("w5_2", "书", "shū", "Buku", "Benda", "这是一本书。", "Zhè shì yì běn shū.", "Ini adalah sebuah buku."),
-                        Word("w5_3", "电脑", "diànnǎo", "Komputer", "Benda", "电脑在桌子上。", "Diànnǎo zài zhuōzi shang.", "Komputer di atas meja.")
+                        Word("w5_1", "早上", "zǎoshang", "Pagi", "Waktu", "老师早上好！", "Lǎoshī zǎoshang hǎo!", "Selamat pagi guru!"),
+                        Word("w5_2", "早", "zǎo", "Pagi / awal", "Kata sifat", "你来得很早。", "Nǐ lái de hěn zǎo.", "Kamu datang sangat awal."),
+                        Word("w5_3", "上午", "shàngwǔ", "Pagi menjelang siang", "Waktu", "上午九点。", "Shàngwǔ jiǔ diǎn.", "Jam 9 pagi."),
+                        Word("w5_4", "中午", "zhōngwǔ", "Tengah hari", "Waktu", "中午十二点。", "Zhōngwǔ shí'èr diǎn.", "Jam 12 siang."),
+                        Word("w5_5", "下午", "xiàwǔ", "Sore", "Waktu", "下午三点。", "Xiàwǔ sān diǎn.", "Jam 3 sore."),
+                        Word("w5_6", "晚上", "wǎnshang", "Malam", "Waktu", "晚上八点。", "Wǎnshang bā diǎn.", "Jam 8 malam."),
+                        Word("w5_7", "白天", "báitiān", "Siang hari", "Waktu", "白天他在学校。", "Báitiān tā zài xuéxiào.", "Siang hari dia di sekolah.")
                     ),
-                    exercises = listOf(
-                        Exercise(
-                            id = "u5_ex1",
-                            type = ExerciseType.PICTURE_CHOICE,
-                            title = "Pilih gambar yang benar",
-                            targetHanzi = "书",
-                            targetPinyin = "shū",
-                            targetTranslation = "Buku",
-                            correctAnswer = "buku",
-                            audioToSpeak = "书",
-                            pictureOptions = listOf(
-                                PictureOption("p5_1", "buku", "📚", isCorrect = true),
-                                PictureOption("p5_2", "komputer", "💻", isCorrect = false),
-                                PictureOption("p5_3", "televisi", "📺", isCorrect = false),
-                                PictureOption("p5_4", "film", "🎬", isCorrect = false)
-                            )
-                        ),
-                        Exercise(
-                            id = "u5_ex2",
-                            type = ExerciseType.MATCH_PAIRS,
-                            title = "Ketuk pasangan yang sesuai",
-                            correctAnswer = "ALL_MATCHED",
-                            matchPairs = listOf(
-                                MatchPairItem("m5_1", "学习", "xuéxí", "belajar"),
-                                MatchPairItem("m5_2", "书", "shū", "buku"),
-                                MatchPairItem("m5_3", "电脑", "diànnǎo", "komputer"),
-                                MatchPairItem("m5_4", "电影", "diànyǐng", "film"),
-                                MatchPairItem("m5_5", "工作", "gōngzuò", "bekerja")
-                            )
-                        )
-                    )
+                    exercises = bab5Stage1Part1Exercises,
+                    exercisesPart1 = bab5Stage1Part1Exercises,
+                    exercisesPart2 = bab5Stage1Part2Exercises
+                ),
+                Lesson(
+                    id = "u5_l2",
+                    title = "Bangun & Tidur",
+                    subtitle = "Kosakata 起床, 睡觉, 睡, dan 休息",
+                    grammarNote = "Rumus aktivitas: Subjek + Waktu + Aktivitas. Contoh: 我七点起床 (Saya bangun jam 7), 他十点睡觉 (Dia tidur jam 10). Durasi tidur: 睡 + Angka + 个小时.",
+                    newWords = listOf(
+                        Word("w5_8", "起床", "qǐchuáng", "Bangun tidur", "Kata kerja", "我七点起床。", "Wǒ qī diǎn qǐchuáng.", "Saya bangun jam 7."),
+                        Word("w5_9", "睡觉", "shuìjiào", "Tidur", "Kata kerja", "他十点睡觉。", "Tā shí diǎn shuìjiào.", "Dia tidur jam 10."),
+                        Word("w5_10", "睡", "shuì", "Tidur", "Kata kerja", "我睡八个小时。", "Wǒ shuì bā gè xiǎoshí.", "Saya tidur 8 jam."),
+                        Word("w5_11", "休息", "xiūxi", "Beristirahat", "Kata kerja", "我想休息。", "Wǒ xiǎng xiūxi.", "Saya ingin istirahat.")
+                    ),
+                    exercises = bab5Stage2Part1Exercises,
+                    exercisesPart1 = bab5Stage2Part1Exercises,
+                    exercisesPart2 = bab5Stage2Part2Exercises
+                ),
+                Lesson(
+                    id = "u5_l3",
+                    title = "3 Waktu Makan",
+                    subtitle = "Sarapan 早饭, Makan Siang 午饭 & Makan Malam 晚饭",
+                    grammarNote = "Kata 吃 (chī) berpadu dengan 饭 (fàn): 早饭 (sarapan), 午饭 (makan siang), 晚饭 (makan malam). Pola: 吃 + Makanan. Contoh: 你吃早饭了吗？ (Sudah sarapankah?).",
+                    newWords = listOf(
+                        Word("w5_12", "早饭", "zǎofàn", "Sarapan", "Makanan", "我吃早饭。", "Wǒ chī zǎofàn.", "Saya makan sarapan."),
+                        Word("w5_13", "午饭", "wǔfàn", "Makan siang", "Makanan", "十二点吃午饭。", "Shí'èr diǎn chī wǔfàn.", "Jam 12 makan siang."),
+                        Word("w5_14", "晚饭", "wǎnfàn", "Makan malam", "Makanan", "晚上七点吃晚饭。", "Wǎnshang qī diǎn chī wǎnfàn.", "Jam 7 malam makan malam.")
+                    ),
+                    exercises = bab5Stage3Part1Exercises,
+                    exercisesPart1 = bab5Stage3Part1Exercises,
+                    exercisesPart2 = bab5Stage3Part2Exercises
+                ),
+                Lesson(
+                    id = "u5_l4",
+                    title = "Sedang Berlangsung",
+                    subtitle = "Aspek progresif 正在 / 在 dan durasi sejenak 一下",
+                    grammarNote = "Aspek aksi sedang berlangsung: Subjek + 正在 / 在 + Kata Kerja. Contoh: 我正在吃饭 (Saya sedang makan). Bentuk tindakan sejenak: Kata Kerja + 一下 (休息一下 = istirahat sebentar, 看一下 = lihat sebentar).",
+                    newWords = listOf(
+                        Word("w5_15", "正在", "zhèngzài", "Sedang dalam proses", "Keterangan", "我正在看书。", "Wǒ zhèngzài kànshū.", "Saya sedang membaca buku."),
+                        Word("w5_16", "在", "zài", "Di / sedang", "Keterangan", "你在做什么？", "Nǐ zài zuò shénme?", "Kamu sedang apa?"),
+                        Word("w5_17", "一下", "yíxià", "Sebentar / sejenak", "Keterangan", "休息一下吧。", "Xiūxi yíxià ba.", "Istirahatlah sebentar.")
+                    ),
+                    exercises = bab5Stage4Part1Exercises,
+                    exercisesPart1 = bab5Stage4Part1Exercises,
+                    exercisesPart2 = bab5Stage4Part2Exercises
+                ),
+                Lesson(
+                    id = "u5_l5",
+                    title = "Evaluasi Rutinitas Harian",
+                    subtitle = "Review 18 kosakata rutinitas dari pagi hingga malam",
+                    grammarNote = "Evaluasi terpadu: menyusun narasi rutinitas harian dari bangun pagi, sarapan, belajar/bekerja, makan siang, hingga istirahat dan tidur malam.",
+                    newWords = listOf(
+                        Word("w5_1", "早上", "zǎoshang", "Pagi", "Waktu", "早上好！", "Zǎoshang hǎo!", "Selamat pagi!"),
+                        Word("w5_8", "起床", "qǐchuáng", "Bangun", "Kata kerja", "七点起床。", "Qī diǎn qǐchuáng.", "Bangun jam 7."),
+                        Word("w5_12", "早饭", "zǎofàn", "Sarapan", "Makanan", "吃早饭。", "Chī zǎofàn.", "Makan sarapan."),
+                        Word("w5_15", "正在", "zhèngzài", "Sedang", "Keterangan", "正在做什么？", "Zhèngzài zuò shénme?", "Sedang melakukan apa?"),
+                        Word("w5_9", "睡觉", "shuìjiào", "Tidur", "Kata kerja", "十点睡觉。", "Shí diǎn shuìjiào.", "Tidur jam 10.")
+                    ),
+                    exercises = bab5Stage5Part1Exercises,
+                    exercisesPart1 = bab5Stage5Part1Exercises,
+                    exercisesPart2 = bab5Stage5Part2Exercises
                 )
             )
         ),
