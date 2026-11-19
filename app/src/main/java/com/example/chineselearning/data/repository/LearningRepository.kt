@@ -4386,6 +4386,119 @@ object LearningRepository {
                     exercisesPart2 = bab15Stage5Part2Exercises
                 )
             )
+        ),
+
+        // BAB 16: Kesehatan, Kebugaran & Sintesis Kehidupan (健康状况与综合应用)
+        UnitCourse(
+            id = "unit_16",
+            unitNumber = 16,
+            title = "Kesehatan & Sintesis",
+            subtitle = "Kondisi tubuh, berobat ke dokter, modalitas, dan sintesis akhir New HSK 1",
+            bannerTitle = "Kesehatan & Sintesis Akhir",
+            emoji = "🩺",
+            level = "Level 16",
+            story = stories[15],
+            nodes = listOf(
+                PathNode("u16_n1", "Sakit & Rumah Sakit", Color(0xFFFFC107), NodeIconType.CAP, isCompleted = false, lessonId = "u16_l1"),
+                PathNode("u16_n2", "Kemampuan & Izin", Color(0xFFFFC107), NodeIconType.DUMBBELL, isCompleted = false, lessonId = "u16_l2"),
+                PathNode("u16_n3", "Keharusan & Larangan", Color(0xFFFFC107), NodeIconType.CAP, isCompleted = false, lessonId = "u16_l3"),
+                PathNode("u16_n4", "Kuantitas Jamak", Color(0xFFFFC107), NodeIconType.DUMBBELL, isCompleted = false, lessonId = "u16_l4"),
+                PathNode("u16_n5", "Sintesis Wacana", Color(0xFFFFC107), NodeIconType.CAP, isCompleted = false, lessonId = "u16_l5"),
+                PathNode("u16_n6", "Grand Evaluasi Final", Color(0xFFFFC107), NodeIconType.SHUFFLE, isCompleted = false, lessonId = "u16_l6"),
+                PathNode("u16_n7", "Kuis Cerita Final", Color(0xFFFFC107), NodeIconType.BOOK, isCompleted = false, lessonId = "u16_l1"),
+                PathNode("u16_n8", "Checkpoint Tamat", Color(0xFFFFB300), NodeIconType.CHEST, isCompleted = false, lessonId = "u16_l1"),
+                PathNode("u16_n9", "Rest area", Color(0xFF03A9F4), NodeIconType.REST_AREA, isCompleted = false, lessonId = "u16_l1")
+            ),
+            lessons = listOf(
+                Lesson(
+                    id = "u16_l1",
+                    title = "Sakit & Rumah Sakit",
+                    subtitle = "Kosakata 生病, 看病, dan 医院",
+                    grammarNote = "Kondisi tubuh: 生病 (jatuh sakit). Berobat ke dokter: 看病 (kànbìng). Fasilitas medis: 医院 (rumah sakit). Pola: 去 + 医院 + 看病.",
+                    newWords = listOf(
+                        Word("w16_1", "生病", "shēngbìng", "Jatuh sakit", "Kesehatan", "他生病了。", "Tā shēngbìng le.", "Dia jatuh sakit."),
+                        Word("w16_2", "看病", "kànbìng", "Berobat", "Kesehatan", "我去医院看病。", "Wǒ qù yīyuàn kànbìng.", "Saya pergi ke rumah sakit berobat."),
+                        Word("w16_3", "医院", "yīyuàn", "Rumah sakit", "Tempat", "医院在前面。", "Yīyuàn zài qiánmiàn.", "Rumah sakit ada di depan."),
+                        Word("w16_4", "病", "bìng", "Penyakit / sakit", "Kesehatan", "病好了。", "Bìng hǎo le.", "Penyakitnya sudah sembuh.")
+                    ),
+                    exercises = bab16Stage1Part1Exercises,
+                    exercisesPart1 = bab16Stage1Part1Exercises,
+                    exercisesPart2 = bab16Stage1Part2Exercises
+                ),
+                Lesson(
+                    id = "u16_l2",
+                    title = "Modalitas: Kemampuan & Izin",
+                    subtitle = "Perbedaan 会, 能, dan 可以",
+                    grammarNote = "Tri-modalitas Mandarin: 会 (kemampuan hasil belajar: 会说汉语), 能 (kapasitas fisik/situasional: 今天我能来), 可以 (izin kebolehan: 我可以坐在这里吗？).",
+                    newWords = listOf(
+                        Word("w16_5", "能", "néng", "Bisa / sanggup", "Kata kerja", "今天我能来。", "Jīntiān wǒ néng lái.", "Hari ini saya bisa datang."),
+                        Word("w16_6", "可以", "kěyǐ", "Boleh / bisa", "Kata kerja", "我可以坐在这儿吗？", "Wǒ kěyǐ zuò zài zhèr ma?", "Bolehkah saya duduk di sini?"),
+                        Word("w16_7", "会", "huì", "Bisa (keterampilan)", "Kata kerja", "他会开车。", "Tā huì kāichē.", "Dia bisa menyetir mobil.")
+                    ),
+                    exercises = bab16Stage2Part1Exercises,
+                    exercisesPart1 = bab16Stage2Part1Exercises,
+                    exercisesPart2 = bab16Stage2Part2Exercises
+                ),
+                Lesson(
+                    id = "u16_l3",
+                    title = "Keharusan & Larangan",
+                    subtitle = "Kosakata 要, 不要, dan penilaian 对",
+                    grammarNote = "Keharusan/kebutuhan: 要 (yào). Prohibisi larangan: 不要 (búyào = jangan: 不要说话 = jangan bicara). Evaluasi kebenaran: 对 (duì = benar) vs 不对 (bú duì = salah).",
+                    newWords = listOf(
+                        Word("w16_8", "要", "yào", "Harus / mau", "Kata kerja", "我要去上班了。", "Wǒ yào qù shàngbān le.", "Saya harus pergi kerja."),
+                        Word("w16_9", "不要", "búyào", "Jangan / tidak mau", "Keterangan", "不要在房间里说话。", "Búyào zài fángjiān lǐ shuōhuà.", "Jangan bicara di dalam kamar."),
+                        Word("w16_10", "对", "duì", "Benar / tepat", "Kata sifat", "你说得对。", "Nǐ shuō de duì.", "Anda mengatakannya dengan benar.")
+                    ),
+                    exercises = bab16Stage3Part1Exercises,
+                    exercisesPart1 = bab16Stage3Part1Exercises,
+                    exercisesPart2 = bab16Stage3Part2Exercises
+                ),
+                Lesson(
+                    id = "u16_l4",
+                    title = "Kuantitas Jamak & Kolektif",
+                    subtitle = "Kosakata 这些, 那些, 哪些, 有的, dan 大家",
+                    grammarNote = "Demonstratif jamak: 这些 (ini semua), 那些 (itu semua), 哪些 (yang mana saja). Kolektif hadirin: 大家 (semua orang: 大家好！). Partisi: 有的 (beberapa di antaranya).",
+                    newWords = listOf(
+                        Word("w16_11", "这些", "zhèxiē", "Ini semua", "Kuantitas", "这些东西很便宜。", "Zhèxiē dōngxi hěn piányi.", "Barang-barang ini sangat murah."),
+                        Word("w16_12", "那些", "nàxiē", "Itu semua", "Kuantitas", "那些人都是我朋友。", "Nàxiē rén dōu shì wǒ péngyou.", "Orang-orang itu semua teman saya."),
+                        Word("w16_13", "大家", "dàjiā", "Semua orang", "Pronomina", "大家好！", "Dàjiā hǎo!", "Halo semuanya!"),
+                        Word("w16_14", "有的", "yǒude", "Beberapa", "Pronomina", "有的人喜欢喝茶。", "Yǒude rén xǐhuan hē chá.", "Beberapa orang suka minum teh.")
+                    ),
+                    exercises = bab16Stage4Part1Exercises,
+                    exercisesPart1 = bab16Stage4Part1Exercises,
+                    exercisesPart2 = bab16Stage4Part2Exercises
+                ),
+                Lesson(
+                    id = "u16_l5",
+                    title = "Sintesis Wacana & Partikel",
+                    subtitle = "Kosakata 都, 也, 还, 吧, 呢, 怎么, dan 再见",
+                    grammarNote = "Konjungsi sintesis wacana: 都 (semua), 也 (juga), 还 (masih/juga). Partikel kalimat: 吧 (ajakan/saran santun), 呢 (tanya balik), 怎么 (kenapa/bagaimana).",
+                    newWords = listOf(
+                        Word("w16_15", "都", "dōu", "Semua", "Keterangan", "我们都是大学生。", "Wǒmen dōu shì dàxuéshēng.", "Kami semua adalah mahasiswa."),
+                        Word("w16_16", "也", "yě", "Juga", "Keterangan", "他也喜欢汉语。", "Tā yě xǐhuan Hànyǔ.", "Dia juga suka bahasa Mandarin."),
+                        Word("w16_17", "怎么", "zěnme", "Bagaimana / kenapa", "Kata tanya", "你怎么了？", "Nǐ zěnme le?", "Kamu kenapa?"),
+                        Word("w16_18", "再见", "zàijiàn", "Sampai jumpa", "Ungkapan", "大家再见！", "Dàjiā zàijiàn!", "Sampai jumpa semuanya!")
+                    ),
+                    exercises = bab16Stage5Part1Exercises,
+                    exercisesPart1 = bab16Stage5Part1Exercises,
+                    exercisesPart2 = bab16Stage5Part2Exercises
+                ),
+                Lesson(
+                    id = "u16_l6",
+                    title = "Grand Evaluasi Final New HSK 1",
+                    subtitle = "Sintesis menyeluruh 300 kosakata New HSK 1 dari Bab 1 hingga Bab 16",
+                    grammarNote = "Ujian evaluasi puncak New HSK 1: memadukan seluruh struktur gramatika perkenalan diri, waktu, angka, makanan, transportasi, keluarga, belanja, sekolah, kantor, cuaca, hobi, dan kesehatan.",
+                    newWords = listOf(
+                        Word("w16_1", "生病", "shēngbìng", "Sakit", "Kesehatan", "生病去医院。", "Shēngbìng qù yīyuàn.", "Sakit pergi ke rumah sakit."),
+                        Word("w16_6", "可以", "kěyǐ", "Boleh", "Kata kerja", "可以坐在这儿吗？", "Kěyǐ zuò zài zhèr ma?", "Bolehkah duduk di sini?"),
+                        Word("w16_13", "大家", "dàjiā", "Semua", "Pronomina", "大家学习汉语很高兴。", "Dàjiā xuéxí Hànyǔ hěn gāoxìng.", "Semua belajar Mandarin dengan gembira."),
+                        Word("w16_18", "再见", "zàijiàn", "Sampai jumpa", "Ungkapan", "大家再见！", "Dàjiā zàijiàn!", "Sampai jumpa semuanya!")
+                    ),
+                    exercises = bab16Stage6Part1Exercises,
+                    exercisesPart1 = bab16Stage6Part1Exercises,
+                    exercisesPart2 = bab16Stage6Part2Exercises
+                )
+            )
         )
     )
 }
