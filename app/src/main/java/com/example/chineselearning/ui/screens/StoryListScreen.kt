@@ -128,7 +128,9 @@ fun StoryListScreen(
                 fontSize = 24.sp,
                 fontWeight = FontWeight.ExtraBold,
                 color = DeepNavy,
-                modifier = Modifier.padding(top = 4.dp, bottom = 4.dp)
+                modifier = Modifier
+                    .statusBarsPadding()
+                    .padding(top = 4.dp, bottom = 4.dp)
             )
         }
 
@@ -284,7 +286,7 @@ fun StoryListScreen(
         exit = fadeOut() + scaleOut(),
         modifier = Modifier
             .align(Alignment.BottomEnd)
-            .padding(end = 20.dp, bottom = 100.dp)
+            .padding(end = 20.dp, bottom = 135.dp)
     ) {
         FloatingActionButton(
             onClick = {
