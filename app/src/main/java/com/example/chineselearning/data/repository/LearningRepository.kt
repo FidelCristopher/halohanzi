@@ -4173,6 +4173,119 @@ object LearningRepository {
                     exercisesPart2 = bab13Stage5Part2Exercises
                 )
             )
+        ),
+
+        // BAB 14: Hobi, Hiburan, Seni & Musik (休闲娱乐、艺术与宠物)
+        UnitCourse(
+            id = "unit_14",
+            unitNumber = 14,
+            title = "Hobi & Hiburan",
+            subtitle = "Menonton film, mendengar lagu, bernyanyi, dan hewan peliharaan kucing anjing",
+            bannerTitle = "Hobi, Hiburan, Seni & Musik",
+            emoji = "🎵",
+            level = "Level 14",
+            story = stories[13],
+            nodes = listOf(
+                PathNode("u14_n1", "Minat & Bermain", Color(0xFFFFC107), NodeIconType.CAP, isCompleted = false, lessonId = "u14_l1"),
+                PathNode("u14_n2", "Lagu & Bernyanyi", Color(0xFFFFC107), NodeIconType.DUMBBELL, isCompleted = false, lessonId = "u14_l2"),
+                PathNode("u14_n3", "Televisi & Film", Color(0xFFFFC107), NodeIconType.CAP, isCompleted = false, lessonId = "u14_l3"),
+                PathNode("u14_n4", "Kucing & Anjing", Color(0xFFFFC107), NodeIconType.DUMBBELL, isCompleted = false, lessonId = "u14_l4"),
+                PathNode("u14_n5", "Waktu Luang Bersama", Color(0xFFFFC107), NodeIconType.CAP, isCompleted = false, lessonId = "u14_l5"),
+                PathNode("u14_n6", "Evaluasi Seni & Hewan", Color(0xFFFFC107), NodeIconType.SHUFFLE, isCompleted = false, lessonId = "u14_l6"),
+                PathNode("u14_n7", "Kuis Cerita", Color(0xFFFFC107), NodeIconType.BOOK, isCompleted = false, lessonId = "u14_l1"),
+                PathNode("u14_n8", "Checkpoint Bab", Color(0xFFFFB300), NodeIconType.CHEST, isCompleted = false, lessonId = "u14_l1"),
+                PathNode("u14_n9", "Rest area", Color(0xFF03A9F4), NodeIconType.REST_AREA, isCompleted = false, lessonId = "u14_l1")
+            ),
+            lessons = listOf(
+                Lesson(
+                    id = "u14_l1",
+                    title = "Minat & Bermain",
+                    subtitle = "Kosakata 喜欢, 爱, 想, 玩, dan 好玩儿",
+                    grammarNote = "Verba afektif minat: 喜欢 (suka) dan 爱 (cinta/gemar sekali). Sifat perseptual: 好玩儿 (asyik / menyenangkan).",
+                    newWords = listOf(
+                        Word("w14_1", "喜欢", "xǐhuan", "Suka / gemar", "Kata kerja", "我喜欢学习汉语。", "Wǒ xǐhuan xuéxí Hànyǔ.", "Saya suka belajar bahasa Mandarin."),
+                        Word("w14_2", "爱", "ài", "Cinta / menyayangi", "Kata kerja", "他很爱猫。", "Tā hěn ài māo.", "Dia sangat menyayangi kucing."),
+                        Word("w14_3", "玩", "wán", "Bermain", "Kata kerja", "我们去玩。", "Wǒmen qù wán.", "Kami pergi bermain."),
+                        Word("w14_4", "好玩儿", "hǎowánr", "Menyenangkan / asyik", "Kata sifat", "北京很好玩儿。", "Běijīng hěn hǎowánr.", "Beijing sangat asyik.")
+                    ),
+                    exercises = bab14Stage1Part1Exercises,
+                    exercisesPart1 = bab14Stage1Part1Exercises,
+                    exercisesPart2 = bab14Stage1Part2Exercises
+                ),
+                Lesson(
+                    id = "u14_l2",
+                    title = "Lagu & Bernyanyi",
+                    subtitle = "Kosakata 听, 听见, 歌, 唱, dan 好听",
+                    grammarNote = "Aktivitas musik: 听歌 (mendengarkan lagu) dan 唱歌 (bernyanyi). Sifat suara: 好听 (hǎotīng = enak didengar / merdu). Komplemen hasil: 听见 (mendengar dan terdengar).",
+                    newWords = listOf(
+                        Word("w14_5", "听", "tīng", "Mendengar", "Kata kerja", "我喜欢听歌。", "Wǒ xǐhuan tīng gē.", "Saya suka mendengarkan lagu."),
+                        Word("w14_6", "歌", "gē", "Lagu", "Benda", "这首歌很好听。", "Zhè shǒu gē hěn hǎotīng.", "Lagu ini sangat merdu."),
+                        Word("w14_7", "唱", "chàng", "Menyanyi", "Kata kerja", "她会唱歌。", "Tā huì chànggē.", "Dia bisa bernyanyi."),
+                        Word("w14_8", "好听", "hǎotīng", "Merdu", "Kata sifat", "中国歌很好听。", "Zhōngguó gē hěn hǎotīng.", "Lagu Tiongkok sangat merdu.")
+                    ),
+                    exercises = bab14Stage2Part1Exercises,
+                    exercisesPart1 = bab14Stage2Part1Exercises,
+                    exercisesPart2 = bab14Stage2Part2Exercises
+                ),
+                Lesson(
+                    id = "u14_l3",
+                    title = "Televisi & Bioskop",
+                    subtitle = "Kosakata 看, 看见, 电视, 电影, dan 电影院",
+                    grammarNote = "Media visual: 看电视 (nonton TV) dan 看电影 (nonton film di bioskop 电影院). Sifat visual: 好看 (hǎokàn = bagus ditonton). Komplemen hasil: 看见 (melihat & tampak).",
+                    newWords = listOf(
+                        Word("w14_9", "电视", "diànshì", "Televisi", "Benda", "我在家看电视。", "Wǒ zàijiā kàn diànshì.", "Saya nonton TV di rumah."),
+                        Word("w14_10", "电影", "diànyǐng", "Film", "Benda", "这个电影很好看。", "Zhège diànyǐng hěn hǎokàn.", "Film ini sangat bagus."),
+                        Word("w14_11", "电影院", "diànyǐngyuàn", "Bioskop", "Tempat", "去电影院看电影。", "Qù diànyǐngyuàn kàn diànyǐng.", "Pergi ke bioskop nonton film."),
+                        Word("w14_12", "好看", "hǎokàn", "Bagus ditonton", "Kata sifat", "电影真好看。", "Diànyǐng zhēn hǎokàn.", "Film sungguh bagus.")
+                    ),
+                    exercises = bab14Stage3Part1Exercises,
+                    exercisesPart1 = bab14Stage3Part1Exercises,
+                    exercisesPart2 = bab14Stage3Part2Exercises
+                ),
+                Lesson(
+                    id = "u14_l4",
+                    title = "Kucing & Anjing Peliharaan",
+                    subtitle = "Kosakata 狗, 猫, satuan 只, dan 漂亮",
+                    grammarNote = "Kata penggolong fauna: 只 (zhī). Rumus: 'Angka + 只 + 猫/狗' (一只小狗, 两只猫). Sifat keindahan: 漂亮 (piàoliang = cantik / indah).",
+                    newWords = listOf(
+                        Word("w14_13", "狗", "gǒu", "Anjing", "Hewan", "我有一只小狗。", "Wǒ yǒu yì zhī xiǎogǒu.", "Saya punya seekor anjing kecil."),
+                        Word("w14_14", "猫", "māo", "Kucing", "Hewan", "我家有两只猫。", "Wǒjiā yǒu liǎng zhī māo.", "Keluarga saya ada dua kucing."),
+                        Word("w14_15", "只", "zhī", "Ekor", "Satuan", "一只猫。", "Yì zhī māo.", "Seekor kucing."),
+                        Word("w14_16", "漂亮", "piàoliang", "Cantik", "Kata sifat", "这只猫很漂亮。", "Zhè zhī māo hěn piàoliang.", "Kucing ini sangat cantik.")
+                    ),
+                    exercises = bab14Stage4Part1Exercises,
+                    exercisesPart1 = bab14Stage4Part1Exercises,
+                    exercisesPart2 = bab14Stage4Part2Exercises
+                ),
+                Lesson(
+                    id = "u14_l5",
+                    title = "Waktu Luang Bersama",
+                    subtitle = "Mengajak teman: 一起 (bersama-sama)",
+                    grammarNote = "Pola ajakan aktivitas: '一起 + Kata Kerja + 吧' (我们一起去看电影吧 = Mari kita nonton film bersama).",
+                    newWords = listOf(
+                        Word("w14_10", "电影", "diànyǐng", "Film", "Benda", "去电影院。", "Qù diànyǐngyuàn.", "Pergi ke bioskop."),
+                        Word("w14_7", "唱", "chàng", "Menyanyi", "Kata kerja", "我们一起唱歌。", "Wǒmen yìqǐ chànggē.", "Kami bernyanyi bersama.")
+                    ),
+                    exercises = bab14Stage5Part1Exercises,
+                    exercisesPart1 = bab14Stage5Part1Exercises,
+                    exercisesPart2 = bab14Stage5Part2Exercises
+                ),
+                Lesson(
+                    id = "u14_l6",
+                    title = "Evaluasi Komprehensif Hiburan",
+                    subtitle = "Review seluruh 20 kosakata musik, film, rekreasi & hewan",
+                    grammarNote = "Evaluasi menyeluruh Bab 14: mengungkapkan kesukaan dan afeksi, mengajak teman nonton film atau bernyanyi, serta mengenali hewan peliharaan kucing dan anjing.",
+                    newWords = listOf(
+                        Word("w14_1", "喜欢", "xǐhuan", "Suka", "Kata kerja", "喜欢听音乐。", "Xǐhuan tīng yīnyuè.", "Suka mendengarkan musik."),
+                        Word("w14_10", "电影", "diànyǐng", "Film", "Benda", "电影很好看。", "Diànyǐng hěn hǎokàn.", "Filmnya sangat bagus."),
+                        Word("w14_14", "猫", "māo", "Kucing", "Hewan", "一只漂亮的小猫。", "Yì zhī piàoliang de xiǎomāo.", "Seekor kucing kecil yang cantik."),
+                        Word("w14_8", "好听", "hǎotīng", "Merdu", "Kata sifat", "歌很好听。", "Gē hěn hǎotīng.", "Lagunya sangat merdu.")
+                    ),
+                    exercises = bab14Stage6Part1Exercises,
+                    exercisesPart1 = bab14Stage6Part1Exercises,
+                    exercisesPart2 = bab14Stage6Part2Exercises
+                )
+            )
         )
     )
 }
