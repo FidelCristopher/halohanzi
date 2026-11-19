@@ -9,12 +9,15 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.gestures.detectDragGestures
 import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
+import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.VolumeUp
 import androidx.compose.material.icons.filled.ArrowDropDown
@@ -22,20 +25,31 @@ import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Create
 import androidx.compose.material.icons.filled.DeleteSweep
+import androidx.compose.material.icons.filled.Info
+import androidx.compose.material.icons.filled.KeyboardArrowDown
+import androidx.compose.material.icons.filled.Pause
+import androidx.compose.material.icons.filled.PlayArrow
+import androidx.compose.material.icons.filled.Repeat
 import androidx.compose.material.icons.filled.Search
+import androidx.compose.material.icons.filled.SkipNext
+import androidx.compose.material.icons.filled.SkipPrevious
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.draw.rotate
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Path
 import androidx.compose.ui.graphics.PathEffect
 import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.graphics.StrokeJoin
+import androidx.compose.ui.graphics.asComposePath
 import androidx.compose.ui.graphics.drawscope.Stroke
+import androidx.compose.ui.graphics.drawscope.scale
+import androidx.compose.ui.graphics.drawscope.translate
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
@@ -44,11 +58,16 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.window.Dialog
+import androidx.compose.ui.window.DialogProperties
+import androidx.core.graphics.PathParser
 import com.example.chineselearning.audio.TtsManager
+import com.example.chineselearning.data.repository.HanziStrokeRepository
 import com.example.chineselearning.data.repository.HskVocabularyRepository
 import com.example.chineselearning.data.repository.HskWordItem
 import com.example.chineselearning.ui.components.bouncyClick
 import com.example.chineselearning.ui.theme.*
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.isActive
 
 private val ActivePurple = Color(0xFF6A4CE4)
 private val SoftPurpleBg = Color(0xFFF3EDFF)
@@ -701,7 +720,11 @@ private fun HskWordDetailDialog(
 
 /**
  * HanziWritingPracticeDialog:
- * Dialog interaktif papan tulis kaligrafi (Mi-zi-ge) dengan watermark transparan untuk tracing karakter Hanzi.
+ * Dialog interaktif komprehensif untuk pembelajaran karakter Hanzi:
+ * 1. Urutan Goresan (Stroke Order / 笔顺): Visualisasi langkah goresan step-by-step dalam kartu mini Mi-zi-ge,
+ *    navigasi putar/sebelumnya/berikutnya, info nama goresan, indikator total goresan, dan 7 aturan dasar goresan.
+ * 2. Latihan Tulis (Writing Practice / 写字): Kanvas kaligrafi Mi-zi-ge interaktif untuk latihan tulis bebas dan tracing.
+ * 3. Selector chip multi-karakter untuk kata yang memiliki lebih dari satu huruf Hanzi.
  */
 @Composable
 fun HanziWritingPracticeDialog(
@@ -709,26 +732,77 @@ fun HanziWritingPracticeDialog(
     ttsManager: TtsManager?,
     onDismiss: () -> Unit
 ) {
+    val context = LocalContext.current
+
+    // Ekstraksi karakter Hanzi dari kata
+    val characters = remember(word.hanzi) {
+        val filtered = word.hanzi.filter { it.isLetter() || it.code in 0x4E00..0x9FFF }.toList()
+        if (filtered.isNotEmpty()) filtered else listOf(word.hanzi.firstOrNull() ?: ' ')
+    }
+    var selectedCharIndex by remember { mutableIntStateOf(0) }
+    val selectedChar = characters.getOrElse(selectedCharIndex) { characters.first() }
+
+    // Toggle Tab: 0 = Urutan Goresan, 1 = Latihan Tulis
+    var selectedTab by remember { mutableIntStateOf(0) }
+
+    // State untuk Urutan Goresan
+    val strokeData = remember(selectedChar) { HanziStrokeRepository.getStrokeData(context, selectedChar) }
+    val strokeStrings = remember(strokeData) { strokeData.strokes.map { it.svgPath } }
+    val parsedPaths = remember(strokeStrings) {
+        strokeStrings.mapNotNull { svg ->
+            try {
+                PathParser.createPathFromPathData(svg).asComposePath()
+            } catch (e: Exception) {
+                null
+            }
+        }
+    }
+    val totalStrokes = parsedPaths.size
+    var activeStepIndex by remember(selectedChar) { mutableIntStateOf(0) }
+    var isPlaying by remember(selectedChar) { mutableStateOf(false) }
+    var showRules by remember { mutableStateOf(false) }
+
+    // Otomatisasi Playback (Putar Goresan)
+    LaunchedEffect(isPlaying, totalStrokes) {
+        if (isPlaying && totalStrokes > 0) {
+            while (isActive) {
+                delay(850)
+                if (activeStepIndex < totalStrokes - 1) {
+                    activeStepIndex++
+                } else {
+                    isPlaying = false
+                    break
+                }
+            }
+        }
+    }
+
+    // State untuk Kanvas Latihan Tulis Bebas
     var currentPath by remember { mutableStateOf<Path?>(null) }
     val completedPaths = remember { mutableStateListOf<Path>() }
 
-    Dialog(onDismissRequest = onDismiss) {
+    Dialog(
+        onDismissRequest = onDismiss,
+        properties = DialogProperties(usePlatformDefaultWidth = false)
+    ) {
         Card(
             shape = RoundedCornerShape(26.dp),
             colors = CardDefaults.cardColors(containerColor = Color.White),
             border = BorderStroke(1.5.dp, BorderGray),
             elevation = CardDefaults.cardElevation(defaultElevation = 8.dp),
             modifier = Modifier
-                .fillMaxWidth()
+                .fillMaxWidth(0.94f)
                 .padding(vertical = 12.dp)
         ) {
             Column(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(20.dp),
+                    .heightIn(max = 680.dp)
+                    .verticalScroll(rememberScrollState())
+                    .padding(horizontal = 20.dp, vertical = 18.dp),
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
-                // Header Bar (Pinyin, Audio & Close button)
+                // 1. Header Bar (Pinyin, Speaker Audio & Close button)
                 Row(
                     modifier = Modifier.fillMaxWidth(),
                     verticalAlignment = Alignment.CenterVertically,
@@ -785,9 +859,9 @@ fun HanziWritingPracticeDialog(
                     }
                 }
 
-                Spacer(modifier = Modifier.height(10.dp))
+                Spacer(modifier = Modifier.height(8.dp))
 
-                // Meaning in Indonesian / English
+                // Meaning in Indonesian
                 Column(
                     horizontalAlignment = Alignment.CenterHorizontally,
                     modifier = Modifier.fillMaxWidth()
@@ -812,166 +886,725 @@ fun HanziWritingPracticeDialog(
                     }
                 }
 
-                Spacer(modifier = Modifier.height(16.dp))
+                Spacer(modifier = Modifier.height(14.dp))
 
-                // --- INTERACTIVE WRITING CANVAS (260dp x 260dp) ---
-                Box(
+                // 2. Segmented Control / Toggle Tab ('Urutan Goresan' & 'Latihan Tulis')
+                Surface(
+                    shape = RoundedCornerShape(14.dp),
+                    color = Color(0xFFF1F5F9),
                     modifier = Modifier
-                        .size(260.dp)
-                        .clip(RoundedCornerShape(20.dp))
-                        .background(Color(0xFFFAFBFC))
-                        .border(1.5.dp, PastelYellowBorder, RoundedCornerShape(20.dp)),
-                    contentAlignment = Alignment.Center
+                        .fillMaxWidth()
+                        .height(44.dp)
                 ) {
-                    // 1. Watermark Guideline Character (Low Opacity for Tracing)
-                    Text(
-                        text = word.hanzi,
-                        fontFamily = KaiTiFontFamily,
-                        fontSize = if (word.hanzi.length > 2) 74.sp else 126.sp,
-                        fontWeight = FontWeight.Bold,
-                        color = DeepNavy.copy(alpha = 0.16f),
-                        textAlign = TextAlign.Center
-                    )
-
-                    // 2. Interactive Canvas for Drawing with Calligraphy Grid
-                    Canvas(
+                    Row(
                         modifier = Modifier
                             .fillMaxSize()
-                            .pointerInput(word.hanzi) {
-                                detectDragGestures(
-                                    onDragStart = { offset ->
-                                        val newPath = Path().apply { moveTo(offset.x, offset.y) }
-                                        currentPath = newPath
-                                    },
-                                    onDrag = { change, _ ->
-                                        change.consume()
-                                        currentPath?.lineTo(change.position.x, change.position.y)
-                                    },
-                                    onDragEnd = {
-                                        currentPath?.let { completedPaths.add(it) }
-                                        currentPath = null
-                                    },
-                                    onDragCancel = {
-                                        currentPath = null
-                                    }
+                            .padding(4.dp)
+                    ) {
+                        // Tab 0: Urutan Goresan
+                        Surface(
+                            shape = RoundedCornerShape(11.dp),
+                            color = if (selectedTab == 0) ActivePurple else Color.Transparent,
+                            shadowElevation = if (selectedTab == 0) 2.dp else 0.dp,
+                            modifier = Modifier
+                                .weight(1f)
+                                .fillMaxHeight()
+                                .clickable { selectedTab = 0 }
+                        ) {
+                            Box(contentAlignment = Alignment.Center) {
+                                Text(
+                                    text = "Urutan Goresan",
+                                    fontFamily = NunitoFontFamily,
+                                    fontSize = 13.sp,
+                                    fontWeight = FontWeight.Bold,
+                                    color = if (selectedTab == 0) Color.White else SlateGray
                                 )
                             }
-                    ) {
-                        val w = size.width
-                        val h = size.height
-                        val dashEffect = PathEffect.dashPathEffect(floatArrayOf(10f, 10f), 0f)
-                        val gridColor = Color(0xFFCBD5E1).copy(alpha = 0.45f)
-
-                        // Traditional Mi-zi-ge (米字格) Calligraphy Guidelines
-                        drawLine(
-                            color = gridColor,
-                            start = Offset(0f, h / 2f),
-                            end = Offset(w, h / 2f),
-                            strokeWidth = 1.5f,
-                            pathEffect = dashEffect
-                        )
-                        drawLine(
-                            color = gridColor,
-                            start = Offset(w / 2f, 0f),
-                            end = Offset(w / 2f, h),
-                            strokeWidth = 1.5f,
-                            pathEffect = dashEffect
-                        )
-                        drawLine(
-                            color = gridColor,
-                            start = Offset(0f, 0f),
-                            end = Offset(w, h),
-                            strokeWidth = 1f,
-                            pathEffect = dashEffect
-                        )
-                        drawLine(
-                            color = gridColor,
-                            start = Offset(w, 0f),
-                            end = Offset(0f, h),
-                            strokeWidth = 1f,
-                            pathEffect = dashEffect
-                        )
-
-                        // Draw user's completed strokes
-                        completedPaths.forEach { path ->
-                            drawPath(
-                                path = path,
-                                color = DeepNavy,
-                                style = Stroke(width = 13.dp.toPx(), cap = StrokeCap.Round, join = StrokeJoin.Round)
-                            )
                         }
 
-                        // Draw active current stroke
-                        currentPath?.let { path ->
-                            drawPath(
-                                path = path,
-                                color = DeepNavy,
-                                style = Stroke(width = 13.dp.toPx(), cap = StrokeCap.Round, join = StrokeJoin.Round)
-                            )
+                        // Tab 1: Latihan Tulis
+                        Surface(
+                            shape = RoundedCornerShape(11.dp),
+                            color = if (selectedTab == 1) ActivePurple else Color.Transparent,
+                            shadowElevation = if (selectedTab == 1) 2.dp else 0.dp,
+                            modifier = Modifier
+                                .weight(1f)
+                                .fillMaxHeight()
+                                .clickable { selectedTab = 1 }
+                        ) {
+                            Box(contentAlignment = Alignment.Center) {
+                                Text(
+                                    text = "Latihan Tulis",
+                                    fontFamily = NunitoFontFamily,
+                                    fontSize = 13.sp,
+                                    fontWeight = FontWeight.Bold,
+                                    color = if (selectedTab == 1) Color.White else SlateGray
+                                )
+                            }
                         }
                     }
                 }
 
-                Spacer(modifier = Modifier.height(18.dp))
-
-                // Canvas Controls (Hapus Coretan & Selesai)
-                Row(
-                    modifier = Modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.spacedBy(10.dp)
-                ) {
-                    // Button 1: Hapus Coretan (Pastel Pink)
-                    Surface(
-                        shape = RoundedCornerShape(14.dp),
-                        color = PastelPink,
-                        border = BorderStroke(1.dp, PastelPinkBorder),
-                        modifier = Modifier
-                            .weight(1f)
-                            .clickable {
-                                completedPaths.clear()
-                                currentPath = null
-                            }
+                // 3. Multi-character selector chips (jika kata memiliki >1 karakter)
+                if (characters.size > 1) {
+                    Spacer(modifier = Modifier.height(12.dp))
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        verticalAlignment = Alignment.CenterVertically,
+                        horizontalArrangement = Arrangement.Center
                     ) {
-                        Row(
-                            modifier = Modifier.padding(vertical = 12.dp),
-                            verticalAlignment = Alignment.CenterVertically,
-                            horizontalArrangement = Arrangement.Center
+                        Text(
+                            text = "Karakter:",
+                            fontFamily = NunitoFontFamily,
+                            fontSize = 12.5.sp,
+                            fontWeight = FontWeight.Bold,
+                            color = SlateGray
+                        )
+                        Spacer(modifier = Modifier.width(8.dp))
+                        characters.forEachIndexed { idx, ch ->
+                            val isSelected = (idx == selectedCharIndex)
+                            Surface(
+                                shape = RoundedCornerShape(10.dp),
+                                color = if (isSelected) ActivePurple else Color(0xFFF1F5F9),
+                                border = BorderStroke(1.dp, if (isSelected) ActivePurple else BorderGray),
+                                shadowElevation = if (isSelected) 2.dp else 0.dp,
+                                modifier = Modifier.clickable {
+                                    selectedCharIndex = idx
+                                    activeStepIndex = 0
+                                    isPlaying = false
+                                    completedPaths.clear()
+                                }
+                            ) {
+                                Text(
+                                    text = "$ch (${idx + 1})",
+                                    fontFamily = KaiTiFontFamily,
+                                    fontSize = 15.sp,
+                                    fontWeight = FontWeight.Bold,
+                                    color = if (isSelected) Color.White else DeepNavy,
+                                    modifier = Modifier.padding(horizontal = 12.dp, vertical = 6.dp)
+                                )
+                            }
+                            if (idx < characters.size - 1) {
+                                Spacer(modifier = Modifier.width(6.dp))
+                            }
+                        }
+                    }
+                }
+
+                Spacer(modifier = Modifier.height(14.dp))
+
+                // --- CONTENT CONTAINER BERDASARKAN TAB AKTIF ---
+                if (selectedTab == 0) {
+                    // ==========================================
+                    // TAB 0: URUTAN GORESAN (STROKE ORDER / 笔顺)
+                    // ==========================================
+
+                    // Total Goresan & Info Nama Goresan Aktif
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.SpaceBetween,
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        Surface(
+                            shape = RoundedCornerShape(8.dp),
+                            color = SoftPurpleBg,
+                            border = BorderStroke(1.dp, ActivePurple.copy(alpha = 0.25f))
                         ) {
-                            Icon(
-                                imageVector = Icons.Default.DeleteSweep,
-                                contentDescription = null,
-                                tint = PastelPinkText,
-                                modifier = Modifier.size(18.dp)
-                            )
-                            Spacer(modifier = Modifier.width(6.dp))
                             Text(
-                                text = "Hapus Coretan",
+                                text = if (totalStrokes > 0) "Goresan ${activeStepIndex + 1} dari $totalStrokes" else "Karakter: $selectedChar",
                                 fontFamily = NunitoFontFamily,
-                                fontSize = 13.sp,
+                                fontSize = 12.5.sp,
                                 fontWeight = FontWeight.Bold,
-                                color = PastelPinkText
+                                color = ActivePurple,
+                                modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp)
+                            )
+                        }
+
+                        val currentStrokeInfo = strokeData.strokes.getOrNull(activeStepIndex)
+                        if (currentStrokeInfo != null) {
+                            Surface(
+                                shape = RoundedCornerShape(8.dp),
+                                color = Color(0xFFFEF2F2),
+                                border = BorderStroke(1.dp, Color(0xFFFECACA))
+                            ) {
+                                Row(
+                                    modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp),
+                                    verticalAlignment = Alignment.CenterVertically
+                                ) {
+                                    Box(
+                                        modifier = Modifier
+                                            .size(8.dp)
+                                            .background(Color(0xFFE53935), CircleShape)
+                                    )
+                                    Spacer(modifier = Modifier.width(6.dp))
+                                    Text(
+                                        text = "${currentStrokeInfo.name}: ${currentStrokeInfo.description}",
+                                        fontFamily = NunitoFontFamily,
+                                        fontSize = 11.5.sp,
+                                        fontWeight = FontWeight.Bold,
+                                        color = Color(0xFF991B1B)
+                                    )
+                                }
+                            }
+                        }
+                    }
+
+                    Spacer(modifier = Modifier.height(8.dp))
+
+                    // Progress Bar Indikator Goresan
+                    Box(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .height(4.dp)
+                            .clip(RoundedCornerShape(2.dp))
+                            .background(Color(0xFFE2E8F0))
+                    ) {
+                        val progressFraction = if (totalStrokes > 0) (activeStepIndex + 1).toFloat() / totalStrokes.toFloat() else 1f
+                        Box(
+                            modifier = Modifier
+                                .fillMaxWidth(fraction = progressFraction.coerceIn(0f, 1f))
+                                .fillMaxHeight()
+                                .clip(RoundedCornerShape(2.dp))
+                                .background(ActivePurple)
+                        )
+                    }
+
+                    Spacer(modifier = Modifier.height(14.dp))
+
+                    // Kanvas Utama Mi-zi-ge Karakter Aktif (200dp x 200dp)
+                    Box(
+                        modifier = Modifier
+                            .size(200.dp)
+                            .clip(RoundedCornerShape(18.dp))
+                            .background(Color(0xFFFAFBFC))
+                            .border(1.5.dp, PastelYellowBorder, RoundedCornerShape(18.dp)),
+                        contentAlignment = Alignment.Center
+                    ) {
+                        Canvas(modifier = Modifier.fillMaxSize().padding(10.dp)) {
+                            val w = size.width
+                            val h = size.height
+                            val dashEffect = PathEffect.dashPathEffect(floatArrayOf(8f, 8f), 0f)
+                            val gridColor = Color(0xFFCBD5E1).copy(alpha = 0.5f)
+
+                            // Traditional Mi-zi-ge Calligraphy Grid (米字格)
+                            drawLine(gridColor, Offset(0f, h / 2f), Offset(w, h / 2f), strokeWidth = 1.2f, pathEffect = dashEffect)
+                            drawLine(gridColor, Offset(w / 2f, 0f), Offset(w / 2f, h), strokeWidth = 1.2f, pathEffect = dashEffect)
+                            drawLine(gridColor, Offset(0f, 0f), Offset(w, h), strokeWidth = 1f, pathEffect = dashEffect)
+                            drawLine(gridColor, Offset(w, 0f), Offset(0f, h), strokeWidth = 1f, pathEffect = dashEffect)
+
+                            if (parsedPaths.isNotEmpty()) {
+                                val scaleX = w / 1024f
+                                val scaleY = -h / 1024f
+                                scale(scaleX = scaleX, scaleY = scaleY, pivot = Offset.Zero) {
+                                    translate(left = 0f, top = -900f) {
+                                        // 1. Future watermark strokes (faint light gray)
+                                        for (i in (activeStepIndex + 1) until parsedPaths.size) {
+                                            drawPath(parsedPaths[i], color = Color(0xFFE2E8F0))
+                                        }
+                                        // 2. Past completed strokes (deep navy)
+                                        for (i in 0 until activeStepIndex) {
+                                            drawPath(parsedPaths[i], color = DeepNavy)
+                                        }
+                                        // 3. Current active stroke (highlighted in vermilion red)
+                                        if (activeStepIndex in parsedPaths.indices) {
+                                            drawPath(parsedPaths[activeStepIndex], color = Color(0xFFE53935))
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        // Fallback jika tidak ada data SVG path
+                        if (parsedPaths.isEmpty()) {
+                            Text(
+                                text = selectedChar.toString(),
+                                fontFamily = KaiTiFontFamily,
+                                fontSize = 110.sp,
+                                fontWeight = FontWeight.Normal,
+                                color = DeepNavy,
+                                textAlign = TextAlign.Center
                             )
                         }
                     }
 
-                    // Button 2: Selesai (Active Purple)
+                    Spacer(modifier = Modifier.height(14.dp))
+
+                    // Tombol Navigasi Langkah Goresan (Sebelumnya / Putar / Berikutnya)
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.spacedBy(8.dp),
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        // Tombol Sebelumnya
+                        Surface(
+                            shape = RoundedCornerShape(12.dp),
+                            color = if (activeStepIndex > 0) Color(0xFFF1F5F9) else Color(0xFFF8FAFC),
+                            border = BorderStroke(1.dp, if (activeStepIndex > 0) BorderGray else Color(0xFFF1F5F9)),
+                            modifier = Modifier
+                                .weight(1f)
+                                .clickable(enabled = activeStepIndex > 0) {
+                                    isPlaying = false
+                                    activeStepIndex--
+                                }
+                        ) {
+                            Row(
+                                modifier = Modifier.padding(vertical = 10.dp),
+                                horizontalArrangement = Arrangement.Center,
+                                verticalAlignment = Alignment.CenterVertically
+                            ) {
+                                Icon(
+                                    imageVector = Icons.Default.SkipPrevious,
+                                    contentDescription = null,
+                                    tint = if (activeStepIndex > 0) DeepNavy else Color(0xFFCBD5E1),
+                                    modifier = Modifier.size(18.dp)
+                                )
+                                Spacer(modifier = Modifier.width(4.dp))
+                                Text(
+                                    text = "Sebelumnya",
+                                    fontFamily = NunitoFontFamily,
+                                    fontSize = 12.sp,
+                                    fontWeight = FontWeight.Bold,
+                                    color = if (activeStepIndex > 0) DeepNavy else Color(0xFFCBD5E1)
+                                )
+                            }
+                        }
+
+                        // Tombol Putar / Jeda / Ulangi
+                        Surface(
+                            shape = RoundedCornerShape(12.dp),
+                            color = ActivePurple,
+                            shadowElevation = 2.dp,
+                            modifier = Modifier
+                                .weight(1.1f)
+                                .clickable {
+                                    if (isPlaying) {
+                                        isPlaying = false
+                                    } else {
+                                        if (activeStepIndex >= totalStrokes - 1) {
+                                            activeStepIndex = 0
+                                        }
+                                        isPlaying = true
+                                    }
+                                }
+                        ) {
+                            Row(
+                                modifier = Modifier.padding(vertical = 10.dp),
+                                horizontalArrangement = Arrangement.Center,
+                                verticalAlignment = Alignment.CenterVertically
+                            ) {
+                                val playIcon = when {
+                                    isPlaying -> Icons.Default.Pause
+                                    activeStepIndex >= totalStrokes - 1 -> Icons.Default.Repeat
+                                    else -> Icons.Default.PlayArrow
+                                }
+                                val playText = when {
+                                    isPlaying -> "Jeda"
+                                    activeStepIndex >= totalStrokes - 1 -> "Ulangi"
+                                    else -> "Putar"
+                                }
+                                Icon(
+                                    imageVector = playIcon,
+                                    contentDescription = null,
+                                    tint = Color.White,
+                                    modifier = Modifier.size(18.dp)
+                                )
+                                Spacer(modifier = Modifier.width(4.dp))
+                                Text(
+                                    text = playText,
+                                    fontFamily = NunitoFontFamily,
+                                    fontSize = 12.sp,
+                                    fontWeight = FontWeight.Bold,
+                                    color = Color.White
+                                )
+                            }
+                        }
+
+                        // Tombol Berikutnya
+                        Surface(
+                            shape = RoundedCornerShape(12.dp),
+                            color = if (activeStepIndex < totalStrokes - 1) Color(0xFFF1F5F9) else Color(0xFFF8FAFC),
+                            border = BorderStroke(1.dp, if (activeStepIndex < totalStrokes - 1) BorderGray else Color(0xFFF1F5F9)),
+                            modifier = Modifier
+                                .weight(1f)
+                                .clickable(enabled = activeStepIndex < totalStrokes - 1) {
+                                    isPlaying = false
+                                    activeStepIndex++
+                                }
+                        ) {
+                            Row(
+                                modifier = Modifier.padding(vertical = 10.dp),
+                                horizontalArrangement = Arrangement.Center,
+                                verticalAlignment = Alignment.CenterVertically
+                            ) {
+                                Text(
+                                    text = "Berikutnya",
+                                    fontFamily = NunitoFontFamily,
+                                    fontSize = 12.sp,
+                                    fontWeight = FontWeight.Bold,
+                                    color = if (activeStepIndex < totalStrokes - 1) DeepNavy else Color(0xFFCBD5E1)
+                                )
+                                Spacer(modifier = Modifier.width(4.dp))
+                                Icon(
+                                    imageVector = Icons.Default.SkipNext,
+                                    contentDescription = null,
+                                    tint = if (activeStepIndex < totalStrokes - 1) DeepNavy else Color(0xFFCBD5E1),
+                                    modifier = Modifier.size(18.dp)
+                                )
+                            }
+                        }
+                    }
+
+                    Spacer(modifier = Modifier.height(14.dp))
+
+                    // Urutan Langkah Goresan Step-by-Step dalam Kartu Mini Mi-zi-ge (Langkah 1..N)
+                    if (parsedPaths.isNotEmpty()) {
+                        Column(modifier = Modifier.fillMaxWidth()) {
+                            Text(
+                                text = "Langkah Demi Langkah:",
+                                fontFamily = NunitoFontFamily,
+                                fontSize = 12.5.sp,
+                                fontWeight = FontWeight.Bold,
+                                color = DeepNavy
+                            )
+                            Spacer(modifier = Modifier.height(8.dp))
+                            LazyRow(
+                                modifier = Modifier.fillMaxWidth(),
+                                horizontalArrangement = Arrangement.spacedBy(8.dp),
+                                contentPadding = PaddingValues(horizontal = 2.dp, vertical = 2.dp)
+                            ) {
+                                itemsIndexed(parsedPaths) { stepIdx, _ ->
+                                    val isStepActive = (stepIdx == activeStepIndex)
+                                    Column(
+                                        horizontalAlignment = Alignment.CenterHorizontally,
+                                        modifier = Modifier.clickable {
+                                            isPlaying = false
+                                            activeStepIndex = stepIdx
+                                        }
+                                    ) {
+                                        Surface(
+                                            shape = RoundedCornerShape(10.dp),
+                                            color = if (isStepActive) SoftPurpleBg else Color(0xFFFAFBFC),
+                                            border = BorderStroke(
+                                                width = if (isStepActive) 2.dp else 1.dp,
+                                                color = if (isStepActive) ActivePurple else Color(0xFFE2E8F0)
+                                            ),
+                                            shadowElevation = if (isStepActive) 2.dp else 0.dp,
+                                            modifier = Modifier.size(56.dp)
+                                        ) {
+                                            Canvas(modifier = Modifier.fillMaxSize().padding(4.dp)) {
+                                                val w = size.width
+                                                val h = size.height
+                                                val dash = PathEffect.dashPathEffect(floatArrayOf(4f, 4f), 0f)
+                                                val gridCol = Color(0xFFCBD5E1).copy(alpha = 0.5f)
+
+                                                drawLine(gridCol, Offset(0f, h / 2f), Offset(w, h / 2f), strokeWidth = 0.8f, pathEffect = dash)
+                                                drawLine(gridCol, Offset(w / 2f, 0f), Offset(w / 2f, h), strokeWidth = 0.8f, pathEffect = dash)
+                                                drawLine(gridCol, Offset(0f, 0f), Offset(w, h), strokeWidth = 0.6f, pathEffect = dash)
+                                                drawLine(gridCol, Offset(w, 0f), Offset(0f, h), strokeWidth = 0.6f, pathEffect = dash)
+
+                                                val sx = w / 1024f
+                                                val sy = -h / 1024f
+                                                scale(scaleX = sx, scaleY = sy, pivot = Offset.Zero) {
+                                                    translate(left = 0f, top = -900f) {
+                                                        // Completed strokes up to stepIdx - 1
+                                                        for (p in 0 until stepIdx) {
+                                                            drawPath(parsedPaths[p], color = DeepNavy)
+                                                        }
+                                                        // The new stroke added at this step
+                                                        drawPath(parsedPaths[stepIdx], color = Color(0xFFE53935))
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        Spacer(modifier = Modifier.height(4.dp))
+                                        Text(
+                                            text = "Langkah ${stepIdx + 1}",
+                                            fontFamily = NunitoFontFamily,
+                                            fontSize = 10.5.sp,
+                                            fontWeight = if (isStepActive) FontWeight.Bold else FontWeight.Medium,
+                                            color = if (isStepActive) ActivePurple else SlateGray
+                                        )
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    Spacer(modifier = Modifier.height(16.dp))
+
+                    // 7 Aturan Dasar Goresan (Expandable Card)
                     Surface(
                         shape = RoundedCornerShape(14.dp),
-                        color = ActivePurple,
+                        color = Color(0xFFF8FAFC),
+                        border = BorderStroke(1.dp, Color(0xFFE2E8F0)),
                         modifier = Modifier
-                            .weight(1f)
-                            .clickable { onDismiss() }
+                            .fillMaxWidth()
+                            .clickable { showRules = !showRules }
                     ) {
-                        Box(
-                            modifier = Modifier.padding(vertical = 12.dp),
-                            contentAlignment = Alignment.Center
+                        Column(modifier = Modifier.padding(12.dp)) {
+                            Row(
+                                modifier = Modifier.fillMaxWidth(),
+                                verticalAlignment = Alignment.CenterVertically,
+                                horizontalArrangement = Arrangement.SpaceBetween
+                            ) {
+                                Row(verticalAlignment = Alignment.CenterVertically) {
+                                    Surface(
+                                        shape = CircleShape,
+                                        color = SoftPurpleBg,
+                                        modifier = Modifier.size(24.dp)
+                                    ) {
+                                        Box(contentAlignment = Alignment.Center) {
+                                            Icon(
+                                                imageVector = Icons.Default.Info,
+                                                contentDescription = null,
+                                                tint = ActivePurple,
+                                                modifier = Modifier.size(14.dp)
+                                            )
+                                        }
+                                    }
+                                    Spacer(modifier = Modifier.width(8.dp))
+                                    Text(
+                                        text = "Aturan Dasar Goresan (笔顺规则)",
+                                        fontFamily = NunitoFontFamily,
+                                        fontSize = 13.sp,
+                                        fontWeight = FontWeight.Bold,
+                                        color = DeepNavy
+                                    )
+                                }
+                                Icon(
+                                    imageVector = Icons.Default.KeyboardArrowDown,
+                                    contentDescription = null,
+                                    tint = SlateGray,
+                                    modifier = Modifier
+                                        .size(20.dp)
+                                        .rotate(if (showRules) 180f else 0f)
+                                )
+                            }
+
+                            if (showRules) {
+                                Spacer(modifier = Modifier.height(10.dp))
+                                Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                                    HanziStrokeRepository.basicStrokeRules.forEachIndexed { rIdx, rule ->
+                                        Surface(
+                                            shape = RoundedCornerShape(10.dp),
+                                            color = Color.White,
+                                            border = BorderStroke(1.dp, Color(0xFFE2E8F0)),
+                                            modifier = Modifier.fillMaxWidth()
+                                        ) {
+                                            Column(modifier = Modifier.padding(10.dp)) {
+                                                Row(
+                                                    modifier = Modifier.fillMaxWidth(),
+                                                    horizontalArrangement = Arrangement.SpaceBetween,
+                                                    verticalAlignment = Alignment.CenterVertically
+                                                ) {
+                                                    Text(
+                                                        text = "${rIdx + 1}. ${rule.title}",
+                                                        fontFamily = NunitoFontFamily,
+                                                        fontSize = 12.5.sp,
+                                                        fontWeight = FontWeight.Bold,
+                                                        color = DeepNavy
+                                                    )
+                                                    Text(
+                                                        text = "${rule.hanziRule} (${rule.pinyinRule})",
+                                                        fontFamily = KaiTiFontFamily,
+                                                        fontSize = 12.sp,
+                                                        color = ActivePurple
+                                                    )
+                                                }
+                                                Spacer(modifier = Modifier.height(3.dp))
+                                                Text(
+                                                    text = rule.description,
+                                                    fontFamily = NunitoFontFamily,
+                                                    fontSize = 11.5.sp,
+                                                    color = SlateGray
+                                                )
+                                                Spacer(modifier = Modifier.height(4.dp))
+                                                Surface(
+                                                    shape = RoundedCornerShape(6.dp),
+                                                    color = Color(0xFFF1F5F9),
+                                                    modifier = Modifier.fillMaxWidth()
+                                                ) {
+                                                    Text(
+                                                        text = "Contoh: ${rule.exampleHanzi} (${rule.examplePinyin} - ${rule.exampleMeaning})",
+                                                        fontFamily = NunitoFontFamily,
+                                                        fontSize = 11.sp,
+                                                        fontWeight = FontWeight.SemiBold,
+                                                        color = DeepNavy,
+                                                        modifier = Modifier.padding(horizontal = 8.dp, vertical = 3.dp)
+                                                    )
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                } else {
+                    // ==========================================
+                    // TAB 1: LATIHAN TULIS (WRITING CANVAS / 写字)
+                    // ==========================================
+
+                    // Kanvas Latihan Tulis Bebas Interaktif (240dp x 240dp)
+                    Box(
+                        modifier = Modifier
+                            .size(240.dp)
+                            .clip(RoundedCornerShape(20.dp))
+                            .background(Color(0xFFFAFBFC))
+                            .border(1.5.dp, PastelYellowBorder, RoundedCornerShape(20.dp)),
+                        contentAlignment = Alignment.Center
+                    ) {
+                        // 1. Watermark Guideline Character (Low Opacity for Tracing)
+                        Text(
+                            text = selectedChar.toString(),
+                            fontFamily = KaiTiFontFamily,
+                            fontSize = 130.sp,
+                            fontWeight = FontWeight.Bold,
+                            color = DeepNavy.copy(alpha = 0.16f),
+                            textAlign = TextAlign.Center
+                        )
+
+                        // 2. Interactive Canvas for Drawing with Calligraphy Grid
+                        Canvas(
+                            modifier = Modifier
+                                .fillMaxSize()
+                                .pointerInput(selectedChar) {
+                                    detectDragGestures(
+                                        onDragStart = { offset ->
+                                            val newPath = Path().apply { moveTo(offset.x, offset.y) }
+                                            currentPath = newPath
+                                        },
+                                        onDrag = { change, _ ->
+                                            change.consume()
+                                            currentPath?.lineTo(change.position.x, change.position.y)
+                                        },
+                                        onDragEnd = {
+                                            currentPath?.let { completedPaths.add(it) }
+                                            currentPath = null
+                                        },
+                                        onDragCancel = {
+                                            currentPath = null
+                                        }
+                                    )
+                                }
                         ) {
-                            Text(
-                                text = "Selesai",
-                                fontFamily = NunitoFontFamily,
-                                fontSize = 13.sp,
-                                fontWeight = FontWeight.Bold,
-                                color = Color.White
+                            val w = size.width
+                            val h = size.height
+                            val dashEffect = PathEffect.dashPathEffect(floatArrayOf(10f, 10f), 0f)
+                            val gridColor = Color(0xFFCBD5E1).copy(alpha = 0.45f)
+
+                            // Traditional Mi-zi-ge (米字格) Calligraphy Guidelines
+                            drawLine(
+                                color = gridColor,
+                                start = Offset(0f, h / 2f),
+                                end = Offset(w, h / 2f),
+                                strokeWidth = 1.5f,
+                                pathEffect = dashEffect
                             )
+                            drawLine(
+                                color = gridColor,
+                                start = Offset(w / 2f, 0f),
+                                end = Offset(w / 2f, h),
+                                strokeWidth = 1.5f,
+                                pathEffect = dashEffect
+                            )
+                            drawLine(
+                                color = gridColor,
+                                start = Offset(0f, 0f),
+                                end = Offset(w, h),
+                                strokeWidth = 1f,
+                                pathEffect = dashEffect
+                            )
+                            drawLine(
+                                color = gridColor,
+                                start = Offset(w, 0f),
+                                end = Offset(0f, h),
+                                strokeWidth = 1f,
+                                pathEffect = dashEffect
+                            )
+
+                            // Draw user's completed strokes
+                            completedPaths.forEach { path ->
+                                drawPath(
+                                    path = path,
+                                    color = DeepNavy,
+                                    style = Stroke(width = 13.dp.toPx(), cap = StrokeCap.Round, join = StrokeJoin.Round)
+                                )
+                            }
+
+                            // Draw active current stroke
+                            currentPath?.let { path ->
+                                drawPath(
+                                    path = path,
+                                    color = DeepNavy,
+                                    style = Stroke(width = 13.dp.toPx(), cap = StrokeCap.Round, join = StrokeJoin.Round)
+                                )
+                            }
+                        }
+                    }
+
+                    Spacer(modifier = Modifier.height(18.dp))
+
+                    // Canvas Controls (Hapus Coretan & Selesai)
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.spacedBy(10.dp)
+                    ) {
+                        // Button 1: Hapus Coretan (Pastel Pink)
+                        Surface(
+                            shape = RoundedCornerShape(14.dp),
+                            color = PastelPink,
+                            border = BorderStroke(1.dp, PastelPinkBorder),
+                            modifier = Modifier
+                                .weight(1f)
+                                .clickable {
+                                    completedPaths.clear()
+                                    currentPath = null
+                                }
+                        ) {
+                            Row(
+                                modifier = Modifier.padding(vertical = 12.dp),
+                                verticalAlignment = Alignment.CenterVertically,
+                                horizontalArrangement = Arrangement.Center
+                            ) {
+                                Icon(
+                                    imageVector = Icons.Default.DeleteSweep,
+                                    contentDescription = null,
+                                    tint = PastelPinkText,
+                                    modifier = Modifier.size(18.dp)
+                                )
+                                Spacer(modifier = Modifier.width(6.dp))
+                                Text(
+                                    text = "Hapus Coretan",
+                                    fontFamily = NunitoFontFamily,
+                                    fontSize = 13.sp,
+                                    fontWeight = FontWeight.Bold,
+                                    color = PastelPinkText
+                                )
+                            }
+                        }
+
+                        // Button 2: Selesai (Active Purple)
+                        Surface(
+                            shape = RoundedCornerShape(14.dp),
+                            color = ActivePurple,
+                            modifier = Modifier
+                                .weight(1f)
+                                .clickable { onDismiss() }
+                        ) {
+                            Box(
+                                modifier = Modifier.padding(vertical = 12.dp),
+                                contentAlignment = Alignment.Center
+                            ) {
+                                Text(
+                                    text = "Selesai",
+                                    fontFamily = NunitoFontFamily,
+                                    fontSize = 13.sp,
+                                    fontWeight = FontWeight.Bold,
+                                    color = Color.White
+                                )
+                            }
                         }
                     }
                 }
