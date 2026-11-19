@@ -3678,6 +3678,105 @@ object LearningRepository {
                     exercisesPart2 = bab8Stage6Part2Exercises
                 )
             )
+        ),
+
+        // BAB 9: Posisi, Arah & Menemukan Tempat (空间方位与位置指引)
+        UnitCourse(
+            id = "unit_9",
+            unitNumber = 9,
+            title = "Posisi & Lokasi",
+            subtitle = "Petunjuk arah, lokasi barang, depan belakang, dan di mana",
+            bannerTitle = "Posisi, Arah & Menemukan Tempat",
+            emoji = "📍",
+            level = "Level 9",
+            story = stories[8],
+            nodes = listOf(
+                PathNode("u9_n1", "Atas, Bawah, Dalam", Color(0xFFFFC107), NodeIconType.CAP, isCompleted = false, lessonId = "u9_l1"),
+                PathNode("u9_n2", "Depan & Belakang", Color(0xFFFFC107), NodeIconType.DUMBBELL, isCompleted = false, lessonId = "u9_l2"),
+                PathNode("u9_n3", "Di Sini & Di Sana", Color(0xFFFFC107), NodeIconType.CAP, isCompleted = false, lessonId = "u9_l3"),
+                PathNode("u9_n4", "Pilihan & Sampai", Color(0xFFFFC107), NodeIconType.DUMBBELL, isCompleted = false, lessonId = "u9_l4"),
+                PathNode("u9_n5", "Evaluasi Posisi", Color(0xFFFFC107), NodeIconType.SHUFFLE, isCompleted = false, lessonId = "u9_l5"),
+                PathNode("u9_n6", "Kuis Cerita", Color(0xFFFFC107), NodeIconType.BOOK, isCompleted = false, lessonId = "u9_l1"),
+                PathNode("u9_n7", "Checkpoint Bab", Color(0xFFFFB300), NodeIconType.CHEST, isCompleted = false, lessonId = "u9_l1"),
+                PathNode("u9_n8", "Rest area", Color(0xFF03A9F4), NodeIconType.REST_AREA, isCompleted = false, lessonId = "u9_l1")
+            ),
+            lessons = listOf(
+                Lesson(
+                    id = "u9_l1",
+                    title = "Atas, Bawah, Dalam & Luar",
+                    subtitle = "Kata posisi 上, 下, 里, dan 外边",
+                    grammarNote = "Struktur letak keberadaan: 'Benda A + 在 + Benda B + Posisi'. Contoh: 书在桌子上 (Buku di atas meja), 猫在椅子下 (Kucing di bawah kursi), 他在外边 (Dia di luar).",
+                    newWords = listOf(
+                        Word("w9_1", "上", "shàng", "Atas", "Arah", "书在桌子上。", "Shū zài zhuōzi shang.", "Buku ada di atas meja."),
+                        Word("w9_2", "下", "xià", "Bawah", "Arah", "猫在椅子下。", "Māo zài yǐzi xia.", "Kucing ada di bawah kursi."),
+                        Word("w9_3", "里", "lǐ", "Dalam", "Arah", "他在房间里。", "Tā zài fángjiān lǐ.", "Dia ada di dalam kamar."),
+                        Word("w9_4", "外边", "wàibian", "Luar", "Arah", "孩子在外边。", "Háizi zài wàibian.", "Anak ada di luar.")
+                    ),
+                    exercises = bab9Stage1Part1Exercises,
+                    exercisesPart1 = bab9Stage1Part1Exercises,
+                    exercisesPart2 = bab9Stage1Part2Exercises
+                ),
+                Lesson(
+                    id = "u9_l2",
+                    title = "Depan & Belakang",
+                    subtitle = "Arah 前面 dan 后面",
+                    grammarNote = "Posisi relatif: 前面 (depan) dan 后面 (belakang). Rumus: 'Subjek + 在 + Objek + 前面/后面'. Contoh: 他在我前面 (Dia di depan saya), 学校在商店后面 (Sekolah di belakang toko).",
+                    newWords = listOf(
+                        Word("w9_5", "前", "qián", "Depan", "Arah", "向前看。", "Xiàng qián kàn.", "Melihat ke depan."),
+                        Word("w9_6", "前面", "qiánmiàn", "Di depan", "Arah", "火车站就在前面。", "Huǒchēzhàn jiù zài qiánmiàn.", "Stasiun kereta tepat di depan."),
+                        Word("w9_7", "后", "hòu", "Belakang", "Arah", "向后走。", "Xiàng hòu zǒu.", "Berjalan ke belakang."),
+                        Word("w9_8", "后面", "hòumiàn", "Di belakang", "Arah", "车在后面。", "Chē zài hòumiàn.", "Mobil ada di belakang.")
+                    ),
+                    exercises = bab9Stage2Part1Exercises,
+                    exercisesPart1 = bab9Stage2Part1Exercises,
+                    exercisesPart2 = bab9Stage2Part2Exercises
+                ),
+                Lesson(
+                    id = "u9_l3",
+                    title = "Di Sini, Di Sana & Di Mana",
+                    subtitle = "Triad penunjuk tempat 这儿, 那儿, dan 哪儿",
+                    grammarNote = "Triad demonstratif tempat: 这儿 / 这里 (di sini - dekat pembicara), 那儿 / 那里 (di sana - jauh dari pembicara), 哪儿 / 哪里 (di mana? - kata tanya lokasi).",
+                    newWords = listOf(
+                        Word("w9_9", "这儿", "zhèr", "Di sini", "Lokasi", "我在这儿。", "Wǒ zài zhèr.", "Saya ada di sini."),
+                        Word("w9_10", "这里", "zhèlǐ", "Di sini", "Lokasi", "请坐在这里。", "Qǐng zuò zài zhèlǐ.", "Silakan duduk di sini."),
+                        Word("w9_11", "那儿", "nàr", "Di sana", "Lokasi", "他在那儿。", "Tā zài nàr.", "Dia ada di sana."),
+                        Word("w9_12", "哪儿", "nǎr", "Di mana", "Kata tanya", "你在哪儿？", "Nǐ zài nǎr?", "Kamu ada di mana?")
+                    ),
+                    exercises = bab9Stage3Part1Exercises,
+                    exercisesPart1 = bab9Stage3Part1Exercises,
+                    exercisesPart2 = bab9Stage3Part2Exercises
+                ),
+                Lesson(
+                    id = "u9_l4",
+                    title = "Pilihan Benda & Sampai",
+                    subtitle = "Kosakata 这个, 那个, 哪个, dan 到 (tiba)",
+                    grammarNote = "Menentukan pilihan: 这个 (yang ini), 那个 (yang itu), 哪个 (yang mana?). Kata kerja pergerakan: 到 + Lokasi + 了 (到了 = sudah sampai, 到家 = sampai rumah).",
+                    newWords = listOf(
+                        Word("w9_13", "这个", "zhège", "Yang ini", "Pilihan", "我要这个。", "Wǒ yào zhège.", "Saya ingin yang ini."),
+                        Word("w9_14", "那个", "nàge", "Yang itu", "Pilihan", "那个杯子是我的。", "Nàge bēizi shì wǒ de.", "Gelas yang itu milik saya."),
+                        Word("w9_15", "哪个", "nǎge", "Yang mana", "Kata tanya", "你要哪个？", "Nǐ yào nǎge?", "Kamu ingin yang mana?"),
+                        Word("w9_16", "到", "dào", "Tiba / sampai", "Kata kerja", "我到家了。", "Wǒ dào jiā le.", "Saya sudah sampai rumah.")
+                    ),
+                    exercises = bab9Stage4Part1Exercises,
+                    exercisesPart1 = bab9Stage4Part1Exercises,
+                    exercisesPart2 = bab9Stage4Part2Exercises
+                ),
+                Lesson(
+                    id = "u9_l5",
+                    title = "Evaluasi Komprehensif Posisi",
+                    subtitle = "Review 21 kosakata posisi, arah & lokasi",
+                    grammarNote = "Evaluasi terpadu Bab 9: mendeskripsikan posisi benda (atas/bawah/dalam/luar/depan/belakang), menanyakan dan menunjuk lokasi (di sini/di sana/di mana), dan menentukan pilihan benda.",
+                    newWords = listOf(
+                        Word("w9_1", "上", "shàng", "Atas", "Arah", "在桌子上。", "Zài zhuōzi shang.", "Di atas meja."),
+                        Word("w9_6", "前面", "qiánmiàn", "Depan", "Arah", "在前面。", "Zài qiánmiàn.", "Di depan."),
+                        Word("w9_12", "哪儿", "nǎr", "Di mana", "Kata tanya", "你在哪儿？", "Nǐ zài nǎr?", "Kamu di mana?"),
+                        Word("w9_16", "到", "dào", "Tiba", "Kata kerja", "我们到了。", "Wǒmen dào le.", "Kita sudah sampai.")
+                    ),
+                    exercises = bab9Stage5Part1Exercises,
+                    exercisesPart1 = bab9Stage5Part1Exercises,
+                    exercisesPart2 = bab9Stage5Part2Exercises
+                )
+            )
         )
     )
 }
