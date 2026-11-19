@@ -3562,6 +3562,122 @@ object LearningRepository {
                     exercisesPart2 = bab7Stage6Part2Exercises
                 )
             )
+        ),
+
+        // BAB 8: Belanja, Toko & Nilai Mata Uang (商场购物与价钱结算)
+        UnitCourse(
+            id = "unit_8",
+            unitNumber = 8,
+            title = "Belanja & Uang",
+            subtitle = "Membeli barang, pakaian baru, menawar harga, dan satuan uang",
+            bannerTitle = "Belanja di Toko & Supermarket",
+            emoji = "🛍️",
+            level = "Level 8",
+            story = stories[7],
+            nodes = listOf(
+                PathNode("u8_n1", "Jual & Beli", Color(0xFFFFC107), NodeIconType.CAP, isCompleted = false, lessonId = "u8_l1"),
+                PathNode("u8_n2", "Mata Uang & Harga", Color(0xFFFFC107), NodeIconType.DUMBBELL, isCompleted = false, lessonId = "u8_l2"),
+                PathNode("u8_n3", "Mahal vs Murah", Color(0xFFFFC107), NodeIconType.CAP, isCompleted = false, lessonId = "u8_l3"),
+                PathNode("u8_n4", "Pakaian Baru", Color(0xFFFFC107), NodeIconType.DUMBBELL, isCompleted = false, lessonId = "u8_l4"),
+                PathNode("u8_n5", "Derajat Kuantitas", Color(0xFFFFC107), NodeIconType.CAP, isCompleted = false, lessonId = "u8_l5"),
+                PathNode("u8_n6", "Evaluasi Belanja", Color(0xFFFFC107), NodeIconType.SHUFFLE, isCompleted = false, lessonId = "u8_l6"),
+                PathNode("u8_n7", "Kuis Cerita", Color(0xFFFFC107), NodeIconType.BOOK, isCompleted = false, lessonId = "u8_l1"),
+                PathNode("u8_n8", "Checkpoint Bab", Color(0xFFFFB300), NodeIconType.CHEST, isCompleted = false, lessonId = "u8_l1"),
+                PathNode("u8_n9", "Rest area", Color(0xFF03A9F4), NodeIconType.REST_AREA, isCompleted = false, lessonId = "u8_l1")
+            ),
+            lessons = listOf(
+                Lesson(
+                    id = "u8_l1",
+                    title = "Jual & Beli di Toko",
+                    subtitle = "Kosakata 买, 卖, 商店, 超市, dan 东西",
+                    grammarNote = "Pasangan kata transaksi: 买 (mǎi = beli) vs 卖 (mài = jual). Tempat belanja: 商店 (toko) dan 超市 (supermarket). Pola: 去 + Tempat + 买东西.",
+                    newWords = listOf(
+                        Word("w8_1", "买", "mǎi", "Membeli", "Kata kerja", "我想买东西。", "Wǒ xiǎng mǎi dōngxi.", "Saya ingin membeli barang."),
+                        Word("w8_2", "卖", "mài", "Menjual", "Kata kerja", "这个店不卖苹果。", "Zhège diàn bù mài píngguǒ.", "Toko ini tidak menjual apel."),
+                        Word("w8_3", "东西", "dōngxi", "Barang / benda", "Benda", "买很多东西。", "Mǎi hěnduō dōngxi.", "Membeli banyak barang."),
+                        Word("w8_4", "商店", "shāngdiàn", "Toko", "Tempat", "去商店买东西。", "Qù shāngdiàn mǎi dōngxi.", "Pergi ke toko membeli barang."),
+                        Word("w8_5", "超市", "chāoshì", "Supermarket", "Tempat", "超市很大。", "Chāoshì hěn dà.", "Supermarket sangat besar.")
+                    ),
+                    exercises = bab8Stage1Part1Exercises,
+                    exercisesPart1 = bab8Stage1Part1Exercises,
+                    exercisesPart2 = bab8Stage1Part2Exercises
+                ),
+                Lesson(
+                    id = "u8_l2",
+                    title = "Mata Uang & Harga",
+                    subtitle = "Kosakata 钱, 块, 元, dan 多少钱",
+                    grammarNote = "Menanyakan harga: 'Subjek + 多少钱？' (这个多少钱？). Satuan uang lisan: 块 (kuài), tulisan resmi: 元 (yuán). Contoh: 五块钱 (5 yuan).",
+                    newWords = listOf(
+                        Word("w8_6", "钱", "qián", "Uang", "Benda", "这本书多少钱？", "Zhè běn shū duōshao qián?", "Buku ini berapa harganya?"),
+                        Word("w8_7", "块", "kuài", "Yuan (lisan)", "Satuan", "五块钱。", "Wǔ kuài qián.", "Lima yuan."),
+                        Word("w8_8", "元", "yuán", "Yuan (resmi)", "Satuan", "五十元。", "Wǔshí yuán.", "Lima puluh yuan."),
+                        Word("w8_9", "一共", "yígòng", "Total / semuanya", "Keterangan", "一共二十块。", "Yígòng èrshí kuài.", "Totalnya dua puluh yuan.")
+                    ),
+                    exercises = bab8Stage2Part1Exercises,
+                    exercisesPart1 = bab8Stage2Part1Exercises,
+                    exercisesPart2 = bab8Stage2Part2Exercises
+                ),
+                Lesson(
+                    id = "u8_l3",
+                    title = "Mahal vs Murah",
+                    subtitle = "Kosakata 贵, 便宜, dan pola eksklamasio 太...了",
+                    grammarNote = "Penilaian harga: 贵 (mahal) vs 便宜 (murah). Pola eksklamasio intensitas: 太 + Kata Sifat + 了 (太贵了！= Terlalu mahal!). Tawar menawar: 便宜一点儿 (murah sedikit).",
+                    newWords = listOf(
+                        Word("w8_10", "贵", "guì", "Mahal", "Kata sifat", "这件衣服太贵了！", "Zhè jiàn yīfu tài guì le!", "Pakaian ini terlalu mahal!"),
+                        Word("w8_11", "便宜", "piányi", "Murah", "Kata sifat", "这个很便宜。", "Zhège hěn piányi.", "Ini sangat murah."),
+                        Word("w8_12", "太", "tài", "Terlalu / amat", "Keterangan", "太贵了，我不买。", "Tài guì le, wǒ bù mǎi.", "Terlalu mahal, saya tidak beli.")
+                    ),
+                    exercises = bab8Stage3Part1Exercises,
+                    exercisesPart1 = bab8Stage3Part1Exercises,
+                    exercisesPart2 = bab8Stage3Part2Exercises
+                ),
+                Lesson(
+                    id = "u8_l4",
+                    title = "Pakaian Baru & Kata Penggolong",
+                    subtitle = "Kosakata 衣服, 穿, 件, dan 新",
+                    grammarNote = "Satuan penggolong pakaian: 件 (jiàn). Pola: 'Angka + 件 + 衣服' (一件衣服 = sehelai baju). Kata kerja mengenakan: 穿 (chuān). Sifat baru: 新 (xīn) -> 新衣服.",
+                    newWords = listOf(
+                        Word("w8_13", "衣服", "yīfu", "Pakaian / baju", "Benda", "我想买衣服。", "Wǒ xiǎng mǎi yīfu.", "Saya ingin membeli pakaian."),
+                        Word("w8_14", "穿", "chuān", "Memakai / mengenakan", "Kata kerja", "穿新衣服。", "Chuān xīn yīfu.", "Memakai baju baru."),
+                        Word("w8_15", "件", "jiàn", "Helai (pakaian)", "Satuan", "一件新衣服。", "Yí jiàn xīn yīfu.", "Sehelai pakaian baru."),
+                        Word("w8_16", "新", "xīn", "Baru", "Kata sifat", "这是新衣服。", "Zhè shì xīn yīfu.", "Ini adalah pakaian baru.")
+                    ),
+                    exercises = bab8Stage4Part1Exercises,
+                    exercisesPart1 = bab8Stage4Part1Exercises,
+                    exercisesPart2 = bab8Stage4Part2Exercises
+                ),
+                Lesson(
+                    id = "u8_l5",
+                    title = "Derajat Kuantitas Parsial",
+                    subtitle = "Perbedaan 一点儿, 有点儿, 一些, dan 一半",
+                    grammarNote = "一点儿 diletakkan SETELAH kata kerja/sifat (吃一点儿 = makan sedikit, 便宜一点儿 = lebih murah sedikit). 有点儿 diletakkan SEBELUM kata sifat bernuansa negatif (有点儿贵 = agak mahal, 有点儿大 = agak kebesaran).",
+                    newWords = listOf(
+                        Word("w8_17", "一点儿", "yìdiǎnr", "Sedikit", "Kuantitas", "吃一点儿水果。", "Chī yìdiǎnr shuǐguǒ.", "Makan sedikit buah."),
+                        Word("w8_18", "有点儿", "yǒudiǎnr", "Agak / sedikit", "Keterangan", "这件衣服有点儿贵。", "Zhè jiàn yīfu yǒudiǎnr guì.", "Baju ini agak mahal."),
+                        Word("w8_19", "一些", "yìxiē", "Beberapa", "Kuantitas", "买一些东西。", "Mǎi yìxiē dōngxi.", "Membeli beberapa barang."),
+                        Word("w8_20", "一半", "yíbàn", "Setengah / separuh", "Angka", "吃了一半。", "Chī le yíbàn.", "Makan setengahnya.")
+                    ),
+                    exercises = bab8Stage5Part1Exercises,
+                    exercisesPart1 = bab8Stage5Part1Exercises,
+                    exercisesPart2 = bab8Stage5Part2Exercises
+                ),
+                Lesson(
+                    id = "u8_l6",
+                    title = "Evaluasi Komprehensif Belanja",
+                    subtitle = "Review seluruh 21 kosakata belanja, toko & nilai mata uang",
+                    grammarNote = "Evaluasi menyeluruh Bab 8: transaksi jual beli di toko/supermarket, menanyakan harga dan satuan uang, menilai mahal/murah, membeli pakaian baru, dan penggunaan kuantitas parsial.",
+                    newWords = listOf(
+                        Word("w8_1", "买", "mǎi", "Membeli", "Kata kerja", "去超市买衣服。", "Qù chāoshì mǎi yīfu.", "Pergi ke supermarket membeli pakaian."),
+                        Word("w8_6", "钱", "qián", "Uang", "Benda", "多少钱？", "Duōshao qián?", "Berapa harganya?"),
+                        Word("w8_10", "贵", "guì", "Mahal", "Kata sifat", "太贵了！", "Tài guì le!", "Terlalu mahal!"),
+                        Word("w8_11", "便宜", "piányi", "Murah", "Kata sifat", "很便宜。", "Hěn piányi.", "Sangat murah."),
+                        Word("w8_15", "件", "jiàn", "Helai", "Satuan", "一件新衣服。", "Yí jiàn xīn yīfu.", "Sehelai baju baru.")
+                    ),
+                    exercises = bab8Stage6Part1Exercises,
+                    exercisesPart1 = bab8Stage6Part1Exercises,
+                    exercisesPart2 = bab8Stage6Part2Exercises
+                )
+            )
         )
     )
 }
