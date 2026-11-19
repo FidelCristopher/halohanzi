@@ -18,7 +18,7 @@ val bab10Stage1Part1Exercises = listOf(
         correctAnswer = "mobil / kendaraan",
         audioToSpeak = "车",
         pictureOptions = listOf(
-            PictureOption("u10_s1_p1_opt1", "mobil / kendaraan", "🚗", R.drawable.ic_coin, true),
+            PictureOption("u10_s1_p1_opt1", "mobil / kendaraan", "🚗", R.drawable.ic_trans_car, true),
             PictureOption("u10_s1_p1_opt2", "buku", "📖", R.drawable.ic_book, false),
             PictureOption("u10_s1_p1_opt3", "jam", "⏰", R.drawable.ic_story_timer, false),
             PictureOption("u10_s1_p1_opt4", "rumah", "🏠", R.drawable.ic_people_group, false)
@@ -108,7 +108,7 @@ val bab10Stage1Part1Exercises = listOf(
         correctAnswer = "naik / duduk",
         audioToSpeak = "坐",
         pictureOptions = listOf(
-            PictureOption("u10_s1_p1_opt7_1", "naik / duduk", "🪑", R.drawable.ic_coin, true),
+            PictureOption("u10_s1_p1_opt7_1", "naik / duduk", "🪑", R.drawable.ic_fam_sit, true),
             PictureOption("u10_s1_p1_opt7_2", "berdiri", "🚶", R.drawable.ic_target, false),
             PictureOption("u10_s1_p1_opt7_3", "makan", "🍜", R.drawable.ic_book, false),
             PictureOption("u10_s1_p1_opt7_4", "tidur", "🛌", R.drawable.ic_crown, false)
@@ -169,7 +169,7 @@ val bab10Stage1Part2Exercises = listOf(
         correctAnswer = "taksi",
         audioToSpeak = "出租车",
         pictureOptions = listOf(
-            PictureOption("u10_s1_p2_opt1", "taksi", "🚕", R.drawable.ic_coin, true),
+            PictureOption("u10_s1_p2_opt1", "taksi", "🚕", R.drawable.ic_trans_taxi, true),
             PictureOption("u10_s1_p2_opt2", "pesawat", "✈️", R.drawable.ic_target, false),
             PictureOption("u10_s1_p2_opt3", "kereta", "🚆", R.drawable.ic_book, false),
             PictureOption("u10_s1_p2_opt4", "sepeda", "🚲", R.drawable.ic_crown, false)
@@ -259,7 +259,7 @@ val bab10Stage1Part2Exercises = listOf(
         correctAnswer = "naik mobil",
         audioToSpeak = "坐车",
         pictureOptions = listOf(
-            PictureOption("u10_s1_p2_opt7_1", "naik mobil", "🚗", R.drawable.ic_coin, true),
+            PictureOption("u10_s1_p2_opt7_1", "naik mobil", "🚗", R.drawable.ic_trans_ride_car, true),
             PictureOption("u10_s1_p2_opt7_2", "jalan kaki", "🚶", R.drawable.ic_target, false),
             PictureOption("u10_s1_p2_opt7_3", "makan", "🍜", R.drawable.ic_book, false),
             PictureOption("u10_s1_p2_opt7_4", "tidur", "🛌", R.drawable.ic_crown, false)

@@ -18,7 +18,7 @@ val bab8Stage4Part1Exercises = listOf(
         correctAnswer = "pakaian / baju",
         audioToSpeak = "衣服",
         pictureOptions = listOf(
-            PictureOption("u8_s4_p1_opt1", "pakaian / baju", "👕", R.drawable.ic_coin, true),
+            PictureOption("u8_s4_p1_opt1", "pakaian / baju", "👕", R.drawable.ic_shop_clothes, true),
             PictureOption("u8_s4_p1_opt2", "buku", "📖", R.drawable.ic_book, false),
             PictureOption("u8_s4_p1_opt3", "meja", "🪵", R.drawable.ic_target, false),
             PictureOption("u8_s4_p1_opt4", "kursi", "🪑", R.drawable.ic_crown, false)
@@ -108,7 +108,7 @@ val bab8Stage4Part1Exercises = listOf(
         correctAnswer = "memakai",
         audioToSpeak = "穿",
         pictureOptions = listOf(
-            PictureOption("u8_s4_p1_opt7_1", "memakai", "👔", R.drawable.ic_coin, true),
+            PictureOption("u8_s4_p1_opt7_1", "memakai", "👔", R.drawable.ic_shop_wear, true),
             PictureOption("u8_s4_p1_opt7_2", "makan", "🍚", R.drawable.ic_book, false),
             PictureOption("u8_s4_p1_opt7_3", "minum", "🍵", R.drawable.ic_target, false),
             PictureOption("u8_s4_p1_opt7_4", "tidur", "🛌", R.drawable.ic_crown, false)
@@ -171,7 +171,7 @@ val bab8Stage4Part2Exercises = listOf(
         pictureOptions = listOf(
             PictureOption("u8_s4_p2_opt1", "baru", "✨", R.drawable.ic_crown, true),
             PictureOption("u8_s4_p2_opt2", "lama / bekas", "📦", R.drawable.ic_book, false),
-            PictureOption("u8_s4_p2_opt3", "mahal", "💎", R.drawable.ic_coin, false),
+            PictureOption("u8_s4_p2_opt3", "mahal", "💎", R.drawable.ic_shop_expensive, false),
             PictureOption("u8_s4_p2_opt4", "murah", "🏷️", R.drawable.ic_target, false)
         )
     ),
@@ -259,7 +259,7 @@ val bab8Stage4Part2Exercises = listOf(
         correctAnswer = "helai (pakaian)",
         audioToSpeak = "件",
         pictureOptions = listOf(
-            PictureOption("u8_s4_p2_opt7_1", "helai (baju)", "👔", R.drawable.ic_coin, true),
+            PictureOption("u8_s4_p2_opt7_1", "helai (baju)", "👔", R.drawable.ic_shop_piece_clothes, true),
             PictureOption("u8_s4_p2_opt7_2", "buah (benda)", "📦", R.drawable.ic_book, false),
             PictureOption("u8_s4_p2_opt7_3", "cangkir", "🥛", R.drawable.ic_target, false),
             PictureOption("u8_s4_p2_opt7_4", "buku", "📖", R.drawable.ic_story_timer, false)

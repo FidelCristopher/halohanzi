@@ -18,7 +18,7 @@ val bab10Stage3Part1Exercises = listOf(
         correctAnswer = "kereta api",
         audioToSpeak = "火车",
         pictureOptions = listOf(
-            PictureOption("u10_s3_p1_opt1", "kereta api", "🚆", R.drawable.ic_coin, true),
+            PictureOption("u10_s3_p1_opt1", "kereta api", "🚆", R.drawable.ic_trans_train, true),
             PictureOption("u10_s3_p1_opt2", "pesawat", "✈️", R.drawable.ic_target, false),
             PictureOption("u10_s3_p1_opt3", "mobil", "🚗", R.drawable.ic_book, false),
             PictureOption("u10_s3_p1_opt4", "taksi", "🚕", R.drawable.ic_crown, false)
@@ -108,7 +108,7 @@ val bab10Stage3Part1Exercises = listOf(
         correctAnswer = "stasiun kereta",
         audioToSpeak = "火车站",
         pictureOptions = listOf(
-            PictureOption("u10_s3_p1_opt7_1", "stasiun kereta", "🚉", R.drawable.ic_coin, true),
+            PictureOption("u10_s3_p1_opt7_1", "stasiun kereta", "🚉", R.drawable.ic_trans_train_station, true),
             PictureOption("u10_s3_p1_opt7_2", "bandara", "🛫", R.drawable.ic_target, false),
             PictureOption("u10_s3_p1_opt7_3", "sekolah", "🏫", R.drawable.ic_cap, false),
             PictureOption("u10_s3_p1_opt7_4", "toko", "🏪", R.drawable.ic_book, false)
@@ -169,7 +169,7 @@ val bab10Stage3Part2Exercises = listOf(
         correctAnswer = "pesawat terbang",
         audioToSpeak = "飞机",
         pictureOptions = listOf(
-            PictureOption("u10_s3_p2_opt1", "pesawat terbang", "✈️", R.drawable.ic_coin, true),
+            PictureOption("u10_s3_p2_opt1", "pesawat terbang", "✈️", R.drawable.ic_trans_airplane, true),
             PictureOption("u10_s3_p2_opt2", "kereta", "🚆", R.drawable.ic_target, false),
             PictureOption("u10_s3_p2_opt3", "mobil", "🚗", R.drawable.ic_book, false),
             PictureOption("u10_s3_p2_opt4", "taksi", "🚕", R.drawable.ic_crown, false)
@@ -259,7 +259,7 @@ val bab10Stage3Part2Exercises = listOf(
         correctAnswer = "naik pesawat",
         audioToSpeak = "坐飞机",
         pictureOptions = listOf(
-            PictureOption("u10_s3_p2_opt7_1", "naik pesawat", "🛫", R.drawable.ic_coin, true),
+            PictureOption("u10_s3_p2_opt7_1", "naik pesawat", "🛫", R.drawable.ic_trans_ride_airplane, true),
             PictureOption("u10_s3_p2_opt7_2", "naik kereta", "🚆", R.drawable.ic_target, false),
             PictureOption("u10_s3_p2_opt7_3", "naik mobil", "🚗", R.drawable.ic_book, false),
             PictureOption("u10_s3_p2_opt7_4", "jalan kaki", "🚶", R.drawable.ic_crown, false)

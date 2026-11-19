@@ -18,7 +18,7 @@ val bab10Stage2Part1Exercises = listOf(
         correctAnswer = "menyetir mobil",
         audioToSpeak = "开车",
         pictureOptions = listOf(
-            PictureOption("u10_s2_p1_opt1", "menyetir mobil", "🚗", R.drawable.ic_coin, true),
+            PictureOption("u10_s2_p1_opt1", "menyetir mobil", "🚗", R.drawable.ic_trans_drive_car, true),
             PictureOption("u10_s2_p1_opt2", "jalan kaki", "🚶", R.drawable.ic_target, false),
             PictureOption("u10_s2_p1_opt3", "duduk", "🪑", R.drawable.ic_book, false),
             PictureOption("u10_s2_p1_opt4", "lari", "🏃", R.drawable.ic_crown, false)
@@ -108,7 +108,7 @@ val bab10Stage2Part1Exercises = listOf(
         correctAnswer = "membuka / menyetir",
         audioToSpeak = "开",
         pictureOptions = listOf(
-            PictureOption("u10_s2_p1_opt7_1", "membuka / menyetir", "🚗", R.drawable.ic_coin, true),
+            PictureOption("u10_s2_p1_opt7_1", "membuka / menyetir", "🚗", R.drawable.ic_trans_drive_car, true),
             PictureOption("u10_s2_p1_opt7_2", "menutup", "🚪", R.drawable.ic_target, false),
             PictureOption("u10_s2_p1_opt7_3", "makan", "🍜", R.drawable.ic_book, false),
             PictureOption("u10_s2_p1_opt7_4", "tidur", "🛌", R.drawable.ic_crown, false)
@@ -169,7 +169,7 @@ val bab10Stage2Part2Exercises = listOf(
         correctAnswer = "menyetir mobil",
         audioToSpeak = "开车",
         pictureOptions = listOf(
-            PictureOption("u10_s2_p2_opt1", "menyetir mobil", "🚗", R.drawable.ic_coin, true),
+            PictureOption("u10_s2_p2_opt1", "menyetir mobil", "🚗", R.drawable.ic_trans_drive_car, true),
             PictureOption("u10_s2_p2_opt2", "pesawat", "✈️", R.drawable.ic_target, false),
             PictureOption("u10_s2_p2_opt3", "kereta", "🚆", R.drawable.ic_book, false),
             PictureOption("u10_s2_p2_opt4", "berjalan", "🚶", R.drawable.ic_crown, false)
@@ -261,7 +261,7 @@ val bab10Stage2Part2Exercises = listOf(
         pictureOptions = listOf(
             PictureOption("u10_s2_p2_opt7_1", "pulang ke rumah", "🏠", R.drawable.ic_people_group, true),
             PictureOption("u10_s2_p2_opt7_2", "ke sekolah", "🏫", R.drawable.ic_cap, false),
-            PictureOption("u10_s2_p2_opt7_3", "ke toko", "🏪", R.drawable.ic_coin, false),
+            PictureOption("u10_s2_p2_opt7_3", "ke toko", "🏪", R.drawable.ic_shop_store, false),
             PictureOption("u10_s2_p2_opt7_4", "ke stasiun", "🚆", R.drawable.ic_target, false)
         )
     ),

@@ -18,7 +18,7 @@ val bab8Stage5Part1Exercises = listOf(
         correctAnswer = "sedikit",
         audioToSpeak = "一点儿",
         pictureOptions = listOf(
-            PictureOption("u8_s5_p1_opt1", "sedikit", "🤏", R.drawable.ic_coin, true),
+            PictureOption("u8_s5_p1_opt1", "sedikit", "🤏", R.drawable.ic_shop_little_bit, true),
             PictureOption("u8_s5_p1_opt2", "banyak", "📈", R.drawable.ic_target, false),
             PictureOption("u8_s5_p1_opt3", "semua", "💯", R.drawable.ic_crown, false),
             PictureOption("u8_s5_p1_opt4", "tidak ada", "⭕", R.drawable.ic_book, false)
@@ -108,7 +108,7 @@ val bab8Stage5Part1Exercises = listOf(
         correctAnswer = "agak",
         audioToSpeak = "有点儿",
         pictureOptions = listOf(
-            PictureOption("u8_s5_p1_opt7_1", "agak", "⚖️", R.drawable.ic_coin, true),
+            PictureOption("u8_s5_p1_opt7_1", "agak", "⚖️", R.drawable.ic_shop_little_bit, true),
             PictureOption("u8_s5_p1_opt7_2", "sangat", "🔥", R.drawable.ic_crown, false),
             PictureOption("u8_s5_p1_opt7_3", "tidak", "❌", R.drawable.ic_target, false),
             PictureOption("u8_s5_p1_opt7_4", "semua", "💯", R.drawable.ic_book, false)
@@ -169,7 +169,7 @@ val bab8Stage5Part2Exercises = listOf(
         correctAnswer = "beberapa",
         audioToSpeak = "一些",
         pictureOptions = listOf(
-            PictureOption("u8_s5_p2_opt1", "beberapa", "📦", R.drawable.ic_coin, true),
+            PictureOption("u8_s5_p2_opt1", "beberapa", "📦", R.drawable.ic_shop_some_items, true),
             PictureOption("u8_s5_p2_opt2", "satu", "1️⃣", R.drawable.ic_target, false),
             PictureOption("u8_s5_p2_opt3", "nol", "0️⃣", R.drawable.ic_book, false),
             PictureOption("u8_s5_p2_opt4", "semua", "💯", R.drawable.ic_crown, false)
@@ -259,7 +259,7 @@ val bab8Stage5Part2Exercises = listOf(
         correctAnswer = "setengah / separuh",
         audioToSpeak = "一半",
         pictureOptions = listOf(
-            PictureOption("u8_s5_p2_opt7_1", "setengah / separuh", "🌗", R.drawable.ic_coin, true),
+            PictureOption("u8_s5_p2_opt7_1", "setengah / separuh", "🌗", R.drawable.ic_clock_half, true),
             PictureOption("u8_s5_p2_opt7_2", "penuh", "🌕", R.drawable.ic_crown, false),
             PictureOption("u8_s5_p2_opt7_3", "kosong", "⭕", R.drawable.ic_target, false),
             PictureOption("u8_s5_p2_opt7_4", "buku", "📖", R.drawable.ic_book, false)

@@ -19,7 +19,7 @@ val bab9Stage3Part1Exercises = listOf(
         audioToSpeak = "这儿",
         pictureOptions = listOf(
             PictureOption("u9_s3_p1_opt1", "di sini", "📍", R.drawable.ic_target, true),
-            PictureOption("u9_s3_p1_opt2", "di sana", "👉", R.drawable.ic_coin, false),
+            PictureOption("u9_s3_p1_opt2", "di sana", "👉", R.drawable.ic_pos_there, false),
             PictureOption("u9_s3_p1_opt3", "di mana", "❓", R.drawable.ic_book, false),
             PictureOption("u9_s3_p1_opt4", "rumah", "🏠", R.drawable.ic_crown, false)
         )
@@ -109,7 +109,7 @@ val bab9Stage3Part1Exercises = listOf(
         audioToSpeak = "这里",
         pictureOptions = listOf(
             PictureOption("u9_s3_p1_opt7_1", "di sini", "📍", R.drawable.ic_target, true),
-            PictureOption("u9_s3_p1_opt7_2", "di sana", "👉", R.drawable.ic_coin, false),
+            PictureOption("u9_s3_p1_opt7_2", "di sana", "👉", R.drawable.ic_pos_there, false),
             PictureOption("u9_s3_p1_opt7_3", "di dalam", "📦", R.drawable.ic_book, false),
             PictureOption("u9_s3_p1_opt7_4", "di luar", "🚪", R.drawable.ic_crown, false)
         )
@@ -169,7 +169,7 @@ val bab9Stage3Part2Exercises = listOf(
         correctAnswer = "di sana",
         audioToSpeak = "那儿",
         pictureOptions = listOf(
-            PictureOption("u9_s3_p2_opt1", "di sana", "👉", R.drawable.ic_coin, true),
+            PictureOption("u9_s3_p2_opt1", "di sana", "👉", R.drawable.ic_pos_there, true),
             PictureOption("u9_s3_p2_opt2", "di sini", "📍", R.drawable.ic_target, false),
             PictureOption("u9_s3_p2_opt3", "di mana", "❓", R.drawable.ic_book, false),
             PictureOption("u9_s3_p2_opt4", "rumah", "🏠", R.drawable.ic_crown, false)
@@ -261,7 +261,7 @@ val bab9Stage3Part2Exercises = listOf(
         pictureOptions = listOf(
             PictureOption("u9_s3_p2_opt7_1", "di mana", "❓", R.drawable.ic_book, true),
             PictureOption("u9_s3_p2_opt7_2", "di sini", "📍", R.drawable.ic_target, false),
-            PictureOption("u9_s3_p2_opt7_3", "di sana", "👉", R.drawable.ic_coin, false),
+            PictureOption("u9_s3_p2_opt7_3", "di sana", "👉", R.drawable.ic_pos_there, false),
             PictureOption("u9_s3_p2_opt7_4", "siapa", "👤", R.drawable.ic_crown, false)
         )
     ),

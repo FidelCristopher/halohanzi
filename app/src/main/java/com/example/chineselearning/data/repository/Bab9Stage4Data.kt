@@ -19,7 +19,7 @@ val bab9Stage4Part1Exercises = listOf(
         audioToSpeak = "这个",
         pictureOptions = listOf(
             PictureOption("u9_s4_p1_opt1", "yang ini", "👈", R.drawable.ic_target, true),
-            PictureOption("u9_s4_p1_opt2", "yang itu", "👉", R.drawable.ic_coin, false),
+            PictureOption("u9_s4_p1_opt2", "yang itu", "👉", R.drawable.ic_pos_that_one, false),
             PictureOption("u9_s4_p1_opt3", "yang mana", "❓", R.drawable.ic_book, false),
             PictureOption("u9_s4_p1_opt4", "semua", "💯", R.drawable.ic_crown, false)
         )
@@ -108,7 +108,7 @@ val bab9Stage4Part1Exercises = listOf(
         correctAnswer = "yang itu",
         audioToSpeak = "那个",
         pictureOptions = listOf(
-            PictureOption("u9_s4_p1_opt7_1", "yang itu", "👉", R.drawable.ic_coin, true),
+            PictureOption("u9_s4_p1_opt7_1", "yang itu", "👉", R.drawable.ic_pos_that_one, true),
             PictureOption("u9_s4_p1_opt7_2", "yang ini", "👈", R.drawable.ic_target, false),
             PictureOption("u9_s4_p1_opt7_3", "yang mana", "❓", R.drawable.ic_book, false),
             PictureOption("u9_s4_p1_opt7_4", "semua", "💯", R.drawable.ic_crown, false)
@@ -170,7 +170,7 @@ val bab9Stage4Part2Exercises = listOf(
         audioToSpeak = "到",
         pictureOptions = listOf(
             PictureOption("u9_s4_p2_opt1", "tiba / sampai", "🏁", R.drawable.ic_target, true),
-            PictureOption("u9_s4_p2_opt2", "pergi", "🚶", R.drawable.ic_coin, false),
+            PictureOption("u9_s4_p2_opt2", "pergi", "🚶", R.drawable.ic_trans_go, false),
             PictureOption("u9_s4_p2_opt3", "makan", "🍜", R.drawable.ic_book, false),
             PictureOption("u9_s4_p2_opt4", "tidur", "🛌", R.drawable.ic_crown, false)
         )
@@ -260,7 +260,7 @@ val bab9Stage4Part2Exercises = listOf(
         audioToSpeak = "到了",
         pictureOptions = listOf(
             PictureOption("u9_s4_p2_opt7_1", "sudah sampai", "🏁", R.drawable.ic_target, true),
-            PictureOption("u9_s4_p2_opt7_2", "berangkat", "🛫", R.drawable.ic_coin, false),
+            PictureOption("u9_s4_p2_opt7_2", "berangkat", "🛫", R.drawable.ic_trans_go, false),
             PictureOption("u9_s4_p2_opt7_3", "makan", "🍜", R.drawable.ic_book, false),
             PictureOption("u9_s4_p2_opt7_4", "tidur", "🛌", R.drawable.ic_crown, false)
         )

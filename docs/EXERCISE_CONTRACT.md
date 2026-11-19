@@ -149,3 +149,22 @@ Imports: `import com.example.chineselearning.data.model.*` and `import com.examp
 - **Rule 2 (Zero Unused Icons & Imports)**: Hapus import dan referensi drawable/ikon yang sudah tidak terpakai atau digantikan.
 - **Rule 3 (Maintainable & Self-Documenting Structure)**: Kode harus rapi, modular, mengikuti kaidah Clean Architecture & Kotlin idiomatis agar mudah dirawat dan dikembangkan jangka panjang.
 
+---
+
+## 13. MANDAT KORELASI SEMANTIK ILUSTRASI PILIHAN (ZERO PLACEHOLDER COINS & STRICT SEMANTIC ACCURACY MANDATE)
+**CRITICAL**: Seluruh gambar atau ilustrasi pada kartu opsi bergambar (`PictureOption` / `ExerciseType.PICTURE_CHOICE`):
+- **Rule 1 (Zero Fallback / Generic Placeholder Icons)**: **DILARANG KERAS** menggunakan `ic_coin`, `ic_target`, `ic_book`, atau ikon placeholder generik lainnya pada `PictureOption` jika opsi tersebut bukan memiliki arti semantik uang/koin/target. Gambar koin tidak boleh dijadikan jalan pintas atau *dumping ground* untuk kosakata yang belum dibuatkan asetnya!
+- **Rule 2 (Strict 1:1 Semantic Correlation)**: Setiap gambar ilustrasi pada `PictureOption` WAJIB relevan secara semantik 1:1 dengan label keterangannya. Contoh:
+  - Opsi "mobil / kendaraan" / "taksi" -> WAJIB mobil/taksi (`ic_car` / `ic_taxi`), BUKAN koin.
+  - Opsi "pesawat terbang" -> WAJIB pesawat (`ic_airplane`), BUKAN koin.
+  - Opsi "kereta api" / "stasiun" -> WAJIB kereta/stasiun (`ic_train` / `ic_train_station`), BUKAN koin.
+  - Opsi "rumah sakit" / "dokter" -> WAJIB rumah sakit / dokter (`ic_hospital` / `ic_doctor`), BUKAN koin.
+  - Opsi "anjing" / "kucing" -> WAJIB hewan terkait (`ic_dog` / `ic_cat`), BUKAN koin.
+  - Opsi "ponsel" / "telepon" -> WAJIB telepon/smartphone (`ic_smartphone` / `ic_call`), BUKAN koin.
+  - Opsi "televisi" / "film" -> WAJIB TV/bioskop (`ic_tv` / `ic_cinema`), BUKAN koin.
+  - Opsi "pakaian / baju" -> WAJIB pakaian (`ic_clothes` / `ic_shirt`), BUKAN koin.
+- **Rule 3 (Zero AI Slop & Mandatory Vector-Designer Skill)**: Designer WAJIB memanfaatkan skill `vector-designer` dan `antislop-ui` yang telah terpasang di rolenya. Seluruh aset harus berupa VectorDrawable XML Android murni (`res/drawable/ic_*.xml`), handcrafted, kurva presisi, palet warna harmonis, viewport proporsional, dan bebas dari artefak slop.
+- **Rule 4 (Mandatory Pipeline Handover to Designer)**: Setiap kali Dev 1 selesai menyusun soal kurikulum baru, QA WAJIB menginventarisir seluruh opsi `PictureOption` dan menyerahkannya ke Designer untuk diverifikasi semantiknya dan dibuatkan vektor aslinya sebelum dianggap tuntas (audit pass).
+- **Rule 5 (Automated Unit Test Enforcement)**: QA wajib menambahkan unit test otomatis di `ExampleUnitTest.kt` untuk memeriksa korelasi semantik dan memblokir keberadaan `ic_coin` pada opsi yang artinya bukan uang/koin.
+
+

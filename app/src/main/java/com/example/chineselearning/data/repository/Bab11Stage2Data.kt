@@ -20,7 +20,7 @@ val bab11Stage2Part1Exercises = listOf(
         pictureOptions = listOf(
             PictureOption("u11_s2_p1_opt1", "belajar", "📖", R.drawable.ic_book, true),
             PictureOption("u11_s2_p1_opt2", "tidur", "🛌", R.drawable.ic_crown, false),
-            PictureOption("u11_s2_p1_opt3", "makan", "🍜", R.drawable.ic_coin, false),
+            PictureOption("u11_s2_p1_opt3", "makan", "🍜", R.drawable.ic_action_eat, false),
             PictureOption("u11_s2_p1_opt4", "lari", "🏃", R.drawable.ic_target, false)
         )
     ),
@@ -109,7 +109,7 @@ val bab11Stage2Part1Exercises = listOf(
         audioToSpeak = "课",
         pictureOptions = listOf(
             PictureOption("u11_s2_p1_opt7_1", "kelas", "📝", R.drawable.ic_book, true),
-            PictureOption("u11_s2_p1_opt7_2", "makan", "🍚", R.drawable.ic_coin, false),
+            PictureOption("u11_s2_p1_opt7_2", "makan", "🍚", R.drawable.ic_action_eat, false),
             PictureOption("u11_s2_p1_opt7_3", "mobil", "🚗", R.drawable.ic_target, false),
             PictureOption("u11_s2_p1_opt7_4", "tidur", "🛌", R.drawable.ic_crown, false)
         )
@@ -171,7 +171,7 @@ val bab11Stage2Part2Exercises = listOf(
         pictureOptions = listOf(
             PictureOption("u11_s2_p2_opt1", "masuk kelas", "👨‍🏫", R.drawable.ic_cap, true),
             PictureOption("u11_s2_p2_opt2", "selesai kelas", "🚪", R.drawable.ic_book, false),
-            PictureOption("u11_s2_p2_opt3", "makan", "🍜", R.drawable.ic_coin, false),
+            PictureOption("u11_s2_p2_opt3", "makan", "🍜", R.drawable.ic_action_eat, false),
             PictureOption("u11_s2_p2_opt4", "tidur", "🛌", R.drawable.ic_crown, false)
         )
     ),
@@ -261,7 +261,7 @@ val bab11Stage2Part2Exercises = listOf(
         pictureOptions = listOf(
             PictureOption("u11_s2_p2_opt7_1", "selesai kelas", "🔔", R.drawable.ic_story_timer, true),
             PictureOption("u11_s2_p2_opt7_2", "masuk kelas", "📝", R.drawable.ic_cap, false),
-            PictureOption("u11_s2_p2_opt7_3", "makan", "🍜", R.drawable.ic_coin, false),
+            PictureOption("u11_s2_p2_opt7_3", "makan", "🍜", R.drawable.ic_action_eat, false),
             PictureOption("u11_s2_p2_opt7_4", "tidur", "🛌", R.drawable.ic_book, false)
         )
     ),

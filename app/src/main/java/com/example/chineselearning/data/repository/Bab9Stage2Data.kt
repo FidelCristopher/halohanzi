@@ -19,7 +19,7 @@ val bab9Stage2Part1Exercises = listOf(
         audioToSpeak = "前",
         pictureOptions = listOf(
             PictureOption("u9_s2_p1_opt1", "depan", "⏩", R.drawable.ic_target, true),
-            PictureOption("u9_s2_p1_opt2", "belakang", "⏪", R.drawable.ic_coin, false),
+            PictureOption("u9_s2_p1_opt2", "belakang", "⏪", R.drawable.ic_pos_back, false),
             PictureOption("u9_s2_p1_opt3", "atas", "⬆️", R.drawable.ic_book, false),
             PictureOption("u9_s2_p1_opt4", "bawah", "⬇️", R.drawable.ic_crown, false)
         )
@@ -109,7 +109,7 @@ val bab9Stage2Part1Exercises = listOf(
         audioToSpeak = "前面",
         pictureOptions = listOf(
             PictureOption("u9_s2_p1_opt7_1", "di depan", "⏩", R.drawable.ic_target, true),
-            PictureOption("u9_s2_p1_opt7_2", "di belakang", "⏪", R.drawable.ic_coin, false),
+            PictureOption("u9_s2_p1_opt7_2", "di belakang", "⏪", R.drawable.ic_pos_back, false),
             PictureOption("u9_s2_p1_opt7_3", "di dalam", "📦", R.drawable.ic_book, false),
             PictureOption("u9_s2_p1_opt7_4", "di luar", "🚪", R.drawable.ic_crown, false)
         )
@@ -169,7 +169,7 @@ val bab9Stage2Part2Exercises = listOf(
         correctAnswer = "belakang",
         audioToSpeak = "后",
         pictureOptions = listOf(
-            PictureOption("u9_s2_p2_opt1", "belakang", "⏪", R.drawable.ic_coin, true),
+            PictureOption("u9_s2_p2_opt1", "belakang", "⏪", R.drawable.ic_pos_back, true),
             PictureOption("u9_s2_p2_opt2", "depan", "⏩", R.drawable.ic_target, false),
             PictureOption("u9_s2_p2_opt3", "atas", "⬆️", R.drawable.ic_crown, false),
             PictureOption("u9_s2_p2_opt4", "bawah", "⬇️", R.drawable.ic_book, false)
@@ -259,7 +259,7 @@ val bab9Stage2Part2Exercises = listOf(
         correctAnswer = "di belakang",
         audioToSpeak = "后面",
         pictureOptions = listOf(
-            PictureOption("u9_s2_p2_opt7_1", "di belakang", "⏪", R.drawable.ic_coin, true),
+            PictureOption("u9_s2_p2_opt7_1", "di belakang", "⏪", R.drawable.ic_pos_back, true),
             PictureOption("u9_s2_p2_opt7_2", "di depan", "⏩", R.drawable.ic_target, false),
             PictureOption("u9_s2_p2_opt7_3", "di samping", "↔️", R.drawable.ic_crown, false),
             PictureOption("u9_s2_p2_opt7_4", "di atas", "⬆️", R.drawable.ic_book, false)

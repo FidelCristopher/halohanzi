@@ -18,7 +18,7 @@ val bab8Stage6Part1Exercises = listOf(
         correctAnswer = "membeli",
         audioToSpeak = "买",
         pictureOptions = listOf(
-            PictureOption("u8_s6_p1_opt1", "membeli", "🛒", R.drawable.ic_coin, true),
+            PictureOption("u8_s6_p1_opt1", "membeli", "🛒", R.drawable.ic_shop_buy, true),
             PictureOption("u8_s6_p1_opt2", "menjual", "🏷️", R.drawable.ic_target, false),
             PictureOption("u8_s6_p1_opt3", "makan", "🍜", R.drawable.ic_book, false),
             PictureOption("u8_s6_p1_opt4", "minum", "🍵", R.drawable.ic_crown, false)
@@ -108,7 +108,7 @@ val bab8Stage6Part1Exercises = listOf(
         correctAnswer = "pakaian / baju",
         audioToSpeak = "衣服",
         pictureOptions = listOf(
-            PictureOption("u8_s6_p1_opt7_1", "pakaian / baju", "👕", R.drawable.ic_coin, true),
+            PictureOption("u8_s6_p1_opt7_1", "pakaian / baju", "👕", R.drawable.ic_shop_clothes, true),
             PictureOption("u8_s6_p1_opt7_2", "buku", "📖", R.drawable.ic_book, false),
             PictureOption("u8_s6_p1_opt7_3", "meja", "🪵", R.drawable.ic_target, false),
             PictureOption("u8_s6_p1_opt7_4", "kursi", "🪑", R.drawable.ic_crown, false)
@@ -169,7 +169,7 @@ val bab8Stage6Part2Exercises = listOf(
         correctAnswer = "pakaian baru",
         audioToSpeak = "新衣服",
         pictureOptions = listOf(
-            PictureOption("u8_s6_p2_opt1", "pakaian baru", "✨", R.drawable.ic_coin, true),
+            PictureOption("u8_s6_p2_opt1", "pakaian baru", "✨", R.drawable.ic_shop_new, true),
             PictureOption("u8_s6_p2_opt2", "buku baru", "📖", R.drawable.ic_book, false),
             PictureOption("u8_s6_p2_opt3", "uang", "💰", R.drawable.ic_target, false),
             PictureOption("u8_s6_p2_opt4", "meja", "🪵", R.drawable.ic_crown, false)
@@ -259,7 +259,7 @@ val bab8Stage6Part2Exercises = listOf(
         correctAnswer = "murah",
         audioToSpeak = "便宜",
         pictureOptions = listOf(
-            PictureOption("u8_s6_p2_opt7_1", "murah", "🏷️", R.drawable.ic_coin, true),
+            PictureOption("u8_s6_p2_opt7_1", "murah", "🏷️", R.drawable.ic_shop_cheap, true),
             PictureOption("u8_s6_p2_opt7_2", "mahal", "💎", R.drawable.ic_crown, false),
             PictureOption("u8_s6_p2_opt7_3", "uang", "💰", R.drawable.ic_target, false),
             PictureOption("u8_s6_p2_opt7_4", "buku", "📖", R.drawable.ic_book, false)

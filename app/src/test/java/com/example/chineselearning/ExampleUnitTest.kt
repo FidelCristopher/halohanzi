@@ -77,6 +77,21 @@ class ComprehensiveExerciseAuditTest {
                             errors.add("[${lesson.id} - ${ex.id}] Listening exercise must have illustrationRes == 0 (got ${ex.illustrationRes})")
                         }
                     }
+
+                    // 6. Audit PICTURE_CHOICE Semantic Accuracy - Rule 13 Zero Fallback Placeholder Mandate
+                    if (ex.type == ExerciseType.PICTURE_CHOICE) {
+                        ex.pictureOptions.forEach { opt ->
+                            val isMoneyRelated = opt.label.contains("uang", ignoreCase = true) ||
+                                    opt.label.contains("koin", ignoreCase = true) ||
+                                    opt.label.contains("harga", ignoreCase = true) ||
+                                    opt.label.contains("yuan", ignoreCase = true) ||
+                                    opt.label.contains("mahal", ignoreCase = true) ||
+                                    opt.label.contains("murah", ignoreCase = true)
+                            if (opt.iconRes == R.drawable.ic_coin && !isMoneyRelated) {
+                                errors.add("[${lesson.id} - ${ex.id}] PictureOption '${opt.label}' (${opt.id}) is using ic_coin placeholder! Must use dedicated semantic VectorDrawable.")
+                            }
+                        }
+                    }
                 }
             }
         }
