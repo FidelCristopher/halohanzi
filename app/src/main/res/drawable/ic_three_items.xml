@@ -1,0 +1,42 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Circle -->
+    <path
+        android:fillColor="#FFF1F2"
+        android:pathData="M48,8 A40,40 0 1,0 48,88 A40,40 0 1,0 48,8 Z" />
+    <path
+        android:fillColor="#FFE4E6"
+        android:pathData="M48,12 A36,36 0 1,0 48,84 A36,36 0 1,0 48,12 Z" />
+
+    <!-- Top Item -->
+    <path
+        android:fillColor="#F43F5E"
+        android:pathData="M48,22 C40,22 34,28 34,37 C34,46 41,51 48,51 C55,51 62,46 62,37 C62,28 56,22 48,22 Z" />
+    <path
+        android:fillColor="#15803D"
+        android:pathData="M48,20 C44,17 43,21 48,22 C51,21 51,19 48,20 Z" />
+
+    <!-- Bottom Left Item -->
+    <path
+        android:fillColor="#E11D48"
+        android:pathData="M32,49 C24,49 18,55 18,64 C18,73 25,78 32,78 C39,78 46,73 46,64 C46,55 40,49 32,49 Z" />
+    <path
+        android:fillColor="#15803D"
+        android:pathData="M32,47 C28,44 27,48 32,49 C35,48 35,46 32,47 Z" />
+
+    <!-- Bottom Right Item -->
+    <path
+        android:fillColor="#BE123C"
+        android:pathData="M64,49 C56,49 50,55 50,64 C50,73 57,78 64,78 C71,78 78,73 78,64 C78,55 72,49 64,49 Z" />
+    <path
+        android:fillColor="#15803D"
+        android:pathData="M64,47 C60,44 59,48 64,49 C67,48 67,46 64,47 Z" />
+
+    <!-- Number "3" Label Pill -->
+    <path
+        android:fillColor="#881337"
+        android:pathData="M45,62 C46,60 48,59 50,59 C52,59 54,60 54,62 C54,63 53,64 51,65 C53,66 54,67 54,69 C54,71 52,72 49,72 C47,72 45,71 45,69 L47,69 C47,70 48,71 50,71 C51,71 52,70 52,69 C52,67 51,66 49,66 L48,66 L48,65 L49,65 C51,65 52,64 52,63 C52,61 51,60 50,60 C48,60 47,61 47,62 Z" />
+</vector>

@@ -1,0 +1,51 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Rounded Card -->
+    <path
+        android:fillColor="#F0FDF4"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Bottom Book (Blue Textbook) -->
+    <path
+        android:fillColor="#0284C7"
+        android:pathData="M16,56 L76,56 C79.3,56 82,58.7 82,62 L82,78 C82,81.3 79.3,84 76,84 L16,84 C12.7,84 10,81.3 10,78 L10,62 C10,58.7 12.7,56 16,56 Z" />
+    <!-- Bottom Book Pages (Cream White) -->
+    <path
+        android:fillColor="#FEF3C7"
+        android:pathData="M24,62 L80,62 L80,78 L24,78 Z" />
+    <!-- Bottom Book Spine Bookmark -->
+    <path
+        android:fillColor="#0369A1"
+        android:pathData="M10,62 C10,58.7 12.7,56 16,56 L24,56 L24,84 L16,84 C12.7,84 10,81.3 10,78 Z" />
+
+    <!-- Top Book (Coral / Amber Textbook, angled slightly) -->
+    <path
+        android:fillColor="#EA580C"
+        android:pathData="M20,32 L80,32 C83.3,32 86,34.7 86,38 L86,54 C86,57.3 83.3,60 80,60 L20,60 C16.7,60 14,57.3 14,54 L14,38 C14,34.7 16.7,32 20,32 Z" />
+    <!-- Top Book Pages -->
+    <path
+        android:fillColor="#FFFBEB"
+        android:pathData="M28,38 L84,38 L84,54 L28,54 Z" />
+    <!-- Top Book Spine -->
+    <path
+        android:fillColor="#C2410C"
+        android:pathData="M14,38 C14,34.7 16.7,32 20,32 L28,32 L28,60 L20,60 C16.7,60 14,57.3 14,54 Z" />
+    <!-- Top Book Bookmark Ribbon -->
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M52,32 L58,32 L58,48 L55,44 L52,48 Z" />
+
+    <!-- Number "2" Badge Floating Above -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M48,14 A8,8 0 1,0 48,30 A8,8 0 1,0 48,14 Z" />
+    <path
+        android:fillColor="#059669"
+        android:pathData="M48,15 A7,7 0 1,0 48,29 A7,7 0 1,0 48,15 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M46,19 C46,18 47,17.2 48.5,17.2 C50,17.2 51,18 51,19 C51,20.5 50,21.5 48,24 L51.5,24 L51.5,25.5 L46,25.5 L46,24.5 L49,21 C49.5,20.5 50,20 50,19.5 C50,19 49.5,18.5 48.5,18.5 C47.5,18.5 47,19 47,19.5 Z" />
+</vector>

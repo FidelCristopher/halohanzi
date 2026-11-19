@@ -1,0 +1,36 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Rounded Card -->
+    <path
+        android:fillColor="#F0FDFA"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Torso / Shirt (Teal) -->
+    <path
+        android:fillColor="#0D9488"
+        android:pathData="M26,82 C26,67 34,58 48,58 C62,58 70,67 70,82 Z" />
+    <!-- Collar Detail -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M44,58 L48,64 L52,58 Z" />
+
+    <!-- Head / Face -->
+    <path
+        android:fillColor="#FFD1A4"
+        android:pathData="M48,26 A16,16 0 1,0 48,58 A16,16 0 1,0 48,26 Z" />
+    <!-- Hair -->
+    <path
+        android:fillColor="#334155"
+        android:pathData="M34,34 C34,22 40,18 48,18 C56,18 62,22 62,34 C58,30 54,30 50,32 C46,34 40,34 34,34 Z" />
+    <!-- Smiling Eyes -->
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="M41,38 C42,36 44,36 45,38 Z M51,38 C52,36 54,36 55,38 Z" />
+    <!-- Smile Mouth -->
+    <path
+        android:fillColor="#E11D48"
+        android:pathData="M45,46 C46,49 50,49 51,46 Z" />
+</vector>

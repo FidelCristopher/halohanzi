@@ -1,0 +1,67 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Circle (Pastel Pink) -->
+    <path
+        android:fillColor="#FFF1F2"
+        android:pathData="M48,8 A40,40 0 1,0 48,88 A40,40 0 1,0 48,8 Z" />
+    <path
+        android:fillColor="#FFE4E6"
+        android:pathData="M48,12 A36,36 0 1,0 48,84 A36,36 0 1,0 48,12 Z" />
+
+    <!-- Cake Stand Plate -->
+    <path
+        android:fillColor="#E2E8F0"
+        android:pathData="M20,80 L76,80 C78,80 80,81 80,83 C80,85 78,86 76,86 L20,86 C18,86 16,85 16,83 C16,81 18,80 20,80 Z" />
+
+    <!-- Cake Base Body -->
+    <path
+        android:fillColor="#FDE047"
+        android:pathData="M24,54 L72,54 C74.2,54 76,55.8 76,58 L76,80 L20,80 L20,58 C20,55.8 21.8,54 24,54 Z" />
+    <!-- Cream Frosting Drips -->
+    <path
+        android:fillColor="#F43F5E"
+        android:pathData="M20,58 C20,55.8 21.8,54 24,54 L72,54 C74.2,54 76,55.8 76,58 L76,66 C73,69 70,65 67,68 C64,71 61,66 58,69 C55,71 52,66 48,68 C44,70 41,66 38,69 C35,72 32,66 29,68 C26,70 23,66 20,66 Z" />
+
+    <!-- Left Candle (Candle 1) -->
+    <path
+        android:fillColor="#38BDF8"
+        android:pathData="M38,36 L42,36 L42,54 L38,54 Z" />
+    <!-- Left Wick -->
+    <path
+        android:fillColor="#475569"
+        android:pathData="M39.5,33 L40.5,33 L40.5,36 L39.5,36 Z" />
+    <!-- Left Flame -->
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M40,24 C37.5,27.5 37,29 37,31 C37,32.7 38.3,34 40,34 C41.7,34 43,32.7 43,31 C43,29 42.5,27.5 40,24 Z" />
+    <path
+        android:fillColor="#FEF08A"
+        android:pathData="M40,28 C38.8,29.5 38.5,30.5 38.5,31 C38.5,31.8 39.2,32.5 40,32.5 C40.8,32.5 41.5,31.8 41.5,31 C41.5,30.5 41.2,29.5 40,28 Z" />
+
+    <!-- Right Candle (Candle 2) -->
+    <path
+        android:fillColor="#A855F7"
+        android:pathData="M54,36 L58,36 L58,54 L54,54 Z" />
+    <!-- Right Wick -->
+    <path
+        android:fillColor="#475569"
+        android:pathData="M55.5,33 L56.5,33 L56.5,36 L55.5,36 Z" />
+    <!-- Right Flame -->
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M56,24 C53.5,27.5 53,29 53,31 C53,32.7 54.3,34 56,34 C57.7,34 59,32.7 59,31 C59,29 58.5,27.5 56,24 Z" />
+    <path
+        android:fillColor="#FEF08A"
+        android:pathData="M56,28 C54.8,29.5 54.5,30.5 54.5,31 C54.5,31.8 55.2,32.5 56,32.5 C56.8,32.5 57.5,31.8 57.5,31 C57.5,30.5 57.2,29.5 56,28 Z" />
+
+    <!-- Prominent "2" Badge on Cake Base -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M48,64 A6,6 0 1,0 48,76 A6,6 0 1,0 48,64 Z" />
+    <path
+        android:fillColor="#E11D48"
+        android:pathData="M46,67 C46,66 47,65 48.5,65 C50,65 51,66 51,67 C51,68.5 50,69.5 48,72 L51.5,72 L51.5,73.5 L46,73.5 L46,72.5 L49,69 C49.5,68.5 50,68 50,67.5 C50,67 49.5,66.5 48.5,66.5 C47.5,66.5 47,67 47,67.5 Z" />
+</vector>

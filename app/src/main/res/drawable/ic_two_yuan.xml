@@ -1,0 +1,44 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Rounded Badge -->
+    <path
+        android:fillColor="#FEF3C7"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+    <path
+        android:fillColor="#FDE68A"
+        android:pathData="M24,12 L72,12 C78.6,12 84,17.4 84,24 L84,72 C84,78.6 78.6,84 72,84 L24,84 C17.4,84 12,78.6 12,72 L12,24 C12,17.4 17.4,12 24,12 Z" />
+
+    <!-- Left / Back Gold Coin -->
+    <path
+        android:fillColor="#D97706"
+        android:pathData="M38,20 A22,22 0 1,0 38,64 A22,22 0 1,0 38,20 Z" />
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M38,23 A19,19 0 1,0 38,61 A19,19 0 1,0 38,23 Z" />
+    <path
+        android:fillColor="#B45309"
+        android:pathData="M34,35 L36,35 L38,39 L40,35 L42,35 L39.5,41 L42,41 L42,42.5 L39.5,42.5 L39.5,44 L42,44 L42,45.5 L39.5,45.5 L39.5,49 L36.5,49 L36.5,45.5 L34,45.5 L34,44 L36.5,44 L36.5,42.5 L34,42.5 L34,41 L36.5,41 Z" />
+
+    <!-- Right / Front Gold Coin (Prominent with "¥2") -->
+    <path
+        android:fillColor="#B45309"
+        android:pathData="M58,32 A24,24 0 1,0 58,80 A24,24 0 1,0 58,32 Z" />
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M58,35 A21,21 0 1,0 58,77 A21,21 0 1,0 58,35 Z" />
+    <path
+        android:fillColor="#FDE68A"
+        android:pathData="M58,38 A18,18 0 1,0 58,74 A18,18 0 1,0 58,38 Z" />
+
+    <!-- Stamped "¥" and "2" on front coin -->
+    <path
+        android:fillColor="#92400E"
+        android:pathData="M48,48 L50,48 L52,52 L54,48 L56,48 L53.5,53 L56,53 L56,54.5 L53.5,54.5 L53.5,56 L55.5,56 L55.5,57.5 L53.5,57.5 L53.5,62 L50.5,62 L50.5,57.5 L48.5,57.5 L48.5,56 L50.5,56 L50.5,54.5 L48,54.5 L48,53 L50.5,53 Z" />
+    <!-- Number 2 -->
+    <path
+        android:fillColor="#92400E"
+        android:pathData="M60,49 C60,46 62,45 65,45 C68,45 70,47 70,49 C70,52 68,54 64,59 L71,59 L71,62 L60,62 L60,60 L66,52 C67,51 68,50 68,49 C68,48 67,47 65,47 C63,47 62,48 62,49 Z" />
+</vector>

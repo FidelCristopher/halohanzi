@@ -1,0 +1,32 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Rounded Background Badge (Soft Amber Indigo Triad) -->
+    <path
+        android:fillColor="#EEF2FF"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+    <path
+        android:fillColor="#E0E7FF"
+        android:pathData="M24,12 L72,12 C78.6,12 84,17.4 84,24 L84,72 C84,78.6 78.6,84 72,84 L24,84 C17.4,84 12,78.6 12,72 L12,24 C12,17.4 17.4,12 24,12 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M26,16 L70,16 C75.5,16 80,20.5 80,26 L80,70 C80,75.5 75.5,80 70,80 L26,80 C20.5,80 16,75.5 16,26 L16,20.5 C16,20.5 20.5,16 26,16 Z" />
+
+    <!-- Counting Circles (Quantity Indicators) -->
+    <path
+        android:fillColor="#818CF8"
+        android:pathData="M26,30 A5,5 0 1,0 26,40 A5,5 0 1,0 26,30 Z" />
+    <path
+        android:fillColor="#6366F1"
+        android:pathData="M26,46 A5,5 0 1,0 26,56 A5,5 0 1,0 26,46 Z" />
+    <path
+        android:fillColor="#4F46E5"
+        android:pathData="M26,62 A5,5 0 1,0 26,72 A5,5 0 1,0 26,62 Z" />
+
+    <!-- Large Friendly Question Mark (Berapa Banyak / 多少) -->
+    <path
+        android:fillColor="#4338CA"
+        android:pathData="M52,24 C62,24 70,30 70,40 C70,47 65,51 60,55 C57,58 56,61 56,64 L50,64 C50,59 52,55 56,51 C60,47 63,44 63,40 C63,34 58,30 52,30 C46,30 42,34 41,39 L35,37 C37,29 43,24 52,24 Z M53,70 C55.2,70 57,71.8 57,74 C57,76.2 55.2,78 53,78 C50.8,78 49,76.2 49,74 C49,71.8 50.8,70 53,70 Z" />
+</vector>

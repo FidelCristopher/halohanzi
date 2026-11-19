@@ -1,0 +1,39 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Circle -->
+    <path
+        android:fillColor="#FEF3C7"
+        android:pathData="M48,8 A40,40 0 1,0 48,88 A40,40 0 1,0 48,8 Z" />
+    <path
+        android:fillColor="#FDE68A"
+        android:pathData="M48,12 A36,36 0 1,0 48,84 A36,36 0 1,0 48,12 Z" />
+
+    <!-- Money Pouch Body (Lucky Red) -->
+    <path
+        android:fillColor="#DC2626"
+        android:pathData="M48,34 C38,34 30,38 24,47 C16,59 20,78 35,81 C40,82 56,82 61,81 C76,78 80,59 72,47 C66,38 58,34 48,34 Z" />
+
+    <!-- Pouch Neck Frill / Ruffle Top -->
+    <path
+        android:fillColor="#B91C1C"
+        android:pathData="M32,24 C34,20 38,20 42,24 C46,20 50,20 54,24 C58,20 62,20 64,24 L62,34 L34,34 Z" />
+
+    <!-- Golden Silk Tie Cord & Tassels -->
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M30,34 L66,34 L65,38 L31,38 Z" />
+    <path
+        android:fillColor="#D97706"
+        android:pathData="M48,38 L44,48 L48,48 Z M48,38 L52,48 L48,48 Z" />
+
+    <!-- Embossed Gold Coin / Yuan Symbol on Front -->
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M48,52 A12,12 0 1,0 48,76 A12,12 0 1,0 48,52 Z" />
+    <path
+        android:fillColor="#D97706"
+        android:pathData="M44,58 L46,58 L48,61 L50,58 L52,58 L49.5,62 L52,62 L52,63.5 L49.5,63.5 L49.5,65 L52,65 L52,66.5 L49.5,66.5 L49.5,70 L46.5,70 L46.5,66.5 L44,66.5 L44,65 L46.5,65 L46.5,63.5 L44,63.5 L44,62 L46.5,62 Z" />
+</vector>

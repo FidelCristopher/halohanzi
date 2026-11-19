@@ -20,10 +20,10 @@ val bab3Stage4Part1Exercises = listOf(
         correctAnswer = "tahun (umur)",
         audioToSpeak = "岁",
         pictureOptions = listOf(
-            PictureOption("u3_s4_p1_opt1", "tahun (umur)", "🎂", R.drawable.ic_crown, true),
-            PictureOption("u3_s4_p1_opt2", "uang", "¥", R.drawable.ic_coin, false),
-            PictureOption("u3_s4_p1_opt3", "orang", "👤", R.drawable.ic_cap, false),
-            PictureOption("u3_s4_p1_opt4", "buku", "📖", R.drawable.ic_book, false)
+            PictureOption("u3_s4_p1_opt1", "tahun (umur)", "", R.drawable.ic_birthday_cake, true),
+            PictureOption("u3_s4_p1_opt2", "uang", "", R.drawable.ic_yuan_currency, false),
+            PictureOption("u3_s4_p1_opt3", "orang", "", R.drawable.ic_person_single, false),
+            PictureOption("u3_s4_p1_opt4", "buku", "", R.drawable.ic_book_chinese, false)
         )
     ),
 
@@ -169,10 +169,10 @@ val bab3Stage4Part2Exercises = listOf(
         correctAnswer = "berapa usia",
         audioToSpeak = "多大",
         pictureOptions = listOf(
-            PictureOption("u3_s4_p2_opt1", "berapa usia", "🎂", R.drawable.ic_crown, true),
-            PictureOption("u3_s4_p2_opt2", "berapa uang", "¥", R.drawable.ic_coin, false),
-            PictureOption("u3_s4_p2_opt3", "berapa orang", "👥", R.drawable.ic_pouch, false),
-            PictureOption("u3_s4_p2_opt4", "siapa", "👤", R.drawable.ic_cap, false)
+            PictureOption("u3_s4_p2_opt1", "berapa usia", "", R.drawable.ic_birthday_cake, true),
+            PictureOption("u3_s4_p2_opt2", "berapa uang", "", R.drawable.ic_price_tag, false),
+            PictureOption("u3_s4_p2_opt3", "berapa orang", "", R.drawable.ic_two_friends, false),
+            PictureOption("u3_s4_p2_opt4", "siapa", "", R.drawable.ic_person_single, false)
         )
     ),
 

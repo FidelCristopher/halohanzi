@@ -1,0 +1,20 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Rounded Background Badge (Lucky Auspicious Coral Red) -->
+    <path
+        android:fillColor="#FEE2E2"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+    <path
+        android:fillColor="#FECACA"
+        android:pathData="M24,12 L72,12 C78.6,12 84,17.4 84,24 L84,72 C84,78.6 78.6,84 72,84 L24,84 C17.4,84 12,78.6 12,72 L12,24 C12,17.4 17.4,12 24,12 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M26,16 L70,16 C75.5,16 80,20.5 80,26 L80,70 C80,75.5 75.5,80 70,80 L26,80 C20.5,80 16,75.5 16,26 L16,20.5 C16,20.5 20.5,16 26,16 Z" />
+    <!-- Number 8 (Figure 8, dual loops) -->
+    <path
+        android:fillColor="#DC2626"
+        android:pathData="M48,23 C56,23 61,28 61,35 C61,41 57,44 52,46 C58,48 63,52 63,60 C63,68 56,73 48,73 C40,73 33,68 33,60 C33,52 38,48 44,46 C39,44 35,41 35,35 C35,28 40,23 48,23 Z M48,29 C44,29 42,32 42,35 C42,39 44,42 48,42 C52,42 54,39 54,35 C54,32 52,29 48,29 Z M48,48 C43,48 40,51 40,59 C40,64 43,67 48,67 C53,67 56,64 56,59 C56,51 53,48 48,48 Z" />
+</vector>

@@ -1,0 +1,36 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Rounded Card -->
+    <path
+        android:fillColor="#FEF3C7"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Tag String / Loop -->
+    <path
+        android:fillColor="#D97706"
+        android:pathData="M30,16 C25,16 20,21 20,26 C20,31 24,34 28,34 L30,31 C26,31 23,29 23,26 C23,23 26,19 30,19 C34,19 36,22 36,25 L39,25 C39,20 35,16 30,16 Z" />
+
+    <!-- Angled Price Tag Body -->
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M32,28 L68,28 C72,28 75,31 77,34 L86,52 C88,56 88,60 86,64 L77,82 C75,85 72,88 68,88 L32,88 C26.5,88 22,83.5 22,78 L22,38 C22,32.5 26.5,28 32,28 Z" />
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M34,32 L66,32 C68.5,32 71,34 72,36 L80,52 C82,56 82,60 80,64 L72,80 C71,82 68.5,84 66,84 L34,84 C30.7,84 28,81.3 28,78 L28,38 C28,34.7 30.7,32 34,32 Z" />
+
+    <!-- Tag Hole -->
+    <path
+        android:fillColor="#FEF3C7"
+        android:pathData="M36,54 A4,4 0 1,0 36,62 A4,4 0 1,0 36,54 Z" />
+
+    <!-- "¥ ?" on Tag -->
+    <path
+        android:fillColor="#78350F"
+        android:pathData="M48,47 L50,47 L52,51 L54,47 L56,47 L53.5,52 L56,52 L56,53.5 L53.5,53.5 L53.5,55 L55.5,55 L55.5,56.5 L53.5,56.5 L53.5,61 L50.5,61 L50.5,56.5 L48.5,56.5 L48.5,55 L50.5,55 L50.5,53.5 L48,53.5 L48,52 L50.5,52 Z" />
+    <path
+        android:fillColor="#78350F"
+        android:pathData="M64,47 C68,47 71,50 71,54 C71,57 69,59 66,61 L64,63 L64,66 L61,66 L61,62 L64,60 C66,58 68,57 68,54 C68,51 66,49 64,49 C61,49 60,51 59,53 L56,52 C57,49 60,47 64,47 Z M62.5,68 A1.5,1.5 0 1,0 62.5,71 A1.5,1.5 0 1,0 62.5,68 Z" />
+</vector>

@@ -20,10 +20,10 @@ val bab3Stage3Part1Exercises = listOf(
         correctAnswer = "berapa banyak",
         audioToSpeak = "多少",
         pictureOptions = listOf(
-            PictureOption("u3_s3_p1_opt1", "berapa banyak", "?", R.drawable.ic_coin, true),
-            PictureOption("u3_s3_p1_opt2", "satu", "1", R.drawable.ic_cap, false),
-            PictureOption("u3_s3_p1_opt3", "teman", "👥", R.drawable.ic_pouch, false),
-            PictureOption("u3_s3_p1_opt4", "guru", "👨‍🏫", R.drawable.ic_crown, false)
+            PictureOption("u3_s3_p1_opt1", "berapa banyak", "", R.drawable.ic_question_quantity, true),
+            PictureOption("u3_s3_p1_opt2", "satu", "1", R.drawable.ic_num_1, false),
+            PictureOption("u3_s3_p1_opt3", "teman", "", R.drawable.ic_two_friends, false),
+            PictureOption("u3_s3_p1_opt4", "guru", "", R.drawable.ic_teacher_avatar, false)
         )
     ),
 
@@ -169,10 +169,10 @@ val bab3Stage3Part2Exercises = listOf(
         correctAnswer = "yuan (uang lisan)",
         audioToSpeak = "块",
         pictureOptions = listOf(
-            PictureOption("u3_s3_p2_opt1", "yuan (uang)", "¥", R.drawable.ic_coin, true),
-            PictureOption("u3_s3_p2_opt2", "buku", "📖", R.drawable.ic_book, false),
-            PictureOption("u3_s3_p2_opt3", "teman", "👥", R.drawable.ic_pouch, false),
-            PictureOption("u3_s3_p2_opt4", "orang", "👤", R.drawable.ic_cap, false)
+            PictureOption("u3_s3_p2_opt1", "yuan (uang)", "", R.drawable.ic_yuan_currency, true),
+            PictureOption("u3_s3_p2_opt2", "buku", "", R.drawable.ic_book_chinese, false),
+            PictureOption("u3_s3_p2_opt3", "teman", "", R.drawable.ic_two_friends, false),
+            PictureOption("u3_s3_p2_opt4", "orang", "", R.drawable.ic_person_single, false)
         )
     ),
 

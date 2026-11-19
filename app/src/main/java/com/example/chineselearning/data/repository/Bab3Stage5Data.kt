@@ -20,10 +20,10 @@ val bab3Stage5Part1Exercises = listOf(
         correctAnswer = "dua yuan uang",
         audioToSpeak = "两块钱",
         pictureOptions = listOf(
-            PictureOption("u3_s5_p1_opt1", "dua yuan uang", "¥2", R.drawable.ic_coin, true),
-            PictureOption("u3_s5_p1_opt2", "dua orang", "👥", R.drawable.ic_pouch, false),
-            PictureOption("u3_s5_p1_opt3", "dua tahun", "🎂", R.drawable.ic_crown, false),
-            PictureOption("u3_s5_p1_opt4", "dua buku", "📖", R.drawable.ic_book, false)
+            PictureOption("u3_s5_p1_opt1", "dua yuan uang", "", R.drawable.ic_two_yuan, true),
+            PictureOption("u3_s5_p1_opt2", "dua orang", "", R.drawable.ic_two_friends, false),
+            PictureOption("u3_s5_p1_opt3", "dua tahun", "", R.drawable.ic_cake_two_candles, false),
+            PictureOption("u3_s5_p1_opt4", "dua buku", "", R.drawable.ic_two_books, false)
         )
     ),
 

@@ -1,0 +1,54 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Rounded Card -->
+    <path
+        android:fillColor="#F0FDF4"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Calendar Backplate Body -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M18,30 L66,30 C69.3,30 72,32.7 72,36 L72,78 C72,81.3 69.3,84 66,84 L18,84 C14.7,84 12,81.3 12,78 L12,36 C12,32.7 14.7,30 18,30 Z" />
+    <path
+        android:fillColor="#E2E8F0"
+        android:pathData="M14,36 L70,36 L70,78 C70,80.2 68.2,82 66,82 L18,82 C15.8,82 14,80.2 14,78 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M16,36 L68,36 L68,76 C68,78.2 66.2,80 64,80 L20,80 C17.8,80 16,78.2 16,76 Z" />
+
+    <!-- Calendar Red Header -->
+    <path
+        android:fillColor="#EF4444"
+        android:pathData="M18,24 L66,24 C69.3,24 72,26.7 72,30 L72,36 L12,36 L12,30 C12,26.7 14.7,24 18,24 Z" />
+    <!-- Binder Rings -->
+    <path
+        android:fillColor="#94A3B8"
+        android:pathData="M26,18 L30,18 L30,28 L26,28 Z M54,18 L58,18 L58,28 L54,28 Z" />
+
+    <!-- Grid lines on calendar -->
+    <path
+        android:fillColor="#CBD5E1"
+        android:pathData="M22,46 L32,46 L32,48 L22,48 Z M38,46 L48,46 L48,48 L38,48 Z M54,46 L64,46 L64,48 L54,48 Z M22,56 L32,56 L32,58 L22,58 Z M38,56 L48,56 L48,58 L38,58 Z M22,66 L32,66 L32,68 L22,68 Z" />
+
+    <!-- Clock Overlapping Lower Right -->
+    <path
+        android:fillColor="#0284C7"
+        android:pathData="M64,50 A18,18 0 1,0 64,86 A18,18 0 1,0 64,50 Z" />
+    <path
+        android:fillColor="#F0F9FF"
+        android:pathData="M64,53 A15,15 0 1,0 64,83 A15,15 0 1,0 64,53 Z" />
+    <!-- Clock Hands (Hour & Minute) -->
+    <path
+        android:fillColor="#0369A1"
+        android:pathData="M63,59 L65,59 L65,68 L63,68 Z" />
+    <path
+        android:fillColor="#0369A1"
+        android:pathData="M63,67 L72,67 L72,69 L63,69 Z" />
+    <!-- Center Dot -->
+    <path
+        android:fillColor="#075985"
+        android:pathData="M64,66 A2,2 0 1,0 64,70 A2,2 0 1,0 64,66 Z" />
+</vector>

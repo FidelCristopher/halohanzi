@@ -20,10 +20,10 @@ val bab3Stage1Part1Exercises = listOf(
         correctAnswer = "tiga",
         audioToSpeak = "三",
         pictureOptions = listOf(
-            PictureOption("u3_s1_p1_opt1", "satu", "1", R.drawable.ic_coin, false),
-            PictureOption("u3_s1_p1_opt2", "tiga", "3", R.drawable.ic_pouch, true),
-            PictureOption("u3_s1_p1_opt3", "dua", "2", R.drawable.ic_cap, false),
-            PictureOption("u3_s1_p1_opt4", "lima", "5", R.drawable.ic_crown, false)
+            PictureOption("u3_s1_p1_opt1", "satu", "1", R.drawable.ic_num_1, false),
+            PictureOption("u3_s1_p1_opt2", "tiga", "3", R.drawable.ic_num_3, true),
+            PictureOption("u3_s1_p1_opt3", "dua", "2", R.drawable.ic_num_2, false),
+            PictureOption("u3_s1_p1_opt4", "lima", "5", R.drawable.ic_num_5, false)
         )
     ),
 
@@ -169,10 +169,10 @@ val bab3Stage1Part2Exercises = listOf(
         correctAnswer = "delapan",
         audioToSpeak = "八",
         pictureOptions = listOf(
-            PictureOption("u3_s1_p2_opt1", "enam", "6", R.drawable.ic_coin, false),
-            PictureOption("u3_s1_p2_opt2", "delapan", "8", R.drawable.ic_crown, true),
-            PictureOption("u3_s1_p2_opt3", "tujuh", "7", R.drawable.ic_pouch, false),
-            PictureOption("u3_s1_p2_opt4", "sepuluh", "10", R.drawable.ic_cap, false)
+            PictureOption("u3_s1_p2_opt1", "enam", "6", R.drawable.ic_num_6, false),
+            PictureOption("u3_s1_p2_opt2", "delapan", "8", R.drawable.ic_num_8, true),
+            PictureOption("u3_s1_p2_opt3", "tujuh", "7", R.drawable.ic_num_7, false),
+            PictureOption("u3_s1_p2_opt4", "sepuluh", "10", R.drawable.ic_num_10, false)
         )
     ),
 
