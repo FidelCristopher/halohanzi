@@ -3119,77 +3119,118 @@ object LearningRepository {
             )
         ),
 
-        // BAB 4: Makanan & Minuman di Restoran
+        // BAB 4: Waktu, Tanggal & Kalender (时间、日期与日历)
         UnitCourse(
             id = "unit_4",
             unitNumber = 4,
-            title = "Makanan & Kafe",
-            subtitle = "Memesan nasi, sayur, teh, dan menanyakan harga",
-            bannerTitle = "Di Restoran Tiongkok",
-            emoji = "🍜",
+            title = "Waktu & Kalender",
+            subtitle = "Membaca kalender, jam analog, janji temu, dan durasi",
+            bannerTitle = "Waktu, Tanggal & Kalender",
+            emoji = "📅",
             level = "Level 4",
             story = stories[3],
             nodes = listOf(
-                PathNode("u4_n1", "Makan & Minum", Color(0xFFFF9800), NodeIconType.CAP, isCompleted = false, lessonId = "u4_l1"),
-                PathNode("u4_n2", "Nasi & Teh", Color(0xFFFFC107), NodeIconType.CAP, isCompleted = false, lessonId = "u4_l1"),
-                PathNode("u4_n3", "Latihan Kafe", Color(0xFFFFC107), NodeIconType.DUMBBELL, isCompleted = false, lessonId = "u4_l1"),
-                PathNode("u4_n4", "Berapa Harganya", Color(0xFFFFC107), NodeIconType.CAP, isCompleted = false, lessonId = "u4_l1"),
-                PathNode("u4_n5", "Checkpoint", Color(0xFFFFB300), NodeIconType.CHEST, isCompleted = false, lessonId = "u4_l1")
+                PathNode("u4_n1", "Hari & Pekan", Color(0xFFFFC107), NodeIconType.CAP, isCompleted = false, lessonId = "u4_l1"),
+                PathNode("u4_n2", "Tanggal & Bulan", Color(0xFFFFC107), NodeIconType.DUMBBELL, isCompleted = false, lessonId = "u4_l2"),
+                PathNode("u4_n3", "Jam & Menit", Color(0xFFFFC107), NodeIconType.CAP, isCompleted = false, lessonId = "u4_l3"),
+                PathNode("u4_n4", "Durasi & Waktu", Color(0xFFFFC107), NodeIconType.DUMBBELL, isCompleted = false, lessonId = "u4_l4"),
+                PathNode("u4_n5", "Janji Temu", Color(0xFFFFC107), NodeIconType.CAP, isCompleted = false, lessonId = "u4_l5"),
+                PathNode("u4_n6", "Evaluasi Kalender", Color(0xFFFFC107), NodeIconType.SHUFFLE, isCompleted = false, lessonId = "u4_l6"),
+                PathNode("u4_n7", "Kuis Cerita", Color(0xFFFFC107), NodeIconType.BOOK, isCompleted = false, lessonId = "u4_l1"),
+                PathNode("u4_n8", "Checkpoint Bab", Color(0xFFFFB300), NodeIconType.CHEST, isCompleted = false, lessonId = "u4_l1"),
+                PathNode("u4_n9", "Rest area", Color(0xFF03A9F4), NodeIconType.REST_AREA, isCompleted = false, lessonId = "u4_l1")
             ),
             lessons = listOf(
                 Lesson(
                     id = "u4_l1",
-                    title = "Memesan Makanan & Teh",
-                    subtitle = "Kata kerja 吃 dan 喝",
-                    grammarNote = "Menanyakan harga: '多少钱？ (duōshao qián)'. Satuan uang: '块 (kuài)'. Contoh: 一共多少钱？ (Totalnya berapa harganya?).",
+                    title = "Hari & Pekan",
+                    subtitle = "Hari ini, besok, kemarin, dan 星期",
+                    grammarNote = "Nama hari dibentuk dari 星期 + Angka 1-6 (星期一 = Senin ... 星期六 = Sabtu). Khusus hari Minggu adalah 星期天 atau 星期日.",
                     newWords = listOf(
-                        Word("w4_1", "吃", "chī", "Makan", "Kata kerja", "你想吃什么？", "Nǐ xiǎng chī shénme?", "Kamu mau makan apa?"),
-                        Word("w4_2", "喝", "hē", "Minum", "Kata kerja", "我想喝茶。", "Wǒ xiǎng hē chá.", "Saya mau minum teh."),
-                        Word("w4_3", "米饭", "mǐfàn", "Nasi putih", "Makanan", "米饭很好吃。", "Mǐfàn hěn hǎochī.", "Nasi putih sangat enak.")
+                        Word("w4_1", "今天", "jīntiān", "Hari ini", "Waktu", "今天是星期一。", "Jīntiān shì xīngqīyī.", "Hari ini adalah hari Senin."),
+                        Word("w4_2", "明天", "míngtiān", "Besok", "Waktu", "明天是星期二。", "Míngtiān shì xīngqī'èr.", "Besok adalah hari Selasa."),
+                        Word("w4_3", "昨天", "zuótiān", "Kemarin", "Waktu", "昨天是星期天。", "Zuótiān shì xīngqītiān.", "Kemarin adalah hari Minggu."),
+                        Word("w4_4", "星期", "xīngqī", "Minggu / pekan", "Waktu", "今天星期几？", "Jīntiān xīngqī jǐ?", "Hari ini hari apa?"),
+                        Word("w4_5", "星期天", "xīngqītiān", "Hari Minggu", "Waktu", "星期天见。", "Xīngqītiān jiàn.", "Sampai jumpa hari Minggu.")
                     ),
-                    exercises = listOf(
-                        Exercise(
-                            id = "u4_ex1",
-                            type = ExerciseType.PICTURE_CHOICE,
-                            title = "Pilih gambar yang benar",
-                            targetHanzi = "茶",
-                            targetPinyin = "chá",
-                            targetTranslation = "Teh",
-                            correctAnswer = "teh",
-                            audioToSpeak = "茶",
-                            pictureOptions = listOf(
-                                PictureOption("p4_1", "teh", "🍵", isCorrect = true),
-                                PictureOption("p4_2", "air", "💧", isCorrect = false),
-                                PictureOption("p4_3", "apel", "🍎", isCorrect = false),
-                                PictureOption("p4_4", "nasi", "🍚", isCorrect = false)
-                            )
-                        ),
-                        Exercise(
-                            id = "u4_ex2",
-                            type = ExerciseType.FILL_BLANK,
-                            title = "Lengkapi terjemahan",
-                            targetHanzi = "我 想 喝 茶。",
-                            targetPinyin = "Wǒ xiǎng hē chá",
-                            targetTranslation = "Saya ingin minum teh.",
-                            sentenceWithBlank = "Saya ingin ________ teh.",
-                            options = listOf("minum", "makan", "beli"),
-                            correctAnswer = "minum",
-                            audioToSpeak = "我想喝茶。"
-                        ),
-                        Exercise(
-                            id = "u4_ex3",
-                            type = ExerciseType.MATCH_PAIRS,
-                            title = "Ketuk pasangan yang sesuai",
-                            correctAnswer = "ALL_MATCHED",
-                            matchPairs = listOf(
-                                MatchPairItem("m4_1", "吃", "chī", "makan"),
-                                MatchPairItem("m4_2", "喝", "hē", "minum"),
-                                MatchPairItem("m4_3", "米饭", "mǐfàn", "nasi"),
-                                MatchPairItem("m4_4", "茶", "chá", "teh"),
-                                MatchPairItem("m4_5", "苹果", "píngguǒ", "apel")
-                            )
-                        )
-                    )
+                    exercises = bab4Stage1Part1Exercises,
+                    exercisesPart1 = bab4Stage1Part1Exercises,
+                    exercisesPart2 = bab4Stage1Part2Exercises
+                ),
+                Lesson(
+                    id = "u4_l2",
+                    title = "Tanggal & Bulan",
+                    subtitle = "Format tanggal makro ke mikro: 年 - 月 - 日/号",
+                    grammarNote = "Format kalender Mandarin selalu dari unit terbesar ke terkecil: Tahun (年) -> Bulan (月) -> Tanggal (号/日). Contoh: 2024年10月5号.",
+                    newWords = listOf(
+                        Word("w4_6", "年", "nián", "Tahun", "Waktu", "今年是二零二四年。", "Jīnnián shì èrlíng'èrsìnián.", "Tahun ini adalah tahun 2024."),
+                        Word("w4_7", "今年", "jīnnián", "Tahun ini", "Waktu", "今年很好。", "Jīnnián hěn hǎo.", "Tahun ini sangat baik."),
+                        Word("w4_8", "明年", "míngnián", "Tahun depan", "Waktu", "明年我去中国。", "Míngnián wǒ qù Zhōngguó.", "Tahun depan saya pergi ke Tiongkok."),
+                        Word("w4_9", "去年", "qùnián", "Tahun lalu", "Waktu", "去年他是学生。", "Qùnián tā shì xuéshēng.", "Tahun lalu dia adalah murid."),
+                        Word("w4_10", "月", "yuè", "Bulan", "Waktu", "今天几月几号？", "Jīntiān jǐ yuè jǐ hào?", "Hari ini tanggal berapa?"),
+                        Word("w4_11", "号", "hào", "Nomor / tanggal", "Waktu", "十月五号。", "Shíyuè wǔhào.", "Tanggal 5 Oktober.")
+                    ),
+                    exercises = bab4Stage2Part1Exercises,
+                    exercisesPart1 = bab4Stage2Part1Exercises,
+                    exercisesPart2 = bab4Stage2Part2Exercises
+                ),
+                Lesson(
+                    id = "u4_l3",
+                    title = "Jam Analog & Menit",
+                    subtitle = "Menanyakan waktu: 现在几点？ dan penggunaan 半",
+                    grammarNote = "Pukul jam: Angka + 点 (diǎn). Menit: Angka + 分 (fēn). Setengah jam (30 menit): 半 (bàn). Contoh: 两点半 (02:30), 九点十分 (09:10).",
+                    newWords = listOf(
+                        Word("w4_12", "现在", "xiànzài", "Sekarang", "Waktu", "现在几点？", "Xiànzài jǐ diǎn?", "Sekarang jam berapa?"),
+                        Word("w4_13", "点", "diǎn", "Jam (pukul)", "Waktu", "现在八点。", "Xiànzài bā diǎn.", "Sekarang jam delapan."),
+                        Word("w4_14", "分", "fēn", "Menit", "Waktu", "九点十分。", "Jiǔ diǎn shí fēn.", "Jam 09:10."),
+                        Word("w4_15", "半", "bàn", "Setengah / separuh", "Waktu", "十点半。", "Shí diǎn bàn.", "Jam 10:30.")
+                    ),
+                    exercises = bab4Stage3Part1Exercises,
+                    exercisesPart1 = bab4Stage3Part1Exercises,
+                    exercisesPart2 = bab4Stage3Part2Exercises
+                ),
+                Lesson(
+                    id = "u4_l4",
+                    title = "Durasi & Konsep Waktu",
+                    subtitle = "Durasi jam 小时, waktu 时间, dan 什么时候",
+                    grammarNote = "Durasi: Angka + 个 + 小时 (一个小时 = 1 jam). Menanyakan kapan: 什么时候 (shénme shíhou). Contoh: 你什么时候去？ (Kapan kamu pergi?).",
+                    newWords = listOf(
+                        Word("w4_16", "小时", "xiǎoshí", "Jam (durasi)", "Waktu", "一个小时。", "Yí gè xiǎoshí.", "Satu jam."),
+                        Word("w4_17", "时间", "shíjiān", "Waktu", "Waktu", "我有时间。", "Wǒ yǒu shíjiān.", "Saya punya waktu."),
+                        Word("w4_18", "时候", "shíhou", "Saat / waktu", "Waktu", "什么时候？", "Shénme shíhou?", "Kapan?"),
+                        Word("w4_19", "分钟", "fēnzhōng", "Menit (durasi)", "Waktu", "五分钟。", "Wǔ fēnzhōng.", "Lima menit.")
+                    ),
+                    exercises = bab4Stage4Part1Exercises,
+                    exercisesPart1 = bab4Stage4Part1Exercises,
+                    exercisesPart2 = bab4Stage4Part2Exercises
+                ),
+                Lesson(
+                    id = "u4_l5",
+                    title = "Janji Temu & Jadwal",
+                    subtitle = "Pola Waktu + 见 (Sampai jumpa...)",
+                    grammarNote = "Pola membuat janji temu: Waktu + 见 (jiàn). Contoh: 明天见 (sampai jumpa besok), 三点见 (jumpa jam 3), 星期天见 (jumpa hari Minggu).",
+                    newWords = listOf(
+                        Word("w4_20", "见", "jiàn", "Bertemu / melihat", "Kata kerja", "明天见。", "Míngtiān jiàn.", "Sampai jumpa besok."),
+                        Word("w4_21", "再见", "zàijiàn", "Selamat tinggal", "Ungkapan", "老师再见。", "Lǎoshī zàijiàn.", "Selamat tinggal guru.")
+                    ),
+                    exercises = bab4Stage5Part1Exercises,
+                    exercisesPart1 = bab4Stage5Part1Exercises,
+                    exercisesPart2 = bab4Stage5Part2Exercises
+                ),
+                Lesson(
+                    id = "u4_l6",
+                    title = "Evaluasi Komprehensif Kalender",
+                    subtitle = "Review 21 kosakata waktu, tanggal & kalender",
+                    grammarNote = "Uji pemahaman komprehensif seluruh 21 kosakata Bab 4: hari dalam sepekan, tanggal & bulan kalender, pembacaan jam, durasi, dan janji temu.",
+                    newWords = listOf(
+                        Word("w4_1", "今天", "jīntiān", "Hari ini", "Waktu", "今天星期几？", "Jīntiān xīngqī jǐ?", "Hari ini hari apa?"),
+                        Word("w4_12", "现在", "xiànzài", "Sekarang", "Waktu", "现在几点？", "Xiànzài jǐ diǎn?", "Sekarang jam berapa?"),
+                        Word("w4_18", "时候", "shíhou", "Saat / waktu", "Waktu", "什么时候见？", "Shénme shíhou jiàn?", "Kapan kita bertemu?"),
+                        Word("w4_20", "见", "jiàn", "Bertemu", "Kata kerja", "明天见。", "Míngtiān jiàn.", "Sampai jumpa besok.")
+                    ),
+                    exercises = bab4Stage6Part1Exercises,
+                    exercisesPart1 = bab4Stage6Part1Exercises,
+                    exercisesPart2 = bab4Stage6Part2Exercises
                 )
             )
         ),
