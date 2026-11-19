@@ -18,10 +18,10 @@ val bab10Stage4Part1Exercises = listOf(
         correctAnswer = "pergi",
         audioToSpeak = "去",
         pictureOptions = listOf(
-            PictureOption("u10_s4_p1_opt1", "pergi", "🚶", R.drawable.ic_trans_go, true),
-            PictureOption("u10_s4_p1_opt2", "datang", "👋", R.drawable.ic_target, false),
-            PictureOption("u10_s4_p1_opt3", "duduk", "🪑", R.drawable.ic_book, false),
-            PictureOption("u10_s4_p1_opt4", "tidur", "🛌", R.drawable.ic_crown, false)
+            PictureOption("u10_s4_p1_opt1", "pergi", "", R.drawable.ic_trans_go, true),
+            PictureOption("u10_s4_p1_opt2", "datang", "", R.drawable.ic_trans_come, false),
+            PictureOption("u10_s4_p1_opt3", "duduk", "", R.drawable.ic_fam_sit, false),
+            PictureOption("u10_s4_p1_opt4", "tidur", "", R.drawable.ic_action_sleep, false)
         )
     ),
 
@@ -108,10 +108,10 @@ val bab10Stage4Part1Exercises = listOf(
         correctAnswer = "datang",
         audioToSpeak = "来",
         pictureOptions = listOf(
-            PictureOption("u10_s4_p1_opt7_1", "datang", "👋", R.drawable.ic_trans_come, true),
-            PictureOption("u10_s4_p1_opt7_2", "pergi", "🚶", R.drawable.ic_target, false),
-            PictureOption("u10_s4_p1_opt7_3", "makan", "🍜", R.drawable.ic_book, false),
-            PictureOption("u10_s4_p1_opt7_4", "tidur", "🛌", R.drawable.ic_crown, false)
+            PictureOption("u10_s4_p1_opt7_1", "datang", "", R.drawable.ic_trans_come, true),
+            PictureOption("u10_s4_p1_opt7_2", "pergi", "", R.drawable.ic_trans_go, false),
+            PictureOption("u10_s4_p1_opt7_3", "makan", "", R.drawable.ic_action_eat, false),
+            PictureOption("u10_s4_p1_opt7_4", "tidur", "", R.drawable.ic_action_sleep, false)
         )
     ),
 
@@ -169,10 +169,10 @@ val bab10Stage4Part2Exercises = listOf(
         correctAnswer = "kembali / pulang",
         audioToSpeak = "回",
         pictureOptions = listOf(
-            PictureOption("u10_s4_p2_opt1", "kembali / pulang", "🏠", R.drawable.ic_trans_return_home, true),
-            PictureOption("u10_s4_p2_opt2", "pergi", "🚶", R.drawable.ic_target, false),
-            PictureOption("u10_s4_p2_opt3", "datang", "👋", R.drawable.ic_book, false),
-            PictureOption("u10_s4_p2_opt4", "duduk", "🪑", R.drawable.ic_crown, false)
+            PictureOption("u10_s4_p2_opt1", "kembali / pulang", "", R.drawable.ic_trans_return_home, true),
+            PictureOption("u10_s4_p2_opt2", "pergi", "", R.drawable.ic_trans_go, false),
+            PictureOption("u10_s4_p2_opt3", "datang", "", R.drawable.ic_trans_come, false),
+            PictureOption("u10_s4_p2_opt4", "duduk", "", R.drawable.ic_fam_sit, false)
         )
     ),
 
@@ -259,10 +259,10 @@ val bab10Stage4Part2Exercises = listOf(
         correctAnswer = "pulang ke rumah",
         audioToSpeak = "回家",
         pictureOptions = listOf(
-            PictureOption("u10_s4_p2_opt7_1", "pulang ke rumah", "🏠", R.drawable.ic_trans_return_home, true),
-            PictureOption("u10_s4_p2_opt7_2", "ke sekolah", "🏫", R.drawable.ic_cap, false),
-            PictureOption("u10_s4_p2_opt7_3", "ke toko", "🏪", R.drawable.ic_target, false),
-            PictureOption("u10_s4_p2_opt7_4", "ke stasiun", "🚉", R.drawable.ic_book, false)
+            PictureOption("u10_s4_p2_opt7_1", "pulang ke rumah", "", R.drawable.ic_trans_return_home, true),
+            PictureOption("u10_s4_p2_opt7_2", "ke sekolah", "", R.drawable.ic_edu_school, false),
+            PictureOption("u10_s4_p2_opt7_3", "ke toko", "", R.drawable.ic_shop_store, false),
+            PictureOption("u10_s4_p2_opt7_4", "ke stasiun", "", R.drawable.ic_trans_train_station, false)
         )
     ),
 

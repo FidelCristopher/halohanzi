@@ -18,10 +18,10 @@ val bab10Stage5Part1Exercises = listOf(
         correctAnswer = "pesawat terbang",
         audioToSpeak = "飞机",
         pictureOptions = listOf(
-            PictureOption("u10_s5_p1_opt1", "pesawat terbang", "✈️", R.drawable.ic_trans_airplane, true),
-            PictureOption("u10_s5_p1_opt2", "kereta", "🚆", R.drawable.ic_target, false),
-            PictureOption("u10_s5_p1_opt3", "mobil", "🚗", R.drawable.ic_book, false),
-            PictureOption("u10_s5_p1_opt4", "taksi", "🚕", R.drawable.ic_crown, false)
+            PictureOption("u10_s5_p1_opt1", "pesawat terbang", "", R.drawable.ic_trans_airplane, true),
+            PictureOption("u10_s5_p1_opt2", "kereta", "", R.drawable.ic_trans_train, false),
+            PictureOption("u10_s5_p1_opt3", "mobil", "", R.drawable.ic_trans_car, false),
+            PictureOption("u10_s5_p1_opt4", "taksi", "", R.drawable.ic_trans_taxi, false)
         )
     ),
 
@@ -108,10 +108,10 @@ val bab10Stage5Part1Exercises = listOf(
         correctAnswer = "kereta api",
         audioToSpeak = "火车",
         pictureOptions = listOf(
-            PictureOption("u10_s5_p1_opt7_1", "kereta api", "🚆", R.drawable.ic_trans_train, true),
-            PictureOption("u10_s5_p1_opt7_2", "pesawat", "✈️", R.drawable.ic_target, false),
-            PictureOption("u10_s5_p1_opt7_3", "mobil", "🚗", R.drawable.ic_book, false),
-            PictureOption("u10_s5_p1_opt7_4", "taksi", "🚕", R.drawable.ic_crown, false)
+            PictureOption("u10_s5_p1_opt7_1", "kereta api", "", R.drawable.ic_trans_train, true),
+            PictureOption("u10_s5_p1_opt7_2", "pesawat", "", R.drawable.ic_trans_airplane, false),
+            PictureOption("u10_s5_p1_opt7_3", "mobil", "", R.drawable.ic_trans_car, false),
+            PictureOption("u10_s5_p1_opt7_4", "taksi", "", R.drawable.ic_trans_taxi, false)
         )
     ),
 
@@ -169,10 +169,10 @@ val bab10Stage5Part2Exercises = listOf(
         correctAnswer = "taksi",
         audioToSpeak = "出租车",
         pictureOptions = listOf(
-            PictureOption("u10_s5_p2_opt1", "taksi", "🚕", R.drawable.ic_trans_taxi, true),
-            PictureOption("u10_s5_p2_opt2", "kereta", "🚆", R.drawable.ic_target, false),
-            PictureOption("u10_s5_p2_opt3", "pesawat", "✈️", R.drawable.ic_book, false),
-            PictureOption("u10_s5_p2_opt4", "rumah", "🏠", R.drawable.ic_crown, false)
+            PictureOption("u10_s5_p2_opt1", "taksi", "", R.drawable.ic_trans_taxi, true),
+            PictureOption("u10_s5_p2_opt2", "kereta", "", R.drawable.ic_trans_train, false),
+            PictureOption("u10_s5_p2_opt3", "pesawat", "", R.drawable.ic_trans_airplane, false),
+            PictureOption("u10_s5_p2_opt4", "rumah", "", R.drawable.ic_fam_home, false)
         )
     ),
 
@@ -259,10 +259,10 @@ val bab10Stage5Part2Exercises = listOf(
         correctAnswer = "menyetir mobil",
         audioToSpeak = "开车",
         pictureOptions = listOf(
-            PictureOption("u10_s5_p2_opt7_1", "menyetir mobil", "🚗", R.drawable.ic_trans_drive_car, true),
-            PictureOption("u10_s5_p2_opt7_2", "jalan kaki", "🚶", R.drawable.ic_target, false),
-            PictureOption("u10_s5_p2_opt7_3", "tidur", "🛌", R.drawable.ic_book, false),
-            PictureOption("u10_s5_p2_opt7_4", "makan", "🍜", R.drawable.ic_crown, false)
+            PictureOption("u10_s5_p2_opt7_1", "menyetir mobil", "", R.drawable.ic_trans_drive_car, true),
+            PictureOption("u10_s5_p2_opt7_2", "jalan kaki", "", R.drawable.ic_trans_go, false),
+            PictureOption("u10_s5_p2_opt7_3", "tidur", "", R.drawable.ic_action_sleep, false),
+            PictureOption("u10_s5_p2_opt7_4", "makan", "", R.drawable.ic_action_eat, false)
         )
     ),
 
