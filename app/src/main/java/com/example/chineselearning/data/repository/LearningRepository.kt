@@ -4286,6 +4286,106 @@ object LearningRepository {
                     exercisesPart2 = bab14Stage6Part2Exercises
                 )
             )
+        ),
+
+        // BAB 15: Komunikasi, Telepon & Bertanya Santun (远程通讯与礼貌交际)
+        UnitCourse(
+            id = "unit_15",
+            unitNumber = 15,
+            title = "Komunikasi & Etiket",
+            subtitle = "Panggilan telepon, bertanya santun, perkenalan, dan etiket kesopanan",
+            bannerTitle = "Komunikasi, Telepon & Bertanya Santun",
+            emoji = "📞",
+            level = "Level 15",
+            story = stories[14],
+            nodes = listOf(
+                PathNode("u15_n1", "Telepon & Halo", Color(0xFFFFC107), NodeIconType.CAP, isCompleted = false, lessonId = "u15_l1"),
+                PathNode("u15_n2", "Bertanya Santun", Color(0xFFFFC107), NodeIconType.DUMBBELL, isCompleted = false, lessonId = "u15_l2"),
+                PathNode("u15_n3", "Terima Kasih & Maaf", Color(0xFFFFC107), NodeIconType.CAP, isCompleted = false, lessonId = "u15_l3"),
+                PathNode("u15_n4", "Kenal & Berpendapat", Color(0xFFFFC107), NodeIconType.DUMBBELL, isCompleted = false, lessonId = "u15_l4"),
+                PathNode("u15_n5", "Evaluasi Komunikasi", Color(0xFFFFC107), NodeIconType.SHUFFLE, isCompleted = false, lessonId = "u15_l5"),
+                PathNode("u15_n6", "Kuis Cerita", Color(0xFFFFC107), NodeIconType.BOOK, isCompleted = false, lessonId = "u15_l1"),
+                PathNode("u15_n7", "Checkpoint Bab", Color(0xFFFFB300), NodeIconType.CHEST, isCompleted = false, lessonId = "u15_l1"),
+                PathNode("u15_n8", "Rest area", Color(0xFF03A9F4), NodeIconType.REST_AREA, isCompleted = false, lessonId = "u15_l1")
+            ),
+            lessons = listOf(
+                Lesson(
+                    id = "u15_l1",
+                    title = "Telepon & Percakapan Jarak Jauh",
+                    subtitle = "Kosakata 电话, 打电话, 手机, 喂, dan 说话",
+                    grammarNote = "Interjeksi telepon standar: 喂 (wèi = halo di telepon). Pola: 给 + Orang + 打电话 (menelepon seseorang). Bicara: 说话 (shuōhuà).",
+                    newWords = listOf(
+                        Word("w15_1", "电话", "diànhuà", "Telepon", "Komunikasi", "他在打电话。", "Tā zài dǎ diànhuà.", "Dia sedang menelepon."),
+                        Word("w15_2", "手机", "shǒujī", "Ponsel", "Komunikasi", "我的新手机。", "Wǒ de xīn shǒujī.", "Ponsel baru saya."),
+                        Word("w15_3", "喂", "wèi", "Halo (telepon)", "Interjeksi", "喂，你好！", "Wèi, nǐhǎo!", "Halo!"),
+                        Word("w15_4", "说话", "shuōhuà", "Berbicara", "Kata kerja", "请不要说话。", "Qǐng búyào shuōhuà.", "Tolong jangan berbicara.")
+                    ),
+                    exercises = bab15Stage1Part1Exercises,
+                    exercisesPart1 = bab15Stage1Part1Exercises,
+                    exercisesPart2 = bab15Stage1Part2Exercises
+                ),
+                Lesson(
+                    id = "u15_l2",
+                    title = "Bertanya Santun & Sopan",
+                    subtitle = "Kosakata 请, 请问, 问, 问题, dan Anda (您)",
+                    grammarNote = "Permohonan santun: 请 (silakan / tolong) dan 请问 (permisi bertanya). Panggilan kehormatan: 您 (nín = Anda). Masalah/pertanyaan: 问题 (wèntí).",
+                    newWords = listOf(
+                        Word("w15_5", "请", "qǐng", "Silakan / tolong", "Kata kerja", "请进，请坐。", "Qǐng jìn, qǐng zuò.", "Silakan masuk, silakan duduk."),
+                        Word("w15_6", "请问", "qǐngwèn", "Permisi bertanya", "Kata kerja", "请问您是谁？", "Qǐngwèn nín shì shéi?", "Permisi Anda siapa?"),
+                        Word("w15_7", "问", "wèn", "Bertanya", "Kata kerja", "问老师。", "Wèn lǎoshī.", "Bertanya kepada guru."),
+                        Word("w15_8", "问题", "wèntí", "Pertanyaan / masalah", "Benda", "我有一个问题。", "Wǒ yǒu yí gè wèntí.", "Saya ada satu pertanyaan."),
+                        Word("w15_9", "您", "nín", "Anda (sopan)", "Pronomina", "您好！", "Nín hǎo!", "Halo Anda!")
+                    ),
+                    exercises = bab15Stage2Part1Exercises,
+                    exercisesPart1 = bab15Stage2Part1Exercises,
+                    exercisesPart2 = bab15Stage2Part2Exercises
+                ),
+                Lesson(
+                    id = "u15_l3",
+                    title = "Terima Kasih & Maaf",
+                    subtitle = "Pasangan etiket 谢谢/不客气 dan 对不起/没关系",
+                    grammarNote = "Pasangan apresiasi: 谢谢 (terima kasih) -> 不客气 (sama-sama). Pasangan permintaan maaf: 对不起 (maaf) -> 没关系 (tidak apa-apa) / 没事 (tidak masalah).",
+                    newWords = listOf(
+                        Word("w15_10", "谢谢", "xièxie", "Terima kasih", "Ungkapan", "谢谢老师！", "Xièxie lǎoshī!", "Terima kasih guru!"),
+                        Word("w15_11", "不客气", "bú kèqi", "Sama-sama", "Ungkapan", "不客气。", "Bú kèqi.", "Sama-sama."),
+                        Word("w15_12", "对不起", "duìbuqǐ", "Maaf", "Ungkapan", "对不起，我来晚了。", "Duìbuqǐ, wǒ lái wǎn le.", "Maaf, saya datang terlambat."),
+                        Word("w15_13", "没关系", "méi guānxi", "Tidak apa-apa", "Ungkapan", "没关系。", "Méi guānxi.", "Tidak apa-apa.")
+                    ),
+                    exercises = bab15Stage3Part1Exercises,
+                    exercisesPart1 = bab15Stage3Part1Exercises,
+                    exercisesPart2 = bab15Stage3Part2Exercises
+                ),
+                Lesson(
+                    id = "u15_l4",
+                    title = "Kenal & Berpendapat",
+                    subtitle = "Kosakata 认识, 高兴, 知道, dan 觉得",
+                    grammarNote = "Perkenalan ramah: 认识你很高兴 (senang berkenalan denganmu). Mengetahui fakta: 知道 (tahu). Menyatakan opini: 觉得 (berpendapat / merasa: 我觉得很好).",
+                    newWords = listOf(
+                        Word("w15_14", "认识", "rènshi", "Mengenal / kenal", "Kata kerja", "认识您很高兴。", "Rènshi nín hěn gāoxìng.", "Senang berkenalan dengan Anda."),
+                        Word("w15_15", "高兴", "gāoxìng", "Senang / bahagia", "Kata sifat", "我觉得很高兴。", "Wǒ juéde hěn gāoxìng.", "Saya merasa sangat senang."),
+                        Word("w15_16", "知道", "zhīdào", "Tahu / mengetahui", "Kata kerja", "我知道这件事。", "Wǒ zhīdào zhè jiàn shì.", "Saya tahu hal ini."),
+                        Word("w15_17", "觉得", "juéde", "Merasa / berpendapat", "Kata kerja", "你觉得怎么样？", "Nǐ juéde zěnmeyàng?", "Bagaimana menurutmu?")
+                    ),
+                    exercises = bab15Stage4Part1Exercises,
+                    exercisesPart1 = bab15Stage4Part1Exercises,
+                    exercisesPart2 = bab15Stage4Part2Exercises
+                ),
+                Lesson(
+                    id = "u15_l5",
+                    title = "Evaluasi Komprehensif Komunikasi",
+                    subtitle = "Review seluruh 19 kosakata komunikasi, telepon & etiket santun",
+                    grammarNote = "Evaluasi menyeluruh Bab 15: komunikasi telepon, bertanya informasi dengan 请问 dan 您, etiket terima kasih dan maaf, serta perkenalan hangat.",
+                    newWords = listOf(
+                        Word("w15_1", "电话", "diànhuà", "Telepon", "Komunikasi", "打电话。", "Dǎ diànhuà.", "Menelepon."),
+                        Word("w15_6", "请问", "qǐngwèn", "Permisi tanya", "Kata kerja", "请问洗手间在哪儿？", "Qǐngwèn xǐshǒujiān zài nǎr?", "Permisi toilet di mana?"),
+                        Word("w15_10", "谢谢", "xièxie", "Terima kasih", "Ungkapan", "谢谢！", "Xièxie!", "Terima kasih!"),
+                        Word("w15_14", "认识", "rènshi", "Kenal", "Kata kerja", "认识你很高兴。", "Rènshi nǐ hěn gāoxìng.", "Senang kenal denganmu.")
+                    ),
+                    exercises = bab15Stage5Part1Exercises,
+                    exercisesPart1 = bab15Stage5Part1Exercises,
+                    exercisesPart2 = bab15Stage5Part2Exercises
+                )
+            )
         )
     )
 }
