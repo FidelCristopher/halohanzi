@@ -18,10 +18,10 @@ val bab11Stage6Part1Exercises = listOf(
         correctAnswer = "sekolah",
         audioToSpeak = "学校",
         pictureOptions = listOf(
-            PictureOption("u11_s6_p1_opt1", "sekolah", "🏫", R.drawable.ic_cap, true),
-            PictureOption("u11_s6_p1_opt2", "rumah", "🏠", R.drawable.ic_people_group, false),
-            PictureOption("u11_s6_p1_opt3", "buku", "📖", R.drawable.ic_book, false),
-            PictureOption("u11_s6_p1_opt4", "toko", "🏪", R.drawable.ic_coin, false)
+            PictureOption("u11_s6_p1_opt1", "sekolah", "", R.drawable.ic_edu_school, true),
+            PictureOption("u11_s6_p1_opt2", "rumah", "", R.drawable.ic_fam_home, false),
+            PictureOption("u11_s6_p1_opt3", "buku", "", R.drawable.ic_book_chinese, false),
+            PictureOption("u11_s6_p1_opt4", "toko", "", R.drawable.ic_shop_store, false)
         )
     ),
 
@@ -108,10 +108,10 @@ val bab11Stage6Part1Exercises = listOf(
         correctAnswer = "toko buku",
         audioToSpeak = "书店",
         pictureOptions = listOf(
-            PictureOption("u11_s6_p1_opt7_1", "toko buku", "📚", R.drawable.ic_book, true),
-            PictureOption("u11_s6_p1_opt7_2", "sekolah", "🏫", R.drawable.ic_cap, false),
-            PictureOption("u11_s6_p1_opt7_3", "rumah", "🏠", R.drawable.ic_people_group, false),
-            PictureOption("u11_s6_p1_opt7_4", "toko", "🏪", R.drawable.ic_coin, false)
+            PictureOption("u11_s6_p1_opt7_1", "toko buku", "", R.drawable.ic_edu_bookstore, true),
+            PictureOption("u11_s6_p1_opt7_2", "sekolah", "", R.drawable.ic_edu_school, false),
+            PictureOption("u11_s6_p1_opt7_3", "rumah", "", R.drawable.ic_fam_home, false),
+            PictureOption("u11_s6_p1_opt7_4", "toko", "", R.drawable.ic_shop_store, false)
         )
     ),
 
@@ -169,10 +169,10 @@ val bab11Stage6Part2Exercises = listOf(
         correctAnswer = "menulis aksara Hanzi",
         audioToSpeak = "写汉字",
         pictureOptions = listOf(
-            PictureOption("u11_s6_p2_opt1", "menulis Hanzi", "✍️", R.drawable.ic_target, true),
-            PictureOption("u11_s6_p2_opt2", "membaca", "📖", R.drawable.ic_book, false),
-            PictureOption("u11_s6_p2_opt3", "sekolah", "🏫", R.drawable.ic_cap, false),
-            PictureOption("u11_s6_p2_opt4", "uang", "💰", R.drawable.ic_coin, false)
+            PictureOption("u11_s6_p2_opt1", "menulis Hanzi", "", R.drawable.ic_edu_hanzi_char, true),
+            PictureOption("u11_s6_p2_opt2", "membaca buku", "", R.drawable.ic_action_reading, false),
+            PictureOption("u11_s6_p2_opt3", "sekolah", "", R.drawable.ic_edu_school, false),
+            PictureOption("u11_s6_p2_opt4", "uang", "", R.drawable.ic_yuan_currency, false)
         )
     ),
 
@@ -259,10 +259,10 @@ val bab11Stage6Part2Exercises = listOf(
         correctAnswer = "membaca",
         audioToSpeak = "读",
         pictureOptions = listOf(
-            PictureOption("u11_s6_p2_opt7_1", "membaca", "🗣️", R.drawable.ic_book, true),
-            PictureOption("u11_s6_p2_opt7_2", "menulis", "✍️", R.drawable.ic_target, false),
-            PictureOption("u11_s6_p2_opt7_3", "tidur", "🛌", R.drawable.ic_crown, false),
-            PictureOption("u11_s6_p2_opt7_4", "makan", "🍜", R.drawable.ic_coin, false)
+            PictureOption("u11_s6_p2_opt7_1", "membaca", "", R.drawable.ic_edu_read_aloud, true),
+            PictureOption("u11_s6_p2_opt7_2", "menulis", "", R.drawable.ic_edu_write, false),
+            PictureOption("u11_s6_p2_opt7_3", "tidur", "", R.drawable.ic_action_sleep, false),
+            PictureOption("u11_s6_p2_opt7_4", "makan", "", R.drawable.ic_action_eat, false)
         )
     ),
 

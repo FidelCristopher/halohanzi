@@ -1,0 +1,41 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Soft Red Peach) -->
+    <path
+        android:fillColor="#FEF2F2"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Speech Bubble Body (Bahasa Mandarin / 汉语) -->
+    <path
+        android:fillColor="#DC2626"
+        android:pathData="M20,24 L76,24 C79.3,24 82,26.7 82,30 L82,62 C82,65.3 79.3,68 76,68 L36,68 L24,78 L26,68 L20,68 C16.7,68 14,65.3 14,62 L14,30 C14,26.7 16.7,24 20,24 Z" />
+    <path
+        android:fillColor="#EF4444"
+        android:pathData="M22,26 L74,26 C76.2,26 78,27.8 78,30 L78,60 C78,62.2 76.2,64 74,64 L34,64 L26,72 L27,64 L22,64 C19.8,64 18,62.2 18,60 L18,30 C18,27.8 19.8,26 22,26 Z" />
+
+    <!-- Five Golden Stars of China (Top Left of Bubble / Flag Motif) -->
+    <!-- Big Main Star -->
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M30,34 L32,39 L37,39 L33,42 L34.5,47 L30,44 L25.5,47 L27,42 L23,39 L28,39 Z" />
+    <!-- 4 Small Arching Stars -->
+    <path
+        android:fillColor="#FDE047"
+        android:pathData="M40,32 L41,34.5 L43.5,34.5 L41.5,36 L42.5,38.5 L40,37 L37.5,38.5 L38.5,36 L36.5,34.5 L39,34.5 Z M44,38 L45,40.5 L47.5,40.5 L45.5,42 L46.5,44.5 L44,43 L41.5,44.5 L42.5,42 L40.5,40.5 L43,40.5 Z M44,46 L45,48.5 L47.5,48.5 L45.5,50 L46.5,52.5 L44,51 L41.5,52.5 L42.5,50 L40.5,48.5 L43,48.5 Z M40,52 L41,54.5 L43.5,54.5 L41.5,56 L42.5,58.5 L40,57 L37.5,58.5 L38.5,56 L36.5,54.5 L39,54.5 Z" />
+
+    <!-- Stylized Hanzi Speech "Ni Hao" Text / Tone Marks (Right) -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M54,36 L70,36 C71.1,36 72,36.9 72,38 L72,44 C72,45.1 71.1,46 70,46 L54,46 C52.9,46 52,45.1 52,44 L52,38 C52,36.9 52.9,36 54,36 Z" />
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="M56,41 L68,41 L68,43 L56,43 Z" />
+
+    <!-- Tone Marks / Pinyin Waves -->
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M56,52 L62,49 L62,51 L56,54 Z M64,49 L70,52 L70,54 L64,51 Z" />
+</vector>

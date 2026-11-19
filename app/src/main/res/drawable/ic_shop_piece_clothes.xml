@@ -1,0 +1,36 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Soft Coral Triad) -->
+    <path
+        android:fillColor="#FFF7ED"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Wooden Clothes Hanger Hook (Gold/Brass) -->
+    <path
+        android:fillColor="#D97706"
+        android:pathData="M48,18 C43,18 40,21 40,26 C40,29 42,32 46,32 L46,38 L50,38 L50,31 C46,31 44,29 44,26 C44,24 46,22 48,22 C50,22 52,24 52,26 L56,26 C56,21 53,18 48,18 Z" />
+
+    <!-- Wooden Hanger Body (Angled Triangle) -->
+    <path
+        android:fillColor="#B45309"
+        android:pathData="M48,36 L14,58 C13,59 14,61 16,61 L80,61 C82,61 83,59 82,58 Z" />
+    <path
+        android:fillColor="#D97706"
+        android:pathData="M48,39 L18,59 L78,59 Z" />
+
+    <!-- Hanger Bottom Trouser Bar -->
+    <path
+        android:fillColor="#92400E"
+        android:pathData="M20,61 L76,61 L76,65 L20,65 Z" />
+
+    <!-- Single Shirt Silhouette Draped on Hanger (Helai / 件) -->
+    <path
+        android:fillColor="#38BDF8"
+        android:pathData="M34,48 L48,56 L62,48 L66,54 L58,58 L58,80 L38,80 L38,58 L30,54 Z" />
+    <path
+        android:fillColor="#0284C7"
+        android:pathData="M40,52 L48,58 L56,52 L54,50 L48,54 L42,50 Z" />
+</vector>

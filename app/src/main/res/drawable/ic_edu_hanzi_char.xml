@@ -1,0 +1,38 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Soft Coral Peach) -->
+    <path
+        android:fillColor="#FFF7ED"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Traditional Red Mi-zi-ge Calligraphy Grid Box (米字格) -->
+    <path
+        android:fillColor="#FEE2E2"
+        android:pathData="M20,20 L76,20 C78.2,20 80,21.8 80,24 L80,72 C80,74.2 78.2,76 76,76 L20,76 C17.8,76 16,74.2 16,72 L16,24 C16,21.8 17.8,20 20,20 Z" />
+    <!-- Grid Outer Border (Red Vermilion) -->
+    <path
+        android:fillColor="#DC2626"
+        android:pathData="M16,20 L80,20 L80,22 L16,22 Z M16,74 L80,74 L80,76 L16,76 Z M16,20 L18,20 L18,76 L16,76 Z M78,20 L80,20 L80,76 L78,76 Z" />
+
+    <!-- Dotted / Dashed Mi-zi-ge Guide Lines (Horizontal, Vertical, Diagonals) -->
+    <path
+        android:fillColor="#FCA5A5"
+        android:pathData="M18,47 L78,47 L78,49 L18,49 Z M47,22 L49,22 L49,74 L47,74 Z" />
+    <path
+        android:fillColor="#FECACA"
+        android:pathData="M22,24 L74,72 L72,74 L20,26 Z M74,26 L22,74 L20,72 L72,24 Z" />
+
+    <!-- Bold Hand-Brushed Hanzi Character "汉" (Hanzi) in Center -->
+    <!-- Left Water Radical (氵) -->
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="M30,32 C33,30 36,32 35,35 C34,37 31,37 30,32 Z M27,45 C30,43 33,45 32,48 C31,50 28,50 27,45 Z M26,65 C28,61 31,57 34,54 L36,56 C32,61 28,66 26,65 Z" />
+
+    <!-- Right Character Component (又) -->
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="M42,35 L66,35 C68,35 69,36 68,38 L54,54 L54,58 L68,70 L64,72 L50,60 L44,68 L41,65 L48,56 L42,42 L46,42 L50,52 L62,39 L42,39 Z" />
+</vector>

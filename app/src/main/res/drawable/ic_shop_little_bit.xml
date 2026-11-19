@@ -1,0 +1,38 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Soft Amber Yellow) -->
+    <path
+        android:fillColor="#FEF3C7"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Pinch Gesture Hand (Showing "a little bit / 一点儿") -->
+    <!-- Forefinger & Thumb pinching close together -->
+    <!-- Hand Palm & Wrist -->
+    <path
+        android:fillColor="#FFD1A4"
+        android:pathData="M32,74 L46,56 C48,54 52,54 54,56 L68,74 C69,76 68,78 66,80 L34,80 C32,80 31,76 32,74 Z" />
+    <path
+        android:fillColor="#FDBA74"
+        android:pathData="M34,74 L46,58 L54,58 L66,74 Z" />
+
+    <!-- Index Finger (Curving down) -->
+    <path
+        android:fillColor="#FFD1A4"
+        android:pathData="M48,26 C53,26 58,30 58,36 L58,44 L50,44 L50,36 C50,34 49,32 48,32 C47,32 46,34 46,36 L46,44 L38,44 L38,36 C38,30 43,26 48,26 Z" />
+
+    <!-- Thumb (Curving up close to index finger) -->
+    <path
+        android:fillColor="#FFD1A4"
+        android:pathData="M54,40 C58,40 64,44 64,50 C64,54 60,56 56,56 L46,56 L46,48 L54,48 C55,48 56,47 56,46 C56,45 55,44 54,44 Z" />
+
+    <!-- Little Sparkle / Small Gap Indicator between fingers ("🤏 A little bit") -->
+    <path
+        android:fillColor="#D97706"
+        android:pathData="M42,42 A2.5,2.5 0 1,0 42,47 A2.5,2.5 0 1,0 42,42 Z" />
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M42,37 L43,39 L45,39 L43.5,40.5 L44,42.5 L42,41 L40,42.5 L40.5,40.5 L39,39 L41,39 Z" />
+</vector>

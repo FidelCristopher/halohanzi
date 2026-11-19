@@ -1,0 +1,50 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Soft Sky Blue) -->
+    <path
+        android:fillColor="#E0F2FE"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Station Railway / Platform Tracks (Ground) -->
+    <path
+        android:fillColor="#94A3B8"
+        android:pathData="M16,76 L80,76 L80,82 L16,82 Z" />
+    <path
+        android:fillColor="#475569"
+        android:pathData="M24,78 L32,78 L32,80 L24,80 Z M44,78 L52,78 L52,80 L44,80 Z M64,78 L72,78 L72,80 L64,80 Z" />
+
+    <!-- Modern Bullet Train / Bus Engine Front (Centered) -->
+    <!-- Train Upper Dome / Aerodynamic Front -->
+    <path
+        android:fillColor="#0284C7"
+        android:pathData="M32,28 C32,20 40,16 48,16 C56,16 64,20 64,28 L66,74 L30,74 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M34,30 C34,22 41,18 48,18 C55,18 62,22 62,30 L64,72 L32,72 Z" />
+
+    <!-- Panoramic Windshield Glass -->
+    <path
+        android:fillColor="#0F172A"
+        android:pathData="M36,26 C36,22 42,20 48,20 C54,20 60,22 60,26 L60,38 L36,38 Z" />
+    <path
+        android:fillColor="#38BDF8"
+        android:pathData="M38,27 C38,24 43,22 48,22 C53,22 58,24 58,27 L58,36 L38,36 Z" />
+
+    <!-- Train High-Speed Racing Stripe (Red/Amber) -->
+    <path
+        android:fillColor="#EF4444"
+        android:pathData="M32,46 L64,46 L64,50 L32,50 Z" />
+
+    <!-- Front Headlights (Twin Golden Beams) -->
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M36,58 A4,4 0 1,0 36,66 A4,4 0 1,0 36,58 Z M60,58 A4,4 0 1,0 60,66 A4,4 0 1,0 60,58 Z" />
+
+    <!-- Train Front Grille / Bumper -->
+    <path
+        android:fillColor="#64748B"
+        android:pathData="M42,62 L54,62 L54,68 L42,68 Z" />
+</vector>

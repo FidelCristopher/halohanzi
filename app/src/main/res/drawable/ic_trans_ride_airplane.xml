@@ -1,0 +1,41 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Soft Violet Indigo) -->
+    <path
+        android:fillColor="#EEF2FF"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Takeoff Runway Line (Ground) -->
+    <path
+        android:fillColor="#94A3B8"
+        android:pathData="M16,78 L68,78 L68,82 L16,82 Z" />
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M22,79 L32,79 L32,81 L22,81 Z M42,79 L52,79 L52,81 L42,81 Z" />
+
+    <!-- Ascending Takeoff Motion Trail (Jet Stream) -->
+    <path
+        android:fillColor="#C7D2FE"
+        android:pathData="M24,74 C34,74 46,64 56,52 L54,50 C44,62 34,71 24,71 Z" />
+
+    <!-- Takeoff Airplane (Climbing Upward to Upper Right) -->
+    <path
+        android:fillColor="#4F46E5"
+        android:pathData="M78,22 C82,24 84,28 84,32 C84,35 62,56 54,62 L42,70 L44,62 L50,56 L40,42 L44,40 L56,50 L74,34 C76,28 75,23 78,22 Z" />
+    <!-- Wing Top -->
+    <path
+        android:fillColor="#6366F1"
+        android:pathData="M60,42 L82,22 L84,26 L66,50 Z" />
+    <!-- Wing Bottom -->
+    <path
+        android:fillColor="#4338CA"
+        android:pathData="M54,54 L38,68 L36,64 L50,48 Z" />
+
+    <!-- Takeoff Upward Speed Arrows -->
+    <path
+        android:fillColor="#10B981"
+        android:pathData="M70,48 L76,42 L82,48 L79,48 L79,56 L73,56 L73,48 Z" />
+</vector>

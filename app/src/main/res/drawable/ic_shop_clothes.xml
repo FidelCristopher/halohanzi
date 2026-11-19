@@ -1,0 +1,42 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Soft Sky Blue) -->
+    <path
+        android:fillColor="#F0F9FF"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Clothes Hanger Hook -->
+    <path
+        android:fillColor="#D97706"
+        android:pathData="M48,16 C45,16 43,18 43,21 C43,23 45,25 47,25 L47,28 L49,28 L49,24 C46,24 45,23 45,21 C45,19.5 46.5,18 48,18 C49.5,18 51,19.5 51,21 L53,21 C53,18 51,16 48,16 Z" />
+
+    <!-- Hanger Triangular Bar -->
+    <path
+        android:fillColor="#B45309"
+        android:pathData="M48,27 L18,40 L20,44 L48,32 L76,44 L78,40 Z" />
+
+    <!-- Stylish Short-Sleeve Polo Shirt (Coral Tangerine) -->
+    <!-- Collar & Torso -->
+    <path
+        android:fillColor="#EA580C"
+        android:pathData="M34,36 L20,44 L14,56 L24,62 L28,52 L28,78 C28,80.2 29.8,82 32,82 L64,82 C66.2,82 68,80.2 68,78 L68,52 L72,62 L82,56 L76,44 L62,36 Z" />
+    <path
+        android:fillColor="#F97316"
+        android:pathData="M35,38 L22,46 L18,54 L24,58 L30,50 L30,78 L66,78 L66,50 L72,58 L78,54 L74,46 L61,38 Z" />
+
+    <!-- White Collar V-Neck -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M40,36 L48,46 L56,36 L48,38 Z" />
+    <!-- Center Button Placket -->
+    <path
+        android:fillColor="#C2410C"
+        android:pathData="M46.5,44 L49.5,44 L49.5,60 L46.5,60 Z" />
+    <!-- White Buttons -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M48,48 A1.5,1.5 0 1,0 48,51 A1.5,1.5 0 1,0 48,48 Z M48,54 A1.5,1.5 0 1,0 48,57 A1.5,1.5 0 1,0 48,54 Z" />
+</vector>

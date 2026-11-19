@@ -1,0 +1,58 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Soft Amber Coral) -->
+    <path
+        android:fillColor="#FFF7ED"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Central Bell Tower Roof & Flag (Sekolah / 学校) -->
+    <path
+        android:fillColor="#DC2626"
+        android:pathData="M48,12 L56,16 L48,20 Z" />
+    <path
+        android:fillColor="#94A3B8"
+        android:pathData="M47,12 L49,12 L49,26 L47,26 Z" />
+    <path
+        android:fillColor="#B91C1C"
+        android:pathData="M48,18 L38,28 L58,28 Z" />
+
+    <!-- Tower Clock / Bell -->
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M48,30 A5,5 0 1,0 48,40 A5,5 0 1,0 48,30 Z" />
+    <path
+        android:fillColor="#78350F"
+        android:pathData="M47.5,32 L48.5,32 L48.5,35 L50,35 L50,36 L47.5,36 Z" />
+
+    <!-- School Main Building Facade (Classic Red Brick School) -->
+    <path
+        android:fillColor="#EA580C"
+        android:pathData="M16,42 L80,42 L80,82 L16,82 Z" />
+    <path
+        android:fillColor="#F97316"
+        android:pathData="M18,44 L78,44 L78,80 L18,80 Z" />
+
+    <!-- School Roof Trim Eaves -->
+    <path
+        android:fillColor="#9A3412"
+        android:pathData="M14,40 L82,40 L82,44 L14,44 Z" />
+
+    <!-- School Windows Grid -->
+    <path
+        android:fillColor="#E0F2FE"
+        android:pathData="M24,48 L34,48 L34,58 L24,58 Z M62,48 L72,48 L72,58 L62,58 Z M24,64 L34,64 L34,74 L24,74 Z M62,64 L72,64 L72,74 L62,74 Z" />
+    <path
+        android:fillColor="#BAE6FD"
+        android:pathData="M25,49 L33,49 L33,57 L25,57 Z M63,49 L71,49 L71,57 L63,57 Z M25,65 L33,65 L33,73 L25,73 Z M63,65 L71,65 L71,73 L63,73 Z" />
+
+    <!-- School Double Entrance Doors (Center) -->
+    <path
+        android:fillColor="#78350F"
+        android:pathData="M42,56 L54,56 L54,80 L42,80 Z" />
+    <path
+        android:fillColor="#92400E"
+        android:pathData="M43,58 L47,58 L47,78 L43,78 Z M49,58 L53,58 L53,78 L49,78 Z" />
+</vector>

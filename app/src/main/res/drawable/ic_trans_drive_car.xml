@@ -1,0 +1,46 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Soft Coral Tangerine) -->
+    <path
+        android:fillColor="#FFF7ED"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Windshield View: Horizon Road (Speed Lines Ahead) -->
+    <path
+        android:fillColor="#BAE6FD"
+        android:pathData="M20,20 L76,20 L82,48 L14,48 Z" />
+    <!-- Distant Road Leading Ahead -->
+    <path
+        android:fillColor="#64748B"
+        android:pathData="M44,20 L52,20 L66,48 L30,48 Z" />
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M47,20 L49,20 L51,48 L45,48 Z" />
+
+    <!-- Steering Wheel (Setir Mobil / 开车) -->
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="M48,32 A24,24 0 1,0 48,80 A24,24 0 1,0 48,32 Z M48,40 A16,16 0 1,1 48,72 A16,16 0 1,1 48,40 Z" />
+
+    <!-- Steering Wheel Spokes & Center Hub -->
+    <path
+        android:fillColor="#334155"
+        android:pathData="M48,50 A6,6 0 1,0 48,62 A6,6 0 1,0 48,50 Z" />
+    <!-- Horizontal Spokes -->
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="M26,54 L44,54 L44,58 L26,58 Z M52,54 L70,54 L70,58 L52,58 Z M46,58 L50,58 L50,72 L46,72 Z" />
+
+    <!-- Driver's Hands Gripping Steering Wheel (Left & Right - 9 & 3 o'clock) -->
+    <!-- Left Hand -->
+    <path
+        android:fillColor="#FFD1A4"
+        android:pathData="M22,48 A5,6 0 1,0 22,60 A5,6 0 1,0 22,48 Z" />
+    <!-- Right Hand -->
+    <path
+        android:fillColor="#FFD1A4"
+        android:pathData="M74,48 A5,6 0 1,0 74,60 A5,6 0 1,0 74,48 Z" />
+</vector>

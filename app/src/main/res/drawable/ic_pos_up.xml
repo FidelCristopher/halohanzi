@@ -1,0 +1,34 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Bright Sky Blue) -->
+    <path
+        android:fillColor="#E0F2FE"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Isometric Table / Block Base (Bawah) -->
+    <path
+        android:fillColor="#94A3B8"
+        android:pathData="M24,56 L72,56 C74.2,56 76,57.8 76,60 L76,78 C76,80.2 74.2,82 72,82 L24,82 C21.8,82 20,80.2 20,78 L20,60 C20,57.8 21.8,56 24,56 Z" />
+    <path
+        android:fillColor="#CBD5E1"
+        android:pathData="M22,58 L74,58 L74,80 L22,80 Z" />
+
+    <!-- Big Vibrant Upward Arrow (Atas / 上) -->
+    <path
+        android:fillColor="#0284C7"
+        android:pathData="M48,16 L64,32 L54,32 L54,48 L42,48 L42,32 L32,32 Z" />
+    <path
+        android:fillColor="#38BDF8"
+        android:pathData="M48,19 L60,31 L52,31 L52,46 L44,46 L44,31 L36,31 Z" />
+
+    <!-- Sphere Floating Above the Block (On top of) -->
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M48,42 A6,6 0 1,0 48,54 A6,6 0 1,0 48,42 Z" />
+    <path
+        android:fillColor="#FDE047"
+        android:pathData="M48,44 A4,4 0 1,0 48,52 A4,4 0 1,0 48,44 Z" />
+</vector>

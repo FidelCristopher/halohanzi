@@ -1,0 +1,48 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Soft Cyan Teal) -->
+    <path
+        android:fillColor="#ECFEFF"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Bottom Book 1 (Coral Red, Flat Stack) -->
+    <path
+        android:fillColor="#DC2626"
+        android:pathData="M18,66 L78,66 C80.2,66 82,67.8 82,70 L82,80 C82,82.2 80.2,84 78,84 L18,84 C15.8,84 14,82.2 14,80 L14,70 C14,67.8 15.8,66 18,66 Z" />
+    <path
+        android:fillColor="#FEF3C7"
+        android:pathData="M24,70 L80,70 L80,82 L24,82 Z" />
+    <path
+        android:fillColor="#B91C1C"
+        android:pathData="M14,70 C14,67.8 15.8,66 18,66 L24,66 L24,84 L18,84 C15.8,84 14,82.2 14,80 Z" />
+
+    <!-- Middle Book 2 (Emerald Green, Stacked) -->
+    <path
+        android:fillColor="#059669"
+        android:pathData="M22,46 L82,46 C84.2,46 86,47.8 86,50 L86,60 C86,62.2 84.2,64 82,64 L22,64 C19.8,64 18,62.2 18,60 L18,50 C18,47.8 19.8,46 22,46 Z" />
+    <path
+        android:fillColor="#FEF3C7"
+        android:pathData="M28,50 L84,50 L84,62 L28,62 Z" />
+    <path
+        android:fillColor="#047857"
+        android:pathData="M18,50 C18,47.8 19.8,46 22,46 L28,46 L28,64 L22,64 C19.8,64 18,62.2 18,60 Z" />
+
+    <!-- Top Book 3 (Royal Blue, Stacked) -->
+    <path
+        android:fillColor="#0284C7"
+        android:pathData="M20,26 L76,26 C78.2,26 80,27.8 80,30 L80,40 C80,42.2 78.2,44 76,44 L20,44 C17.8,44 16,42.2 16,40 L16,30 C16,27.8 17.8,26 20,26 Z" />
+    <path
+        android:fillColor="#FEF3C7"
+        android:pathData="M26,30 L78,30 L78,42 L26,42 Z" />
+    <path
+        android:fillColor="#0369A1"
+        android:pathData="M16,30 C16,27.8 17.8,26 20,26 L26,26 L26,44 L20,44 C17.8,44 16,42.2 16,40 Z" />
+
+    <!-- Bookmark Ribbon Hanging Out from Top Book -->
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M48,26 L54,26 L54,42 L51,38 L48,42 Z" />
+</vector>

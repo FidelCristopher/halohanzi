@@ -1,0 +1,54 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Soft Violet Lavender) -->
+    <path
+        android:fillColor="#F5F3FF"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Torso / Academic Graduation Gown (Dark Navy Blue) -->
+    <path
+        android:fillColor="#1E3A8A"
+        android:pathData="M26,82 C26,66 34,58 48,58 C62,58 70,66 70,82 Z" />
+    <!-- Golden Graduation Stole Sash -->
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M38,58 L44,76 L48,76 L42,58 Z M58,58 L52,76 L48,76 L54,58 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M44,58 L48,64 L52,58 Z" />
+
+    <!-- Head / Face -->
+    <path
+        android:fillColor="#FFD1A4"
+        android:pathData="M48,28 A15,15 0 1,0 48,58 A15,15 0 1,0 48,28 Z" />
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="M36,36 C36,26 41,24 48,24 C55,24 60,26 60,36 Z" />
+
+    <!-- Graduation Cap / Mortarboard (Topi Toga Sarjana / 大学生) -->
+    <path
+        android:fillColor="#0F172A"
+        android:pathData="M48,14 L18,24 L48,34 L78,24 Z" />
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="M34,26 L34,34 C34,36 40,38 48,38 C56,38 62,36 62,34 L62,26 L48,30 Z" />
+
+    <!-- Golden Tassel Hanging from Cap (Left Side) -->
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M48,24 L30,29 L28,42 L32,42 L31,30 Z" />
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M27,42 L33,42 L32,48 L28,48 Z" />
+
+    <!-- Confident Eyes & Smile -->
+    <path
+        android:fillColor="#0F172A"
+        android:pathData="M41,40 C42,38 44,38 45,40 Z M51,40 C52,38 54,38 55,40 Z" />
+    <path
+        android:fillColor="#E11D48"
+        android:pathData="M45,47 C46,51 50,51 51,47 Z" />
+</vector>

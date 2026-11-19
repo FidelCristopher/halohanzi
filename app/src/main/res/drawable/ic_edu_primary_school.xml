@@ -1,0 +1,54 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Soft Yellow Amber) -->
+    <path
+        android:fillColor="#FEF3C7"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- School Backpack Handle / Top Strap -->
+    <path
+        android:fillColor="#B45309"
+        android:pathData="M40,16 C40,14 44,12 48,12 C52,12 56,14 56,16 L56,22 L40,22 Z" />
+    <path
+        android:fillColor="#FEF3C7"
+        android:pathData="M43,16 C43,15 45,14 48,14 C51,14 53,15 53,16 L53,22 L43,22 Z" />
+
+    <!-- Cute Elementary Backpack Body (Bright Coral Red / Japanese Randoseru style) -->
+    <path
+        android:fillColor="#DC2626"
+        android:pathData="M24,30 C24,24 30,22 36,22 L60,22 C66,22 72,24 72,30 L74,74 C74,78.4 70.4,82 66,82 L30,82 C25.6,82 22,78.4 22,74 Z" />
+    <path
+        android:fillColor="#EF4444"
+        android:pathData="M26,32 C26,26 31,24 36,24 L60,24 C65,24 70,26 70,32 L72,72 C72,76 68,79 64,79 L32,79 C28,79 24,76 24,72 Z" />
+
+    <!-- Backpack Flap Cover & Buckle -->
+    <path
+        android:fillColor="#B91C1C"
+        android:pathData="M26,28 L70,28 L68,56 C68,60 62,62 48,62 C34,62 28,60 28,56 Z" />
+    <!-- Yellow Buckle Clasp -->
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M44,54 L52,54 L52,62 L44,62 Z" />
+    <path
+        android:fillColor="#D97706"
+        android:pathData="M46,56 L50,56 L50,60 L46,60 Z" />
+
+    <!-- Front Zipper Pocket (Lower) -->
+    <path
+        android:fillColor="#DC2626"
+        android:pathData="M30,64 L66,64 L66,76 L30,76 Z" />
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M32,65 L64,65 L64,67 L32,67 Z" />
+
+    <!-- Little Yellow Pencil Peeking Out -->
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M66,16 L72,22 L68,26 L62,20 Z" />
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="M66,16 L68,14 L72,18 L70,20 Z" />
+</vector>

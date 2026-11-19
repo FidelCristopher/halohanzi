@@ -1,0 +1,29 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Soft Emerald Mint) -->
+    <path
+        android:fillColor="#ECFDF5"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Big Directional Circle Base -->
+    <path
+        android:fillColor="#059669"
+        android:pathData="M48,18 A30,30 0 1,0 48,78 A30,30 0 1,0 48,18 Z" />
+    <path
+        android:fillColor="#10B981"
+        android:pathData="M48,21 A27,27 0 1,0 48,75 A27,27 0 1,0 48,21 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M48,24 A24,24 0 1,0 48,72 A24,24 0 1,0 48,24 Z" />
+
+    <!-- Big Bold Arrow Pointing to RIGHT (Kanan / 右) -->
+    <path
+        android:fillColor="#059669"
+        android:pathData="M48,32 L66,48 L48,64 L48,54 L30,54 L30,42 L48,42 Z" />
+    <path
+        android:fillColor="#047857"
+        android:pathData="M48,36 L62,48 L48,60 L48,54 Z" />
+</vector>

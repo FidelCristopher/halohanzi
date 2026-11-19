@@ -1,0 +1,58 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Soft Cyan Blue) -->
+    <path
+        android:fillColor="#E0F2FE"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Road Ground Line -->
+    <path
+        android:fillColor="#CBD5E1"
+        android:pathData="M14,76 L82,76 L82,78 L14,78 Z" />
+
+    <!-- Car Wheels -->
+    <!-- Rear Wheel -->
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="M30,62 A9,9 0 1,0 30,80 A9,9 0 1,0 30,62 Z" />
+    <path
+        android:fillColor="#94A3B8"
+        android:pathData="M30,66 A5,5 0 1,0 30,76 A5,5 0 1,0 30,66 Z" />
+    <!-- Front Wheel -->
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="M66,62 A9,9 0 1,0 66,80 A9,9 0 1,0 66,62 Z" />
+    <path
+        android:fillColor="#94A3B8"
+        android:pathData="M66,66 A5,5 0 1,0 66,76 A5,5 0 1,0 66,66 Z" />
+
+    <!-- Car Body Lower Chassis (Bright Red Crimson) -->
+    <path
+        android:fillColor="#DC2626"
+        android:pathData="M16,52 C16,48 20,46 24,46 L74,46 C79,46 82,50 82,56 L82,68 L76,68 C76,64 71,64 71,68 L25,68 C25,64 20,64 20,68 L16,68 Z" />
+    <path
+        android:fillColor="#EF4444"
+        android:pathData="M18,50 L78,50 C80,50 81,52 81,56 L81,66 L17,66 L17,54 C17,51.5 17.5,50 18,50 Z" />
+
+    <!-- Car Cabin Roof & Pillars -->
+    <path
+        android:fillColor="#DC2626"
+        android:pathData="M30,46 L38,30 C39,28 41,26 44,26 L60,26 C63,26 65,28 66,30 L72,46 Z" />
+
+    <!-- Glass Windows (Front & Rear Windows, Soft Cyan Glass) -->
+    <path
+        android:fillColor="#BAE6FD"
+        android:pathData="M40,32 L47,32 L47,44 L34,44 Z M51,32 L58,32 L66,44 L51,44 Z" />
+
+    <!-- Headlight (Front Golden Beam) -->
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M78,54 L82,54 L82,60 L78,60 Z" />
+    <!-- Taillight (Rear Amber) -->
+    <path
+        android:fillColor="#F97316"
+        android:pathData="M16,54 L18,54 L18,60 L16,60 Z" />
+</vector>

@@ -1,0 +1,53 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Soft Coral Sunset) -->
+    <path
+        android:fillColor="#FFF7ED"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Cozy Family House at Horizon (Target Destination / 家) -->
+    <path
+        android:fillColor="#EA580C"
+        android:pathData="M64,24 L48,38 L52,38 L64,28 L76,38 L80,38 Z" />
+    <path
+        android:fillColor="#F97316"
+        android:pathData="M64,27 L50,38 L78,38 Z" />
+    <!-- House Body -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M52,38 L76,38 L76,60 L52,60 Z" />
+    <path
+        android:fillColor="#FEF3C7"
+        android:pathData="M54,40 L74,40 L74,58 L54,58 Z" />
+    <!-- Door -->
+    <path
+        android:fillColor="#92400E"
+        android:pathData="M60,46 L68,46 L68,58 L60,58 Z" />
+
+    <!-- Return Path / Road Curving toward Home (回家) -->
+    <path
+        android:fillColor="#FDE68A"
+        android:pathData="M16,80 L28,80 C36,70 50,66 62,58 L66,58 C52,68 38,72 26,82 L16,82 Z" />
+
+    <!-- Walking Silhouette Heading Home (Left Foreground) -->
+    <!-- Head -->
+    <path
+        android:fillColor="#0284C7"
+        android:pathData="M24,46 A6,6 0 1,0 24,58 A6,6 0 1,0 24,46 Z" />
+    <!-- Body with Backpack -->
+    <path
+        android:fillColor="#0369A1"
+        android:pathData="M20,60 L28,60 C30,60 32,62 32,64 L30,76 L26,76 L26,68 L22,68 L22,76 L18,76 L18,64 C18,62 19,60 20,60 Z" />
+    <!-- Backpack -->
+    <path
+        android:fillColor="#DC2626"
+        android:pathData="M16,62 L20,62 L20,70 L16,70 Z" />
+
+    <!-- Return Arrow Curved Arc (Leading Home) -->
+    <path
+        android:fillColor="#10B981"
+        android:pathData="M34,44 C42,40 48,42 50,46 L47,48 L56,48 L56,39 L53,42 C50,38 42,36 34,40 Z" />
+</vector>

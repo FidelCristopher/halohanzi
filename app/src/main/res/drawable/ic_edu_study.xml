@@ -1,0 +1,55 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Soft Yellow/Emerald) -->
+    <path
+        android:fillColor="#FEF3C7"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Study Desk Surface (Wood Brown) -->
+    <path
+        android:fillColor="#B45309"
+        android:pathData="M16,68 L80,68 L80,72 L16,72 Z" />
+    <path
+        android:fillColor="#78350F"
+        android:pathData="M20,72 L24,72 L24,82 L20,82 Z M72,72 L76,72 L76,82 L72,82 Z" />
+
+    <!-- Open Study Book on Desk -->
+    <path
+        android:fillColor="#0284C7"
+        android:pathData="M32,54 C40,54 48,56 48,60 C48,56 56,54 64,54 L64,68 C56,68 48,70 48,70 C48,70 40,68 32,68 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M34,52 C41,52 48,54 48,58 C48,54 55,52 62,52 L62,66 C55,66 48,68 48,68 C48,68 41,66 34,66 Z" />
+    <!-- Text Lines on Pages -->
+    <path
+        android:fillColor="#94A3B8"
+        android:pathData="M36,56 L45,56 L45,58 L36,58 Z M36,60 L44,60 L44,62 L36,62 Z M51,56 L60,56 L60,58 L51,58 Z M51,60 L59,60 L59,62 L51,62 Z" />
+
+    <!-- Desk Lamp (Yellow Warm Glow / Belajar / 学习) -->
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="M22,68 L32,68 L32,66 L22,66 Z" />
+    <!-- Curved Lamp Neck -->
+    <path
+        android:fillColor="#64748B"
+        android:pathData="M26,66 L26,38 C26,30 32,24 40,24 L42,24 L42,28 L40,28 C34,28 30,32 30,38 L30,66 Z" />
+    <!-- Lamp Head Cone (Illuminating the Book) -->
+    <path
+        android:fillColor="#EA580C"
+        android:pathData="M40,22 L54,30 L48,38 L34,30 Z" />
+    <!-- Light Beam Beam Glow onto Book -->
+    <path
+        android:fillColor="#FEF08A"
+        android:pathData="M38,34 L52,42 L66,66 L30,66 Z" />
+
+    <!-- Pencil in Pencil Cup (Right Side) -->
+    <path
+        android:fillColor="#0D9488"
+        android:pathData="M68,58 L76,58 L74,68 L70,68 Z" />
+    <path
+        android:fillColor="#EF4444"
+        android:pathData="M70,50 L72,50 L72,58 L70,58 Z" />
+</vector>

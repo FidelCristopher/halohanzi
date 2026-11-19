@@ -18,10 +18,10 @@ val bab11Stage4Part1Exercises = listOf(
         correctAnswer = "membaca",
         audioToSpeak = "读",
         pictureOptions = listOf(
-            PictureOption("u11_s4_p1_opt1", "membaca", "🗣️", R.drawable.ic_book, true),
-            PictureOption("u11_s4_p1_opt2", "menulis", "✍️", R.drawable.ic_target, false),
-            PictureOption("u11_s4_p1_opt3", "tidur", "🛌", R.drawable.ic_crown, false),
-            PictureOption("u11_s4_p1_opt4", "makan", "🍜", R.drawable.ic_coin, false)
+            PictureOption("u11_s4_p1_opt1", "membaca", "", R.drawable.ic_edu_read_aloud, true),
+            PictureOption("u11_s4_p1_opt2", "menulis", "", R.drawable.ic_edu_write, false),
+            PictureOption("u11_s4_p1_opt3", "tidur", "", R.drawable.ic_action_sleep, false),
+            PictureOption("u11_s4_p1_opt4", "makan", "", R.drawable.ic_action_eat, false)
         )
     ),
 
@@ -108,10 +108,10 @@ val bab11Stage4Part1Exercises = listOf(
         correctAnswer = "membaca buku",
         audioToSpeak = "读书",
         pictureOptions = listOf(
-            PictureOption("u11_s4_p1_opt7_1", "membaca buku", "📖", R.drawable.ic_book, true),
-            PictureOption("u11_s4_p1_opt7_2", "menulis", "✍️", R.drawable.ic_target, false),
-            PictureOption("u11_s4_p1_opt7_3", "tidur", "🛌", R.drawable.ic_crown, false),
-            PictureOption("u11_s4_p1_opt7_4", "makan", "🍜", R.drawable.ic_coin, false)
+            PictureOption("u11_s4_p1_opt7_1", "membaca buku", "", R.drawable.ic_action_reading, true),
+            PictureOption("u11_s4_p1_opt7_2", "menulis", "", R.drawable.ic_edu_write, false),
+            PictureOption("u11_s4_p1_opt7_3", "tidur", "", R.drawable.ic_action_sleep, false),
+            PictureOption("u11_s4_p1_opt7_4", "makan", "", R.drawable.ic_action_eat, false)
         )
     ),
 
@@ -169,10 +169,10 @@ val bab11Stage4Part2Exercises = listOf(
         correctAnswer = "membaca",
         audioToSpeak = "读",
         pictureOptions = listOf(
-            PictureOption("u11_s4_p2_opt1", "membaca", "🗣️", R.drawable.ic_book, true),
-            PictureOption("u11_s4_p2_opt2", "menulis", "✍️", R.drawable.ic_target, false),
-            PictureOption("u11_s4_p2_opt3", "mendengar", "🎧", R.drawable.ic_crown, false),
-            PictureOption("u11_s4_p2_opt4", "makan", "🍜", R.drawable.ic_coin, false)
+            PictureOption("u11_s4_p2_opt1", "membaca", "", R.drawable.ic_edu_read_aloud, true),
+            PictureOption("u11_s4_p2_opt2", "menulis", "", R.drawable.ic_edu_write, false),
+            PictureOption("u11_s4_p2_opt3", "belajar", "", R.drawable.ic_edu_study, false),
+            PictureOption("u11_s4_p2_opt4", "makan", "", R.drawable.ic_action_eat, false)
         )
     ),
 
@@ -259,10 +259,10 @@ val bab11Stage4Part2Exercises = listOf(
         correctAnswer = "membaca",
         audioToSpeak = "读",
         pictureOptions = listOf(
-            PictureOption("u11_s4_p2_opt7_1", "membaca", "🗣️", R.drawable.ic_book, true),
-            PictureOption("u11_s4_p2_opt7_2", "menulis", "✍️", R.drawable.ic_target, false),
-            PictureOption("u11_s4_p2_opt7_3", "makan", "🍜", R.drawable.ic_coin, false),
-            PictureOption("u11_s4_p2_opt7_4", "tidur", "🛌", R.drawable.ic_crown, false)
+            PictureOption("u11_s4_p2_opt7_1", "membaca", "", R.drawable.ic_edu_read_aloud, true),
+            PictureOption("u11_s4_p2_opt7_2", "menulis", "", R.drawable.ic_edu_write, false),
+            PictureOption("u11_s4_p2_opt7_3", "makan", "", R.drawable.ic_action_eat, false),
+            PictureOption("u11_s4_p2_opt7_4", "tidur", "", R.drawable.ic_action_sleep, false)
         )
     ),
 

@@ -1,0 +1,61 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Soft Slate Sky) -->
+    <path
+        android:fillColor="#F1F5F9"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Station Platform Canopy Roof -->
+    <path
+        android:fillColor="#0284C7"
+        android:pathData="M14,24 L82,24 L78,34 L18,34 Z" />
+    <path
+        android:fillColor="#0369A1"
+        android:pathData="M14,24 L82,24 L82,26 L14,26 Z" />
+
+    <!-- Steel Support Pillars -->
+    <path
+        android:fillColor="#64748B"
+        android:pathData="M24,34 L28,34 L28,78 L24,78 Z M68,34 L72,34 L72,78 L68,78 Z" />
+
+    <!-- Station Hanging Signboard (火车站 / STATION) -->
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="M34,34 L62,34 L62,44 L34,44 Z" />
+    <path
+        android:fillColor="#38BDF8"
+        android:pathData="M36,36 L60,36 L60,42 L36,42 Z" />
+
+    <!-- Analog Clock Hanging from Canopy (Center) -->
+    <path
+        android:fillColor="#DC2626"
+        android:pathData="M48,44 A7,7 0 1,0 48,58 A7,7 0 1,0 48,44 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M48,46 A5,5 0 1,0 48,56 A5,5 0 1,0 48,46 Z" />
+    <path
+        android:fillColor="#0F172A"
+        android:pathData="M47.5,47 L48.5,47 L48.5,51 L51,51 L51,52 L47.5,52 Z" />
+
+    <!-- Train on Track Platform (Bottom) -->
+    <path
+        android:fillColor="#CBD5E1"
+        android:pathData="M16,74 L80,74 L80,82 L16,82 Z" />
+    <path
+        android:fillColor="#E2E8F0"
+        android:pathData="M14,70 L82,70 L82,74 L14,74 Z" />
+
+    <!-- Front Train Cab Arriving at Platform -->
+    <path
+        android:fillColor="#0284C7"
+        android:pathData="M36,54 C36,50 42,48 48,48 C54,48 60,50 60,54 L60,70 L36,70 Z" />
+    <path
+        android:fillColor="#BAE6FD"
+        android:pathData="M40,52 L56,52 L56,60 L40,60 Z" />
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M40,64 A2,2 0 1,0 40,68 A2,2 0 1,0 40,64 Z M56,64 A2,2 0 1,0 56,68 A2,2 0 1,0 56,64 Z" />
+</vector>

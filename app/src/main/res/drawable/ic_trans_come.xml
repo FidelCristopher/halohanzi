@@ -1,0 +1,51 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Soft Amber Yellow) -->
+    <path
+        android:fillColor="#FEF3C7"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Arriving Figure Standing & Waving Friendly Hand (Datang / 来) -->
+    <!-- Head -->
+    <path
+        android:fillColor="#FFD1A4"
+        android:pathData="M48,22 A9,9 0 1,0 48,40 A9,9 0 1,0 48,22 Z" />
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="M39,28 C39,18 43,16 48,16 C53,16 57,18 57,28 C55,26 52,26 49,27 C46,28 42,28 39,28 Z" />
+
+    <!-- Torso (Yellow / Amber Sweater) -->
+    <path
+        android:fillColor="#D97706"
+        android:pathData="M34,42 L62,42 C64.2,42 66,43.8 66,46 L64,68 L32,68 L30,46 C30,43.8 31.8,42 34,42 Z" />
+
+    <!-- Left Arm Resting at Side -->
+    <path
+        android:fillColor="#B45309"
+        android:pathData="M30,44 L24,60 L28,62 L34,48 Z" />
+    <path
+        android:fillColor="#FFD1A4"
+        android:pathData="M24,60 A3,3 0 1,0 24,66 A3,3 0 1,0 24,60 Z" />
+
+    <!-- Right Arm Raised High Waving Welcoming Greeting ("COME / 来") -->
+    <path
+        android:fillColor="#B45309"
+        android:pathData="M62,46 L74,28 L78,32 L66,50 Z" />
+    <!-- Waving Palm Hand -->
+    <path
+        android:fillColor="#FFD1A4"
+        android:pathData="M76,24 A5,5 0 1,0 76,34 A5,5 0 1,0 76,24 Z" />
+
+    <!-- Legs Standing Welcoming -->
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="M36,68 L44,68 L44,82 L36,82 Z M52,68 L60,68 L60,82 L52,82 Z" />
+
+    <!-- Welcoming Motion Curves on Waving Hand -->
+    <path
+        android:fillColor="#EA580C"
+        android:pathData="M80,18 C83,21 84,26 83,30 L81,29 C82,26 81,22 79,20 Z M83,14 C87,19 88,27 86,32 L84,31 C86,27 85,20 82,16 Z" />
+</vector>

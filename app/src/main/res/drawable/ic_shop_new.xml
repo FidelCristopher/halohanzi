@@ -1,0 +1,31 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Soft Emerald Mint) -->
+    <path
+        android:fillColor="#ECFDF5"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Big Sparkling 8-Point Diamond Star (Baru / 新 / Brand New) -->
+    <path
+        android:fillColor="#D97706"
+        android:pathData="M48,16 L53,37 L74,32 L60,48 L74,64 L53,59 L48,80 L43,59 L22,64 L36,48 L22,32 L43,37 Z" />
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M48,20 L52,38 L70,34 L58,48 L70,62 L52,58 L48,76 L44,58 L26,62 L38,48 L26,34 L44,38 Z" />
+    <path
+        android:fillColor="#FDE047"
+        android:pathData="M48,26 L51,40 L64,37 L55,48 L64,59 L51,56 L48,70 L45,56 L32,59 L41,48 L32,37 L45,40 Z" />
+
+    <!-- Center Radiant Diamond Core -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M48,38 L54,48 L48,58 L42,48 Z" />
+
+    <!-- Tiny Twinkle Sparkles -->
+    <path
+        android:fillColor="#10B981"
+        android:pathData="M68,22 L70,25 L73,25 L71,27 L72,30 L69,28 L66,30 L67,27 L65,25 L68,25 Z M26,68 L28,71 L31,71 L29,73 L30,76 L27,74 L24,76 L25,73 L23,71 L26,71 Z" />
+</vector>

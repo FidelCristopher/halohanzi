@@ -1,0 +1,43 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Soft Emerald Mint) -->
+    <path
+        android:fillColor="#ECFDF5"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Supermarket Facade Building -->
+    <path
+        android:fillColor="#047857"
+        android:pathData="M18,30 L78,30 C80.2,30 82,31.8 82,34 L82,78 C82,80.2 80.2,82 78,82 L18,82 C15.8,82 14,80.2 14,78 L14,34 C14,31.8 15.8,30 18,30 Z" />
+    <path
+        android:fillColor="#10B981"
+        android:pathData="M20,32 L76,32 L76,80 L20,80 Z" />
+
+    <!-- Top Supermarket Header Signboard (MART / 超市) -->
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M24,18 L72,18 C74.2,18 76,19.8 76,22 L76,30 L20,30 L20,22 C20,19.8 21.8,18 24,18 Z" />
+    <!-- Golden Star / Market Emblem -->
+    <path
+        android:fillColor="#D97706"
+        android:pathData="M48,20 L50,24 L54,24 L51,26 L52,30 L48,27 L44,30 L45,26 L42,24 L46,24 Z" />
+
+    <!-- Double Automatic Sliding Glass Doors in Center -->
+    <path
+        android:fillColor="#064E3B"
+        android:pathData="M38,44 L58,44 L58,80 L38,80 Z" />
+    <path
+        android:fillColor="#A7F3D0"
+        android:pathData="M40,46 L47,46 L47,78 L40,78 Z M49,46 L56,46 L56,78 L49,78 Z" />
+
+    <!-- Big Panoramic Store Windows (Left & Right) -->
+    <path
+        android:fillColor="#E0F2FE"
+        android:pathData="M24,46 L34,46 L34,68 L24,68 Z M62,46 L72,46 L72,68 L62,68 Z" />
+    <path
+        android:fillColor="#BAE6FD"
+        android:pathData="M25,48 L33,48 L33,66 L25,66 Z M63,48 L71,48 L71,66 L63,66 Z" />
+</vector>

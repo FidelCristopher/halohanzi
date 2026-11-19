@@ -1,0 +1,44 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Soft Cyan Blue) -->
+    <path
+        android:fillColor="#E0F2FE"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Three Small Packages / Boxes Stacked (A few / 一些 / Some items) -->
+    <!-- Top Box (Cyan) -->
+    <path
+        android:fillColor="#0284C7"
+        android:pathData="M38,22 L58,22 C59.1,22 60,22.9 60,24 L60,40 C60,41.1 59.1,42 58,42 L38,42 C36.9,42 36,41.1 36,40 L36,24 C36,22.9 36.9,22 38,22 Z" />
+    <path
+        android:fillColor="#38BDF8"
+        android:pathData="M40,24 L56,24 L56,40 L40,40 Z" />
+    <path
+        android:fillColor="#0284C7"
+        android:pathData="M47,22 L49,22 L49,42 L47,42 Z" />
+
+    <!-- Bottom Left Box (Coral Orange) -->
+    <path
+        android:fillColor="#EA580C"
+        android:pathData="M22,46 L46,46 C47.1,46 48,46.9 48,48 L48,74 C48,75.1 47.1,76 46,76 L22,76 C20.9,76 20,75.1 20,74 L20,48 C20,46.9 20.9,46 22,46 Z" />
+    <path
+        android:fillColor="#FB923C"
+        android:pathData="M24,48 L44,48 L44,74 L24,74 Z" />
+    <path
+        android:fillColor="#EA580C"
+        android:pathData="M33,46 L35,46 L35,76 L33,76 Z" />
+
+    <!-- Bottom Right Box (Amber Yellow) -->
+    <path
+        android:fillColor="#D97706"
+        android:pathData="M50,46 L74,46 C75.1,46 76,46.9 76,48 L76,74 C76,75.1 75.1,76 74,76 L50,76 C48.9,76 48,75.1 48,74 L48,48 C48,46.9 48.9,46 50,46 Z" />
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M52,48 L72,48 L72,74 L52,74 Z" />
+    <path
+        android:fillColor="#D97706"
+        android:pathData="M61,46 L63,46 L63,76 L61,76 Z" />
+</vector>

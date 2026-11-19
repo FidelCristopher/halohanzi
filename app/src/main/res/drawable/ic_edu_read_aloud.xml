@@ -1,0 +1,41 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Soft Blue Sky) -->
+    <path
+        android:fillColor="#F0F9FF"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Open Book in Lower Half (Membaca / 读) -->
+    <path
+        android:fillColor="#0284C7"
+        android:pathData="M20,54 C32,54 44,57 48,62 C52,57 64,54 76,54 L76,82 C64,82 52,85 48,90 C44,85 32,82 20,82 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M22,52 C34,52 44,55 48,60 C52,55 62,52 74,52 L74,79 C62,79 52,82 48,87 C44,82 34,79 22,79 Z" />
+
+    <!-- Person Profile Head Reading Aloud (Facing Right) -->
+    <path
+        android:fillColor="#FFD1A4"
+        android:pathData="M34,20 A10,10 0 1,0 34,40 A10,10 0 1,0 34,20 Z" />
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="M25,26 C25,18 29,14 34,14 C39,14 43,18 43,26 C40,24 37,24 34,25 C31,26 28,26 25,26 Z" />
+    <!-- Open Mouth Speaking / Reading -->
+    <path
+        android:fillColor="#E11D48"
+        android:pathData="M41,31 C43,30 45,32 45,34 C45,36 43,37 41,36 Z" />
+
+    <!-- Sound / Speech Waves Emanating from Mouth (Reading Aloud / 读 / 读书) -->
+    <path
+        android:fillColor="#0EA5E9"
+        android:pathData="M52,26 C55,28 57,32 57,36 C57,40 55,44 52,46 L50,44 C53,42 54,39 54,36 C54,33 53,30 50,28 Z" />
+    <path
+        android:fillColor="#0284C7"
+        android:pathData="M59,20 C64,24 67,29 67,36 C67,43 64,48 59,52 L57,50 C61,46 64,41 64,36 C64,31 61,26 57,22 Z" />
+    <path
+        android:fillColor="#0369A1"
+        android:pathData="M66,14 C73,19 77,27 77,36 C77,45 73,53 66,58 L64,55 C70,51 74,44 74,36 C74,28 70,21 64,17 Z" />
+</vector>

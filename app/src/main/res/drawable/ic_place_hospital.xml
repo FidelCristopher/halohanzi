@@ -1,0 +1,43 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Soft Emerald Mint) -->
+    <path
+        android:fillColor="#ECFDF5"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Hospital Main Building Body (Clean Medical White) -->
+    <path
+        android:fillColor="#0D9488"
+        android:pathData="M20,26 L76,26 C78.2,26 80,27.8 80,30 L80,78 C80,80.2 78.2,82 76,82 L20,82 C17.8,82 16,80.2 16,78 L16,30 C16,27.8 17.8,26 20,26 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M22,28 L74,28 L74,80 L22,80 Z" />
+
+    <!-- Hospital Red Cross Emblem Badge (Top Center) -->
+    <path
+        android:fillColor="#FEE2E2"
+        android:pathData="M48,14 A12,12 0 1,0 48,38 A12,12 0 1,0 48,14 Z" />
+    <!-- Red Cross -->
+    <path
+        android:fillColor="#DC2626"
+        android:pathData="M45,18 L51,18 L51,23 L56,23 L56,29 L51,29 L51,34 L45,34 L45,29 L40,29 L40,23 L45,23 Z" />
+
+    <!-- Clinic Windows Grid (Cyan Glass Panes) -->
+    <path
+        android:fillColor="#0284C7"
+        android:pathData="M28,42 L38,42 L38,52 L28,52 Z M58,42 L68,42 L68,52 L58,52 Z M28,58 L38,58 L38,68 L28,68 Z M58,58 L68,58 L68,68 L58,68 Z" />
+    <path
+        android:fillColor="#BAE6FD"
+        android:pathData="M29,43 L37,43 L37,51 L29,51 Z M59,43 L67,43 L67,51 L59,51 Z M29,59 L37,59 L37,67 L29,67 Z M59,59 L67,59 L67,67 L59,67 Z" />
+
+    <!-- Hospital Automatic Sliding Entrance Door (Center Ground) -->
+    <path
+        android:fillColor="#047857"
+        android:pathData="M43,62 L53,62 L53,80 L43,80 Z" />
+    <path
+        android:fillColor="#A7F3D0"
+        android:pathData="M44,64 L47.5,64 L47.5,80 L44,80 Z M48.5,64 L52,64 L52,80 L48.5,80 Z" />
+</vector>

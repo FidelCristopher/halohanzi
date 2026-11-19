@@ -1,0 +1,33 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Soft Mint Emerald) -->
+    <path
+        android:fillColor="#ECFDF5"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Discount Price Tag Ribbon Loop -->
+    <path
+        android:fillColor="#059669"
+        android:pathData="M28,18 C24,18 20,22 20,26 C20,30 23,33 26,33 L28,31 C25,31 23,29 23,26 C23,24 25,21 28,21 C31,21 33,23 33,26 L36,26 C36,21 32,18 28,18 Z" />
+
+    <!-- Angled Green Discount Price Tag Body (Murah / 便宜) -->
+    <path
+        android:fillColor="#059669"
+        android:pathData="M32,26 L70,26 C73.3,26 76,28.7 78,32 L86,48 C88,52 88,56 86,60 L78,76 C76,79.3 73.3,82 70,82 L32,82 C28.7,82 26,79.3 26,76 L26,32 C26,28.7 28.7,26 32,26 Z" />
+    <path
+        android:fillColor="#10B981"
+        android:pathData="M34,29 L68,29 C70.5,29 73,31 74,33 L81,48 C82.5,51 82.5,55 81,58 L74,73 C73,75 70.5,77 68,77 L34,77 C31.8,77 30,75.2 30,73 L30,33 C30,30.8 31.8,29 34,29 Z" />
+
+    <!-- Tag String Hole -->
+    <path
+        android:fillColor="#ECFDF5"
+        android:pathData="M38,50 A4,4 0 1,0 38,58 A4,4 0 1,0 38,50 Z" />
+
+    <!-- Percentage "%" Discount Glyph in Tag -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M50,42 A3.5,3.5 0 1,0 50,49 A3.5,3.5 0 1,0 50,42 Z M64,57 A3.5,3.5 0 1,0 64,64 A3.5,3.5 0 1,0 64,57 Z M66,41 L48,65 L51,67 L69,43 Z" />
+</vector>

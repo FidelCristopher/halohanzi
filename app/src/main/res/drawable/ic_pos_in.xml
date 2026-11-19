@@ -1,0 +1,43 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Soft Emerald Mint) -->
+    <path
+        android:fillColor="#ECFDF5"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Open Box Back / Interior Wall (Darker Tone) -->
+    <path
+        android:fillColor="#D97706"
+        android:pathData="M26,38 L70,38 L70,74 L26,74 Z" />
+    <path
+        android:fillColor="#92400E"
+        android:pathData="M28,40 L68,40 L68,72 L28,72 Z" />
+
+    <!-- Vibrant Sphere Resting INSIDE the Box (Di dalam / 里) -->
+    <path
+        android:fillColor="#10B981"
+        android:pathData="M48,42 A12,12 0 1,0 48,66 A12,12 0 1,0 48,42 Z" />
+    <path
+        android:fillColor="#34D399"
+        android:pathData="M48,44 A10,10 0 1,0 48,64 A10,10 0 1,0 48,44 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M44,48 A3,3 0 1,0 44,54 A3,3 0 1,0 44,48 Z" />
+
+    <!-- Open Box Front Flaps (Showing Object is INSIDE) -->
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M24,54 L72,54 C74.2,54 76,55.8 76,58 L76,78 C76,80.2 74.2,82 72,82 L24,82 C21.8,82 20,80.2 20,78 L20,58 C20,55.8 21.8,54 24,54 Z" />
+    <!-- Box Flap Crease -->
+    <path
+        android:fillColor="#D97706"
+        android:pathData="M24,54 L48,66 L72,54 Z" />
+
+    <!-- Arrow Pointing Inward Into Box -->
+    <path
+        android:fillColor="#047857"
+        android:pathData="M48,16 L56,26 L51,26 L51,36 L45,36 L45,26 L40,26 Z" />
+</vector>

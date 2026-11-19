@@ -1,0 +1,44 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Soft Blue Sky) -->
+    <path
+        android:fillColor="#E0F2FE"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Big Cardboard Package Box (Kraft Brown) -->
+    <path
+        android:fillColor="#D97706"
+        android:pathData="M24,36 L72,36 C74.2,36 76,37.8 76,40 L76,78 C76,80.2 74.2,82 72,82 L24,82 C21.8,82 20,80.2 20,78 L20,40 C20,37.8 21.8,36 24,36 Z" />
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M26,38 L70,38 L70,80 L26,80 Z" />
+
+    <!-- Box Sealing Tape (Center Vertical Strip) -->
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M44,36 L52,36 L52,82 L44,82 Z" />
+    <!-- Tape Shadow -->
+    <path
+        android:fillColor="#D97706"
+        android:pathData="M47,36 L49,36 L49,82 L47,82 Z" />
+
+    <!-- Shipping Label / Barcode on Box -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M56,52 L68,52 L68,66 L56,66 Z" />
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="M58,55 L60,55 L60,63 L58,63 Z M62,55 L63,55 L63,63 L62,63 Z M65,55 L66,55 L66,63 L65,63 Z" />
+
+    <!-- Shopping Bag Peeking from Behind Box (Coral Pink) -->
+    <path
+        android:fillColor="#FB7185"
+        android:pathData="M38,20 L66,20 L68,36 L36,36 Z" />
+    <!-- Bag Handle Loop -->
+    <path
+        android:fillColor="#E11D48"
+        android:pathData="M46,14 C46,12 48,10 52,10 C56,10 58,12 58,14 L58,20 L54,20 L54,15 C54,14 53,13 52,13 C51,13 50,14 50,15 L50,20 L46,20 Z" />
+</vector>

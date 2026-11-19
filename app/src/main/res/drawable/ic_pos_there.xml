@@ -1,0 +1,41 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Soft Amber Tangerine) -->
+    <path
+        android:fillColor="#FEF3C7"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Distant Flag / Pin Target (Di Sana / Over There) -->
+    <path
+        android:fillColor="#EF4444"
+        android:pathData="M68,16 L80,22 L68,28 Z" />
+    <path
+        android:fillColor="#475569"
+        android:pathData="M66,16 L68,16 L68,36 L66,36 Z" />
+    <!-- Distant Ground Ring -->
+    <path
+        android:fillColor="#CBD5E1"
+        android:pathData="M67,34 C73,34 78,36 78,38 C78,40 73,42 67,42 C61,42 56,40 56,38 C56,36 61,34 67,34 Z" />
+
+    <!-- Big Friendly Hand Pointing to Right (Pointing "OVER THERE / 那儿") -->
+    <!-- Forefinger Extended Forward-Right -->
+    <path
+        android:fillColor="#FFD1A4"
+        android:pathData="M16,66 L36,66 C38,66 40,64 42,62 L66,42 C69,39.5 69,35 66,32.5 C63,30 58.5,30 56,32.5 L36,48 L16,48 Z" />
+    <path
+        android:fillColor="#FDBA74"
+        android:pathData="M38,62 L66,39 C67.5,37.5 67.5,35 66,33.5 C64.5,32 62,32 60.5,33.5 L34,54 Z" />
+
+    <!-- Fist / Knuckles -->
+    <path
+        android:fillColor="#FFD1A4"
+        android:pathData="M24,56 L42,56 C44,56 46,58 46,60 C46,62 44,64 42,64 L24,64 Z M22,64 L40,64 C42,64 44,66 44,68 C44,70 42,72 40,72 L22,72 Z M20,72 L38,72 C40,72 42,74 42,76 C42,78 40,80 38,80 L20,80 Z" />
+
+    <!-- Sleeve Cuff (Navy Blue) -->
+    <path
+        android:fillColor="#0284C7"
+        android:pathData="M14,46 L24,46 L24,82 L14,82 Z" />
+</vector>

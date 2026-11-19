@@ -1,0 +1,46 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Soft Emerald Mint) -->
+    <path
+        android:fillColor="#ECFDF5"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Walking Silhouette (Stepping Vigorously Forward / 去) -->
+    <!-- Head -->
+    <path
+        android:fillColor="#047857"
+        android:pathData="M38,18 A8,8 0 1,0 38,34 A8,8 0 1,0 38,18 Z" />
+
+    <!-- Torso (Tilted Forward into Movement) -->
+    <path
+        android:fillColor="#059669"
+        android:pathData="M32,36 L48,36 C51,36 53,38 52,41 L47,60 L33,60 L30,41 C30,38 31,36 32,36 Z" />
+
+    <!-- Backpack on Back -->
+    <path
+        android:fillColor="#EA580C"
+        android:pathData="M24,40 L32,40 L32,54 L24,54 Z" />
+
+    <!-- Arms Swinging Forward / Back -->
+    <path
+        android:fillColor="#047857"
+        android:pathData="M48,42 L58,52 L54,54 L44,44 Z M32,44 L24,52 L22,48 L30,42 Z" />
+
+    <!-- Legs in Walking Stride -->
+    <!-- Front Leg Stepping Forward -->
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="M44,58 L54,76 L48,78 L38,62 Z M52,76 L62,76 L62,80 L50,80 Z" />
+    <!-- Back Leg Extending Backward -->
+    <path
+        android:fillColor="#334155"
+        android:pathData="M34,58 L22,74 L26,77 L38,62 Z M20,74 L28,74 L28,78 L18,78 Z" />
+
+    <!-- Dynamic Forward Arrow (Going / 去) -->
+    <path
+        android:fillColor="#10B981"
+        android:pathData="M66,36 L78,48 L66,60 L66,52 L56,52 L56,44 L66,44 Z" />
+</vector>

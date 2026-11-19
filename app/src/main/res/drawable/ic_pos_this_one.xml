@@ -1,0 +1,43 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Soft Cyan Teal) -->
+    <path
+        android:fillColor="#ECFEFF"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- "THIS ONE" Target Selection Halo / Ring (Left) -->
+    <path
+        android:fillColor="#06B6D4"
+        android:pathData="M34,22 A18,18 0 1,0 34,58 A18,18 0 1,0 34,22 Z" />
+    <path
+        android:fillColor="#A5F3FC"
+        android:pathData="M34,25 A15,15 0 1,0 34,55 A15,15 0 1,0 34,25 Z" />
+    <!-- Object (Gift / Box Inside Selected Target) -->
+    <path
+        android:fillColor="#0891B2"
+        android:pathData="M28,34 L40,34 L40,46 L28,46 Z" />
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M33,34 L35,34 L35,46 L33,46 Z" />
+
+    <!-- Pointing Finger Hand (Coming from Right, Pointing directly at Target "THIS ONE") -->
+    <!-- Forefinger -->
+    <path
+        android:fillColor="#FFD1A4"
+        android:pathData="M80,62 L60,62 C58,62 56,60 54,58 L42,42 C40,39.5 40,35 43,32.5 C46,30 50.5,30 53,32.5 L64,44 L80,44 Z" />
+    <path
+        android:fillColor="#FDBA74"
+        android:pathData="M58,58 L42,40 C41,38.5 41,36 43,34.5 C45,33 47,33 49,34.5 L65,49 Z" />
+
+    <!-- Hand Fist Knuckles -->
+    <path
+        android:fillColor="#FFD1A4"
+        android:pathData="M60,52 L76,52 L76,60 L60,60 Z M62,60 L78,60 L78,68 L62,68 Z M64,68 L80,68 L80,76 L64,76 Z" />
+    <!-- Sleeve -->
+    <path
+        android:fillColor="#0D9488"
+        android:pathData="M76,42 L84,42 L84,78 L76,78 Z" />
+</vector>
