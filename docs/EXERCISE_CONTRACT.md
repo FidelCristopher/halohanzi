@@ -124,3 +124,12 @@ Upon receiving a notification or checking a branch:
      ```bash
      notify-role designer "QA REJECT (ASSET): Exercise [id] memiliki gambar duplikat/tidak sesuai untuk opsi: [daftar opsi]. Tolong buatkan VectorDrawable unik di res/drawable dan commit."
      ```
+
+---
+
+## 10. MANDAT LATAR PUTIH BERSIH UNTUK SOAL LISTENING (ZERO BACKGROUND ILLUSTRATION & ZERO SILHOUETTES ON LISTENING EXERCISES)
+**CRITICAL**: Seluruh soal latihan mendengar (*listening*) dengan judul `"Apa yang Anda dengar?"` (atau varian listening sentence builder):
+- **Rule 1 (Zero Background Illustration)**: `illustrationRes` **WAJIB bernilai `0`** (tidak boleh menggunakan gambar ilustrasi latar belakang seperti gambar foto/ilustrasi adegan). Seluruh soal mendengar harus murni menguji kemampuan pendengaran siswa tanpa bantuan/distraksi visual gambar adegan.
+- **Rule 2 (Zero Silhouettes & Pure White Canvas)**: Kontainer kartu latihan listening (`ImmersiveSentenceBuilder`) **WAJIB menggunakan latar belakang putih murni bersih (`Color.White`)** dengan border halus (`Color(0xFFF1F5F9)`). **DILARANG** menampilkan bayangan/siluet orang (`ic_person_murid` alpha) maupun gradien abu-abu gelap yang mengotori area baca kata.
+- **Rule 3 (Auditory Focus & High Legibility)**: Area kartu harus bersih agar fokus siswa terpusat pada tombol pemutar audio (`ttsManager`), slot garis bawah (*underline slots*), dan deretan chip Hanzi-Pinyin tanpa distraksi elemen visual latar belakang.
+- **Rule 4 (Automated Audit Rule)**: Setiap unit test verifikasi kurikulum (`ExampleUnitTest.kt`) wajib mengaudit bahwa tidak ada satu pun soal dengan `title == "Apa yang Anda dengar?"` yang memiliki `illustrationRes != 0`.
