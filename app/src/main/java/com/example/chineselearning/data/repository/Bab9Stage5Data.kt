@@ -18,10 +18,10 @@ val bab9Stage5Part1Exercises = listOf(
         correctAnswer = "di sini",
         audioToSpeak = "这儿",
         pictureOptions = listOf(
-            PictureOption("u9_s5_p1_opt1", "di sini", "📍", R.drawable.ic_target, true),
-            PictureOption("u9_s5_p1_opt2", "di sana", "👉", R.drawable.ic_pos_there, false),
-            PictureOption("u9_s5_p1_opt3", "di mana", "❓", R.drawable.ic_book, false),
-            PictureOption("u9_s5_p1_opt4", "rumah", "🏠", R.drawable.ic_crown, false)
+            PictureOption("u9_s5_p1_opt1", "di sini", "", R.drawable.ic_pos_here, true),
+            PictureOption("u9_s5_p1_opt2", "di sana", "", R.drawable.ic_pos_there, false),
+            PictureOption("u9_s5_p1_opt3", "di mana", "", R.drawable.ic_pos_where, false),
+            PictureOption("u9_s5_p1_opt4", "rumah", "", R.drawable.ic_fam_home, false)
         )
     ),
 
@@ -108,10 +108,10 @@ val bab9Stage5Part1Exercises = listOf(
         correctAnswer = "di depan",
         audioToSpeak = "前面",
         pictureOptions = listOf(
-            PictureOption("u9_s5_p1_opt7_1", "di depan", "⏩", R.drawable.ic_target, true),
-            PictureOption("u9_s5_p1_opt7_2", "di belakang", "⏪", R.drawable.ic_pos_back, false),
-            PictureOption("u9_s5_p1_opt7_3", "di atas", "⬆️", R.drawable.ic_crown, false),
-            PictureOption("u9_s5_p1_opt7_4", "di bawah", "⬇️", R.drawable.ic_book, false)
+            PictureOption("u9_s5_p1_opt7_1", "di depan", "", R.drawable.ic_pos_front, true),
+            PictureOption("u9_s5_p1_opt7_2", "di belakang", "", R.drawable.ic_pos_back, false),
+            PictureOption("u9_s5_p1_opt7_3", "di atas", "", R.drawable.ic_pos_up, false),
+            PictureOption("u9_s5_p1_opt7_4", "di bawah", "", R.drawable.ic_pos_down, false)
         )
     ),
 
@@ -169,10 +169,10 @@ val bab9Stage5Part2Exercises = listOf(
         correctAnswer = "di mana",
         audioToSpeak = "哪儿",
         pictureOptions = listOf(
-            PictureOption("u9_s5_p2_opt1", "di mana", "❓", R.drawable.ic_book, true),
-            PictureOption("u9_s5_p2_opt2", "di sini", "📍", R.drawable.ic_target, false),
-            PictureOption("u9_s5_p2_opt3", "di sana", "👉", R.drawable.ic_pos_there, false),
-            PictureOption("u9_s5_p2_opt4", "rumah", "🏠", R.drawable.ic_crown, false)
+            PictureOption("u9_s5_p2_opt1", "di mana", "", R.drawable.ic_pos_where, true),
+            PictureOption("u9_s5_p2_opt2", "di sini", "", R.drawable.ic_pos_here, false),
+            PictureOption("u9_s5_p2_opt3", "di sana", "", R.drawable.ic_pos_there, false),
+            PictureOption("u9_s5_p2_opt4", "rumah", "", R.drawable.ic_fam_home, false)
         )
     ),
 
@@ -259,10 +259,10 @@ val bab9Stage5Part2Exercises = listOf(
         correctAnswer = "di depan",
         audioToSpeak = "前面",
         pictureOptions = listOf(
-            PictureOption("u9_s5_p2_opt7_1", "di depan", "⏩", R.drawable.ic_target, true),
-            PictureOption("u9_s5_p2_opt7_2", "di belakang", "⏪", R.drawable.ic_pos_back, false),
-            PictureOption("u9_s5_p2_opt7_3", "di dalam", "📦", R.drawable.ic_book, false),
-            PictureOption("u9_s5_p2_opt7_4", "di luar", "🚪", R.drawable.ic_crown, false)
+            PictureOption("u9_s5_p2_opt7_1", "di depan", "", R.drawable.ic_pos_front, true),
+            PictureOption("u9_s5_p2_opt7_2", "di belakang", "", R.drawable.ic_pos_back, false),
+            PictureOption("u9_s5_p2_opt7_3", "di dalam", "", R.drawable.ic_pos_in, false),
+            PictureOption("u9_s5_p2_opt7_4", "di luar", "", R.drawable.ic_pos_out, false)
         )
     ),
 
