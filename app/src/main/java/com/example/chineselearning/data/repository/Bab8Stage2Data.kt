@@ -18,10 +18,10 @@ val bab8Stage2Part1Exercises = listOf(
         correctAnswer = "uang",
         audioToSpeak = "钱",
         pictureOptions = listOf(
-            PictureOption("u8_s2_p1_opt1", "uang", "💰", R.drawable.ic_money_pouch, true),
-            PictureOption("u8_s2_p1_opt2", "buku", "📖", R.drawable.ic_book, false),
-            PictureOption("u8_s2_p1_opt3", "jam", "⏰", R.drawable.ic_story_timer, false),
-            PictureOption("u8_s2_p1_opt4", "orang", "👤", R.drawable.ic_people_group, false)
+            PictureOption("u8_s2_p1_opt1", "uang", "", R.drawable.ic_money_pouch, true),
+            PictureOption("u8_s2_p1_opt2", "buku", "", R.drawable.ic_book_chinese, false),
+            PictureOption("u8_s2_p1_opt3", "jam", "", R.drawable.ic_clock_analog, false),
+            PictureOption("u8_s2_p1_opt4", "orang", "", R.drawable.ic_person_single, false)
         )
     ),
 
@@ -108,10 +108,10 @@ val bab8Stage2Part1Exercises = listOf(
         correctAnswer = "berapa harganya",
         audioToSpeak = "多少钱",
         pictureOptions = listOf(
-            PictureOption("u8_s2_p1_opt7_1", "berapa harganya", "💰", R.drawable.ic_price_tag, true),
-            PictureOption("u8_s2_p1_opt7_2", "berapa orang", "👥", R.drawable.ic_people_group, false),
-            PictureOption("u8_s2_p1_opt7_3", "jam berapa", "⏰", R.drawable.ic_story_timer, false),
-            PictureOption("u8_s2_p1_opt7_4", "di mana", "📍", R.drawable.ic_target, false)
+            PictureOption("u8_s2_p1_opt7_1", "berapa harganya", "", R.drawable.ic_price_tag, true),
+            PictureOption("u8_s2_p1_opt7_2", "berapa orang", "", R.drawable.ic_fam_counter_mouth, false),
+            PictureOption("u8_s2_p1_opt7_3", "jam berapa", "", R.drawable.ic_clock_analog, false),
+            PictureOption("u8_s2_p1_opt7_4", "di mana", "", R.drawable.ic_pos_where, false)
         )
     ),
 
@@ -169,10 +169,10 @@ val bab8Stage2Part2Exercises = listOf(
         correctAnswer = "yuan (uang lisan)",
         audioToSpeak = "块",
         pictureOptions = listOf(
-            PictureOption("u8_s2_p2_opt1", "yuan (lisan)", "💴", R.drawable.ic_yuan_currency, true),
-            PictureOption("u8_s2_p2_opt2", "jam", "⏰", R.drawable.ic_story_timer, false),
-            PictureOption("u8_s2_p2_opt3", "buku", "📖", R.drawable.ic_book, false),
-            PictureOption("u8_s2_p2_opt4", "orang", "👤", R.drawable.ic_people_group, false)
+            PictureOption("u8_s2_p2_opt1", "yuan (lisan)", "", R.drawable.ic_yuan_currency, true),
+            PictureOption("u8_s2_p2_opt2", "jam", "", R.drawable.ic_clock_analog, false),
+            PictureOption("u8_s2_p2_opt3", "buku", "", R.drawable.ic_book_chinese, false),
+            PictureOption("u8_s2_p2_opt4", "orang", "", R.drawable.ic_person_single, false)
         )
     ),
 
@@ -259,10 +259,10 @@ val bab8Stage2Part2Exercises = listOf(
         correctAnswer = "yuan (resmi)",
         audioToSpeak = "元",
         pictureOptions = listOf(
-            PictureOption("u8_s2_p2_opt7_1", "yuan (resmi)", "💴", R.drawable.ic_two_yuan, true),
-            PictureOption("u8_s2_p2_opt7_2", "dolar", "💵", R.drawable.ic_book, false),
-            PictureOption("u8_s2_p2_opt7_3", "emas", "🪙", R.drawable.ic_crown, false),
-            PictureOption("u8_s2_p2_opt7_4", "jam", "⏰", R.drawable.ic_story_timer, false)
+            PictureOption("u8_s2_p2_opt7_1", "yuan (resmi)", "", R.drawable.ic_two_yuan, true),
+            PictureOption("u8_s2_p2_opt7_2", "dolar", "", R.drawable.ic_money_pouch, false),
+            PictureOption("u8_s2_p2_opt7_3", "emas", "", R.drawable.ic_yuan_currency, false),
+            PictureOption("u8_s2_p2_opt7_4", "jam", "", R.drawable.ic_clock_analog, false)
         )
     ),
 

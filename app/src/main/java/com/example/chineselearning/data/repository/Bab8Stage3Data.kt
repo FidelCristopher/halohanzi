@@ -18,10 +18,10 @@ val bab8Stage3Part1Exercises = listOf(
         correctAnswer = "mahal",
         audioToSpeak = "贵",
         pictureOptions = listOf(
-            PictureOption("u8_s3_p1_opt1", "mahal", "💎", R.drawable.ic_shop_expensive, true),
-            PictureOption("u8_s3_p1_opt2", "murah", "🏷️", R.drawable.ic_target, false),
-            PictureOption("u8_s3_p1_opt3", "baru", "✨", R.drawable.ic_crown, false),
-            PictureOption("u8_s3_p1_opt4", "buku", "📖", R.drawable.ic_book, false)
+            PictureOption("u8_s3_p1_opt1", "mahal", "", R.drawable.ic_shop_expensive, true),
+            PictureOption("u8_s3_p1_opt2", "murah", "", R.drawable.ic_shop_cheap, false),
+            PictureOption("u8_s3_p1_opt3", "baru", "", R.drawable.ic_shop_new, false),
+            PictureOption("u8_s3_p1_opt4", "buku", "", R.drawable.ic_book_chinese, false)
         )
     ),
 
@@ -108,10 +108,10 @@ val bab8Stage3Part1Exercises = listOf(
         correctAnswer = "terlalu / amat",
         audioToSpeak = "太",
         pictureOptions = listOf(
-            PictureOption("u8_s3_p1_opt7_1", "terlalu", "❗", R.drawable.ic_shop_too_expensive, true),
-            PictureOption("u8_s3_p1_opt7_2", "sedikit", "🤏", R.drawable.ic_target, false),
-            PictureOption("u8_s3_p1_opt7_3", "banyak", "📈", R.drawable.ic_crown, false),
-            PictureOption("u8_s3_p1_opt7_4", "tidak", "❌", R.drawable.ic_book, false)
+            PictureOption("u8_s3_p1_opt7_1", "terlalu", "", R.drawable.ic_shop_too_expensive, true),
+            PictureOption("u8_s3_p1_opt7_2", "sedikit", "", R.drawable.ic_shop_little_bit, false),
+            PictureOption("u8_s3_p1_opt7_3", "banyak", "", R.drawable.ic_shop_some_items, false),
+            PictureOption("u8_s3_p1_opt7_4", "tidak", "", R.drawable.ic_mod_wrong, false)
         )
     ),
 
@@ -169,10 +169,10 @@ val bab8Stage3Part2Exercises = listOf(
         correctAnswer = "murah",
         audioToSpeak = "便宜",
         pictureOptions = listOf(
-            PictureOption("u8_s3_p2_opt1", "murah", "🏷️", R.drawable.ic_shop_cheap, true),
-            PictureOption("u8_s3_p2_opt2", "mahal", "💎", R.drawable.ic_crown, false),
-            PictureOption("u8_s3_p2_opt3", "baru", "✨", R.drawable.ic_target, false),
-            PictureOption("u8_s3_p2_opt4", "buku", "📖", R.drawable.ic_book, false)
+            PictureOption("u8_s3_p2_opt1", "murah", "", R.drawable.ic_shop_cheap, true),
+            PictureOption("u8_s3_p2_opt2", "mahal", "", R.drawable.ic_shop_expensive, false),
+            PictureOption("u8_s3_p2_opt3", "baru", "", R.drawable.ic_shop_new, false),
+            PictureOption("u8_s3_p2_opt4", "buku", "", R.drawable.ic_book_chinese, false)
         )
     ),
 
@@ -259,10 +259,10 @@ val bab8Stage3Part2Exercises = listOf(
         correctAnswer = "terlalu mahal!",
         audioToSpeak = "太贵了",
         pictureOptions = listOf(
-            PictureOption("u8_s3_p2_opt7_1", "terlalu mahal!", "💸", R.drawable.ic_shop_too_expensive, true),
-            PictureOption("u8_s3_p2_opt7_2", "sangat murah", "🏷️", R.drawable.ic_target, false),
-            PictureOption("u8_s3_p2_opt7_3", "enak", "😋", R.drawable.ic_crown, false),
-            PictureOption("u8_s3_p2_opt7_4", "baru", "✨", R.drawable.ic_book, false)
+            PictureOption("u8_s3_p2_opt7_1", "terlalu mahal!", "", R.drawable.ic_shop_too_expensive, true),
+            PictureOption("u8_s3_p2_opt7_2", "sangat murah", "", R.drawable.ic_shop_cheap, false),
+            PictureOption("u8_s3_p2_opt7_3", "enak", "", R.drawable.ic_food_delicious, false),
+            PictureOption("u8_s3_p2_opt7_4", "baru", "", R.drawable.ic_shop_new, false)
         )
     ),
 

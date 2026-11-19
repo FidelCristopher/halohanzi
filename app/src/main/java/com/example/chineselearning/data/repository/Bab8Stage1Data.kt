@@ -18,10 +18,10 @@ val bab8Stage1Part1Exercises = listOf(
         correctAnswer = "membeli",
         audioToSpeak = "买",
         pictureOptions = listOf(
-            PictureOption("u8_s1_p1_opt1", "membeli", "🛒", R.drawable.ic_shop_buy, true),
-            PictureOption("u8_s1_p1_opt2", "menjual", "🏷️", R.drawable.ic_target, false),
-            PictureOption("u8_s1_p1_opt3", "makan", "🍚", R.drawable.ic_book, false),
-            PictureOption("u8_s1_p1_opt4", "minum", "🍵", R.drawable.ic_crown, false)
+            PictureOption("u8_s1_p1_opt1", "membeli", "", R.drawable.ic_shop_buy, true),
+            PictureOption("u8_s1_p1_opt2", "menjual", "", R.drawable.ic_price_tag, false),
+            PictureOption("u8_s1_p1_opt3", "makan", "", R.drawable.ic_action_eat, false),
+            PictureOption("u8_s1_p1_opt4", "minum", "", R.drawable.ic_action_drink, false)
         )
     ),
 
@@ -108,10 +108,10 @@ val bab8Stage1Part1Exercises = listOf(
         correctAnswer = "barang / benda",
         audioToSpeak = "东西",
         pictureOptions = listOf(
-            PictureOption("u8_s1_p1_opt7_1", "barang / benda", "📦", R.drawable.ic_shop_goods, true),
-            PictureOption("u8_s1_p1_opt7_2", "uang", "🪙", R.drawable.ic_story_timer, false),
-            PictureOption("u8_s1_p1_opt7_3", "air", "💧", R.drawable.ic_target, false),
-            PictureOption("u8_s1_p1_opt7_4", "orang", "👥", R.drawable.ic_people_group, false)
+            PictureOption("u8_s1_p1_opt7_1", "barang / benda", "", R.drawable.ic_shop_goods, true),
+            PictureOption("u8_s1_p1_opt7_2", "uang", "", R.drawable.ic_money_pouch, false),
+            PictureOption("u8_s1_p1_opt7_3", "air", "", R.drawable.ic_food_water, false),
+            PictureOption("u8_s1_p1_opt7_4", "orang", "", R.drawable.ic_person_single, false)
         )
     ),
 
@@ -169,10 +169,10 @@ val bab8Stage1Part2Exercises = listOf(
         correctAnswer = "toko",
         audioToSpeak = "商店",
         pictureOptions = listOf(
-            PictureOption("u8_s1_p2_opt1", "toko", "🏪", R.drawable.ic_shop_store, true),
-            PictureOption("u8_s1_p2_opt2", "sekolah", "🏫", R.drawable.ic_cap, false),
-            PictureOption("u8_s1_p2_opt3", "rumah", "🏠", R.drawable.ic_people_group, false),
-            PictureOption("u8_s1_p2_opt4", "kamar", "🚪", R.drawable.ic_book, false)
+            PictureOption("u8_s1_p2_opt1", "toko", "", R.drawable.ic_shop_store, true),
+            PictureOption("u8_s1_p2_opt2", "sekolah", "", R.drawable.ic_edu_school, false),
+            PictureOption("u8_s1_p2_opt3", "rumah", "", R.drawable.ic_fam_home, false),
+            PictureOption("u8_s1_p2_opt4", "kamar", "", R.drawable.ic_fam_room, false)
         )
     ),
 
@@ -259,10 +259,10 @@ val bab8Stage1Part2Exercises = listOf(
         correctAnswer = "supermarket",
         audioToSpeak = "超市",
         pictureOptions = listOf(
-            PictureOption("u8_s1_p2_opt7_1", "supermarket", "🏬", R.drawable.ic_shop_supermarket, true),
-            PictureOption("u8_s1_p2_opt7_2", "sekolah", "🏫", R.drawable.ic_cap, false),
-            PictureOption("u8_s1_p2_opt7_3", "rumah", "🏠", R.drawable.ic_people_group, false),
-            PictureOption("u8_s1_p2_opt7_4", "kamar", "🚪", R.drawable.ic_book, false)
+            PictureOption("u8_s1_p2_opt7_1", "supermarket", "", R.drawable.ic_shop_supermarket, true),
+            PictureOption("u8_s1_p2_opt7_2", "sekolah", "", R.drawable.ic_edu_school, false),
+            PictureOption("u8_s1_p2_opt7_3", "rumah", "", R.drawable.ic_fam_home, false),
+            PictureOption("u8_s1_p2_opt7_4", "kamar", "", R.drawable.ic_fam_room, false)
         )
     ),
 
