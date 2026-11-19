@@ -91,39 +91,37 @@ Imports: `import com.example.chineselearning.data.model.*` and `import com.examp
 
 ---
 
-## 9. AUTONOMOUS TWO-WAY HAND-OFF PROTOCOL (NO HUMAN WAITING)
+## 9. AUTONOMOUS NON-STOP TWO-WAY PIPELINE PROTOCOL (ZERO WAITING / PARALLEL WORKFLOW)
 
-### For Developers (Dev 1 / Dev 2) & Designer:
-Immediately after completing code generation and committing changes:
-```bash
-notify-role qa "Role [dev1/dev2/designer] selesai commit [commit-hash] di [branch]. Mohon verifikasi kontrak & build."
-```
-Do NOT wait for human intervention; trigger QA automatically.
+### 9.1. Dev 1 Continuous Pipeline:
+- Setiap kali Dev 1 selesai menambahkan dan mengerjakan seluruh stage dan pertanyaan dalam **1 Bab**:
+  1. Dev 1 commit di branch `feat/belajar-page` (`halohanzi-part1`).
+  2. Dev 1 kirim notifikasi ke QA untuk audit:
+     ```bash
+     notify-role qa "Dev 1 selesai Bab X commit [hash]. Mohon audit kontrak & build."
+     ```
+  3. **DI WAKTU YANG BERSAMAAN (TANPA MENUNGGU QA SELESAI)**:
+     Dev 1 **langsung lanjut mengerjakan Bab berikutnya (Bab X+1)** secara kontinu sampai seluruh 16 Bab New HSK 1 tuntas!
 
-### For QA / Tester:
-Upon receiving a notification or checking a branch:
-1. **Contract Audit**:
-   - Check Hanzi-Pinyin 1-to-1 token symmetry for BOTH prompts (`targetPinyin` vs `targetHanzi`) and option cards (`options` with `\n`):
-     - Prompt: `targetPinyin.split("\\s+").size == targetHanzi.split("\\s+").size`
-     - Options: `opt.split("\n")[0].split("\\s+").size == opt.split("\n")[1].split("\\s+").size`
-   - Check UI rendering: Ensure both prompts and option cards use `AlignedHanziPinyinText` to guarantee pixel-perfect vertical alignment.
-   - Check blank slot count vs expected answers (no orphan blanks).
-   - Check illustration uniqueness: No duplicate `iconRes` across options in `PICTURE_CHOICE`.
-   - Check ID naming convention (`u{unit}_p{part}_q{number}`).
-2. **Build Verification**:
-   - Run `./gradlew compileDebugKotlin` in `ChineseLearning`.
-3. **Decide Action**:
-   - **IF PASS**: Cherry-pick/merge the commit into `main`, print completion report.
-   - **IF CODE / CONTRACT / ALIGNMENT VIOLATION (Code error, Token Mismatch, Orphan Blank, Misaligned Option Cards)**:
-     DO NOT merge to `main`! Return revision immediately to Dev 1:
-     ```bash
-     notify-role dev1 "QA REJECT (ALIGNMENT/CONTRACT): Exercise [id] atau opsi pilihan [opt] memiliki ketidaksejajaran Hanzi-Pinyin: [detail]. Tolong perbaiki di UI dan data, lalu commit ulang."
-     ```
-   - **IF ASSET VIOLATION (Duplicate illustration, placeholder reuse, semantic mismatch)**:
-     DO NOT merge to `main`! Delegate asset creation to Designer:
-     ```bash
-     notify-role designer "QA REJECT (ASSET): Exercise [id] memiliki gambar duplikat/tidak sesuai untuk opsi: [daftar opsi]. Tolong buatkan VectorDrawable unik di res/drawable dan commit."
-     ```
+### 9.2. QA Autonomous Audit & Dispatch to Designer:
+1. QA melakukan audit kontrak (simetri token pinyin-hanzi, slot garis bawah, clean code, no clipped images, dsb) dan test build (`compileDebugKotlin`).
+2. Setelah kode lolos audit, QA **melempar tugas ke Designer** untuk mendesain atau mempercantik aset gambar/vektor di semua opsi pilihan agar tidak AI slop dan memiliki semantik yang tepat:
+   ```bash
+   notify-role designer "QA PASS KODE Bab X: Tolong review & perbaiki seluruh gambar pilihan (PICTURE_CHOICE) di Bab X agar anti-slop, semantik tepat, dan tidak terpotong."
+   ```
+
+### 9.3. Designer Continuous Asset Pipeline:
+1. Designer membuat / memperbarui VectorDrawable di `res/drawable/ic_*.xml` (`halohanzi-assets`) sesuai tema kosakata.
+2. Memastikan seluruh vektor memiliki `viewportWidth`/`viewportHeight` dan `pathData` yang proporsional sehingga tidak terpotong saat dirender.
+3. Designer commit dan kirim kembali ke QA:
+   ```bash
+   notify-role qa "Designer selesai perbaiki aset Bab X commit [hash]. Mohon dicek visual & cropping."
+   ```
+
+### 9.4. QA Visual Verification & Merge:
+1. QA menguji visual di emulator, memastikan tidak ada gambar pilihan yang terpotong.
+2. QA merge ke `main`, build APK, dan update emulator.
+3. Fidel dapat menginspeksi di sela-sela merge. AI terus berputar secara paralel tanpa henti.
 
 ---
 
@@ -133,3 +131,21 @@ Upon receiving a notification or checking a branch:
 - **Rule 2 (Zero Silhouettes & Pure White Canvas)**: Kontainer kartu latihan listening (`ImmersiveSentenceBuilder`) **WAJIB menggunakan latar belakang putih murni bersih (`Color.White`)** dengan border halus (`Color(0xFFF1F5F9)`). **DILARANG** menampilkan bayangan/siluet orang (`ic_person_murid` alpha) maupun gradien abu-abu gelap yang mengotori area baca kata.
 - **Rule 3 (Auditory Focus & High Legibility)**: Area kartu harus bersih agar fokus siswa terpusat pada tombol pemutar audio (`ttsManager`), slot garis bawah (*underline slots*), dan deretan chip Hanzi-Pinyin tanpa distraksi elemen visual latar belakang.
 - **Rule 4 (Automated Audit Rule)**: Setiap unit test verifikasi kurikulum (`ExampleUnitTest.kt`) wajib mengaudit bahwa tidak ada satu pun soal dengan `title == "Apa yang Anda dengar?"` yang memiliki `illustrationRes != 0`.
+
+---
+
+## 11. MANDAT GAMBAR PILIHAN BEBAS TERPOTONG (UNCLIPPED OPTION IMAGES MANDATE & FIT INSIDE SAFE AREA)
+**CRITICAL**: Seluruh gambar atau ilustrasi pada kartu opsi pilihan (`ExerciseType.PICTURE_CHOICE`, `IMAGE_CHOICE`, atau varian kartu opsi bervektor/bergambar lainnya):
+- **Rule 1 (Mandatory ContentScale.Fit)**: Komponen render gambar opsi visual di UI (`LessonExerciseScreen.kt`) **WAJIB menggunakan `ContentScale.Fit`**. DILARANG KERAS menggunakan `ContentScale.Crop` yang memangkas/memotong ujung atas, bawah, atau samping gambar/vektor.
+- **Rule 2 (Mandatory Safe Padding)**: Kontainer gambar opsi wajib memiliki *internal padding* yang cukup (minimal `12.dp` s/d `16.dp` horizontal, `8.dp` s/d `12.dp` vertical) sehingga aset visual bernapas lega dan tidak pernah terbentur atau terpotong oleh batas kartu (`Card`).
+- **Rule 3 (No Artificial Box Clipping)**: Kontainer `Box` pembungkus gambar tidak boleh diberi `.clip()` tambahan yang memotong bagian bawah/atas aset.
+- **Rule 4 (Vector Viewport Integrity)**: Designer wajib memastikan `android:viewportWidth` dan `android:viewportHeight` pada XML VectorDrawable mencakup keseluruhan bounding box elemen path tanpa ada titik koordinat yang keluar dari batas viewport.
+
+---
+
+## 12. MANDAT KODE BERSIH & MAINTAINABILITY (ZERO DEAD COMMENTS, ZERO UNUSED ICONS & PURE MAINTAINABLE CODE)
+**CRITICAL**: Dalam setiap audit kode oleh QA:
+- **Rule 1 (Zero Cluttered Comments)**: Hapus seluruh komentar usang, komentar debug sementara, instruksi prompt lawas, atau komentar placeholder yang tidak memberikan nilai dokumentasi arsitektur.
+- **Rule 2 (Zero Unused Icons & Imports)**: Hapus import dan referensi drawable/ikon yang sudah tidak terpakai atau digantikan.
+- **Rule 3 (Maintainable & Self-Documenting Structure)**: Kode harus rapi, modular, mengikuti kaidah Clean Architecture & Kotlin idiomatis agar mudah dirawat dan dikembangkan jangka panjang.
+

@@ -827,7 +827,7 @@ fun LessonExerciseScreen(
                                             modifier = Modifier
                                                 .fillMaxWidth()
                                                 .height(boxHeight)
-                                                .clip(RoundedCornerShape(topStart = 18.dp, topEnd = 18.dp)),
+                                                .padding(horizontal = 16.dp, vertical = 12.dp),
                                             contentAlignment = Alignment.Center
                                         ) {
                                             if (opt.iconRes != 0) {
@@ -835,7 +835,7 @@ fun LessonExerciseScreen(
                                                     painter = painterResource(opt.iconRes),
                                                     contentDescription = opt.label,
                                                     modifier = Modifier.fillMaxSize(),
-                                                    contentScale = androidx.compose.ui.layout.ContentScale.Crop
+                                                    contentScale = androidx.compose.ui.layout.ContentScale.Fit
                                                 )
                                             } else {
                                                 Text(text = opt.emoji, fontSize = if (isTwoOptions) 64.sp else 52.sp)
