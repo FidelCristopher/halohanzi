@@ -5,6 +5,8 @@ import androidx.compose.animation.animateColorAsState
 import androidx.compose.animation.core.spring
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
+import androidx.compose.animation.scaleIn
+import androidx.compose.animation.scaleOut
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -22,9 +24,11 @@ import androidx.compose.foundation.text.BasicTextField
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowForward
 import androidx.compose.material.icons.filled.Close
+import androidx.compose.material.icons.filled.KeyboardArrowUp
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.runtime.saveable.rememberSaveable
+import kotlinx.coroutines.launch
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -49,6 +53,7 @@ fun StoryListScreen(
     lazyListState: LazyListState = rememberLazyListState(),
     onSelectStory: (Story) -> Unit
 ) {
+    val coroutineScope = rememberCoroutineScope()
     val allStories = LearningRepository.stories
 
     var selectedHskFilter by rememberSaveable { mutableStateOf("Semua") }
@@ -92,19 +97,29 @@ fun StoryListScreen(
         }
     }
 
-    LazyColumn(
-        state = lazyListState,
+    // Scroll to top indicator when user has scrolled past item index 2
+    val showScrollToTop by remember {
+        derivedStateOf {
+            lazyListState.firstVisibleItemIndex > 2
+        }
+    }
+
+    Box(
         modifier = Modifier
             .fillMaxSize()
-            .background(AppBg),
-        contentPadding = PaddingValues(
-            start = 16.dp,
-            end = 16.dp,
-            top = 16.dp,
-            bottom = 100.dp // Accommodate floating bottom navigation bar
-        ),
-        verticalArrangement = Arrangement.spacedBy(16.dp)
+            .background(AppBg)
     ) {
+        LazyColumn(
+            state = lazyListState,
+            modifier = Modifier.fillMaxSize(),
+            contentPadding = PaddingValues(
+                start = 16.dp,
+                end = 16.dp,
+                top = 16.dp,
+                bottom = 100.dp // Accommodate floating bottom navigation bar
+            ),
+            verticalArrangement = Arrangement.spacedBy(16.dp)
+        ) {
         // --- 1. HERO HEADER SECTION ---
         item(key = "header_title") {
             Text(
@@ -261,6 +276,39 @@ fun StoryListScreen(
             }
         }
     }
+
+    // Floating small scroll-to-top button
+    AnimatedVisibility(
+        visible = showScrollToTop,
+        enter = fadeIn() + scaleIn(),
+        exit = fadeOut() + scaleOut(),
+        modifier = Modifier
+            .align(Alignment.BottomEnd)
+            .padding(end = 20.dp, bottom = 100.dp)
+    ) {
+        FloatingActionButton(
+            onClick = {
+                coroutineScope.launch {
+                    lazyListState.animateScrollToItem(0)
+                }
+            },
+            modifier = Modifier.size(46.dp),
+            shape = CircleShape,
+            containerColor = PastelBlueBrand,
+            contentColor = Color.White,
+            elevation = FloatingActionButtonDefaults.elevation(
+                defaultElevation = 6.dp,
+                pressedElevation = 8.dp
+            )
+        ) {
+            Icon(
+                imageVector = Icons.Default.KeyboardArrowUp,
+                contentDescription = "Scroll ke Atas",
+                modifier = Modifier.size(24.dp)
+            )
+        }
+    }
+}
 }
 
 // -------------------------------------------------------------
