@@ -43,10 +43,12 @@ import com.example.chineselearning.data.repository.LearningRepository
 import com.example.chineselearning.ui.components.bouncyClick
 import com.example.chineselearning.ui.components.shake
 import com.example.chineselearning.ui.theme.*
+import android.os.SystemClock
 import androidx.compose.ui.platform.LocalHapticFeedback
 import androidx.compose.ui.hapticfeedback.HapticFeedbackType
 import com.example.chineselearning.audio.SoundFxManager
 import com.example.chineselearning.data.model.Exercise
+import java.util.Locale
 import kotlin.math.roundToInt
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
@@ -60,6 +62,9 @@ fun LessonExerciseScreen(
     onFinish: () -> Unit,
     onBackClick: () -> Unit
 ) {
+    val startTimeMs = remember { SystemClock.elapsedRealtime() }
+    var durationSecondsOnComplete by remember { mutableStateOf(0) }
+
     val mainExercises = remember(lesson, partNumber) { lesson.getExercisesForPart(partNumber) }
     val wrongExercises = remember { mutableStateListOf<Exercise>() }
     var isReviewMode by remember { mutableStateOf(false) }
@@ -223,6 +228,8 @@ fun LessonExerciseScreen(
                     currentReviewIdx = 0
                     resetExerciseState()
                 } else {
+                    val elapsedMs = SystemClock.elapsedRealtime() - startTimeMs
+                    durationSecondsOnComplete = ((elapsedMs / 1000L).coerceAtLeast(1L)).toInt()
                     isLessonCompleted = true
                 }
             } else {
@@ -233,6 +240,8 @@ fun LessonExerciseScreen(
             // Mode Review pengulangan
             if (currentReviewIdx >= wrongExercises.size - 1) {
                 // Seluruh soal salah telah diperbaiki
+                val elapsedMs = SystemClock.elapsedRealtime() - startTimeMs
+                durationSecondsOnComplete = ((elapsedMs / 1000L).coerceAtLeast(1L)).toInt()
                 isLessonCompleted = true
             } else {
                 currentReviewIdx++
@@ -250,9 +259,15 @@ fun LessonExerciseScreen(
 
     // CELEBRATION SCREEN
     if (isLessonCompleted) {
+        val finalSeconds = if (durationSecondsOnComplete > 0) {
+            durationSecondsOnComplete
+        } else {
+            ((SystemClock.elapsedRealtime() - startTimeMs) / 1000L).coerceAtLeast(1L).toInt()
+        }
         LessonCelebrationScreen(
             comboCount = comboCount,
             accuracyPercent = realAccuracyPercent,
+            durationSeconds = finalSeconds,
             onContinue = onFinish
         )
         return
@@ -1737,6 +1752,7 @@ fun LessonExerciseScreen(
 fun LessonCelebrationScreen(
     comboCount: Int,
     accuracyPercent: Int = 100,
+    durationSeconds: Int = 60,
     onContinue: () -> Unit
 ) {
     // Entrance pulse animation
@@ -1746,11 +1762,12 @@ fun LessonCelebrationScreen(
         label = "lionScale"
     )
 
-    // Counter ticker animation untuk Total XP dan Akurasi Riil
+    // Counter ticker animation untuk Total XP, Akurasi Riil, dan Durasi Waktu
     val animatedAccuracy = remember { Animatable(0f) }
     val animatedXp = remember { Animatable(0f) }
+    val animatedSeconds = remember { Animatable(0f) }
 
-    LaunchedEffect(accuracyPercent) {
+    LaunchedEffect(accuracyPercent, durationSeconds) {
         delay(250)
         SoundFxManager.playCorrect()
         launch {
@@ -1763,6 +1780,12 @@ fun LessonCelebrationScreen(
             animatedAccuracy.animateTo(
                 targetValue = accuracyPercent.toFloat(),
                 animationSpec = tween(durationMillis = 1200, easing = FastOutSlowInEasing)
+            )
+        }
+        launch {
+            animatedSeconds.animateTo(
+                targetValue = durationSeconds.toFloat(),
+                animationSpec = tween(durationMillis = 1100, easing = FastOutSlowInEasing)
             )
         }
     }
@@ -1886,13 +1909,21 @@ fun LessonCelebrationScreen(
                             )
                         }
 
+                        val currentSecs = animatedSeconds.value.toInt()
+                        val formattedTime = String.format(
+                            Locale.getDefault(),
+                            "%02d:%02d",
+                            currentSecs / 60,
+                            currentSecs % 60
+                        )
+
                         Row(
                             verticalAlignment = Alignment.CenterVertically,
                             modifier = Modifier.padding(14.dp)
                         ) {
                             Icon(imageVector = Icons.Default.Timer, contentDescription = null, tint = Color(0xFF1E88E5), modifier = Modifier.size(20.dp))
                             Spacer(modifier = Modifier.width(6.dp))
-                            Text(text = "01:23", fontSize = 18.sp, fontWeight = FontWeight.Bold, color = DeepNavy)
+                            Text(text = formattedTime, fontSize = 18.sp, fontWeight = FontWeight.Bold, color = DeepNavy)
                         }
                     }
                 }
