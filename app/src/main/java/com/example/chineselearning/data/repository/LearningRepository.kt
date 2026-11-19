@@ -4079,6 +4079,100 @@ object LearningRepository {
                     exercisesPart2 = bab12Stage5Part2Exercises
                 )
             )
+        ),
+
+        // BAB 13: Cuaca, Iklim & Alam Sekitar (天气变化与自然四季)
+        UnitCourse(
+            id = "unit_13",
+            unitNumber = 13,
+            title = "Cuaca & Iklim",
+            subtitle = "Kondisi cuaca hari ini, suhu panas dingin, dan fenomena hujan salju",
+            bannerTitle = "Cuaca, Iklim & Alam Sekitar",
+            emoji = "⛅",
+            level = "Level 13",
+            story = stories[12],
+            nodes = listOf(
+                PathNode("u13_n1", "Tanya Cuaca", Color(0xFFFFC107), NodeIconType.CAP, isCompleted = false, lessonId = "u13_l1"),
+                PathNode("u13_n2", "Panas & Dingin", Color(0xFFFFC107), NodeIconType.DUMBBELL, isCompleted = false, lessonId = "u13_l2"),
+                PathNode("u13_n3", "Hujan & Salju", Color(0xFFFFC107), NodeIconType.CAP, isCompleted = false, lessonId = "u13_l3"),
+                PathNode("u13_n4", "Derajat Intensitas", Color(0xFFFFC107), NodeIconType.DUMBBELL, isCompleted = false, lessonId = "u13_l4"),
+                PathNode("u13_n5", "Evaluasi Cuaca", Color(0xFFFFC107), NodeIconType.SHUFFLE, isCompleted = false, lessonId = "u13_l5"),
+                PathNode("u13_n6", "Kuis Cerita", Color(0xFFFFC107), NodeIconType.BOOK, isCompleted = false, lessonId = "u13_l1"),
+                PathNode("u13_n7", "Checkpoint Bab", Color(0xFFFFB300), NodeIconType.CHEST, isCompleted = false, lessonId = "u13_l1"),
+                PathNode("u13_n8", "Rest area", Color(0xFF03A9F4), NodeIconType.REST_AREA, isCompleted = false, lessonId = "u13_l1")
+            ),
+            lessons = listOf(
+                Lesson(
+                    id = "u13_l1",
+                    title = "Menanyakan Cuaca",
+                    subtitle = "Kosakata 天气, 天, dan 怎么样",
+                    grammarNote = "Menanyakan kondisi cuaca: 'Waktu/Tempat + 天气怎么样？' (今天天气怎么样？ = Bagaimana cuaca hari ini?). Jawaban: 天气很好 (cuaca sangat bagus).",
+                    newWords = listOf(
+                        Word("w13_1", "天气", "tiānqì", "Cuaca", "Alam", "今天天气很好。", "Jīntiān tiānqì hěn hǎo.", "Hari ini cuaca sangat bagus."),
+                        Word("w13_2", "天", "tiān", "Hari / langit", "Alam", "住三天。", "Zhù sān tiān.", "Tinggal tiga hari."),
+                        Word("w13_3", "怎么样", "zěnmeyàng", "Bagaimana", "Kata tanya", "明天天气怎么样？", "Míngtiān tiānqì zěnmeyàng?", "Bagaimana cuaca besok?")
+                    ),
+                    exercises = bab13Stage1Part1Exercises,
+                    exercisesPart1 = bab13Stage1Part1Exercises,
+                    exercisesPart2 = bab13Stage1Part2Exercises
+                ),
+                Lesson(
+                    id = "u13_l2",
+                    title = "Panas vs Dingin",
+                    subtitle = "Suhu lingkungan 热 dan 冷",
+                    grammarNote = "Pasangan suhu: 热 (rè = panas) vs 冷 (lěng = dingin). Pertanyaan alternatif: 冷不冷？ (dingin tidak?). Eksklamasio: 太冷了！ (terlalu dingin!).",
+                    newWords = listOf(
+                        Word("w13_4", "热", "rè", "Panas", "Kata sifat", "今天很热。", "Jīntiān hěn rè.", "Hari ini sangat panas."),
+                        Word("w13_5", "冷", "lěng", "Dingin", "Kata sifat", "外边很冷。", "Wàibian hěn lěng.", "Di luar sangat dingin.")
+                    ),
+                    exercises = bab13Stage2Part1Exercises,
+                    exercisesPart1 = bab13Stage2Part1Exercises,
+                    exercisesPart2 = bab13Stage2Part2Exercises
+                ),
+                Lesson(
+                    id = "u13_l3",
+                    title = "Hujan & Salju",
+                    subtitle = "Fenomena alam 雨, 下雨, 雪, dan 下雪",
+                    grammarNote = "Verba-Objek meteorologi: 下雨 (turun hujan) dan 下雪 (turun salju). Penambahan 了 menyatakan perubahan keadaan: 下雨了 (sudah turun hujan).",
+                    newWords = listOf(
+                        Word("w13_6", "雨", "yǔ", "Hujan", "Alam", "下大雨。", "Xià dà yǔ.", "Turun hujan lebat."),
+                        Word("w13_7", "下雨", "xià yǔ", "Turun hujan", "Alam", "今天下雨了。", "Jīntiān xiàyǔ le.", "Hari ini turun hujan."),
+                        Word("w13_8", "雪", "xuě", "Salju", "Alam", "白雪。", "Bái xuě.", "Salju putih."),
+                        Word("w13_9", "下雪", "xià xuě", "Turun salju", "Alam", "北京下雪了。", "Běijīng xiàxuě le.", "Beijing turun salju.")
+                    ),
+                    exercises = bab13Stage3Part1Exercises,
+                    exercisesPart1 = bab13Stage3Part1Exercises,
+                    exercisesPart2 = bab13Stage3Part2Exercises
+                ),
+                Lesson(
+                    id = "u13_l4",
+                    title = "Gradasi Intensitas & Kesan",
+                    subtitle = "Kata keterangan 非常, 很, dan 真",
+                    grammarNote = "Tingkatan intensitas: 很 (sangat) -> 非常 (amat sangat) -> 真 (sungguh-sungguh: 真好！, 真冷啊！).",
+                    newWords = listOf(
+                        Word("w13_10", "非常", "fēicháng", "Amat sangat", "Keterangan", "天气非常好。", "Tiānqì fēicháng hǎo.", "Cuaca amat sangat baik."),
+                        Word("w13_11", "真", "zhēn", "Sungguh / benar", "Keterangan", "今天天气真好！", "Jīntiān tiānqì zhēn hǎo!", "Hari ini cuaca sungguh bagus!")
+                    ),
+                    exercises = bab13Stage4Part1Exercises,
+                    exercisesPart1 = bab13Stage4Part1Exercises,
+                    exercisesPart2 = bab13Stage4Part2Exercises
+                ),
+                Lesson(
+                    id = "u13_l5",
+                    title = "Evaluasi Komprehensif Cuaca",
+                    subtitle = "Review seluruh 11 kosakata cuaca, iklim & alam",
+                    grammarNote = "Evaluasi menyeluruh Bab 13: menanyakan dan menjawab kondisi cuaca, mendeskripsikan suhu panas dan dingin, fenomena hujan salju, dan ungkapan kesan intensitas.",
+                    newWords = listOf(
+                        Word("w13_1", "天气", "tiānqì", "Cuaca", "Alam", "今天天气很好。", "Jīntiān tiānqì hěn hǎo.", "Hari ini cuaca sangat bagus."),
+                        Word("w13_4", "热", "rè", "Panas", "Kata sifat", "不冷不热。", "Bù lěng bú rè.", "Tidak dingin tidak panas."),
+                        Word("w13_7", "下雨", "xià yǔ", "Hujan", "Alam", "下雨了。", "Xiàyǔ le.", "Turun hujan."),
+                        Word("w13_11", "真", "zhēn", "Sungguh", "Keterangan", "真好！", "Zhēn hǎo!", "Sungguh bagus!")
+                    ),
+                    exercises = bab13Stage5Part1Exercises,
+                    exercisesPart1 = bab13Stage5Part1Exercises,
+                    exercisesPart2 = bab13Stage5Part2Exercises
+                )
+            )
         )
     )
 }
