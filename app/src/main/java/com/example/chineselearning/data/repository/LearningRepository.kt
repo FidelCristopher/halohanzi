@@ -3870,6 +3870,118 @@ object LearningRepository {
                     exercisesPart2 = bab10Stage5Part2Exercises
                 )
             )
+        ),
+
+        // BAB 11: Sekolah, Kampus & Belajar Bahasa (学校教育与汉语言研习)
+        UnitCourse(
+            id = "unit_11",
+            unitNumber = 11,
+            title = "Pendidikan & Kampus",
+            subtitle = "Sekolah, universitas, membaca buku, menulis karakter Hanzi, dan kelas",
+            bannerTitle = "Sekolah, Kampus & Belajar Bahasa",
+            emoji = "🎓",
+            level = "Level 11",
+            story = stories[10],
+            nodes = listOf(
+                PathNode("u11_n1", "Jenjang Pendidikan", Color(0xFFFFC107), NodeIconType.CAP, isCompleted = false, lessonId = "u11_l1"),
+                PathNode("u11_n2", "Belajar & Masuk Kelas", Color(0xFFFFC107), NodeIconType.DUMBBELL, isCompleted = false, lessonId = "u11_l2"),
+                PathNode("u11_n3", "Buku & Toko Buku", Color(0xFFFFC107), NodeIconType.CAP, isCompleted = false, lessonId = "u11_l3"),
+                PathNode("u11_n4", "Literasi Membaca", Color(0xFFFFC107), NodeIconType.DUMBBELL, isCompleted = false, lessonId = "u11_l4"),
+                PathNode("u11_n5", "Menulis Aksara Hanzi", Color(0xFFFFC107), NodeIconType.CAP, isCompleted = false, lessonId = "u11_l5"),
+                PathNode("u11_n6", "Evaluasi Pendidikan", Color(0xFFFFC107), NodeIconType.SHUFFLE, isCompleted = false, lessonId = "u11_l6"),
+                PathNode("u11_n7", "Kuis Cerita", Color(0xFFFFC107), NodeIconType.BOOK, isCompleted = false, lessonId = "u11_l1"),
+                PathNode("u11_n8", "Checkpoint Bab", Color(0xFFFFB300), NodeIconType.CHEST, isCompleted = false, lessonId = "u11_l1"),
+                PathNode("u11_n9", "Rest area", Color(0xFF03A9F4), NodeIconType.REST_AREA, isCompleted = false, lessonId = "u11_l1")
+            ),
+            lessons = listOf(
+                Lesson(
+                    id = "u11_l1",
+                    title = "Jenjang Pendidikan & Siswa",
+                    subtitle = "Kosakata 学校, 小学, 中学, dan 大学",
+                    grammarNote = "Tingkatan institusi pendidikan: 小学 (SD), 中学 (SMP/SMA), 大学 (Universitas). Siswanya: 小学生 (murid SD), 中学生 (siswa SMP/SMA), 大学生 (mahasiswa).",
+                    newWords = listOf(
+                        Word("w11_1", "学校", "xuéxiào", "Sekolah", "Tempat", "我去学校。", "Wǒ qù xuéxiào.", "Saya pergi ke sekolah."),
+                        Word("w11_2", "小学", "xiǎoxué", "Sekolah dasar", "Tempat", "他是小学生。", "Tā shì xiǎoxuéshēng.", "Dia adalah murid SD."),
+                        Word("w11_3", "中学", "zhōngxué", "Sekolah menengah", "Tempat", "我姐姐是中学生。", "Wǒ jiějie shì zhōngxuéshēng.", "Kakak saya siswi SMP."),
+                        Word("w11_4", "大学", "dàxué", "Universitas", "Tempat", "他在大学学习。", "Tā zài dàxué xuéxí.", "Dia belajar di universitas.")
+                    ),
+                    exercises = bab11Stage1Part1Exercises,
+                    exercisesPart1 = bab11Stage1Part1Exercises,
+                    exercisesPart2 = bab11Stage1Part2Exercises
+                ),
+                Lesson(
+                    id = "u11_l2",
+                    title = "Aktivitas Belajar & Kelas",
+                    subtitle = "Kosakata 学习, 学, 课, 上课, dan 下课",
+                    grammarNote = "Siklus perkuliahan: 上课 (memulai kelas) vs 下课 (selesai kelas). Pola: 'Jam + 上课/下课' (八点上课 = jam 8 mulai kelas).",
+                    newWords = listOf(
+                        Word("w11_5", "学习", "xuéxí", "Belajar", "Kata kerja", "我在学习汉语。", "Wǒ zài xuéxí Hànyǔ.", "Saya sedang belajar bahasa Mandarin."),
+                        Word("w11_6", "课", "kè", "Kelas / pelajaran", "Benda", "今天没有课。", "Jīntiān méiyǒu kè.", "Hari ini tidak ada kelas."),
+                        Word("w11_7", "上课", "shàngkè", "Masuk kelas", "Kata kerja", "我们八点上课。", "Wǒmen bā diǎn shàngkè.", "Kami jam 8 masuk kelas."),
+                        Word("w11_8", "下课", "xiàkè", "Selesai kelas", "Kata kerja", "十二点下课。", "Shí'èr diǎn xiàkè.", "Jam 12 selesai kelas.")
+                    ),
+                    exercises = bab11Stage2Part1Exercises,
+                    exercisesPart1 = bab11Stage2Part1Exercises,
+                    exercisesPart2 = bab11Stage2Part2Exercises
+                ),
+                Lesson(
+                    id = "u11_l3",
+                    title = "Buku & Toko Buku",
+                    subtitle = "Kosakata 书, 书店, dan satuan 本",
+                    grammarNote = "Kata penggolong jilid/buku: 本 (běn). Rumus: 'Angka + 本 + 书' (一本书 = sebuah buku, 两本中文书 = dua buku Mandarin). Tempat: 书店 (toko buku).",
+                    newWords = listOf(
+                        Word("w11_9", "书", "shū", "Buku", "Benda", "这是我的书。", "Zhè shì wǒ de shū.", "Ini adalah buku saya."),
+                        Word("w11_10", "本", "běn", "Jilid (buku)", "Satuan", "一本书。", "Yì běn shū.", "Sebuah buku."),
+                        Word("w11_11", "书店", "shūdiàn", "Toko buku", "Tempat", "去书店买书。", "Qù shūdiàn mǎi shū.", "Pergi ke toko buku membeli buku.")
+                    ),
+                    exercises = bab11Stage3Part1Exercises,
+                    exercisesPart1 = bab11Stage3Part1Exercises,
+                    exercisesPart2 = bab11Stage3Part2Exercises
+                ),
+                Lesson(
+                    id = "u11_l4",
+                    title = "Literasi Membaca",
+                    subtitle = "Kata kerja 读 dan 读书",
+                    grammarNote = "Verba membaca: 读 (membaca lantang: 跟老师读 = membaca mengikuti guru). 读书 bermakna ganda: membaca buku atau menempuh studi / kuliah (在北京读书 = kuliah di Beijing).",
+                    newWords = listOf(
+                        Word("w11_12", "读", "dú", "Membaca", "Kata kerja", "跟老师读。", "Gēn lǎoshī dú.", "Ikuti guru membaca."),
+                        Word("w11_13", "读书", "dúshū", "Membaca buku / kuliah", "Kata kerja", "他在北京读书。", "Tā zài Běijīng dúshū.", "Dia kuliah di Beijing.")
+                    ),
+                    exercises = bab11Stage4Part1Exercises,
+                    exercisesPart1 = bab11Stage4Part1Exercises,
+                    exercisesPart2 = bab11Stage4Part2Exercises
+                ),
+                Lesson(
+                    id = "u11_l5",
+                    title = "Menulis Karakter Hanzi",
+                    subtitle = "Kosakata 写, 汉字, 字, 汉语, dan 中文",
+                    grammarNote = "Literasi tulisan: 写 (menulis). Objek karakter: 汉字 (karakter Hanzi suku Han). Bahasa Mandarin: 汉语 (lisan/komunikasi), 中文 (bahasa tulisan Tionghoa).",
+                    newWords = listOf(
+                        Word("w11_14", "写", "xiě", "Menulis", "Kata kerja", "我会写汉字。", "Wǒ huì xiě Hànzì.", "Saya bisa menulis aksara Hanzi."),
+                        Word("w11_15", "汉字", "Hànzì", "Karakter Hanzi", "Benda", "写汉字。", "Xiě Hànzì.", "Menulis aksara Hanzi."),
+                        Word("w11_16", "汉语", "Hànyǔ", "Bahasa Mandarin", "Bahasa", "说汉语。", "Shuō Hànyǔ.", "Berbicara bahasa Mandarin."),
+                        Word("w11_17", "中文", "Zhōngwén", "Bahasa Mandarin", "Bahasa", "看中文书。", "Kàn Zhōngwén shū.", "Membaca buku bahasa Mandarin.")
+                    ),
+                    exercises = bab11Stage5Part1Exercises,
+                    exercisesPart1 = bab11Stage5Part1Exercises,
+                    exercisesPart2 = bab11Stage5Part2Exercises
+                ),
+                Lesson(
+                    id = "u11_l6",
+                    title = "Evaluasi Komprehensif Pendidikan",
+                    subtitle = "Review seluruh 23 kosakata sekolah, kampus & bahasa Mandarin",
+                    grammarNote = "Evaluasi menyeluruh Bab 11: menguasai kosakata jenjang sekolah, aktivitas belajar dan siklus perkuliahan, toko buku, literasi membaca serta menulis karakter Hanzi.",
+                    newWords = listOf(
+                        Word("w11_4", "大学", "dàxué", "Universitas", "Tempat", "在大学学习。", "Zài dàxué xuéxí.", "Belajar di universitas."),
+                        Word("w11_7", "上课", "shàngkè", "Masuk kelas", "Kata kerja", "早上八点上课。", "Zǎoshang bā diǎn shàngkè.", "Jam 8 pagi masuk kelas."),
+                        Word("w11_15", "汉字", "Hànzì", "Hanzi", "Benda", "写汉字。", "Xiě Hànzì.", "Menulis Hanzi."),
+                        Word("w11_16", "汉语", "Hànyǔ", "Mandarin", "Bahasa", "学习汉语。", "Xuéxí Hànyǔ.", "Belajar bahasa Mandarin.")
+                    ),
+                    exercises = bab11Stage6Part1Exercises,
+                    exercisesPart1 = bab11Stage6Part1Exercises,
+                    exercisesPart2 = bab11Stage6Part2Exercises
+                )
+            )
         )
     )
 }
