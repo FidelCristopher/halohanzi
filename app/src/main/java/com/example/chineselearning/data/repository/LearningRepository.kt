@@ -3336,65 +3336,116 @@ object LearningRepository {
             )
         ),
 
-        // BAB 6: Perjalanan, Transportasi, Arah & Cuaca
+        // BAB 6: Keluarga & Kehangatan Rumah (家庭成员与温馨居所)
         UnitCourse(
             id = "unit_6",
             unitNumber = 6,
-            title = "Arah & Transportasi",
-            subtitle = "Naik taksi, pesawat, stasiun kereta, dan cuaca",
-            bannerTitle = "Di Perjalanan & Cuaca",
-            emoji = "🚕",
+            title = "Keluarga & Rumah",
+            subtitle = "Orang tua, saudara, anak, tempat tinggal, dan perabot kamar",
+            bannerTitle = "Keluarga & Kehangatan Rumah",
+            emoji = "🏡",
             level = "Level 6",
             story = stories[5],
             nodes = listOf(
-                PathNode("u6_n1", "Taksi & Kereta", Color(0xFF009688), NodeIconType.CAP, isCompleted = false, lessonId = "u6_l1"),
-                PathNode("u6_n2", "Arah Depan Belakang", Color(0xFFFFC107), NodeIconType.CAP, isCompleted = false, lessonId = "u6_l1"),
-                PathNode("u6_n3", "Latihan Cuaca", Color(0xFFFFC107), NodeIconType.DUMBBELL, isCompleted = false, lessonId = "u6_l1"),
-                PathNode("u6_n4", "Stasiun Kereta", Color(0xFFFFC107), NodeIconType.CAP, isCompleted = false, lessonId = "u6_l1"),
-                PathNode("u6_n5", "Checkpoint HSK 1", Color(0xFFFFB300), NodeIconType.CHEST, isCompleted = false, lessonId = "u6_l1")
+                PathNode("u6_n1", "Orang Tua & Saudara", Color(0xFFFFC107), NodeIconType.CAP, isCompleted = false, lessonId = "u6_l1"),
+                PathNode("u6_n2", "Anak & Satuan 口", Color(0xFFFFC107), NodeIconType.DUMBBELL, isCompleted = false, lessonId = "u6_l2"),
+                PathNode("u6_n3", "Tempat Tinggal 住", Color(0xFFFFC107), NodeIconType.CAP, isCompleted = false, lessonId = "u6_l3"),
+                PathNode("u6_n4", "Kamar & Perabot", Color(0xFFFFC107), NodeIconType.DUMBBELL, isCompleted = false, lessonId = "u6_l4"),
+                PathNode("u6_n5", "Usia & Relasi", Color(0xFFFFC107), NodeIconType.CAP, isCompleted = false, lessonId = "u6_l5"),
+                PathNode("u6_n6", "Evaluasi Rumah", Color(0xFFFFC107), NodeIconType.SHUFFLE, isCompleted = false, lessonId = "u6_l6"),
+                PathNode("u6_n7", "Kuis Cerita", Color(0xFFFFC107), NodeIconType.BOOK, isCompleted = false, lessonId = "u6_l1"),
+                PathNode("u6_n8", "Checkpoint Bab", Color(0xFFFFB300), NodeIconType.CHEST, isCompleted = false, lessonId = "u6_l1"),
+                PathNode("u6_n9", "Rest area", Color(0xFF03A9F4), NodeIconType.REST_AREA, isCompleted = false, lessonId = "u6_l1")
             ),
             lessons = listOf(
                 Lesson(
                     id = "u6_l1",
-                    title = "Menuju Stasiun Kereta",
-                    subtitle = "Taksi, arah jalan, dan cuaca",
-                    grammarNote = "Naik kendaraan: '坐 (zuò) + Kendaraan'. Menyetir: '开 (kāi) + Mobil'. Menanyakan cuaca: '天气怎么样？'.",
+                    title = "Orang Tua & Saudara Kandung",
+                    subtitle = "Ayah, ibu, kakak, dan adik",
+                    grammarNote = "Menyatakan kepemilikan keluarga: '我 + Anggota Keluarga' (de bisa dihilangkan untuk keluarga dekat: 我爸爸, 我妈妈). Pola kepunyaan: 有 (punya) vs 没有 (tidak punya).",
                     newWords = listOf(
-                        Word("w6_1", "出租车", "chūzūchē", "Taksi", "Transportasi", "我们坐出租车。", "Wǒmen zuò chūzūchē.", "Kami naik taksi."),
-                        Word("w6_2", "火车站", "huǒchēzhàn", "Stasiun Kereta", "Tempat", "火车站就在前面。", "Huǒchēzhàn jiù zài qiánmiàn.", "Stasiun kereta tepat di depan."),
-                        Word("w6_3", "天气", "tiānqì", "Cuaca", "Alam", "今天天气很好。", "Jīntiān tiānqì hěn hǎo.", "Hari ini cuaca sangat bagus.")
+                        Word("w6_1", "爸爸", "bàba", "Ayah", "Keluarga", "这是我爸爸。", "Zhè shì wǒ bàba.", "Ini adalah ayah saya."),
+                        Word("w6_2", "妈妈", "māma", "Ibu", "Keluarga", "我爱爸爸妈妈。", "Wǒ ài bàba māma.", "Saya menyayangi ayah dan ibu."),
+                        Word("w6_3", "哥哥", "gēge", "Kakak laki-laki", "Keluarga", "他是我哥哥。", "Tā shì wǒ gēge.", "Dia adalah kakak laki-laki saya."),
+                        Word("w6_4", "姐姐", "jiějie", "Kakak perempuan", "Keluarga", "那是我姐姐。", "Nà shì wǒ jiějie.", "Itu adalah kakak perempuan saya."),
+                        Word("w6_5", "弟弟", "dìdi", "Adik laki-laki", "Keluarga", "他有两个弟弟。", "Tā yǒu liǎng gè dìdi.", "Dia punya dua adik laki-laki."),
+                        Word("w6_6", "妹妹", "mèimei", "Adik perempuan", "Keluarga", "我有一个妹妹。", "Wǒ yǒu yí gè mèimei.", "Saya punya seorang adik perempuan.")
                     ),
-                    exercises = listOf(
-                        Exercise(
-                            id = "u6_ex1",
-                            type = ExerciseType.PICTURE_CHOICE,
-                            title = "Pilih gambar yang benar",
-                            targetHanzi = "出租车",
-                            targetPinyin = "chūzūchē",
-                            targetTranslation = "Taksi",
-                            correctAnswer = "taksi",
-                            audioToSpeak = "出租车",
-                            pictureOptions = listOf(
-                                PictureOption("p6_1", "taksi", "🚕", isCorrect = true),
-                                PictureOption("p6_2", "pesawat", "✈️", isCorrect = false),
-                                PictureOption("p6_3", "hujan", "🌧️", isCorrect = false),
-                                PictureOption("p6_4", "stasiun", "🚉", isCorrect = false)
-                            )
-                        ),
-                        Exercise(
-                            id = "u6_ex2",
-                            type = ExerciseType.MATCH_PAIRS,
-                            title = "Ketuk pasangan yang sesuai",
-                            correctAnswer = "ALL_MATCHED",
-                            matchPairs = listOf(
-                                MatchPairItem("m6_1", "出租车", "chūzūchē", "taksi"),
-                                MatchPairItem("m6_2", "火车站", "huǒchēzhàn", "stasiun kereta"),
-                                MatchPairItem("m6_3", "飞机", "fēijī", "pesawat"),
-                                MatchPairItem("m6_4", "天气", "tiānqì", "cuaca"),
-                                MatchPairItem("m6_5", "前面", "qiánmiàn", "depan")
-                            )
-                        )
-                    )
+                    exercises = bab6Stage1Part1Exercises,
+                    exercisesPart1 = bab6Stage1Part1Exercises,
+                    exercisesPart2 = bab6Stage1Part2Exercises
+                ),
+                Lesson(
+                    id = "u6_l2",
+                    title = "Anak & Kuantitas Anggota Keluarga",
+                    subtitle = "Anak laki-laki, anak perempuan, dan kata bantu 口",
+                    grammarNote = "Satuan penggolong anggota keluarga: 口 (kǒu). Rumus: Subjek + 家 + 有 + Angka + 口 + 人 (我家有四口人). Menanyakan jumlah anggota: 你家有几口人？.",
+                    newWords = listOf(
+                        Word("w6_7", "儿子", "érzi", "Anak laki-laki", "Keluarga", "他是我儿子。", "Tā shì wǒ érzi.", "Dia adalah anak laki-laki saya."),
+                        Word("w6_8", "女儿", "nǚ'ér", "Anak perempuan", "Keluarga", "她是我女儿。", "Tā shì wǒ nǚ'ér.", "Dia adalah anak perempuan saya."),
+                        Word("w6_9", "孩子", "háizi", "Anak", "Keluarga", "你有几个孩子？", "Nǐ yǒu jǐ gè háizi?", "Kamu punya berapa anak?"),
+                        Word("w6_10", "小朋友", "xiǎopéngyǒu", "Anak kecil / teman kecil", "Keluarga", "小朋友们好！", "Xiǎopéngyǒumen hǎo!", "Halo anak-anak!"),
+                        Word("w6_11", "口", "kǒu", "Satuan anggota keluarga", "Satuan", "我家有四口人。", "Wǒjiā yǒu sì kǒu rén.", "Keluarga saya ada 4 orang.")
+                    ),
+                    exercises = bab6Stage2Part1Exercises,
+                    exercisesPart1 = bab6Stage2Part1Exercises,
+                    exercisesPart2 = bab6Stage2Part2Exercises
+                ),
+                Lesson(
+                    id = "u6_l3",
+                    title = "Rumah & Tempat Tinggal",
+                    subtitle = "Kata kerja 住 (tinggal) dan makna 家 (rumah/keluarga)",
+                    grammarNote = "Menyatakan domisili tempat tinggal: 'Subjek + 住在 + Tempat' (我住在北京). Menanyakan domisili: '你住在哪儿？' (Kamu tinggal di mana?).",
+                    newWords = listOf(
+                        Word("w6_12", "家", "jiā", "Rumah / keluarga", "Tempat", "我家很大。", "Wǒjiā hěn dà.", "Rumah saya sangat besar."),
+                        Word("w6_13", "家人", "jiārén", "Anggota keluarga", "Keluarga", "我爱我的家人。", "Wǒ ài wǒ de jiārén.", "Saya menyayangi keluarga saya."),
+                        Word("w6_14", "住", "zhù", "Tinggal / menetap", "Kata kerja", "你住在哪儿？", "Nǐ zhù zài nǎr?", "Kamu tinggal di mana?")
+                    ),
+                    exercises = bab6Stage3Part1Exercises,
+                    exercisesPart1 = bab6Stage3Part1Exercises,
+                    exercisesPart2 = bab6Stage3Part2Exercises
+                ),
+                Lesson(
+                    id = "u6_l4",
+                    title = "Kamar & Perabot Rumah",
+                    subtitle = "Ruangan 房间, meja 桌子, dan kursi 椅子",
+                    grammarNote = "Struktur keberadaan di dalam ruang: 'Tempat/Ruang + 里 + 有 + Benda' (房间里有桌子和椅子). Letak di atas permukaan: 'Benda + 上' (桌子上).",
+                    newWords = listOf(
+                        Word("w6_15", "房间", "fángjiān", "Kamar / ruangan", "Benda", "这是我的房间。", "Zhè shì wǒ de fángjiān.", "Ini adalah kamar saya."),
+                        Word("w6_16", "桌子", "zhuōzi", "Meja", "Benda", "书在桌子上。", "Shū zài zhuōzi shang.", "Buku ada di atas meja."),
+                        Word("w6_17", "椅子", "yǐzi", "Kursi", "Benda", "他坐在椅子上。", "Tā zuò zài yǐzi shang.", "Dia duduk di kursi.")
+                    ),
+                    exercises = bab6Stage4Part1Exercises,
+                    exercisesPart1 = bab6Stage4Part1Exercises,
+                    exercisesPart2 = bab6Stage4Part2Exercises
+                ),
+                Lesson(
+                    id = "u6_l5",
+                    title = "Usia & Relasi Keluarga",
+                    subtitle = "Menyatakan usia anggota keluarga dengan 岁",
+                    grammarNote = "Pola usia anggota keluarga: 'Subjek + 今年 + Angka + 岁' (我哥哥今年二十岁). Pertanyaan usia anak: 几岁 (jǐ suì). Pertanyaan usia dewasa: 多大 (duō dà).",
+                    newWords = listOf(
+                        Word("w6_18", "岁", "suì", "Tahun (umur)", "Satuan", "我妹妹八岁。", "Wǒ mèimei bā suì.", "Adik perempuan saya 8 tahun."),
+                        Word("w6_1", "爸爸", "bàba", "Ayah", "Keluarga", "你爸爸今年多大？", "Nǐ bàba jīnnián duō dà?", "Berapa usia ayahmu tahun ini?")
+                    ),
+                    exercises = bab6Stage5Part1Exercises,
+                    exercisesPart1 = bab6Stage5Part1Exercises,
+                    exercisesPart2 = bab6Stage5Part2Exercises
+                ),
+                Lesson(
+                    id = "u6_l6",
+                    title = "Evaluasi Komprehensif Rumah",
+                    subtitle = "Review seluruh 18 kosakata keluarga & tempat tinggal",
+                    grammarNote = "Evaluasi komprehensif seluruh materi Bab 6: silsilah keluarga, jumlah anggota keluarga dengan 口, domisili 住, perabot kamar, dan deskripsi usia.",
+                    newWords = listOf(
+                        Word("w6_12", "家", "jiā", "Rumah", "Tempat", "我家有五口人。", "Wǒjiā yǒu wǔ kǒu rén.", "Keluarga saya ada 5 orang."),
+                        Word("w6_13", "家人", "jiārén", "Anggota keluarga", "Keluarga", "我家人住在北京。", "Wǒ jiārén zhù zài Běijīng.", "Keluarga saya tinggal di Beijing."),
+                        Word("w6_15", "房间", "fángjiān", "Kamar", "Benda", "房间里有桌子。", "Fángjiān lǐ yǒu zhuōzi.", "Di dalam kamar ada meja."),
+                        Word("w6_18", "岁", "suì", "Umur", "Satuan", "哥哥二十岁。", "Gēge èrshí suì.", "Kakak berumur 20 tahun.")
+                    ),
+                    exercises = bab6Stage6Part1Exercises,
+                    exercisesPart1 = bab6Stage6Part1Exercises,
+                    exercisesPart2 = bab6Stage6Part2Exercises
                 )
             )
         )
