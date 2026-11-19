@@ -3982,6 +3982,103 @@ object LearningRepository {
                     exercisesPart2 = bab11Stage6Part2Exercises
                 )
             )
+        ),
+
+        // BAB 12: Kantor, Dunia Kerja & Etiket Bisnis (公司职场与商务礼节)
+        UnitCourse(
+            id = "unit_12",
+            unitNumber = 12,
+            title = "Kantor & Dunia Kerja",
+            subtitle = "Perusahaan, jam kerja, etiket bisnis, mencari orang, dan kesopanan",
+            bannerTitle = "Kantor, Dunia Kerja & Etiket Bisnis",
+            emoji = "💼",
+            level = "Level 12",
+            story = stories[11],
+            nodes = listOf(
+                PathNode("u12_n1", "Perusahaan & Jam Kerja", Color(0xFFFFC107), NodeIconType.CAP, isCompleted = false, lessonId = "u12_l1"),
+                PathNode("u12_n2", "Kesibukan & Komputer", Color(0xFFFFC107), NodeIconType.DUMBBELL, isCompleted = false, lessonId = "u12_l2"),
+                PathNode("u12_n3", "Panggilan Hormat & Mencari", Color(0xFFFFC107), NodeIconType.CAP, isCompleted = false, lessonId = "u12_l3"),
+                PathNode("u12_n4", "Etiket Santun & Bantuan", Color(0xFFFFC107), NodeIconType.DUMBBELL, isCompleted = false, lessonId = "u12_l4"),
+                PathNode("u12_n5", "Evaluasi Dunia Kerja", Color(0xFFFFC107), NodeIconType.SHUFFLE, isCompleted = false, lessonId = "u12_l5"),
+                PathNode("u12_n6", "Kuis Cerita", Color(0xFFFFC107), NodeIconType.BOOK, isCompleted = false, lessonId = "u12_l1"),
+                PathNode("u12_n7", "Checkpoint Bab", Color(0xFFFFB300), NodeIconType.CHEST, isCompleted = false, lessonId = "u12_l1"),
+                PathNode("u12_n8", "Rest area", Color(0xFF03A9F4), NodeIconType.REST_AREA, isCompleted = false, lessonId = "u12_l1")
+            ),
+            lessons = listOf(
+                Lesson(
+                    id = "u12_l1",
+                    title = "Perusahaan & Jam Kerja",
+                    subtitle = "Kosakata 工作, 公司, 上班, dan 下班",
+                    grammarNote = "Siklus jam kantor: 上班 (mulai jam kerja) vs 下班 (usai kerja). Tempat bekerja: 在 + 公司 + 工作 (bekerja di perusahaan).",
+                    newWords = listOf(
+                        Word("w12_1", "工作", "gōngzuò", "Bekerja / pekerjaan", "Profesi", "我在公司工作。", "Wǒ zài gōngsī gōngzuò.", "Saya bekerja di perusahaan."),
+                        Word("w12_2", "公司", "gōngsī", "Perusahaan", "Tempat", "公司很大。", "Gōngsī hěn dà.", "Perusahaan sangat besar."),
+                        Word("w12_3", "上班", "shàngbān", "Masuk kerja", "Kata kerja", "我九点上班。", "Wǒ jiǔ diǎn shàngbān.", "Saya masuk kerja jam 9."),
+                        Word("w12_4", "下班", "xiàbān", "Pulang kerja", "Kata kerja", "下午五点下班。", "Xiàwǔ wǔ diǎn xiàbān.", "Jam 5 sore pulang kerja.")
+                    ),
+                    exercises = bab12Stage1Part1Exercises,
+                    exercisesPart1 = bab12Stage1Part1Exercises,
+                    exercisesPart2 = bab12Stage1Part2Exercises
+                ),
+                Lesson(
+                    id = "u12_l2",
+                    title = "Kesibukan & Urusan Kantor",
+                    subtitle = "Kosakata 忙, 事, dan 电脑",
+                    grammarNote = "Kondisi kerja: 忙 (máng = sibuk). Urusan: 事 (shì = urusan / masalah / hal). Perangkat kantor: 电脑 (diànnǎo = komputer).",
+                    newWords = listOf(
+                        Word("w12_5", "忙", "máng", "Sibuk", "Kata sifat", "今天工作很忙。", "Jīntiān gōngzuò hěn máng.", "Hari ini pekerjaan sangat sibuk."),
+                        Word("w12_6", "事", "shì", "Urusan / masalah", "Benda", "你有什么事？", "Nǐ yǒu shénme shì?", "Kamu ada urusan apa?"),
+                        Word("w12_7", "电脑", "diànnǎo", "Komputer", "Benda", "电脑在桌子上。", "Diànnǎo zài zhuōzi shang.", "Komputer di atas meja.")
+                    ),
+                    exercises = bab12Stage2Part1Exercises,
+                    exercisesPart1 = bab12Stage2Part1Exercises,
+                    exercisesPart2 = bab12Stage2Part2Exercises
+                ),
+                Lesson(
+                    id = "u12_l3",
+                    title = "Panggilan Hormat & Mencari Orang",
+                    subtitle = "Kosakata 先生, 女士, 找, dan 做",
+                    grammarNote = "Gelar kehormatan profesional: Marga + 先生 (Bapak/Tuan) atau 女士 (Ibu/Nyonya). Menanyakan tujuan: 你找谁？ (Kamu mencari siapa?).",
+                    newWords = listOf(
+                        Word("w12_8", "先生", "xiānsheng", "Tuan / bapak", "Sapaan", "王先生你好！", "Wáng xiānsheng nǐhǎo!", "Halo Tuan Wang!"),
+                        Word("w12_9", "女士", "nǚshì", "Nyonya / nona", "Sapaan", "李女士在公司。", "Lǐ nǚshì zài gōngsī.", "Nyonya Li ada di kantor."),
+                        Word("w12_10", "找", "zhǎo", "Mencari", "Kata kerja", "你找谁？", "Nǐ zhǎo shéi?", "Kamu mencari siapa?"),
+                        Word("w12_11", "做", "zuò", "Membuat / melakukan", "Kata kerja", "做什么工作？", "Zuò shénme gōngzuò?", "Melakukan pekerjaan apa?")
+                    ),
+                    exercises = bab12Stage3Part1Exercises,
+                    exercisesPart1 = bab12Stage3Part1Exercises,
+                    exercisesPart2 = bab12Stage3Part2Exercises
+                ),
+                Lesson(
+                    id = "u12_l4",
+                    title = "Etiket Santun & Memberikan Bantuan",
+                    subtitle = "Kosakata 给, 没关系, dan 没事",
+                    grammarNote = "Preposisi penerima manfaat: '给 (gěi) + Orang + Kata Kerja' (给我打电话 = menelepon saya). Respons santun terhadap permintaan maaf: 没关系 (tidak apa-apa) atau 没事 (tidak masalah).",
+                    newWords = listOf(
+                        Word("w12_12", "给", "gěi", "Memberi / kepada", "Kata kerja", "请给我一杯水。", "Qǐng gěi wǒ yì bēi shuǐ.", "Beri saya segelas air."),
+                        Word("w12_13", "没关系", "méi guānxi", "Tidak apa-apa", "Ungkapan", "对不起！没关系。", "Duìbuqǐ! Méi guānxi.", "Maaf! Tidak apa-apa."),
+                        Word("w12_14", "没事", "méishì", "Tidak ada masalah", "Ungkapan", "没事，谢谢。", "Méishì, xièxie.", "Tidak ada masalah, terima kasih.")
+                    ),
+                    exercises = bab12Stage4Part1Exercises,
+                    exercisesPart1 = bab12Stage4Part1Exercises,
+                    exercisesPart2 = bab12Stage4Part2Exercises
+                ),
+                Lesson(
+                    id = "u12_l5",
+                    title = "Evaluasi Komprehensif Dunia Kerja",
+                    subtitle = "Review seluruh 14 kosakata kantor, etiket & jam kerja",
+                    grammarNote = "Evaluasi menyeluruh Bab 12: situasi komunikasi kantor, jam kerja masuk dan pulang, menggunakan komputer, menyapa kolega dengan hormat, dan respons kesantunan.",
+                    newWords = listOf(
+                        Word("w12_1", "工作", "gōngzuò", "Bekerja", "Profesi", "在公司工作。", "Zài gōngsī gōngzuò.", "Bekerja di kantor."),
+                        Word("w12_3", "上班", "shàngbān", "Masuk kerja", "Kata kerja", "九点上班。", "Jiǔ diǎn shàngbān.", "Jam 9 masuk kerja."),
+                        Word("w12_8", "先生", "xiānsheng", "Tuan", "Sapaan", "王先生。", "Wáng xiānsheng.", "Tuan Wang."),
+                        Word("w12_13", "没关系", "méi guānxi", "Tidak apa-apa", "Ungkapan", "没关系。", "Méi guānxi.", "Tidak apa-apa.")
+                    ),
+                    exercises = bab12Stage5Part1Exercises,
+                    exercisesPart1 = bab12Stage5Part1Exercises,
+                    exercisesPart2 = bab12Stage5Part2Exercises
+                )
+            )
         )
     )
 }
