@@ -1,0 +1,45 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Rainy Slate Blue) -->
+    <path
+        android:fillColor="#F0F9FF"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Rain Cloud (Top Center) -->
+    <path
+        android:fillColor="#64748B"
+        android:pathData="M28,34 C22,34 18,39 18,45 C18,51 22,56 28,56 L70,56 C75,56 78,52 78,47 C78,42 75,38 70,38 C69,30 62,24 53,24 C46,24 40,28 38,34 Z" />
+    <path
+        android:fillColor="#94A3B8"
+        android:pathData="M30,36 C24,36 20,40 20,45 C20,50 24,54 30,54 L68,54 C73,54 76,51 76,47 C76,43 73,39 68,39 C67,32 61,26 53,26 C47,26 41,30 39,36 Z" />
+
+    <!-- Falling Raindrops (Angled Downward Slanted Shower / 雨) -->
+    <!-- Column 1 -->
+    <path
+        android:fillColor="#0284C7"
+        android:pathData="M26,62 L30,62 L26,72 L22,72 Z" />
+    <!-- Column 2 -->
+    <path
+        android:fillColor="#0284C7"
+        android:pathData="M38,64 L42,64 L38,76 L34,76 Z" />
+    <!-- Column 3 -->
+    <path
+        android:fillColor="#0284C7"
+        android:pathData="M50,62 L54,62 L50,74 L46,74 Z" />
+    <!-- Column 4 -->
+    <path
+        android:fillColor="#0284C7"
+        android:pathData="M62,64 L66,64 L62,76 L58,76 Z" />
+    <!-- Column 5 -->
+    <path
+        android:fillColor="#0284C7"
+        android:pathData="M72,62 L76,62 L72,72 L68,72 Z" />
+
+    <!-- Lower Ripple Splashes -->
+    <path
+        android:fillColor="#38BDF8"
+        android:pathData="M28,78 A3,1.5 0 1,0 28,81 A3,1.5 0 1,0 28,78 Z M40,80 A3,1.5 0 1,0 40,83 A3,1.5 0 1,0 40,80 Z M52,78 A3,1.5 0 1,0 52,81 A3,1.5 0 1,0 52,78 Z M64,80 A3,1.5 0 1,0 64,83 A3,1.5 0 1,0 64,80 Z" />
+</vector>

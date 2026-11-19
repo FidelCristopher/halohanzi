@@ -1,0 +1,47 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Fiery Sunset Red/Orange) -->
+    <path
+        android:fillColor="#FEF2F2"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Blazing Sun (Right Side) with Intense Sunburst Rays -->
+    <path
+        android:fillColor="#EA580C"
+        android:pathData="M64,24 A16,16 0 1,0 64,56 A16,16 0 1,0 64,24 Z" />
+    <path
+        android:fillColor="#F97316"
+        android:pathData="M64,26 A14,14 0 1,0 64,54 A14,14 0 1,0 64,26 Z" />
+    <path
+        android:fillColor="#FDE047"
+        android:pathData="M64,28 A12,12 0 1,0 64,52 A12,12 0 1,0 64,28 Z" />
+    <!-- Fiery Sunburst Rays -->
+    <path
+        android:fillColor="#EF4444"
+        android:pathData="M64,16 L66,16 L66,21 L64,21 Z M78,22 L81,19 L83,21 L80,24 Z M83,39 L88,39 L88,41 L83,41 Z M78,56 L81,59 L79,61 L76,58 Z M64,59 L66,59 L66,64 L64,64 Z" />
+
+    <!-- Thermometer with Boiling High Mercury Level (Left Side / 热 / Panas) -->
+    <!-- Glass Casing -->
+    <path
+        android:fillColor="#CBD5E1"
+        android:pathData="M34,16 C30,16 27,19 27,23 L27,62 C22,65 20,71 22,77 C25,83 33,85 39,82 C44,79 45,72 42,67 L41,62 L41,23 C41,19 38,16 34,16 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M34,18 C31.5,18 29.5,20 29.5,22.5 L29.5,63.5 L27.5,65.5 C24,69 25,75 29,78 C33,81 39,80 41,76 C43,72 41,67 38,65 L36.5,63.5 L36.5,22.5 C36.5,20 35.5,18 34,18 Z" />
+
+    <!-- Red Hot Rising Mercury Boiling to Top -->
+    <path
+        android:fillColor="#DC2626"
+        android:pathData="M34,22 L34,64 L32,67 C29,70 30,75 33,77 C36,79 40,78 41,75 C42,72 40,68 37,66 L35,64 L35,22 Z" />
+    <path
+        android:fillColor="#EF4444"
+        android:pathData="M33.5,68 A5,5 0 1,0 33.5,78 A5,5 0 1,0 33.5,68 Z" />
+
+    <!-- Heat / Sweat Wave Drops (Steam / 🥵) -->
+    <path
+        android:fillColor="#EF4444"
+        android:pathData="M48,66 C48,62 52,58 52,58 C52,58 56,62 56,66 C56,68.2 54.2,70 52,70 C49.8,70 48,68.2 48,66 Z" />
+</vector>

@@ -1,0 +1,32 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Soft Violet Indigo) -->
+    <path
+        android:fillColor="#EEF2FF"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Thermometer Tube (Left Side) -->
+    <!-- Glass Outer Shell -->
+    <path
+        android:fillColor="#CBD5E1"
+        android:pathData="M38,20 C34,20 31,23 31,27 L31,60 C26,63 24,69 26,75 C29,81 37,83 43,80 C48,77 49,70 46,65 L45,60 L45,27 C45,23 42,20 38,20 Z" />
+    <path
+        android:fillColor="#F8FAFC"
+        android:pathData="M38,22 C35.5,22 33.5,24 33.5,26.5 L33.5,61.5 L31.5,63.5 C28,67 29,73 33,76 C37,79 43,78 45,74 C47,70 45,65 42,63 L40.5,61.5 L40.5,26.5 C40.5,24 39.5,22 38,22 Z" />
+
+    <!-- Mercury Liquid (Red Mercury Tube & Bulb) -->
+    <path
+        android:fillColor="#DC2626"
+        android:pathData="M38,40 L38,62 L36,65 C33,68 34,73 37,75 C40,77 44,76 45,73 C46,70 44,66 41,64 L39,62 L39,40 Z" />
+    <path
+        android:fillColor="#EF4444"
+        android:pathData="M37.5,66 A5,5 0 1,0 37.5,76 A5,5 0 1,0 37.5,66 Z" />
+
+    <!-- Big Prominent Question Mark (Bagaimana / 怎么样 / ❓) (Right Side) -->
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M66,24 C75,24 81,29 81,37 C81,43 77,47 73,50 C70,53 69,56 69,59 L64,59 C64,54 66,51 70,47 C73,44 75,41 75,37 C75,32 71,29 66,29 C61,29 57,32 56,36 L51,34 C53,28 58,24 66,24 Z M66.5,64 C68.5,64 70,65.5 70,67.5 C70,69.5 68.5,71 66.5,71 C64.5,71 63,69.5 63,67.5 C63,65.5 64.5,64 66.5,64 Z" />
+</vector>

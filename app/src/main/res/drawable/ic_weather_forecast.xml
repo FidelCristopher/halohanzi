@@ -1,0 +1,30 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Soft Sky Blue) -->
+    <path
+        android:fillColor="#E0F2FE"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Golden Sun (Top Right Peeking from Behind Cloud) -->
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M60,20 A16,16 0 1,0 60,52 A16,16 0 1,0 60,20 Z" />
+    <path
+        android:fillColor="#FDE047"
+        android:pathData="M60,22 A14,14 0 1,0 60,50 A14,14 0 1,0 60,22 Z" />
+    <!-- Sunrays -->
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M60,14 L62,14 L62,19 L60,19 Z M74,22 L77,20 L80,23 L77,25 Z M78,35 L83,35 L83,37 L78,37 Z M44,22 L41,20 L38,23 L41,25 Z" />
+
+    <!-- Fluffy White / Cyan Weather Cloud (Foreground) -->
+    <path
+        android:fillColor="#93C5FD"
+        android:pathData="M30,52 C23.4,52 18,57.4 18,64 C18,70.6 23.4,76 30,76 L66,76 C71.5,76 76,71.5 76,66 C76,60.8 72,56.5 67,56.1 C66.4,46.5 58.4,39 48.5,39 C41.2,39 34.9,43.2 32.2,49.5 C31.5,49.3 30.8,49.2 30,49.2 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M30,50 C23.4,50 18,55.4 18,62 C18,68.6 23.4,74 30,74 L66,74 C71.5,74 76,69.5 76,64 C76,58.8 72,54.5 67,54.1 C66.4,44.5 58.4,37 48.5,37 C41.2,37 34.9,41.2 32.2,47.5 C31.5,47.3 30.8,47.2 30,47.2 Z" />
+</vector>

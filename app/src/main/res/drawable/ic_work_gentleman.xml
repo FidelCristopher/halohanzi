@@ -1,0 +1,48 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Soft Blue Triad) -->
+    <path
+        android:fillColor="#F0F9FF"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Professional Business Suit Torso (Tuan / 先生 / Navy Suit) -->
+    <path
+        android:fillColor="#1E3A8A"
+        android:pathData="M24,82 C24,66 32,58 48,58 C64,58 72,66 72,82 Z" />
+
+    <!-- White Dress Shirt V-Opening -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M42,58 L48,70 L54,58 Z" />
+
+    <!-- Formal Red Necktie -->
+    <path
+        android:fillColor="#DC2626"
+        android:pathData="M46.5,60 L49.5,60 L50.5,74 L48,80 L45.5,74 Z" />
+    <path
+        android:fillColor="#B91C1C"
+        android:pathData="M46,58 L50,58 L49,61 L47,61 Z" />
+
+    <!-- Head / Handsome Professional Face -->
+    <path
+        android:fillColor="#FFD1A4"
+        android:pathData="M48,28 A15,15 0 1,0 48,58 A15,15 0 1,0 48,28 Z" />
+
+    <!-- Neat Professional Pompadour / Side Part Hair -->
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="M34,34 C34,20 40,16 48,16 C56,16 62,20 62,34 C58,30 53,30 49,32 C45,34 39,34 34,34 Z" />
+
+    <!-- Confident Gentleman Eyes -->
+    <path
+        android:fillColor="#0F172A"
+        android:pathData="M41,39 C42,37 44,37 45,39 Z M51,39 C52,37 54,37 55,39 Z" />
+
+    <!-- Professional Warm Smile -->
+    <path
+        android:fillColor="#E11D48"
+        android:pathData="M45,47 C46,51 50,51 51,47 Z" />
+</vector>

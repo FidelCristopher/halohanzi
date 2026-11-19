@@ -1,0 +1,44 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Soft Emerald Mint) -->
+    <path
+        android:fillColor="#ECFDF5"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Gift Box with Ribbon Being Given (Center) -->
+    <!-- Gift Box Base (Coral Red) -->
+    <path
+        android:fillColor="#DC2626"
+        android:pathData="M34,34 L62,34 C64.2,34 66,35.8 66,38 L66,60 L30,60 L30,38 C30,35.8 31.8,34 34,34 Z" />
+    <path
+        android:fillColor="#EF4444"
+        android:pathData="M35,36 L61,36 L61,58 L35,58 Z" />
+
+    <!-- Golden Ribbon & Bow (Vertical and Horizontal) -->
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M46,34 L50,34 L50,60 L46,60 Z M30,44 L66,44 L66,48 L30,48 Z" />
+
+    <!-- Bow Loops on Top -->
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M44,28 C41,24 36,25 38,30 C40,34 46,34 46,34 Z M52,28 C55,24 60,25 58,30 C56,34 50,34 50,34 Z" />
+
+    <!-- Giving Hands Holding Up the Gift from Below (Memberi / 给) -->
+    <!-- Left Hand -->
+    <path
+        android:fillColor="#FFD1A4"
+        android:pathData="M18,68 L36,60 L38,65 L26,76 L18,76 Z" />
+    <!-- Right Hand -->
+    <path
+        android:fillColor="#FFD1A4"
+        android:pathData="M78,68 L60,60 L58,65 L70,76 L78,76 Z" />
+
+    <!-- Giving Upward Motion Arrows / Sparkles -->
+    <path
+        android:fillColor="#10B981"
+        android:pathData="M48,16 L53,24 L49,24 L49,30 L47,30 L47,24 L43,24 Z" />
+</vector>

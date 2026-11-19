@@ -1,0 +1,56 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Soft Amber Cream) -->
+    <path
+        android:fillColor="#FEF3C7"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Wooden Clipboard Backing Board -->
+    <path
+        android:fillColor="#B45309"
+        android:pathData="M26,20 L70,20 C72.2,20 74,21.8 74,24 L74,80 C74,82.2 72.2,84 70,84 L26,84 C23.8,84 22,82.2 22,80 L22,24 C22,21.8 23.8,20 26,20 Z" />
+    <path
+        android:fillColor="#D97706"
+        android:pathData="M28,22 L68,22 L68,82 L28,82 Z" />
+
+    <!-- Sheet of White Task Paper -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M30,26 L66,26 L66,78 L30,78 Z" />
+
+    <!-- Metal Spring Clip (Top Center) -->
+    <path
+        android:fillColor="#64748B"
+        android:pathData="M40,16 L56,16 C57.1,16 58,16.9 58,18 L58,26 L38,26 L38,18 C38,16.9 38.9,16 40,16 Z" />
+    <path
+        android:fillColor="#94A3B8"
+        android:pathData="M42,18 L54,18 L54,24 L42,24 Z" />
+
+    <!-- Task List Lines with Checkboxes (Urusan / 事 / Checklist) -->
+    <!-- Task 1 Checkmark -->
+    <path
+        android:fillColor="#10B981"
+        android:pathData="M35,36 L39,40 L47,32 L49,34 L39,44 L33,38 Z" />
+    <path
+        android:fillColor="#475569"
+        android:pathData="M52,36 L62,36 L62,38 L52,38 Z" />
+
+    <!-- Task 2 Checkmark -->
+    <path
+        android:fillColor="#10B981"
+        android:pathData="M35,48 L39,52 L47,44 L49,46 L39,56 L33,50 Z" />
+    <path
+        android:fillColor="#475569"
+        android:pathData="M52,48 L62,48 L62,50 L52,50 Z" />
+
+    <!-- Task 3 Empty Box -->
+    <path
+        android:fillColor="#CBD5E1"
+        android:pathData="M34,60 L44,60 L44,70 L34,70 Z M36,62 L42,62 L42,68 L36,68 Z" />
+    <path
+        android:fillColor="#94A3B8"
+        android:pathData="M48,64 L60,64 L60,66 L48,66 Z" />
+</vector>

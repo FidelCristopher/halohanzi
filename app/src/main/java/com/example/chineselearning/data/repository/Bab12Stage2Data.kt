@@ -18,10 +18,10 @@ val bab12Stage2Part1Exercises = listOf(
         correctAnswer = "sibuk",
         audioToSpeak = "忙",
         pictureOptions = listOf(
-            PictureOption("u12_s2_p1_opt1", "sibuk", "⚡", R.drawable.ic_coin, true),
-            PictureOption("u12_s2_p1_opt2", "santai", "☕", R.drawable.ic_target, false),
-            PictureOption("u12_s2_p1_opt3", "tidur", "🛌", R.drawable.ic_book, false),
-            PictureOption("u12_s2_p1_opt4", "makan", "🍜", R.drawable.ic_crown, false)
+            PictureOption("u12_s2_p1_opt1", "sibuk", "", R.drawable.ic_work_busy, true),
+            PictureOption("u12_s2_p1_opt2", "beristirahat", "", R.drawable.ic_action_rest, false),
+            PictureOption("u12_s2_p1_opt3", "tidur", "", R.drawable.ic_action_sleep, false),
+            PictureOption("u12_s2_p1_opt4", "makan", "", R.drawable.ic_action_eat, false)
         )
     ),
 
@@ -108,10 +108,10 @@ val bab12Stage2Part1Exercises = listOf(
         correctAnswer = "sangat sibuk",
         audioToSpeak = "很忙",
         pictureOptions = listOf(
-            PictureOption("u12_s2_p1_opt7_1", "sangat sibuk", "⚡", R.drawable.ic_coin, true),
-            PictureOption("u12_s2_p1_opt7_2", "istirahat", "☕", R.drawable.ic_target, false),
-            PictureOption("u12_s2_p1_opt7_3", "makan", "🍚", R.drawable.ic_book, false),
-            PictureOption("u12_s2_p1_opt7_4", "tidur", "🛌", R.drawable.ic_crown, false)
+            PictureOption("u12_s2_p1_opt7_1", "sangat sibuk", "", R.drawable.ic_work_busy, true),
+            PictureOption("u12_s2_p1_opt7_2", "istirahat", "", R.drawable.ic_action_rest, false),
+            PictureOption("u12_s2_p1_opt7_3", "makan", "", R.drawable.ic_action_eat, false),
+            PictureOption("u12_s2_p1_opt7_4", "tidur", "", R.drawable.ic_action_sleep, false)
         )
     ),
 
@@ -169,10 +169,10 @@ val bab12Stage2Part2Exercises = listOf(
         correctAnswer = "komputer",
         audioToSpeak = "电脑",
         pictureOptions = listOf(
-            PictureOption("u12_s2_p2_opt1", "komputer", "💻", R.drawable.ic_coin, true),
-            PictureOption("u12_s2_p2_opt2", "buku", "📖", R.drawable.ic_book, false),
-            PictureOption("u12_s2_p2_opt3", "meja", "🪵", R.drawable.ic_target, false),
-            PictureOption("u12_s2_p2_opt4", "kursi", "🪑", R.drawable.ic_crown, false)
+            PictureOption("u12_s2_p2_opt1", "komputer", "", R.drawable.ic_work_computer, true),
+            PictureOption("u12_s2_p2_opt2", "buku", "", R.drawable.ic_book_chinese, false),
+            PictureOption("u12_s2_p2_opt3", "meja", "", R.drawable.ic_fam_table, false),
+            PictureOption("u12_s2_p2_opt4", "kursi", "", R.drawable.ic_fam_chair, false)
         )
     ),
 
@@ -259,10 +259,10 @@ val bab12Stage2Part2Exercises = listOf(
         correctAnswer = "urusan / hal",
         audioToSpeak = "事",
         pictureOptions = listOf(
-            PictureOption("u12_s2_p2_opt7_1", "urusan", "📋", R.drawable.ic_coin, true),
-            PictureOption("u12_s2_p2_opt7_2", "uang", "💰", R.drawable.ic_target, false),
-            PictureOption("u12_s2_p2_opt7_3", "buku", "📖", R.drawable.ic_book, false),
-            PictureOption("u12_s2_p2_opt7_4", "mobil", "🚗", R.drawable.ic_crown, false)
+            PictureOption("u12_s2_p2_opt7_1", "urusan", "", R.drawable.ic_work_clipboard_task, true),
+            PictureOption("u12_s2_p2_opt7_2", "uang", "", R.drawable.ic_yuan_currency, false),
+            PictureOption("u12_s2_p2_opt7_3", "buku", "", R.drawable.ic_book_chinese, false),
+            PictureOption("u12_s2_p2_opt7_4", "mobil", "", R.drawable.ic_trans_car, false)
         )
     ),
 

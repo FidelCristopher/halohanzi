@@ -18,10 +18,10 @@ val bab13Stage2Part1Exercises = listOf(
         correctAnswer = "panas",
         audioToSpeak = "热",
         pictureOptions = listOf(
-            PictureOption("u13_s2_p1_opt1", "panas", "🥵", R.drawable.ic_coin, true),
-            PictureOption("u13_s2_p1_opt2", "dingin", "🥶", R.drawable.ic_target, false),
-            PictureOption("u13_s2_p1_opt3", "hujan", "🌧️", R.drawable.ic_book, false),
-            PictureOption("u13_s2_p1_opt4", "angin", "💨", R.drawable.ic_crown, false)
+            PictureOption("u13_s2_p1_opt1", "panas", "", R.drawable.ic_weather_hot, true),
+            PictureOption("u13_s2_p1_opt2", "dingin", "", R.drawable.ic_weather_cold, false),
+            PictureOption("u13_s2_p1_opt3", "hujan", "", R.drawable.ic_weather_rain, false),
+            PictureOption("u13_s2_p1_opt4", "salju", "", R.drawable.ic_weather_snow, false)
         )
     ),
 
@@ -108,10 +108,10 @@ val bab13Stage2Part1Exercises = listOf(
         correctAnswer = "panas",
         audioToSpeak = "热",
         pictureOptions = listOf(
-            PictureOption("u13_s2_p1_opt7_1", "panas", "🔥", R.drawable.ic_coin, true),
-            PictureOption("u13_s2_p1_opt7_2", "dingin", "❄️", R.drawable.ic_target, false),
-            PictureOption("u13_s2_p1_opt7_3", "air", "💧", R.drawable.ic_book, false),
-            PictureOption("u13_s2_p1_opt7_4", "angin", "💨", R.drawable.ic_crown, false)
+            PictureOption("u13_s2_p1_opt7_1", "panas", "", R.drawable.ic_weather_hot, true),
+            PictureOption("u13_s2_p1_opt7_2", "dingin", "", R.drawable.ic_weather_cold, false),
+            PictureOption("u13_s2_p1_opt7_3", "air", "", R.drawable.ic_food_water, false),
+            PictureOption("u13_s2_p1_opt7_4", "hujan", "", R.drawable.ic_weather_rain, false)
         )
     ),
 
@@ -169,10 +169,10 @@ val bab13Stage2Part2Exercises = listOf(
         correctAnswer = "dingin",
         audioToSpeak = "冷",
         pictureOptions = listOf(
-            PictureOption("u13_s2_p2_opt1", "dingin", "🥶", R.drawable.ic_coin, true),
-            PictureOption("u13_s2_p2_opt2", "panas", "🥵", R.drawable.ic_target, false),
-            PictureOption("u13_s2_p2_opt3", "hujan", "🌧️", R.drawable.ic_book, false),
-            PictureOption("u13_s2_p2_opt4", "awan", "☁️", R.drawable.ic_crown, false)
+            PictureOption("u13_s2_p2_opt1", "dingin", "", R.drawable.ic_weather_cold, true),
+            PictureOption("u13_s2_p2_opt2", "panas", "", R.drawable.ic_weather_hot, false),
+            PictureOption("u13_s2_p2_opt3", "hujan", "", R.drawable.ic_weather_rain, false),
+            PictureOption("u13_s2_p2_opt4", "cuaca", "", R.drawable.ic_weather_forecast, false)
         )
     ),
 
@@ -259,10 +259,10 @@ val bab13Stage2Part2Exercises = listOf(
         correctAnswer = "dingin",
         audioToSpeak = "冷",
         pictureOptions = listOf(
-            PictureOption("u13_s2_p2_opt7_1", "dingin", "❄️", R.drawable.ic_coin, true),
-            PictureOption("u13_s2_p2_opt7_2", "panas", "🔥", R.drawable.ic_target, false),
-            PictureOption("u13_s2_p2_opt7_3", "hujan", "🌧️", R.drawable.ic_book, false),
-            PictureOption("u13_s2_p2_opt7_4", "angin", "💨", R.drawable.ic_crown, false)
+            PictureOption("u13_s2_p2_opt7_1", "dingin", "", R.drawable.ic_weather_cold, true),
+            PictureOption("u13_s2_p2_opt7_2", "panas", "", R.drawable.ic_weather_hot, false),
+            PictureOption("u13_s2_p2_opt7_3", "hujan", "", R.drawable.ic_weather_rain, false),
+            PictureOption("u13_s2_p2_opt7_4", "salju", "", R.drawable.ic_weather_snow, false)
         )
     ),
 

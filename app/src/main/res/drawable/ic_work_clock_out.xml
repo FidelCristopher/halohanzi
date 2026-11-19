@@ -1,0 +1,54 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Sunset Coral Orange) -->
+    <path
+        android:fillColor="#FFF7ED"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Open Office Doorway (Background Left) -->
+    <path
+        android:fillColor="#64748B"
+        android:pathData="M20,22 L52,22 L52,80 L20,80 Z" />
+    <path
+        android:fillColor="#94A3B8"
+        android:pathData="M22,24 L50,24 L50,78 L22,78 Z" />
+    <!-- Open Door Swung Ajar -->
+    <path
+        android:fillColor="#CBD5E1"
+        android:pathData="M22,24 L36,28 L36,78 L22,78 Z" />
+
+    <!-- Employee Walking Happily OUT the Door (Pulang Kerja / 下班) -->
+    <!-- Head -->
+    <path
+        android:fillColor="#047857"
+        android:pathData="M56,22 A8,8 0 1,0 56,38 A8,8 0 1,0 56,22 Z" />
+
+    <!-- Torso (Stepping Forward with Energy) -->
+    <path
+        android:fillColor="#059669"
+        android:pathData="M50,40 L66,40 C68,40 70,42 69,45 L65,64 L51,64 L48,45 C48,42 49,40 50,40 Z" />
+
+    <!-- Briefcase Handbag Swung in Hand -->
+    <path
+        android:fillColor="#B45309"
+        android:pathData="M70,54 L82,54 L82,66 L70,66 Z" />
+    <path
+        android:fillColor="#78350F"
+        android:pathData="M73,51 C73,49 75,48 76,48 C77,48 79,49 79,51 L79,54 L73,54 Z" />
+
+    <!-- Legs in Rapid Stride Toward Home -->
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="M52,62 L64,78 L58,80 L46,65 Z M62,78 L72,78 L72,82 L60,82 Z" />
+    <path
+        android:fillColor="#334155"
+        android:pathData="M52,62 L42,76 L46,79 L56,65 Z M40,76 L48,76 L48,80 L38,80 Z" />
+
+    <!-- Forward Motion / Freedom Sparkles -->
+    <path
+        android:fillColor="#EA580C"
+        android:pathData="M76,32 L78,35 L81,35 L79,37 L80,40 L77,38 L74,40 L75,37 L73,35 L76,35 Z" />
+</vector>

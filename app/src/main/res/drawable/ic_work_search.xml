@@ -1,0 +1,47 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Soft Cyan Teal) -->
+    <path
+        android:fillColor="#ECFEFF"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Document Being Searched (Background) -->
+    <path
+        android:fillColor="#E2E8F0"
+        android:pathData="M20,24 L60,24 L60,68 L20,68 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M22,26 L58,26 L58,66 L22,66 Z" />
+    <!-- Text Lines on Doc -->
+    <path
+        android:fillColor="#94A3B8"
+        android:pathData="M26,34 L48,34 L48,36 L26,36 Z M26,42 L44,42 L44,44 L26,44 Z M26,50 L52,50 L52,52 L26,52 Z" />
+
+    <!-- Magnifying Glass Handle (Lower Right Diagonal) -->
+    <path
+        android:fillColor="#B45309"
+        android:pathData="M58,58 L76,76 L80,72 L62,54 Z" />
+    <path
+        android:fillColor="#D97706"
+        android:pathData="M59,57 L77,75 L79,73 L61,55 Z" />
+
+    <!-- Magnifying Glass Rim (Golden Brass) -->
+    <path
+        android:fillColor="#D97706"
+        android:pathData="M44,18 A22,22 0 1,0 44,62 A22,22 0 1,0 44,18 Z" />
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M44,21 A19,19 0 1,0 44,59 A19,19 0 1,0 44,21 Z" />
+
+    <!-- Glass Lens (Transparent Cyan with Gleam) -->
+    <path
+        android:fillColor="#E0F2FE"
+        android:pathData="M44,24 A16,16 0 1,0 44,56 A16,16 0 1,0 44,24 Z" />
+    <!-- Lens Reflection -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M34,30 C34,26 40,24 44,24 L44,27 C41,27 37,28 37,31 Z" />
+</vector>

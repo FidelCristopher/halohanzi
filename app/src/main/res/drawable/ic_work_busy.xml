@@ -1,0 +1,51 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Soft Amber Tangerine) -->
+    <path
+        android:fillColor="#FEF3C7"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Stack of Office Paper Documents (Left Bottom) -->
+    <path
+        android:fillColor="#E2E8F0"
+        android:pathData="M20,68 L50,68 L50,80 L20,80 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M22,64 L52,64 L52,76 L22,76 Z" />
+    <path
+        android:fillColor="#FEF08A"
+        android:pathData="M24,60 L54,60 L54,72 L24,72 Z" />
+
+    <!-- Ticking Speed Clock (Busy / 忙 / Rapid Working) -->
+    <path
+        android:fillColor="#DC2626"
+        android:pathData="M56,22 A24,24 0 1,0 56,70 A24,24 0 1,0 56,22 Z" />
+    <path
+        android:fillColor="#EF4444"
+        android:pathData="M56,25 A21,21 0 1,0 56,67 A21,21 0 1,0 56,25 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M56,28 A18,18 0 1,0 56,64 A18,18 0 1,0 56,28 Z" />
+
+    <!-- Rapid Clock Hands Sweeping -->
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="M54.5,33 L57.5,33 L57.5,47 L54.5,47 Z" />
+    <path
+        android:fillColor="#DC2626"
+        android:pathData="M55,46 L55,48 L68,48 L68,46 Z" />
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M56,44 A2.5,2.5 0 1,0 56,49 A2.5,2.5 0 1,0 56,44 Z" />
+
+    <!-- Busy Lightning Energy Bolt (Top Left / 忙碌 / ⚡) -->
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M32,18 L24,34 L34,34 L28,50 L42,32 L32,32 Z" />
+    <path
+        android:fillColor="#FDE047"
+        android:pathData="M31,22 L26,33 L33,33 L29,45 L38,33 L32,33 Z" />
+</vector>

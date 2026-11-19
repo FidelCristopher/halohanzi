@@ -1,0 +1,48 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Soft Cyan Teal) -->
+    <path
+        android:fillColor="#ECFEFF"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Laptop Display Screen Lid (Open Upright) -->
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="M24,24 L72,24 C74.2,24 76,25.8 76,28 L76,62 L20,62 L20,28 C20,25.8 21.8,24 24,24 Z" />
+    <path
+        android:fillColor="#334155"
+        android:pathData="M26,26 L70,26 L70,60 L26,60 Z" />
+
+    <!-- High-Resolution Laptop Glass Display (Glowing Sky Blue) -->
+    <path
+        android:fillColor="#0284C7"
+        android:pathData="M28,28 L68,28 L68,58 L28,58 Z" />
+    <path
+        android:fillColor="#38BDF8"
+        android:pathData="M30,30 L66,30 L66,56 L30,56 Z" />
+
+    <!-- UI Graphic Code / Analytics Dashboard on Screen -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M34,36 L52,36 L52,38 L34,38 Z M34,42 L48,42 L48,44 L34,44 Z M34,48 L56,48 L56,50 L34,50 Z" />
+    <!-- Mini Circular Chart on Screen (Right) -->
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M58,38 A5,5 0 1,0 58,48 A5,5 0 1,0 58,38 Z" />
+
+    <!-- Laptop Base Keyboard Deck (Aluminum Silver Base) -->
+    <path
+        android:fillColor="#94A3B8"
+        android:pathData="M16,62 L80,62 C82.2,62 84,63.8 84,66 L82,72 C82,74.2 80.2,76 78,76 L18,76 C15.8,76 14,74.2 14,72 L12,66 C12,63.8 13.8,62 16,62 Z" />
+    <path
+        android:fillColor="#CBD5E1"
+        android:pathData="M18,63 L78,63 L76,74 L20,74 Z" />
+
+    <!-- Touchpad (Center Front) -->
+    <path
+        android:fillColor="#64748B"
+        android:pathData="M42,68 L54,68 L54,73 L42,73 Z" />
+</vector>

@@ -1,0 +1,47 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Bright Golden Amber) -->
+    <path
+        android:fillColor="#FEF3C7"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Radiant Sun Rays in Background (Good Day / 好天气) -->
+    <path
+        android:fillColor="#FDE68A"
+        android:pathData="M48,16 A28,28 0 1,0 48,72 A28,28 0 1,0 48,16 Z" />
+
+    <!-- Big Thumbs-Up Hand (Bagus / Baik / 好 / 👍) -->
+    <!-- Sleeve Cuff (Blue) -->
+    <path
+        android:fillColor="#0284C7"
+        android:pathData="M16,60 L28,60 L28,82 L16,82 Z" />
+
+    <!-- Hand Palm & Fist Body -->
+    <path
+        android:fillColor="#FFD1A4"
+        android:pathData="M28,54 L58,54 C60,54 62,56 62,58 L62,78 C62,80 60,82 58,82 L28,82 Z" />
+    <path
+        android:fillColor="#FDBA74"
+        android:pathData="M30,56 L56,56 L56,80 L30,80 Z" />
+
+    <!-- Folded Fingers (Fist Ridges) -->
+    <path
+        android:fillColor="#FFD1A4"
+        android:pathData="M54,54 L68,54 C70,54 72,56 72,58 C72,60 70,62 68,62 L54,62 Z M54,61 L69,61 C71,61 73,63 73,65 C73,67 71,69 69,69 L54,69 Z M54,68 L68,68 C70,68 72,70 72,72 C72,74 70,76 68,76 L54,76 Z M54,75 L65,75 C67,75 69,77 69,79 C69,81 67,82 65,82 L54,82 Z" />
+
+    <!-- Upright Thumb (Pointing High Up) -->
+    <path
+        android:fillColor="#FFD1A4"
+        android:pathData="M36,54 L36,32 C36,26 40,22 45,22 C50,22 52,26 52,32 L52,54 Z" />
+    <path
+        android:fillColor="#FDBA74"
+        android:pathData="M38,52 L38,32 C38,28 41,25 45,25 C49,25 50,28 50,32 L50,52 Z" />
+
+    <!-- Sparkle Stars for "Bagus Sekali" -->
+    <path
+        android:fillColor="#D97706"
+        android:pathData="M64,22 L66,26 L70,26 L67,28 L68,32 L64,30 L60,32 L61,28 L58,26 L62,26 Z" />
+</vector>

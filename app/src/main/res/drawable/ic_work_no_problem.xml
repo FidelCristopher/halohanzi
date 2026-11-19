@@ -1,0 +1,47 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Soft Emerald Mint) -->
+    <path
+        android:fillColor="#ECFDF5"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Big Circular OK / Harmony Shield in Background -->
+    <path
+        android:fillColor="#D1FAE5"
+        android:pathData="M48,16 A30,30 0 1,0 48,76 A30,30 0 1,0 48,16 Z" />
+    <path
+        android:fillColor="#A7F3D0"
+        android:pathData="M48,19 A27,27 0 1,0 48,73 A27,27 0 1,0 48,19 Z" />
+
+    <!-- Two Hands Shaking in Business Harmony (Jabat Tangan / 没关系) -->
+    <!-- Left Hand / Cuff (Blue Sleeve) -->
+    <path
+        android:fillColor="#0284C7"
+        android:pathData="M16,56 L28,46 L34,54 L22,64 Z" />
+    <!-- Left Hand Palm & Thumb Clasping -->
+    <path
+        android:fillColor="#FFD1A4"
+        android:pathData="M26,48 L46,38 C49,36 53,38 54,41 L56,46 L38,60 Z" />
+
+    <!-- Right Hand / Cuff (Navy Sleeve) -->
+    <path
+        android:fillColor="#1E3A8A"
+        android:pathData="M80,56 L68,46 L62,54 L74,64 Z" />
+    <!-- Right Hand Fingers Gripping -->
+    <path
+        android:fillColor="#FDBA74"
+        android:pathData="M70,48 L50,38 C47,36 43,38 42,41 L40,46 L58,60 Z" />
+
+    <!-- Entwined Fingers (Center Grip) -->
+    <path
+        android:fillColor="#FFD1A4"
+        android:pathData="M44,46 L52,46 L52,58 L44,58 Z" />
+
+    <!-- Golden Sparkles / Peaceful Halo Above ("No Problem / 没关系") -->
+    <path
+        android:fillColor="#059669"
+        android:pathData="M48,22 L50,26 L54,26 L51,28 L52,32 L48,29 L44,32 L45,28 L42,26 L46,26 Z" />
+</vector>

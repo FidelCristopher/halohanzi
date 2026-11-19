@@ -1,0 +1,42 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Soft Emerald Mint) -->
+    <path
+        android:fillColor="#ECFDF5"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Big Central Brilliant Golden Star (Sungguh Bagus / 真好 / 🌟) -->
+    <path
+        android:fillColor="#D97706"
+        android:pathData="M48,16 L56,36 L78,37 L61,50 L68,72 L48,58 L28,72 L35,50 L18,37 L40,36 Z" />
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M48,20 L55,37 L74,38 L59,50 L65,68 L48,56 L31,68 L37,50 L22,38 L41,37 Z" />
+    <path
+        android:fillColor="#FDE047"
+        android:pathData="M48,25 L53,38 L68,39 L56,48 L61,63 L48,53 L35,63 L40,48 L28,39 L43,38 Z" />
+
+    <!-- Pure White Gleam Center Facet -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M48,34 L52,44 L48,52 L44,44 Z" />
+
+    <!-- Smaller Golden Satellite Star (Upper Right) -->
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M72,16 L74,22 L80,22 L75,25 L77,31 L72,27 L67,31 L69,25 L64,22 L70,22 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M72,20 L73,23 L76,23 L73.5,24.5 L74.5,27.5 L72,25.5 L69.5,27.5 L70.5,24.5 L68,23 L71,23 Z" />
+
+    <!-- Green Leaf of Nature / Harmony (Bottom Left) -->
+    <path
+        android:fillColor="#10B981"
+        android:pathData="M24,70 C24,60 34,54 42,54 C42,64 36,74 24,70 Z" />
+    <path
+        android:fillColor="#059669"
+        android:pathData="M24,70 C30,66 36,62 42,54 Z" />
+</vector>

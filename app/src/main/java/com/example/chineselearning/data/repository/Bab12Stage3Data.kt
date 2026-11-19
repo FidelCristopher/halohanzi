@@ -18,10 +18,10 @@ val bab12Stage3Part1Exercises = listOf(
         correctAnswer = "tuan / bapak",
         audioToSpeak = "先生",
         pictureOptions = listOf(
-            PictureOption("u12_s3_p1_opt1", "tuan / bapak", "👨‍💼", R.drawable.ic_coin, true),
-            PictureOption("u12_s3_p1_opt2", "nyonya", "👩‍💼", R.drawable.ic_target, false),
-            PictureOption("u12_s3_p1_opt3", "murid", "🧒", R.drawable.ic_book, false),
-            PictureOption("u12_s3_p1_opt4", "anak", "👶", R.drawable.ic_crown, false)
+            PictureOption("u12_s3_p1_opt1", "tuan / bapak", "", R.drawable.ic_work_gentleman, true),
+            PictureOption("u12_s3_p1_opt2", "nyonya", "", R.drawable.ic_work_lady, false),
+            PictureOption("u12_s3_p1_opt3", "murid", "", R.drawable.ic_edu_primary_school, false),
+            PictureOption("u12_s3_p1_opt4", "anak", "", R.drawable.ic_fam_child, false)
         )
     ),
 
@@ -108,10 +108,10 @@ val bab12Stage3Part1Exercises = listOf(
         correctAnswer = "nyonya / nona",
         audioToSpeak = "女士",
         pictureOptions = listOf(
-            PictureOption("u12_s3_p1_opt7_1", "nyonya / nona", "👩‍💼", R.drawable.ic_coin, true),
-            PictureOption("u12_s3_p1_opt7_2", "tuan / bapak", "👨‍💼", R.drawable.ic_target, false),
-            PictureOption("u12_s3_p1_opt7_3", "murid", "🧒", R.drawable.ic_book, false),
-            PictureOption("u12_s3_p1_opt7_4", "dokter", "👨‍⚕️", R.drawable.ic_crown, false)
+            PictureOption("u12_s3_p1_opt7_1", "nyonya / nona", "", R.drawable.ic_work_lady, true),
+            PictureOption("u12_s3_p1_opt7_2", "tuan / bapak", "", R.drawable.ic_work_gentleman, false),
+            PictureOption("u12_s3_p1_opt7_3", "murid", "", R.drawable.ic_edu_primary_school, false),
+            PictureOption("u12_s3_p1_opt7_4", "guru", "", R.drawable.ic_teacher_avatar, false)
         )
     ),
 
@@ -169,10 +169,10 @@ val bab12Stage3Part2Exercises = listOf(
         correctAnswer = "mencari",
         audioToSpeak = "找",
         pictureOptions = listOf(
-            PictureOption("u12_s3_p2_opt1", "mencari", "🔍", R.drawable.ic_coin, true),
-            PictureOption("u12_s3_p2_opt2", "memberi", "🎁", R.drawable.ic_target, false),
-            PictureOption("u12_s3_p2_opt3", "makan", "🍜", R.drawable.ic_book, false),
-            PictureOption("u12_s3_p2_opt4", "tidur", "🛌", R.drawable.ic_crown, false)
+            PictureOption("u12_s3_p2_opt1", "mencari", "", R.drawable.ic_work_search, true),
+            PictureOption("u12_s3_p2_opt2", "memberi", "", R.drawable.ic_work_give, false),
+            PictureOption("u12_s3_p2_opt3", "makan", "", R.drawable.ic_action_eat, false),
+            PictureOption("u12_s3_p2_opt4", "tidur", "", R.drawable.ic_action_sleep, false)
         )
     ),
 
@@ -259,10 +259,10 @@ val bab12Stage3Part2Exercises = listOf(
         correctAnswer = "melakukan / membuat",
         audioToSpeak = "做",
         pictureOptions = listOf(
-            PictureOption("u12_s3_p2_opt7_1", "melakukan / membuat", "🛠️", R.drawable.ic_coin, true),
-            PictureOption("u12_s3_p2_opt7_2", "mencari", "🔍", R.drawable.ic_target, false),
-            PictureOption("u12_s3_p2_opt7_3", "makan", "🍜", R.drawable.ic_book, false),
-            PictureOption("u12_s3_p2_opt7_4", "tidur", "🛌", R.drawable.ic_crown, false)
+            PictureOption("u12_s3_p2_opt7_1", "melakukan / membuat", "", R.drawable.ic_work_job, true),
+            PictureOption("u12_s3_p2_opt7_2", "mencari", "", R.drawable.ic_work_search, false),
+            PictureOption("u12_s3_p2_opt7_3", "makan", "", R.drawable.ic_action_eat, false),
+            PictureOption("u12_s3_p2_opt7_4", "tidur", "", R.drawable.ic_action_sleep, false)
         )
     ),
 

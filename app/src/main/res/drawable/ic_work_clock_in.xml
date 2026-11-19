@@ -1,0 +1,46 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Soft Blue Cyan) -->
+    <path
+        android:fillColor="#E0F2FE"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Attendance ID Card / Badge (White with Blue Lanyard) -->
+    <!-- Lanyard Strap (Top) -->
+    <path
+        android:fillColor="#0284C7"
+        android:pathData="M44,12 L52,12 L50,24 L46,24 Z" />
+
+    <!-- Card Badge Body (Vertical ID Card) -->
+    <path
+        android:fillColor="#CBD5E1"
+        android:pathData="M28,24 L68,24 C70.2,24 72,25.8 72,28 L72,78 C72,80.2 70.2,82 68,82 L28,82 C25.8,82 24,80.2 24,78 L24,28 C24,25.8 25.8,24 28,24 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M30,26 L66,26 L66,80 L30,80 Z" />
+
+    <!-- Card Photo Area (User Avatar) -->
+    <path
+        android:fillColor="#BAE6FD"
+        android:pathData="M48,34 A8,8 0 1,0 48,50 A8,8 0 1,0 48,34 Z" />
+    <path
+        android:fillColor="#0284C7"
+        android:pathData="M48,36 A5,5 0 1,0 48,46 A5,5 0 1,0 48,36 Z M40,54 C40,49 44,48 48,48 C52,48 56,49 56,54 Z" />
+
+    <!-- Card Text Placeholder Lines -->
+    <path
+        android:fillColor="#64748B"
+        android:pathData="M36,58 L60,58 L60,61 L36,61 Z M38,64 L58,64 L58,66 L38,66 Z" />
+
+    <!-- Green Checkmark / Clock-In Indicator (Masuk Kerja / 上班) -->
+    <path
+        android:fillColor="#10B981"
+        android:pathData="M66,66 A12,12 0 1,0 66,90 A12,12 0 1,0 66,66 Z" />
+    <!-- White Checkmark -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M61,78 L65,82 L72,74 L74,76 L65,86 L59,80 Z" />
+</vector>

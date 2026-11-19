@@ -18,10 +18,10 @@ val bab12Stage5Part1Exercises = listOf(
         correctAnswer = "perusahaan",
         audioToSpeak = "公司",
         pictureOptions = listOf(
-            PictureOption("u12_s5_p1_opt1", "perusahaan", "🏢", R.drawable.ic_coin, true),
-            PictureOption("u12_s5_p1_opt2", "sekolah", "🏫", R.drawable.ic_cap, false),
-            PictureOption("u12_s5_p1_opt3", "rumah", "🏠", R.drawable.ic_people_group, false),
-            PictureOption("u12_s5_p1_opt4", "buku", "📖", R.drawable.ic_book, false)
+            PictureOption("u12_s5_p1_opt1", "perusahaan", "", R.drawable.ic_work_office_building, true),
+            PictureOption("u12_s5_p1_opt2", "sekolah", "", R.drawable.ic_edu_school, false),
+            PictureOption("u12_s5_p1_opt3", "rumah", "", R.drawable.ic_fam_home, false),
+            PictureOption("u12_s5_p1_opt4", "buku", "", R.drawable.ic_book_chinese, false)
         )
     ),
 
@@ -108,10 +108,10 @@ val bab12Stage5Part1Exercises = listOf(
         correctAnswer = "tuan / bapak",
         audioToSpeak = "先生",
         pictureOptions = listOf(
-            PictureOption("u12_s5_p1_opt7_1", "tuan / bapak", "👨‍💼", R.drawable.ic_coin, true),
-            PictureOption("u12_s5_p1_opt7_2", "nyonya", "👩‍💼", R.drawable.ic_target, false),
-            PictureOption("u12_s5_p1_opt7_3", "murid", "🧒", R.drawable.ic_book, false),
-            PictureOption("u12_s5_p1_opt7_4", "sekolah", "🏫", R.drawable.ic_cap, false)
+            PictureOption("u12_s5_p1_opt7_1", "tuan / bapak", "", R.drawable.ic_work_gentleman, true),
+            PictureOption("u12_s5_p1_opt7_2", "nyonya", "", R.drawable.ic_work_lady, false),
+            PictureOption("u12_s5_p1_opt7_3", "murid", "", R.drawable.ic_edu_primary_school, false),
+            PictureOption("u12_s5_p1_opt7_4", "sekolah", "", R.drawable.ic_edu_school, false)
         )
     ),
 
@@ -169,10 +169,10 @@ val bab12Stage5Part2Exercises = listOf(
         correctAnswer = "masuk kerja",
         audioToSpeak = "上班",
         pictureOptions = listOf(
-            PictureOption("u12_s5_p2_opt1", "masuk kerja", "💼", R.drawable.ic_coin, true),
-            PictureOption("u12_s5_p2_opt2", "pulang kerja", "🚪", R.drawable.ic_target, false),
-            PictureOption("u12_s5_p2_opt3", "tidur", "🛌", R.drawable.ic_book, false),
-            PictureOption("u12_s5_p2_opt4", "makan", "🍜", R.drawable.ic_crown, false)
+            PictureOption("u12_s5_p2_opt1", "masuk kerja", "", R.drawable.ic_work_clock_in, true),
+            PictureOption("u12_s5_p2_opt2", "pulang kerja", "", R.drawable.ic_work_clock_out, false),
+            PictureOption("u12_s5_p2_opt3", "tidur", "", R.drawable.ic_action_sleep, false),
+            PictureOption("u12_s5_p2_opt4", "makan", "", R.drawable.ic_action_eat, false)
         )
     ),
 
@@ -259,10 +259,10 @@ val bab12Stage5Part2Exercises = listOf(
         correctAnswer = "tidak apa-apa",
         audioToSpeak = "没关系",
         pictureOptions = listOf(
-            PictureOption("u12_s5_p2_opt7_1", "tidak apa-apa", "🤝", R.drawable.ic_handshake, true),
-            PictureOption("u12_s5_p2_opt7_2", "terima kasih", "🙏", R.drawable.ic_coin, false),
-            PictureOption("u12_s5_p2_opt7_3", "maaf", "🙇", R.drawable.ic_target, false),
-            PictureOption("u12_s5_p2_opt7_4", "sampai jumpa", "👋", R.drawable.ic_crown, false)
+            PictureOption("u12_s5_p2_opt7_1", "tidak apa-apa", "", R.drawable.ic_work_no_problem, true),
+            PictureOption("u12_s5_p2_opt7_2", "terima kasih", "", R.drawable.ic_handshake, false),
+            PictureOption("u12_s5_p2_opt7_3", "bekerja", "", R.drawable.ic_work_job, false),
+            PictureOption("u12_s5_p2_opt7_4", "sampai jumpa", "", R.drawable.ic_hand_wave, false)
         )
     ),
 

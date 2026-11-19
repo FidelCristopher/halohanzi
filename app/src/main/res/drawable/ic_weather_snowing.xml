@@ -1,0 +1,70 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Winter Ice Blue) -->
+    <path
+        android:fillColor="#F0F9FF"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Drifting Snow Ground Bank (Winter Wonderland / 下雪) -->
+    <path
+        android:fillColor="#E0F2FE"
+        android:pathData="M14,76 C24,72 38,72 48,76 C58,80 72,74 82,78 L82,82 L14,82 Z" />
+
+    <!-- Falling Fluffy Snowflakes in Air -->
+    <path
+        android:fillColor="#38BDF8"
+        android:pathData="M24,18 A3,3 0 1,0 24,24 A3,3 0 1,0 24,18 Z M72,20 A3,3 0 1,0 72,26 A3,3 0 1,0 72,20 Z M20,38 A2.5,2.5 0 1,0 20,43 A2.5,2.5 0 1,0 20,38 Z M76,46 A2.5,2.5 0 1,0 76,51 A2.5,2.5 0 1,0 76,46 Z M30,56 A2,2 0 1,0 30,60 A2,2 0 1,0 30,56 Z M68,64 A2,2 0 1,0 68,68 A2,2 0 1,0 68,64 Z" />
+
+    <!-- Cute Snowman in Center (Turun Salju / 下雪) -->
+    <!-- Snowman Bottom Ball -->
+    <path
+        android:fillColor="#BAE6FD"
+        android:pathData="M48,50 A18,18 0 1,0 48,86 A18,18 0 1,0 48,50 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M48,52 A16,16 0 1,0 48,84 A16,16 0 1,0 48,52 Z" />
+    <!-- Coal Buttons on Belly -->
+    <path
+        android:fillColor="#0F172A"
+        android:pathData="M48,60 A2,2 0 1,0 48,64 A2,2 0 1,0 48,60 Z M48,70 A2,2 0 1,0 48,74 A2,2 0 1,0 48,70 Z" />
+
+    <!-- Snowman Head Ball -->
+    <path
+        android:fillColor="#BAE6FD"
+        android:pathData="M48,30 A12,12 0 1,0 48,54 A12,12 0 1,0 48,30 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M48,32 A10,10 0 1,0 48,52 A10,10 0 1,0 48,32 Z" />
+
+    <!-- Coal Eyes -->
+    <path
+        android:fillColor="#0F172A"
+        android:pathData="M44,38 A1.5,1.5 0 1,0 44,41 A1.5,1.5 0 1,0 44,38 Z M52,38 A1.5,1.5 0 1,0 52,41 A1.5,1.5 0 1,0 52,38 Z" />
+    <!-- Orange Carrot Nose -->
+    <path
+        android:fillColor="#EA580C"
+        android:pathData="M48,42 L56,44 L48,46 Z" />
+
+    <!-- Red Winter Scarf Tied Around Neck -->
+    <path
+        android:fillColor="#DC2626"
+        android:pathData="M38,48 C38,46 44,45 48,45 C52,45 58,46 58,48 L58,53 C52,53 44,53 38,53 Z" />
+    <!-- Scarf Tails Hanging Down -->
+    <path
+        android:fillColor="#B91C1C"
+        android:pathData="M52,50 L58,50 L56,66 L50,66 Z" />
+
+    <!-- Black Top Hat -->
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="M38,28 L58,28 L58,32 L38,32 Z" />
+    <path
+        android:fillColor="#0F172A"
+        android:pathData="M41,18 L55,18 L55,28 L41,28 Z" />
+    <path
+        android:fillColor="#DC2626"
+        android:pathData="M41,26 L55,26 L55,28 L41,28 Z" />
+</vector>

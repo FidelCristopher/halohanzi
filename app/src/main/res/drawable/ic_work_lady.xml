@@ -1,0 +1,44 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Soft Rose Pink) -->
+    <path
+        android:fillColor="#FFF1F2"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Professional Blazer Torso (Deep Rose / Coral Blazer) -->
+    <path
+        android:fillColor="#E11D48"
+        android:pathData="M24,82 C24,66 32,58 48,58 C64,58 72,66 72,82 Z" />
+
+    <!-- White Inner Silk Blouse -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M42,58 L48,68 L54,58 Z" />
+    <!-- Pearl Necklace -->
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M48,64 A2,2 0 1,0 48,68 A2,2 0 1,0 48,64 Z" />
+
+    <!-- Head / Professional Lady Face -->
+    <path
+        android:fillColor="#FFD1A4"
+        android:pathData="M48,28 A15,15 0 1,0 48,58 A15,15 0 1,0 48,28 Z" />
+
+    <!-- Elegant Shoulder-Length Bob Hair (Dark Brown) -->
+    <path
+        android:fillColor="#3B1E08"
+        android:pathData="M32,34 C32,20 38,16 48,16 C58,16 64,20 64,34 L66,54 L62,54 L62,36 C58,32 53,32 49,34 C45,36 38,36 34,36 L34,54 L30,54 Z" />
+
+    <!-- Confident Eyes with Lashes -->
+    <path
+        android:fillColor="#0F172A"
+        android:pathData="M41,39 C42,37 44,37 45,39 Z M51,39 C52,37 54,37 55,39 Z" />
+
+    <!-- Elegant Rose Smile -->
+    <path
+        android:fillColor="#BE123C"
+        android:pathData="M45,47 C46,51 50,51 51,47 Z" />
+</vector>
