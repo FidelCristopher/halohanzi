@@ -3777,6 +3777,99 @@ object LearningRepository {
                     exercisesPart2 = bab9Stage5Part2Exercises
                 )
             )
+        ),
+
+        // BAB 10: Transportasi & Perjalanan Kota (交通工具与城市出行)
+        UnitCourse(
+            id = "unit_10",
+            unitNumber = 10,
+            title = "Transportasi & Jalan",
+            subtitle = "Naik taksi, kereta api, pesawat, menyetir, dan bepergian",
+            bannerTitle = "Transportasi & Perjalanan Kota",
+            emoji = "🚕",
+            level = "Level 10",
+            story = stories[9],
+            nodes = listOf(
+                PathNode("u10_n1", "Mobil & Taksi", Color(0xFFFFC107), NodeIconType.CAP, isCompleted = false, lessonId = "u10_l1"),
+                PathNode("u10_n2", "Menyetir Mobil", Color(0xFFFFC107), NodeIconType.DUMBBELL, isCompleted = false, lessonId = "u10_l2"),
+                PathNode("u10_n3", "Kereta & Pesawat", Color(0xFFFFC107), NodeIconType.CAP, isCompleted = false, lessonId = "u10_l3"),
+                PathNode("u10_n4", "Pergi & Pulang", Color(0xFFFFC107), NodeIconType.DUMBBELL, isCompleted = false, lessonId = "u10_l4"),
+                PathNode("u10_n5", "Evaluasi Transportasi", Color(0xFFFFC107), NodeIconType.SHUFFLE, isCompleted = false, lessonId = "u10_l5"),
+                PathNode("u10_n6", "Kuis Cerita", Color(0xFFFFC107), NodeIconType.BOOK, isCompleted = false, lessonId = "u10_l1"),
+                PathNode("u10_n7", "Checkpoint Bab", Color(0xFFFFB300), NodeIconType.CHEST, isCompleted = false, lessonId = "u10_l1"),
+                PathNode("u10_n8", "Rest area", Color(0xFF03A9F4), NodeIconType.REST_AREA, isCompleted = false, lessonId = "u10_l1")
+            ),
+            lessons = listOf(
+                Lesson(
+                    id = "u10_l1",
+                    title = "Mobil & Taksi",
+                    subtitle = "Kosakata 车, 坐, dan 出租车",
+                    grammarNote = "Konstruksi instrumental kendaraan umum: '坐 (zuò) + Moda Transportasi'. Contoh: 坐车 (naik mobil), 坐出租车 (naik taksi).",
+                    newWords = listOf(
+                        Word("w10_1", "车", "chē", "Mobil / kendaraan", "Transportasi", "我们坐车去。", "Wǒmen zuò chē qù.", "Kami naik mobil pergi."),
+                        Word("w10_2", "坐", "zuò", "Naik (kendaraan) / duduk", "Kata kerja", "坐出租车回家。", "Zuò chūzūchē huíjiā.", "Naik taksi pulang."),
+                        Word("w10_3", "出租车", "chūzūchē", "Taksi", "Transportasi", "坐出租车去学校。", "Zuò chūzūchē qù xuéxiào.", "Naik taksi ke sekolah.")
+                    ),
+                    exercises = bab10Stage1Part1Exercises,
+                    exercisesPart1 = bab10Stage1Part1Exercises,
+                    exercisesPart2 = bab10Stage1Part2Exercises
+                ),
+                Lesson(
+                    id = "u10_l2",
+                    title = "Menyetir Mobil",
+                    subtitle = "Kata kerja kemudi 开 dan 开车",
+                    grammarNote = "Verba kemudi aktif: 开车 (kāichē = menyetir mobil). Pola kemampuan: '会 (huì) + 开车' (bisa menyetir).",
+                    newWords = listOf(
+                        Word("w10_4", "开", "kāi", "Menyetir / membuka", "Kata kerja", "他会开车。", "Tā huì kāichē.", "Dia bisa menyetir mobil."),
+                        Word("w10_5", "开车", "kāichē", "Menyetir mobil", "Kata kerja", "爸爸在开车。", "Bàba zài kāichē.", "Ayah sedang menyetir mobil.")
+                    ),
+                    exercises = bab10Stage2Part1Exercises,
+                    exercisesPart1 = bab10Stage2Part1Exercises,
+                    exercisesPart2 = bab10Stage2Part2Exercises
+                ),
+                Lesson(
+                    id = "u10_l3",
+                    title = "Kereta & Pesawat",
+                    subtitle = "Transportasi jarak jauh 火车 dan 飞机",
+                    grammarNote = "Perjalanan jarak jauh: 坐火车 (naik kereta api) dan 坐飞机 (naik pesawat terbang). Destinasi: 火车站 (stasiun kereta).",
+                    newWords = listOf(
+                        Word("w10_6", "火车", "huǒchē", "Kereta api", "Transportasi", "我坐火车去北京。", "Wǒ zuò huǒchē qù Běijīng.", "Saya naik kereta api ke Beijing."),
+                        Word("w10_7", "飞机", "fēijī", "Pesawat terbang", "Transportasi", "坐飞机去中国。", "Zuò fēijī qù Zhōngguó.", "Naik pesawat ke Tiongkok.")
+                    ),
+                    exercises = bab10Stage3Part1Exercises,
+                    exercisesPart1 = bab10Stage3Part1Exercises,
+                    exercisesPart2 = bab10Stage3Part2Exercises
+                ),
+                Lesson(
+                    id = "u10_l4",
+                    title = "Pergi, Datang & Pulang",
+                    subtitle = "Verba pergerakan 去, 来, 回, dan 回家",
+                    grammarNote = "Triad verba arah gerak: 去 (pergi menjauh), 来 (datang mendekat), 回 (kembali pulang). Serial verb: 'Moda + 去/回 + Tempat' (坐车回家).",
+                    newWords = listOf(
+                        Word("w10_8", "去", "qù", "Pergi", "Kata kerja", "你去哪儿？", "Nǐ qù nǎr?", "Kamu pergi ke mana?"),
+                        Word("w10_9", "来", "lái", "Datang", "Kata kerja", "欢迎来中国！", "Huānyíng lái Zhōngguó!", "Selamat datang di Tiongkok!"),
+                        Word("w10_10", "回", "huí", "Kembali / pulang", "Kata kerja", "我五点回家。", "Wǒ wǔ diǎn huíjiā.", "Saya pulang jam 5.")
+                    ),
+                    exercises = bab10Stage4Part1Exercises,
+                    exercisesPart1 = bab10Stage4Part1Exercises,
+                    exercisesPart2 = bab10Stage4Part2Exercises
+                ),
+                Lesson(
+                    id = "u10_l5",
+                    title = "Evaluasi Komprehensif Perjalanan",
+                    subtitle = "Review seluruh 10 kosakata transportasi dan perjalanan",
+                    grammarNote = "Evaluasi menyeluruh Bab 10: menyusun kalimat bepergian di kota dan antarkota, memilih moda transportasi yang tepat, serta menyatakan waktu dan arah gerak.",
+                    newWords = listOf(
+                        Word("w10_3", "出租车", "chūzūchē", "Taksi", "Transportasi", "坐出租车去火车站。", "Zuò chūzūchē qù huǒchēzhàn.", "Naik taksi ke stasiun."),
+                        Word("w10_5", "开车", "kāichē", "Menyetir", "Kata kerja", "他会开车。", "Tā huì kāichē.", "Dia bisa menyetir."),
+                        Word("w10_6", "火车", "huǒchē", "Kereta", "Transportasi", "坐火车。", "Zuò huǒchē.", "Naik kereta."),
+                        Word("w10_7", "飞机", "fēijī", "Pesawat", "Transportasi", "坐飞机去中国。", "Zuò fēijī qù Zhōngguó.", "Naik pesawat ke Tiongkok.")
+                    ),
+                    exercises = bab10Stage5Part1Exercises,
+                    exercisesPart1 = bab10Stage5Part1Exercises,
+                    exercisesPart2 = bab10Stage5Part2Exercises
+                )
+            )
         )
     )
 }
