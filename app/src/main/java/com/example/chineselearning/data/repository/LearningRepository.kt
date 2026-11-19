@@ -3448,6 +3448,120 @@ object LearningRepository {
                     exercisesPart2 = bab6Stage6Part2Exercises
                 )
             )
+        ),
+
+        // BAB 7: Restoran, Makanan & Kuliner Khas (餐厅、美味与中国美食)
+        UnitCourse(
+            id = "unit_7",
+            unitNumber = 7,
+            title = "Makanan & Kuliner",
+            subtitle = "Memesan makanan di restoran, kuliner khas Tiongkok, dan rasa",
+            bannerTitle = "Restoran & Kuliner Khas",
+            emoji = "🍜",
+            level = "Level 7",
+            story = stories[6],
+            nodes = listOf(
+                PathNode("u7_n1", "Makan & Minum", Color(0xFFFFC107), NodeIconType.CAP, isCompleted = false, lessonId = "u7_l1"),
+                PathNode("u7_n2", "Nasi, Mie & Roti", Color(0xFFFFC107), NodeIconType.DUMBBELL, isCompleted = false, lessonId = "u7_l2"),
+                PathNode("u7_n3", "Bakpao & Pangsit", Color(0xFFFFC107), NodeIconType.CAP, isCompleted = false, lessonId = "u7_l3"),
+                PathNode("u7_n4", "Sayur & Buah", Color(0xFFFFC107), NodeIconType.DUMBBELL, isCompleted = false, lessonId = "u7_l4"),
+                PathNode("u7_n5", "Pesan di Restoran", Color(0xFFFFC107), NodeIconType.CAP, isCompleted = false, lessonId = "u7_l5"),
+                PathNode("u7_n6", "Evaluasi Kuliner", Color(0xFFFFC107), NodeIconType.SHUFFLE, isCompleted = false, lessonId = "u7_l6"),
+                PathNode("u7_n7", "Kuis Cerita", Color(0xFFFFC107), NodeIconType.BOOK, isCompleted = false, lessonId = "u7_l1"),
+                PathNode("u7_n8", "Checkpoint Bab", Color(0xFFFFB300), NodeIconType.CHEST, isCompleted = false, lessonId = "u7_l1"),
+                PathNode("u7_n9", "Rest area", Color(0xFF03A9F4), NodeIconType.REST_AREA, isCompleted = false, lessonId = "u7_l1")
+            ),
+            lessons = listOf(
+                Lesson(
+                    id = "u7_l1",
+                    title = "Makan & Minum",
+                    subtitle = "Kata kerja 吃 dan 喝 serta minuman dasar",
+                    grammarNote = "Kata kerja konsumsi: 吃 (makan) dan 喝 (minum). Kata bantu wadah: 杯子 (gelas/cangkir) -> 一杯水 (segelas air), 一杯茶 (secangkir teh).",
+                    newWords = listOf(
+                        Word("w7_1", "吃", "chī", "Makan", "Kata kerja", "我想吃米饭。", "Wǒ xiǎng chī mǐfàn.", "Saya ingin makan nasi."),
+                        Word("w7_2", "喝", "hē", "Minum", "Kata kerja", "我想喝茶。", "Wǒ xiǎng hē chá.", "Saya ingin minum teh."),
+                        Word("w7_3", "水", "shuǐ", "Air", "Minuman", "给我一杯水。", "Gěi wǒ yì bēi shuǐ.", "Beri saya segelas air."),
+                        Word("w7_4", "茶", "chá", "Teh", "Minuman", "中国茶很好喝。", "Zhōngguó chá hěn hǎohē.", "Teh Tiongkok sangat enak diminum."),
+                        Word("w7_5", "牛奶", "niúnǎi", "Susu", "Minuman", "喝一杯牛奶。", "Hē yì bēi niúnǎi.", "Minum segelas susu."),
+                        Word("w7_6", "杯子", "bēizi", "Cangkir / gelas", "Benda", "桌子上有杯子。", "Zhuōzi shang yǒu bēizi.", "Di atas meja ada cangkir.")
+                    ),
+                    exercises = bab7Stage1Part1Exercises,
+                    exercisesPart1 = bab7Stage1Part1Exercises,
+                    exercisesPart2 = bab7Stage1Part2Exercises
+                ),
+                Lesson(
+                    id = "u7_l2",
+                    title = "Nasi, Mie & Roti",
+                    subtitle = "Makanan pokok: 米饭, 面条儿, 面包, dan 做饭",
+                    grammarNote = "Makanan pokok Mandarin: 米饭 (nasi putih), 面条儿 (mie), 面包 (roti). Aktivitas memasak: 做饭 (zuò fàn) atau 做菜 (zuò cài).",
+                    newWords = listOf(
+                        Word("w7_7", "米饭", "mǐfàn", "Nasi putih", "Makanan", "我吃米饭。", "Wǒ chī mǐfàn.", "Saya makan nasi putih."),
+                        Word("w7_8", "面条儿", "miàntiáor", "Mie", "Makanan", "吃一碗面条儿。", "Chī yì wǎn miàntiáor.", "Makan semangkuk mie."),
+                        Word("w7_9", "面包", "miànbāo", "Roti", "Makanan", "早饭吃面包。", "Zǎofàn chī miànbāo.", "Sarapan makan roti."),
+                        Word("w7_10", "做饭", "zuò fàn", "Memasak", "Kata kerja", "妈妈在做饭。", "Māma zài zuò fàn.", "Ibu sedang memasak.")
+                    ),
+                    exercises = bab7Stage2Part1Exercises,
+                    exercisesPart1 = bab7Stage2Part1Exercises,
+                    exercisesPart2 = bab7Stage2Part2Exercises
+                ),
+                Lesson(
+                    id = "u7_l3",
+                    title = "Bakpao & Pangsit Tradisional",
+                    subtitle = "Kuliner khas Tiongkok: 包子, 饺子, dan 鸡蛋",
+                    grammarNote = "Kuliner tradisional: 包子 (bakpao kukus), 饺子 (pangsit jiaozi). Menghitung jumlah: 两个包子 (dua bakpao), 一个鸡蛋 (sebutir telur).",
+                    newWords = listOf(
+                        Word("w7_11", "包子", "bāozi", "Bakpao", "Makanan", "我吃两个包子。", "Wǒ chī liǎng gè bāozi.", "Saya makan dua bakpao."),
+                        Word("w7_12", "饺子", "jiǎozi", "Pangsit", "Makanan", "中国饺子很好吃。", "Zhōngguó jiǎozi hěn hǎochī.", "Pangsit Tiongkok sangat lezat."),
+                        Word("w7_13", "鸡蛋", "jīdàn", "Telur", "Makanan", "吃一个鸡蛋。", "Chī yí gè jīdàn.", "Makan sebutir telur.")
+                    ),
+                    exercises = bab7Stage3Part1Exercises,
+                    exercisesPart1 = bab7Stage3Part1Exercises,
+                    exercisesPart2 = bab7Stage3Part2Exercises
+                ),
+                Lesson(
+                    id = "u7_l4",
+                    title = "Sayur & Buah-buahan",
+                    subtitle = "Kosakata 菜, 水果, 苹果, dan rasa 好吃",
+                    grammarNote = "Apresiasi kelezatan rasa makanan: 好吃 (hǎochī = enak dimakan). Apresiasi minuman: 好喝 (hǎohē = enak diminum).",
+                    newWords = listOf(
+                        Word("w7_14", "菜", "cài", "Sayur / hidangan", "Makanan", "中国菜很好吃。", "Zhōngguó cài hěn hǎochī.", "Masakan Tiongkok sangat enak."),
+                        Word("w7_15", "水果", "shuǐguǒ", "Buah-buahan", "Makanan", "我想吃水果。", "Wǒ xiǎng chī shuǐguǒ.", "Saya ingin makan buah."),
+                        Word("w7_16", "苹果", "píngguǒ", "Apel", "Makanan", "吃两个苹果。", "Chī liǎng gè píngguǒ.", "Makan dua buah apel."),
+                        Word("w7_17", "好吃", "hǎochī", "Enak / lezat", "Kata sifat", "这个菜很好吃。", "Zhège cài hěn hǎochī.", "Masakan ini sangat lezat.")
+                    ),
+                    exercises = bab7Stage4Part1Exercises,
+                    exercisesPart1 = bab7Stage4Part1Exercises,
+                    exercisesPart2 = bab7Stage4Part2Exercises
+                ),
+                Lesson(
+                    id = "u7_l5",
+                    title = "Memesan di Restoran",
+                    subtitle = "Makan di 饭店 dan menyapa 服务员",
+                    grammarNote = "Dialog restoran: 服务员 (pelayan), 你想吃什么？ (Kamu ingin makan apa?), 我想吃... (Saya ingin makan...), 这个多少钱？ (Ini berapa harganya?).",
+                    newWords = listOf(
+                        Word("w7_18", "饭店", "fàndiàn", "Restoran", "Tempat", "去饭店吃饭。", "Qù fàndiàn chīfàn.", "Pergi ke restoran untuk makan."),
+                        Word("w7_19", "饭", "fàn", "Nasi / makanan", "Makanan", "吃饭了。", "Chīfàn le.", "Sudah makan.")
+                    ),
+                    exercises = bab7Stage5Part1Exercises,
+                    exercisesPart1 = bab7Stage5Part1Exercises,
+                    exercisesPart2 = bab7Stage5Part2Exercises
+                ),
+                Lesson(
+                    id = "u7_l6",
+                    title = "Evaluasi Komprehensif Kuliner",
+                    subtitle = "Review seluruh 19 kosakata kuliner khas Tiongkok",
+                    grammarNote = "Evaluasi komprehensif Bab 7: memesan makanan di restoran, menyebutkan menu pokok dan kuliner tradisional, menanyakan harga dan rasa.",
+                    newWords = listOf(
+                        Word("w7_18", "饭店", "fàndiàn", "Restoran", "Tempat", "在饭店见。", "Zài fàndiàn jiàn.", "Bertemu di restoran."),
+                        Word("w7_12", "饺子", "jiǎozi", "Pangsit", "Makanan", "吃饺子。", "Chī jiǎozi.", "Makan pangsit."),
+                        Word("w7_14", "菜", "cài", "Masakan", "Makanan", "中国菜很好吃。", "Zhōngguó cài hěn hǎochī.", "Masakan Tiongkok sangat lezat."),
+                        Word("w7_4", "茶", "chá", "Teh", "Minuman", "喝茶。", "Hē chá.", "Minum teh.")
+                    ),
+                    exercises = bab7Stage6Part1Exercises,
+                    exercisesPart1 = bab7Stage6Part1Exercises,
+                    exercisesPart2 = bab7Stage6Part2Exercises
+                )
+            )
         )
     )
 }
