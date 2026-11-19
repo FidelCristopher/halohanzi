@@ -51,14 +51,16 @@ import com.example.chineselearning.ui.theme.*
 @Composable
 fun StoryListScreen(
     lazyListState: LazyListState = rememberLazyListState(),
+    selectedHskFilter: String = "Semua",
+    onHskFilterChange: (String) -> Unit = {},
+    selectedCategoryFilter: String = "Semua Topik",
+    onCategoryFilterChange: (String) -> Unit = {},
+    searchQuery: String = "",
+    onSearchQueryChange: (String) -> Unit = {},
     onSelectStory: (Story) -> Unit
 ) {
     val coroutineScope = rememberCoroutineScope()
     val allStories = LearningRepository.stories
-
-    var selectedHskFilter by rememberSaveable { mutableStateOf("Semua") }
-    var selectedCategoryFilter by rememberSaveable { mutableStateOf("Semua Topik") }
-    var searchQuery by rememberSaveable { mutableStateOf("") }
 
     val hskLevels = listOf("Semua", "HSK 1", "HSK 2", "HSK 3")
 
@@ -138,8 +140,18 @@ fun StoryListScreen(
         item(key = "header_search") {
             StorySearchBar(
                 query = searchQuery,
-                onQueryChange = { searchQuery = it },
-                onClearQuery = { searchQuery = "" }
+                onQueryChange = {
+                    onSearchQueryChange(it)
+                    coroutineScope.launch {
+                        lazyListState.scrollToItem(0)
+                    }
+                },
+                onClearQuery = {
+                    onSearchQueryChange("")
+                    coroutineScope.launch {
+                        lazyListState.scrollToItem(0)
+                    }
+                }
             )
         }
 
@@ -167,9 +179,12 @@ fun StoryListScreen(
                             color = HanziGreenDark,
                             modifier = Modifier
                                 .clickable {
-                                    selectedHskFilter = "Semua"
-                                    selectedCategoryFilter = "Semua Topik"
-                                    searchQuery = ""
+                                    onHskFilterChange("Semua")
+                                    onCategoryFilterChange("Semua Topik")
+                                    onSearchQueryChange("")
+                                    coroutineScope.launch {
+                                        lazyListState.scrollToItem(0)
+                                    }
                                 }
                                 .padding(4.dp)
                         )
@@ -196,7 +211,14 @@ fun StoryListScreen(
                             label = level,
                             count = count,
                             isSelected = isSelected,
-                            onSelect = { selectedHskFilter = level }
+                            onSelect = {
+                                if (selectedHskFilter != level) {
+                                    onHskFilterChange(level)
+                                    coroutineScope.launch {
+                                        lazyListState.scrollToItem(0)
+                                    }
+                                }
+                            }
                         )
                     }
                 }
@@ -216,7 +238,14 @@ fun StoryListScreen(
                     TopicFilterChip(
                         title = category,
                         isSelected = isSelected,
-                        onSelect = { selectedCategoryFilter = category }
+                        onSelect = {
+                            if (selectedCategoryFilter != category) {
+                                onCategoryFilterChange(category)
+                                coroutineScope.launch {
+                                    lazyListState.scrollToItem(0)
+                                }
+                            }
+                        }
                     )
                 }
             }
@@ -263,9 +292,12 @@ fun StoryListScreen(
                     selectedCategory = selectedCategoryFilter,
                     searchQuery = searchQuery,
                     onResetFilter = {
-                        selectedHskFilter = "Semua"
-                        selectedCategoryFilter = "Semua Topik"
-                        searchQuery = ""
+                        onHskFilterChange("Semua")
+                        onCategoryFilterChange("Semua Topik")
+                        onSearchQueryChange("")
+                        coroutineScope.launch {
+                            lazyListState.scrollToItem(0)
+                        }
                     }
                 )
             }

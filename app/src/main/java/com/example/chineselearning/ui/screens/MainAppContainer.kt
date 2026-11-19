@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.lazy.LazyListState
 import androidx.compose.runtime.*
 import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.runtime.saveable.rememberSaveableStateHolder
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import com.example.chineselearning.audio.TtsManager
@@ -19,11 +20,16 @@ import com.example.chineselearning.ui.theme.AppBg
 fun MainAppContainer(
     ttsManager: TtsManager?
 ) {
-    var selectedTab by remember { mutableStateOf(0) }
+    var selectedTab by rememberSaveable { mutableIntStateOf(0) }
     var activeStory by remember { mutableStateOf<Story?>(null) }
     var activeLesson by remember { mutableStateOf<Lesson?>(null) }
     var activeNodeId by remember { mutableStateOf<String?>(null) }
-    var activePartNumber by remember { mutableStateOf(1) }
+    var activePartNumber by rememberSaveable { mutableIntStateOf(1) }
+
+    // Hoisted and saveable filter states for StoryListScreen to preserve state across navigation
+    var storyHskFilter by rememberSaveable { mutableStateOf("Semua") }
+    var storyCategoryFilter by rememberSaveable { mutableStateOf("Semua Topik") }
+    var storySearchQuery by rememberSaveable { mutableStateOf("") }
 
     // Hoisted and saveable LazyListState to preserve exact scroll position across navigation
     val homeListState = rememberSaveable(saver = LazyListState.Saver) {
@@ -32,6 +38,8 @@ fun MainAppContainer(
     val storyListState = rememberSaveable(saver = LazyListState.Saver) {
         LazyListState()
     }
+
+    val saveableStateHolder = rememberSaveableStateHolder()
 
     // Graded Story Reader Mode
     if (activeStory != null) {
@@ -75,23 +83,31 @@ fun MainAppContainer(
     ) {
         // Main Screen Content (flows edge-to-edge behind the floating navbar)
         Box(modifier = Modifier.fillMaxSize()) {
-            when (selectedTab) {
-                0 -> HomeScreen(
-                    lazyListState = homeListState,
-                    onSelectLesson = { lesson, nodeId ->
-                        activeNodeId = nodeId
-                        activePartNumber = com.example.chineselearning.data.repository.LearningRepository.getStageProgress(nodeId)
-                        activeLesson = lesson
-                    },
-                    onSelectStory = { story -> activeStory = story }
-                )
-                1 -> SavedVocabScreen(ttsManager = ttsManager)
-                2 -> StoryListScreen(
-                    lazyListState = storyListState,
-                    onSelectStory = { story -> activeStory = story }
-                )
-                3 -> ImersiScreen()
-                4 -> ProfileScreen()
+            saveableStateHolder.SaveableStateProvider(selectedTab) {
+                when (selectedTab) {
+                    0 -> HomeScreen(
+                        lazyListState = homeListState,
+                        onSelectLesson = { lesson, nodeId ->
+                            activeNodeId = nodeId
+                            activePartNumber = com.example.chineselearning.data.repository.LearningRepository.getStageProgress(nodeId)
+                            activeLesson = lesson
+                        },
+                        onSelectStory = { story -> activeStory = story }
+                    )
+                    1 -> SavedVocabScreen(ttsManager = ttsManager)
+                    2 -> StoryListScreen(
+                        lazyListState = storyListState,
+                        selectedHskFilter = storyHskFilter,
+                        onHskFilterChange = { storyHskFilter = it },
+                        selectedCategoryFilter = storyCategoryFilter,
+                        onCategoryFilterChange = { storyCategoryFilter = it },
+                        searchQuery = storySearchQuery,
+                        onSearchQueryChange = { storySearchQuery = it },
+                        onSelectStory = { story -> activeStory = story }
+                    )
+                    3 -> ImersiScreen()
+                    4 -> ProfileScreen()
+                }
             }
         }
 
