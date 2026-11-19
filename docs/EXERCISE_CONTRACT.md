@@ -153,18 +153,20 @@ Imports: `import com.example.chineselearning.data.model.*` and `import com.examp
 
 ## 13. MANDAT KORELASI SEMANTIK ILUSTRASI PILIHAN (ZERO PLACEHOLDER COINS & STRICT SEMANTIC ACCURACY MANDATE)
 **CRITICAL**: Seluruh gambar atau ilustrasi pada kartu opsi bergambar (`PictureOption` / `ExerciseType.PICTURE_CHOICE`):
-- **Rule 1 (Zero Fallback / Generic Placeholder Icons)**: **DILARANG KERAS** menggunakan `ic_coin`, `ic_target`, `ic_book`, atau ikon placeholder generik lainnya pada `PictureOption` jika opsi tersebut bukan memiliki arti semantik uang/koin/target. Gambar koin tidak boleh dijadikan jalan pintas atau *dumping ground* untuk kosakata yang belum dibuatkan asetnya!
-- **Rule 2 (Strict 1:1 Semantic Correlation)**: Setiap gambar ilustrasi pada `PictureOption` WAJIB relevan secara semantik 1:1 dengan label keterangannya. Contoh:
-  - Opsi "mobil / kendaraan" / "taksi" -> WAJIB mobil/taksi (`ic_car` / `ic_taxi`), BUKAN koin.
-  - Opsi "pesawat terbang" -> WAJIB pesawat (`ic_airplane`), BUKAN koin.
-  - Opsi "kereta api" / "stasiun" -> WAJIB kereta/stasiun (`ic_train` / `ic_train_station`), BUKAN koin.
-  - Opsi "rumah sakit" / "dokter" -> WAJIB rumah sakit / dokter (`ic_hospital` / `ic_doctor`), BUKAN koin.
-  - Opsi "anjing" / "kucing" -> WAJIB hewan terkait (`ic_dog` / `ic_cat`), BUKAN koin.
-  - Opsi "ponsel" / "telepon" -> WAJIB telepon/smartphone (`ic_smartphone` / `ic_call`), BUKAN koin.
-  - Opsi "televisi" / "film" -> WAJIB TV/bioskop (`ic_tv` / `ic_cinema`), BUKAN koin.
-  - Opsi "pakaian / baju" -> WAJIB pakaian (`ic_clothes` / `ic_shirt`), BUKAN koin.
-- **Rule 3 (Zero AI Slop & Mandatory Vector-Designer Skill)**: Designer WAJIB memanfaatkan skill `vector-designer` dan `antislop-ui` yang telah terpasang di rolenya. Seluruh aset harus berupa VectorDrawable XML Android murni (`res/drawable/ic_*.xml`), handcrafted, kurva presisi, palet warna harmonis, viewport proporsional, dan bebas dari artefak slop.
-- **Rule 4 (Mandatory Pipeline Handover to Designer)**: Setiap kali Dev 1 selesai menyusun soal kurikulum baru, QA WAJIB menginventarisir seluruh opsi `PictureOption` dan menyerahkannya ke Designer untuk diverifikasi semantiknya dan dibuatkan vektor aslinya sebelum dianggap tuntas (audit pass).
-- **Rule 5 (Automated Unit Test Enforcement)**: QA wajib menambahkan unit test otomatis di `ExampleUnitTest.kt` untuk memeriksa korelasi semantik dan memblokir keberadaan `ic_coin` pada opsi yang artinya bukan uang/koin.
+- **Rule 1 (Zero Fallback / Generic Placeholder Icons Across ALL Options)**: **DILARANG KERAS** menggunakan `ic_coin`, `ic_target`, `ic_book`, `ic_crown`, `ic_cap`, `ic_dumbbell`, `ic_snail`, `ic_rocket`, `ic_gas_station`, atau ikon placeholder generik lainnya pada `PictureOption`—baik pada kartu jawaban benar maupun kartu pengecoh (distractor)—jika opsi tersebut tidak memiliki arti semantik yang secara harfiah cocok dengan ikon tersebut. Ikon target, mahkota, dan buku dilarang keras dijadikan *dumping ground* pengisi opsi kosong!
+- **Rule 2 (Strict 1:1 Semantic Correlation for Correct & Distractor Cards)**: Setiap gambar ilustrasi pada seluruh 4 kartu opsi di `PictureOption` WAJIB relevan secara semantik 1:1 dengan label keterangannya. Contoh:
+  - Opsi "makan" -> WAJIB `ic_action_eat`, BUKAN `ic_book` atau `ic_coin`!
+  - Opsi "minum" -> WAJIB `ic_action_drink`, BUKAN `ic_crown`!
+  - Opsi "tidur" -> WAJIB `ic_action_sleep`, BUKAN `ic_crown` atau `ic_book`!
+  - Opsi "rumah" -> WAJIB `ic_fam_home`, BUKAN `ic_people_group` atau `ic_crown`!
+  - Opsi "meja" / "kursi" -> WAJIB `ic_fam_table` / `ic_fam_chair`, BUKAN `ic_target` atau `ic_crown`!
+  - Opsi "jam" -> WAJIB `ic_clock_analog`, BUKAN `ic_story_timer` atau `ic_crown`!
+  - Opsi "mobil" / "pesawat" / "kereta" -> WAJIB `ic_trans_car` / `ic_trans_airplane` / `ic_trans_train`!
+  - Opsi "sekolah" / "universitas" -> WAJIB `ic_edu_school` / `ic_edu_university`, BUKAN `ic_cap`!
+  - Opsi "menjual" -> WAJIB `ic_price_tag` atau `ic_shop_goods`, BUKAN `ic_target`!
+- **Rule 3 (Zero Emoji Mandate in PictureOption)**: Parameter `emoji` pada konstruktor `PictureOption` WAJIB berupa string kosong `""`. Dilarang menaruh emoji mentah di opsi gambar karena visual sepenuhnya disajikan oleh VectorDrawable XML berkualitas tinggi.
+- **Rule 4 (Zero AI Slop & Mandatory Vector-Designer Skill)**: Designer WAJIB memanfaatkan skill `vector-designer` dan `antislop-ui` yang telah terpasang di rolenya. Seluruh aset harus berupa VectorDrawable XML Android murni (`res/drawable/ic_*.xml`), handcrafted, kurva presisi, palet warna harmonis, viewport proporsional, dan bebas dari artefak slop.
+- **Rule 5 (Per-Chapter Handover to Designer & Staged QA Review)**: QA dan Designer memeriksa Bab 4 s/d Bab 16 per bab secara sekuensial. Setiap satu bab tuntas diperbaiki oleh Designer, langsung dikirim ke QA untuk diaudit dan diverifikasi di emulator, sementara Designer langsung melanjutkan bab berikutnya tanpa jeda.
+- **Rule 6 (Automated Unit Test Enforcement)**: QA wajib menambahkan unit test otomatis di `ExampleUnitTest.kt` untuk memblokir keberadaan `ic_coin`, `ic_target`, `ic_crown`, `ic_book`, `ic_cap`, dan emoji mentah pada opsi yang tidak relevan secara semantik.
 
 

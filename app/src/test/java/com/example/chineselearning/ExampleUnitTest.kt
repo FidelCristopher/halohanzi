@@ -78,9 +78,14 @@ class ComprehensiveExerciseAuditTest {
                         }
                     }
 
-                    // 6. Audit PICTURE_CHOICE Semantic Accuracy - Rule 13 Zero Fallback Placeholder Mandate
+                    // 6. Audit PICTURE_CHOICE Semantic Accuracy - Rule 13 Zero Fallback Placeholder Mandate & Zero Emoji Mandate
                     if (ex.type == ExerciseType.PICTURE_CHOICE) {
                         ex.pictureOptions.forEach { opt ->
+                            // Zero Emoji Mandate
+                            if (opt.emoji.isNotBlank()) {
+                                errors.add("[${lesson.id} - ${ex.id}] PictureOption '${opt.label}' (${opt.id}) still contains raw emoji '${opt.emoji}'! Must be empty string.")
+                            }
+
                             val isMoneyRelated = opt.label.contains("uang", ignoreCase = true) ||
                                     opt.label.contains("koin", ignoreCase = true) ||
                                     opt.label.contains("harga", ignoreCase = true) ||
@@ -89,6 +94,20 @@ class ComprehensiveExerciseAuditTest {
                                     opt.label.contains("murah", ignoreCase = true)
                             if (opt.iconRes == R.drawable.ic_coin && !isMoneyRelated) {
                                 errors.add("[${lesson.id} - ${ex.id}] PictureOption '${opt.label}' (${opt.id}) is using ic_coin placeholder! Must use dedicated semantic VectorDrawable.")
+                            }
+
+                            // Disallow generic placeholder dumping
+                            if (opt.iconRes == R.drawable.ic_target && !opt.label.contains("target", ignoreCase = true) && !opt.label.contains("sasaran", ignoreCase = true)) {
+                                errors.add("[${lesson.id} - ${ex.id}] PictureOption '${opt.label}' (${opt.id}) is using ic_target placeholder! Must use dedicated semantic VectorDrawable.")
+                            }
+                            if (opt.iconRes == R.drawable.ic_crown && !opt.label.contains("mahkota", ignoreCase = true) && !opt.label.contains("raja", ignoreCase = true)) {
+                                errors.add("[${lesson.id} - ${ex.id}] PictureOption '${opt.label}' (${opt.id}) is using ic_crown placeholder! Must use dedicated semantic VectorDrawable.")
+                            }
+                            if (opt.iconRes == R.drawable.ic_book && !opt.label.contains("buku", ignoreCase = true)) {
+                                errors.add("[${lesson.id} - ${ex.id}] PictureOption '${opt.label}' (${opt.id}) is using ic_book placeholder! Must use dedicated semantic VectorDrawable.")
+                            }
+                            if (opt.iconRes == R.drawable.ic_cap && !opt.label.contains("topi", ignoreCase = true) && !opt.label.contains("wisuda", ignoreCase = true)) {
+                                errors.add("[${lesson.id} - ${ex.id}] PictureOption '${opt.label}' (${opt.id}) is using ic_cap placeholder! Must use dedicated semantic VectorDrawable.")
                             }
                         }
                     }
