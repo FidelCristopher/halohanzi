@@ -17,6 +17,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
+import kotlinx.coroutines.launch
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -69,6 +70,13 @@ fun HomeScreen(
 
     var activePopupNodeId by remember { mutableStateOf<String?>(null) }
 
+    val showScrollToTop by remember {
+        derivedStateOf {
+            lazyListState.firstVisibleItemIndex > 2
+        }
+    }
+    val coroutineScope = rememberCoroutineScope()
+
     // Winding path horizontal offsets (serpentine road sequence)
     val pathXOffsets = listOf(
         0.dp,        // Stage 1: Pink Cap (Center)
@@ -92,14 +100,19 @@ fun HomeScreen(
         Pair(Color(0xFFE0F2FE), Color(0xFF38BDF8))  // Bab 6: Clear Sky Blue
     )
 
-    LazyColumn(
-        state = lazyListState,
+    Box(
         modifier = Modifier
             .fillMaxSize()
-            .background(AppBg),
-        contentPadding = PaddingValues(bottom = 110.dp),
-        horizontalAlignment = Alignment.CenterHorizontally
+            .background(AppBg)
     ) {
+        LazyColumn(
+            state = lazyListState,
+            modifier = Modifier
+                .fillMaxSize()
+                .background(AppBg),
+            contentPadding = PaddingValues(bottom = 110.dp),
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
         // TOP APP BAR: Modern Header with Refined HSK Level Selector
         item {
             Surface(
@@ -505,6 +518,39 @@ fun HomeScreen(
             }
         }
     }
+
+    // Floating small scroll-to-top button
+    AnimatedVisibility(
+        visible = showScrollToTop,
+        enter = fadeIn() + scaleIn(),
+        exit = fadeOut() + scaleOut(),
+        modifier = Modifier
+            .align(Alignment.BottomEnd)
+            .padding(end = 20.dp, bottom = 135.dp)
+    ) {
+        FloatingActionButton(
+            onClick = {
+                coroutineScope.launch {
+                    lazyListState.animateScrollToItem(0)
+                }
+            },
+            modifier = Modifier.size(46.dp),
+            shape = CircleShape,
+            containerColor = PastelBlueBrand,
+            contentColor = Color.White,
+            elevation = FloatingActionButtonDefaults.elevation(
+                defaultElevation = 6.dp,
+                pressedElevation = 8.dp
+            )
+        ) {
+            Icon(
+                imageVector = Icons.Default.KeyboardArrowUp,
+                contentDescription = "Scroll ke Atas",
+                modifier = Modifier.size(24.dp)
+            )
+        }
+    }
+}
 }
 
 /**
