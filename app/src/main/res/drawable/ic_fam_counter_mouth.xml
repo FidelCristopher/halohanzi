@@ -1,0 +1,26 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Soft Coral Tangerine) -->
+    <path
+        android:fillColor="#FFEDD5"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Big Stylized Hanzi Character "口" (Family Classifier Badge) -->
+    <!-- Outer Square of 口 -->
+    <path
+        android:fillColor="#EA580C"
+        android:pathData="M26,24 L70,24 C73.3,24 76,26.7 76,30 L76,66 C76,69.3 73.3,72 70,72 L26,72 C22.7,72 20,69.3 20,66 L20,30 C20,26.7 22.7,24 26,24 Z M32,34 L32,62 L64,62 L64,34 Z" />
+
+    <!-- Warm Golden Inner Fill -->
+    <path
+        android:fillColor="#FEF3C7"
+        android:pathData="M32,34 L64,34 L64,62 L32,62 Z" />
+
+    <!-- Family Silhouette inside the "口" -->
+    <path
+        android:fillColor="#D97706"
+        android:pathData="M48,39 A4,4 0 1,0 48,47 A4,4 0 1,0 48,39 Z M40,57 C40,51 44,49 48,49 C52,49 56,51 56,57 Z" />
+</vector>

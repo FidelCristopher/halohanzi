@@ -1,0 +1,49 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Soft Coral) -->
+    <path
+        android:fillColor="#FEF2F2"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Cooking Wok / Skillet Pan Handle (Pointing down-left) -->
+    <path
+        android:fillColor="#78350F"
+        android:pathData="M16,74 L32,60 L36,64 L20,78 Z" />
+
+    <!-- Cooking Skillet Pan Rim (Deep Cast Iron Slate) -->
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="M54,22 A24,24 0 1,0 54,70 A24,24 0 1,0 54,22 Z" />
+    <path
+        android:fillColor="#334155"
+        android:pathData="M54,25 A21,21 0 1,0 54,67 A21,21 0 1,0 54,25 Z" />
+
+    <!-- Food Sizzling in Skillet: Sunny Egg & Green Veggie -->
+    <!-- Egg White -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M54,34 C61,34 66,39 66,46 C66,53 60,58 53,58 C46,58 42,53 42,46 C42,40 47,34 54,34 Z" />
+    <!-- Egg Yolk -->
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M53,42 A5,5 0 1,0 53,52 A5,5 0 1,0 53,42 Z" />
+
+    <!-- Spatula / Turner (Angled in action) -->
+    <path
+        android:fillColor="#94A3B8"
+        android:pathData="M64,28 L78,14 L82,18 L68,32 Z" />
+    <path
+        android:fillColor="#64748B"
+        android:pathData="M60,30 L70,30 L66,40 L56,40 Z" />
+
+    <!-- Sizzling Steam / Aroma Whiffs -->
+    <path
+        android:fillColor="#EF4444"
+        android:pathData="M38,24 C36,28 40,32 38,36 L36,36 C38,32 34,28 36,24 Z" />
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M46,18 C44,23 48,27 46,32 L44,32 C46,27 42,23 44,18 Z" />
+</vector>

@@ -1,0 +1,36 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Warm Peach) -->
+    <path
+        android:fillColor="#FFF7ED"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Ceramic Mug Body (Warm Coral) -->
+    <path
+        android:fillColor="#EA580C"
+        android:pathData="M26,30 L66,30 L62,72 C62,76.4 58.4,80 54,80 L38,80 C33.6,80 30,76.4 30,72 Z" />
+    <path
+        android:fillColor="#F97316"
+        android:pathData="M28,32 L64,32 L60,71 C60,74.5 57,78 53,78 L39,78 C35,78 32,74.5 32,71 Z" />
+
+    <!-- Cup Rim & Interior Rim (Cream White) -->
+    <path
+        android:fillColor="#FED7AA"
+        android:pathData="M46,28 C56,28 66,29.5 66,31.5 C66,33.5 56,35 46,35 C36,35 26,33.5 26,31.5 C26,29.5 36,28 46,28 Z" />
+    <path
+        android:fillColor="#7C2D12"
+        android:pathData="M46,29 C54,29 63,30.2 63,31.5 C63,32.8 54,34 46,34 C38,34 29,32.8 29,31.5 C29,30.2 38,29 46,29 Z" />
+
+    <!-- Mug Handle (Right) -->
+    <path
+        android:fillColor="#EA580C"
+        android:pathData="M64,38 C74,38 80,44 80,52 C80,60 74,66 63,66 L63,59 C70,59 73,56 73,52 C73,48 70,45 64,45 Z" />
+
+    <!-- Specular Highlight Strip on Mug -->
+    <path
+        android:fillColor="#FED7AA"
+        android:pathData="M35,36 L39,36 L41,72 L37,72 Z" />
+</vector>

@@ -18,10 +18,10 @@ val bab7Stage1Part1Exercises = listOf(
         correctAnswer = "teh",
         audioToSpeak = "茶",
         pictureOptions = listOf(
-            PictureOption("u7_s1_p1_opt1", "teh", "🍵", R.drawable.ic_coin, true),
-            PictureOption("u7_s1_p1_opt2", "air", "💧", R.drawable.ic_target, false),
-            PictureOption("u7_s1_p1_opt3", "apel", "🍎", R.drawable.ic_book, false),
-            PictureOption("u7_s1_p1_opt4", "nasi", "🍚", R.drawable.ic_crown, false)
+            PictureOption("u7_s1_p1_opt1", "teh", "", R.drawable.ic_food_tea, true),
+            PictureOption("u7_s1_p1_opt2", "air", "", R.drawable.ic_food_water, false),
+            PictureOption("u7_s1_p1_opt3", "apel", "", R.drawable.ic_food_apple, false),
+            PictureOption("u7_s1_p1_opt4", "nasi", "", R.drawable.ic_food_rice, false)
         )
     ),
 
@@ -108,10 +108,10 @@ val bab7Stage1Part1Exercises = listOf(
         correctAnswer = "air",
         audioToSpeak = "水",
         pictureOptions = listOf(
-            PictureOption("u7_s1_p1_opt7_1", "air", "💧", R.drawable.ic_target, true),
-            PictureOption("u7_s1_p1_opt7_2", "teh", "🍵", R.drawable.ic_coin, false),
-            PictureOption("u7_s1_p1_opt7_3", "susu", "🥛", R.drawable.ic_book, false),
-            PictureOption("u7_s1_p1_opt7_4", "buku", "📖", R.drawable.ic_story_timer, false)
+            PictureOption("u7_s1_p1_opt7_1", "air", "", R.drawable.ic_food_water, true),
+            PictureOption("u7_s1_p1_opt7_2", "teh", "", R.drawable.ic_food_tea, false),
+            PictureOption("u7_s1_p1_opt7_3", "susu", "", R.drawable.ic_food_milk, false),
+            PictureOption("u7_s1_p1_opt7_4", "cangkir / gelas", "", R.drawable.ic_food_cup, false)
         )
     ),
 
@@ -169,10 +169,10 @@ val bab7Stage1Part2Exercises = listOf(
         correctAnswer = "susu",
         audioToSpeak = "牛奶",
         pictureOptions = listOf(
-            PictureOption("u7_s1_p2_opt1", "susu", "🥛", R.drawable.ic_book, true),
-            PictureOption("u7_s1_p2_opt2", "teh", "🍵", R.drawable.ic_coin, false),
-            PictureOption("u7_s1_p2_opt3", "air", "💧", R.drawable.ic_target, false),
-            PictureOption("u7_s1_p2_opt4", "apel", "🍎", R.drawable.ic_crown, false)
+            PictureOption("u7_s1_p2_opt1", "susu", "", R.drawable.ic_food_milk, true),
+            PictureOption("u7_s1_p2_opt2", "teh", "", R.drawable.ic_food_tea, false),
+            PictureOption("u7_s1_p2_opt3", "air", "", R.drawable.ic_food_water, false),
+            PictureOption("u7_s1_p2_opt4", "apel", "", R.drawable.ic_food_apple, false)
         )
     ),
 
@@ -259,10 +259,10 @@ val bab7Stage1Part2Exercises = listOf(
         correctAnswer = "cangkir / gelas",
         audioToSpeak = "杯子",
         pictureOptions = listOf(
-            PictureOption("u7_s1_p2_opt7_1", "cangkir / gelas", "🥛", R.drawable.ic_coin, true),
-            PictureOption("u7_s1_p2_opt7_2", "meja", "🪵", R.drawable.ic_book, false),
-            PictureOption("u7_s1_p2_opt7_3", "buku", "📖", R.drawable.ic_story_timer, false),
-            PictureOption("u7_s1_p2_opt7_4", "uang", "🪙", R.drawable.ic_crown, false)
+            PictureOption("u7_s1_p2_opt7_1", "cangkir / gelas", "", R.drawable.ic_food_cup, true),
+            PictureOption("u7_s1_p2_opt7_2", "meja", "", R.drawable.ic_fam_table, false),
+            PictureOption("u7_s1_p2_opt7_3", "kursi", "", R.drawable.ic_fam_chair, false),
+            PictureOption("u7_s1_p2_opt7_4", "teh", "", R.drawable.ic_food_tea, false)
         )
     ),
 

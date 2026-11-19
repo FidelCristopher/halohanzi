@@ -1,0 +1,43 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Soft Rose Pink) -->
+    <path
+        android:fillColor="#FFF1F2"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Torso / Warm Coral Dress -->
+    <path
+        android:fillColor="#F43F5E"
+        android:pathData="M26,82 C26,66 34,58 48,58 C62,58 70,66 70,82 Z" />
+    <!-- Delicate Pearl Necklace -->
+    <path
+        android:fillColor="#FFE4E6"
+        android:pathData="M43,62 A2,2 0 1,0 43,66 A2,2 0 1,0 43,62 Z M48,64 A2,2 0 1,0 48,68 A2,2 0 1,0 48,64 Z M53,62 A2,2 0 1,0 53,66 A2,2 0 1,0 53,62 Z" />
+
+    <!-- Hair Bun Behind Head -->
+    <path
+        android:fillColor="#3B1E08"
+        android:pathData="M48,16 A12,12 0 1,0 48,40 A12,12 0 1,0 48,16 Z" />
+
+    <!-- Head / Face -->
+    <path
+        android:fillColor="#FFD1A4"
+        android:pathData="M48,26 A16,16 0 1,0 48,58 A16,16 0 1,0 48,26 Z" />
+    <!-- Mother's Soft Flowing Hair & Side Bangs -->
+    <path
+        android:fillColor="#4A2810"
+        android:pathData="M32,32 C32,20 38,18 48,18 C58,18 64,20 64,32 C60,28 55,28 50,30 C46,32 38,32 32,32 Z M32,32 L34,46 L37,42 L35,32 Z M64,32 L62,46 L59,42 L61,32 Z" />
+
+    <!-- Gentle Smiling Eyes -->
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="M40,38 C41,36 43,36 44,38 Z M52,38 C53,36 55,36 56,38 Z" />
+
+    <!-- Sweet Motherly Smile -->
+    <path
+        android:fillColor="#E11D48"
+        android:pathData="M45,46 C46,50 50,50 51,46 Z" />
+</vector>

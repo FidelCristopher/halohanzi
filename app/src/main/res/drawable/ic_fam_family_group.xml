@@ -1,0 +1,48 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Warm Peach Amber) -->
+    <path
+        android:fillColor="#FEF3C7"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Father (Left) Body -->
+    <path
+        android:fillColor="#0284C7"
+        android:pathData="M16,80 C16,66 22,58 32,58 C38,58 42,61 45,65 C41,71 39,76 32,77 L32,80 Z" />
+    <path
+        android:fillColor="#FFD1A4"
+        android:pathData="M30,36 A10,10 0 1,0 30,56 A10,10 0 1,0 30,36 Z" />
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="M22,40 C22,30 26,26 31,26 C36,26 40,30 40,36 C37,34 34,34 31,35 C28,36 25,37 22,40 Z" />
+
+    <!-- Mother (Right) Body -->
+    <path
+        android:fillColor="#F43F5E"
+        android:pathData="M80,80 C80,66 74,58 64,58 C58,58 54,61 51,65 C55,71 57,76 64,77 L64,80 Z" />
+    <path
+        android:fillColor="#FFD1A4"
+        android:pathData="M66,36 A10,10 0 1,0 66,56 A10,10 0 1,0 66,36 Z" />
+    <path
+        android:fillColor="#4A2810"
+        android:pathData="M58,40 C58,30 62,26 67,26 C72,26 76,30 76,36 C73,34 70,34 67,35 C64,36 61,37 58,40 Z" />
+
+    <!-- Little Child (Center Foreground) Body -->
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M38,82 C38,72 43,68 48,68 C53,68 58,72 58,82 Z" />
+    <path
+        android:fillColor="#FFD1A4"
+        android:pathData="M48,48 A8,8 0 1,0 48,64 A8,8 0 1,0 48,48 Z" />
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="M41,52 C41,45 44,43 48,43 C52,43 55,45 55,52 C53,50 51,50 48,51 C45,52 43,52 41,52 Z" />
+
+    <!-- Little Love Heart Above Family -->
+    <path
+        android:fillColor="#E11D48"
+        android:pathData="M48,22 C48,19 46,18 44.5,18 C43,18 42,19 42,20.5 C42,23 48,26 48,26 C48,26 54,23 54,20.5 C54,19 53,18 51.5,18 C50,18 48,19 48,22 Z" />
+</vector>

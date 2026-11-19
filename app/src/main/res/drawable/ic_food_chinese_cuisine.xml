@@ -1,0 +1,62 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Lucky Crimson Red) -->
+    <path
+        android:fillColor="#FEF2F2"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Traditional Chinese Red Rim Porcelain Bowl -->
+    <path
+        android:fillColor="#B91C1C"
+        android:pathData="M22,46 C22,64 34,74 48,74 C62,74 74,64 74,46 Z" />
+    <path
+        android:fillColor="#DC2626"
+        android:pathData="M24,47 C24,62 34,72 48,72 C62,72 72,62 72,47 Z" />
+    <!-- Bowl Base Foot -->
+    <path
+        android:fillColor="#7F1D1D"
+        android:pathData="M38,72 L58,72 L56,78 L40,78 Z" />
+
+    <!-- Golden Traditional Pattern Strip along Bowl -->
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M26,50 L70,50 L70,53 L26,53 Z" />
+
+    <!-- Sizzling Stir-Fried Chinese Delicacy: Gongbao Chicken & Veggies -->
+    <!-- Rich Golden Sauce / Stirfry Base -->
+    <path
+        android:fillColor="#D97706"
+        android:pathData="M48,40 C61,40 72,43 72,47 C72,51 61,54 48,54 C35,54 24,51 24,47 C24,43 35,40 48,40 Z" />
+
+    <!-- Chinese Red Chili Peppers (Iconic Sichuan/Chinese culinary element) -->
+    <path
+        android:fillColor="#EF4444"
+        android:pathData="M38,36 C34,36 32,42 36,44 C40,46 44,40 42,37 Z" />
+    <path
+        android:fillColor="#15803D"
+        android:pathData="M42,37 L45,34 L43,33 Z" />
+
+    <!-- Bok Choy Greens (Green Veggie) -->
+    <path
+        android:fillColor="#16A34A"
+        android:pathData="M52,36 C56,34 62,38 60,44 C56,46 50,42 52,36 Z" />
+    <path
+        android:fillColor="#4ADE80"
+        android:pathData="M54,37 C56,36 60,39 59,42 C56,43 53,41 54,37 Z" />
+
+    <!-- Sautéed Meat Cubes / Golden Tofu -->
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M44,44 L50,44 L50,49 L44,49 Z M54,44 L60,44 L60,49 L54,49 Z" />
+
+    <!-- Rising Hot Sizzling Aromas -->
+    <path
+        android:fillColor="#F87171"
+        android:pathData="M42,16 C40,20 44,24 42,28 L39,28 C41,24 37,20 39,16 Z" />
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M52,14 C50,19 54,23 52,28 L49,28 C51,23 47,19 49,14 Z" />
+</vector>

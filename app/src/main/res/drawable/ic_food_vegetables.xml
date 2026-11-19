@@ -1,0 +1,50 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Soft Mint Green) -->
+    <path
+        android:fillColor="#ECFDF5"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Salad Bowl Base Foot -->
+    <path
+        android:fillColor="#047857"
+        android:pathData="M38,72 L58,72 L56,78 L40,78 Z" />
+
+    <!-- Salad Bowl Body (Clean Ivory) -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M22,46 C22,64 34,74 48,74 C62,74 74,64 74,46 Z" />
+    <path
+        android:fillColor="#F0FDF4"
+        android:pathData="M24,47 C24,62 34,72 48,72 C62,72 72,62 72,47 Z" />
+
+    <!-- Fresh Crisp Lettuce Greens Overflowing Bowl -->
+    <path
+        android:fillColor="#15803D"
+        android:pathData="M26,44 C22,34 32,24 40,30 C46,22 56,22 60,30 C68,26 76,34 70,44 Z" />
+    <path
+        android:fillColor="#22C55E"
+        android:pathData="M28,45 C25,37 34,28 41,33 C46,26 55,26 58,33 C65,29 72,36 67,45 Z" />
+    <path
+        android:fillColor="#4ADE80"
+        android:pathData="M34,44 C34,36 42,32 46,38 C50,32 58,36 58,44 Z" />
+
+    <!-- Bright Red Tomato Wedge -->
+    <path
+        android:fillColor="#EF4444"
+        android:pathData="M38,42 C38,36 44,34 50,38 C48,44 42,46 38,42 Z" />
+    <path
+        android:fillColor="#F87171"
+        android:pathData="M40,41 C40,38 44,36 48,39 C46,43 42,44 40,41 Z" />
+
+    <!-- Carrot Slices (Orange Discs) -->
+    <path
+        android:fillColor="#EA580C"
+        android:pathData="M58,38 A4,4 0 1,0 58,46 A4,4 0 1,0 58,38 Z M48,46 A3,3 0 1,0 48,52 A3,3 0 1,0 48,46 Z" />
+    <path
+        android:fillColor="#FDBA74"
+        android:pathData="M58,40 A2,2 0 1,0 58,44 A2,2 0 1,0 58,40 Z" />
+</vector>

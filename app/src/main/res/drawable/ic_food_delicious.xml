@@ -1,0 +1,50 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Bright Orange Sunset) -->
+    <path
+        android:fillColor="#FFF7ED"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Big Happy Round Face Base -->
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M48,18 A30,30 0 1,0 48,78 A30,30 0 1,0 48,18 Z" />
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M48,21 A27,27 0 1,0 48,75 A27,27 0 1,0 48,21 Z" />
+
+    <!-- Delighted Closed Smiling Eyes (Arch curves ^^) -->
+    <path
+        android:fillColor="#78350F"
+        android:pathData="M34,38 C36,33 42,33 44,38 L41,39 C40,36 38,36 37,39 Z M52,38 C54,33 60,33 62,38 L59,39 C58,36 56,36 55,39 Z" />
+
+    <!-- Rosy Blushing Cheeks -->
+    <path
+        android:fillColor="#F43F5E"
+        android:pathData="M32,46 A5,4 0 1,0 32,54 A5,4 0 1,0 32,46 Z M64,46 A5,4 0 1,0 64,54 A5,4 0 1,0 64,46 Z" />
+
+    <!-- Big Savory Smile -->
+    <path
+        android:fillColor="#78350F"
+        android:pathData="M36,48 C36,60 60,60 60,48 Z" />
+    <!-- White Teeth -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M38,48 L58,48 C57,51 55,52 48,52 C41,52 39,51 38,48 Z" />
+
+    <!-- Cute Tongue Licking Lips (Yum!) -->
+    <path
+        android:fillColor="#EF4444"
+        android:pathData="M50,52 C50,58 56,64 62,60 C66,56 62,50 56,52 Z" />
+    <path
+        android:fillColor="#FDA4AF"
+        android:pathData="M52,53 C52,57 56,61 60,58 C62,56 60,52 56,53 Z" />
+
+    <!-- Golden Sparkles in Corner -->
+    <path
+        android:fillColor="#EA580C"
+        android:pathData="M74,16 L76,20 L80,20 L77,22 L78,26 L74,24 L70,26 L71,22 L68,20 L72,20 Z" />
+</vector>

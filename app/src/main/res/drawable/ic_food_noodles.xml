@@ -1,0 +1,51 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Soft Amber Tangerine) -->
+    <path
+        android:fillColor="#FFF7ED"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Noodle Bowl Base Foot -->
+    <path
+        android:fillColor="#0F172A"
+        android:pathData="M38,72 L58,72 L56,78 L40,78 Z" />
+
+    <!-- Deep Blue Ceramic Bowl Body -->
+    <path
+        android:fillColor="#1E3A8A"
+        android:pathData="M22,46 C22,64 34,74 48,74 C62,74 74,64 74,46 Z" />
+    <path
+        android:fillColor="#1E40AF"
+        android:pathData="M24,47 C24,62 34,72 48,72 C62,72 72,62 72,47 Z" />
+
+    <!-- Savory Golden Broth Surface -->
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M48,42 C61,42 72,44 72,47 C72,50 61,52 48,52 C35,52 24,50 24,47 C24,44 35,42 48,42 Z" />
+
+    <!-- Swirling Noodles in Bowl -->
+    <path
+        android:fillColor="#FDE047"
+        android:pathData="M32,47 C36,52 44,52 48,48 C52,52 60,52 64,47 L62,45 C58,50 52,50 48,46 C44,50 36,50 34,45 Z" />
+
+    <!-- Chopsticks in Mid-Air Lifting Noodles (Left to Right) -->
+    <path
+        android:fillColor="#92400E"
+        android:pathData="M36,20 L76,14 L77,17 L37,23 Z M38,24 L78,21 L78,24 L38,27 Z" />
+
+    <!-- Steaming Hot Lifted Noodles Hanging from Chopsticks -->
+    <path
+        android:fillColor="#FDE047"
+        android:pathData="M48,22 C46,28 50,34 46,46 L49,46 C53,34 49,28 51,22 Z M53,22 C51,28 55,34 52,46 L55,46 C58,34 54,28 56,22 Z" />
+
+    <!-- Boiled Egg Half Topping in Bowl -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M29,48 A6,6 0 1,0 29,60 A6,6 0 1,0 29,48 Z" />
+    <path
+        android:fillColor="#EA580C"
+        android:pathData="M30,51 A3.5,3.5 0 1,0 30,58 A3.5,3.5 0 1,0 30,51 Z" />
+</vector>

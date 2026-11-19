@@ -1,0 +1,47 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Soft Cyan Blue) -->
+    <path
+        android:fillColor="#E0F2FE"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Room Floor (Soft Wood Planks) -->
+    <path
+        android:fillColor="#FDE68A"
+        android:pathData="M16,68 L80,68 L80,78 C80,80.2 78.2,82 76,82 L20,82 C17.8,82 16,80.2 16,78 Z" />
+    <path
+        android:fillColor="#D97706"
+        android:pathData="M16,68 L80,68 L80,70 L16,70 Z" />
+
+    <!-- Open Room Doorway Frame -->
+    <path
+        android:fillColor="#0284C7"
+        android:pathData="M26,20 L66,20 C68.2,20 70,21.8 70,24 L70,68 L22,68 L22,24 C22,21.8 23.8,20 26,20 Z" />
+    <!-- Interior Warm Room Glow (Yellow Warmth Inside) -->
+    <path
+        android:fillColor="#FEF08A"
+        android:pathData="M28,26 L64,26 L64,68 L28,68 Z" />
+
+    <!-- Ajar Wooden Door (Open into room) -->
+    <path
+        android:fillColor="#B45309"
+        android:pathData="M28,26 L52,32 L52,68 L28,68 Z" />
+    <path
+        android:fillColor="#92400E"
+        android:pathData="M29,28 L50,33.5 L50,66 L29,66 Z" />
+    <!-- Door Knob -->
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M46,50 A2,2 0 1,0 46,54 A2,2 0 1,0 46,50 Z" />
+
+    <!-- Cozy Nightstand Lamp Glowing in Room Interior -->
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M56,44 L62,44 L60,40 L58,40 Z" />
+    <path
+        android:fillColor="#D97706"
+        android:pathData="M59,44 L59,52 L57,52 L57,54 L61,54 L61,52 L59,52 Z" />
+</vector>

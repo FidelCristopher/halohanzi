@@ -1,0 +1,45 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Soft Mint Emerald) -->
+    <path
+        android:fillColor="#ECFDF5"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Chair Backrest (Vertical Spindles & Curved Top) -->
+    <path
+        android:fillColor="#047857"
+        android:pathData="M32,22 L64,22 C66.2,22 68,23.8 68,26 L68,30 C68,31.1 67.1,32 66,32 L30,32 C28.9,32 28,31.1 28,30 L28,26 C28,23.8 29.8,22 32,22 Z" />
+    <!-- Backrest Vertical Slats -->
+    <path
+        android:fillColor="#059669"
+        android:pathData="M32,32 L36,32 L36,52 L32,52 Z M46,32 L50,32 L50,52 L46,52 Z M60,32 L64,32 L64,52 L60,52 Z" />
+
+    <!-- Chair Seat Cushion (Comfortable Emerald Green / Foam) -->
+    <path
+        android:fillColor="#10B981"
+        android:pathData="M26,52 L70,52 C72.2,52 74,53.8 74,56 L74,60 C74,61.1 73.1,62 72,62 L24,62 C22.9,62 22,61.1 22,60 L22,56 C22,53.8 23.8,52 26,52 Z" />
+    <path
+        android:fillColor="#34D399"
+        android:pathData="M26,53 L70,53 C71.5,53 72,54 72,55 L24,55 C24,54 24.5,53 26,53 Z" />
+
+    <!-- Chair Legs -->
+    <!-- Front Left -->
+    <path
+        android:fillColor="#047857"
+        android:pathData="M26,62 L30,62 L28,82 L24,82 Z" />
+    <!-- Back Left -->
+    <path
+        android:fillColor="#065F46"
+        android:pathData="M34,62 L38,62 L37,76 L33,76 Z" />
+    <!-- Back Right -->
+    <path
+        android:fillColor="#065F46"
+        android:pathData="M58,62 L62,62 L61,76 L57,76 Z" />
+    <!-- Front Right -->
+    <path
+        android:fillColor="#047857"
+        android:pathData="M66,62 L70,62 L72,82 L68,82 Z" />
+</vector>

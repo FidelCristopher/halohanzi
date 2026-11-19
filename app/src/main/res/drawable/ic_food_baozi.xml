@@ -1,0 +1,45 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Soft Amber Cream) -->
+    <path
+        android:fillColor="#FEF3C7"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Bamboo Steamer Basket Base (Brown Slats) -->
+    <path
+        android:fillColor="#B45309"
+        android:pathData="M16,64 L80,64 L76,78 C76,80.2 74.2,82 72,82 L24,82 C21.8,82 20,80.2 20,78 Z" />
+    <path
+        android:fillColor="#D97706"
+        android:pathData="M18,66 L78,66 L75,76 L21,76 Z" />
+    <!-- Steamer Bamboo Weave Stripes -->
+    <path
+        android:fillColor="#92400E"
+        android:pathData="M32,66 L35,66 L35,76 L32,76 Z M47,66 L50,66 L50,76 L47,76 Z M62,66 L65,66 L65,76 L62,76 Z" />
+
+    <!-- Steaming White Baozi Dumpling Body (Plump & Fluffy) -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M24,64 C24,44 34,32 48,32 C62,32 72,44 72,64 Z" />
+    <path
+        android:fillColor="#F8FAFC"
+        android:pathData="M26,63 C26,46 35,34 48,34 C61,34 70,46 70,63 Z" />
+
+    <!-- Baozi Top Pinched Pleats (Traditional Crown Swirl) -->
+    <path
+        android:fillColor="#CBD5E1"
+        android:pathData="M48,32 C45,36 44,42 44,44 L46,44 C46,41 47,36 48,34 Z M48,32 C51,36 52,42 52,44 L50,44 C50,41 49,36 48,34 Z M48,32 C48,36 48,42 48,46 L47,46 C47,42 47,36 48,32 Z M48,32 C43,34 38,38 36,44 L38,44 C40,39 44,35 48,34 Z M48,32 C53,34 58,38 60,44 L58,44 C56,39 52,35 48,34 Z" />
+
+    <!-- Cute Red Bean Dot on Baozi Center (Authentic Chinese Baozi mark) -->
+    <path
+        android:fillColor="#DC2626"
+        android:pathData="M48,43 A2.5,2.5 0 1,0 48,48 A2.5,2.5 0 1,0 48,43 Z" />
+
+    <!-- Rising Hot Steamer Vapor -->
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M40,16 C38,20 42,24 40,28 L38,28 C40,24 36,20 38,16 Z M56,16 C54,20 58,24 56,28 L54,28 C56,24 52,20 54,16 Z" />
+</vector>

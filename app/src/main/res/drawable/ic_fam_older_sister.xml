@@ -1,0 +1,44 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Soft Violet / Lavender) -->
+    <path
+        android:fillColor="#F3E8FF"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Cute Side Ponytail (Left Side) -->
+    <path
+        android:fillColor="#3B1E08"
+        android:pathData="M24,28 C20,32 18,38 20,44 C22,50 26,48 27,42 C28,36 26,30 24,28 Z" />
+    <path
+        android:fillColor="#A855F7"
+        android:pathData="M26,34 A3,3 0 1,0 26,40 A3,3 0 1,0 26,34 Z" />
+
+    <!-- Torso / Violet Sweater -->
+    <path
+        android:fillColor="#7C3AED"
+        android:pathData="M26,82 C26,67 34,58 48,58 C62,58 70,67 70,82 Z" />
+    <path
+        android:fillColor="#E9D5FF"
+        android:pathData="M44,58 L48,64 L52,58 Z" />
+
+    <!-- Head / Face -->
+    <path
+        android:fillColor="#FFD1A4"
+        android:pathData="M48,26 A16,16 0 1,0 48,58 A16,16 0 1,0 48,26 Z" />
+    <!-- Hair with Cute Bangs -->
+    <path
+        android:fillColor="#4A2810"
+        android:pathData="M32,30 C32,18 40,16 48,16 C56,16 64,18 64,30 C60,26 55,26 50,28 C45,30 38,30 32,30 Z M63,30 L61,42 L59,38 L60,30 Z" />
+
+    <!-- Big Sparkling Eyes -->
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="M40,38 C41,36 43,36 44,38 Z M52,38 C53,36 55,36 56,38 Z" />
+    <!-- Cheerful Sister Smile -->
+    <path
+        android:fillColor="#E11D48"
+        android:pathData="M45,46 C46,50 50,50 51,46 Z" />
+</vector>

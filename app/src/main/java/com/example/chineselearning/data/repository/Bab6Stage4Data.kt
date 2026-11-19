@@ -18,10 +18,10 @@ val bab6Stage4Part1Exercises = listOf(
         correctAnswer = "kamar / ruangan",
         audioToSpeak = "房间",
         pictureOptions = listOf(
-            PictureOption("u6_s4_p1_opt1", "kamar / ruangan", "🚪", R.drawable.ic_book, true),
-            PictureOption("u6_s4_p1_opt2", "meja", "🪑", R.drawable.ic_crown, false),
-            PictureOption("u6_s4_p1_opt3", "buku", "📖", R.drawable.ic_story_timer, false),
-            PictureOption("u6_s4_p1_opt4", "uang", "🪙", R.drawable.ic_coin, false)
+            PictureOption("u6_s4_p1_opt1", "kamar / ruangan", "", R.drawable.ic_fam_room, true),
+            PictureOption("u6_s4_p1_opt2", "meja", "", R.drawable.ic_fam_table, false),
+            PictureOption("u6_s4_p1_opt3", "kursi", "", R.drawable.ic_fam_chair, false),
+            PictureOption("u6_s4_p1_opt4", "rumah", "", R.drawable.ic_fam_home, false)
         )
     ),
 
@@ -108,10 +108,10 @@ val bab6Stage4Part1Exercises = listOf(
         correctAnswer = "meja",
         audioToSpeak = "桌子",
         pictureOptions = listOf(
-            PictureOption("u6_s4_p1_opt7_1", "meja", "🪵", R.drawable.ic_book, true),
-            PictureOption("u6_s4_p1_opt7_2", "kursi", "🪑", R.drawable.ic_story_timer, false),
-            PictureOption("u6_s4_p1_opt7_3", "pintu", "🚪", R.drawable.ic_target, false),
-            PictureOption("u6_s4_p1_opt7_4", "uang", "🪙", R.drawable.ic_coin, false)
+            PictureOption("u6_s4_p1_opt7_1", "meja", "", R.drawable.ic_fam_table, true),
+            PictureOption("u6_s4_p1_opt7_2", "kursi", "", R.drawable.ic_fam_chair, false),
+            PictureOption("u6_s4_p1_opt7_3", "kamar", "", R.drawable.ic_fam_room, false),
+            PictureOption("u6_s4_p1_opt7_4", "rumah", "", R.drawable.ic_fam_home, false)
         )
     ),
 
@@ -169,10 +169,10 @@ val bab6Stage4Part2Exercises = listOf(
         correctAnswer = "kursi",
         audioToSpeak = "椅子",
         pictureOptions = listOf(
-            PictureOption("u6_s4_p2_opt1", "kursi", "🪑", R.drawable.ic_book, true),
-            PictureOption("u6_s4_p2_opt2", "meja", "🪵", R.drawable.ic_story_timer, false),
-            PictureOption("u6_s4_p2_opt3", "kamar", "🚪", R.drawable.ic_target, false),
-            PictureOption("u6_s4_p2_opt4", "buku", "📖", R.drawable.ic_crown, false)
+            PictureOption("u6_s4_p2_opt1", "kursi", "", R.drawable.ic_fam_chair, true),
+            PictureOption("u6_s4_p2_opt2", "meja", "", R.drawable.ic_fam_table, false),
+            PictureOption("u6_s4_p2_opt3", "kamar", "", R.drawable.ic_fam_room, false),
+            PictureOption("u6_s4_p2_opt4", "rumah", "", R.drawable.ic_fam_home, false)
         )
     ),
 
@@ -259,10 +259,10 @@ val bab6Stage4Part2Exercises = listOf(
         correctAnswer = "duduk",
         audioToSpeak = "坐",
         pictureOptions = listOf(
-            PictureOption("u6_s4_p2_opt7_1", "duduk", "🪑", R.drawable.ic_book, true),
-            PictureOption("u6_s4_p2_opt7_2", "berdiri", "🚶", R.drawable.ic_target, false),
-            PictureOption("u6_s4_p2_opt7_3", "tidur", "🛌", R.drawable.ic_story_timer, false),
-            PictureOption("u6_s4_p2_opt7_4", "makan", "🍜", R.drawable.ic_coin, false)
+            PictureOption("u6_s4_p2_opt7_1", "duduk", "", R.drawable.ic_fam_sit, true),
+            PictureOption("u6_s4_p2_opt7_2", "tidur", "", R.drawable.ic_action_sleep, false),
+            PictureOption("u6_s4_p2_opt7_3", "beristirahat", "", R.drawable.ic_action_rest, false),
+            PictureOption("u6_s4_p2_opt7_4", "makan", "", R.drawable.ic_action_eat, false)
         )
     ),
 

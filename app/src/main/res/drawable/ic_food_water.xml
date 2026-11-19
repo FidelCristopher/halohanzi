@@ -1,0 +1,29 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Cyan Mint Sky) -->
+    <path
+        android:fillColor="#ECFEFF"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Pure Water Droplet Shape (Big Central Drop) -->
+    <path
+        android:fillColor="#0284C7"
+        android:pathData="M48,16 C48,16 68,44 68,58 C68,69 59,78 48,78 C37,78 28,69 28,58 C28,44 48,16 48,16 Z" />
+    <path
+        android:fillColor="#0EA5E9"
+        android:pathData="M48,20 C48,20 65,46 65,58 C65,67.4 57.4,75 48,75 C38.6,75 31,67.4 31,58 C31,46 48,20 48,20 Z" />
+    <path
+        android:fillColor="#38BDF8"
+        android:pathData="M48,24 C48,24 62,48 62,58 C62,65.7 55.7,72 48,72 C40.3,72 34,65.7 34,58 C34,48 48,24 48,24 Z" />
+
+    <!-- Pure Water Reflection Curvature -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M38,48 C36,53 38,62 43,66 C41,64 39,58 40,52 C41,47 44,43 44,43 C44,43 39,44 38,48 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M42,34 A3,3 0 1,0 42,40 A3,3 0 1,0 42,34 Z" />
+</vector>

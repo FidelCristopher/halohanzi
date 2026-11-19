@@ -1,0 +1,41 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Soft Amber Tangerine) -->
+    <path
+        android:fillColor="#FFF7ED"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Round Dining Plate in Center -->
+    <path
+        android:fillColor="#E2E8F0"
+        android:pathData="M48,22 A28,28 0 1,0 48,78 A28,28 0 1,0 48,22 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M48,25 A25,25 0 1,0 48,75 A25,25 0 1,0 48,25 Z" />
+    <path
+        android:fillColor="#F8FAFC"
+        android:pathData="M48,30 A20,20 0 1,0 48,70 A20,20 0 1,0 48,30 Z" />
+
+    <!-- Crossed Fork and Spoon inside / across plate -->
+    <!-- Fork (Left to Right Diagonal) -->
+    <path
+        android:fillColor="#0284C7"
+        android:pathData="M32,24 L36,24 L38,36 C38,40 36,44 32,48 L60,76 L56,80 L28,52 C24,48 24,40 28,36 Z" />
+    <!-- Fork Prongs Detail -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M31,24 L32,24 L32,32 L31,32 Z M34,24 L35,24 L35,32 L34,32 Z" />
+
+    <!-- Spoon (Right to Left Diagonal) -->
+    <path
+        android:fillColor="#EA580C"
+        android:pathData="M64,24 C68,24 72,28 72,34 C72,40 68,44 64,48 L36,76 L40,80 L68,52 C72,48 76,40 76,34 C76,26 68,22 62,22 Z" />
+
+    <!-- Appetite Star / Heart in Center -->
+    <path
+        android:fillColor="#EF4444"
+        android:pathData="M48,46 C48,43 45,41 43.5,41 C42,41 41,42 41,43.5 C41,46 48,50 48,50 C48,50 55,46 55,43.5 C55,42 54,41 52.5,41 C51,41 48,43 48,46 Z" />
+</vector>

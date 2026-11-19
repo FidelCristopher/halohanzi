@@ -1,0 +1,42 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Soft Yellow) -->
+    <path
+        android:fillColor="#FEF3C7"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Torso / Green Cute T-Shirt -->
+    <path
+        android:fillColor="#10B981"
+        android:pathData="M30,82 C30,70 37,64 48,64 C59,64 66,70 66,82 Z" />
+    <path
+        android:fillColor="#6EE7B7"
+        android:pathData="M44,64 L48,70 L52,64 Z" />
+
+    <!-- Head / Round Child Face -->
+    <path
+        android:fillColor="#FFD1A4"
+        android:pathData="M48,34 A14,14 0 1,0 48,62 A14,14 0 1,0 48,34 Z" />
+    <!-- Child's Cute Tuft Hair -->
+    <path
+        android:fillColor="#334155"
+        android:pathData="M34,36 C34,24 40,22 48,22 C56,22 62,24 62,36 C58,32 54,32 50,34 C46,36 40,36 34,36 Z M48,16 C46,19 46,22 48,22 C50,22 50,19 48,16 Z" />
+
+    <!-- Rosy Cheeks -->
+    <path
+        android:fillColor="#FDA4AF"
+        android:pathData="M39,48 A3,3 0 1,0 39,54 A3,3 0 1,0 39,48 Z M57,48 A3,3 0 1,0 57,54 A3,3 0 1,0 57,48 Z" />
+
+    <!-- Big Eyes -->
+    <path
+        android:fillColor="#0F172A"
+        android:pathData="M42,42 A2.5,2.5 0 1,0 42,47 A2.5,2.5 0 1,0 42,42 Z M54,42 A2.5,2.5 0 1,0 54,47 A2.5,2.5 0 1,0 54,42 Z" />
+
+    <!-- Big Playful Smile -->
+    <path
+        android:fillColor="#E11D48"
+        android:pathData="M44,50 C45,56 51,56 52,50 Z" />
+</vector>

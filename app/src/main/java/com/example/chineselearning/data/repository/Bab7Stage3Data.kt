@@ -18,10 +18,10 @@ val bab7Stage3Part1Exercises = listOf(
         correctAnswer = "bakpao",
         audioToSpeak = "包子",
         pictureOptions = listOf(
-            PictureOption("u7_s3_p1_opt1", "bakpao", "🥟", R.drawable.ic_coin, true),
-            PictureOption("u7_s3_p1_opt2", "mie", "🍜", R.drawable.ic_target, false),
-            PictureOption("u7_s3_p1_opt3", "roti", "🍞", R.drawable.ic_book, false),
-            PictureOption("u7_s3_p1_opt4", "teh", "🍵", R.drawable.ic_crown, false)
+            PictureOption("u7_s3_p1_opt1", "bakpao", "", R.drawable.ic_food_baozi, true),
+            PictureOption("u7_s3_p1_opt2", "mie", "", R.drawable.ic_food_noodles, false),
+            PictureOption("u7_s3_p1_opt3", "roti", "", R.drawable.ic_food_bread, false),
+            PictureOption("u7_s3_p1_opt4", "teh", "", R.drawable.ic_food_tea, false)
         )
     ),
 
@@ -108,10 +108,10 @@ val bab7Stage3Part1Exercises = listOf(
         correctAnswer = "pangsit",
         audioToSpeak = "饺子",
         pictureOptions = listOf(
-            PictureOption("u7_s3_p1_opt7_1", "pangsit", "🥟", R.drawable.ic_coin, true),
-            PictureOption("u7_s3_p1_opt7_2", "nasi", "🍚", R.drawable.ic_target, false),
-            PictureOption("u7_s3_p1_opt7_3", "mie", "🍜", R.drawable.ic_book, false),
-            PictureOption("u7_s3_p1_opt7_4", "roti", "🍞", R.drawable.ic_crown, false)
+            PictureOption("u7_s3_p1_opt7_1", "pangsit", "", R.drawable.ic_food_dumpling, true),
+            PictureOption("u7_s3_p1_opt7_2", "nasi putih", "", R.drawable.ic_food_rice, false),
+            PictureOption("u7_s3_p1_opt7_3", "mie", "", R.drawable.ic_food_noodles, false),
+            PictureOption("u7_s3_p1_opt7_4", "bakpao", "", R.drawable.ic_food_baozi, false)
         )
     ),
 
@@ -169,10 +169,10 @@ val bab7Stage3Part2Exercises = listOf(
         correctAnswer = "telur",
         audioToSpeak = "鸡蛋",
         pictureOptions = listOf(
-            PictureOption("u7_s3_p2_opt1", "telur", "🥚", R.drawable.ic_coin, true),
-            PictureOption("u7_s3_p2_opt2", "apel", "🍎", R.drawable.ic_book, false),
-            PictureOption("u7_s3_p2_opt3", "roti", "🍞", R.drawable.ic_target, false),
-            PictureOption("u7_s3_p2_opt4", "teh", "🍵", R.drawable.ic_crown, false)
+            PictureOption("u7_s3_p2_opt1", "telur", "", R.drawable.ic_food_egg, true),
+            PictureOption("u7_s3_p2_opt2", "apel", "", R.drawable.ic_food_apple, false),
+            PictureOption("u7_s3_p2_opt3", "roti", "", R.drawable.ic_food_bread, false),
+            PictureOption("u7_s3_p2_opt4", "teh", "", R.drawable.ic_food_tea, false)
         )
     ),
 
@@ -259,10 +259,10 @@ val bab7Stage3Part2Exercises = listOf(
         correctAnswer = "enak / lezat",
         audioToSpeak = "好吃",
         pictureOptions = listOf(
-            PictureOption("u7_s3_p2_opt7_1", "enak / lezat", "😋", R.drawable.ic_coin, true),
-            PictureOption("u7_s3_p2_opt7_2", "tidak enak", "😖", R.drawable.ic_target, false),
-            PictureOption("u7_s3_p2_opt7_3", "minum", "🍵", R.drawable.ic_crown, false),
-            PictureOption("u7_s3_p2_opt7_4", "tidur", "🛌", R.drawable.ic_book, false)
+            PictureOption("u7_s3_p2_opt7_1", "enak / lezat", "", R.drawable.ic_food_delicious, true),
+            PictureOption("u7_s3_p2_opt7_2", "roti", "", R.drawable.ic_food_bread, false),
+            PictureOption("u7_s3_p2_opt7_3", "minum", "", R.drawable.ic_action_drink, false),
+            PictureOption("u7_s3_p2_opt7_4", "tidur", "", R.drawable.ic_action_sleep, false)
         )
     ),
 

@@ -18,10 +18,10 @@ val bab7Stage5Part1Exercises = listOf(
         correctAnswer = "restoran",
         audioToSpeak = "饭店",
         pictureOptions = listOf(
-            PictureOption("u7_s5_p1_opt1", "restoran", "🏪", R.drawable.ic_coin, true),
-            PictureOption("u7_s5_p1_opt2", "sekolah", "🏫", R.drawable.ic_cap, false),
-            PictureOption("u7_s5_p1_opt3", "rumah", "🏠", R.drawable.ic_people_group, false),
-            PictureOption("u7_s5_p1_opt4", "kamar", "🚪", R.drawable.ic_book, false)
+            PictureOption("u7_s5_p1_opt1", "restoran", "", R.drawable.ic_food_restaurant, true),
+            PictureOption("u7_s5_p1_opt2", "rumah", "", R.drawable.ic_fam_home, false),
+            PictureOption("u7_s5_p1_opt3", "kamar", "", R.drawable.ic_fam_room, false),
+            PictureOption("u7_s5_p1_opt4", "kursi", "", R.drawable.ic_fam_chair, false)
         )
     ),
 
@@ -108,10 +108,10 @@ val bab7Stage5Part1Exercises = listOf(
         correctAnswer = "restoran",
         audioToSpeak = "饭店",
         pictureOptions = listOf(
-            PictureOption("u7_s5_p1_opt7_1", "restoran", "🏪", R.drawable.ic_coin, true),
-            PictureOption("u7_s5_p1_opt7_2", "buku", "📖", R.drawable.ic_book, false),
-            PictureOption("u7_s5_p1_opt7_3", "rumah", "🏠", R.drawable.ic_people_group, false),
-            PictureOption("u7_s5_p1_opt7_4", "sekolah", "🏫", R.drawable.ic_cap, false)
+            PictureOption("u7_s5_p1_opt7_1", "restoran", "", R.drawable.ic_food_restaurant, true),
+            PictureOption("u7_s5_p1_opt7_2", "rumah", "", R.drawable.ic_fam_home, false),
+            PictureOption("u7_s5_p1_opt7_3", "kamar", "", R.drawable.ic_fam_room, false),
+            PictureOption("u7_s5_p1_opt7_4", "meja", "", R.drawable.ic_fam_table, false)
         )
     ),
 
@@ -169,10 +169,10 @@ val bab7Stage5Part2Exercises = listOf(
         correctAnswer = "ingin makan",
         audioToSpeak = "想吃",
         pictureOptions = listOf(
-            PictureOption("u7_s5_p2_opt1", "ingin makan", "🍽️", R.drawable.ic_coin, true),
-            PictureOption("u7_s5_p2_opt2", "tidur", "🛌", R.drawable.ic_book, false),
-            PictureOption("u7_s5_p2_opt3", "minum", "🍵", R.drawable.ic_crown, false),
-            PictureOption("u7_s5_p2_opt4", "lari", "🏃", R.drawable.ic_dumbbell, false)
+            PictureOption("u7_s5_p2_opt1", "ingin makan", "", R.drawable.ic_food_want_to_eat, true),
+            PictureOption("u7_s5_p2_opt2", "tidur", "", R.drawable.ic_action_sleep, false),
+            PictureOption("u7_s5_p2_opt3", "minum", "", R.drawable.ic_action_drink, false),
+            PictureOption("u7_s5_p2_opt4", "beristirahat", "", R.drawable.ic_action_rest, false)
         )
     ),
 
@@ -259,10 +259,10 @@ val bab7Stage5Part2Exercises = listOf(
         correctAnswer = "berapa harganya",
         audioToSpeak = "多少钱",
         pictureOptions = listOf(
-            PictureOption("u7_s5_p2_opt7_1", "berapa harganya", "💰", R.drawable.ic_coin, true),
-            PictureOption("u7_s5_p2_opt7_2", "berapa orang", "👥", R.drawable.ic_people_group, false),
-            PictureOption("u7_s5_p2_opt7_3", "jam berapa", "⏰", R.drawable.ic_story_timer, false),
-            PictureOption("u7_s5_p2_opt7_4", "di mana", "📍", R.drawable.ic_target, false)
+            PictureOption("u7_s5_p2_opt7_1", "berapa harganya", "", R.drawable.ic_price_tag, true),
+            PictureOption("u7_s5_p2_opt7_2", "berapa orang", "", R.drawable.ic_two_friends, false),
+            PictureOption("u7_s5_p2_opt7_3", "jam berapa", "", R.drawable.ic_clock_analog, false),
+            PictureOption("u7_s5_p2_opt7_4", "kapan", "", R.drawable.ic_question_when, false)
         )
     ),
 

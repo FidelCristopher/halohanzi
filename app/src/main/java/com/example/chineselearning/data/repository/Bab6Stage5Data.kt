@@ -18,10 +18,10 @@ val bab6Stage5Part1Exercises = listOf(
         correctAnswer = "tahun (umur)",
         audioToSpeak = "岁",
         pictureOptions = listOf(
-            PictureOption("u6_s5_p1_opt1", "tahun (umur)", "🎂", R.drawable.ic_crown, true),
-            PictureOption("u6_s5_p1_opt2", "jam", "⏰", R.drawable.ic_story_timer, false),
-            PictureOption("u6_s5_p1_opt3", "uang", "🪙", R.drawable.ic_coin, false),
-            PictureOption("u6_s5_p1_opt4", "buku", "📖", R.drawable.ic_book, false)
+            PictureOption("u6_s5_p1_opt1", "tahun (umur)", "", R.drawable.ic_birthday_cake, true),
+            PictureOption("u6_s5_p1_opt2", "jam", "", R.drawable.ic_clock_analog, false),
+            PictureOption("u6_s5_p1_opt3", "uang", "", R.drawable.ic_yuan_currency, false),
+            PictureOption("u6_s5_p1_opt4", "buku", "", R.drawable.ic_book_chinese, false)
         )
     ),
 
@@ -108,10 +108,10 @@ val bab6Stage5Part1Exercises = listOf(
         correctAnswer = "berapa umur",
         audioToSpeak = "多大",
         pictureOptions = listOf(
-            PictureOption("u6_s5_p1_opt7_1", "berapa umur", "🎂", R.drawable.ic_crown, true),
-            PictureOption("u6_s5_p1_opt7_2", "berapa harga", "💰", R.drawable.ic_coin, false),
-            PictureOption("u6_s5_p1_opt7_3", "kapan", "⏰", R.drawable.ic_story_timer, false),
-            PictureOption("u6_s5_p1_opt7_4", "siapa", "👤", R.drawable.ic_person_guru, false)
+            PictureOption("u6_s5_p1_opt7_1", "berapa umur", "", R.drawable.ic_birthday_cake, true),
+            PictureOption("u6_s5_p1_opt7_2", "berapa harga", "", R.drawable.ic_price_tag, false),
+            PictureOption("u6_s5_p1_opt7_3", "kapan", "", R.drawable.ic_question_when, false),
+            PictureOption("u6_s5_p1_opt7_4", "siapa", "", R.drawable.ic_fam_father, false)
         )
     ),
 
@@ -169,10 +169,10 @@ val bab6Stage5Part2Exercises = listOf(
         correctAnswer = "tahun ini",
         audioToSpeak = "今年",
         pictureOptions = listOf(
-            PictureOption("u6_s5_p2_opt1", "tahun ini", "📅", R.drawable.ic_story_timer, true),
-            PictureOption("u6_s5_p2_opt2", "tahun lalu", "⏮️", R.drawable.ic_book, false),
-            PictureOption("u6_s5_p2_opt3", "tahun depan", "⏭️", R.drawable.ic_crown, false),
-            PictureOption("u6_s5_p2_opt4", "hari ini", "☀️", R.drawable.ic_target, false)
+            PictureOption("u6_s5_p2_opt1", "tahun ini", "", R.drawable.ic_calendar_clock, true),
+            PictureOption("u6_s5_p2_opt2", "kemarin", "", R.drawable.ic_cal_yesterday, false),
+            PictureOption("u6_s5_p2_opt3", "tahun depan", "", R.drawable.ic_cal_next_year, false),
+            PictureOption("u6_s5_p2_opt4", "hari ini", "", R.drawable.ic_cal_today, false)
         )
     ),
 
@@ -259,10 +259,10 @@ val bab6Stage5Part2Exercises = listOf(
         correctAnswer = "berapa umur (anak)",
         audioToSpeak = "几岁",
         pictureOptions = listOf(
-            PictureOption("u6_s5_p2_opt7_1", "berapa umur (anak)", "🎂", R.drawable.ic_crown, true),
-            PictureOption("u6_s5_p2_opt7_2", "berapa orang", "👥", R.drawable.ic_people_group, false),
-            PictureOption("u6_s5_p2_opt7_3", "berapa jam", "⏰", R.drawable.ic_story_timer, false),
-            PictureOption("u6_s5_p2_opt7_4", "berapa harga", "💰", R.drawable.ic_coin, false)
+            PictureOption("u6_s5_p2_opt7_1", "berapa umur (anak)", "", R.drawable.ic_cake_two_candles, true),
+            PictureOption("u6_s5_p2_opt7_2", "anggota keluarga", "", R.drawable.ic_fam_family_group, false),
+            PictureOption("u6_s5_p2_opt7_3", "jam", "", R.drawable.ic_clock_analog, false),
+            PictureOption("u6_s5_p2_opt7_4", "berapa harga", "", R.drawable.ic_price_tag, false)
         )
     ),
 

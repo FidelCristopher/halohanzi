@@ -1,0 +1,43 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Warm Amber/Blue Triad) -->
+    <path
+        android:fillColor="#FEF3C7"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Torso / Blue Collar Shirt -->
+    <path
+        android:fillColor="#0284C7"
+        android:pathData="M26,82 C26,66 34,58 48,58 C62,58 70,66 70,82 Z" />
+    <!-- White Inner Collar -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M44,58 L48,66 L52,58 Z" />
+
+    <!-- Head / Face -->
+    <path
+        android:fillColor="#FFD1A4"
+        android:pathData="M48,26 A16,16 0 1,0 48,58 A16,16 0 1,0 48,26 Z" />
+    <!-- Father's Neat Dark Hair -->
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="M33,34 C33,20 40,16 48,16 C56,16 63,20 63,34 C58,30 53,30 49,32 C45,34 39,34 33,34 Z" />
+
+    <!-- Friendly Eyes -->
+    <path
+        android:fillColor="#0F172A"
+        android:pathData="M40,38 C41,36 43,36 44,38 Z M52,38 C53,36 55,36 56,38 Z" />
+
+    <!-- Father's Neat Gentle Mustache -->
+    <path
+        android:fillColor="#334155"
+        android:pathData="M42,46 C44,45 46,45 48,46.5 C50,45 52,45 54,46 C52,48 44,48 42,46 Z" />
+
+    <!-- Warm Smiling Mouth -->
+    <path
+        android:fillColor="#E11D48"
+        android:pathData="M45,49 C46,52 50,52 51,49 Z" />
+</vector>

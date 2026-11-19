@@ -1,0 +1,48 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Soft Rose Yellow) -->
+    <path
+        android:fillColor="#FFFBEB"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Fruit Bowl / Basket Base -->
+    <path
+        android:fillColor="#B45309"
+        android:pathData="M22,54 L74,54 L68,76 C68,78.2 66.2,80 64,80 L32,80 C29.8,80 28,78.2 28,76 Z" />
+    <path
+        android:fillColor="#D97706"
+        android:pathData="M24,56 L72,56 L67,74 L29,74 Z" />
+
+    <!-- Bright Orange Fruit (Center Right) -->
+    <path
+        android:fillColor="#EA580C"
+        android:pathData="M56,38 A12,12 0 1,0 56,62 A12,12 0 1,0 56,38 Z" />
+    <path
+        android:fillColor="#F97316"
+        android:pathData="M56,40 A10,10 0 1,0 56,60 A10,10 0 1,0 56,40 Z" />
+    <path
+        android:fillColor="#15803D"
+        android:pathData="M55,36 L57,36 L57,40 L55,40 Z M56,36 C59,34 62,35 62,38 Z" />
+
+    <!-- Ripe Red Apple (Center Left) -->
+    <path
+        android:fillColor="#DC2626"
+        android:pathData="M40,36 C32,36 28,42 28,52 C28,62 36,66 42,66 C48,66 50,60 50,52 C50,42 46,36 40,36 Z" />
+    <path
+        android:fillColor="#EF4444"
+        android:pathData="M40,38 C34,38 30,43 30,52 C30,60 37,64 42,64 C47,64 48,58 48,52 C48,43 45,38 40,38 Z" />
+    <path
+        android:fillColor="#16A34A"
+        android:pathData="M41,34 C38,30 40,26 44,28 C44,32 42,34 41,34 Z" />
+
+    <!-- Cluster of Purple Grapes (Top Left) -->
+    <path
+        android:fillColor="#7C3AED"
+        android:pathData="M34,26 A5,5 0 1,0 34,36 A5,5 0 1,0 34,26 Z M42,24 A5,5 0 1,0 42,34 A5,5 0 1,0 42,24 Z M50,26 A5,5 0 1,0 50,36 A5,5 0 1,0 50,26 Z M38,32 A5,5 0 1,0 38,42 A5,5 0 1,0 38,32 Z M46,32 A5,5 0 1,0 46,42 A5,5 0 1,0 46,32 Z" />
+    <path
+        android:fillColor="#A78BFA"
+        android:pathData="M33,28 A2,2 0 1,0 33,32 A2,2 0 1,0 33,28 Z M41,26 A2,2 0 1,0 41,30 A2,2 0 1,0 41,26 Z M45,34 A2,2 0 1,0 45,38 A2,2 0 1,0 45,34 Z" />
+</vector>

@@ -18,10 +18,10 @@ val bab6Stage1Part1Exercises = listOf(
         correctAnswer = "ayah",
         audioToSpeak = "爸爸",
         pictureOptions = listOf(
-            PictureOption("u6_s1_p1_opt1", "ayah", "👨", R.drawable.ic_person_guru, true),
-            PictureOption("u6_s1_p1_opt2", "ibu", "👩", R.drawable.ic_person_saya, false),
-            PictureOption("u6_s1_p1_opt3", "murid", "🧒", R.drawable.ic_person_murid, false),
-            PictureOption("u6_s1_p1_opt4", "rumah", "🏠", R.drawable.ic_book, false)
+            PictureOption("u6_s1_p1_opt1", "ayah", "", R.drawable.ic_fam_father, true),
+            PictureOption("u6_s1_p1_opt2", "ibu", "", R.drawable.ic_fam_mother, false),
+            PictureOption("u6_s1_p1_opt3", "kakak laki-laki", "", R.drawable.ic_fam_older_brother, false),
+            PictureOption("u6_s1_p1_opt4", "rumah", "", R.drawable.ic_fam_home, false)
         )
     ),
 
@@ -108,10 +108,10 @@ val bab6Stage1Part1Exercises = listOf(
         correctAnswer = "ibu",
         audioToSpeak = "妈妈",
         pictureOptions = listOf(
-            PictureOption("u6_s1_p1_opt7_1", "ibu", "👩", R.drawable.ic_person_saya, true),
-            PictureOption("u6_s1_p1_opt7_2", "ayah", "👨", R.drawable.ic_person_guru, false),
-            PictureOption("u6_s1_p1_opt7_3", "kakak", "👦", R.drawable.ic_person_murid, false),
-            PictureOption("u6_s1_p1_opt7_4", "uang", "🪙", R.drawable.ic_coin, false)
+            PictureOption("u6_s1_p1_opt7_1", "ibu", "", R.drawable.ic_fam_mother, true),
+            PictureOption("u6_s1_p1_opt7_2", "ayah", "", R.drawable.ic_fam_father, false),
+            PictureOption("u6_s1_p1_opt7_3", "kakak laki-laki", "", R.drawable.ic_fam_older_brother, false),
+            PictureOption("u6_s1_p1_opt7_4", "rumah", "", R.drawable.ic_fam_home, false)
         )
     ),
 
@@ -169,10 +169,10 @@ val bab6Stage1Part2Exercises = listOf(
         correctAnswer = "adik laki-laki",
         audioToSpeak = "弟弟",
         pictureOptions = listOf(
-            PictureOption("u6_s1_p2_opt1", "adik laki-laki", "👦", R.drawable.ic_person_murid, true),
-            PictureOption("u6_s1_p2_opt2", "kakak perempuan", "👧", R.drawable.ic_person_saya, false),
-            PictureOption("u6_s1_p2_opt3", "ayah", "👨", R.drawable.ic_person_guru, false),
-            PictureOption("u6_s1_p2_opt4", "buku", "📖", R.drawable.ic_book, false)
+            PictureOption("u6_s1_p2_opt1", "adik laki-laki", "", R.drawable.ic_fam_younger_brother, true),
+            PictureOption("u6_s1_p2_opt2", "kakak perempuan", "", R.drawable.ic_fam_older_sister, false),
+            PictureOption("u6_s1_p2_opt3", "ayah", "", R.drawable.ic_fam_father, false),
+            PictureOption("u6_s1_p2_opt4", "ibu", "", R.drawable.ic_fam_mother, false)
         )
     ),
 
@@ -259,10 +259,10 @@ val bab6Stage1Part2Exercises = listOf(
         correctAnswer = "adik perempuan",
         audioToSpeak = "妹妹",
         pictureOptions = listOf(
-            PictureOption("u6_s1_p2_opt7_1", "adik perempuan", "👧", R.drawable.ic_person_saya, true),
-            PictureOption("u6_s1_p2_opt7_2", "ayah", "👨", R.drawable.ic_person_guru, false),
-            PictureOption("u6_s1_p2_opt7_3", "adik laki-laki", "👦", R.drawable.ic_person_murid, false),
-            PictureOption("u6_s1_p2_opt7_4", "kucing", "🐱", R.drawable.ic_book, false)
+            PictureOption("u6_s1_p2_opt7_1", "adik perempuan", "", R.drawable.ic_fam_younger_sister, true),
+            PictureOption("u6_s1_p2_opt7_2", "ayah", "", R.drawable.ic_fam_father, false),
+            PictureOption("u6_s1_p2_opt7_3", "adik laki-laki", "", R.drawable.ic_fam_younger_brother, false),
+            PictureOption("u6_s1_p2_opt7_4", "kakak perempuan", "", R.drawable.ic_fam_older_sister, false)
         )
     ),
 
