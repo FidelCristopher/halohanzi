@@ -17,7 +17,7 @@ class ComprehensiveExerciseAuditTest {
 
         allUnits.forEach { unit ->
             unit.lessons.forEach { lesson ->
-                val allExercises = lesson.exercisesPart1 + lesson.exercisesPart2
+                val allExercises = lesson.exercisesPart1 + lesson.exercisesPart2 + lesson.exercisesPart3
                 allExercises.forEach { ex ->
                     // 1. Audit SENTENCE_BUILDER
                     if (ex.type == ExerciseType.SENTENCE_BUILDER) {
@@ -70,6 +70,13 @@ class ComprehensiveExerciseAuditTest {
                             }
                         }
                     }
+
+                    // 5. Audit Listening Exercises ("Apa yang Anda dengar?") - Rule 10 Zero Background Mandate
+                    if (ex.title == "Apa yang Anda dengar?") {
+                        if (ex.illustrationRes != 0) {
+                            errors.add("[${lesson.id} - ${ex.id}] Listening exercise must have illustrationRes == 0 (got ${ex.illustrationRes})")
+                        }
+                    }
                 }
             }
         }
@@ -77,5 +84,29 @@ class ComprehensiveExerciseAuditTest {
         if (errors.isNotEmpty()) {
             fail("Comprehensive Exercise Audit Failed with ${errors.size} errors:\n" + errors.joinToString("\n"))
         }
+    }
+
+    @Test
+    fun auditListeningExercisesZeroIllustrationMandate() {
+        val allUnits = LearningRepository.units
+        val violations = mutableListOf<String>()
+
+        allUnits.forEach { unit ->
+            unit.lessons.forEach { lesson ->
+                val allExercises = lesson.exercisesPart1 + lesson.exercisesPart2 + lesson.exercisesPart3
+                allExercises.forEach { ex ->
+                    if (ex.title == "Apa yang Anda dengar?") {
+                        if (ex.illustrationRes != 0) {
+                            violations.add("${unit.id}/${lesson.id}/${ex.id}: illustrationRes is ${ex.illustrationRes}, expected 0")
+                        }
+                    }
+                }
+            }
+        }
+
+        assertTrue(
+            "Found ${violations.size} listening exercises violating Rule 10 (non-zero illustrationRes):\n" + violations.joinToString("\n"),
+            violations.isEmpty()
+        )
     }
 }

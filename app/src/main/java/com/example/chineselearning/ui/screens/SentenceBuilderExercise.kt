@@ -4,6 +4,7 @@ import androidx.compose.animation.*
 import androidx.compose.animation.core.*
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -838,42 +839,9 @@ fun ImmersiveSentenceBuilder(
             .fillMaxWidth()
             .height(520.dp)
             .clip(RoundedCornerShape(24.dp))
-            .background(
-                Brush.verticalGradient(
-                    colors = listOf(
-                        Color(0xFFF8FAFC),
-                        Color(0xFFEDF2F7),
-                        Color(0xFFE2E8F0)
-                    )
-                )
-            )
+            .background(Color.White)
+            .border(1.5.dp, Color(0xFFF1F5F9), RoundedCornerShape(24.dp))
     ) {
-        if (exercise.illustrationRes != 0) {
-            Image(
-                painter = painterResource(exercise.illustrationRes),
-                contentDescription = null,
-                contentScale = ContentScale.Crop,
-                modifier = Modifier.fillMaxSize()
-            )
-        } else {
-            // Ambient native speaker silhouette
-            Box(
-                modifier = Modifier
-                    .fillMaxSize()
-                    .padding(top = 90.dp),
-                contentAlignment = Alignment.Center
-            ) {
-                Icon(
-                    painter = painterResource(R.drawable.ic_person_murid),
-                    contentDescription = null,
-                    tint = Color.Unspecified,
-                    modifier = Modifier
-                        .size(160.dp)
-                        .graphicsLayer(alpha = 0.20f)
-                )
-            }
-        }
-
         Column(
             modifier = Modifier
                 .fillMaxSize()

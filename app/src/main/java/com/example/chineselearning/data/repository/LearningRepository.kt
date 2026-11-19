@@ -814,7 +814,7 @@ object LearningRepository {
                             targetHanzi = "布迪 是 老师。",
                             targetPinyin = "Bùdí shì lǎoshī.",
                             targetTranslation = "Budi adalah seorang guru.",
-                            illustrationRes = R.drawable.img_teacher_budi,
+                            illustrationRes = 0,
                             staticTrailingText = "。",
                             wordChips = listOf("布迪:Bùdí", "是:shì", "老师:lǎoshī", "我:wǒ", "学生:xuéshēng"),
                             correctAnswer = "布迪,是,老师",
@@ -842,7 +842,7 @@ object LearningRepository {
                             targetHanzi = "我 是 学生。",
                             targetPinyin = "Wǒ shì xuéshēng.",
                             targetTranslation = "Saya adalah seorang murid.",
-                            illustrationRes = R.drawable.img_student_boy,
+                            illustrationRes = 0,
                             staticTrailingText = "。",
                             wordChips = listOf("我:wǒ", "是:shì", "学生:xuéshēng", "老师:lǎoshī", "你好:nǐhǎo"),
                             correctAnswer = "我,是,学生",
@@ -1274,7 +1274,7 @@ object LearningRepository {
                             correctAnswer = "不,医生",
                             audioToSpeak = "我不是医生。",
                             isImmersiveSpeaker = true,
-                            illustrationRes = R.drawable.img_girl_cap_glasses
+                            illustrationRes = 0
                         ),
                         // 6. Soal 6: Pilihan Gambar 2x2 (再见 -> sampai jumpa, selamat tinggal)
                         Exercise(
@@ -1430,7 +1430,7 @@ object LearningRepository {
                             correctAnswer = "他,是,吗",
                             audioToSpeak = "他是学生吗？",
                             isImmersiveSpeaker = true,
-                            illustrationRes = R.drawable.img_two_students_studying
+                            illustrationRes = 0
                         ),
                         // 4. Soal 4: Selesaikan percakapan ([?] -> 他是印尼人。)
                         Exercise(
@@ -1542,7 +1542,7 @@ object LearningRepository {
                             correctAnswer = "他,是,吗",
                             audioToSpeak = "他是学生吗？",
                             isImmersiveSpeaker = true,
-                            illustrationRes = R.drawable.img_two_students_studying
+                            illustrationRes = 0
                         ),
                         // 4. Soal 4: Selesaikan percakapan ([?] -> 他是印尼人。)
                         Exercise(
@@ -1649,7 +1649,7 @@ object LearningRepository {
                             type = ExerciseType.SENTENCE_BUILDER,
                             title = "Apa yang Anda dengar?",
                             isImmersiveSpeaker = true,
-                            illustrationRes = R.drawable.img_couple_peace_sign,
+                            illustrationRes = 0,
                             targetHanzi = "她 不 是 中国 人。",
                             targetPinyin = "Tā bú shì Zhōngguó rén.",
                             targetTranslation = "Dia bukan orang Tiongkok.",
@@ -1730,7 +1730,7 @@ object LearningRepository {
                             targetHanzi = "布迪 是 老师。",
                             targetPinyin = "Bùdí shì lǎoshī.",
                             targetTranslation = "Budi adalah seorang guru.",
-                            illustrationRes = R.drawable.img_teacher_budi,
+                            illustrationRes = 0,
                             staticTrailingText = "。",
                             wordChips = listOf("布迪:Bùdí", "是:shì", "老师:lǎoshī", "我:wǒ", "学生:xuéshēng"),
                             correctAnswer = "布迪,是,老师",
@@ -1758,7 +1758,7 @@ object LearningRepository {
                             targetHanzi = "我 是 学生。",
                             targetPinyin = "Wǒ shì xuéshēng.",
                             targetTranslation = "Saya adalah seorang murid.",
-                            illustrationRes = R.drawable.img_student_boy,
+                            illustrationRes = 0,
                             staticTrailingText = "。",
                             wordChips = listOf("我:wǒ", "是:shì", "学生:xuéshēng", "老师:lǎoshī", "你好:nǐhǎo"),
                             correctAnswer = "我,是,学生",
@@ -2190,7 +2190,7 @@ object LearningRepository {
                             correctAnswer = "不,医生",
                             audioToSpeak = "我不是医生。",
                             isImmersiveSpeaker = true,
-                            illustrationRes = R.drawable.img_girl_cap_glasses
+                            illustrationRes = 0
                         ),
                         // 6. Soal 6: Pilihan Gambar 2x2 (再见 -> sampai jumpa, selamat tinggal)
                         Exercise(
@@ -2346,7 +2346,7 @@ object LearningRepository {
                             correctAnswer = "他,是,吗",
                             audioToSpeak = "他是学生吗？",
                             isImmersiveSpeaker = true,
-                            illustrationRes = R.drawable.img_two_students_studying
+                            illustrationRes = 0
                         ),
                         // 4. Soal 4: Selesaikan percakapan ([?] -> 他是印尼人。)
                         Exercise(
@@ -2458,7 +2458,7 @@ object LearningRepository {
                             correctAnswer = "他,是,吗",
                             audioToSpeak = "他是学生吗？",
                             isImmersiveSpeaker = true,
-                            illustrationRes = R.drawable.img_two_students_studying
+                            illustrationRes = 0
                         ),
                         // 4. Soal 4: Selesaikan percakapan ([?] -> 他是印尼人。)
                         Exercise(
@@ -2565,7 +2565,7 @@ object LearningRepository {
                             type = ExerciseType.SENTENCE_BUILDER,
                             title = "Apa yang Anda dengar?",
                             isImmersiveSpeaker = true,
-                            illustrationRes = R.drawable.img_couple_peace_sign,
+                            illustrationRes = 0,
                             targetHanzi = "她 不 是 中国 人。",
                             targetPinyin = "Tā bú shì Zhōngguó rén.",
                             targetTranslation = "Dia bukan orang Tiongkok.",
@@ -2655,7 +2655,7 @@ object LearningRepository {
                             id = "u1_l4_p3_q2",
                             type = ExerciseType.SENTENCE_BUILDER,
                             title = "Apa yang Anda dengar?",
-                            illustrationRes = R.drawable.img_buddy_elf_school,
+                            illustrationRes = 0,
                             targetHanzi = "我 不 是 学生。",
                             targetPinyin = "Wǒ bú shì xuéshēng.",
                             audioToSpeak = "我不是学生。",
@@ -2691,7 +2691,7 @@ object LearningRepository {
                             id = "u1_l4_p3_q5",
                             type = ExerciseType.SENTENCE_BUILDER,
                             title = "Apa yang Anda dengar?",
-                            illustrationRes = R.drawable.img_shifu_kungfu_panda,
+                            illustrationRes = 0,
                             targetHanzi = "他 是 老师 吗？",
                             targetPinyin = "Tā shì lǎoshī ma?",
                             audioToSpeak = "他是老师吗？",
