@@ -1,0 +1,55 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge -->
+    <path
+        android:fillColor="#F0FDFA"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Top Crown & Button -->
+    <path
+        android:fillColor="#0D9488"
+        android:pathData="M44,14 L52,14 L52,22 L44,22 Z" />
+    <path
+        android:fillColor="#14B8A6"
+        android:pathData="M42,12 L54,12 L54,15 L42,15 Z" />
+    <!-- Side Angled Button -->
+    <path
+        android:fillColor="#0F766E"
+        android:pathData="M64,22 L70,28 L67,31 L61,25 Z" />
+
+    <!-- Stopwatch Outer Ring -->
+    <path
+        android:fillColor="#134E4A"
+        android:pathData="M48,22 A30,30 0 1,0 48,82 A30,30 0 1,0 48,22 Z" />
+    <path
+        android:fillColor="#2DD4BF"
+        android:pathData="M48,25 A27,27 0 1,0 48,79 A27,27 0 1,0 48,25 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M48,28 A24,24 0 1,0 48,76 A24,24 0 1,0 48,28 Z" />
+
+    <!-- Minute Markings around Dial -->
+    <path
+        android:fillColor="#99F6E4"
+        android:pathData="M48,32 A20,20 0 1,0 48,72 A20,20 0 1,0 48,32 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M48,35 A17,17 0 1,0 48,69 A17,17 0 1,0 48,35 Z" />
+
+    <!-- Stopwatch Sweeping Hand (Pointing at 15 minutes / 3 o'clock) -->
+    <path
+        android:fillColor="#0F766E"
+        android:pathData="M47,51 L47,53 L64,53 L64,51 Z" />
+    <!-- Secondary Hand -->
+    <path
+        android:fillColor="#E11D48"
+        android:pathData="M47,38 L49,38 L49,52 L47,52 Z" />
+
+    <!-- Center Pivot Pin -->
+    <path
+        android:fillColor="#115E59"
+        android:pathData="M48,49 A3,3 0 1,0 48,55 A3,3 0 1,0 48,49 Z" />
+</vector>

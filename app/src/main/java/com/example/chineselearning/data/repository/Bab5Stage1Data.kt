@@ -18,10 +18,10 @@ val bab5Stage1Part1Exercises = listOf(
         correctAnswer = "pagi",
         audioToSpeak = "早上",
         pictureOptions = listOf(
-            PictureOption("u5_s1_p1_opt1", "pagi", "🌅", R.drawable.ic_story_timer, true),
-            PictureOption("u5_s1_p1_opt2", "malam", "🌙", R.drawable.ic_book, false),
-            PictureOption("u5_s1_p1_opt3", "siang", "☀️", R.drawable.ic_target, false),
-            PictureOption("u5_s1_p1_opt4", "sore", "🌇", R.drawable.ic_crown, false)
+            PictureOption("u5_s1_p1_opt1", "pagi", "", R.drawable.ic_sun_morning, true),
+            PictureOption("u5_s1_p1_opt2", "malam", "", R.drawable.ic_moon_night, false),
+            PictureOption("u5_s1_p1_opt3", "siang", "", R.drawable.ic_sun_noon, false),
+            PictureOption("u5_s1_p1_opt4", "sore", "", R.drawable.ic_sun_afternoon, false)
         )
     ),
 
@@ -108,10 +108,10 @@ val bab5Stage1Part1Exercises = listOf(
         correctAnswer = "tengah hari / siang",
         audioToSpeak = "中午",
         pictureOptions = listOf(
-            PictureOption("u5_s1_p1_opt7_1", "tengah hari / siang", "☀️", R.drawable.ic_story_timer, true),
-            PictureOption("u5_s1_p1_opt7_2", "malam", "🌙", R.drawable.ic_crown, false),
-            PictureOption("u5_s1_p1_opt7_3", "pagi", "🌅", R.drawable.ic_book, false),
-            PictureOption("u5_s1_p1_opt7_4", "subuh", "🌌", R.drawable.ic_target, false)
+            PictureOption("u5_s1_p1_opt7_1", "tengah hari / siang", "", R.drawable.ic_sun_noon, true),
+            PictureOption("u5_s1_p1_opt7_2", "malam", "", R.drawable.ic_moon_night, false),
+            PictureOption("u5_s1_p1_opt7_3", "pagi", "", R.drawable.ic_sun_morning, false),
+            PictureOption("u5_s1_p1_opt7_4", "sore", "", R.drawable.ic_sun_afternoon, false)
         )
     ),
 
@@ -169,10 +169,10 @@ val bab5Stage1Part2Exercises = listOf(
         correctAnswer = "malam",
         audioToSpeak = "晚上",
         pictureOptions = listOf(
-            PictureOption("u5_s1_p2_opt1", "malam", "🌙", R.drawable.ic_story_timer, true),
-            PictureOption("u5_s1_p2_opt2", "siang", "☀️", R.drawable.ic_target, false),
-            PictureOption("u5_s1_p2_opt3", "pagi", "🌅", R.drawable.ic_book, false),
-            PictureOption("u5_s1_p2_opt4", "sore", "🌇", R.drawable.ic_crown, false)
+            PictureOption("u5_s1_p2_opt1", "malam", "", R.drawable.ic_moon_night, true),
+            PictureOption("u5_s1_p2_opt2", "siang", "", R.drawable.ic_sun_noon, false),
+            PictureOption("u5_s1_p2_opt3", "pagi", "", R.drawable.ic_sun_morning, false),
+            PictureOption("u5_s1_p2_opt4", "sore", "", R.drawable.ic_sun_afternoon, false)
         )
     ),
 
@@ -259,10 +259,10 @@ val bab5Stage1Part2Exercises = listOf(
         correctAnswer = "sore hari",
         audioToSpeak = "下午",
         pictureOptions = listOf(
-            PictureOption("u5_s1_p2_opt7_1", "sore hari", "🌇", R.drawable.ic_story_timer, true),
-            PictureOption("u5_s1_p2_opt7_2", "pagi hari", "🌅", R.drawable.ic_book, false),
-            PictureOption("u5_s1_p2_opt7_3", "malam hari", "🌙", R.drawable.ic_crown, false),
-            PictureOption("u5_s1_p2_opt7_4", "siang terik", "☀️", R.drawable.ic_target, false)
+            PictureOption("u5_s1_p2_opt7_1", "sore hari", "", R.drawable.ic_sun_afternoon, true),
+            PictureOption("u5_s1_p2_opt7_2", "pagi hari", "", R.drawable.ic_sun_morning, false),
+            PictureOption("u5_s1_p2_opt7_3", "malam hari", "", R.drawable.ic_moon_night, false),
+            PictureOption("u5_s1_p2_opt7_4", "siang", "", R.drawable.ic_sun_noon, false)
         )
     ),
 

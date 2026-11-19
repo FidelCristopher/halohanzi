@@ -18,10 +18,10 @@ val bab4Stage2Part1Exercises = listOf(
         correctAnswer = "bulan",
         audioToSpeak = "月",
         pictureOptions = listOf(
-            PictureOption("u4_s2_p1_opt1", "bulan", "🌙", R.drawable.ic_story_timer, true),
-            PictureOption("u4_s2_p1_opt2", "matahari / hari", "☀️", R.drawable.ic_book, false),
-            PictureOption("u4_s2_p1_opt3", "tahun", "📆", R.drawable.ic_crown, false),
-            PictureOption("u4_s2_p1_opt4", "jam", "⏰", R.drawable.ic_target, false)
+            PictureOption("u4_s2_p1_opt1", "bulan", "", R.drawable.ic_cal_month, true),
+            PictureOption("u4_s2_p1_opt2", "hari ini", "", R.drawable.ic_cal_today, false),
+            PictureOption("u4_s2_p1_opt3", "tahun", "", R.drawable.ic_cal_year, false),
+            PictureOption("u4_s2_p1_opt4", "jam", "", R.drawable.ic_clock_analog, false)
         )
     ),
 
@@ -108,10 +108,10 @@ val bab4Stage2Part1Exercises = listOf(
         correctAnswer = "nomor / tanggal",
         audioToSpeak = "号",
         pictureOptions = listOf(
-            PictureOption("u4_s2_p1_opt7_1", "nomor / tanggal", "🔢", R.drawable.ic_story_timer, true),
-            PictureOption("u4_s2_p1_opt7_2", "nama", "📛", R.drawable.ic_cap, false),
-            PictureOption("u4_s2_p1_opt7_3", "uang", "💰", R.drawable.ic_coin, false),
-            PictureOption("u4_s2_p1_opt7_4", "orang", "👤", R.drawable.ic_people_group, false)
+            PictureOption("u4_s2_p1_opt7_1", "nomor / tanggal", "", R.drawable.ic_cal_date, true),
+            PictureOption("u4_s2_p1_opt7_2", "hari ini", "", R.drawable.ic_cal_today, false),
+            PictureOption("u4_s2_p1_opt7_3", "uang", "", R.drawable.ic_yuan_currency, false),
+            PictureOption("u4_s2_p1_opt7_4", "orang", "", R.drawable.ic_person_single, false)
         )
     ),
 
@@ -169,10 +169,10 @@ val bab4Stage2Part2Exercises = listOf(
         correctAnswer = "tahun",
         audioToSpeak = "年",
         pictureOptions = listOf(
-            PictureOption("u4_s2_p2_opt1", "tahun", "📅", R.drawable.ic_story_timer, true),
-            PictureOption("u4_s2_p2_opt2", "hari", "☀️", R.drawable.ic_target, false),
-            PictureOption("u4_s2_p2_opt3", "bulan", "🌙", R.drawable.ic_book, false),
-            PictureOption("u4_s2_p2_opt4", "jam", "⏰", R.drawable.ic_crown, false)
+            PictureOption("u4_s2_p2_opt1", "tahun", "", R.drawable.ic_cal_year, true),
+            PictureOption("u4_s2_p2_opt2", "hari ini", "", R.drawable.ic_cal_today, false),
+            PictureOption("u4_s2_p2_opt3", "bulan", "", R.drawable.ic_cal_month, false),
+            PictureOption("u4_s2_p2_opt4", "jam", "", R.drawable.ic_clock_analog, false)
         )
     ),
 
@@ -259,10 +259,10 @@ val bab4Stage2Part2Exercises = listOf(
         correctAnswer = "tahun depan",
         audioToSpeak = "明年",
         pictureOptions = listOf(
-            PictureOption("u4_s2_p2_opt7_1", "tahun depan", "⏭️", R.drawable.ic_story_timer, true),
-            PictureOption("u4_s2_p2_opt7_2", "tahun ini", "📅", R.drawable.ic_book, false),
-            PictureOption("u4_s2_p2_opt7_3", "tahun lalu", "⏮️", R.drawable.ic_pouch, false),
-            PictureOption("u4_s2_p2_opt7_4", "besok", "☀️", R.drawable.ic_target, false)
+            PictureOption("u4_s2_p2_opt7_1", "tahun depan", "", R.drawable.ic_cal_next_year, true),
+            PictureOption("u4_s2_p2_opt7_2", "tahun ini", "", R.drawable.ic_cal_year, false),
+            PictureOption("u4_s2_p2_opt7_3", "kemarin", "", R.drawable.ic_cal_yesterday, false),
+            PictureOption("u4_s2_p2_opt7_4", "besok", "", R.drawable.ic_cal_tomorrow, false)
         )
     ),
 

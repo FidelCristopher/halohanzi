@@ -1,0 +1,28 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Indigo Purple) -->
+    <path
+        android:fillColor="#EEF2FF"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Outer Circular Dynamic Track (Active Progress) -->
+    <path
+        android:fillColor="#E0E7FF"
+        android:pathData="M48,18 A30,30 0 1,0 48,78 A30,30 0 1,0 48,18 Z M48,26 A22,22 0 1,1 48,70 A22,22 0 1,1 48,26 Z" />
+
+    <!-- Active Spinning Arc (Bright Indigo) -->
+    <path
+        android:fillColor="#4F46E5"
+        android:pathData="M48,18 C64.6,18 78,31.4 78,48 L70,48 C70,35.8 60.2,26 48,26 Z" />
+    <path
+        android:fillColor="#6366F1"
+        android:pathData="M78,48 C78,64.6 64.6,78 48,78 L48,70 C60.2,70 70,60.2 70,48 Z" />
+
+    <!-- Center Active Play / Action Arrow Icon (Sedang Melakukan) -->
+    <path
+        android:fillColor="#4338CA"
+        android:pathData="M42,34 L62,48 L42,62 Z" />
+</vector>

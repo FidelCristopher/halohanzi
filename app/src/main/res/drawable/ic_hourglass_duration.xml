@@ -1,0 +1,40 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Warm Amber) -->
+    <path
+        android:fillColor="#FEF3C7"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Top & Bottom Wooden Plates -->
+    <path
+        android:fillColor="#92400E"
+        android:pathData="M28,18 L68,18 C70.2,18 72,19.8 72,22 L72,26 L24,26 L24,22 C24,19.8 25.8,18 28,18 Z" />
+    <path
+        android:fillColor="#92400E"
+        android:pathData="M24,70 L72,70 L72,74 C72,76.2 70.2,78 68,78 L28,78 C25.8,78 24,76.2 24,74 Z" />
+
+    <!-- Glass Bulbs Outer (Double Cones) -->
+    <path
+        android:fillColor="#E0F2FE"
+        android:pathData="M28,26 L68,26 C68,36 56,44 51,48 C56,52 68,60 68,70 L28,70 C28,60 40,52 45,48 C40,44 28,36 28,26 Z" />
+    <!-- Glass Highlights -->
+    <path
+        android:fillColor="#BAE6FD"
+        android:pathData="M32,28 L36,28 C36,36 43,44 46,47 L44,48 C40,44 32,36 32,28 Z" />
+
+    <!-- Golden Sand in Upper Bulb -->
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M34,34 L62,34 C60,40 54,44 48,46 C42,44 36,40 34,34 Z" />
+    <!-- Trickling Sand Stream -->
+    <path
+        android:fillColor="#D97706"
+        android:pathData="M47,46 L49,46 L49,58 L47,58 Z" />
+    <!-- Golden Sand Mound in Lower Bulb -->
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M48,58 C54,63 64,66 64,70 L32,70 C32,66 42,63 48,58 Z" />
+</vector>

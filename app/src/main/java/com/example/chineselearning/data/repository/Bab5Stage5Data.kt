@@ -18,10 +18,10 @@ val bab5Stage5Part1Exercises = listOf(
         correctAnswer = "pagi",
         audioToSpeak = "早上",
         pictureOptions = listOf(
-            PictureOption("u5_s5_p1_opt1", "pagi", "🌅", R.drawable.ic_story_timer, true),
-            PictureOption("u5_s5_p1_opt2", "malam", "🌙", R.drawable.ic_book, false),
-            PictureOption("u5_s5_p1_opt3", "siang", "☀️", R.drawable.ic_target, false),
-            PictureOption("u5_s5_p1_opt4", "sore", "🌇", R.drawable.ic_crown, false)
+            PictureOption("u5_s5_p1_opt1", "pagi", "", R.drawable.ic_sun_morning, true),
+            PictureOption("u5_s5_p1_opt2", "malam", "", R.drawable.ic_moon_night, false),
+            PictureOption("u5_s5_p1_opt3", "siang", "", R.drawable.ic_sun_noon, false),
+            PictureOption("u5_s5_p1_opt4", "sore", "", R.drawable.ic_sun_afternoon, false)
         )
     ),
 
@@ -108,10 +108,10 @@ val bab5Stage5Part1Exercises = listOf(
         correctAnswer = "tidur",
         audioToSpeak = "睡觉",
         pictureOptions = listOf(
-            PictureOption("u5_s5_p1_opt7_1", "tidur", "🛌", R.drawable.ic_book, true),
-            PictureOption("u5_s5_p1_opt7_2", "makan", "🍳", R.drawable.ic_story_timer, false),
-            PictureOption("u5_s5_p1_opt7_3", "minum", "🍵", R.drawable.ic_coin, false),
-            PictureOption("u5_s5_p1_opt7_4", "belajar", "✍️", R.drawable.ic_crown, false)
+            PictureOption("u5_s5_p1_opt7_1", "tidur", "", R.drawable.ic_action_sleep, true),
+            PictureOption("u5_s5_p1_opt7_2", "makan", "", R.drawable.ic_action_eat, false),
+            PictureOption("u5_s5_p1_opt7_3", "minum", "", R.drawable.ic_action_drink, false),
+            PictureOption("u5_s5_p1_opt7_4", "membaca buku", "", R.drawable.ic_action_reading, false)
         )
     ),
 
@@ -169,10 +169,10 @@ val bab5Stage5Part2Exercises = listOf(
         correctAnswer = "sarapan",
         audioToSpeak = "早饭",
         pictureOptions = listOf(
-            PictureOption("u5_s5_p2_opt1", "sarapan", "🍳", R.drawable.ic_story_timer, true),
-            PictureOption("u5_s5_p2_opt2", "makan malam", "🍲", R.drawable.ic_book, false),
-            PictureOption("u5_s5_p2_opt3", "tidur", "🛌", R.drawable.ic_crown, false),
-            PictureOption("u5_s5_p2_opt4", "sekolah", "🏫", R.drawable.ic_cap, false)
+            PictureOption("u5_s5_p2_opt1", "sarapan", "", R.drawable.ic_meal_breakfast, true),
+            PictureOption("u5_s5_p2_opt2", "makan malam", "", R.drawable.ic_meal_dinner, false),
+            PictureOption("u5_s5_p2_opt3", "tidur", "", R.drawable.ic_action_sleep, false),
+            PictureOption("u5_s5_p2_opt4", "beristirahat", "", R.drawable.ic_action_rest, false)
         )
     ),
 
@@ -259,10 +259,10 @@ val bab5Stage5Part2Exercises = listOf(
         correctAnswer = "beristirahat",
         audioToSpeak = "休息",
         pictureOptions = listOf(
-            PictureOption("u5_s5_p2_opt7_1", "beristirahat", "☕", R.drawable.ic_story_timer, true),
-            PictureOption("u5_s5_p2_opt7_2", "olahraga", "🏃", R.drawable.ic_dumbbell, false),
-            PictureOption("u5_s5_p2_opt7_3", "membaca", "📖", R.drawable.ic_book, false),
-            PictureOption("u5_s5_p2_opt7_4", "makan", "🍲", R.drawable.ic_coin, false)
+            PictureOption("u5_s5_p2_opt7_1", "beristirahat", "", R.drawable.ic_action_rest, true),
+            PictureOption("u5_s5_p2_opt7_2", "bangun tidur", "", R.drawable.ic_action_wakeup, false),
+            PictureOption("u5_s5_p2_opt7_3", "membaca buku", "", R.drawable.ic_action_reading, false),
+            PictureOption("u5_s5_p2_opt7_4", "makan", "", R.drawable.ic_action_eat, false)
         )
     ),
 

@@ -1,0 +1,48 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Deep Indigo Lavender) -->
+    <path
+        android:fillColor="#EEF2FF"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Wooden Bed Frame Backboard & Legs -->
+    <path
+        android:fillColor="#78350F"
+        android:pathData="M14,40 L20,40 L20,78 L14,78 Z M80,54 L86,54 L86,78 L80,78 Z" />
+    <path
+        android:fillColor="#92400E"
+        android:pathData="M14,44 L22,44 C24.2,44 26,45.8 26,48 L26,68 L14,68 Z" />
+    <!-- Bed Base Board -->
+    <path
+        android:fillColor="#B45309"
+        android:pathData="M18,66 L86,66 L86,72 L18,72 Z" />
+
+    <!-- Fluffy Mattress (Clean White) -->
+    <path
+        android:fillColor="#F8FAFC"
+        android:pathData="M20,60 L84,60 C85.1,60 86,60.9 86,62 L86,66 L20,66 Z" />
+
+    <!-- Cozy Soft Pillow (Pastel Sky Blue) -->
+    <path
+        android:fillColor="#BAE6FD"
+        android:pathData="M26,50 L42,50 C44.2,50 46,51.8 46,54 L46,60 L24,60 L24,54 C24,51.8 24.8,50 26,50 Z" />
+
+    <!-- Warm Cozy Quilt / Blanket (Indigo Navy with Soft Fold) -->
+    <path
+        android:fillColor="#4F46E5"
+        android:pathData="M40,54 L82,54 C84.2,54 86,55.8 86,58 L86,66 L40,66 Z" />
+    <path
+        android:fillColor="#6366F1"
+        android:pathData="M40,54 L52,54 C54.2,54 56,55.8 56,58 L56,66 L40,66 Z" />
+
+    <!-- Floating "Zzz" Sleep Glyphs (Top Right) -->
+    <path
+        android:fillColor="#818CF8"
+        android:pathData="M52,24 L60,24 L60,26 L55,31 L60,31 L60,33 L52,33 L52,31 L57,26 L52,26 Z" />
+    <path
+        android:fillColor="#6366F1"
+        android:pathData="M64,16 L74,16 L74,18.5 L68,24.5 L74,24.5 L74,27 L64,27 L64,24.5 L70,18.5 L64,18.5 Z" />
+</vector>

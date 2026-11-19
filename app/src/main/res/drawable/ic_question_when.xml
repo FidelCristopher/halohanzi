@@ -1,0 +1,37 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Soft Indigo) -->
+    <path
+        android:fillColor="#EEF2FF"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Clock Rim on Left/Center -->
+    <path
+        android:fillColor="#3730A3"
+        android:pathData="M40,22 A26,26 0 1,0 40,74 A26,26 0 1,0 40,22 Z" />
+    <path
+        android:fillColor="#818CF8"
+        android:pathData="M40,25 A23,23 0 1,0 40,71 A23,23 0 1,0 40,25 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M40,28 A20,20 0 1,0 40,68 A20,20 0 1,0 40,28 Z" />
+
+    <!-- Clock Hands -->
+    <path
+        android:fillColor="#1E1B4B"
+        android:pathData="M38.5,34 L41.5,34 L41.5,49 L38.5,49 Z" />
+    <path
+        android:fillColor="#4F46E5"
+        android:pathData="M39,46 L39,49 L50,49 L50,46 Z" />
+    <path
+        android:fillColor="#312E81"
+        android:pathData="M40,46 A3,3 0 1,0 40,52 A3,3 0 1,0 40,46 Z" />
+
+    <!-- Prominent Big Friendly Question Mark (❓) Overlapping Right -->
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M64,28 C73,28 79,33 79,41 C79,47 75,50 71,53 C68,56 67,58 67,61 L62,61 C62,56 64,53 68,49 C71,46 73,44 73,41 C73,36 69,33 64,33 C59,33 55,36 54,40 L49,38 C51,32 56,28 64,28 Z M64.5,66 C66.5,66 68,67.5 68,69.5 C68,71.5 66.5,73 64.5,73 C62.5,73 61,71.5 61,69.5 C61,67.5 62.5,66 64.5,66 Z" />
+</vector>

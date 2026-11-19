@@ -1,0 +1,48 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Morning Amber) -->
+    <path
+        android:fillColor="#FEF3C7"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Breakfast Plate (Ceramic Round Dish) -->
+    <path
+        android:fillColor="#E2E8F0"
+        android:pathData="M48,22 A30,30 0 1,0 48,82 A30,30 0 1,0 48,22 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M48,25 A27,27 0 1,0 48,79 A27,27 0 1,0 48,25 Z" />
+    <path
+        android:fillColor="#F8FAFC"
+        android:pathData="M48,29 A23,23 0 1,0 48,75 A23,23 0 1,0 48,29 Z" />
+
+    <!-- Toast Bread Slice (Left Side of Plate) -->
+    <path
+        android:fillColor="#D97706"
+        android:pathData="M26,38 C28,34 32,34 35,36 C38,34 42,34 44,38 L43,62 C43,64 41,66 39,66 L29,66 C27,66 25,64 25,62 Z" />
+    <path
+        android:fillColor="#FDE68A"
+        android:pathData="M28,40 C30,37 32,37 35,38 C38,37 40,37 42,40 L41,60 C41,62 39,63 38,63 L30,63 C29,63 27,62 27,60 Z" />
+
+    <!-- Sunny-Side-Up Fried Egg (Egg White) -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M56,36 C64,36 72,40 72,49 C72,58 65,66 56,66 C47,66 43,58 43,49 C43,42 49,36 56,36 Z" />
+    <path
+        android:fillColor="#F1F5F9"
+        android:pathData="M56,39 C62,39 69,42 69,49 C69,56 63,63 56,63 C49,63 46,56 46,49 C46,43 51,39 56,39 Z" />
+    <!-- Bright Yellow Egg Yolk -->
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M58,45 A8,8 0 1,0 58,61 A8,8 0 1,0 58,45 Z" />
+    <path
+        android:fillColor="#FDE047"
+        android:pathData="M58,47 A6,6 0 1,0 58,59 A6,6 0 1,0 58,47 Z" />
+    <!-- Yolk White Specular Highlight -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M60,49 A2,2 0 1,0 60,53 A2,2 0 1,0 60,49 Z" />
+</vector>

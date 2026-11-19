@@ -1,0 +1,47 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Bright Orange/Yellow) -->
+    <path
+        android:fillColor="#FFF7ED"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Bento Box Outer Case (Lacquered Red/Amber) -->
+    <path
+        android:fillColor="#C2410C"
+        android:pathData="M18,24 L78,24 C81.3,24 84,26.7 84,30 L84,72 C84,75.3 81.3,78 78,78 L18,78 C14.7,78 12,75.3 12,72 L12,30 C12,26.7 14.7,24 18,24 Z" />
+    <path
+        android:fillColor="#EA580C"
+        android:pathData="M20,27 L76,27 C78.2,27 80,28.8 80,31 L80,69 C80,71.2 78.2,73 76,73 L20,73 C17.8,73 16,71.2 16,69 L16,31 C16,28.8 17.8,27 20,27 Z" />
+    <!-- Bento Interior Cavity (Dark) -->
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="M22,30 L74,30 L74,70 L22,70 Z" />
+
+    <!-- Left Compartment: Steamed Rice with Umeboshi Plum -->
+    <path
+        android:fillColor="#F8FAFC"
+        android:pathData="M24,32 L46,32 L46,68 L24,68 Z" />
+    <!-- Plum / Sesame Center -->
+    <path
+        android:fillColor="#DC2626"
+        android:pathData="M35,46 A4,4 0 1,0 35,54 A4,4 0 1,0 35,46 Z" />
+
+    <!-- Right Compartment Top: Fresh Broccoli (Green Veggies) -->
+    <path
+        android:fillColor="#16A34A"
+        android:pathData="M52,38 C52,34 56,32 60,34 C64,32 68,34 68,38 C70,40 70,44 67,46 C64,48 56,48 53,46 C50,44 50,40 52,38 Z" />
+    <path
+        android:fillColor="#22C55E"
+        android:pathData="M58,35 A3,3 0 1,0 58,41 A3,3 0 1,0 58,35 Z M64,36 A3,3 0 1,0 64,42 A3,3 0 1,0 64,36 Z" />
+
+    <!-- Right Compartment Bottom: Golden Fried Dumpling / Karaage -->
+    <path
+        android:fillColor="#D97706"
+        android:pathData="M50,56 C50,52 56,50 64,50 C72,50 74,54 74,59 C74,65 68,68 60,68 C53,68 50,62 50,56 Z" />
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M53,55 C53,53 58,52 64,52 C69,52 71,55 71,58 C71,62 67,65 61,65 C55,65 53,60 53,55 Z" />
+</vector>

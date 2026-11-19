@@ -1,0 +1,40 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Emerald Teal) -->
+    <path
+        android:fillColor="#ECFDF5"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Calendar Backplate -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M18,24 L78,24 C81.3,24 84,26.7 84,30 L84,78 C84,81.3 81.3,84 78,84 L18,84 C14.7,84 12,81.3 12,78 L12,30 C12,26.7 14.7,24 18,24 Z" />
+    <path
+        android:fillColor="#A7F3D0"
+        android:pathData="M14,32 L82,32 L82,78 C82,80.2 80.2,82 78,82 L18,82 C15.8,82 14,80.2 14,78 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M16,34 L80,34 L80,76 C80,78.2 78.2,80 76,80 L20,80 C17.8,80 16,78.2 16,76 Z" />
+
+    <!-- Calendar Header (Teal Green) -->
+    <path
+        android:fillColor="#059669"
+        android:pathData="M18,20 L78,20 C81.3,20 84,22.7 84,26 L84,34 L12,34 L12,26 C12,22.7 14.7,20 18,20 Z" />
+    <!-- Binder Rings -->
+    <path
+        android:fillColor="#065F46"
+        android:pathData="M26,14 L30,14 L30,24 L26,24 Z M66,14 L70,14 L70,24 L66,24 Z" />
+
+    <!-- 12-Month Mini Grid on Page -->
+    <path
+        android:fillColor="#6EE7B7"
+        android:pathData="M22,42 L34,42 L34,48 L22,48 Z M38,42 L50,42 L50,48 L38,48 Z M54,42 L66,42 L66,48 L54,48 Z M22,52 L34,52 L34,58 L22,58 Z M38,52 L50,52 L50,58 L38,58 Z M54,52 L66,52 L66,58 L54,58 Z M22,62 L34,62 L34,68 L22,68 Z M38,62 L50,62 L50,68 L38,68 Z M54,62 L66,62 L66,68 L54,68 Z" />
+
+    <!-- Year Badge "YEAR" Banner across bottom -->
+    <path
+        android:fillColor="#047857"
+        android:pathData="M26,72 L70,72 L68,78 L28,78 Z" />
+</vector>

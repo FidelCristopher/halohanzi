@@ -1,0 +1,46 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Soft Amber Triad) -->
+    <path
+        android:fillColor="#FEF3C7"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Clock Outer Rim -->
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="M48,16 A32,32 0 1,0 48,80 A32,32 0 1,0 48,16 Z" />
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M48,19 A29,29 0 1,0 48,77 A29,29 0 1,0 48,19 Z" />
+    <!-- Clock Face White Base -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M48,22 A26,26 0 1,0 48,74 A26,26 0 1,0 48,22 Z" />
+
+    <!-- Shaded Half Pie (Right 180 degrees: 12 to 6 o'clock = 30 minutes / 半) -->
+    <path
+        android:fillColor="#FDE68A"
+        android:pathData="M48,22 C62.3,22 74,33.7 74,48 C74,62.3 62.3,74 48,74 Z" />
+
+    <!-- Hour Ticks -->
+    <path
+        android:fillColor="#64748B"
+        android:pathData="M46.5,25 L49.5,25 L49.5,30 L46.5,30 Z M46.5,66 L49.5,66 L49.5,71 L46.5,71 Z" />
+
+    <!-- Minute Hand pointing down at 6 (30 min / 半) -->
+    <path
+        android:fillColor="#D97706"
+        android:pathData="M46.5,48 L49.5,48 L49.5,66 L46.5,66 Z" />
+    <!-- Hour Hand pointing at 1 (1:30) -->
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="M46.5,46.5 L49.5,46.5 L56,36 L54,34 Z" />
+
+    <!-- Center Pin -->
+    <path
+        android:fillColor="#B45309"
+        android:pathData="M48,45 A3,3 0 1,0 48,51 A3,3 0 1,0 48,45 Z" />
+</vector>

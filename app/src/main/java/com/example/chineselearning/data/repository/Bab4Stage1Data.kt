@@ -18,10 +18,10 @@ val bab4Stage1Part1Exercises = listOf(
         correctAnswer = "hari ini",
         audioToSpeak = "今天",
         pictureOptions = listOf(
-            PictureOption("u4_s1_p1_opt1", "hari ini", "📅", R.drawable.ic_story_timer, true),
-            PictureOption("u4_s1_p1_opt2", "kemarin", "⏮️", R.drawable.ic_book, false),
-            PictureOption("u4_s1_p1_opt3", "besok", "⏭️", R.drawable.ic_target, false),
-            PictureOption("u4_s1_p1_opt4", "tahun lalu", "🗓️", R.drawable.ic_pouch, false)
+            PictureOption("u4_s1_p1_opt1", "hari ini", "", R.drawable.ic_cal_today, true),
+            PictureOption("u4_s1_p1_opt2", "kemarin", "", R.drawable.ic_cal_yesterday, false),
+            PictureOption("u4_s1_p1_opt3", "besok", "", R.drawable.ic_cal_tomorrow, false),
+            PictureOption("u4_s1_p1_opt4", "minggu", "", R.drawable.ic_cal_week, false)
         )
     ),
 
@@ -108,10 +108,10 @@ val bab4Stage1Part1Exercises = listOf(
         correctAnswer = "kemarin",
         audioToSpeak = "昨天",
         pictureOptions = listOf(
-            PictureOption("u4_s1_p1_opt7_1", "kemarin", "⏮️", R.drawable.ic_book, true),
-            PictureOption("u4_s1_p1_opt7_2", "hari ini", "📅", R.drawable.ic_story_timer, false),
-            PictureOption("u4_s1_p1_opt7_3", "besok", "⏭️", R.drawable.ic_crown, false),
-            PictureOption("u4_s1_p1_opt7_4", "minggu", "🗓️", R.drawable.ic_cap, false)
+            PictureOption("u4_s1_p1_opt7_1", "kemarin", "", R.drawable.ic_cal_yesterday, true),
+            PictureOption("u4_s1_p1_opt7_2", "hari ini", "", R.drawable.ic_cal_today, false),
+            PictureOption("u4_s1_p1_opt7_3", "besok", "", R.drawable.ic_cal_tomorrow, false),
+            PictureOption("u4_s1_p1_opt7_4", "minggu", "", R.drawable.ic_cal_week, false)
         )
     ),
 
@@ -169,10 +169,10 @@ val bab4Stage1Part2Exercises = listOf(
         correctAnswer = "minggu / pekan",
         audioToSpeak = "星期",
         pictureOptions = listOf(
-            PictureOption("u4_s1_p2_opt1", "minggu / pekan", "🗓️", R.drawable.ic_story_timer, true),
-            PictureOption("u4_s1_p2_opt2", "tahun", "📆", R.drawable.ic_book, false),
-            PictureOption("u4_s1_p2_opt3", "bulan", "🌙", R.drawable.ic_crown, false),
-            PictureOption("u4_s1_p2_opt4", "hari ini", "☀️", R.drawable.ic_pouch, false)
+            PictureOption("u4_s1_p2_opt1", "minggu / pekan", "", R.drawable.ic_cal_week, true),
+            PictureOption("u4_s1_p2_opt2", "tahun", "", R.drawable.ic_cal_year, false),
+            PictureOption("u4_s1_p2_opt3", "bulan", "", R.drawable.ic_cal_month, false),
+            PictureOption("u4_s1_p2_opt4", "hari ini", "", R.drawable.ic_cal_today, false)
         )
     ),
 
@@ -286,10 +286,10 @@ val bab4Stage1Part2Exercises = listOf(
         correctAnswer = "hari Minggu",
         audioToSpeak = "星期天",
         pictureOptions = listOf(
-            PictureOption("u4_s1_p2_opt9_1", "hari Minggu", "☀️", R.drawable.ic_story_timer, true),
-            PictureOption("u4_s1_p2_opt9_2", "hari Senin", "💼", R.drawable.ic_book, false),
-            PictureOption("u4_s1_p2_opt9_3", "hari Sabtu", "🏖️", R.drawable.ic_target, false),
-            PictureOption("u4_s1_p2_opt9_4", "hari Jumat", "🕌", R.drawable.ic_coin, false)
+            PictureOption("u4_s1_p2_opt9_1", "hari Minggu", "", R.drawable.ic_cal_sunday, true),
+            PictureOption("u4_s1_p2_opt9_2", "hari ini", "", R.drawable.ic_cal_today, false),
+            PictureOption("u4_s1_p2_opt9_3", "besok", "", R.drawable.ic_cal_tomorrow, false),
+            PictureOption("u4_s1_p2_opt9_4", "kemarin", "", R.drawable.ic_cal_yesterday, false)
         )
     ),
 

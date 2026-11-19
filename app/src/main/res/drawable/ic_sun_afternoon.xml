@@ -1,0 +1,33 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Sunset Orange/Rose) -->
+    <path
+        android:fillColor="#FFF1F2"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Dusk Sunset Horizon Band -->
+    <path
+        android:fillColor="#FDA4AF"
+        android:pathData="M16,52 L80,52 L80,74 C80,77.3 77.3,80 74,80 L22,80 C18.7,80 16,77.3 16,74 Z" />
+
+    <!-- Setting Sun (Warm Coral/Rose) dipping into horizon -->
+    <path
+        android:fillColor="#E11D48"
+        android:pathData="M48,32 C58,32 66,39 67,48 L29,48 C30,39 38,32 48,32 Z" />
+    <path
+        android:fillColor="#FB7185"
+        android:pathData="M48,36 C54,36 60,41 61,48 L35,48 C36,41 42,36 48,36 Z" />
+
+    <!-- Evening Dusk Clouds -->
+    <path
+        android:fillColor="#F43F5E"
+        android:pathData="M20,60 L76,60 L76,63 L20,63 Z M26,67 L70,67 L70,70 L26,70 Z M32,74 L64,74 L64,76 L32,76 Z" />
+
+    <!-- Distant Mountain Silhouettes -->
+    <path
+        android:fillColor="#881337"
+        android:pathData="M16,56 L34,44 L46,54 L62,42 L80,56 L80,62 L16,62 Z" />
+</vector>

@@ -18,10 +18,10 @@ val bab4Stage5Part1Exercises = listOf(
         correctAnswer = "sampai jumpa besok",
         audioToSpeak = "明天见",
         pictureOptions = listOf(
-            PictureOption("u4_s5_p1_opt1", "sampai jumpa besok", "👋", R.drawable.ic_hand_wave, true),
-            PictureOption("u4_s5_p1_opt2", "terima kasih", "🙏", R.drawable.ic_handshake, false),
-            PictureOption("u4_s5_p1_opt3", "selamat tinggal", "🚪", R.drawable.ic_story_timer, false),
-            PictureOption("u4_s5_p1_opt4", "sama-sama", "😊", R.drawable.ic_crown, false)
+            PictureOption("u4_s5_p1_opt1", "sampai jumpa besok", "", R.drawable.ic_hand_wave, true),
+            PictureOption("u4_s5_p1_opt2", "terima kasih", "", R.drawable.ic_handshake, false),
+            PictureOption("u4_s5_p1_opt3", "besok", "", R.drawable.ic_cal_tomorrow, false),
+            PictureOption("u4_s5_p1_opt4", "hari ini", "", R.drawable.ic_cal_today, false)
         )
     ),
 
@@ -108,10 +108,10 @@ val bab4Stage5Part1Exercises = listOf(
         correctAnswer = "sampai jumpa hari Minggu",
         audioToSpeak = "星期日见",
         pictureOptions = listOf(
-            PictureOption("u4_s5_p1_opt7_1", "sampai jumpa hari Minggu", "👋", R.drawable.ic_hand_wave, true),
-            PictureOption("u4_s5_p1_opt7_2", "hari ini", "📅", R.drawable.ic_story_timer, false),
-            PictureOption("u4_s5_p1_opt7_3", "belajar", "📖", R.drawable.ic_book, false),
-            PictureOption("u4_s5_p1_opt7_4", "sekolah", "🏫", R.drawable.ic_cap, false)
+            PictureOption("u4_s5_p1_opt7_1", "sampai jumpa hari Minggu", "", R.drawable.ic_cal_sunday, true),
+            PictureOption("u4_s5_p1_opt7_2", "hari ini", "", R.drawable.ic_cal_today, false),
+            PictureOption("u4_s5_p1_opt7_3", "belajar", "", R.drawable.ic_book_chinese, false),
+            PictureOption("u4_s5_p1_opt7_4", "kemarin", "", R.drawable.ic_cal_yesterday, false)
         )
     ),
 
@@ -169,10 +169,10 @@ val bab4Stage5Part2Exercises = listOf(
         correctAnswer = "sekarang",
         audioToSpeak = "现在",
         pictureOptions = listOf(
-            PictureOption("u4_s5_p2_opt1", "sekarang", "⏰", R.drawable.ic_story_timer, true),
-            PictureOption("u4_s5_p2_opt2", "nanti", "⏳", R.drawable.ic_book, false),
-            PictureOption("u4_s5_p2_opt3", "kemarin", "⏮️", R.drawable.ic_target, false),
-            PictureOption("u4_s5_p2_opt4", "besok", "⏭️", R.drawable.ic_crown, false)
+            PictureOption("u4_s5_p2_opt1", "sekarang", "", R.drawable.ic_time_now, true),
+            PictureOption("u4_s5_p2_opt2", "jam (durasi)", "", R.drawable.ic_hourglass_duration, false),
+            PictureOption("u4_s5_p2_opt3", "kemarin", "", R.drawable.ic_cal_yesterday, false),
+            PictureOption("u4_s5_p2_opt4", "besok", "", R.drawable.ic_cal_tomorrow, false)
         )
     ),
 
@@ -259,10 +259,10 @@ val bab4Stage5Part2Exercises = listOf(
         correctAnswer = "hari Sabtu",
         audioToSpeak = "星期六",
         pictureOptions = listOf(
-            PictureOption("u4_s5_p2_opt7_1", "hari Sabtu", "🏖️", R.drawable.ic_story_timer, true),
-            PictureOption("u4_s5_p2_opt7_2", "hari Senin", "💼", R.drawable.ic_book, false),
-            PictureOption("u4_s5_p2_opt7_3", "hari Rabu", "🗓️", R.drawable.ic_crown, false),
-            PictureOption("u4_s5_p2_opt7_4", "hari Minggu", "☀️", R.drawable.ic_target, false)
+            PictureOption("u4_s5_p2_opt7_1", "minggu / pekan", "", R.drawable.ic_cal_week, true),
+            PictureOption("u4_s5_p2_opt7_2", "hari ini", "", R.drawable.ic_cal_today, false),
+            PictureOption("u4_s5_p2_opt7_3", "hari Minggu", "", R.drawable.ic_cal_sunday, false),
+            PictureOption("u4_s5_p2_opt7_4", "besok", "", R.drawable.ic_cal_tomorrow, false)
         )
     ),
 

@@ -1,0 +1,36 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Morning Sky Peach/Yellow) -->
+    <path
+        android:fillColor="#FFFBEB"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Morning Horizon Sky Gradient Base (Soft Orange) -->
+    <path
+        android:fillColor="#FED7AA"
+        android:pathData="M16,56 L80,56 L80,74 C80,77.3 77.3,80 74,80 L22,80 C18.7,80 16,77.3 16,74 Z" />
+
+    <!-- Rising Sun (Half Sun Emerging from Horizon) -->
+    <path
+        android:fillColor="#F97316"
+        android:pathData="M48,34 C58,34 66,42 67,52 L29,52 C30,42 38,34 48,34 Z" />
+    <path
+        android:fillColor="#FDE047"
+        android:pathData="M48,38 C55,38 61,44 62,52 L34,52 C35,44 41,38 48,38 Z" />
+
+    <!-- Sunrise Rays Emanating Upward -->
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M46.5,22 L49.5,22 L49.5,30 L46.5,30 Z M28,32 L34,36 L32.5,38.5 L26.5,34.5 Z M68,32 L70,34.5 L64,38.5 L62.5,36 Z M18,48 L26,48 L26,51 L18,51 Z M70,48 L78,48 L78,51 L70,51 Z" />
+
+    <!-- Green Rolling Hills in Foreground -->
+    <path
+        android:fillColor="#10B981"
+        android:pathData="M16,58 C26,52 38,56 46,62 C54,54 68,52 80,58 L80,76 C80,78.2 78.2,80 76,80 L20,80 C17.8,80 16,78.2 16,76 Z" />
+    <path
+        android:fillColor="#059669"
+        android:pathData="M16,68 C28,62 44,66 56,72 L80,70 L80,76 C80,78.2 78.2,80 76,80 L20,80 C17.8,80 16,78.2 16,76 Z" />
+</vector>

@@ -18,10 +18,10 @@ val bab4Stage4Part1Exercises = listOf(
         correctAnswer = "jam (durasi)",
         audioToSpeak = "小时",
         pictureOptions = listOf(
-            PictureOption("u4_s4_p1_opt1", "jam (durasi)", "⏳", R.drawable.ic_story_timer, true),
-            PictureOption("u4_s4_p1_opt2", "menit", "⏱️", R.drawable.ic_target, false),
-            PictureOption("u4_s4_p1_opt3", "hari", "📅", R.drawable.ic_book, false),
-            PictureOption("u4_s4_p1_opt4", "tahun", "🗓️", R.drawable.ic_crown, false)
+            PictureOption("u4_s4_p1_opt1", "jam (durasi)", "", R.drawable.ic_hourglass_duration, true),
+            PictureOption("u4_s4_p1_opt2", "menit", "", R.drawable.ic_stopwatch_min, false),
+            PictureOption("u4_s4_p1_opt3", "tanggal", "", R.drawable.ic_cal_date, false),
+            PictureOption("u4_s4_p1_opt4", "tahun", "", R.drawable.ic_cal_year, false)
         )
     ),
 
@@ -108,10 +108,10 @@ val bab4Stage4Part1Exercises = listOf(
         correctAnswer = "waktu",
         audioToSpeak = "时间",
         pictureOptions = listOf(
-            PictureOption("u4_s4_p1_opt7_1", "waktu", "⌚", R.drawable.ic_story_timer, true),
-            PictureOption("u4_s4_p1_opt7_2", "tempat", "📍", R.drawable.ic_target, false),
-            PictureOption("u4_s4_p1_opt7_3", "buku", "📖", R.drawable.ic_book, false),
-            PictureOption("u4_s4_p1_opt7_4", "orang", "👥", R.drawable.ic_people_group, false)
+            PictureOption("u4_s4_p1_opt7_1", "waktu", "", R.drawable.ic_time_moment, true),
+            PictureOption("u4_s4_p1_opt7_2", "jam (pukul)", "", R.drawable.ic_clock_analog, false),
+            PictureOption("u4_s4_p1_opt7_3", "buku", "", R.drawable.ic_book_chinese, false),
+            PictureOption("u4_s4_p1_opt7_4", "orang", "", R.drawable.ic_person_single, false)
         )
     ),
 
@@ -169,10 +169,10 @@ val bab4Stage4Part2Exercises = listOf(
         correctAnswer = "kapan",
         audioToSpeak = "什么时候",
         pictureOptions = listOf(
-            PictureOption("u4_s4_p2_opt1", "kapan", "❓", R.drawable.ic_story_timer, true),
-            PictureOption("u4_s4_p2_opt2", "siapa", "👤", R.drawable.ic_person_saya, false),
-            PictureOption("u4_s4_p2_opt3", "di mana", "📍", R.drawable.ic_target, false),
-            PictureOption("u4_s4_p2_opt4", "berapa", "🔢", R.drawable.ic_coin, false)
+            PictureOption("u4_s4_p2_opt1", "kapan", "", R.drawable.ic_question_when, true),
+            PictureOption("u4_s4_p2_opt2", "siapa", "", R.drawable.ic_person_single, false),
+            PictureOption("u4_s4_p2_opt3", "waktu", "", R.drawable.ic_time_moment, false),
+            PictureOption("u4_s4_p2_opt4", "berapa", "", R.drawable.ic_question_quantity, false)
         )
     ),
 
@@ -259,10 +259,10 @@ val bab4Stage4Part2Exercises = listOf(
         correctAnswer = "saat / waktu",
         audioToSpeak = "时候",
         pictureOptions = listOf(
-            PictureOption("u4_s4_p2_opt7_1", "saat / waktu", "⏰", R.drawable.ic_story_timer, true),
-            PictureOption("u4_s4_p2_opt7_2", "tempat", "📍", R.drawable.ic_target, false),
-            PictureOption("u4_s4_p2_opt7_3", "orang", "👤", R.drawable.ic_person_guru, false),
-            PictureOption("u4_s4_p2_opt7_4", "buku", "📚", R.drawable.ic_book, false)
+            PictureOption("u4_s4_p2_opt7_1", "saat / waktu", "", R.drawable.ic_time_moment, true),
+            PictureOption("u4_s4_p2_opt7_2", "jam (durasi)", "", R.drawable.ic_hourglass_duration, false),
+            PictureOption("u4_s4_p2_opt7_3", "orang", "", R.drawable.ic_person_single, false),
+            PictureOption("u4_s4_p2_opt7_4", "buku", "", R.drawable.ic_book_chinese, false)
         )
     ),
 

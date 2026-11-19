@@ -1,0 +1,39 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Bright Sky Blue) -->
+    <path
+        android:fillColor="#E0F2FE"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Calendar Backplate -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M18,24 L78,24 C81.3,24 84,26.7 84,30 L84,78 C84,81.3 81.3,84 78,84 L18,84 C14.7,84 12,81.3 12,78 L12,30 C12,26.7 14.7,24 18,24 Z" />
+    <path
+        android:fillColor="#BAE6FD"
+        android:pathData="M14,32 L82,32 L82,78 C82,80.2 80.2,82 78,82 L18,82 C15.8,82 14,80.2 14,78 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M16,34 L80,34 L80,76 C80,78.2 78.2,80 76,80 L20,80 C17.8,80 16,78.2 16,76 Z" />
+
+    <!-- Calendar Header (Vibrant Sky Blue) -->
+    <path
+        android:fillColor="#0284C7"
+        android:pathData="M18,20 L78,20 C81.3,20 84,22.7 84,26 L84,34 L12,34 L12,26 C12,22.7 14.7,20 18,20 Z" />
+    <!-- Binder Rings -->
+    <path
+        android:fillColor="#0369A1"
+        android:pathData="M26,14 L30,14 L30,24 L26,24 Z M66,14 L70,14 L70,24 L66,24 Z" />
+
+    <!-- Forward / Fast-Forward Arrow Circle (Tomorrow) -->
+    <path
+        android:fillColor="#E0F2FE"
+        android:pathData="M48,42 A18,18 0 1,0 48,78 A18,18 0 1,0 48,42 Z" />
+    <!-- Fast-Forward Double Arrow (⏭️ vector form) -->
+    <path
+        android:fillColor="#0284C7"
+        android:pathData="M40,50 L48,58 L40,66 L40,60 L40,56 Z M54,50 L62,58 L54,66 L54,60 L54,56 Z M62,50 L66,50 L66,66 L62,66 Z" />
+</vector>

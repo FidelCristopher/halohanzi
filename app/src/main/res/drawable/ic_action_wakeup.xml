@@ -1,0 +1,51 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Morning Yellow) -->
+    <path
+        android:fillColor="#FEF3C7"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Alarm Clock Twin Bells -->
+    <path
+        android:fillColor="#D97706"
+        android:pathData="M25,23 C22,26 21,31 22,35 L33,28 C31,25 28,23 25,23 Z M71,23 C74,26 75,31 74,35 L63,28 C65,25 68,23 71,23 Z" />
+    <!-- Clock Legs -->
+    <path
+        android:fillColor="#78350F"
+        android:pathData="M28,68 L22,78 L26,80 L32,71 Z M68,68 L74,78 L70,80 L64,71 Z" />
+    <!-- Top Hammer -->
+    <path
+        android:fillColor="#B45309"
+        android:pathData="M46,16 L50,16 L50,22 L46,22 Z" />
+
+    <!-- Clock Body Outer -->
+    <path
+        android:fillColor="#EA580C"
+        android:pathData="M48,22 A27,27 0 1,0 48,76 A27,27 0 1,0 48,22 Z" />
+    <path
+        android:fillColor="#FDBA74"
+        android:pathData="M48,25 A24,24 0 1,0 48,73 A24,24 0 1,0 48,25 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M48,28 A21,21 0 1,0 48,70 A21,21 0 1,0 48,28 Z" />
+
+    <!-- Ringing Vibrations / Sound Waves -->
+    <path
+        android:fillColor="#EA580C"
+        android:pathData="M16,28 C14,32 14,37 16,41 L19,39 C17.5,36 17.5,33 19,30 Z M80,28 C82,32 82,37 80,41 L77,39 C78.5,36 78.5,33 77,30 Z" />
+
+    <!-- Clock Hands (Alarm ringing at 7:00 AM) -->
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="M46.5,34 L49.5,34 L49.5,49 L46.5,49 Z" />
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="M46.5,47.5 L49.5,47.5 L43,60 L40.5,58.5 Z" />
+    <!-- Center Dot -->
+    <path
+        android:fillColor="#EA580C"
+        android:pathData="M48,46 A3,3 0 1,0 48,52 A3,3 0 1,0 48,46 Z" />
+</vector>

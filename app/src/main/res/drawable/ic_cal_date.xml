@@ -1,0 +1,40 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Warm Amber) -->
+    <path
+        android:fillColor="#FEF3C7"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Calendar Backplate -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M18,24 L78,24 C81.3,24 84,26.7 84,30 L84,78 C84,81.3 81.3,84 78,84 L18,84 C14.7,84 12,81.3 12,78 L12,30 C12,26.7 14.7,24 18,24 Z" />
+    <path
+        android:fillColor="#FDE68A"
+        android:pathData="M14,32 L82,32 L82,78 C82,80.2 80.2,82 78,82 L18,82 C15.8,82 14,80.2 14,78 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M16,34 L80,34 L80,76 C80,78.2 78.2,80 76,80 L20,80 C17.8,80 16,78.2 16,76 Z" />
+
+    <!-- Calendar Header (Amber) -->
+    <path
+        android:fillColor="#D97706"
+        android:pathData="M18,20 L78,20 C81.3,20 84,22.7 84,26 L84,34 L12,34 L12,26 C12,22.7 14.7,20 18,20 Z" />
+    <!-- Binder Rings -->
+    <path
+        android:fillColor="#92400E"
+        android:pathData="M26,14 L30,14 L30,24 L26,24 Z M66,14 L70,14 L70,24 L66,24 Z" />
+
+    <!-- Bold Date Number "25" (号 / 日) -->
+    <!-- "2" -->
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="M31,50 C31,45 35,42 40,42 C45,42 49,45 49,50 C49,55 45,59 38,67 L50,67 L50,72 L30,72 L30,68 L42,54 C44,51 45,49 45,48 C45,45 43,44 40,44 C37,44 35,46 35,49 Z" />
+    <!-- "5" -->
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="M54,43 L67,43 L67,47 L58,47 L56,54 C58,53 60,52 62,52 C66,52 70,55 70,61 C70,67 66,72 61,72 C56,72 53,69 52,64 L56,63 C57,66 59,68 61,68 C64,68 66,65 66,61 C66,57 63,55 60,55 C58,55 56,56 55,58 L52,56 Z" />
+</vector>
