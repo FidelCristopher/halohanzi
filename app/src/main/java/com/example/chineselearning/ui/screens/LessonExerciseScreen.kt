@@ -317,39 +317,50 @@ fun LessonExerciseScreen(
                         enter = fadeIn() + scaleIn(),
                         exit = fadeOut()
                     ) {
-                        val remaining = totalExercises - currentExerciseIdx
-                        if (remaining == 1) {
+                        if (isReviewMode) {
+                            val revRemaining = (wrongExercises.size - currentReviewIdx).coerceAtLeast(1)
                             Text(
-                                text = "Satu lagi!",
-                                color = Color(0xFFE53935),
-                                fontWeight = FontWeight.Bold,
-                                fontStyle = FontStyle.Italic,
-                                fontSize = 14.sp
-                            )
-                        } else if (remaining <= 3) {
-                            Text(
-                                text = "$remaining soal lagi sempurna!",
-                                color = Color(0xFFE53935),
+                                text = if (revRemaining <= 1) "Soal perbaikan terakhir!" else "$revRemaining soal perbaikan lagi!",
+                                color = Color(0xFFFF9800),
                                 fontWeight = FontWeight.Bold,
                                 fontStyle = FontStyle.Italic,
                                 fontSize = 13.sp
                             )
-                        } else if (comboCount > 1) {
-                            Text(
-                                text = "Combo x$comboCount!",
-                                color = Color(0xFFFF9800),
-                                fontWeight = FontWeight.Bold,
-                                fontStyle = FontStyle.Italic,
-                                fontSize = 14.sp
-                            )
                         } else {
-                            Text(
-                                text = "$remaining soal lagi sempurna!",
-                                color = Color(0xFFE91E63),
-                                fontWeight = FontWeight.Bold,
-                                fontStyle = FontStyle.Italic,
-                                fontSize = 12.sp
-                            )
+                            val remaining = (mainExercises.size - currentExerciseIdx).coerceAtLeast(1)
+                            if (remaining == 1) {
+                                Text(
+                                    text = "Satu lagi!",
+                                    color = Color(0xFFE53935),
+                                    fontWeight = FontWeight.Bold,
+                                    fontStyle = FontStyle.Italic,
+                                    fontSize = 14.sp
+                                )
+                            } else if (remaining <= 3) {
+                                Text(
+                                    text = "$remaining soal lagi sempurna!",
+                                    color = Color(0xFFE53935),
+                                    fontWeight = FontWeight.Bold,
+                                    fontStyle = FontStyle.Italic,
+                                    fontSize = 13.sp
+                                )
+                            } else if (comboCount > 1) {
+                                Text(
+                                    text = "Combo x$comboCount!",
+                                    color = Color(0xFFFF9800),
+                                    fontWeight = FontWeight.Bold,
+                                    fontStyle = FontStyle.Italic,
+                                    fontSize = 14.sp
+                                )
+                            } else {
+                                Text(
+                                    text = "$remaining soal lagi sempurna!",
+                                    color = Color(0xFFE91E63),
+                                    fontWeight = FontWeight.Bold,
+                                    fontStyle = FontStyle.Italic,
+                                    fontSize = 12.sp
+                                )
+                            }
                         }
                     }
 
