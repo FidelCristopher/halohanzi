@@ -45,6 +45,9 @@ import com.example.chineselearning.ui.components.shake
 import com.example.chineselearning.ui.theme.*
 import androidx.compose.ui.platform.LocalHapticFeedback
 import androidx.compose.ui.hapticfeedback.HapticFeedbackType
+import com.example.chineselearning.audio.SoundFxManager
+import com.example.chineselearning.data.model.Exercise
+import kotlin.math.roundToInt
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
@@ -57,10 +60,27 @@ fun LessonExerciseScreen(
     onFinish: () -> Unit,
     onBackClick: () -> Unit
 ) {
-    val exercisesList = remember(lesson, partNumber) { lesson.getExercisesForPart(partNumber) }
+    val mainExercises = remember(lesson, partNumber) { lesson.getExercisesForPart(partNumber) }
+    val wrongExercises = remember { mutableStateListOf<Exercise>() }
+    var isReviewMode by remember { mutableStateOf(false) }
     var currentExerciseIdx by remember { mutableStateOf(0) }
-    val totalExercises = exercisesList.size
-    val isLastExercise = currentExerciseIdx >= totalExercises - 1
+    var currentReviewIdx by remember { mutableStateOf(0) }
+
+    // Evaluasi akurasi percobaan pertama
+    var firstAttemptCorrectCount by remember { mutableStateOf(0) }
+    val answeredExerciseIds = remember { mutableStateListOf<String>() }
+
+    val exercise = if (!isReviewMode) {
+        mainExercises.getOrNull(currentExerciseIdx)
+    } else {
+        wrongExercises.getOrNull(currentReviewIdx)
+    }
+    val totalExercises = if (!isReviewMode) mainExercises.size else wrongExercises.size
+    val isLastExercise = if (!isReviewMode) {
+        currentExerciseIdx >= mainExercises.size - 1
+    } else {
+        currentReviewIdx >= wrongExercises.size - 1
+    }
 
     // State per exercise
     var selectedOption by remember { mutableStateOf<String?>(null) }
@@ -71,13 +91,13 @@ fun LessonExerciseScreen(
     var selectedLeftPairId by remember { mutableStateOf<String?>(null) }
     var selectedRightPairId by remember { mutableStateOf<String?>(null) }
     var matchedPairIds by remember { mutableStateOf<Set<String>>(emptySet()) }
-    var lastMatchedPairId by remember(currentExerciseIdx) { mutableStateOf<String?>(null) }
-    var wrongLeftPairId by remember(currentExerciseIdx) { mutableStateOf<String?>(null) }
-    var wrongRightPairId by remember(currentExerciseIdx) { mutableStateOf<String?>(null) }
+    var lastMatchedPairId by remember(exercise?.id) { mutableStateOf<String?>(null) }
+    var wrongLeftPairId by remember(exercise?.id) { mutableStateOf<String?>(null) }
+    var wrongRightPairId by remember(exercise?.id) { mutableStateOf<String?>(null) }
     val coroutineScope = rememberCoroutineScope()
     val hapticFeedback = LocalHapticFeedback.current
-    var shuffledRightPairs by remember(currentExerciseIdx) {
-        val currEx = exercisesList.getOrNull(currentExerciseIdx)
+    var shuffledRightPairs by remember(exercise?.id) {
+        val currEx = exercise
         val fixedOrder = when (currEx?.id) {
             "u1_p1_q8", "u1_l2_q7" -> listOf("saya", "halo", "dipanggil")
             "u1_l2_p2_q3" -> listOf("orang", "(negara) Indonesia", "(negara)\nIndonesia", "guru", "adalah", "murid")
@@ -101,17 +121,15 @@ fun LessonExerciseScreen(
     var isCorrect by remember { mutableStateOf(false) }
     var comboCount by remember { mutableStateOf(0) }
     var isLessonCompleted by remember { mutableStateOf(false) }
-    var typedPinyin by remember(currentExerciseIdx) { mutableStateOf("") }
+    var typedPinyin by remember(exercise?.id) { mutableStateOf("") }
 
-    LaunchedEffect(currentExerciseIdx) {
-        val ex = exercisesList.getOrNull(currentExerciseIdx)
+    LaunchedEffect(exercise?.id) {
+        val ex = exercise
         if (ex != null && (ex.title == "Apa yang Anda dengar?" || ex.title.startsWith("Dengarkan")) && ex.audioToSpeak.isNotBlank()) {
             delay(300)
             ttsManager?.speak(ex.audioToSpeak)
         }
     }
-
-    val exercise = exercisesList.getOrNull(currentExerciseIdx)
 
     // Check if user has selected an answer to enable "PERIKSA"
     val canCheck = when (exercise?.type) {
@@ -151,38 +169,90 @@ fun LessonExerciseScreen(
 
         if (isCorrect) {
             comboCount++
+            SoundFxManager.playCorrect()
             if (exercise.audioToSpeak.isNotBlank()) {
                 ttsManager?.speak(exercise.audioToSpeak)
             }
         } else {
             comboCount = 0
+            SoundFxManager.playIncorrect()
+            hapticFeedback.performHapticFeedback(HapticFeedbackType.LongPress)
+            // Simpan ke daftar review salah jika belum ada
+            if (!isReviewMode) {
+                if (wrongExercises.none { it.id == exercise.id }) {
+                    wrongExercises.add(exercise)
+                }
+            } else {
+                // Dalam mode review jika masih salah, pastikan tetap berada di antrean
+                if (!wrongExercises.drop(currentReviewIdx + 1).any { it.id == exercise.id }) {
+                    wrongExercises.add(exercise)
+                }
+            }
+        }
+
+        // Catat akurasi percobaan pertama (hanya di ronde utama)
+        if (!isReviewMode && !answeredExerciseIds.contains(exercise.id)) {
+            answeredExerciseIds.add(exercise.id)
+            if (isCorrect) {
+                firstAttemptCorrectCount++
+            }
         }
     }
 
+    fun resetExerciseState() {
+        selectedOption = null
+        selectedPictureId = null
+        selectedChips = emptyList()
+        selectedLeftPairId = null
+        selectedRightPairId = null
+        matchedPairIds = emptySet()
+        lastMatchedPairId = null
+        wrongLeftPairId = null
+        wrongRightPairId = null
+        isSubmitted = false
+        isCorrect = false
+        typedPinyin = ""
+    }
+
     fun nextExercise() {
-        if (isLastExercise) {
-            isLessonCompleted = true
+        if (!isReviewMode) {
+            if (currentExerciseIdx >= mainExercises.size - 1) {
+                // Bab utama selesai: periksa apakah ada soal yang perlu di-review
+                if (wrongExercises.isNotEmpty()) {
+                    isReviewMode = true
+                    currentReviewIdx = 0
+                    resetExerciseState()
+                } else {
+                    isLessonCompleted = true
+                }
+            } else {
+                currentExerciseIdx++
+                resetExerciseState()
+            }
         } else {
-            currentExerciseIdx++
-            selectedOption = null
-            selectedPictureId = null
-            selectedChips = emptyList()
-            selectedLeftPairId = null
-            selectedRightPairId = null
-            matchedPairIds = emptySet()
-            lastMatchedPairId = null
-            wrongLeftPairId = null
-            wrongRightPairId = null
-            isSubmitted = false
-            isCorrect = false
-            typedPinyin = ""
+            // Mode Review pengulangan
+            if (currentReviewIdx >= wrongExercises.size - 1) {
+                // Seluruh soal salah telah diperbaiki
+                isLessonCompleted = true
+            } else {
+                currentReviewIdx++
+                resetExerciseState()
+            }
         }
+    }
+
+    // Hitung akurasi riil dari percobaan pertama
+    val realAccuracyPercent = remember(firstAttemptCorrectCount, mainExercises.size) {
+        if (mainExercises.isNotEmpty()) {
+            ((firstAttemptCorrectCount.toFloat() / mainExercises.size.toFloat()) * 100f).roundToInt().coerceIn(0, 100)
+        } else 100
     }
 
     // CELEBRATION SCREEN
     if (isLessonCompleted) {
         LessonCelebrationScreen(
             comboCount = comboCount,
+            accuracyPercent = realAccuracyPercent,
             onContinue = onFinish
         )
         return
@@ -193,11 +263,26 @@ fun LessonExerciseScreen(
         return
     }
 
-    // Animated smooth progress bar
+    // Animated smooth progress bar dengan tween halus
+    val targetProgress = if (!isReviewMode) {
+        ((currentExerciseIdx + 1).toFloat() / mainExercises.size.toFloat()).coerceIn(0f, 1f)
+    } else {
+        val totalCombined = mainExercises.size + wrongExercises.size
+        val currentCombined = mainExercises.size + currentReviewIdx + 1
+        (currentCombined.toFloat() / totalCombined.toFloat()).coerceIn(0f, 1f)
+    }
+
     val animatedProgress by animateFloatAsState(
-        targetValue = ((currentExerciseIdx + 1).toFloat() / totalExercises.toFloat()).coerceIn(0f, 1f),
-        animationSpec = tween(durationMillis = 350, easing = FastOutSlowInEasing),
+        targetValue = targetProgress,
+        animationSpec = tween(durationMillis = 500, easing = FastOutSlowInEasing),
         label = "progressBar"
+    )
+
+    // Transisi halus: Hijau saat awal (Color(0xFF00C48C)), beralih ke Oren/Api saat streak >= 3
+    val streakFireTransition by animateFloatAsState(
+        targetValue = if (comboCount >= 3) 1f else 0f,
+        animationSpec = tween(durationMillis = 600, easing = FastOutSlowInEasing),
+        label = "streakFireTransition"
     )
 
     // Pop scale animation for checkmark on correct answer
@@ -299,17 +384,34 @@ fun LessonExerciseScreen(
                             .clip(RoundedCornerShape(5.dp))
                             .background(Color(0xFFEEEEEE))
                     ) {
+                        // Base Green Bar (Color(0xFF00C48C))
                         Box(
                             modifier = Modifier
                                 .fillMaxHeight()
                                 .fillMaxWidth(fraction = animatedProgress)
                                 .clip(RoundedCornerShape(5.dp))
-                                .background(
-                                    brush = Brush.horizontalGradient(
-                                        colors = listOf(Color(0xFFFF9800), Color(0xFFFF5722), Color(0xFFFFEB3B))
-                                    )
-                                )
+                                .background(Color(0xFF00C48C))
                         )
+
+                        // Smooth crossfade to Fire/Orange gradient on streak >= 3
+                        if (streakFireTransition > 0f) {
+                            Box(
+                                modifier = Modifier
+                                    .fillMaxHeight()
+                                    .fillMaxWidth(fraction = animatedProgress)
+                                    .clip(RoundedCornerShape(5.dp))
+                                    .graphicsLayer { alpha = streakFireTransition }
+                                    .background(
+                                        brush = Brush.horizontalGradient(
+                                            colors = listOf(
+                                                Color(0xFFFF9800),
+                                                Color(0xFFFF5722),
+                                                Color(0xFFFFEB3B)
+                                            )
+                                        )
+                                    )
+                            )
+                        }
                     }
 
                     Spacer(modifier = Modifier.width(6.dp))
@@ -488,6 +590,12 @@ fun LessonExerciseScreen(
                                 if (canCheck) {
                                     Modifier.bouncyClick {
                                         if (isMatchPairsAllDone) {
+                                            if (!isReviewMode && !answeredExerciseIds.contains(exercise.id)) {
+                                                answeredExerciseIds.add(exercise.id)
+                                                if (wrongExercises.none { it.id == exercise.id }) {
+                                                    firstAttemptCorrectCount++
+                                                }
+                                            }
                                             nextExercise()
                                         } else {
                                             submitAnswer()
@@ -517,6 +625,52 @@ fun LessonExerciseScreen(
                 .verticalScroll(rememberScrollState()),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
+            // Review Banner: 'Mari perbaiki soal yang tadi belum tepat!'
+            if (isReviewMode) {
+                Surface(
+                    shape = RoundedCornerShape(14.dp),
+                    color = Color(0xFFFFF8E1),
+                    border = androidx.compose.foundation.BorderStroke(1.2.dp, Color(0xFFFFD54F)),
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(bottom = 12.dp)
+                ) {
+                    Row(
+                        modifier = Modifier.padding(horizontal = 14.dp, vertical = 10.dp),
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        Surface(
+                            shape = CircleShape,
+                            color = Color(0xFFFFE082),
+                            modifier = Modifier.size(28.dp)
+                        ) {
+                            Box(contentAlignment = Alignment.Center) {
+                                Icon(
+                                    imageVector = Icons.Default.Refresh,
+                                    contentDescription = null,
+                                    tint = Color(0xFFE65100),
+                                    modifier = Modifier.size(18.dp)
+                                )
+                            }
+                        }
+                        Spacer(modifier = Modifier.width(10.dp))
+                        Column {
+                            Text(
+                                text = "Mari perbaiki soal yang tadi belum tepat!",
+                                fontSize = 13.sp,
+                                fontWeight = FontWeight.Bold,
+                                color = Color(0xFFE65100)
+                            )
+                            Text(
+                                text = "Soal ${currentReviewIdx + 1} dari ${wrongExercises.size} yang perlu diulang.",
+                                fontSize = 11.sp,
+                                color = Color(0xFF8D6E63)
+                            )
+                        }
+                    }
+                }
+            }
+
             // Exercise Title
             if (exercise.title.startsWith("Lengkapi percakapan dengan")) {
                 val annotatedTitle = buildAnnotatedString {
@@ -1534,6 +1688,7 @@ fun LessonExerciseScreen(
                         lastMatchedPairId = id
                         selectedLeftPairId = null
                         selectedRightPairId = null
+                        SoundFxManager.playCorrect()
                     },
                     onMatchWrong = { leftId, rightId ->
                         wrongLeftPairId = leftId
@@ -1541,6 +1696,16 @@ fun LessonExerciseScreen(
                         selectedLeftPairId = null
                         selectedRightPairId = null
                         hapticFeedback.performHapticFeedback(HapticFeedbackType.LongPress)
+                        SoundFxManager.playIncorrect()
+                        if (!isReviewMode) {
+                            if (wrongExercises.none { it.id == exercise.id }) {
+                                wrongExercises.add(exercise)
+                            }
+                        } else {
+                            if (!wrongExercises.drop(currentReviewIdx + 1).any { it.id == exercise.id }) {
+                                wrongExercises.add(exercise)
+                            }
+                        }
                         coroutineScope.launch {
                             delay(600)
                             wrongLeftPairId = null
@@ -1560,6 +1725,7 @@ fun LessonExerciseScreen(
 @Composable
 fun LessonCelebrationScreen(
     comboCount: Int,
+    accuracyPercent: Int = 100,
     onContinue: () -> Unit
 ) {
     // Entrance pulse animation
@@ -1568,6 +1734,36 @@ fun LessonCelebrationScreen(
         animationSpec = spring(dampingRatio = Spring.DampingRatioMediumBouncy, stiffness = Spring.StiffnessLow),
         label = "lionScale"
     )
+
+    // Counter ticker animation untuk Total XP dan Akurasi Riil
+    val animatedAccuracy = remember { Animatable(0f) }
+    val animatedXp = remember { Animatable(0f) }
+
+    LaunchedEffect(accuracyPercent) {
+        delay(250)
+        SoundFxManager.playCorrect()
+        launch {
+            animatedXp.animateTo(
+                targetValue = 10f,
+                animationSpec = tween(durationMillis = 800, easing = FastOutSlowInEasing)
+            )
+        }
+        launch {
+            animatedAccuracy.animateTo(
+                targetValue = accuracyPercent.toFloat(),
+                animationSpec = tween(durationMillis = 1200, easing = FastOutSlowInEasing)
+            )
+        }
+    }
+
+    val celebrationTitle = if (accuracyPercent == 100) "Bab sempurna!" else "Latihan Selesai!"
+    val celebrationSubtitle = if (accuracyPercent == 100) {
+        "Sempurna! Kamu menjawab semua soal dengan benar!"
+    } else if (accuracyPercent >= 80) {
+        "Luar biasa! Pemahamanmu sangat baik dalam bab ini!"
+    } else {
+        "Bagus! Semua soal berhasil kamu perbaiki dan selesaikan!"
+    }
 
     Column(
         modifier = Modifier
@@ -1606,7 +1802,7 @@ fun LessonCelebrationScreen(
             Spacer(modifier = Modifier.height(24.dp))
 
             Text(
-                text = "Bab sempurna!",
+                text = celebrationTitle,
                 fontSize = 28.sp,
                 fontWeight = FontWeight.Bold,
                 color = Color(0xFFFF9800)
@@ -1615,7 +1811,7 @@ fun LessonCelebrationScreen(
             Spacer(modifier = Modifier.height(8.dp))
 
             Text(
-                text = "Sempurna! Kamu menjawab semua soal dengan benar!",
+                text = celebrationSubtitle,
                 fontSize = 14.sp,
                 color = DeepNavy,
                 textAlign = TextAlign.Center
@@ -1643,7 +1839,7 @@ fun LessonCelebrationScreen(
                         Spacer(modifier = Modifier.width(12.dp))
                         Text(text = "Total XP", fontSize = 15.sp, fontWeight = FontWeight.Bold, color = DeepNavy)
                     }
-                    Text(text = "10", fontSize = 20.sp, fontWeight = FontWeight.Bold, color = Color(0xFF00C48C))
+                    Text(text = "${animatedXp.value.toInt()}", fontSize = 20.sp, fontWeight = FontWeight.Bold, color = Color(0xFF00C48C))
                 }
             }
 
@@ -1721,7 +1917,7 @@ fun LessonCelebrationScreen(
                         ) {
                             Icon(painter = painterResource(R.drawable.ic_target), contentDescription = null, tint = Color.Unspecified, modifier = Modifier.size(20.dp))
                             Spacer(modifier = Modifier.width(6.dp))
-                            Text(text = "100%", fontSize = 18.sp, fontWeight = FontWeight.Bold, color = DeepNavy)
+                            Text(text = "${animatedAccuracy.value.toInt()}%", fontSize = 18.sp, fontWeight = FontWeight.Bold, color = DeepNavy)
                         }
                     }
                 }
