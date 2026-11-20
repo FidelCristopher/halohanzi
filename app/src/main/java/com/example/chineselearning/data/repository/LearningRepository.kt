@@ -5373,6 +5373,100 @@ object LearningRepository {
                     exercisesPart2 = bab25Stage5Part2Exercises
                 )
             )
+        ),
+
+        // BAB 26: Gejala Sakit, Obat & Istirahat Pemulihan (病痛关照、药店问诊与康复疗愈)
+        UnitCourse(
+            id = "unit_26",
+            unitNumber = 26,
+            title = "Gejala Sakit & Pemulihan",
+            subtitle = "Sakit kepala, nyaman, obat, apotek, ranjang, meminta bantuan, mengabari, dan harapan sembuh",
+            bannerTitle = "Kesehatan & Pemulihan Sakit",
+            emoji = "💊",
+            level = "Level 26 (HSK 2)",
+            story = stories[25],
+            nodes = listOf(
+                PathNode("u26_n1", "Kepala & Nyeri", Color(0xFFFFC107), NodeIconType.CAP, isCompleted = false, lessonId = "u26_l1"),
+                PathNode("u26_n2", "Obat & Ranjang", Color(0xFFFFC107), NodeIconType.DUMBBELL, isCompleted = false, lessonId = "u26_l2"),
+                PathNode("u26_n3", "Minta Bantuan & Tunggu", Color(0xFFFFC107), NodeIconType.CAP, isCompleted = false, lessonId = "u26_l3"),
+                PathNode("u26_n4", "Kabar & Kesembuhan", Color(0xFFFFC107), NodeIconType.DUMBBELL, isCompleted = false, lessonId = "u26_l4"),
+                PathNode("u26_n5", "Evaluasi Pemulihan", Color(0xFFFFC107), NodeIconType.SHUFFLE, isCompleted = false, lessonId = "u26_l5"),
+                PathNode("u26_n6", "Kuis Cerita Bab 26", Color(0xFFFFC107), NodeIconType.BOOK, isCompleted = false, lessonId = "u26_l1"),
+                PathNode("u26_n7", "Checkpoint Peti", Color(0xFFFFB300), NodeIconType.CHEST, isCompleted = false, lessonId = "u26_l1"),
+                PathNode("u26_n8", "Rest area", Color(0xFF03A9F4), NodeIconType.REST_AREA, isCompleted = false, lessonId = "u26_l1")
+            ),
+            lessons = listOf(
+                Lesson(
+                    id = "u26_l1",
+                    title = "Rasa Sakit Kepala & Kenyamanan",
+                    subtitle = "Kosakata 头, 疼, dan 舒服",
+                    grammarNote = "Gejala sakit: 头 (tóu - kepala), 疼 (téng - nyeri/sakit: 头疼, 肚子疼). Kenyamanan tubuh: 舒服 (shūfu - nyaman: 身上不舒服).",
+                    newWords = listOf(
+                        Word("w26_1", "头", "tóu", "Kepala", "Tubuh", "我头有点疼，想睡一会儿。", "Wǒ tóu yǒudiǎn téng, xiǎng shuì yíhuìér.", "Kepala saya agak pusing, mau tidur sebentar."),
+                        Word("w26_2", "疼", "téng", "Sakit / nyeri", "Kata Sifat", "吃太多冰淇淋，肚子很疼。", "Chī tài duō bīngqílín, dùzi hěn téng.", "Makan terlalu banyak es krim, perut sakit."),
+                        Word("w26_3", "舒服", "shūfu", "Nyaman / enak badan", "Kata Sifat", "今天我身体不舒服。", "Jīntiān wǒ shēntǐ bù shūfu.", "Hari ini tubuh saya kurang enak.")
+                    ),
+                    exercises = bab26Stage1Part1Exercises,
+                    exercisesPart1 = bab26Stage1Part1Exercises,
+                    exercisesPart2 = bab26Stage1Part2Exercises
+                ),
+                Lesson(
+                    id = "u26_l2",
+                    title = "Membeli Obat & Istirahat Ranjang",
+                    subtitle = "Kosakata 药, 药店, dan 床",
+                    grammarNote = "Medikasi: 药 (yào - obat), 药店 (yàodiàn - apotek). Peristirahatan: 床 (chuáng - ranjang/tempat tidur: 躺在床上休息).",
+                    newWords = listOf(
+                        Word("w26_4", "药", "yào", "Obat", "Medis", "这种药一天吃三次。", "Zhè zhǒng yào yìtiān chī sān cì.", "Obat ini diminum tiga kali sehari."),
+                        Word("w26_5", "药店", "yàodiàn", "Apotek / toko obat", "Tempat", "马路对面有一家药店。", "Mǎlù duìmiàn yǒu yì jiā yàodiàn.", "Di seberang jalan ada apotek."),
+                        Word("w26_6", "床", "chuáng", "Ranjang / tempat tidur", "Barang", "病人在床上休息。", "Bìngrén zài chuáng shang xiūxi.", "Pasien beristirahat di ranjang.")
+                    ),
+                    exercises = bab26Stage2Part1Exercises,
+                    exercisesPart1 = bab26Stage2Part1Exercises,
+                    exercisesPart2 = bab26Stage2Part2Exercises
+                ),
+                Lesson(
+                    id = "u26_l3",
+                    title = "Meminta Bantuan & Tolong Menolong",
+                    subtitle = "Kosakata 帮, 帮忙, dan 等",
+                    grammarNote = "Bantuan sosial: 帮 (bāng - membantu), 帮忙 (bāngmáng - memberi pertolongan). Menunggu: 等 (děng - 等一会儿).",
+                    newWords = listOf(
+                        Word("w26_7", "帮", "bāng", "Membantu / menolong", "Kata Kerja", "你能帮我买药吗？", "Nǐ néng bāng wǒ mǎi yào ma?", "Bisakah bantu saya beli obat?"),
+                        Word("w26_8", "帮忙", "bāngmáng", "Memberi bantuan", "Kata Kerja", "谢谢你帮我的忙。", "Xièxie nǐ bāng wǒ de máng.", "Terima kasih telah membantuku."),
+                        Word("w26_9", "等", "děng", "Menunggu", "Kata Kerja", "请在药店等一会儿。", "Qǐng zài yàodiàn děng yíhuìér.", "Silakan tunggu sebentar di apotek.")
+                    ),
+                    exercises = bab26Stage3Part1Exercises,
+                    exercisesPart1 = bab26Stage3Part1Exercises,
+                    exercisesPart2 = bab26Stage3Part2Exercises
+                ),
+                Lesson(
+                    id = "u26_l4",
+                    title = "Memberi Kabar & Harapan Kesembuhan",
+                    subtitle = "Kosakata 告诉 dan 希望",
+                    grammarNote = "Penyampaian informasi: 告诉 (gàosu - mengabari). Mendoakan kesembuhan: 希望 (xīwàng - berharap: 希望你快点好起来).",
+                    newWords = listOf(
+                        Word("w26_10", "告诉", "gàosu", "Memberitahu / mengabari", "Kata Kerja", "请告诉医生我头疼。", "Qǐng gàosu yīshēng wǒ tóuténg.", "Tolong beritahu dokter saya pusing."),
+                        Word("w26_11", "希望", "xīwàng", "Berharap / semoga", "Kata Kerja", "我希望你快点好起来。", "Wǒ xīwàng nǐ kuàidiǎn hǎoqǐlai.", "Semoga kamu lekas sembuh membaik.")
+                    ),
+                    exercises = bab26Stage4Part1Exercises,
+                    exercisesPart1 = bab26Stage4Part1Exercises,
+                    exercisesPart2 = bab26Stage4Part2Exercises
+                ),
+                Lesson(
+                    id = "u26_l5",
+                    title = "Evaluasi Komprehensif Kesehatan & Perawatan",
+                    subtitle = "Review seluruh 11 kosakata gejala sakit, apotek & pemulihan",
+                    grammarNote = "Evaluasi menyeluruh Bab 26: konsultasi apotek, menjelaskan rasa sakit kepala/perut, meminum obat, meminta bantuan, dan doa kesembuhan.",
+                    newWords = listOf(
+                        Word("w26_1", "头", "tóu", "Kepala", "Tubuh", "我头疼去药店买药。", "Wǒ tóuténg qù yàodiàn mǎi yào.", "Saya pusing ke apotek beli obat."),
+                        Word("w26_3", "舒服", "shūfu", "Nyaman", "Kata Sifat", "吃了药身体很舒服。", "Chī le yào shēntǐ hěn shūfu.", "Minum obat badan jadi nyaman."),
+                        Word("w26_4", "药", "yào", "Obat", "Medis", "妈妈叫我吃药。", "Māma jiào wǒ chī yào.", "Ibu suruh saya minum obat."),
+                        Word("w26_11", "希望", "xīwàng", "Semoga", "Kata Kerja", "希望你快点好起来！", "Xīwàng nǐ kuàidiǎn hǎoqǐlai!", "Semoga lekas sembuh membaik!")
+                    ),
+                    exercises = bab26Stage5Part1Exercises,
+                    exercisesPart1 = bab26Stage5Part1Exercises,
+                    exercisesPart2 = bab26Stage5Part2Exercises
+                )
+            )
         )
     )
 }
