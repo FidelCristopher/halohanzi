@@ -11,7 +11,7 @@ class ComprehensiveExerciseAuditTest {
     fun auditAllChaptersAndStages() {
         val allUnits = LearningRepository.units
         assertNotNull("Units must not be null", allUnits)
-        assertTrue("Must have at least 2 units", allUnits.size >= 2)
+        assertEquals("Total chapters must be exactly 30 (16 HSK 1 + 14 HSK 2)", 30, allUnits.size)
 
         val errors = mutableListOf<String>()
 
