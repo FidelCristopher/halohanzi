@@ -1,0 +1,100 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Soft Warm Amber Peach) -->
+    <path
+        android:fillColor="#FEF3C7"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Solid Pedestal Base for Balance Scale (天平底座) -->
+    <path
+        android:fillColor="#92400E"
+        android:pathData="M32,76 L64,76 L66,82 L30,82 Z" />
+    <path
+        android:fillColor="#B45309"
+        android:pathData="M34,74 L62,74 L64,78 L32,78 Z" />
+    <path
+        android:fillColor="#D97706"
+        android:pathData="M40,70 L56,70 L58,74 L38,74 Z" />
+
+    <!-- Central Vertical Pillar / Fulcrum Mast -->
+    <path
+        android:fillColor="#78350F"
+        android:pathData="M46,26 L50,26 L50,70 L46,70 Z" />
+    <path
+        android:fillColor="#B45309"
+        android:pathData="M47,27 L49,27 L49,70 L47,70 Z" />
+
+    <!-- Top Finial Cap & Pivot Bearing -->
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M48,18 A4,4 0 1,0 48,26 A4,4 0 1,0 48,18 Z" />
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M48,24 A3,3 0 1,0 48,30 A3,3 0 1,0 48,24 Z" />
+
+    <!-- Tilted Horizontal Balance Beam (Demonstrating Comparison: Left High, Right Low - 比) -->
+    <!-- Beam Body (Angled at 8 degrees) -->
+    <path
+        android:fillColor="#B45309"
+        android:pathData="M19,25 L77,33 L76,36 L18,28 Z" />
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M19,26 L77,34 L76.5,35.5 L18.5,27.5 Z" />
+
+    <!-- Left & Right Beam End Eyelets -->
+    <path
+        android:fillColor="#D97706"
+        android:pathData="M19,26 A2.5,2.5 0 1,0 19,31 A2.5,2.5 0 1,0 19,26 Z M77,34 A2.5,2.5 0 1,0 77,39 A2.5,2.5 0 1,0 77,34 Z" />
+
+    <!-- Left Scale Pan Assembly (Lighter Side - Tilted Higher) -->
+    <!-- Suspension Chains Left -->
+    <path
+        android:fillColor="#64748B"
+        android:pathData="M19,30 L14,50 L15,50.5 L20,30.5 Z M19,30 L28,50 L27,50.5 L18,30.5 Z" />
+    <!-- Left Shallow Pan Dish -->
+    <path
+        android:fillColor="#D97706"
+        android:pathData="M12,50 C12,55 17,58 21,58 C25,58 30,55 30,50 Z" />
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M13,50 C13,54 17,56.5 21,56.5 C25,56.5 29,54 29,50 Z" />
+    <!-- Light Block on Left Pan (Cyan Small Weight) -->
+    <path
+        android:fillColor="#0284C7"
+        android:pathData="M18,44 L24,44 L25,50 L17,50 Z" />
+
+    <!-- Right Scale Pan Assembly (Heavier Side - Tilted Lower) -->
+    <!-- Suspension Chains Right -->
+    <path
+        android:fillColor="#64748B"
+        android:pathData="M77,38 L70,62 L71,62.5 L78,38.5 Z M77,38 L86,62 L85,62.5 L76,38.5 Z" />
+    <!-- Right Shallow Pan Dish -->
+    <path
+        android:fillColor="#D97706"
+        android:pathData="M68,62 C68,67 73,70 78,70 C83,70 88,67 88,62 Z" />
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M69,62 C69,66 73,68.5 78,68.5 C83,68.5 87,66 87,62 Z" />
+    <!-- Heavy Solid Gold & Ruby Weight on Right Pan (Causing Tilt) -->
+    <path
+        android:fillColor="#DC2626"
+        android:pathData="M73,52 L83,52 L84,62 L72,62 Z" />
+    <path
+        android:fillColor="#EF4444"
+        android:pathData="M74,53 L82,53 L83,61 L73,61 Z" />
+    <!-- Weight Top Handle Ring -->
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M78,48 A2.5,2.5 0 1,0 78,53 A2.5,2.5 0 1,0 78,48 Z" />
+
+    <!-- Comparison Indicator Chevron Arrows in Center (A 比 B) -->
+    <path
+        android:fillColor="#0284C7"
+        android:pathData="M48,40 L44,46 L46,46 L46,52 L50,52 L50,46 L52,46 Z" />
+    <path
+        android:fillColor="#38BDF8"
+        android:pathData="M48,56 L44,62 L46,62 L46,68 L50,68 L50,62 L52,62 Z" />
+</vector>

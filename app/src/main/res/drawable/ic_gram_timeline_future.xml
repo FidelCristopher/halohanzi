@@ -1,0 +1,106 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Soft Sky Lavender) -->
+    <path
+        android:fillColor="#EEF2FF"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Feathered Angel Wings of Time Spreading from Hourglass (时间之翼 - Future Fly Forward) -->
+    <!-- Left Wing -->
+    <path
+        android:fillColor="#BAE6FD"
+        android:pathData="M38,44 C26,38 18,24 16,36 C14,46 24,54 36,54 Z" />
+    <path
+        android:fillColor="#E0F2FE"
+        android:pathData="M37,45 C27,40 21,30 19,38 C17,46 25,52 35,52 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M36,46 C28,42 24,36 22,41 C21,46 27,50 34,50 Z" />
+
+    <!-- Right Wing -->
+    <path
+        android:fillColor="#BAE6FD"
+        android:pathData="M58,44 C70,38 78,24 80,36 C82,46 72,54 60,54 Z" />
+    <path
+        android:fillColor="#E0F2FE"
+        android:pathData="M59,45 C69,40 75,30 77,38 C79,46 71,52 61,52 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M60,46 C68,42 72,36 74,41 C75,46 69,50 62,50 Z" />
+
+    <!-- Wing Feather Tip Separators -->
+    <path
+        android:fillColor="#38BDF8"
+        android:pathData="M22,34 C24,40 30,46 36,48 L35,49 C28,47 22,41 20,35 Z M74,34 C72,40 66,46 60,48 L61,49 C68,47 74,41 76,35 Z" />
+
+    <!-- Classical Wooden Hourglass Frame (沙漏 - 将/将来) -->
+    <!-- Top Wooden Base Cap Plate -->
+    <path
+        android:fillColor="#78350F"
+        android:pathData="M34,22 L62,22 C63.1,22 64,22.9 64,24 L64,27 C64,28.1 63.1,29 62,29 L34,29 C32.9,29 32,28.1 32,27 L32,24 C32,22.9 32.9,22 34,22 Z" />
+    <path
+        android:fillColor="#B45309"
+        android:pathData="M35,23 L61,23 L61,28 L35,28 Z" />
+
+    <!-- Bottom Wooden Base Cap Plate -->
+    <path
+        android:fillColor="#78350F"
+        android:pathData="M34,69 L62,69 C63.1,69 64,69.9 64,71 L64,74 C64,75.1 63.1,76 62,76 L34,76 C32.9,76 32,75.1 32,74 L32,71 C32,69.9 32.9,69 34,69 Z" />
+    <path
+        android:fillColor="#B45309"
+        android:pathData="M35,70 L61,70 L61,75 L35,75 Z" />
+
+    <!-- Outer Structural Frame Support Rods (Left & Right Spindles) -->
+    <path
+        android:fillColor="#92400E"
+        android:pathData="M34,29 L37,29 L37,69 L34,69 Z M59,29 L62,29 L62,69 L59,69 Z" />
+
+    <!-- Dual Connected Glass Flask Bulbs (Hourglass Glass Contour) -->
+    <path
+        android:fillColor="#E0F2FE"
+        android:pathData="M37,29 L59,29 C59,38 52,47 49,49 C52,51 59,60 59,69 L37,69 C37,60 44,51 47,49 C44,47 37,38 37,29 Z" />
+    <path
+        android:fillColor="#F8FAFC"
+        android:pathData="M38,30 L58,30 C58,38 51.5,47 48.5,49 C51.5,51 58,60 58,68 L38,68 C38,60 44.5,51 47.5,49 C44.5,47 38,38 38,30 Z" />
+
+    <!-- Flowing Golden Sand (Time Trickling into the Future - 将来) -->
+    <!-- Top Chamber Sand (Depleting Sand Mass) -->
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M39,32 L57,32 C56,38 51,44 48,46 C45,44 40,38 39,32 Z" />
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M41,34 L55,34 C54,38 50,43 48,44.5 C46,43 42,38 41,34 Z" />
+
+    <!-- Dynamic Flowing Sand Stream (Trickling Through Narrow Center Neck) -->
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M47,46 L49,46 L49,60 L47,60 Z" />
+    <path
+        android:fillColor="#FEF08A"
+        android:pathData="M47.5,47 L48.5,47 L48.5,59 L47.5,59 Z" />
+
+    <!-- Bottom Chamber Accumulated Sand (Growing Pyramid Mass) -->
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M48,58 L56,68 L40,68 Z" />
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M48,60 L54,68 L42,68 Z" />
+
+    <!-- Glass Specular Reflection Highlight Curve -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M39,32 C39,38 43,44 45,46 L44,46.5 C42,44 38,38 38,32 Z M39,66 C39,60 43,54 45,52 L44,51.5 C42,54 38,60 38,66 Z" />
+
+    <!-- Future Timeline Arrow & Starburst Overhead (Pointing Forward into Future) -->
+    <path
+        android:fillColor="#0284C7"
+        android:pathData="M48,16 L44,20 L46,20 L46,23 L50,23 L50,20 L52,20 Z" />
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M48,10 L49.5,13 L52.5,14 L49.5,15 L48,18 L46.5,15 L43.5,14 L46.5,13 Z" />
+</vector>

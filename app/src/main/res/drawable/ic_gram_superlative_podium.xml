@@ -1,0 +1,107 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Soft Warm Yellow Cream) -->
+    <path
+        android:fillColor="#FEF3C7"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Stage Ground Line -->
+    <path
+        android:fillColor="#CBD5E1"
+        android:pathData="M14,80 L82,80 L82,83 L14,83 Z" />
+
+    <!-- Tiered Victory Champion Podium (领奖台 / 冠军 - 最) -->
+    <!-- 2nd Place Podium Block (Left - Medium Height) -->
+    <path
+        android:fillColor="#0F766E"
+        android:pathData="M16,58 L36,58 L36,80 L16,80 Z" />
+    <path
+        android:fillColor="#14B8A6"
+        android:pathData="M18,59 L34,59 L34,80 L18,80 Z" />
+    <!-- Numeral "2" on Left Podium -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M23,65 C23,63 25,62 27,62 C29,62 31,63 31,65 C31,67 29,68 27,70 L23,73 L31,73 L31,75 L23,75 L23,73 L28,69 C29,68 29.5,67 29.5,65.5 C29.5,64.5 28.5,63.5 27,63.5 C25.5,63.5 24.5,64.5 24.5,65.5 Z" />
+
+    <!-- 3rd Place Podium Block (Right - Lowest Height) -->
+    <path
+        android:fillColor="#9A3412"
+        android:pathData="M60,64 L80,64 L80,80 L60,80 Z" />
+    <path
+        android:fillColor="#EA580C"
+        android:pathData="M62,65 L78,65 L78,80 L62,80 Z" />
+    <!-- Numeral "3" on Right Podium -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M67,67 L73,67 L73,69 L70,70 C72,70.5 73.5,71.5 73.5,73.5 C73.5,75.5 71.5,77 69,77 C67,77 65.5,75.5 65.5,74 L67.5,74 C67.5,75 68.2,75.5 69,75.5 C70,75.5 71.5,75 71.5,73.5 C71.5,72 70,71.5 69,71.5 L68,71.5 L68,70 L71,68.5 L67,68.5 Z" />
+
+    <!-- 1st Place Champion Center Podium (Highest Peak - 第一/最) -->
+    <path
+        android:fillColor="#1E3A8A"
+        android:pathData="M34,46 L62,46 L62,80 L34,80 Z" />
+    <path
+        android:fillColor="#2563EB"
+        android:pathData="M36,47 L60,47 L60,80 L36,80 Z" />
+    <!-- Numeral "1" on Center Podium -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M45,55 L48,53 L50,53 L50,71 L47.5,71 L47.5,56 L45,57.5 Z M44,71 L54,71 L54,73 L44,73 Z" />
+
+    <!-- Golden Championship Trophy Cup on 1st Place Podium (金杯) -->
+    <!-- Trophy Base Pedestal -->
+    <path
+        android:fillColor="#78350F"
+        android:pathData="M42,42 L54,42 L55,46 L41,46 Z" />
+    <path
+        android:fillColor="#D97706"
+        android:pathData="M43,43 L53,43 L54,45 L42,45 Z" />
+    <!-- Trophy Stem / Neck -->
+    <path
+        android:fillColor="#B45309"
+        android:pathData="M46,38 L50,38 L50,43 L46,43 Z" />
+
+    <!-- Trophy Cup Goblet -->
+    <path
+        android:fillColor="#D97706"
+        android:pathData="M39,22 L57,22 C57,22 58,34 54,37 C51,39 45,39 42,37 C38,34 39,22 39,22 Z" />
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M40.5,23.5 L55.5,23.5 C55.5,23.5 56.5,33 53,35.5 C50.5,37.5 45.5,37.5 43,35.5 C39.5,33 40.5,23.5 40.5,23.5 Z" />
+
+    <!-- Trophy Twin Handles -->
+    <!-- Left Handle -->
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M39,24 C33,24 33,32 39,34 L39,32 C35,30 35,26 39,26 Z" />
+    <!-- Right Handle -->
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M57,24 C63,24 63,32 57,34 L57,32 C61,30 61,26 57,26 Z" />
+
+    <!-- Specular Highlight on Gold Cup -->
+    <path
+        android:fillColor="#FEF08A"
+        android:pathData="M42,25 L45,25 C45,30 44,34 43,36 L41,35 C42,33 42,29 42,25 Z" />
+
+    <!-- Superlative Starburst Glow at Peak (Symbolizing "最") -->
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M48,10 L50,15 L55,17 L50,19 L48,24 L46,19 L41,17 L46,15 Z" />
+    <path
+        android:fillColor="#FEF08A"
+        android:pathData="M48,13 L49.2,16 L52,17 L49.2,18 L48,21 L46.8,18 L44,17 L46.8,16 Z" />
+
+    <!-- Victory Confetti Sparkles -->
+    <path
+        android:fillColor="#EF4444"
+        android:pathData="M24,44 L26,48 L22,48 Z" />
+    <path
+        android:fillColor="#38BDF8"
+        android:pathData="M70,44 L74,47 L70,50 Z" />
+    <path
+        android:fillColor="#10B981"
+        android:pathData="M30,34 A2,2 0 1,0 30,38 A2,2 0 1,0 30,34 Z M68,34 A2,2 0 1,0 68,38 A2,2 0 1,0 68,34 Z" />
+</vector>
