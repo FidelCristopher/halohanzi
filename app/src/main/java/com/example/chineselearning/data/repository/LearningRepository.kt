@@ -4979,6 +4979,104 @@ object LearningRepository {
                     exercisesPart2 = bab21Stage5Part2Exercises
                 )
             )
+        ),
+
+        // BAB 22: Transportasi Publik, Rute Jalan & Mobilitas Kota (城市交通、公交地铁与出行路线)
+        UnitCourse(
+            id = "unit_22",
+            unitNumber = 22,
+            title = "Transportasi & Rute",
+            subtitle = "Bus umum, MRT, halte, taksi, jalan kaki, kondisi lalu lintas, dan jarak",
+            bannerTitle = "Transportasi & Mobilitas Kota",
+            emoji = "🚌",
+            level = "Level 22 (HSK 2)",
+            story = stories[21],
+            nodes = listOf(
+                PathNode("u22_n1", "Bus & MRT", Color(0xFFFFC107), NodeIconType.CAP, isCompleted = false, lessonId = "u22_l1"),
+                PathNode("u22_n2", "Taksi & Jalan Kaki", Color(0xFFFFC107), NodeIconType.DUMBBELL, isCompleted = false, lessonId = "u22_l2"),
+                PathNode("u22_n3", "Kondisi Jalan", Color(0xFFFFC107), NodeIconType.CAP, isCompleted = false, lessonId = "u22_l3"),
+                PathNode("u22_n4", "Jarak & Kecepatan", Color(0xFFFFC107), NodeIconType.DUMBBELL, isCompleted = false, lessonId = "u22_l4"),
+                PathNode("u22_n5", "Evaluasi Mobilitas", Color(0xFFFFC107), NodeIconType.SHUFFLE, isCompleted = false, lessonId = "u22_l5"),
+                PathNode("u22_n6", "Kuis Cerita Bab 22", Color(0xFFFFC107), NodeIconType.BOOK, isCompleted = false, lessonId = "u22_l1"),
+                PathNode("u22_n7", "Checkpoint Peti", Color(0xFFFFB300), NodeIconType.CHEST, isCompleted = false, lessonId = "u22_l1"),
+                PathNode("u22_n8", "Rest area", Color(0xFF03A9F4), NodeIconType.REST_AREA, isCompleted = false, lessonId = "u22_l1")
+            ),
+            lessons = listOf(
+                Lesson(
+                    id = "u22_l1",
+                    title = "Bus Umum & MRT",
+                    subtitle = "Kosakata 公交车, 地铁, 车站, dan 站",
+                    grammarNote = "Moda transportasi kota: 公交车 (gōngjiāochē - bus umum), 地铁 (dìtiě - MRT), 车站 (chēzhàn - halte bus/stasiun), 站 (zhàn - halte/stasiun).",
+                    newWords = listOf(
+                        Word("w22_1", "公交车", "gōngjiāochē", "Bus umum", "Transportasi", "坐公交车去学校只要两块钱。", "Zuò gōngjiāochē qù xuéxiào zhǐyào liǎng kuài qián.", "Naik bus ke sekolah hanya butuh dua yuan."),
+                        Word("w22_2", "地铁", "dìtiě", "MRT / kereta bawah tanah", "Transportasi", "坐地铁去机场又快又方便。", "Zuò dìtiě qù jīchǎng yòu kuài yòu fāngbiàn.", "Naik MRT ke bandara cepat dan praktis."),
+                        Word("w22_3", "车站", "chēzhàn", "Halte / stasiun", "Tempat", "我们在车站等你。", "Wǒmen zài chēzhàn děng nǐ.", "Kami menunggumu di halte."),
+                        Word("w22_4", "站", "zhàn", "Perhentian / halte", "Penggolong", "下一站是市中心。", "Xià yí zhàn shì shìzhōngxīn.", "Halte berikutnya pusat kota.")
+                    ),
+                    exercises = bab22Stage1Part1Exercises,
+                    exercisesPart1 = bab22Stage1Part1Exercises,
+                    exercisesPart2 = bab22Stage1Part2Exercises
+                ),
+                Lesson(
+                    id = "u22_l2",
+                    title = "Taksi & Jalan Kaki",
+                    subtitle = "Kosakata 打车, 走, dan 走路",
+                    grammarNote = "Memanggil taksi: 打车 (dǎchē). Berjalan kaki: 走 (zǒu - berjalan/pergi), 走路 (zǒulù - jalan kaki: 走路去上班).",
+                    newWords = listOf(
+                        Word("w22_5", "打车", "dǎchē", "Naik taksi", "Kata Kerja", "今天下大雨，我们打车吧。", "Jīntiān xià dàyǔ, wǒmen dǎchē ba.", "Hari ini hujan lebat, ayo naik taksi."),
+                        Word("w22_6", "走", "zǒu", "Berjalan / pergi", "Kata Kerja", "时间不早了，我得走了。", "Shíjiān bù zǎo le, wǒ děi zǒu le.", "Waktu sudah larut, saya harus pergi."),
+                        Word("w22_7", "走路", "zǒulù", "Berjalan kaki", "Kata Kerja", "我每天走路去公司上班。", "Wǒ měitiān zǒulù qù gōngsī shàngbān.", "Saya setiap hari jalan kaki ke kantor.")
+                    ),
+                    exercises = bab22Stage2Part1Exercises,
+                    exercisesPart1 = bab22Stage2Part1Exercises,
+                    exercisesPart2 = bab22Stage2Part2Exercises
+                ),
+                Lesson(
+                    id = "u22_l3",
+                    title = "Kondisi Lalu Lintas & Jalan",
+                    subtitle = "Kosakata 路 dan 路上",
+                    grammarNote = "Ruas jalan raya: 路 (lù - jalan: 这条路), 路上 (lùshang - di jalan/dalam perjalanan: 路上小心).",
+                    newWords = listOf(
+                        Word("w22_8", "路", "lù", "Jalan / rute", "Tempat", "这条路上的车非常多。", "Zhè tiáo lù shang de chē fēicháng duō.", "Mobil di jalan ini sangat banyak."),
+                        Word("w22_9", "路上", "lùshang", "Di jalan / perjalanan", "Tempat", "路上小心点儿！", "Lùshang xiǎoxīn diǎnr!", "Hati-hati di jalan ya!")
+                    ),
+                    exercises = bab22Stage3Part1Exercises,
+                    exercisesPart1 = bab22Stage3Part1Exercises,
+                    exercisesPart2 = bab22Stage3Part2Exercises
+                ),
+                Lesson(
+                    id = "u22_l4",
+                    title = "Jarak Spasial & Kecepatan",
+                    subtitle = "Kosakata 离, 远, 近, 快, 慢, dan 往",
+                    grammarNote = "Struktur jarak: A 离 B 很远/近. Kecepatan: 快 (cepat) vs 慢 (lambat). Arah gerak: 往 (menuju: 往前走).",
+                    newWords = listOf(
+                        Word("w22_10", "离", "lí", "Berjarak dari", "Kata Depan", "我家离公司很近。", "Wǒ jiā lí gōngsī hěn jìn.", "Rumah saya dekat dari kantor."),
+                        Word("w22_11", "远", "yuǎn", "Jauh", "Kata Sifat", "那个饭馆太远了。", "Nàge fànguǎn tài yuǎn le.", "Restoran itu terlalu jauh."),
+                        Word("w22_12", "近", "jìn", "Dekat", "Kata Sifat", "学校离超市很近。", "Xuéxiào lí chāoshì hěn jìn.", "Sekolah sangat dekat dari supermarket."),
+                        Word("w22_13", "快", "kuài", "Cepat", "Kata Sifat", "他跑得比大家都快。", "Tā pǎo de bǐ dàjiā dōu kuài.", "Dia lari lebih cepat dari semua orang."),
+                        Word("w22_14", "慢", "màn", "Lambat / pelan", "Kata Sifat", "爷爷走路走得很慢。", "Yéye zǒulù zǒu de hěn màn.", "Kakek jalan kaki sangat pelan."),
+                        Word("w22_15", "往", "wǎng", "Ke arah / menuju", "Kata Depan", "一直往前走。", "Yìzhí wǎng qián zǒu.", "Jalan lurus terus ke depan.")
+                    ),
+                    exercises = bab22Stage4Part1Exercises,
+                    exercisesPart1 = bab22Stage4Part1Exercises,
+                    exercisesPart2 = bab22Stage4Part2Exercises
+                ),
+                Lesson(
+                    id = "u22_l5",
+                    title = "Evaluasi Komprehensif Mobilitas Kota",
+                    subtitle = "Review seluruh 15 kosakata angkutan kota, jalan & arah",
+                    grammarNote = "Evaluasi menyeluruh Bab 22: memilih moda transportasi umum, menanyakan rute jalan, jarak tempuh, dan panduan arah jalan.",
+                    newWords = listOf(
+                        Word("w22_1", "公交车", "gōngjiāochē", "Bus umum", "Transportasi", "坐公交车很方便。", "Zuò gōngjiāochē hěn fāngbiàn.", "Naik bus sangat praktis."),
+                        Word("w22_2", "地铁", "dìtiě", "MRT", "Transportasi", "地铁站在右边。", "Dìtiězhàn zài yòubian.", "Stasiun MRT di kanan."),
+                        Word("w22_7", "走路", "zǒulù", "Jalan kaki", "Kata Kerja", "每天走路。", "Měitiān zǒulù.", "Tiap hari jalan kaki."),
+                        Word("w22_10", "离", "lí", "Berjarak dari", "Kata Depan", "离这里不远。", "Lí zhèlǐ bù yuǎn.", "Dari sini tidak jauh.")
+                    ),
+                    exercises = bab22Stage5Part1Exercises,
+                    exercisesPart1 = bab22Stage5Part1Exercises,
+                    exercisesPart2 = bab22Stage5Part2Exercises
+                )
+            )
         )
     )
 }
