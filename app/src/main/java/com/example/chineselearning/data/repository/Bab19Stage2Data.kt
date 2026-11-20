@@ -18,9 +18,9 @@ val bab19Stage2Part1Exercises = listOf(
         correctAnswer = "daging",
         audioToSpeak = "肉",
         pictureOptions = listOf(
-            PictureOption("u19_s2_p1_opt1", "daging", "", R.drawable.ic_food_chinese_cuisine, true),
-            PictureOption("u19_s2_p1_opt2", "ikan", "", R.drawable.ic_food_restaurant, false),
-            PictureOption("u19_s2_p1_opt3", "teh", "", R.drawable.ic_food_tea, false),
+            PictureOption("u19_s2_p1_opt1", "daging", "", R.drawable.ic_food_meat, true),
+            PictureOption("u19_s2_p1_opt2", "ikan", "", R.drawable.ic_food_fish, false),
+            PictureOption("u19_s2_p1_opt3", "teh", "", R.drawable.ic_drink_green_tea, false),
             PictureOption("u19_s2_p1_opt4", "cangkir", "", R.drawable.ic_food_cup, false)
         )
     ),
@@ -108,10 +108,10 @@ val bab19Stage2Part1Exercises = listOf(
         correctAnswer = "ikan",
         audioToSpeak = "鱼",
         pictureOptions = listOf(
-            PictureOption("u19_s2_p1_opt7_1", "ikan", "", R.drawable.ic_food_chinese_cuisine, true),
-            PictureOption("u19_s2_p1_opt7_2", "restoran", "", R.drawable.ic_food_restaurant, false),
+            PictureOption("u19_s2_p1_opt7_1", "ikan", "", R.drawable.ic_food_fish, true),
+            PictureOption("u19_s2_p1_opt7_2", "daging", "", R.drawable.ic_food_meat, false),
             PictureOption("u19_s2_p1_opt7_3", "cangkir", "", R.drawable.ic_food_cup, false),
-            PictureOption("u19_s2_p1_opt7_4", "teh", "", R.drawable.ic_food_tea, false)
+            PictureOption("u19_s2_p1_opt7_4", "teh", "", R.drawable.ic_drink_green_tea, false)
         )
     ),
 
@@ -169,9 +169,9 @@ val bab19Stage2Part2Exercises = listOf(
         correctAnswer = "ikan",
         audioToSpeak = "鱼",
         pictureOptions = listOf(
-            PictureOption("u19_s2_p2_opt1", "ikan", "", R.drawable.ic_food_chinese_cuisine, true),
-            PictureOption("u19_s2_p2_opt2", "restoran", "", R.drawable.ic_food_restaurant, false),
-            PictureOption("u19_s2_p2_opt3", "teh", "", R.drawable.ic_food_tea, false),
+            PictureOption("u19_s2_p2_opt1", "ikan", "", R.drawable.ic_food_fish, true),
+            PictureOption("u19_s2_p2_opt2", "daging", "", R.drawable.ic_food_meat, false),
+            PictureOption("u19_s2_p2_opt3", "teh", "", R.drawable.ic_drink_green_tea, false),
             PictureOption("u19_s2_p2_opt4", "cangkir", "", R.drawable.ic_food_cup, false)
         )
     ),
@@ -259,9 +259,9 @@ val bab19Stage2Part2Exercises = listOf(
         correctAnswer = "daging sapi",
         audioToSpeak = "牛肉",
         pictureOptions = listOf(
-            PictureOption("u19_s2_p2_opt7_1", "daging sapi", "", R.drawable.ic_food_chinese_cuisine, true),
-            PictureOption("u19_s2_p2_opt7_2", "ikan", "", R.drawable.ic_food_restaurant, false),
-            PictureOption("u19_s2_p2_opt7_3", "teh", "", R.drawable.ic_food_tea, false),
+            PictureOption("u19_s2_p2_opt7_1", "daging sapi", "", R.drawable.ic_food_meat, true),
+            PictureOption("u19_s2_p2_opt7_2", "ikan", "", R.drawable.ic_food_fish, false),
+            PictureOption("u19_s2_p2_opt7_3", "teh", "", R.drawable.ic_drink_green_tea, false),
             PictureOption("u19_s2_p2_opt7_4", "cangkir", "", R.drawable.ic_food_cup, false)
         )
     ),

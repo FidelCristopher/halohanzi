@@ -20,7 +20,7 @@ val bab19Stage4Part1Exercises = listOf(
         pictureOptions = listOf(
             PictureOption("u19_s4_p1_opt1", "mantap", "", R.drawable.ic_food_delicious, true),
             PictureOption("u19_s4_p1_opt2", "cangkir", "", R.drawable.ic_food_cup, false),
-            PictureOption("u19_s4_p1_opt3", "teh", "", R.drawable.ic_food_tea, false),
+            PictureOption("u19_s4_p1_opt3", "teh", "", R.drawable.ic_drink_green_tea, false),
             PictureOption("u19_s4_p1_opt4", "restoran", "", R.drawable.ic_food_restaurant, false)
         )
     ),
@@ -108,9 +108,9 @@ val bab19Stage4Part1Exercises = listOf(
         correctAnswer = "rusak / basi",
         audioToSpeak = "坏",
         pictureOptions = listOf(
-            PictureOption("u19_s4_p1_opt7_1", "rusak", "", R.drawable.ic_food_chinese_cuisine, true),
+            PictureOption("u19_s4_p1_opt7_1", "rusak", "", R.drawable.ic_mod_wrong, true),
             PictureOption("u19_s4_p1_opt7_2", "lezat", "", R.drawable.ic_food_delicious, false),
-            PictureOption("u19_s4_p1_opt7_3", "teh", "", R.drawable.ic_food_tea, false),
+            PictureOption("u19_s4_p1_opt7_3", "teh", "", R.drawable.ic_drink_green_tea, false),
             PictureOption("u19_s4_p1_opt7_4", "cangkir", "", R.drawable.ic_food_cup, false)
         )
     ),
@@ -169,8 +169,8 @@ val bab19Stage4Part2Exercises = listOf(
         correctAnswer = "menarik / asyik",
         audioToSpeak = "有意思",
         pictureOptions = listOf(
-            PictureOption("u19_s4_p2_opt1", "menarik", "", R.drawable.ic_comm_happy, true),
-            PictureOption("u19_s4_p2_opt2", "teh", "", R.drawable.ic_food_tea, false),
+            PictureOption("u19_s4_p2_opt1", "menarik", "", R.drawable.ic_hobby_fun, true),
+            PictureOption("u19_s4_p2_opt2", "teh", "", R.drawable.ic_drink_green_tea, false),
             PictureOption("u19_s4_p2_opt3", "cangkir", "", R.drawable.ic_food_cup, false),
             PictureOption("u19_s4_p2_opt4", "restoran", "", R.drawable.ic_food_restaurant, false)
         )
@@ -259,10 +259,10 @@ val bab19Stage4Part2Exercises = listOf(
         correctAnswer = "membosankan",
         audioToSpeak = "没意思",
         pictureOptions = listOf(
-            PictureOption("u19_s4_p2_opt7_1", "membosankan", "", R.drawable.ic_comm_know, true),
+            PictureOption("u19_s4_p2_opt7_1", "membosankan", "", R.drawable.ic_action_sleep, true),
             PictureOption("u19_s4_p2_opt7_2", "gembira", "", R.drawable.ic_comm_happy, false),
             PictureOption("u19_s4_p2_opt7_3", "restoran", "", R.drawable.ic_food_restaurant, false),
-            PictureOption("u19_s4_p2_opt7_4", "teh", "", R.drawable.ic_food_tea, false)
+            PictureOption("u19_s4_p2_opt7_4", "teh", "", R.drawable.ic_drink_green_tea, false)
         )
     ),
 

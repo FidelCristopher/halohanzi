@@ -1,0 +1,46 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Soft Warm Amber) -->
+    <path
+        android:fillColor="#FEF3C7"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Bone Knob / End (Off-white / Ivory) -->
+    <path
+        android:fillColor="#E2E8F0"
+        android:pathData="M24,24 A6,6 0 1,0 24,36 A6,6 0 1,0 24,24 Z M28,18 A6,6 0 1,0 28,30 A6,6 0 1,0 28,18 Z" />
+    <path
+        android:fillColor="#F8FAFC"
+        android:pathData="M26,22 L38,34 L33,39 L21,27 Z" />
+
+    <!-- Meat Silhouette / Seared Crust (Deep Rich Maroon) -->
+    <path
+        android:fillColor="#991B1B"
+        android:pathData="M32,32 C40,24 58,22 68,26 C78,30 82,42 80,54 C78,66 66,78 52,78 C38,78 28,70 26,58 C24,48 26,38 32,32 Z" />
+
+    <!-- Tender Juicy Meat Fill (Vibrant Savory Red) -->
+    <path
+        android:fillColor="#DC2626"
+        android:pathData="M34,35 C42,27 57,25 66,29 C75,33 78,43 76,53 C74,63 64,74 52,74 C40,74 31,67 29,57 C27,48 29,40 34,35 Z" />
+
+    <!-- Inner Marbling Fat Grain (Rich Cream Ribbons) -->
+    <path
+        android:fillColor="#FEE2E2"
+        android:pathData="M40,40 C46,38 52,42 56,38 C58,36 60,38 58,40 C54,44 48,40 42,43 Z M46,50 C52,47 60,52 66,48 C68,47 67,50 64,52 C58,56 50,51 44,53 Z M38,58 C44,56 48,60 54,58 C56,57 55,60 52,62 C46,64 42,60 36,61 Z" />
+
+    <!-- Diagonal Grill Marks (Charred Brown) -->
+    <path
+        android:fillColor="#7F1D1D"
+        android:pathData="M48,27 L70,49 L68,52 L46,30 Z M38,37 L60,59 L58,62 L36,40 Z M32,49 L48,65 L46,68 L30,52 Z" />
+
+    <!-- Fresh Green Herb Sprig Garnish (Rosemary/Parsley) -->
+    <path
+        android:fillColor="#16A34A"
+        android:pathData="M64,62 C68,58 74,58 76,64 C70,64 68,68 64,62 Z M68,68 C72,66 76,70 74,74 C70,72 68,70 68,68 Z" />
+    <path
+        android:fillColor="#15803D"
+        android:pathData="M62,60 L75,73 L73,74 L61,61 Z" />
+</vector>

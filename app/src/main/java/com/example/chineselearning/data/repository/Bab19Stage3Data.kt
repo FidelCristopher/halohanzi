@@ -18,10 +18,10 @@ val bab19Stage3Part1Exercises = listOf(
         correctAnswer = "teh hitam",
         audioToSpeak = "红茶",
         pictureOptions = listOf(
-            PictureOption("u19_s3_p1_opt1", "teh hitam", "", R.drawable.ic_food_tea, true),
-            PictureOption("u19_s3_p1_opt2", "cangkir", "", R.drawable.ic_food_cup, false),
-            PictureOption("u19_s3_p1_opt3", "restoran", "", R.drawable.ic_food_restaurant, false),
-            PictureOption("u19_s3_p1_opt4", "masakan", "", R.drawable.ic_food_chinese_cuisine, false)
+            PictureOption("u19_s3_p1_opt1", "teh hitam", "", R.drawable.ic_drink_black_tea, true),
+            PictureOption("u19_s3_p1_opt2", "teh hijau", "", R.drawable.ic_drink_green_tea, false),
+            PictureOption("u19_s3_p1_opt3", "kopi", "", R.drawable.ic_drink_coffee, false),
+            PictureOption("u19_s3_p1_opt4", "cangkir", "", R.drawable.ic_food_cup, false)
         )
     ),
 
@@ -108,10 +108,10 @@ val bab19Stage3Part1Exercises = listOf(
         correctAnswer = "teh hijau",
         audioToSpeak = "绿茶",
         pictureOptions = listOf(
-            PictureOption("u19_s3_p1_opt7_1", "teh hijau", "", R.drawable.ic_food_tea, true),
-            PictureOption("u19_s3_p1_opt7_2", "cangkir", "", R.drawable.ic_food_cup, false),
-            PictureOption("u19_s3_p1_opt7_3", "restoran", "", R.drawable.ic_food_restaurant, false),
-            PictureOption("u19_s3_p1_opt7_4", "hidangan", "", R.drawable.ic_food_chinese_cuisine, false)
+            PictureOption("u19_s3_p1_opt7_1", "teh hijau", "", R.drawable.ic_drink_green_tea, true),
+            PictureOption("u19_s3_p1_opt7_2", "teh hitam", "", R.drawable.ic_drink_black_tea, false),
+            PictureOption("u19_s3_p1_opt7_3", "kopi", "", R.drawable.ic_drink_coffee, false),
+            PictureOption("u19_s3_p1_opt7_4", "cangkir", "", R.drawable.ic_food_cup, false)
         )
     ),
 
@@ -170,9 +170,9 @@ val bab19Stage3Part2Exercises = listOf(
         audioToSpeak = "奶茶",
         pictureOptions = listOf(
             PictureOption("u19_s3_p2_opt1", "teh susu", "", R.drawable.ic_food_cup, true),
-            PictureOption("u19_s3_p2_opt2", "teh", "", R.drawable.ic_food_tea, false),
-            PictureOption("u19_s3_p2_opt3", "restoran", "", R.drawable.ic_food_restaurant, false),
-            PictureOption("u19_s3_p2_opt4", "hidangan", "", R.drawable.ic_food_chinese_cuisine, false)
+            PictureOption("u19_s3_p2_opt2", "teh hitam", "", R.drawable.ic_drink_black_tea, false),
+            PictureOption("u19_s3_p2_opt3", "teh hijau", "", R.drawable.ic_drink_green_tea, false),
+            PictureOption("u19_s3_p2_opt4", "kopi", "", R.drawable.ic_drink_coffee, false)
         )
     ),
 
@@ -259,10 +259,10 @@ val bab19Stage3Part2Exercises = listOf(
         correctAnswer = "kopi",
         audioToSpeak = "咖啡",
         pictureOptions = listOf(
-            PictureOption("u19_s3_p2_opt7_1", "kopi", "", R.drawable.ic_food_cup, true),
-            PictureOption("u19_s3_p2_opt7_2", "teh", "", R.drawable.ic_food_tea, false),
-            PictureOption("u19_s3_p2_opt7_3", "restoran", "", R.drawable.ic_food_restaurant, false),
-            PictureOption("u19_s3_p2_opt7_4", "hidangan", "", R.drawable.ic_food_chinese_cuisine, false)
+            PictureOption("u19_s3_p2_opt7_1", "kopi", "", R.drawable.ic_drink_coffee, true),
+            PictureOption("u19_s3_p2_opt7_2", "teh hitam", "", R.drawable.ic_drink_black_tea, false),
+            PictureOption("u19_s3_p2_opt7_3", "teh hijau", "", R.drawable.ic_drink_green_tea, false),
+            PictureOption("u19_s3_p2_opt7_4", "cangkir", "", R.drawable.ic_food_cup, false)
         )
     ),
 

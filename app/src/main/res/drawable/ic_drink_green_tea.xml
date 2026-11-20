@@ -1,0 +1,56 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Soft Mint Tint) -->
+    <path
+        android:fillColor="#F0FDF4"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Delicate Rising Green Tea Vapor Steam -->
+    <path
+        android:fillColor="#86EFAC"
+        android:pathData="M40,26 C38,22 42,18 40,14 L42,14 C44,18 40,22 42,26 Z M48,24 C46,20 50,16 48,12 L50,12 C52,16 48,20 50,24 Z M56,26 C54,22 58,18 56,14 L58,14 C60,18 56,22 58,26 Z" />
+
+    <!-- Celadon Saucer Dish -->
+    <path
+        android:fillColor="#A7F3D0"
+        android:pathData="M22,74 C22,71.5 34,69.5 48,69.5 C62,69.5 74,71.5 74,74 C74,76.5 62,78.5 48,78.5 C34,78.5 22,76.5 22,74 Z" />
+    <path
+        android:fillColor="#D1FAE5"
+        android:pathData="M24,73.5 C24,71.5 35,70 48,70 C61,70 72,71.5 72,73.5 C72,75.5 61,77 48,77 C35,77 24,75.5 24,73.5 Z" />
+
+    <!-- Teacup Handle (Right Side) -->
+    <path
+        android:fillColor="#059669"
+        android:pathData="M64,44 C72,44 76,48 76,54 C76,60 72,64 64,64 L64,59 C69,59 71,57 71,54 C71,51 69,49 64,49 Z" />
+
+    <!-- Celadon Green Porcelain Cup Body (绿茶) -->
+    <path
+        android:fillColor="#047857"
+        android:pathData="M27,38 L69,38 L65,66 C64,70 57,72 48,72 C39,72 32,70 31,66 Z" />
+    <path
+        android:fillColor="#059669"
+        android:pathData="M29,39 L67,39 L63,65 C62,68.5 56,70.5 48,70.5 C40,70.5 34,68.5 33,65 Z" />
+
+    <!-- Fresh Jade Green Tea Liquor Surface -->
+    <path
+        android:fillColor="#065F46"
+        android:pathData="M48,36 C58,36 67,37.5 67,39.5 C67,41.5 58,43 48,43 C38,43 29,41.5 29,39.5 C29,37.5 38,36 48,36 Z" />
+    <path
+        android:fillColor="#10B981"
+        android:pathData="M48,37 C56,37 64,38.2 64,39.5 C64,40.8 56,42 48,42 C40,42 32,40.8 32,39.5 C32,38.2 40,37 48,37 Z" />
+    <!-- Bright Mint Highlight -->
+    <path
+        android:fillColor="#6EE7B7"
+        android:pathData="M48,37.5 C54,37.5 60,38.3 60,39.2 C60,40.1 54,40.8 48,40.8 C42,40.8 36,40.1 36,39.2 C36,38.3 42,37.5 48,37.5 Z" />
+
+    <!-- Floating Whole Green Tea Leaves (Two Tender Fresh Leaves) -->
+    <path
+        android:fillColor="#15803D"
+        android:pathData="M44,38 C48,36 51,39 50,42 C46,42 43,40 44,38 Z M52,39 C55,37 58,39 57,41 C54,42 52,41 52,39 Z" />
+    <path
+        android:fillColor="#22C55E"
+        android:pathData="M45,39 C47,38 49,39.5 48,41 Z" />
+</vector>

@@ -1,0 +1,57 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Soft Warm Cream) -->
+    <path
+        android:fillColor="#FEF3C7"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Aromatic Coffee Steam Swirls -->
+    <path
+        android:fillColor="#D97706"
+        android:pathData="M40,26 C38,22 42,18 40,14 L42,14 C44,18 40,22 42,26 Z M48,24 C46,20 50,16 48,12 L50,12 C52,16 48,20 50,24 Z M56,26 C54,22 58,18 56,14 L58,14 C60,18 56,22 58,26 Z" />
+
+    <!-- Ceramic Saucer Dish -->
+    <path
+        android:fillColor="#CBD5E1"
+        android:pathData="M20,74 C20,71.5 33,69.5 48,69.5 C63,69.5 76,71.5 76,74 C76,76.5 63,78.5 48,78.5 C33,78.5 20,76.5 20,74 Z" />
+    <path
+        android:fillColor="#F8FAFC"
+        android:pathData="M22,73.5 C22,71.5 34,70 48,70 C62,70 74,71.5 74,73.5 C74,75.5 62,77 48,77 C34,77 22,75.5 22,73.5 Z" />
+
+    <!-- Cup Handle (Right) -->
+    <path
+        android:fillColor="#C2410C"
+        android:pathData="M64,44 C74,44 78,48 78,54 C78,60 74,65 64,65 L64,59 C70,59 72,57 72,54 C72,51 70,49 64,49 Z" />
+
+    <!-- Coffee Mug Body (Warm Terracotta Ceramic) -->
+    <path
+        android:fillColor="#C2410C"
+        android:pathData="M26,38 L70,38 L66,66 C65,70 57,72.5 48,72.5 C39,72.5 31,70 30,66 Z" />
+    <path
+        android:fillColor="#EA580C"
+        android:pathData="M28,39 L68,39 L64,65 C63,68.5 56,71 48,71 C40,71 33,68.5 32,65 Z" />
+
+    <!-- Rich Roasted Dark Coffee Liquid (咖啡) -->
+    <path
+        android:fillColor="#451A03"
+        android:pathData="M48,36 C58,36 68,37.5 68,39.5 C68,41.5 58,43 48,43 C38,43 28,41.5 28,39.5 C28,37.5 38,36 48,36 Z" />
+    <path
+        android:fillColor="#78350F"
+        android:pathData="M48,37 C56,37 65,38.2 65,39.5 C65,40.8 56,42 48,42 C40,42 31,40.8 31,39.5 C31,38.2 40,37 48,37 Z" />
+
+    <!-- Crema / Foamy Latte Art (Heart Swirl) -->
+    <path
+        android:fillColor="#FEF3C7"
+        android:pathData="M48,41.5 C46,39.5 42,38 42,40 C42,41.2 45,41.8 48,42.5 C51,41.8 54,41.2 54,40 C54,38 50,39.5 48,41.5 Z" />
+    <path
+        android:fillColor="#FDE68A"
+        android:pathData="M48,39 C46,37.5 43,38 43,39.2 C43,40.2 46,40.8 48,41.2 C50,40.8 53,40.2 53,39.2 C53,38 50,37.5 48,39 Z" />
+
+    <!-- Glossy Specular Strip on Mug -->
+    <path
+        android:fillColor="#FED7AA"
+        android:pathData="M34,42 L38,42 L39,64 L35,64 Z" />
+</vector>

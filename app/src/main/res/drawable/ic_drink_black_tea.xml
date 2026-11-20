@@ -1,0 +1,60 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Soft Rose Peach) -->
+    <path
+        android:fillColor="#FFF1F2"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Delicate Rising Aromatic Steam -->
+    <path
+        android:fillColor="#FDA4AF"
+        android:pathData="M39,26 C37,22 41,18 39,14 L41,14 C43,18 39,22 41,26 Z M48,24 C46,20 50,16 48,12 L50,12 C52,16 48,20 50,24 Z M57,26 C55,22 59,18 57,14 L59,14 C61,18 57,22 59,26 Z" />
+
+    <!-- Porcelain Saucer Dish -->
+    <path
+        android:fillColor="#E2E8F0"
+        android:pathData="M22,74 C22,71.5 34,69.5 48,69.5 C62,69.5 74,71.5 74,74 C74,76.5 62,78.5 48,78.5 C34,78.5 22,76.5 22,74 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M24,73.5 C24,71.5 35,70 48,70 C61,70 72,71.5 72,73.5 C72,75.5 61,77 48,77 C35,77 24,75.5 24,73.5 Z" />
+
+    <!-- Teacup Handle (Right Side) -->
+    <path
+        android:fillColor="#CBD5E1"
+        android:pathData="M64,44 C72,44 76,48 76,54 C76,60 72,64 64,64 L64,59 C69,59 71,57 71,54 C71,51 69,49 64,49 Z" />
+
+    <!-- Teacup Body Outer (Clean White Ceramic) -->
+    <path
+        android:fillColor="#CBD5E1"
+        android:pathData="M27,38 L69,38 L65,66 C64,70 57,72 48,72 C39,72 32,70 31,66 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M29,39 L67,39 L63,65 C62,68.5 56,70.5 48,70.5 C40,70.5 34,68.5 33,65 Z" />
+
+    <!-- Rich Amber-Red Black Tea Liquor Surface (红茶) -->
+    <path
+        android:fillColor="#7F1D1D"
+        android:pathData="M48,36 C58,36 67,37.5 67,39.5 C67,41.5 58,43 48,43 C38,43 29,41.5 29,39.5 C29,37.5 38,36 48,36 Z" />
+    <path
+        android:fillColor="#B91C1C"
+        android:pathData="M48,37 C56,37 64,38.2 64,39.5 C64,40.8 56,42 48,42 C40,42 32,40.8 32,39.5 C32,38.2 40,37 48,37 Z" />
+    <!-- Glossy Amber Tea Highlight -->
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M48,37.5 C54,37.5 60,38.3 60,39.2 C60,40.1 54,40.8 48,40.8 C42,40.8 36,40.1 36,39.2 C36,38.3 42,37.5 48,37.5 Z" />
+
+    <!-- Tea Bag String Draping Over Left Rim -->
+    <path
+        android:fillColor="#94A3B8"
+        android:pathData="M34,40 C34,45 28,48 26,54 L24.5,53.5 C26.5,47 32.5,44 32.5,40 Z" />
+    <!-- Tea Bag Tag (Bright Red/Amber Tag) -->
+    <path
+        android:fillColor="#DC2626"
+        android:pathData="M22,54 L28,54 C29.1,54 30,54.9 30,56 L30,64 C30,65.1 29.1,66 28,66 L22,66 C20.9,66 20,65.1 20,64 L20,56 C20,54.9 20.9,54 22,54 Z" />
+    <path
+        android:fillColor="#FEF08A"
+        android:pathData="M23,57 L27,57 L27,59 L23,59 Z" />
+</vector>
