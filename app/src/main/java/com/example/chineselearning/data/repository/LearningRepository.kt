@@ -5275,6 +5275,104 @@ object LearningRepository {
                     exercisesPart2 = bab24Stage5Part2Exercises
                 )
             )
+        ),
+
+        // BAB 25: Olahraga, Kebugaran Fisik & Permainan Bola (强身健体、运动竞技与活力球类)
+        UnitCourse(
+            id = "unit_25",
+            unitNumber = 25,
+            title = "Olahraga & Kebugaran",
+            subtitle = "Olahraga, lari, jogging, sepak bola, bola basket, renang, tari, dan kebugaran",
+            bannerTitle = "Olahraga & Kebugaran Fisik",
+            emoji = "⚽",
+            level = "Level 25 (HSK 2)",
+            story = stories[24],
+            nodes = listOf(
+                PathNode("u25_n1", "Olahraga & Lari", Color(0xFFFFC107), NodeIconType.CAP, isCompleted = false, lessonId = "u25_l1"),
+                PathNode("u25_n2", "Sepak Bola & Basket", Color(0xFFFFC107), NodeIconType.DUMBBELL, isCompleted = false, lessonId = "u25_l2"),
+                PathNode("u25_n3", "Renang & Menari", Color(0xFFFFC107), NodeIconType.CAP, isCompleted = false, lessonId = "u25_l3"),
+                PathNode("u25_n4", "Bangkit & Kebugaran", Color(0xFFFFC107), NodeIconType.DUMBBELL, isCompleted = false, lessonId = "u25_l4"),
+                PathNode("u25_n5", "Evaluasi Olahraga", Color(0xFFFFC107), NodeIconType.SHUFFLE, isCompleted = false, lessonId = "u25_l5"),
+                PathNode("u25_n6", "Kuis Cerita Bab 25", Color(0xFFFFC107), NodeIconType.BOOK, isCompleted = false, lessonId = "u25_l1"),
+                PathNode("u25_n7", "Checkpoint Peti", Color(0xFFFFB300), NodeIconType.CHEST, isCompleted = false, lessonId = "u25_l1"),
+                PathNode("u25_n8", "Rest area", Color(0xFF03A9F4), NodeIconType.REST_AREA, isCompleted = false, lessonId = "u25_l1")
+            ),
+            lessons = listOf(
+                Lesson(
+                    id = "u25_l1",
+                    title = "Kebugaran Umum & Lari Pagi",
+                    subtitle = "Kosakata 运动, 跑, dan 跑步",
+                    grammarNote = "Aktivitas fisik: 运动 (yùndòng - olahraga), 跑 (pǎo - berlari), 跑步 (pǎobù - jogging/lari santai).",
+                    newWords = listOf(
+                        Word("w25_1", "运动", "yùndòng", "Berolahraga / olahraga", "Olahraga", "多运动对身体好。", "Duō yùndòng duì shēntǐ hǎo.", "Banyak olahraga baik untuk tubuh."),
+                        Word("w25_2", "跑", "pǎo", "Lari / berlari", "Kata Kerja", "他跑得很快。", "Tā pǎo de hěn kuài.", "Dia berlari sangat cepat."),
+                        Word("w25_3", "跑步", "pǎobù", "Berlari santai / jogging", "Kata Kerja", "早晨我去公园跑步。", "Zǎochén wǒ qù gōngyuán pǎobù.", "Pagi hari saya ke taman jogging.")
+                    ),
+                    exercises = bab25Stage1Part1Exercises,
+                    exercisesPart1 = bab25Stage1Part1Exercises,
+                    exercisesPart2 = bab25Stage1Part2Exercises
+                ),
+                Lesson(
+                    id = "u25_l2",
+                    title = "Sepak Bola & Bola Basket",
+                    subtitle = "Kosakata 踢, 足球, 篮球, 球, dan 打",
+                    grammarNote = "Permainan bola: 踢 (tī - menendang: 踢足球) vs 打 (dǎ - bermain olahraga tangan: 打篮球). Benda: 足球 (sepak bola), 篮球 (bola basket), 球 (bola).",
+                    newWords = listOf(
+                        Word("w25_4", "踢", "tī", "Menendang", "Kata Kerja", "在操场踢球。", "Zài cāochǎng tīqiú.", "Bermain bola di lapangan."),
+                        Word("w25_5", "足球", "zúqiú", "Sepak bola", "Olahraga", "我喜欢看足球比赛。", "Wǒ xǐhuan kàn zúqiú bǐsài.", "Saya suka nonton sepak bola."),
+                        Word("w25_6", "篮球", "lánqiú", "Bola basket", "Olahraga", "弟弟很会打篮球。", "Dìdi hěn huì dǎ lánqiú.", "Adik sangat bisa main basket."),
+                        Word("w25_7", "球", "qiú", "Bola", "Barang", "这个球是谁的？", "Zhège qiú shì shéi de?", "Bola ini punya siapa?"),
+                        Word("w25_8", "打", "dǎ", "Bermain (tangan) / memukul", "Kata Kerja", "下午去打球。", "Xiàwǔ qù dǎqiú.", "Sore hari pergi main bola.")
+                    ),
+                    exercises = bab25Stage2Part1Exercises,
+                    exercisesPart1 = bab25Stage2Part1Exercises,
+                    exercisesPart2 = bab25Stage2Part2Exercises
+                ),
+                Lesson(
+                    id = "u25_l3",
+                    title = "Berenang & Seni Gerak Tari",
+                    subtitle = "Kosakata 游, 游泳, dan 跳舞",
+                    grammarNote = "Aktivitas air: 游 (yóu), 游泳 (yóuyǒng - olahraga renang). Seni gerak: 跳舞 (tiàowǔ - menari/berdansa: 跳舞跳得好看).",
+                    newWords = listOf(
+                        Word("w25_9", "游", "yóu", "Berenang", "Kata Kerja", "小鱼在水里游。", "Xiǎoyú zài shuǐ lǐ yóu.", "Ikan berenang di air."),
+                        Word("w25_10", "游泳", "yóuyǒng", "Berenang", "Olahraga", "夏天去海边游泳。", "Xiàtiān qù hǎibiān yóuyǒng.", "Musim panas ke pantai renang."),
+                        Word("w25_11", "跳舞", "tiàowǔ", "Menari / berdansa", "Seni", "姐姐从小喜欢跳舞。", "Jiějie cóngxiǎo xǐhuan tiàowǔ.", "Kakak sejak kecil suka menari.")
+                    ),
+                    exercises = bab25Stage3Part1Exercises,
+                    exercisesPart1 = bab25Stage3Part1Exercises,
+                    exercisesPart2 = bab25Stage3Part2Exercises
+                ),
+                Lesson(
+                    id = "u25_l4",
+                    title = "Bangkit Berenergi & Stamina",
+                    subtitle = "Kosakata 起来, 动, 身体, dan 累",
+                    grammarNote = "Arah bangkit: 起来 (qǐlái - bangun/bangkit: 站起来). Gerak: 动 (dòng - bergerak). Kondisi fisik: 身体 (shēntǐ - tubuh), 累 (lèi - lelah/capek).",
+                    newWords = listOf(
+                        Word("w25_12", "起来", "qǐlái", "Bangun / bangkit", "Kata Kerja", "早上七点我就起来了。", "Zǎoshang qīdiǎn wǒ jiù qǐlái le.", "Jam tujuh pagi saya sudah bangun."),
+                        Word("w25_13", "动", "dòng", "Bergerak", "Kata Kerja", "快起来动一动！", "Kuài qǐlái dòng yi dòng!", "Cepat bangun dan bergerak sedikit!"),
+                        Word("w25_14", "身体", "shēntǐ", "Tubuh / kesehatan", "Fisik", "你要保重身体。", "Nǐ yào bǎozhòng shēntǐ.", "Kamu harus menjaga kesehatan."),
+                        Word("w25_15", "累", "lèi", "Lelah / capek", "Kata Sifat", "今天真累！", "Jīntiān zhēn lèi!", "Hari ini sungguh lelah!")
+                    ),
+                    exercises = bab25Stage4Part1Exercises,
+                    exercisesPart1 = bab25Stage4Part1Exercises,
+                    exercisesPart2 = bab25Stage4Part2Exercises
+                ),
+                Lesson(
+                    id = "u25_l5",
+                    title = "Evaluasi Komprehensif Olahraga & Kebugaran",
+                    subtitle = "Review seluruh 15 kosakata olahraga, bola, renang & kebugaran",
+                    grammarNote = "Evaluasi menyeluruh Bab 25: ragam olahraga bola (sepak bola & basket), jogging pagi, berenang, menari, dan menjaga stamina tubuh.",
+                    newWords = listOf(
+                        Word("w25_1", "运动", "yùndòng", "Olahraga", "Olahraga", "大家一起运动吧！", "Dàjiā yìqǐ yùndòng ba!", "Ayo kita olahraga bersama!"),
+                        Word("w25_5", "足球", "zúqiú", "Sepak bola", "Olahraga", "周末去踢足球。", "Zhōumò qù tī zúqiú.", "Akhir pekan main bola."),
+                        Word("w25_6", "篮球", "lánqiú", "Basket", "Olahraga", "喜欢打篮球。", "Xǐhuan dǎ lánqiú.", "Suka main basket."),
+                        Word("w25_10", "游泳", "yóuyǒng", "Berenang", "Olahraga", "游泳让身体健康。", "Yóuyǒng ràng shēntǐ jiànkāng.", "Renang membuat tubuh sehat.")
+                    ),
+                    exercises = bab25Stage5Part1Exercises,
+                    exercisesPart1 = bab25Stage5Part1Exercises,
+                    exercisesPart2 = bab25Stage5Part2Exercises
+                )
+            )
         )
     )
 }
