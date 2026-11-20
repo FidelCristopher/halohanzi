@@ -169,4 +169,30 @@ Imports: `import com.example.chineselearning.data.model.*` and `import com.examp
 - **Rule 5 (Per-Chapter Handover to Designer & Staged QA Review)**: QA dan Designer memeriksa Bab 4 s/d Bab 16 per bab secara sekuensial. Setiap satu bab tuntas diperbaiki oleh Designer, langsung dikirim ke QA untuk diaudit dan diverifikasi di emulator, sementara Designer langsung melanjutkan bab berikutnya tanpa jeda.
 - **Rule 6 (Automated Unit Test Enforcement)**: QA wajib menambahkan unit test otomatis di `ExampleUnitTest.kt` untuk memblokir keberadaan `ic_coin`, `ic_target`, `ic_crown`, `ic_book`, `ic_cap`, dan emoji mentah pada opsi yang tidak relevan secara semantik.
 
+---
+
+## 14. MANDAT ILUSTRASI KARTUN 2D EKSPRESIF UNTUK KARTU OPSI BERGAMBAR (ANTI-PLAIN CARTOON ILLUSTRATION MANDATE & HELLOCHINESE/DUOLINGO ART STANDARD)
+**CRITICAL**: Seluruh gambar atau ilustrasi pada kartu opsi bergambar (`PictureOption` / `ExerciseType.PICTURE_CHOICE`):
+- **Rule 1 (Anti-Plain Aesthetic Mandate)**:
+  - Dilarang keras menggunakan ikon vektor geometris datar (*flat vector glyphs*) yang kaku, dingin, atau minimalis seperti ikon sistem teknis pada kartu pilihan kosakata bergambar.
+  - Kartu pilihan soal bergambar WAJIB menggunakan **Ilustrasi Kartun 2D Karakter Penuh Jiwa & Kepribadian** (*Personality-Driven 2D Cartoon Illustrations*) yang hidup, hangat, dan ekspresif mengikuti standar visual kurikulum global modern (*HelloChinese* & *Duolingo*).
+- **Rule 2 (Format & Konvensi Penamaan Aset `art_*`)**:
+  - Seluruh aset ilustrasi kartun berformat **Lossless WebP** beresolusi tinggi (512x512 piksel, rasio 1:1) disimpan di direktori `app/src/main/res/drawable/` dengan prefix penamaan resmi **`art_<category>_<name>.webp`**.
+  - Contoh penamaan:
+    - Keluarga: `art_fam_grandfather.webp` (Kakek), `art_fam_grandmother.webp` (Nenek), `art_fam_home.webp` (Rumah), `art_child_boy.webp` (Anak laki-laki), `art_child_girl.webp` (Anak perempuan).
+    - Profesi: `art_person_guru.webp` (Guru), `art_person_murid.webp` (Murid), `art_person_dokter.webp` (Dokter).
+    - Makanan & Aksi: `art_food_baozi.webp` (Baozi), `art_food_tea.webp` (Teh), `art_action_run.webp` (Berlari).
+- **Rule 3 (Karakteristik Visual, Emosi & Gestur Interaktif)**:
+  - **Karakter Manusia / Profesi**: Wajib memiliki proporsi semi-chibi yang menggemaskan, ekspresi wajah ceria (*welcoming smile*), mata berbinar ramah, pipi merona sehat, rambut tertata berkarakter, pakaian kasual detail/bertekstur, dan gestur tubuh interaktif (misal: melambaikan tangan menyapa, mengacungkan jempol gembira, memegang tongkat jalan, atau memegang cangkir teh).
+  - **Objek / Benda / Bangunan**: Memiliki detail arsitektur kartun yang hangat (misal: rumah beratap terakota, cerobong asap mengepulkan bentuk hati cinta, jendela berpot bunga warna-warni, jalan setapak batu), bukan sekadar kotak siluet datar.
+- **Rule 4 (Latar Belakang Terisolasi Bersih & Safe Padding Mandate)**:
+  - Ilustrasi kartun wajib memiliki **latar belakang putih murni terisolasi (*isolated pure white background*) atau transparan (*alpha channel*)**. Dilarang menggunakan latar pemandangan penuh yang bertabrakan dengan kontainer kartu.
+  - Sesuai **Rule 11**: Seluruh ilustrasi wajib memiliki *internal safe margin* minimal 10% (32px dari batas kanvas 512x512) sehingga ketika dirender dengan `ContentScale.Fit`, seluruh ujung kepala, telinga, rambut, tongkat, dan kaki bernapas lega dan **tidak pernah terpotong oleh batas kartu (`Card`)**.
+- **Rule 5 (Zero Emoji & Strict Semantic Harmony)**:
+  - Nilai parameter `PictureOption.emoji` tetap **WAJIB string kosong `""`**.
+  - Setiap kartu opsi bergambar wajib memiliki korelasi semantik harfiah 1:1 antara gambar kartun, label Indonesia, Hanzi, dan Pinyin.
+- **Rule 6 (Automated QA Audit & Production Verification)**:
+  - Dalam setiap audit tahap rilis, QA wajib memverifikasi tampilan kartu pilihan gambar langsung di emulator Android untuk memastikan seluruh opsi tampil hidup, ceria, memiliki kepribadian, tidak *plain*, dan tidak terpotong.
+
+
 
