@@ -5175,6 +5175,106 @@ object LearningRepository {
                     exercisesPart2 = bab23Stage5Part2Exercises
                 )
             )
+        ),
+
+        // BAB 24: Kehidupan Kampus, Kelas & Ujian Akademik (菁菁校园、教室课堂与课业测验)
+        UnitCourse(
+            id = "unit_24",
+            unitNumber = 24,
+            title = "Kampus & Ujian",
+            subtitle = "SMA, kelas, awal semester, buku catatan, pena, tas, mengajar, paham, ujian, dan soal",
+            bannerTitle = "Kampus & Ujian Akademik",
+            emoji = "🎓",
+            level = "Level 24 (HSK 2)",
+            story = stories[23],
+            nodes = listOf(
+                PathNode("u24_n1", "Sekolah & Kelas", Color(0xFFFFC107), NodeIconType.CAP, isCompleted = false, lessonId = "u24_l1"),
+                PathNode("u24_n2", "Alat Tulis & Pintu", Color(0xFFFFC107), NodeIconType.DUMBBELL, isCompleted = false, lessonId = "u24_l2"),
+                PathNode("u24_n3", "Mengajar & Paham", Color(0xFFFFC107), NodeIconType.CAP, isCompleted = false, lessonId = "u24_l3"),
+                PathNode("u24_n4", "Ujian & Butir Soal", Color(0xFFFFC107), NodeIconType.DUMBBELL, isCompleted = false, lessonId = "u24_l4"),
+                PathNode("u24_n5", "Evaluasi Akademik", Color(0xFFFFC107), NodeIconType.SHUFFLE, isCompleted = false, lessonId = "u24_l5"),
+                PathNode("u24_n6", "Kuis Cerita Bab 24", Color(0xFFFFC107), NodeIconType.BOOK, isCompleted = false, lessonId = "u24_l1"),
+                PathNode("u24_n7", "Checkpoint Peti", Color(0xFFFFB300), NodeIconType.CHEST, isCompleted = false, lessonId = "u24_l1"),
+                PathNode("u24_n8", "Rest area", Color(0xFF03A9F4), NodeIconType.REST_AREA, isCompleted = false, lessonId = "u24_l1")
+            ),
+            lessons = listOf(
+                Lesson(
+                    id = "u24_l1",
+                    title = "Jenjang SMA & Awal Masuk",
+                    subtitle = "Kosakata 高中, 班, 教室, dan 开学",
+                    grammarNote = "Tingkat pendidikan: 高中 (gāozhōng - SMA), 班 (bān - kelas/kelompok), 教室 (jiàoshì - ruang kelas), 开学 (kāixué - awal semester masuk sekolah).",
+                    newWords = listOf(
+                        Word("w24_1", "高中", "gāozhōng", "SMA", "Pendidikan", "我姐姐现在上高中。", "Wǒ jiějie xiànzài shàng gāozhōng.", "Kakak saya sekolah di SMA."),
+                        Word("w24_2", "班", "bān", "Kelas / rombel", "Pendidikan", "我们班一共有二十五个同学。", "Wǒmen bān yígòng yǒu èrshíwǔ gè tóngxué.", "Kelas kami ada 25 siswa."),
+                        Word("w24_3", "教室", "jiàoshì", "Ruang kelas", "Tempat", "同学们在教室里学习。", "Tóngxuémen zài jiàoshì lǐ xuéxí.", "Murid-murid belajar di kelas."),
+                        Word("w24_4", "开学", "kāixué", "Awal semester", "Waktu", "下星期一我们就开学了。", "Xià xīngqīyī wǒmen jiù kāixué le.", "Senin depan kita awal semester.")
+                    ),
+                    exercises = bab24Stage1Part1Exercises,
+                    exercisesPart1 = bab24Stage1Part1Exercises,
+                    exercisesPart2 = bab24Stage1Part2Exercises
+                ),
+                Lesson(
+                    id = "u24_l2",
+                    title = "Perlengkapan Belajar & Pintu",
+                    subtitle = "Kosakata 本子, 笔, 书包, 门, dan 门口",
+                    grammarNote = "Alat tulis: 本子 (buku catatan), 笔 (pena), 书包 (tas sekolah). Pintu: 门 (pintu), 门口 (ambang pintu/gerbang: 在门口等你).",
+                    newWords = listOf(
+                        Word("w24_5", "本子", "běnzi", "Buku catatan", "Barang", "我在本子上记下。", "Wǒ zài běnzi shang jìxià.", "Saya mencatat di buku catatan."),
+                        Word("w24_6", "笔", "bǐ", "Pena / pensil", "Barang", "你能借我一支笔吗？", "Nǐ néng jiè wǒ yì zhī bǐ ma?", "Bisakah pinjamkan saya pena?"),
+                        Word("w24_7", "书包", "shūbāo", "Tas sekolah", "Barang", "新书包是妈妈送的。", "Xīn shūbāo shì māma sòng de.", "Tas baru hadiah dari ibu."),
+                        Word("w24_8", "门", "mén", "Pintu / gerbang", "Benda", "出门前请把门关上。", "Chūmén qián qǐng bǎ mén guān shàng.", "Sebelum keluar tutup pintunya."),
+                        Word("w24_9", "门口", "ménkǒu", "Pintu masuk", "Tempat", "我在学校门口等你。", "Wǒ zài xuéxiào ménkǒu děng nǐ.", "Saya menunggumu di pintu sekolah.")
+                    ),
+                    exercises = bab24Stage2Part1Exercises,
+                    exercisesPart1 = bab24Stage2Part1Exercises,
+                    exercisesPart2 = bab24Stage2Part2Exercises
+                ),
+                Lesson(
+                    id = "u24_l3",
+                    title = "Pengajaran, Kata & Pemahaman",
+                    subtitle = "Kosakata 教, 懂, 词, dan 开始",
+                    grammarNote = "Aktivitas instruksi: 教 (jiāo - mengajar), 开始 (kāishǐ - mulai). Pemahaman: 懂 (dǒng - paham: 听懂了). Kosakata: 词 (cí - kata/kosakata).",
+                    newWords = listOf(
+                        Word("w24_10", "教", "jiāo", "Mengajar", "Kata Kerja", "王老师教我们汉语。", "Wáng lǎoshī jiāo wǒmen Hànyǔ.", "Guru Wang mengajar kami Mandarin."),
+                        Word("w24_11", "懂", "dǒng", "Mengerti / paham", "Kata Kerja", "老师讲的话我都懂了。", "Lǎoshī jiǎng de huà wǒ dōu dǒng le.", "Perkataan guru saya paham."),
+                        Word("w24_12", "词", "cí", "Kata / kosakata", "Bahasa", "今天我们学了二十个新词。", "Jīntiān wǒmen xué le èrshí gè xīn cí.", "Hari ini belajar 20 kosakata baru."),
+                        Word("w24_13", "开始", "kāishǐ", "Mulai / permulaan", "Kata Kerja", "现在我们开始上课。", "Xiànzài wǒmen kāishǐ shàngkè.", "Sekarang kita mulai kelas.")
+                    ),
+                    exercises = bab24Stage3Part1Exercises,
+                    exercisesPart1 = bab24Stage3Part1Exercises,
+                    exercisesPart2 = bab24Stage3Part2Exercises
+                ),
+                Lesson(
+                    id = "u24_l4",
+                    title = "Pelaksanaan Ujian & Butir Soal",
+                    subtitle = "Kosakata 考, 考试, 题, dan 错",
+                    grammarNote = "Tes akademik: 考 (kǎo - menguji), 考试 (kǎoshì - ujian). Butir soal: 题 (tí - soal ujian). Kekeliruan: 错 (cuò - salah/keliru: 做错了).",
+                    newWords = listOf(
+                        Word("w24_14", "考", "kǎo", "Menguji / dites", "Kata Kerja", "明天我们考听力。", "Míngtiān wǒmen kǎo tīnglì.", "Besok kita tes menyimak."),
+                        Word("w24_15", "考试", "kǎoshì", "Ujian / ulangan", "Pendidikan", "期末考试大家考得很好。", "Qīmò kǎoshì dàjiā kǎo de hěn hǎo.", "Ujian akhir semua dapat nilai bagus."),
+                        Word("w24_16", "题", "tí", "Butir soal / topik", "Pendidikan", "最后一道题很难。", "Zuìhòu yí dào tí hěn nán.", "Soal terakhir sangat sulit."),
+                        Word("w24_17", "错", "cuò", "Salah / keliru", "Kata Sifat", "这道题你写错了。", "Zhè dào tí nǐ xiě cuò le.", "Soal ini kamu salah tulis.")
+                    ),
+                    exercises = bab24Stage4Part1Exercises,
+                    exercisesPart1 = bab24Stage4Part1Exercises,
+                    exercisesPart2 = bab24Stage4Part2Exercises
+                ),
+                Lesson(
+                    id = "u24_l5",
+                    title = "Evaluasi Komprehensif Aktivitas Akademik",
+                    subtitle = "Review seluruh 17 kosakata kampus, belajar, dan ujian",
+                    grammarNote = "Evaluasi menyeluruh Bab 24: suasana ruang kelas SMA, peralatan alat tulis, penjelasan guru, memahami materi, dan pengerjaan ujian.",
+                    newWords = listOf(
+                        Word("w24_1", "高中", "gāozhōng", "SMA", "Pendidikan", "在高中学习。", "Zài gāozhōng xuéxí.", "Belajar di SMA."),
+                        Word("w24_3", "教室", "jiàoshì", "Ruang kelas", "Tempat", "在教室听课。", "Zài jiàoshì tīngkè.", "Mendengarkan pelajaran di kelas."),
+                        Word("w24_11", "懂", "dǒng", "Paham", "Kata Kerja", "新词都懂了。", "Xīn cí dōu dǒng le.", "Kosakata baru sudah paham."),
+                        Word("w24_15", "考试", "kǎoshì", "Ujian", "Pendidikan", "考试没做错。", "Kǎoshì méi zuò cuò.", "Ujian tidak ada yang salah.")
+                    ),
+                    exercises = bab24Stage5Part1Exercises,
+                    exercisesPart1 = bab24Stage5Part1Exercises,
+                    exercisesPart2 = bab24Stage5Part2Exercises
+                )
+            )
         )
     )
 }
