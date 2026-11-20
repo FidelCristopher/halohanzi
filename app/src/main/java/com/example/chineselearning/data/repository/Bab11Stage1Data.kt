@@ -18,10 +18,10 @@ val bab11Stage1Part1Exercises = listOf(
         correctAnswer = "sekolah",
         audioToSpeak = "学校",
         pictureOptions = listOf(
-            PictureOption("u11_s1_p1_opt1", "sekolah", "🏫", R.drawable.ic_cap, true),
-            PictureOption("u11_s1_p1_opt2", "rumah", "🏠", R.drawable.ic_people_group, false),
-            PictureOption("u11_s1_p1_opt3", "toko", "🏪", R.drawable.ic_shop_store, false),
-            PictureOption("u11_s1_p1_opt4", "buku", "📖", R.drawable.ic_book, false)
+            PictureOption("u11_s1_p1_opt1", "sekolah", "", R.drawable.ic_edu_school, true),
+            PictureOption("u11_s1_p1_opt2", "rumah", "", R.drawable.ic_fam_home, false),
+            PictureOption("u11_s1_p1_opt3", "toko", "", R.drawable.ic_shop_store, false),
+            PictureOption("u11_s1_p1_opt4", "buku", "", R.drawable.ic_book_chinese, false)
         )
     ),
 
@@ -108,10 +108,10 @@ val bab11Stage1Part1Exercises = listOf(
         correctAnswer = "sekolah dasar",
         audioToSpeak = "小学",
         pictureOptions = listOf(
-            PictureOption("u11_s1_p1_opt7_1", "sekolah dasar", "🎒", R.drawable.ic_cap, true),
-            PictureOption("u11_s1_p1_opt7_2", "universitas", "🏛️", R.drawable.ic_target, false),
-            PictureOption("u11_s1_p1_opt7_3", "rumah", "🏠", R.drawable.ic_people_group, false),
-            PictureOption("u11_s1_p1_opt7_4", "toko", "🏪", R.drawable.ic_shop_store, false)
+            PictureOption("u11_s1_p1_opt7_1", "sekolah dasar", "", R.drawable.ic_edu_primary_school, true),
+            PictureOption("u11_s1_p1_opt7_2", "universitas", "", R.drawable.ic_edu_university, false),
+            PictureOption("u11_s1_p1_opt7_3", "rumah", "", R.drawable.ic_fam_home, false),
+            PictureOption("u11_s1_p1_opt7_4", "toko", "", R.drawable.ic_shop_store, false)
         )
     ),
 
@@ -169,10 +169,10 @@ val bab11Stage1Part2Exercises = listOf(
         correctAnswer = "universitas",
         audioToSpeak = "大学",
         pictureOptions = listOf(
-            PictureOption("u11_s1_p2_opt1", "universitas", "🏛️", R.drawable.ic_cap, true),
-            PictureOption("u11_s1_p2_opt2", "sekolah dasar", "🎒", R.drawable.ic_target, false),
-            PictureOption("u11_s1_p2_opt3", "rumah", "🏠", R.drawable.ic_people_group, false),
-            PictureOption("u11_s1_p2_opt4", "rumah sakit", "🏥", R.drawable.ic_book, false)
+            PictureOption("u11_s1_p2_opt1", "universitas", "", R.drawable.ic_edu_university, true),
+            PictureOption("u11_s1_p2_opt2", "sekolah dasar", "", R.drawable.ic_edu_primary_school, false),
+            PictureOption("u11_s1_p2_opt3", "rumah", "", R.drawable.ic_fam_home, false),
+            PictureOption("u11_s1_p2_opt4", "rumah sakit", "", R.drawable.ic_med_hospital, false)
         )
     ),
 
@@ -259,10 +259,10 @@ val bab11Stage1Part2Exercises = listOf(
         correctAnswer = "mahasiswa",
         audioToSpeak = "大学生",
         pictureOptions = listOf(
-            PictureOption("u11_s1_p2_opt7_1", "mahasiswa", "🧑‍🎓", R.drawable.ic_cap, true),
-            PictureOption("u11_s1_p2_opt7_2", "guru", "👨‍🏫", R.drawable.ic_target, false),
-            PictureOption("u11_s1_p2_opt7_3", "dokter", "👨‍⚕️", R.drawable.ic_book, false),
-            PictureOption("u11_s1_p2_opt7_4", "murid SD", "🎒", R.drawable.ic_edu_primary_school, false)
+            PictureOption("u11_s1_p2_opt7_1", "mahasiswa", "", R.drawable.ic_edu_college_student, true),
+            PictureOption("u11_s1_p2_opt7_2", "guru", "", R.drawable.ic_teacher_avatar, false),
+            PictureOption("u11_s1_p2_opt7_3", "dokter", "", R.drawable.ic_med_doctor, false),
+            PictureOption("u11_s1_p2_opt7_4", "murid SD", "", R.drawable.ic_edu_primary_school, false)
         )
     ),
 
