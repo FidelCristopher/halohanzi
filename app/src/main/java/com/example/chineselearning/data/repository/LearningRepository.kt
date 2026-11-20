@@ -5656,6 +5656,102 @@ object LearningRepository {
                     exercisesPart2 = bab28Stage5Part2Exercises
                 )
             )
+        ),
+
+        // BAB 29: Logika Hubungan Antarklausa, Sebab-Akibat & Etiket (复句关联、因果转折与交际礼节)
+        UnitCourse(
+            id = "unit_29",
+            unitNumber = 29,
+            title = "Logika & Etiket",
+            subtitle = "Sebab-akibat 因为/所以, pertentangan 虽然/但是, alternatif 还是, kausatif 让, dan etiket 不好意思",
+            bannerTitle = "Hubungan Antarklausa & Etiket",
+            emoji = "🤝",
+            level = "Level 29 (HSK 2)",
+            story = stories[28],
+            nodes = listOf(
+                PathNode("u29_n1", "Sebab-Akibat", Color(0xFFFFC107), NodeIconType.CAP, isCompleted = false, lessonId = "u29_l1"),
+                PathNode("u29_n2", "Pertentangan", Color(0xFFFFC107), NodeIconType.DUMBBELL, isCompleted = false, lessonId = "u29_l2"),
+                PathNode("u29_n3", "Pilihan & Perintah", Color(0xFFFFC107), NodeIconType.CAP, isCompleted = false, lessonId = "u29_l3"),
+                PathNode("u29_n4", "Etiket & Makna", Color(0xFFFFC107), NodeIconType.DUMBBELL, isCompleted = false, lessonId = "u29_l4"),
+                PathNode("u29_n5", "Evaluasi Logika", Color(0xFFFFC107), NodeIconType.SHUFFLE, isCompleted = false, lessonId = "u29_l5"),
+                PathNode("u29_n6", "Kuis Cerita Bab 29", Color(0xFFFFC107), NodeIconType.BOOK, isCompleted = false, lessonId = "u29_l1"),
+                PathNode("u29_n7", "Checkpoint Peti", Color(0xFFFFB300), NodeIconType.CHEST, isCompleted = false, lessonId = "u29_l1"),
+                PathNode("u29_n8", "Rest area", Color(0xFF03A9F4), NodeIconType.REST_AREA, isCompleted = false, lessonId = "u29_l1")
+            ),
+            lessons = listOf(
+                Lesson(
+                    id = "u29_l1",
+                    title = "Hubungan Sebab-Akibat & Alasan",
+                    subtitle = "Kosakata 因为, 所以, dan 为什么",
+                    grammarNote = "Pola hubungan kausal: 因为 (yīnwèi - karena) ... 所以 (suǒyǐ - maka) ... Menanyakan sebab: 为什么 (wèishénme - mengapa/kenapa: 你为什么迟到？).",
+                    newWords = listOf(
+                        Word("w29_1", "因为", "yīnwèi", "Karena / sebab", "Konjungsi", "因为生病，所以他没来。", "Yīnwèi shēngbìng, suǒyǐ tā méi lái.", "Karena sakit, maka dia tidak masuk."),
+                        Word("w29_2", "所以", "suǒyǐ", "Maka / oleh karena itu", "Konjungsi", "因为下雨，所以我们没出去。", "Yīnwèi xiàyǔ, suǒyǐ wǒmen méi chūqù.", "Karena hujan, maka kami tak keluar."),
+                        Word("w29_3", "为什么", "wèishénme", "Mengapa / kenapa", "Kata Tanya", "你为什么来得这么晚？", "Nǐ wèishénme lái de zhème wǎn?", "Kenapa kamu datang begitu lambat?")
+                    ),
+                    exercises = bab29Stage1Part1Exercises,
+                    exercisesPart1 = bab29Stage1Part1Exercises,
+                    exercisesPart2 = bab29Stage1Part2Exercises
+                ),
+                Lesson(
+                    id = "u29_l2",
+                    title = "Hubungan Pertentangan & Transisi",
+                    subtitle = "Kosakata 虽然, 但是, dan 但",
+                    grammarNote = "Pola pertentangan konsesif: 虽然 (suīrán - walaupun) ... 但是/但 (dànshì/dàn - tetapi) ... (虽然汉语难，但是很快乐).",
+                    newWords = listOf(
+                        Word("w29_4", "虽然", "suīrán", "Meskipun / walaupun", "Konjungsi", "虽然汉语难，但是很快乐。", "Suīrán Hànyǔ nán, dànshì hěn kuàilè.", "Meskipun Mandarin sulit, tapi senang belajarnya."),
+                        Word("w29_5", "但是", "dànshì", "Tetapi / namun", "Konjungsi", "衣服很美，但是太贵了。", "Yīfu hěn měi, dànshì tài guì le.", "Baju sangat indah, tapi terlalu mahal."),
+                        Word("w29_6", "但", "dàn", "Tetapi (ringkas)", "Konjungsi", "我虽然累，但心里高兴。", "Wǒ suīrán lèi, dàn xīnlǐ gāoxìng.", "Saya walau lelah, tapi hati senang.")
+                    ),
+                    exercises = bab29Stage2Part1Exercises,
+                    exercisesPart1 = bab29Stage2Part1Exercises,
+                    exercisesPart2 = bab29Stage2Part2Exercises
+                ),
+                Lesson(
+                    id = "u29_l3",
+                    title = "Pilihan Alternatif & Kausatif",
+                    subtitle = "Kosakata 还是, 让, dan 可能",
+                    grammarNote = "Pilihan tanya: A 还是 (háishi - ataukah) B？ Pola kausatif: 让 (ràng - menyuruh/membuat orang berbuat sesuatu). Probabilitas: 可能 (kěnéng - barangkali).",
+                    newWords = listOf(
+                        Word("w29_7", "还是", "háishi", "Atau (tanya)", "Konjungsi", "你想喝咖啡还是喝茶？", "Nǐ xiǎng hē kāfēi háishi hē chá?", "Kamu mau minum kopi atau minum teh?"),
+                        Word("w29_8", "让", "ràng", "Menyuruh / membiarkan", "Kata Kerja", "妈妈让我早点回家吃饭。", "Māma ràng wǒ zǎodiǎn huíjiā chīfàn.", "Ibu suruh saya lekas pulang makan."),
+                        Word("w29_9", "可能", "kěnéng", "Mungkin / barangkali", "Keterangan", "明天下午可能会下雨。", "Míngtiān xiàwǔ kěnéng huì xiàyǔ.", "Besok sore mungkin turun hujan.")
+                    ),
+                    exercises = bab29Stage3Part1Exercises,
+                    exercisesPart1 = bab29Stage3Part1Exercises,
+                    exercisesPart2 = bab29Stage3Part2Exercises
+                ),
+                Lesson(
+                    id = "u29_l4",
+                    title = "Etiket Kesopanan & Makna",
+                    subtitle = "Kosakata 记得, 介绍, 意思, dan 不好意思",
+                    grammarNote = "Etiket kesopanan: 不好意思 (bùhǎoyìsi - permisi/sungkan: 不好意思打扰了). Memperkenalkan: 介绍 (jièshào). Pemaknaan: 意思 (yìsi). Ingatan: 记得 (jìde).",
+                    newWords = listOf(
+                        Word("w29_10", "记得", "jìde", "Ingat", "Kata Kerja", "你还记得他的名字吗？", "Nǐ hái jìde tā de míngzi ma?", "Kamu masih ingat namanya?"),
+                        Word("w29_11", "介绍", "jièshào", "Memperkenalkan", "Kata Kerja", "我介绍一下，这是王经理。", "Wǒ jièshào yíxià, zhè shì Wáng jīnglǐ.", "Saya perkenalkan, ini Manajer Wang."),
+                        Word("w29_12", "意思", "yìsi", "Makna / arti", "Benda", "这个汉字是什么意思？", "Zhège Hànzì shì shénme yìsi?", "Karakter Hanzi ini maknanya apa?"),
+                        Word("w29_13", "不好意思", "bùhǎoyìsi", "Sungkan / permisi", "Ungkapan", "不好意思，打扰您一下。", "Bùhǎoyìsi, dǎrǎo nín yíxià.", "Permisi, mengganggu Anda sebentar.")
+                    ),
+                    exercises = bab29Stage4Part1Exercises,
+                    exercisesPart1 = bab29Stage4Part1Exercises,
+                    exercisesPart2 = bab29Stage4Part2Exercises
+                ),
+                Lesson(
+                    id = "u29_l5",
+                    title = "Evaluasi Komprehensif Logika & Etiket",
+                    subtitle = "Review seluruh 16 kosakata konjungsi, kausatif & etiket",
+                    grammarNote = "Evaluasi menyeluruh Bab 29: merangkai kalimat sebab-akibat, pertentangan, imperatif halus 别 (bié - jangan: 别忘了), partikel seruan 啊 (a), dan frasa 跟 (gēn - bersama).",
+                    newWords = listOf(
+                        Word("w29_14", "别", "bié", "Jangan", "Keterangan", "出门别忘穿衣服。", "Chūmén bié wàng chuān yīfu.", "Keluar rumah jangan lupa pakai baju."),
+                        Word("w29_15", "啊", "a", "Partikel seru", "Partikel", "这里的风景真美丽啊！", "Zhèlǐ de fēngjǐng zhēn měilì a!", "Pemandangan di sini sungguh cantik ya!"),
+                        Word("w29_16", "跟", "gēn", "Bersama / dengan", "Preposisi", "我想跟你一起去超市。", "Wǒ xiǎng gēn nǐ yìqǐ qù chāoshì.", "Saya mau pergi ke supermarket bersamamu."),
+                        Word("w29_1", "因为", "yīnwèi", "Karena", "Konjungsi", "因为所以。", "Yīnwèi suǒyǐ.", "Karena dan maka.")
+                    ),
+                    exercises = bab29Stage5Part1Exercises,
+                    exercisesPart1 = bab29Stage5Part1Exercises,
+                    exercisesPart2 = bab29Stage5Part2Exercises
+                )
+            )
         )
     )
 }
