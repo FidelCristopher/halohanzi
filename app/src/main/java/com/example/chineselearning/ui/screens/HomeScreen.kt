@@ -209,12 +209,12 @@ fun HomeScreen(
                             HorizontalDivider(color = Color(0xFFF1F5F9), thickness = 1.dp)
 
                             listOf(
-                                1 to Pair("HSK 1: Pemula", "150 Kosakata dasar"),
-                                2 to Pair("HSK 2: Dasar", "300 Kosakata percakapan"),
-                                3 to Pair("HSK 3: Menengah", "600 Kosakata praktis"),
-                                4 to Pair("HSK 4: Menengah Atas", "1200 Kosakata fasih"),
-                                5 to Pair("HSK 5: Lanjutan", "2500 Kosakata akademis"),
-                                6 to Pair("HSK 6: Mahir", "5000+ Kosakata profesional")
+                                1 to Pair("HSK 1: Pemula", "16 Bab - 300 Kosakata"),
+                                2 to Pair("HSK 2: Dasar", "14 Bab - 200 Kosakata"),
+                                3 to Pair("HSK 3: Menengah", "333 Graded Stories"),
+                                4 to Pair("HSK 4: Menengah Atas", "1200 Kosakata"),
+                                5 to Pair("HSK 5: Lanjutan", "2500 Kosakata"),
+                                6 to Pair("HSK 6: Mahir", "5000+ Kosakata")
                             ).forEach { (level, info) ->
                                 val isSelected = level == selectedHskLevel
                                 DropdownMenuItem(
@@ -274,8 +274,8 @@ fun HomeScreen(
             }
         }
 
-        // IF USER CHOOSES HSK 2 - 6: Friendly placeholder banner
-        if (selectedHskLevel != 1) {
+        // IF USER CHOOSES HSK 3 - 6: Friendly placeholder banner
+        if (selectedHskLevel > 2) {
             item {
                 Column(
                     modifier = Modifier
@@ -299,7 +299,7 @@ fun HomeScreen(
                     )
                     Spacer(modifier = Modifier.height(8.dp))
                     Text(
-                        text = "Saat ini kita berfokus menuntaskan seluruh 150 kosakata dan 6 bab lengkap di HSK 1 terlebih dahulu.",
+                        text = "Saat ini kita berfokus menuntaskan seluruh 500 kosakata dan 30 bab lengkap di HSK 1 dan HSK 2 terlebih dahulu.",
                         fontFamily = NunitoFontFamily,
                         fontSize = 13.sp,
                         color = SlateGray,
@@ -316,19 +316,25 @@ fun HomeScreen(
                 }
             }
         } else {
-            // HSK 1: RENDER ALL 6 CHAPTERS IN ONE CONTINUOUS ROAD!
-            allUnits.forEachIndexed { unitIdx, chapterUnit ->
+            // RENDER CHAPTERS IN ONE CONTINUOUS ROAD (HSK 1: Bab 1-16, HSK 2: Bab 17-30)
+            val currentUnits = if (selectedHskLevel == 1) {
+                allUnits.filter { it.unitNumber in 1..16 }
+            } else {
+                allUnits.filter { it.unitNumber in 17..30 }
+            }
+
+            currentUnits.forEachIndexed { unitIdx, chapterUnit ->
                 val (bannerBg, connectorColor) = chapterThemeColors[unitIdx % chapterThemeColors.size]
                 val chapterDarkRim = getNodeRimColor(bannerBg)
 
-                // CHAPTER HEADER (Hero character for Bab 1, or Banner for Bab 2 - 6)
+                // CHAPTER HEADER (Hero character for Bab 1 or Bab 17, or Banner for subsequent chapters)
                 item(key = "chapter_header_${chapterUnit.id}") {
                     Column(
                         modifier = Modifier
                             .fillMaxWidth()
                             .padding(horizontal = 16.dp, vertical = 10.dp)
                     ) {
-                        // Grandpa Character (Shown on Bab 1)
+                        // Grandpa Character (Shown on first chapter of level)
                         if (unitIdx == 0) {
                             Row(
                                 modifier = Modifier
@@ -362,7 +368,7 @@ fun HomeScreen(
                                             .padding(horizontal = 12.dp, vertical = 6.dp)
                                     ) {
                                         Text(
-                                            text = "你好！",
+                                            text = if (selectedHskLevel == 1) "你好！" else "加油！",
                                             fontFamily = KaiTiFontFamily,
                                             color = Color.White,
                                             fontWeight = FontWeight.Bold,
