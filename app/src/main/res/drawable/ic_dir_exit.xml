@@ -1,0 +1,53 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Soft Coral Rose) -->
+    <path
+        android:fillColor="#FEF2F2"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Exterior Ground Floor Plane -->
+    <path
+        android:fillColor="#FEE2E2"
+        android:pathData="M16,74 L80,74 L74,84 L22,84 Z" />
+
+    <!-- Door Frame (Interior Wall View) -->
+    <path
+        android:fillColor="#334155"
+        android:pathData="M28,20 L68,20 C69.1,20 70,20.9 70,22 L70,76 L64,76 L64,26 L34,26 L34,76 L28,76 L28,22 C28,20.9 28.9,20 28,20 Z" />
+
+    <!-- Exterior Blue Sky Through Open Doorway -->
+    <path
+        android:fillColor="#E0F2FE"
+        android:pathData="M34,26 L64,26 L64,76 L34,76 Z" />
+
+    <!-- Open Wooden Door (Swung Outward Towards Right) -->
+    <path
+        android:fillColor="#C2410C"
+        android:pathData="M64,26 L78,32 L78,78 L64,76 Z" />
+    <path
+        android:fillColor="#EA580C"
+        android:pathData="M64,28 L76,33 L76,76 L64,74 Z" />
+
+    <!-- Golden Doorknob Accent -->
+    <path
+        android:fillColor="#FDE68A"
+        android:pathData="M68,54 A2,2 0 1,0 68,58 A2,2 0 1,0 68,54 Z" />
+
+    <!-- Bold Curved Directional Arrow Exiting Outward (Keluar / 出 / 出去) -->
+    <!-- Motion Tail from Inside Room -->
+    <path
+        android:fillColor="#B91C1C"
+        android:pathData="M24,54 C24,42 34,40 44,42 L43,46 C35,45 28,47 28,54 Z" />
+    <!-- Dynamic Arrowhead Bursting Outside to the Right -->
+    <path
+        android:fillColor="#EF4444"
+        android:pathData="M48,38 L68,46 L48,54 L52,48 L38,48 L38,44 L52,44 Z" />
+
+    <!-- Exit Footprints / Trail Heading Out -->
+    <path
+        android:fillColor="#F87171"
+        android:pathData="M38,69 A2.5,2.5 0 1,0 38,74 A2.5,2.5 0 1,0 38,69 Z M50,67 A2.5,2.5 0 1,0 50,72 A2.5,2.5 0 1,0 50,67 Z M64,64 A2.5,2.5 0 1,0 64,69 A2.5,2.5 0 1,0 64,64 Z" />
+</vector>

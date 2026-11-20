@@ -1,0 +1,55 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Soft Warm Amber) -->
+    <path
+        android:fillColor="#FEF3C7"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- River / Crossing Gap (Cool Stream Beneath) -->
+    <path
+        android:fillColor="#BAE6FD"
+        android:pathData="M16,70 C32,68 64,68 80,70 L80,78 C64,76 32,76 16,78 Z" />
+
+    <!-- Arched Bridge Structure (Melintasi / 过 - Crossing Over) -->
+    <path
+        android:fillColor="#CBD5E1"
+        android:pathData="M18,68 C34,54 62,54 78,68 L78,74 C62,60 34,60 18,74 Z" />
+    <path
+        android:fillColor="#F8FAFC"
+        android:pathData="M18,66 C34,52 62,52 78,66 L78,70 C62,56 34,56 18,70 Z" />
+
+    <!-- Bridge Railing Posts -->
+    <path
+        android:fillColor="#64748B"
+        android:pathData="M22,58 L24,58 L24,68 L22,68 Z M34,52 L36,52 L36,62 L34,62 Z M47,50 L49,50 L49,60 L47,60 Z M60,52 L62,52 L62,62 L60,62 Z M72,58 L74,58 L74,68 L72,68 Z" />
+    <!-- Railing Top Bar -->
+    <path
+        android:fillColor="#94A3B8"
+        android:pathData="M20,60 C34,48 62,48 76,60 L76,62 C62,50 34,50 20,62 Z" />
+
+    <!-- Bold Sweeping Dynamic Motion Arrow Jumping Across (过 - Cross Over) -->
+    <!-- Arc Motion Trail -->
+    <path
+        android:fillColor="#B45309"
+        android:pathData="M22,50 C32,24 64,24 74,44 L70,46 C61,28 35,28 25,52 Z" />
+    <!-- Arrowhead Pointing Forward-Down on Right Side -->
+    <path
+        android:fillColor="#D97706"
+        android:pathData="M66,42 L78,50 L80,36 L75,41 L69,38 Z" />
+
+    <!-- Little Runner / Passer Silhouette Leaping Across -->
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M48,22 A4,4 0 1,0 48,30 A4,4 0 1,0 48,22 Z" />
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M45,30 L52,30 L55,42 L51,43 L49,36 L46,42 L42,40 Z" />
+
+    <!-- Motion Speed Streaks -->
+    <path
+        android:fillColor="#FDE68A"
+        android:pathData="M26,38 L32,34 L31,32 L25,36 Z M36,28 L42,26 L41,24 L35,26 Z" />
+</vector>

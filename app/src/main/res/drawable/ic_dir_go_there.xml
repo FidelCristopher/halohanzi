@@ -1,0 +1,58 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Soft Teal Mint) -->
+    <path
+        android:fillColor="#F0FDFA"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Perspective Pathway Receding Away into Distance (过去 - Go There) -->
+    <path
+        android:fillColor="#99F6E4"
+        android:pathData="M24,80 L72,80 L54,24 L42,24 Z" />
+    <path
+        android:fillColor="#CCFBF1"
+        android:pathData="M28,78 L68,78 L52,26 L44,26 Z" />
+
+    <!-- Distant Horizon Mountain / Hills -->
+    <path
+        android:fillColor="#5EEAD4"
+        android:pathData="M20,38 C28,32 38,36 48,30 C58,36 68,32 76,38 L76,44 L20,44 Z" />
+
+    <!-- Destination Pin / Target Flag in Distant Horizon -->
+    <path
+        android:fillColor="#0F766E"
+        android:pathData="M48,16 L49,16 L49,28 L48,28 Z" />
+    <path
+        android:fillColor="#EF4444"
+        android:pathData="M49,16 L58,20 L49,24 Z" />
+
+    <!-- Bold Dynamic Arrow Heading Forward Into Distance -->
+    <!-- Arrow Shaft from Foreground -->
+    <path
+        android:fillColor="#14B8A6"
+        android:pathData="M44,68 L52,68 L50,44 L46,44 Z" />
+    <!-- Tapered Arrowhead Pointing Up into Distance -->
+    <path
+        android:fillColor="#0D9488"
+        android:pathData="M38,46 L48,28 L58,46 L51,46 L51,56 L45,56 L45,46 Z" />
+    <path
+        android:fillColor="#2DD4BF"
+        android:pathData="M42,45 L48,33 L54,45 L49,45 L49,54 L47,54 L47,45 Z" />
+
+    <!-- Foreground Observer Silhouette (Looking Away Towards Target) -->
+    <path
+        android:fillColor="#115E59"
+        android:pathData="M38,82 C38,74 43,70 48,70 C53,70 58,74 58,82 Z" />
+    <!-- Head Back -->
+    <path
+        android:fillColor="#0F766E"
+        android:pathData="M48,63 A5,5 0 1,0 48,73 A5,5 0 1,0 48,63 Z" />
+
+    <!-- Speed Lines Emanating Towards Distance -->
+    <path
+        android:fillColor="#0D9488"
+        android:pathData="M32,60 L36,54 L37,55 L33,61 Z M64,60 L60,54 L59,55 L63,61 Z" />
+</vector>

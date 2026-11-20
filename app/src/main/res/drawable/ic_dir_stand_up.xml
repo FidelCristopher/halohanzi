@@ -1,0 +1,67 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Soft Sky Blue) -->
+    <path
+        android:fillColor="#E0F2FE"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Floor Line -->
+    <path
+        android:fillColor="#BAE6FD"
+        android:pathData="M18,80 L78,80 L78,83 L18,83 Z" />
+
+    <!-- Chair / Stool Behind Figure (Where Person Just Sat) -->
+    <path
+        android:fillColor="#94A3B8"
+        android:pathData="M24,54 L40,54 C41.1,54 42,54.9 42,56 L42,58 L22,58 L22,56 C22,54.9 22.9,54 24,54 Z" />
+    <!-- Chair Legs -->
+    <path
+        android:fillColor="#64748B"
+        android:pathData="M24,58 L27,58 L27,80 L24,80 Z M37,58 L40,58 L40,80 L37,80 Z" />
+
+    <!-- Upright Standing Figure (站起来 - Standing Up) -->
+    <!-- Head -->
+    <path
+        android:fillColor="#FFD1A4"
+        android:pathData="M52,18 A7,7 0 1,0 52,32 A7,7 0 1,0 52,18 Z" />
+    <!-- Hair -->
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="M46,24 C46,18 49,16 53,16 C57,16 60,18 60,24 C57,21 53,21 51,23 C49,24 47,24 46,24 Z" />
+
+    <!-- Torso / Blue Shirt Standing Tall -->
+    <path
+        android:fillColor="#0284C7"
+        android:pathData="M46,33 L58,33 C60.2,33 62,34.8 62,37 L62,56 L42,56 L42,37 C42,34.8 43.8,33 46,33 Z" />
+    <path
+        android:fillColor="#38BDF8"
+        android:pathData="M50,33 L54,33 L53,42 L51,42 Z" />
+
+    <!-- Upright Legs / Trousers -->
+    <path
+        android:fillColor="#1E3A8A"
+        android:pathData="M44,56 L50,56 L50,80 L44,80 Z M54,56 L60,56 L60,80 L54,80 Z" />
+
+    <!-- Shoes Standing Firm on Ground -->
+    <path
+        android:fillColor="#0F172A"
+        android:pathData="M42,78 L51,78 L51,81 L42,81 Z M53,78 L62,78 L62,81 L53,81 Z" />
+
+    <!-- Prominent Dynamic Upward Elevation Arrow (起来 - Rise Up) -->
+    <!-- Arrowhead Pointing Straight Up -->
+    <path
+        android:fillColor="#0284C7"
+        android:pathData="M74,28 L66,38 L71,38 L71,62 L77,62 L77,38 L82,38 Z" />
+    <!-- Energy Spark Accent on Arrow -->
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M74,18 L76,23 L81,24 L76,26 L74,31 L72,26 L67,24 L72,23 Z" />
+
+    <!-- Rising Kinetic Motion Streaks -->
+    <path
+        android:fillColor="#38BDF8"
+        android:pathData="M34,44 L36,44 L36,52 L34,52 Z M34,36 L36,36 L36,40 L34,40 Z" />
+</vector>

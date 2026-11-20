@@ -1,0 +1,53 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Soft Emerald Mint) -->
+    <path
+        android:fillColor="#ECFDF5"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Interior Room Floor Plane (Perspective) -->
+    <path
+        android:fillColor="#D1FAE5"
+        android:pathData="M16,74 L80,74 L74,84 L22,84 Z" />
+
+    <!-- Door Frame (Sturdy Slate Jambs & Lintel) -->
+    <path
+        android:fillColor="#334155"
+        android:pathData="M28,20 L68,20 C69.1,20 70,20.9 70,22 L70,76 L64,76 L64,26 L34,26 L34,76 L28,76 L28,22 C28,20.9 28.9,20 28,20 Z" />
+
+    <!-- Interior Light Through Open Doorway -->
+    <path
+        android:fillColor="#FEF08A"
+        android:pathData="M34,26 L64,26 L64,76 L34,76 Z" />
+
+    <!-- Open Wooden Door (Swung Inward at Perspective Angle) -->
+    <path
+        android:fillColor="#B45309"
+        android:pathData="M34,26 L52,32 L52,78 L34,76 Z" />
+    <path
+        android:fillColor="#D97706"
+        android:pathData="M35,28 L50,33 L50,76 L35,74 Z" />
+
+    <!-- Golden Doorknob -->
+    <path
+        android:fillColor="#FDE68A"
+        android:pathData="M46,54 A2,2 0 1,0 46,58 A2,2 0 1,0 46,54 Z" />
+
+    <!-- Bold Curved Directional Arrow Entering Inward (Masuk / 进 / 进来) -->
+    <!-- Motion Tail -->
+    <path
+        android:fillColor="#047857"
+        android:pathData="M78,60 C78,48 68,44 56,44 L56,48 C65,48 73,51 73,60 Z" />
+    <!-- Dynamic Arrowhead Entering Through Doorway -->
+    <path
+        android:fillColor="#059669"
+        android:pathData="M58,40 L44,46 L58,52 L58,47 L68,47 L68,45 L58,45 Z" />
+
+    <!-- Direction Step Dots (Entry Footprints) -->
+    <path
+        android:fillColor="#10B981"
+        android:pathData="M72,66 A2.5,2.5 0 1,0 72,71 A2.5,2.5 0 1,0 72,66 Z M62,69 A2.5,2.5 0 1,0 62,74 A2.5,2.5 0 1,0 62,69 Z M50,71 A2.5,2.5 0 1,0 50,76 A2.5,2.5 0 1,0 50,71 Z" />
+</vector>
