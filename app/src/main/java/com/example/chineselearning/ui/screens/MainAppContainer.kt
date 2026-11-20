@@ -26,6 +26,9 @@ fun MainAppContainer(
     var activeNodeId by remember { mutableStateOf<String?>(null) }
     var activePartNumber by rememberSaveable { mutableIntStateOf(1) }
 
+    // Hoisted and saveable level state for HomeScreen to preserve HSK level across lesson navigation
+    var belajarHskLevel by rememberSaveable { mutableIntStateOf(1) }
+
     // Hoisted and saveable filter states for StoryListScreen to preserve state across navigation
     var storyHskFilter by rememberSaveable { mutableStateOf("Semua") }
     var storyCategoryFilter by rememberSaveable { mutableStateOf("Semua Topik") }
@@ -87,6 +90,8 @@ fun MainAppContainer(
                 when (selectedTab) {
                     0 -> HomeScreen(
                         lazyListState = homeListState,
+                        selectedHskLevel = belajarHskLevel,
+                        onHskLevelChange = { belajarHskLevel = it },
                         onSelectLesson = { lesson, nodeId ->
                             activeNodeId = nodeId
                             activePartNumber = com.example.chineselearning.data.repository.LearningRepository.getStageProgress(nodeId)

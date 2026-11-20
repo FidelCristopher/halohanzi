@@ -61,11 +61,12 @@ fun getNodeRimColor(color: Color): Color {
 @Composable
 fun HomeScreen(
     lazyListState: LazyListState = rememberLazyListState(),
+    selectedHskLevel: Int = 1,
+    onHskLevelChange: (Int) -> Unit = {},
     onSelectLesson: (Lesson, String) -> Unit,
     onSelectStory: (Story) -> Unit
 ) {
     val allUnits = LearningRepository.units
-    var selectedHskLevel by remember { mutableStateOf(1) }
     var showHskMenu by remember { mutableStateOf(false) }
 
     var activePopupNodeId by remember { mutableStateOf<String?>(null) }
@@ -263,7 +264,7 @@ fun HomeScreen(
                                         }
                                     },
                                     onClick = {
-                                        selectedHskLevel = level
+                                        onHskLevelChange(level)
                                         showHskMenu = false
                                     }
                                 )
@@ -307,7 +308,7 @@ fun HomeScreen(
                     )
                     Spacer(modifier = Modifier.height(20.dp))
                     Button(
-                        onClick = { selectedHskLevel = 1 },
+                        onClick = { onHskLevelChange(1) },
                         shape = RoundedCornerShape(20.dp),
                         colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF00C48C))
                     ) {
