@@ -1,0 +1,54 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Soft Blossom Lavender) -->
+    <path
+        android:fillColor="#FAF5FF"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Silver Hair Bun on Top/Back (Sanggul Nenek) -->
+    <path
+        android:fillColor="#94A3B8"
+        android:pathData="M48,15 A11,11 0 1,0 48,37 A11,11 0 1,0 48,15 Z" />
+    <!-- Bun Hairpin Accent (Gold/Amber) -->
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M56,18 L64,14 L65,16 L57,20 Z" />
+
+    <!-- Torso / Lilac Purple Blouse -->
+    <path
+        android:fillColor="#7E22CE"
+        android:pathData="M26,82 C26,66 34,58 48,58 C62,58 70,66 70,82 Z" />
+
+    <!-- Soft Cozy Shawl (Warm Rose Wrap) -->
+    <path
+        android:fillColor="#FDA4AF"
+        android:pathData="M30,82 C30,70 36,60 48,60 C60,60 66,70 66,82 L59,82 C58,73 54,67 48,67 C42,67 38,73 37,82 Z" />
+
+    <!-- Head / Face -->
+    <path
+        android:fillColor="#FFD1A4"
+        android:pathData="M48,27 A16,16 0 1,0 48,59 A16,16 0 1,0 48,27 Z" />
+
+    <!-- Soft Silver-Grey Wavy Hair & Bangs -->
+    <path
+        android:fillColor="#CBD5E1"
+        android:pathData="M32,36 C32,22 38,19 48,19 C58,19 64,22 64,36 C60,31 55,30 49,32 C45,34 38,34 32,36 Z M32,36 L34,48 L37,44 L35,36 Z M64,36 L62,48 L59,44 L61,36 Z" />
+
+    <!-- Gentle Smiling Eyes (Happy Crescent Curves) -->
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="M39,39 C41,37 43,37 45,39 Z M51,39 C53,37 55,37 57,39 Z" />
+
+    <!-- Gentle Grandmotherly Rosy Cheeks -->
+    <path
+        android:fillColor="#FECDD3"
+        android:pathData="M36,44 A3,3 0 1,0 36,50 A3,3 0 1,0 36,44 Z M60,44 A3,3 0 1,0 60,50 A3,3 0 1,0 60,44 Z" />
+
+    <!-- Sweet Warm Smile -->
+    <path
+        android:fillColor="#E11D48"
+        android:pathData="M44,47 C45,51.5 51,51.5 52,47 Z" />
+</vector>
