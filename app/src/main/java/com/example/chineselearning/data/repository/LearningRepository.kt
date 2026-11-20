@@ -4499,6 +4499,103 @@ object LearningRepository {
                     exercisesPart2 = bab16Stage6Part2Exercises
                 )
             )
+        ),
+
+        // BAB 17: Keluarga Besar, Kerabat & Kenangan Masa Kecil (家庭亲属、辈分称谓与童年时光)
+        UnitCourse(
+            id = "unit_17",
+            unitNumber = 17,
+            title = "Keluarga Besar & Kerabat",
+            subtitle = "Kakek nenek, suami istri, anak-anak, masa kecil, dan marga formal",
+            bannerTitle = "Keluarga Besar & Kerabat",
+            emoji = "👨‍👩‍👧‍👦",
+            level = "Level 17 (HSK 2)",
+            story = stories[16],
+            nodes = listOf(
+                PathNode("u17_n1", "Kakek Nenek & Pasangan", Color(0xFFFFC107), NodeIconType.CAP, isCompleted = false, lessonId = "u17_l1"),
+                PathNode("u17_n2", "Anak & Generasi Muda", Color(0xFFFFC107), NodeIconType.DUMBBELL, isCompleted = false, lessonId = "u17_l2"),
+                PathNode("u17_n3", "Masa Kecil & Ultah", Color(0xFFFFC107), NodeIconType.CAP, isCompleted = false, lessonId = "u17_l3"),
+                PathNode("u17_n4", "Marga & Diri Sendiri", Color(0xFFFFC107), NodeIconType.DUMBBELL, isCompleted = false, lessonId = "u17_l4"),
+                PathNode("u17_n5", "Evaluasi Keluarga", Color(0xFFFFC107), NodeIconType.SHUFFLE, isCompleted = false, lessonId = "u17_l5"),
+                PathNode("u17_n6", "Kuis Cerita Bab 17", Color(0xFFFFC107), NodeIconType.BOOK, isCompleted = false, lessonId = "u17_l1"),
+                PathNode("u17_n7", "Checkpoint Peti", Color(0xFFFFB300), NodeIconType.CHEST, isCompleted = false, lessonId = "u17_l1"),
+                PathNode("u17_n8", "Rest area", Color(0xFF03A9F4), NodeIconType.REST_AREA, isCompleted = false, lessonId = "u17_l1")
+            ),
+            lessons = listOf(
+                Lesson(
+                    id = "u17_l1",
+                    title = "Kakek, Nenek & Pasangan",
+                    subtitle = "Kosakata 爷爷, 奶奶, 丈夫, dan 妻子",
+                    grammarNote = "Panggilan kerabat pihak ayah: 爷爷 (kakek) dan 奶奶 (nenek). Pasangan resmi suami-istri: 丈夫 (zhàngfu - suami) dan 妻子 (qīzi - istri).",
+                    newWords = listOf(
+                        Word("w17_1", "爷爷", "yéye", "Kakek", "Keluarga", "我爷爷今年七十岁。", "Wǒ yéye jīnnián qīshí suì.", "Kakek saya tahun ini 70 tahun."),
+                        Word("w17_2", "奶奶", "nǎinai", "Nenek", "Keluarga", "奶奶做饭很好吃。", "Nǎinai zuòfàn hěn hǎochī.", "Nenek memasak sangat enak."),
+                        Word("w17_3", "丈夫", "zhàngfu", "Suami", "Keluarga", "她的丈夫是医生。", "Tā de zhàngfu shì yīshēng.", "Suaminya adalah dokter."),
+                        Word("w17_4", "妻子", "qīzi", "Istri", "Keluarga", "我和妻子都喜欢旅游。", "Wǒ hé qīzi dōu xǐhuan lǚyóu.", "Saya dan istri suka berwisata.")
+                    ),
+                    exercises = bab17Stage1Part1Exercises,
+                    exercisesPart1 = bab17Stage1Part1Exercises,
+                    exercisesPart2 = bab17Stage1Part2Exercises
+                ),
+                Lesson(
+                    id = "u17_l2",
+                    title = "Anak-Anak & Generasi Muda",
+                    subtitle = "Kosakata 男孩儿, 女孩儿, dan 小孩儿",
+                    grammarNote = "Penyebutan anak dengan sufiks retrofleksi 儿 (ér): 男孩儿 (anak laki-laki), 女孩儿 (anak perempuan), dan 小孩儿 (bocah/anak kecil).",
+                    newWords = listOf(
+                        Word("w17_5", "男孩儿", "nánháiér", "Anak laki-laki", "Keluarga", "那个男孩儿是谁？", "Nàge nánháiér shì shéi?", "Anak laki-laki itu siapa?"),
+                        Word("w17_6", "女孩儿", "nǚháiér", "Anak perempuan", "Keluarga", "前面有一个小女孩儿。", "Qiánmiàn yǒu yí gè xiǎo nǚháiér.", "Di depan ada seorang anak perempuan kecil."),
+                        Word("w17_7", "小孩儿", "xiǎoháiér", "Anak kecil / bocah", "Keluarga", "小孩儿在房间里玩。", "Xiǎoháiér zài fángjiān lǐ wán.", "Anak kecil bermain di kamar.")
+                    ),
+                    exercises = bab17Stage2Part1Exercises,
+                    exercisesPart1 = bab17Stage2Part1Exercises,
+                    exercisesPart2 = bab17Stage2Part2Exercises
+                ),
+                Lesson(
+                    id = "u17_l3",
+                    title = "Masa Kecil & Ulang Tahun",
+                    subtitle = "Kosakata 小时候, 从小, dan 生日",
+                    grammarNote = "Keterangan waktu lampau: 小时候 (xiǎoshíhou - waktu kecil) dan 从小 (cóngxiǎo - sejak kecil). Perayaan hari lahir: 生日 (shēngrì) -> 祝你生日快乐！",
+                    newWords = listOf(
+                        Word("w17_8", "小时候", "xiǎoshíhou", "Waktu kecil", "Waktu", "我小时候喜欢唱歌。", "Wǒ xiǎoshíhou xǐhuan chànggē.", "Waktu kecil saya suka menyanyi."),
+                        Word("w17_9", "从小", "cóngxiǎo", "Sejak kecil", "Waktu", "他从小学习汉语。", "Tā cóngxiǎo xuéxí Hànyǔ.", "Dia sejak kecil belajar bahasa Mandarin."),
+                        Word("w17_10", "生日", "shēngrì", "Hari ulang tahun", "Waktu", "祝你生日快乐！", "Zhù nǐ shēngrì kuàilè!", "Selamat ulang tahun!")
+                    ),
+                    exercises = bab17Stage3Part1Exercises,
+                    exercisesPart1 = bab17Stage3Part1Exercises,
+                    exercisesPart2 = bab17Stage3Part2Exercises
+                ),
+                Lesson(
+                    id = "u17_l4",
+                    title = "Identitas Diri & Marga Formal",
+                    subtitle = "Kosakata 姓, 姓名, 名, dan 自己",
+                    grammarNote = "Pertanyaan marga formal: 您贵姓？ (Nín guì xìng?). Nama lengkap: 姓名 (xìngmíng). Penggolong orang terhormat: 名 (míng - 两名医生). Refleksif diri: 自己 (zìjǐ - diri sendiri).",
+                    newWords = listOf(
+                        Word("w17_11", "姓", "xìng", "Marga / bermarga", "Identitas", "请问您贵姓？", "Qǐngwèn nín guì xìng?", "Bolehkah tanya siapa marga Anda?"),
+                        Word("w17_12", "姓名", "xìngmíng", "Nama lengkap", "Identitas", "请在这里写你的姓名。", "Qǐng zài zhèlǐ xiě nǐ de xìngmíng.", "Tolong tuliskan nama lengkap Anda di sini."),
+                        Word("w17_13", "名", "míng", "Orang (formal)", "Penggolong", "来了一名新老师。", "Lái le yì míng xīn lǎoshī.", "Datang seorang guru baru."),
+                        Word("w17_14", "自己", "zìjǐ", "Diri sendiri", "Kata Ganti", "我们要照顾好自己。", "Wǒmen yào zhàogù hǎo zìjǐ.", "Kita harus merawat diri sendiri dengan baik.")
+                    ),
+                    exercises = bab17Stage4Part1Exercises,
+                    exercisesPart1 = bab17Stage4Part1Exercises,
+                    exercisesPart2 = bab17Stage4Part2Exercises
+                ),
+                Lesson(
+                    id = "u17_l5",
+                    title = "Evaluasi Komprehensif Keluarga & Kerabat",
+                    subtitle = "Review seluruh 14 kosakata kerabat, masa kecil & identitas",
+                    grammarNote = "Evaluasi menyeluruh Bab 17: memadukan silsilah keluarga, panggilan kakek-nenek, pasangan suami-istri, kenangan masa kecil, pesta ulang tahun, dan marga formal.",
+                    newWords = listOf(
+                        Word("w17_1", "爷爷", "yéye", "Kakek", "Keluarga", "爷爷奶奶都在家。", "Yéye nǎinai dōu zài jiā.", "Kakek dan nenek ada di rumah."),
+                        Word("w17_3", "丈夫", "zhàngfu", "Suami", "Keluarga", "她的丈夫很爱她。", "Tā de zhàngfu hěn ài tā.", "Suaminya sangat mencintainya."),
+                        Word("w17_10", "生日", "shēngrì", "Ulang tahun", "Waktu", "今天是我的生日。", "Jīntiān shì wǒ de shēngrì.", "Hari ini adalah hari ulang tahun saya."),
+                        Word("w17_14", "自己", "zìjǐ", "Diri sendiri", "Kata Ganti", "爱自己的家人。", "Ài zìjǐ de jiārén.", "Menyayangi keluarga sendiri.")
+                    ),
+                    exercises = bab17Stage5Part1Exercises,
+                    exercisesPart1 = bab17Stage5Part1Exercises,
+                    exercisesPart2 = bab17Stage5Part2Exercises
+                )
+            )
         )
     )
 }
