@@ -1,0 +1,87 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Soft Lavender Indigo) -->
+    <path
+        android:fillColor="#EEF2FF"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Soft Indented Sleeping Pillow (Pillow Base - 枕头) -->
+    <path
+        android:fillColor="#E2E8F0"
+        android:pathData="M20,38 C20,30 26,26 36,26 L60,26 C70,26 76,30 76,38 L76,58 C76,64 70,68 60,68 L36,68 C26,68 20,64 20,58 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M22,39 C22,32 28,28 37,28 L59,28 C68,28 74,32 74,39 L74,56 C74,62 68,66 59,66 L37,66 C28,66 22,62 22,56 Z" />
+    <!-- Pillow Indentation Crease Lines -->
+    <path
+        android:fillColor="#CBD5E1"
+        android:pathData="M28,34 C36,36 36,46 32,54 L30,53 C34,46 34,37 27,35 Z M68,34 C60,36 60,46 64,54 L66,53 C62,46 62,37 69,35 Z" />
+
+    <!-- Sleeping Person's Head Resting on Pillow (休息 - Peaceful Rest) -->
+    <!-- Head Base Face -->
+    <path
+        android:fillColor="#FFD1A4"
+        android:pathData="M48,34 A14,14 0 1,0 48,62 A14,14 0 1,0 48,34 Z" />
+
+    <!-- Soft Sleeping Hair & Fringe -->
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="M35,40 C35,26 41,22 48,22 C55,22 61,26 61,40 C57,36 53,36 49,38 C45,40 39,40 35,40 Z" />
+
+    <!-- Rosy Resting Cheeks (Warm Peaceful Glow) -->
+    <path
+        android:fillColor="#FDA4AF"
+        android:pathData="M38,50 A2.5,2.5 0 1,0 38,55 A2.5,2.5 0 1,0 38,50 Z M58,50 A2.5,2.5 0 1,0 58,55 A2.5,2.5 0 1,0 58,50 Z" />
+
+    <!-- Gently Closed Eyelashes / Serene Sleep Eye Arcs -->
+    <path
+        android:fillColor="#0F172A"
+        android:pathData="M40,44 C42,47 46,47 48,44 L47,43 C45.5,45.5 42.5,45.5 41,43 Z M52,44 C54,47 58,47 60,44 L59,43 C57.5,45.5 54.5,45.5 53,43 Z" />
+
+    <!-- Peaceful Sweet Dream Smile -->
+    <path
+        android:fillColor="#E11D48"
+        android:pathData="M46,54 C47,56.5 49,56.5 50,54 Z" />
+
+    <!-- Cozy Warm Duvet / Blanket Pulled Up to Chin (Warm Lavender Indigo) -->
+    <!-- Turnover White Sheet Flap -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M22,56 C22,54 24,52 28,52 L68,52 C72,52 74,54 74,56 L74,62 L22,62 Z" />
+    <path
+        android:fillColor="#C7D2FE"
+        android:pathData="M24,58 L72,58 L72,60 L24,60 Z" />
+    <!-- Main Blanket Body -->
+    <path
+        android:fillColor="#4F46E5"
+        android:pathData="M20,62 L76,62 L76,82 L20,82 Z" />
+    <path
+        android:fillColor="#6366F1"
+        android:pathData="M22,64 L74,64 L74,80 L22,80 Z" />
+    <!-- Blanket Soft Fold Shadow -->
+    <path
+        android:fillColor="#4338CA"
+        android:pathData="M22,70 C34,68 62,68 74,70 L74,72 C62,70 34,70 22,72 Z" />
+
+    <!-- Ascending Gentle Slumber Letters ("z Z Z" Drifting Overhead) -->
+    <!-- Smallest 'z' (Bottom) -->
+    <path
+        android:fillColor="#818CF8"
+        android:pathData="M64,30 L69,30 L69,31.5 L66,35 L69,35 L69,36.5 L64,36.5 L64,35 L67,31.5 L64,31.5 Z" />
+    <!-- Medium 'Z' (Middle) -->
+    <path
+        android:fillColor="#6366F1"
+        android:pathData="M69,21 L76,21 L76,23 L72,27.5 L76,27.5 L76,29.5 L69,29.5 L69,27.5 L73,23 L69,23 Z" />
+    <!-- Largest 'Z' (Top Right) -->
+    <path
+        android:fillColor="#4F46E5"
+        android:pathData="M74,10 L83,10 L83,12.5 L78,18 L83,18 L83,20.5 L74,20.5 L74,18 L79,12.5 L74,12.5 Z" />
+
+    <!-- Sweet Dream Little Stars -->
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M32,18 L33,21 L36,22 L33,23 L32,26 L31,23 L28,22 L31,21 Z M22,28 L23,30 L25,31 L23,32 L22,34 L21,32 L19,31 L21,30 Z" />
+</vector>

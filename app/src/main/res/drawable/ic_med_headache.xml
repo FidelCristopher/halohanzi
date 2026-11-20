@@ -1,0 +1,85 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Soft Warm Amber Peach) -->
+    <path
+        android:fillColor="#FEF3C7"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Pulsating Headache Throbbing Bolts / Pain Spikes (Headache - 头疼) -->
+    <!-- Left Pain Spikes -->
+    <path
+        android:fillColor="#EF4444"
+        android:pathData="M20,28 L28,31 L24,35 L30,38 L18,44 L24,37 L20,34 Z" />
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M16,33 L22,35 L19,38 L25,40 L15,44 L19,39 L16,37 Z" />
+    <!-- Right Pain Spikes -->
+    <path
+        android:fillColor="#EF4444"
+        android:pathData="M76,28 L68,31 L72,35 L66,38 L78,44 L72,37 L76,34 Z" />
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M80,33 L74,35 L77,38 L71,40 L81,44 L77,39 L80,37 Z" />
+
+    <!-- Forehead Stress / Tension Waves (Pulsing Arcs) -->
+    <path
+        android:fillColor="#DC2626"
+        android:pathData="M38,20 C44,17 52,17 58,20 L57,22 C52,19.5 44,19.5 39,22 Z M41,15 C45,13 51,13 55,15 L54,17 C51,15.5 45,15.5 42,17 Z" />
+
+    <!-- Person's Shoulders & Torso (Blue Shirt) -->
+    <path
+        android:fillColor="#0284C7"
+        android:pathData="M30,82 C30,68 36,62 48,62 C60,62 66,68 66,82 Z" />
+    <path
+        android:fillColor="#38BDF8"
+        android:pathData="M44,62 L48,68 L52,62 Z" />
+
+    <!-- Head & Neck -->
+    <!-- Neck -->
+    <path
+        android:fillColor="#FDBA74"
+        android:pathData="M43,56 L53,56 L53,64 L43,64 Z" />
+    <!-- Head Base -->
+    <path
+        android:fillColor="#FFD1A4"
+        android:pathData="M48,26 A17,17 0 1,0 48,60 A17,17 0 1,0 48,26 Z" />
+
+    <!-- Dark Hair Clutched by Discomfort -->
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="M33,34 C33,20 40,16 48,16 C56,16 63,20 63,34 C59,29 54,29 49,31 C45,33 39,33 33,34 Z" />
+
+    <!-- Pained Facial Expression -->
+    <!-- Tightly Furrowed Eyebrows -->
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="M37,36 L44,40 L43,41.5 L36,37.5 Z M59,36 L52,40 L53,41.5 L60,37.5 Z" />
+    <!-- Wincing Tightly Closed Eyes (Angled Slits) -->
+    <path
+        android:fillColor="#0F172A"
+        android:pathData="M38,42 L44,44 L43.5,45.5 L37.5,43.5 Z M58,42 L52,44 L52.5,45.5 L58.5,43.5 Z" />
+    <!-- Pained Mouth / Grimace -->
+    <path
+        android:fillColor="#DC2626"
+        android:pathData="M44,52 C46,50 50,50 52,52 L51,53.5 C49.5,52 46.5,52 45,53.5 Z" />
+
+    <!-- Both Hands Clutched at Temples (Classic Headache Posture) -->
+    <!-- Left Hand Gripping Left Temple -->
+    <path
+        android:fillColor="#FFD1A4"
+        android:pathData="M26,38 C26,33 30,30 35,32 L36,38 C32,38 29,42 29,48 L25,48 C25,44 26,40 26,38 Z" />
+    <path
+        android:fillColor="#FDBA74"
+        android:pathData="M31,34 A2,2 0 1,0 31,38 A2,2 0 1,0 31,34 Z M32,39 A2,2 0 1,0 32,43 A2,2 0 1,0 32,39 Z" />
+
+    <!-- Right Hand Gripping Right Temple -->
+    <path
+        android:fillColor="#FFD1A4"
+        android:pathData="M70,38 C70,33 66,30 61,32 L60,38 C64,38 67,42 67,48 L71,48 C71,44 70,40 70,38 Z" />
+    <path
+        android:fillColor="#FDBA74"
+        android:pathData="M65,34 A2,2 0 1,0 65,38 A2,2 0 1,0 65,34 Z M64,39 A2,2 0 1,0 64,43 A2,2 0 1,0 64,39 Z" />
+</vector>

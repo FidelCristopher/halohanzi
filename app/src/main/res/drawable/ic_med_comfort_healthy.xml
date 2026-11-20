@@ -1,0 +1,77 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Soft Mint Sage) -->
+    <path
+        android:fillColor="#ECFDF5"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Health Vitality Leaves Sprouting on Left & Right (舒服 - Comfortable & Revitalized) -->
+    <!-- Left Green Leaf -->
+    <path
+        android:fillColor="#16A34A"
+        android:pathData="M24,48 C18,44 16,34 22,28 C28,34 26,44 24,48 Z" />
+    <path
+        android:fillColor="#22C55E"
+        android:pathData="M23,32 C26,36 25,43 24,47 C24,43 25,36 23,32 Z" />
+    <!-- Right Green Leaf -->
+    <path
+        android:fillColor="#16A34A"
+        android:pathData="M72,48 C78,44 80,34 74,28 C68,34 70,44 72,48 Z" />
+    <path
+        android:fillColor="#22C55E"
+        android:pathData="M73,32 C70,36 71,43 72,47 C72,43 71,36 73,32 Z" />
+
+    <!-- Healthy Heart Vitality Badge (Top Center) -->
+    <path
+        android:fillColor="#F43F5E"
+        android:pathData="M48,22 C48,22 42,14 36,14 C31,14 28,18 28,23 C28,30 38,36 48,44 C58,36 68,30 68,23 C68,18 65,14 60,14 C54,14 48,22 48,22 Z" />
+    <!-- Heart Specular Glare -->
+    <path
+        android:fillColor="#FDA4AF"
+        android:pathData="M34,18 C32,18 31,20 31,22 C31,24 33,26 35,24 C36,22 36,18 34,18 Z" />
+
+    <!-- Golden Vitality Sparkle Stars -->
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M24,20 L25,23 L28,24 L25,25 L24,28 L23,25 L20,24 L23,23 Z M72,20 L73,23 L76,24 L73,25 L72,28 L71,25 L68,24 L71,23 Z" />
+
+    <!-- Relaxed Comfortable Shoulders & Torso (Teal Top) -->
+    <path
+        android:fillColor="#0D9488"
+        android:pathData="M28,82 C28,68 36,60 48,60 C60,60 68,68 68,82 Z" />
+    <path
+        android:fillColor="#14B8A6"
+        android:pathData="M44,60 L48,66 L52,60 Z" />
+
+    <!-- Cheerful Radiant Face -->
+    <!-- Head Base -->
+    <path
+        android:fillColor="#FFD1A4"
+        android:pathData="M48,32 A16,16 0 1,0 48,64 A16,16 0 1,0 48,32 Z" />
+
+    <!-- Clean Healthy Hair -->
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="M33,38 C33,24 40,20 48,20 C56,20 63,24 63,38 C59,34 54,34 50,36 C46,38 39,38 33,38 Z" />
+
+    <!-- Rosy Healthy Cheeks (Glow of Wellness) -->
+    <path
+        android:fillColor="#FDA4AF"
+        android:pathData="M37,49 A3,3 0 1,0 37,55 A3,3 0 1,0 37,49 Z M59,49 A3,3 0 1,0 59,55 A3,3 0 1,0 59,49 Z" />
+
+    <!-- Peaceful Happy Smiling Eyes (Delicate Curved Arcs) -->
+    <path
+        android:fillColor="#0F172A"
+        android:pathData="M39,43 C41,40.5 45,40.5 47,43 L45.5,44.2 C44,42.5 42,42.5 40.5,44.2 Z M51,43 C53,40.5 57,40.5 59,43 L57.5,44.2 C56,42.5 54,42.5 52.5,44.2 Z" />
+
+    <!-- Broad Happy Gentle Smile -->
+    <path
+        android:fillColor="#E11D48"
+        android:pathData="M44,51 C45,56 51,56 52,51 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M45,51.5 L51,51.5 C50.5,53 45.5,53 45,51.5 Z" />
+</vector>

@@ -1,0 +1,95 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Soft Warm Peach) -->
+    <path
+        android:fillColor="#FFF7ED"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Floor Line -->
+    <path
+        android:fillColor="#CBD5E1"
+        android:pathData="M14,78 L82,78 L82,81 L14,81 Z" />
+
+    <!-- Wooden Headboard (Back Rest - 床头) -->
+    <!-- Headboard Outer Arch -->
+    <path
+        android:fillColor="#78350F"
+        android:pathData="M20,24 C20,22 22,20 25,20 L45,20 C48,20 50,22 50,24 L50,60 L20,60 Z" />
+    <path
+        android:fillColor="#92400E"
+        android:pathData="M22,23 L48,23 L48,58 L22,58 Z" />
+    <!-- Headboard Vertical Inset Slats -->
+    <path
+        android:fillColor="#B45309"
+        android:pathData="M26,27 L30,27 L30,54 L26,54 Z M34,27 L38,27 L38,54 L34,54 Z M42,27 L46,27 L46,54 L42,54 Z" />
+
+    <!-- Headboard Post Finial (Left Post) -->
+    <path
+        android:fillColor="#78350F"
+        android:pathData="M18,18 L22,18 L22,78 L18,78 Z" />
+    <path
+        android:fillColor="#B45309"
+        android:pathData="M20,14 A3,3 0 1,0 20,20 A3,3 0 1,0 20,14 Z" />
+
+    <!-- Wooden Footboard Post (Right Post) -->
+    <path
+        android:fillColor="#78350F"
+        android:pathData="M76,46 L80,46 L80,78 L76,78 Z" />
+    <path
+        android:fillColor="#B45309"
+        android:pathData="M78,42 A3,3 0 1,0 78,48 A3,3 0 1,0 78,42 Z" />
+    <!-- Footboard Rail -->
+    <path
+        android:fillColor="#92400E"
+        android:pathData="M66,54 L78,54 L78,68 L66,68 Z" />
+
+    <!-- Bed Frame Side Rail -->
+    <path
+        android:fillColor="#B45309"
+        android:pathData="M20,62 L78,62 L78,68 L20,68 Z" />
+
+    <!-- Thick Plush Mattress Base (Fitted White Sheet) -->
+    <path
+        android:fillColor="#E2E8F0"
+        android:pathData="M22,52 L76,52 L76,64 L22,64 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M22,50 L75,50 L75,62 L22,62 Z" />
+
+    <!-- Soft Indented Fluffy Pillow (Resting Against Headboard) -->
+    <path
+        android:fillColor="#E2E8F0"
+        android:pathData="M25,41 C25,36 30,34 36,34 L48,34 C54,34 56,36 56,41 L54,52 L27,52 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M27,42 C27,38 31,36 36,36 L46,36 C51,36 53,38 53,42 L51,50 L29,50 Z" />
+    <!-- Pillow Center Head Indentation Line -->
+    <path
+        android:fillColor="#CBD5E1"
+        android:pathData="M37,42 C39,44 43,44 45,42 L44,43.5 C42.5,45 39.5,45 38,43.5 Z" />
+
+    <!-- Cozy Warm Duvet / Quilt (Soft Sky Blue - 被子) -->
+    <!-- Main Duvet Body -->
+    <path
+        android:fillColor="#0284C7"
+        android:pathData="M38,48 L76,48 L76,64 L36,64 Z" />
+    <path
+        android:fillColor="#38BDF8"
+        android:pathData="M39,49 L75,49 L75,63 L37,63 Z" />
+
+    <!-- Folded Top Duvet Turnover Flap (Pastel Ice Blue) -->
+    <path
+        android:fillColor="#BAE6FD"
+        android:pathData="M36,46 L76,46 C77.1,46 78,46.9 78,48 L78,54 L34,54 L34,48 C34,46.9 34.9,46 36,46 Z" />
+    <path
+        android:fillColor="#E0F2FE"
+        android:pathData="M37,47 L75,47 L75,53 L35,53 Z" />
+
+    <!-- Bed Under-Shadow -->
+    <path
+        android:fillColor="#CBD5E1"
+        android:pathData="M24,68 L74,68 L74,70 L24,70 Z" />
+</vector>
