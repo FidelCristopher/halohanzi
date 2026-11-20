@@ -4788,6 +4788,103 @@ object LearningRepository {
                     exercisesPart2 = bab19Stage5Part2Exercises
                 )
             )
+        ),
+
+        // BAB 20: Tata Ruang, Posisi Relatif & Arah Mata Angin (空间方位、楼宇格局与相对位置)
+        UnitCourse(
+            id = "unit_20",
+            unitNumber = 20,
+            title = "Tata Ruang & Posisi",
+            subtitle = "Kiri, kanan, depan, belakang, samping, dalam, luar, atas, bawah, gedung, dan kamar",
+            bannerTitle = "Tata Ruang & Posisi Relatif",
+            emoji = "🧭",
+            level = "Level 20 (HSK 2)",
+            story = stories[19],
+            nodes = listOf(
+                PathNode("u20_n1", "Kiri & Kanan", Color(0xFFFFC107), NodeIconType.CAP, isCompleted = false, lessonId = "u20_l1"),
+                PathNode("u20_n2", "Depan Belakang Samping", Color(0xFFFFC107), NodeIconType.DUMBBELL, isCompleted = false, lessonId = "u20_l2"),
+                PathNode("u20_n3", "Dalam Luar Atas Bawah", Color(0xFFFFC107), NodeIconType.CAP, isCompleted = false, lessonId = "u20_l3"),
+                PathNode("u20_n4", "Lantai & Kamar", Color(0xFFFFC107), NodeIconType.DUMBBELL, isCompleted = false, lessonId = "u20_l4"),
+                PathNode("u20_n5", "Evaluasi Tata Ruang", Color(0xFFFFC107), NodeIconType.SHUFFLE, isCompleted = false, lessonId = "u20_l5"),
+                PathNode("u20_n6", "Kuis Cerita Bab 20", Color(0xFFFFC107), NodeIconType.BOOK, isCompleted = false, lessonId = "u20_l1"),
+                PathNode("u20_n7", "Checkpoint Peti", Color(0xFFFFB300), NodeIconType.CHEST, isCompleted = false, lessonId = "u20_l1"),
+                PathNode("u20_n8", "Rest area", Color(0xFF03A9F4), NodeIconType.REST_AREA, isCompleted = false, lessonId = "u20_l1")
+            ),
+            lessons = listOf(
+                Lesson(
+                    id = "u20_l1",
+                    title = "Sisi Kiri & Sisi Kanan",
+                    subtitle = "Kosakata 左, 左边, 右, dan 右边",
+                    grammarNote = "Arah lateral: 左 (zuǒ - kiri) vs 右 (yòu - kanan). Frasa posisi: 左边 (sebelah kiri) dan 右边 (sebelah kanan: 洗手间在右边).",
+                    newWords = listOf(
+                        Word("w20_1", "左", "zuǒ", "Kiri", "Arah", "往左看，有一家书店。", "Wǎng zuǒ kàn, yǒu yì jiā shūdiàn.", "Lihat ke kiri ada toko buku."),
+                        Word("w20_2", "左边", "zuǒbian", "Sebelah kiri", "Arah", "学校在医院的左边。", "Xuéxiào zài yīyuàn de zuǒbian.", "Sekolah di sebelah kiri rumah sakit."),
+                        Word("w20_3", "右", "yòu", "Kanan", "Arah", "到了路口请往右走。", "Dào le lùkǒu qǐng wǎng yòu zǒu.", "Sampai perempatan silakan jalan ke kanan."),
+                        Word("w20_4", "右边", "yòubian", "Sebelah kanan", "Arah", "洗手间在楼梯的右边。", "Xǐshǒujiān zài lóutī de yòubian.", "Toilet di sebelah kanan tangga.")
+                    ),
+                    exercises = bab20Stage1Part1Exercises,
+                    exercisesPart1 = bab20Stage1Part1Exercises,
+                    exercisesPart2 = bab20Stage1Part2Exercises
+                ),
+                Lesson(
+                    id = "u20_l2",
+                    title = "Depan, Belakang & Sisi Samping",
+                    subtitle = "Kosakata 前面, 后面, 旁边, dan 面",
+                    grammarNote = "Posisi longitudinal: 前面 (depan), 后面 (belakang). Berdampingan: 旁边 (samping). Sufiks arah: 面 (miàn - 东面, 南面).",
+                    newWords = listOf(
+                        Word("w20_5", "前面", "qiánmiàn", "Bagian depan / di depan", "Arah", "车站在公司前面。", "Chēzhàn zài gōngsī qiánmiàn.", "Halte di depan kantor."),
+                        Word("w20_6", "后面", "hòumiàn", "Bagian belakang / di belakang", "Arah", "房子后面有一个花园。", "Fángzi hòumiàn yǒu yí gè huāyuán.", "Di belakang rumah ada taman."),
+                        Word("w20_7", "旁边", "pángbiān", "Samping / sebelah", "Arah", "我就坐在你的旁边。", "Wǒ jiù zuò zài nǐ de pángbiān.", "Saya duduk di sampingmu."),
+                        Word("w20_8", "面", "miàn", "Sisi / arah", "Arah", "东面有一座大山。", "Dōngmiàn yǒu yí zuò dà shān.", "Di sisi timur ada gunung besar.")
+                    ),
+                    exercises = bab20Stage2Part1Exercises,
+                    exercisesPart1 = bab20Stage2Part1Exercises,
+                    exercisesPart2 = bab20Stage2Part2Exercises
+                ),
+                Lesson(
+                    id = "u20_l3",
+                    title = "Dalam, Luar, Atas & Bawah",
+                    subtitle = "Kosakata 里面, 外面, 上面, dan 下面",
+                    grammarNote = "Posisi vertikal & wadah: 里面 (di dalam), 外面 (di luar), 上面 (di atas), 下面 (di bawah: 小猫在椅子下面).",
+                    newWords = listOf(
+                        Word("w20_9", "里面", "lǐmiàn", "Bagian dalam / di dalam", "Arah", "书包里面有三本书。", "Shūbāo lǐmiàn yǒu sān běn shū.", "Di dalam tas ada tiga buku."),
+                        Word("w20_10", "外面", "wàimiàn", "Bagian luar / di luar", "Arah", "外面正在下大雨。", "Wàimiàn zhèngzài xià dàyǔ.", "Di luar sedang hujan lebat."),
+                        Word("w20_11", "上面", "shàngmiàn", "Bagian atas / di atas", "Arah", "桌子上面放着水。", "Zhuōzi shàngmiàn fàng zhe shuǐ.", "Di atas meja ada air."),
+                        Word("w20_12", "下面", "xiàmiàn", "Bagian bawah / di bawah", "Arah", "小猫在椅子下面睡觉。", "Xiǎomāo zài yǐzi xiàmiàn shuìjiào.", "Kucing tidur di bawah kursi.")
+                    ),
+                    exercises = bab20Stage3Part1Exercises,
+                    exercisesPart1 = bab20Stage3Part1Exercises,
+                    exercisesPart2 = bab20Stage3Part2Exercises
+                ),
+                Lesson(
+                    id = "u20_l4",
+                    title = "Lantai Gedung & Penataan Ruangan",
+                    subtitle = "Kosakata 楼 dan 间",
+                    grammarNote = "Tingkat lantai: 楼 (lóu - 三楼, 上楼). Penggolong ruangan: 间 (jiān - 一间教室, 三十间房间).",
+                    newWords = listOf(
+                        Word("w20_13", "楼", "lóu", "Gedung / lantai", "Tempat", "我们去五楼上课。", "Wǒmen qù wǔ lóu shàngkè.", "Kita ke lantai lima untuk belajar."),
+                        Word("w20_14", "间", "jiān", "Kamar / ruangan", "Penggolong", "这里有三十间房间。", "Zhèlǐ yǒu sānshí jiān fángjiān.", "Di sini ada 30 kamar.")
+                    ),
+                    exercises = bab20Stage4Part1Exercises,
+                    exercisesPart1 = bab20Stage4Part1Exercises,
+                    exercisesPart2 = bab20Stage4Part2Exercises
+                ),
+                Lesson(
+                    id = "u20_l5",
+                    title = "Evaluasi Komprehensif Tata Ruang",
+                    subtitle = "Review seluruh 14 kosakata posisi spasial, arah & gedung",
+                    grammarNote = "Evaluasi menyeluruh Bab 20: navigasi denah, menentukan letak ruangan, posisi kiri/kanan/depan/belakang, dan lantai gedung.",
+                    newWords = listOf(
+                        Word("w20_2", "左边", "zuǒbian", "Sebelah kiri", "Arah", "左边是书店。", "Zuǒbian shì shūdiàn.", "Sebelah kiri toko buku."),
+                        Word("w20_4", "右边", "yòubian", "Sebelah kanan", "Arah", "右边是学校。", "Yòubian shì xuéxiào.", "Sebelah kanan sekolah."),
+                        Word("w20_7", "旁边", "pángbiān", "Samping", "Arah", "在旁边坐。", "Zài pángbiān zuò.", "Duduk di samping."),
+                        Word("w20_13", "楼", "lóu", "Lantai", "Tempat", "房间在三楼。", "Fángjiān zài sān lóu.", "Kamar di lantai tiga.")
+                    ),
+                    exercises = bab20Stage5Part1Exercises,
+                    exercisesPart1 = bab20Stage5Part1Exercises,
+                    exercisesPart2 = bab20Stage5Part2Exercises
+                )
+            )
         )
     )
 }
