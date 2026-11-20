@@ -4885,6 +4885,100 @@ object LearningRepository {
                     exercisesPart2 = bab20Stage5Part2Exercises
                 )
             )
+        ),
+
+        // BAB 21: Pergerakan, Dinamika Arah & Komplemen Arah (趋向动词、位移动态与进出起落)
+        UnitCourse(
+            id = "unit_21",
+            unitNumber = 21,
+            title = "Pergerakan & Arah Gerak",
+            subtitle = "Masuk, keluar, naik, turun, mendekat, menjauh, dan komplemen arah",
+            bannerTitle = "Pergerakan & Komplemen Arah",
+            emoji = "🏃",
+            level = "Level 21 (HSK 2)",
+            story = stories[20],
+            nodes = listOf(
+                PathNode("u21_n1", "Dinamika Masuk", Color(0xFFFFC107), NodeIconType.CAP, isCompleted = false, lessonId = "u21_l1"),
+                PathNode("u21_n2", "Dinamika Keluar", Color(0xFFFFC107), NodeIconType.DUMBBELL, isCompleted = false, lessonId = "u21_l2"),
+                PathNode("u21_n3", "Naik Vertikal", Color(0xFFFFC107), NodeIconType.CAP, isCompleted = false, lessonId = "u21_l3"),
+                PathNode("u21_n4", "Turun Vertikal", Color(0xFFFFC107), NodeIconType.DUMBBELL, isCompleted = false, lessonId = "u21_l4"),
+                PathNode("u21_n5", "Melintas & Pulang", Color(0xFFFFC107), NodeIconType.SHUFFLE, isCompleted = false, lessonId = "u21_l5"),
+                PathNode("u21_n6", "Kuis Cerita Bab 21", Color(0xFFFFC107), NodeIconType.BOOK, isCompleted = false, lessonId = "u21_l1"),
+                PathNode("u21_n7", "Checkpoint Peti", Color(0xFFFFB300), NodeIconType.CHEST, isCompleted = false, lessonId = "u21_l1"),
+                PathNode("u21_n8", "Rest area", Color(0xFF03A9F4), NodeIconType.REST_AREA, isCompleted = false, lessonId = "u21_l1")
+            ),
+            lessons = listOf(
+                Lesson(
+                    id = "u21_l1",
+                    title = "Dinamika Masuk ke Dalam",
+                    subtitle = "Kosakata 进, 进来, dan 进去",
+                    grammarNote = "Komplemen arah masuk: 进 (jìn - masuk), 进来 (jìnlái - masuk kemari), 进去 (jìnqù - masuk ke sana).",
+                    newWords = listOf(
+                        Word("w21_1", "进", "jìn", "Masuk", "Kata Kerja", "请进房间吧。", "Qǐng jìn fángjiān ba.", "Silakan masuk ke kamar."),
+                        Word("w21_2", "进来", "jìnlái", "Masuk ke sini", "Kata Kerja", "门开着，你快进来吧。", "Mén kāi zhe, nǐ kuài jìnlái ba.", "Pintu buka, cepatlah kamu masuk."),
+                        Word("w21_3", "进去", "jìnqù", "Masuk ke sana", "Kata Kerja", "他在门口，还没进去。", "Tā zài ménkǒu, hái méi jìnqù.", "Dia di pintu, belum masuk.")
+                    ),
+                    exercises = bab21Stage1Part1Exercises,
+                    exercisesPart1 = bab21Stage1Part1Exercises,
+                    exercisesPart2 = bab21Stage1Part2Exercises
+                ),
+                Lesson(
+                    id = "u21_l2",
+                    title = "Dinamika Keluar Ruangan",
+                    subtitle = "Kosakata 出, 出来, 出去, dan 出门",
+                    grammarNote = "Komplemen arah keluar: 出 (chū), 出来 (chūlái - keluar kemari), 出去 (chūqù - keluar ke sana), 出门 (chūmén - keluar rumah/bepergian).",
+                    newWords = listOf(
+                        Word("w21_4", "出", "chū", "Keluar", "Kata Kerja", "他刚走出校门。", "Tā gāng zǒu chū xiàomén.", "Dia baru melangkah keluar gerbang."),
+                        Word("w21_5", "出来", "chūlái", "Keluar ke sini", "Kata Kerja", "请大家从教室出来。", "Qǐng dàjiā cóng jiàoshì chūlái.", "Silakan keluar dari kelas."),
+                        Word("w21_6", "出去", "chūqù", "Keluar ke sana", "Kata Kerja", "爸爸出去了，不在家。", "Bàba chūqù le, bú zài jiā.", "Ayah keluar, tidak ada di rumah."),
+                        Word("w21_7", "出门", "chūmén", "Keluar rumah", "Kata Kerja", "出门前别忘了带钥匙。", "Chūmén qián bié wàng le dài yàoshi.", "Sebelum keluar rumah jangan lupa bawa kunci.")
+                    ),
+                    exercises = bab21Stage2Part1Exercises,
+                    exercisesPart1 = bab21Stage2Part1Exercises,
+                    exercisesPart2 = bab21Stage2Part2Exercises
+                ),
+                Lesson(
+                    id = "u21_l3",
+                    title = "Dinamika Naik Vertikal",
+                    subtitle = "Kosakata 上来 dan 上去",
+                    grammarNote = "Pergerakan vertikal ke atas: 上来 (shànglái - naik mendekat ke pembicara) vs 上去 (shàngqù - naik menjauh).",
+                    newWords = listOf(
+                        Word("w21_8", "上来", "shànglái", "Naik ke sini", "Kata Kerja", "我在二楼，你快上来吧。", "Wǒ zài èr lóu, nǐ kuài shànglái ba.", "Saya di lantai dua, cepat naik kemari."),
+                        Word("w21_9", "上去", "shàngqù", "Naik ke sana", "Kata Kerja", "他们已经爬上去了。", "Tāmen yǐjīng pá shàngqù le.", "Mereka sudah naik ke atas sana.")
+                    ),
+                    exercises = bab21Stage3Part1Exercises,
+                    exercisesPart1 = bab21Stage3Part1Exercises,
+                    exercisesPart2 = bab21Stage3Part2Exercises
+                ),
+                Lesson(
+                    id = "u21_l4",
+                    title = "Dinamika Turun Vertikal",
+                    subtitle = "Kosakata 下来 dan 下去",
+                    grammarNote = "Pergerakan vertikal ke bawah: 下来 (xiàlái - turun mendekat ke pembicara) vs 下去 (xiàqù - turun menjauhi pembicara).",
+                    newWords = listOf(
+                        Word("w21_10", "下来", "xiàlái", "Turun ke sini", "Kata Kerja", "太高了，快下来！", "Tài gāo le, kuài xiàlái!", "Terlalu tinggi, cepat turun kemari!"),
+                        Word("w21_11", "下去", "xiàqù", "Turun ke sana", "Kata Kerja", "请走下去。", "Qǐng zǒu xiàqù.", "Silakan berjalan turun.")
+                    ),
+                    exercises = bab21Stage4Part1Exercises,
+                    exercisesPart1 = bab21Stage4Part1Exercises,
+                    exercisesPart2 = bab21Stage4Part2Exercises
+                ),
+                Lesson(
+                    id = "u21_l5",
+                    title = "Melintas, Mendekat & Pulang",
+                    subtitle = "Kosakata 过来, 过去, 回来, dan 回去",
+                    grammarNote = "Melintas spasial: 过来 (guòlái - mendekat kemari), 过去 (guòqù - melintas ke sana). Kembali: 回来 (huílái - pulang kemari), 回去 (huíqù - kembali ke sana).",
+                    newWords = listOf(
+                        Word("w21_12", "过来", "guòlái", "Datang kemari", "Kata Kerja", "你过来一下。", "Nǐ guòlái yíxià.", "Kamu kemari sebentar."),
+                        Word("w21_13", "过去", "guòqù", "Pergi ke sana", "Kata Kerja", "他朝对面走过去了。", "Tā cháo duìmiàn zǒu guòqù le.", "Dia berjalan ke seberang."),
+                        Word("w21_14", "回来", "huílái", "Kembali ke sini", "Kata Kerja", "什么时候回来看我们？", "Shénmeshíhou huílái kàn wǒmen?", "Kapan pulang menjenguk kami?"),
+                        Word("w21_15", "回去", "huíqù", "Kembali ke sana", "Kata Kerja", "天黑了，我们快回去吧。", "Tiān hēi le, wǒmen kuài huíqù ba.", "Hari gelap, lekas kita pulang.")
+                    ),
+                    exercises = bab21Stage5Part1Exercises,
+                    exercisesPart1 = bab21Stage5Part1Exercises,
+                    exercisesPart2 = bab21Stage5Part2Exercises
+                )
+            )
         )
     )
 }
