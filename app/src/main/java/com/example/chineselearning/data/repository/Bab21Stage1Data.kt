@@ -18,8 +18,8 @@ val bab21Stage1Part1Exercises = listOf(
         correctAnswer = "masuk ke sini",
         audioToSpeak = "进来",
         pictureOptions = listOf(
-            PictureOption("u21_s1_p1_opt1", "masuk ke sini", "", R.drawable.ic_pos_in, true),
-            PictureOption("u21_s1_p1_opt2", "keluar ke sana", "", R.drawable.ic_pos_out, false),
+            PictureOption("u21_s1_p1_opt1", "masuk ke sini", "", R.drawable.ic_dir_enter, true),
+            PictureOption("u21_s1_p1_opt2", "keluar ke sana", "", R.drawable.ic_dir_exit, false),
             PictureOption("u21_s1_p1_opt3", "naik ke atas", "", R.drawable.ic_pos_up, false),
             PictureOption("u21_s1_p1_opt4", "turun ke bawah", "", R.drawable.ic_pos_down, false)
         )
@@ -108,8 +108,8 @@ val bab21Stage1Part1Exercises = listOf(
         correctAnswer = "masuk",
         audioToSpeak = "进",
         pictureOptions = listOf(
-            PictureOption("u21_s1_p1_opt7_1", "masuk", "", R.drawable.ic_pos_in, true),
-            PictureOption("u21_s1_p1_opt7_2", "keluar", "", R.drawable.ic_pos_out, false),
+            PictureOption("u21_s1_p1_opt7_1", "masuk", "", R.drawable.ic_dir_enter, true),
+            PictureOption("u21_s1_p1_opt7_2", "keluar", "", R.drawable.ic_dir_exit, false),
             PictureOption("u21_s1_p1_opt7_3", "naik", "", R.drawable.ic_pos_up, false),
             PictureOption("u21_s1_p1_opt7_4", "turun", "", R.drawable.ic_pos_down, false)
         )
@@ -169,8 +169,8 @@ val bab21Stage1Part2Exercises = listOf(
         correctAnswer = "masuk ke sana",
         audioToSpeak = "进去",
         pictureOptions = listOf(
-            PictureOption("u21_s1_p2_opt1", "masuk ke sana", "", R.drawable.ic_pos_in, true),
-            PictureOption("u21_s1_p2_opt2", "keluar ke sini", "", R.drawable.ic_pos_out, false),
+            PictureOption("u21_s1_p2_opt1", "masuk ke sana", "", R.drawable.ic_dir_enter, true),
+            PictureOption("u21_s1_p2_opt2", "keluar ke sini", "", R.drawable.ic_dir_exit, false),
             PictureOption("u21_s1_p2_opt3", "naik ke atas", "", R.drawable.ic_pos_up, false),
             PictureOption("u21_s1_p2_opt4", "turun ke bawah", "", R.drawable.ic_pos_down, false)
         )
@@ -259,8 +259,8 @@ val bab21Stage1Part2Exercises = listOf(
         correctAnswer = "masuk ke sana",
         audioToSpeak = "进去",
         pictureOptions = listOf(
-            PictureOption("u21_s1_p2_opt7_1", "masuk ke sana", "", R.drawable.ic_pos_in, true),
-            PictureOption("u21_s1_p2_opt7_2", "keluar ke sana", "", R.drawable.ic_pos_out, false),
+            PictureOption("u21_s1_p2_opt7_1", "masuk ke sana", "", R.drawable.ic_dir_enter, true),
+            PictureOption("u21_s1_p2_opt7_2", "keluar ke sana", "", R.drawable.ic_dir_exit, false),
             PictureOption("u21_s1_p2_opt7_3", "datang", "", R.drawable.ic_trans_come, false),
             PictureOption("u21_s1_p2_opt7_4", "pulang", "", R.drawable.ic_trans_return_home, false)
         )
