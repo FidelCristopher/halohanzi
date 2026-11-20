@@ -1,0 +1,86 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Soft Warm Amber Cream) -->
+    <path
+        android:fillColor="#FEF3C7"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Basketball Backboard in Background (篮球板) -->
+    <!-- Backboard Outer Border -->
+    <path
+        android:fillColor="#CBD5E1"
+        android:pathData="M18,14 L78,14 C80.2,14 82,15.8 82,18 L82,54 C82,56.2 80.2,58 78,58 L18,58 C15.8,58 14,56.2 14,54 L14,18 C14,15.8 15.8,14 18,14 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M20,16 L76,16 C77.1,16 78,16.9 78,18 L78,52 C78,53.1 77.1,54 76,54 L20,54 C18.9,54 18,53.1 18,52 L18,18 C18,16.9 18.9,16 20,16 Z" />
+
+    <!-- Red Inner Target Box on Backboard -->
+    <path
+        android:fillColor="#EF4444"
+        android:pathData="M34,26 L62,26 L62,48 L34,48 Z M36,28 L60,28 L60,46 L36,46 Z" />
+
+    <!-- Basketball Net Suspended from Rim (Hanging Net) -->
+    <!-- Net Body Shading -->
+    <path
+        android:fillColor="#F1F5F9"
+        android:pathData="M34,54 L62,54 L56,82 L40,82 Z" />
+    <!-- Net Interlaced Diamond Cords -->
+    <path
+        android:fillColor="#CBD5E1"
+        android:pathData="M34,54 L44,82 L45.5,82 L35.5,54 Z M41,54 L50,82 L51.5,82 L42.5,54 Z M48,54 L56,82 L57.5,82 L49.5,54 Z M62,54 L52,82 L50.5,82 L60.5,54 Z M55,54 L46,82 L44.5,82 L53.5,54 Z M48,54 L40,82 L38.5,82 L46.5,54 Z" />
+    <path
+        android:fillColor="#94A3B8"
+        android:pathData="M36,60 L60,60 L60,61.5 L36,61.5 Z M38,68 L58,68 L58,69.5 L38,69.5 Z M39,76 L57,76 L57,77.5 L39,77.5 Z" />
+
+    <!-- Basketball Rim / Hoop (Bright Orange Steel Ring) -->
+    <path
+        android:fillColor="#C2410C"
+        android:pathData="M32,51 L64,51 C65.1,51 66,51.9 66,53 L66,55 C66,56.1 65.1,57 64,57 L32,57 C30.9,57 30,56.1 30,55 L30,53 C30,51.9 30.9,51 32,51 Z" />
+    <path
+        android:fillColor="#EA580C"
+        android:pathData="M33,52 L63,52 C64.1,52 65,52.9 65,54 L63,55 L33,55 L31,54 C31,52.9 31.9,52 33,52 Z" />
+    <!-- Rim Mount Bracket Attached to Board -->
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="M44,48 L52,48 L52,52 L44,52 Z" />
+
+    <!-- Swishing Orange Basketball (Swishing into Net - 篮球) -->
+    <!-- Basketball Base Sphere -->
+    <path
+        android:fillColor="#C2410C"
+        android:pathData="M48,18 A16,16 0 1,0 48,50 A16,16 0 1,0 48,18 Z" />
+    <path
+        android:fillColor="#F97316"
+        android:pathData="M48,19 A15,15 0 1,0 48,49 A15,15 0 1,0 48,19 Z" />
+
+    <!-- Characteristic Black Basketball Seams / Rib Lines -->
+    <!-- Horizontal Equator Seam -->
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="M33,33.5 L63,33.5 L63,35 L33,35 Z" />
+    <!-- Vertical Center Meridian Seam -->
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="M47.2,19 L47.2,49 L48.8,49 L48.8,19 Z" />
+    <!-- Left Curved Arc Seam -->
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="M40,21 C36,25 36,43 40,47 L38.5,48 C34,43 34,25 38.5,20 Z" />
+    <!-- Right Curved Arc Seam -->
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="M56,21 C60,25 60,43 56,47 L57.5,48 C62,43 62,25 57.5,20 Z" />
+
+    <!-- Specular Highlight Curve on Basketball -->
+    <path
+        android:fillColor="#FED7AA"
+        android:pathData="M38,22 C43,20 53,20 58,22 L57,23.5 C52,21.5 44,21.5 39,23.5 Z" />
+
+    <!-- Swish Motion Energy Lines -->
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M26,56 L22,54 L22.5,52.5 L26.5,54.5 Z M28,64 L23,64 L23,62.5 L28,62.5 Z M70,56 L74,54 L73.5,52.5 L69.5,54.5 Z M68,64 L73,64 L73,62.5 L68,62.5 Z" />
+</vector>

@@ -1,0 +1,90 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Soft Mint Green) -->
+    <path
+        android:fillColor="#F0FDF4"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Goal Net & Posts in Background (球网) -->
+    <!-- Goal Frame Crossbar & Left/Right Posts -->
+    <path
+        android:fillColor="#E2E8F0"
+        android:pathData="M16,18 L80,18 C81.1,18 82,18.9 82,20 L82,60 L78,60 L78,22 L18,22 L18,60 L14,60 L14,20 C14,18.9 14.9,18 16,18 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M16,19 L80,19 L80,21 L16,21 Z" />
+
+    <!-- Net Diamond Mesh Pattern Behind Ball -->
+    <path
+        android:fillColor="#CBD5E1"
+        android:pathData="M18,22 L78,22 L78,23.5 L18,23.5 Z M18,30 L78,30 L78,31.5 L18,31.5 Z M18,38 L78,38 L78,39.5 L18,39.5 Z M18,46 L78,46 L78,47.5 L18,47.5 Z M18,54 L78,54 L78,55.5 L18,55.5 Z" />
+    <path
+        android:fillColor="#CBD5E1"
+        android:pathData="M26,22 L26,58 L27.5,58 L27.5,22 Z M36,22 L36,58 L37.5,58 L37.5,22 Z M46,22 L46,58 L47.5,58 L47.5,22 Z M56,22 L56,58 L57.5,58 L57.5,22 Z M66,22 L66,58 L67.5,58 L67.5,22 Z M76,22 L76,58 L77.5,58 L77.5,22 Z" />
+
+    <!-- Soccer Pitch Green Turf Lawn at Bottom -->
+    <path
+        android:fillColor="#059669"
+        android:pathData="M14,74 L82,74 L82,82 L14,82 Z" />
+    <path
+        android:fillColor="#10B981"
+        android:pathData="M14,74 L82,74 L82,77 L14,77 Z" />
+    <!-- White Field Line -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M14,76 L82,76 L82,77.5 L14,77.5 Z" />
+
+    <!-- Ground Shadow Beneath Ball -->
+    <path
+        android:fillColor="#047857"
+        android:pathData="M48,74 C34,74 24,76 24,78 C24,80 34,81 48,81 C62,81 72,80 72,78 C72,76 62,74 48,74 Z" />
+
+    <!-- Classic Iconic Soccer Ball in Center Foreground (足球) -->
+    <!-- Ball Base Sphere -->
+    <path
+        android:fillColor="#E2E8F0"
+        android:pathData="M48,26 A24,24 0 1,0 48,74 A24,24 0 1,0 48,26 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M48,27.5 A22.5,22.5 0 1,0 48,72.5 A22.5,22.5 0 1,0 48,27.5 Z" />
+
+    <!-- Center Black Pentagonal Leather Patch -->
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="M48,41 L56,47 L53,56 L43,56 L40,47 Z" />
+
+    <!-- Surrounding Leather Patches (Truncated Icosahedron Geometry) -->
+    <!-- Top Patch -->
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="M45,28 L51,28 L53,34 L48,37 L43,34 Z" />
+    <!-- Top-Right Patch -->
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="M63,36 L69,41 L68,47 L61,44 L61,38 Z" />
+    <!-- Bottom-Right Patch -->
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="M57,61 L63,56 L68,60 L65,67 L59,65 Z" />
+    <!-- Bottom-Left Patch -->
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="M39,61 L43,65 L37,67 L34,60 L39,56 Z" />
+    <!-- Top-Left Patch -->
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="M33,36 L35,38 L35,44 L28,47 L27,41 Z" />
+
+    <!-- Stitched Seams Connecting Patches -->
+    <path
+        android:fillColor="#CBD5E1"
+        android:pathData="M48,37 L48,41 L49,41 L49,37 Z M56,47 L61,44 L60.5,43 L55.5,46 Z M53,56 L57,61 L56.2,61.7 L52.2,56.7 Z M43,56 L39,61 L38.2,60.3 L42.2,55.3 Z M40,47 L35,44 L35.5,43 L40.5,46 Z" />
+
+    <!-- Specular Highlight Curve on Ball -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M34,31 C40,28 50,28 56,31 L55,33 C50,30 40,30 35,33 Z" />
+</vector>

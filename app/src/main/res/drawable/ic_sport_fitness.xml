@@ -1,0 +1,88 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Soft Mint Sage) -->
+    <path
+        android:fillColor="#ECFDF5"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Fitness Floor Mat Shadow & Body (Teal Exercise Mat - 瑜伽垫) -->
+    <path
+        android:fillColor="#0F766E"
+        android:pathData="M20,60 L76,60 C78.2,60 80,61.8 80,64 L76,78 C76,80.2 74.2,82 72,82 L16,82 C13.8,82 12,80.2 12,78 L16,64 C16,61.8 17.8,60 20,60 Z" />
+    <path
+        android:fillColor="#14B8A6"
+        android:pathData="M21,61 L75,61 C76.8,61 78.4,62.4 78.4,64.2 L74.6,77 C74.6,78.8 73.2,80.2 71.4,80.2 L17.6,80.2 C15.8,80.2 14.2,78.8 14.2,77 L18,64.2 C18,62.4 19.4,61 21,61 Z" />
+    <!-- Rolled Edge of Mat on Left -->
+    <path
+        android:fillColor="#0D9488"
+        android:pathData="M15,62 C13,62 11,64 11,67 C11,70 13,72 15,72 C17,72 19,70 19,67 C19,64 17,62 15,62 Z" />
+
+    <!-- Chrome & Iron Dumbbell in Foreground (Slanted Across Mat - 哑铃) -->
+    <!-- Dumbbell Central Knurled Grip Bar -->
+    <path
+        android:fillColor="#64748B"
+        android:pathData="M34,48 L62,34 L64,38 L36,52 Z" />
+    <path
+        android:fillColor="#CBD5E1"
+        android:pathData="M35,49 L61,36 L63,39 L37,52 Z" />
+    <!-- Grip Knurling Texture -->
+    <path
+        android:fillColor="#475569"
+        android:pathData="M43,44 L45,43 L47,47 L45,48 Z M48,41.5 L50,40.5 L52,44.5 L50,45.5 Z M53,39 L55,38 L57,42 L55,43 Z" />
+
+    <!-- Left Weight Plates Assembly -->
+    <!-- Outer Heavy Plate Left -->
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="M24,40 L30,37 C31.1,37 32,37.9 32,39 L32,63 C32,64.1 31.1,65 30,65 L24,68 C22.9,68 22,67.1 22,66 L22,42 C22,40.9 22.9,40 24,40 Z" />
+    <path
+        android:fillColor="#334155"
+        android:pathData="M25,41 L29,39 L29,63 L25,65 Z" />
+    <!-- Inner Medium Plate Left -->
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="M30,43 L35,40.5 C36.1,40.5 37,41.4 37,42.5 L37,59.5 C37,60.6 36.1,61.5 35,61.5 L30,64 Z" />
+    <path
+        android:fillColor="#475569"
+        android:pathData="M31,44 L34,42.5 L34,59.5 L31,61 Z" />
+    <!-- Left Bar Collar Lock Nut -->
+    <path
+        android:fillColor="#CBD5E1"
+        android:pathData="M37,47 L40,45.5 L40,54.5 L37,56 Z" />
+
+    <!-- Right Weight Plates Assembly -->
+    <!-- Inner Medium Plate Right -->
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="M59,29 L64,26.5 C65.1,26.5 66,27.4 66,28.5 L66,45.5 C66,46.6 65.1,47.5 64,47.5 L59,50 Z" />
+    <path
+        android:fillColor="#475569"
+        android:pathData="M60,30 L63,28.5 L63,45.5 L60,47 Z" />
+    <!-- Right Bar Collar Lock Nut -->
+    <path
+        android:fillColor="#CBD5E1"
+        android:pathData="M56,33 L59,31.5 L59,40.5 L56,42 Z" />
+    <!-- Outer Heavy Plate Right -->
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="M64,26 L70,23 C71.1,23 72,23.9 72,25 L72,49 C72,50.1 71.1,51 70,51 L64,54 C62.9,54 62,53.1 62,52 L62,28 C62,26.9 62.9,26 64,26 Z" />
+    <path
+        android:fillColor="#334155"
+        android:pathData="M65,27 L69,25 L69,49 L65,51 Z" />
+
+    <!-- Specular Chrome Gleam Accents on Plates -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M23,43 L26,42 L26,48 L23,49 Z M63,29 L66,28 L66,34 L63,35 Z" />
+
+    <!-- Energy Vitality Sparkles (Fitness Energy) -->
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M48,16 L50,20 L54,22 L50,24 L48,28 L46,24 L42,22 L46,20 Z" />
+    <path
+        android:fillColor="#10B981"
+        android:pathData="M34,22 L35,24 L37,25 L35,26 L34,28 L33,26 L31,25 L33,24 Z M64,16 L65,18 L67,19 L65,20 L64,22 L63,20 L61,19 L63,18 Z" />
+</vector>

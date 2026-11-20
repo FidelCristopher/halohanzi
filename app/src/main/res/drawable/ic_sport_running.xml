@@ -1,0 +1,87 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Soft Sky Blue) -->
+    <path
+        android:fillColor="#E0F2FE"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Curved Athletic Running Track Lanes (跑步跑道) -->
+    <path
+        android:fillColor="#CBD5E1"
+        android:pathData="M14,76 C32,72 64,72 82,76 L82,82 L14,82 Z" />
+    <path
+        android:fillColor="#94A3B8"
+        android:pathData="M16,78 C34,74 62,74 80,78 L80,79.5 C62,75.5 34,75.5 16,79.5 Z" />
+    <!-- Track White Lane Markings -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M20,77 L30,75 L30,76 L20,78 Z M40,74 L54,74 L54,75 L40,75 Z M64,75 L76,77 L76,78 L64,76 Z" />
+
+    <!-- Dynamic Running Speed Streaks & Wind Bursts Behind Sneaker -->
+    <path
+        android:fillColor="#38BDF8"
+        android:pathData="M14,46 L26,46 L26,47.5 L14,47.5 Z M12,52 L28,52 L28,53.5 L12,53.5 Z M16,58 L24,58 L24,59.5 L16,59.5 Z" />
+    <path
+        android:fillColor="#BAE6FD"
+        android:pathData="M18,40 L32,40 L32,41.5 L18,41.5 Z M20,64 L30,64 L30,65.5 L20,65.5 Z" />
+
+    <!-- Modern Performance Running Shoe (跑步鞋) -->
+    <!-- Shoe Heel Pull Tab (Bright Red Accent) -->
+    <path
+        android:fillColor="#EF4444"
+        android:pathData="M28,34 L32,32 L34,36 L30,38 Z" />
+
+    <!-- Ankle Collar Padding (Dark Navy) -->
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="M32,36 C34,33 40,33 43,36 L43,42 L32,42 Z" />
+
+    <!-- Breathable Mesh Upper Body (Electric Cyan Blue) -->
+    <!-- Main Upper -->
+    <path
+        android:fillColor="#0284C7"
+        android:pathData="M28,42 C28,38 31,37 35,37 L48,37 L62,45 L78,54 C81,56 82,59 81,62 L78,64 L26,64 C24,64 24,60 25,56 L28,42 Z" />
+    <path
+        android:fillColor="#0EA5E9"
+        android:pathData="M30,44 C30,40 33,39 36,39 L47,39 L60,46 L76,55 C78,56.5 79,59 78,61 L76,62 L28,62 C26.5,62 26.5,58 27.5,55 L30,44 Z" />
+
+    <!-- Reinforced Toe Cap (Dark Teal Blue) -->
+    <path
+        android:fillColor="#0369A1"
+        android:pathData="M70,55 L78,57 C80.5,58.5 81,61 80,63 L72,63 Z" />
+
+    <!-- Dynamic Curved Racing Swoop Stripe (White Sport Decal) -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M34,54 C42,48 56,48 66,54 C58,54 46,56 38,60 L34,54 Z" />
+
+    <!-- Shoe Laces & Eyelets (White Criss-Cross Lacing) -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M43,39 L52,47 L50,48 L41,40 Z M46,38 L55,46 L53,47 L44,39 Z M49,38 L58,45 L56,46 L47,39 Z" />
+
+    <!-- Thick Cushioned Ergonomic Foam Midsole (Pure White Comfort Cloud) -->
+    <path
+        android:fillColor="#E2E8F0"
+        android:pathData="M24,63 L78,63 C80.5,63 82.5,65.5 81.5,68 L80,72 L22,72 L22,67 C22,64.8 22.8,63 24,63 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M25,63.5 L77,63.5 C79,63.5 80.5,65 79.5,67 L78.5,70.5 L23,70.5 L23,67 C23,65 23.8,63.5 25,63.5 Z" />
+
+    <!-- Midsole Energy Capsule Accent Strip (Crimson Red Cushion Insert) -->
+    <path
+        android:fillColor="#EF4444"
+        android:pathData="M32,67 L46,67 L45,69 L31,69 Z" />
+
+    <!-- Rugged Rubber Outsole Tread (Black Grip Grooves) -->
+    <path
+        android:fillColor="#0F172A"
+        android:pathData="M22,71 L79,71 C79.5,71 80,71.5 79.8,72.5 L79,74 L21,74 L21,72.5 C21,71.5 21.5,71 22,71 Z" />
+    <!-- Tread Lug Grooves -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M28,72 L30,72 L30,74 L28,74 Z M36,72 L38,72 L38,74 L36,74 Z M44,72 L46,72 L46,74 L44,74 Z M52,72 L54,72 L54,74 L52,74 Z M60,72 L62,72 L62,74 L60,74 Z M68,72 L70,72 L70,74 L68,74 Z" />
+</vector>

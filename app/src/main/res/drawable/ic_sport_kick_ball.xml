@@ -1,0 +1,112 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Soft Warm Amber Peach) -->
+    <path
+        android:fillColor="#FEF3C7"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Grass Turf Ground Line -->
+    <path
+        android:fillColor="#10B981"
+        android:pathData="M14,80 L82,80 L82,83 L14,83 Z" />
+
+    <!-- Dynamic Kinetic Motion Arc Trails of the Kick (Menendang - 踢) -->
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M16,56 C24,68 38,76 52,74 L50,71 C38,73 26,66 18,54 Z" />
+    <path
+        android:fillColor="#F97316"
+        android:pathData="M22,46 C32,60 48,68 62,64 L60,61 C48,65 34,58 24,44 Z" />
+
+    <!-- Impact Energy Burst at Ball Contact Point -->
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M52,42 L55,47 L60,45 L57,50 L61,54 L55,54 L54,59 L51,55 L46,57 L49,52 L45,48 L50,48 Z" />
+    <path
+        android:fillColor="#EF4444"
+        android:pathData="M52,47 L54,50 L57,49 L55,52 L57,54 L54,54 L53,57 L52,55 L49,56 L51,53 L49,51 L51,51 Z" />
+
+    <!-- Athlete's Kicking Leg & Foot (Left to Center) -->
+    <!-- Athletic Shin & Sock (Navy Blue Sports Sock) -->
+    <path
+        android:fillColor="#1E3A8A"
+        android:pathData="M18,24 L28,21 L38,50 L27,53 Z" />
+    <!-- White Team Stripes on Sock -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M20,28 L30,25 L31,28 L21,31 Z M22,34 L32,31 L33,34 L23,37 Z" />
+
+    <!-- Football Boot / Cleat (Crimson Red & White Trim) -->
+    <!-- Boot Ankle Collar -->
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="M27,52 L38,49 L40,55 L29,58 Z" />
+    <!-- Boot Body (Curved Power Strike Shape) -->
+    <path
+        android:fillColor="#DC2626"
+        android:pathData="M27,54 L40,51 C43,51 47,54 50,56 L56,62 C58,64 57,67 54,67 L34,67 C30,67 27,62 27,54 Z" />
+    <path
+        android:fillColor="#EF4444"
+        android:pathData="M29,55 L39,52 C42,52 46,55 49,57 L54,62 C55.5,63.5 54.5,65.5 52.5,65.5 L34,65.5 C31,65.5 29,62 29,55 Z" />
+
+    <!-- White Athletic Sweep Stripe on Boot -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M31,59 C38,57 44,59 48,63 L45,63.5 C42,60 37,59 32,61 Z" />
+
+    <!-- Cleat Studs on Sole (Bottom of Boot) -->
+    <path
+        android:fillColor="#0F172A"
+        android:pathData="M33,67 L53,67 L53,68.5 L33,68.5 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M35,68.5 L37,68.5 L36.5,71 L34.5,71 Z M42,68.5 L44,68.5 L43.5,71 L41.5,71 Z M48,68.5 L50,68.5 L49.5,71 L47.5,71 Z" />
+
+    <!-- Soccer Ball Flying Off the Kick (Right Side - 足球) -->
+    <!-- Ball Outer Sphere -->
+    <path
+        android:fillColor="#E2E8F0"
+        android:pathData="M68,26 A16,16 0 1,0 68,58 A16,16 0 1,0 68,26 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M68,27 A15,15 0 1,0 68,57 A15,15 0 1,0 68,27 Z" />
+
+    <!-- Classic Black Pentagons & Patch Patterns -->
+    <!-- Center Pentagon -->
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="M68,36 L73,40 L71,45 L65,45 L63,40 Z" />
+    <!-- Top Patch -->
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="M66,27 L70,27 L71,31 L68,33 L65,31 Z" />
+    <!-- Bottom Left Patch -->
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="M56,48 L59,45 L62,49 L60,53 L56,51 Z" />
+    <!-- Bottom Right Patch -->
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="M74,49 L77,45 L80,48 L79,53 L75,51 Z" />
+    <!-- Top Right Patch -->
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="M78,33 L82,36 L81,40 L76,38 L76,34 Z" />
+    <!-- Top Left Patch -->
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="M58,33 L58,38 L54,40 L53,36 L56,33 Z" />
+
+    <!-- Seam Lines Connecting Patches -->
+    <path
+        android:fillColor="#CBD5E1"
+        android:pathData="M68,33 L68,36 L69,36 L69,33 Z M71,45 L74,49 L73,50 L70,46 Z M65,45 L62,49 L61,48 L64,44 Z M63,40 L58,38 L58.5,37 L63.5,39 Z M73,40 L76,38 L76.5,39 L73.5,41 Z" />
+
+    <!-- Speed Streaks Ahead of the Ball -->
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M78,22 L86,18 L85,16 L77,20 Z M83,28 L91,26 L90.5,24.5 L82.5,26.5 Z" />
+</vector>
