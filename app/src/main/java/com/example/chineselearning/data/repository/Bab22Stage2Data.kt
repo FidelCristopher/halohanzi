@@ -18,10 +18,10 @@ val bab22Stage2Part1Exercises = listOf(
         correctAnswer = "naik taksi",
         audioToSpeak = "打车",
         pictureOptions = listOf(
-            PictureOption("u22_s2_p1_opt1", "naik taksi", "", R.drawable.ic_trans_taxi, true),
-            PictureOption("u22_s2_p1_opt2", "bus", "", R.drawable.ic_trans_car, false),
+            PictureOption("u22_s2_p1_opt1", "naik taksi", "", R.drawable.ic_trans_hail_taxi, true),
+            PictureOption("u22_s2_p1_opt2", "bus", "", R.drawable.ic_trans_bus, false),
             PictureOption("u22_s2_p1_opt3", "kereta", "", R.drawable.ic_trans_train, false),
-            PictureOption("u22_s2_p1_opt4", "halte", "", R.drawable.ic_place_station, false)
+            PictureOption("u22_s2_p1_opt4", "halte", "", R.drawable.ic_trans_bus_stop, false)
         )
     ),
 
@@ -108,7 +108,7 @@ val bab22Stage2Part1Exercises = listOf(
         correctAnswer = "berjalan",
         audioToSpeak = "走",
         pictureOptions = listOf(
-            PictureOption("u22_s2_p1_opt7_1", "berjalan", "", R.drawable.ic_pos_front, true),
+            PictureOption("u22_s2_p1_opt7_1", "berjalan", "", R.drawable.ic_action_walk, true),
             PictureOption("u22_s2_p1_opt7_2", "mobil", "", R.drawable.ic_trans_car, false),
             PictureOption("u22_s2_p1_opt7_3", "taksi", "", R.drawable.ic_trans_taxi, false),
             PictureOption("u22_s2_p1_opt7_4", "kereta", "", R.drawable.ic_trans_train, false)
@@ -169,10 +169,10 @@ val bab22Stage2Part2Exercises = listOf(
         correctAnswer = "berjalan kaki",
         audioToSpeak = "走路",
         pictureOptions = listOf(
-            PictureOption("u22_s2_p2_opt1", "jalan kaki", "", R.drawable.ic_pos_front, true),
+            PictureOption("u22_s2_p2_opt1", "jalan kaki", "", R.drawable.ic_action_walk, true),
             PictureOption("u22_s2_p2_opt2", "taksi", "", R.drawable.ic_trans_taxi, false),
             PictureOption("u22_s2_p2_opt3", "kereta", "", R.drawable.ic_trans_train, false),
-            PictureOption("u22_s2_p2_opt4", "bus", "", R.drawable.ic_trans_car, false)
+            PictureOption("u22_s2_p2_opt4", "bus", "", R.drawable.ic_trans_bus, false)
         )
     ),
 
@@ -259,7 +259,7 @@ val bab22Stage2Part2Exercises = listOf(
         correctAnswer = "berjalan kaki",
         audioToSpeak = "走路",
         pictureOptions = listOf(
-            PictureOption("u22_s2_p2_opt7_1", "jalan kaki", "", R.drawable.ic_pos_front, true),
+            PictureOption("u22_s2_p2_opt7_1", "jalan kaki", "", R.drawable.ic_action_walk, true),
             PictureOption("u22_s2_p2_opt7_2", "mobil", "", R.drawable.ic_trans_car, false),
             PictureOption("u22_s2_p2_opt7_3", "taksi", "", R.drawable.ic_trans_taxi, false),
             PictureOption("u22_s2_p2_opt7_4", "kereta", "", R.drawable.ic_trans_train, false)

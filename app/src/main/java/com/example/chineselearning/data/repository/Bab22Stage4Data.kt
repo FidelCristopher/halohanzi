@@ -169,7 +169,7 @@ val bab22Stage4Part2Exercises = listOf(
         correctAnswer = "cepat",
         audioToSpeak = "快",
         pictureOptions = listOf(
-            PictureOption("u22_s4_p2_opt1", "cepat", "", R.drawable.ic_stopwatch_min, true),
+            PictureOption("u22_s4_p2_opt1", "cepat", "", R.drawable.ic_action_run, true),
             PictureOption("u22_s4_p2_opt2", "mobil", "", R.drawable.ic_trans_car, false),
             PictureOption("u22_s4_p2_opt3", "gedung", "", R.drawable.ic_work_office_building, false),
             PictureOption("u22_s4_p2_opt4", "stasiun", "", R.drawable.ic_place_station, false)

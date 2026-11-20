@@ -18,7 +18,7 @@ val bab22Stage1Part1Exercises = listOf(
         correctAnswer = "bus umum",
         audioToSpeak = "公交车",
         pictureOptions = listOf(
-            PictureOption("u22_s1_p1_opt1", "bus umum", "", R.drawable.ic_trans_car, true),
+            PictureOption("u22_s1_p1_opt1", "bus umum", "", R.drawable.ic_trans_bus, true),
             PictureOption("u22_s1_p1_opt2", "taksi", "", R.drawable.ic_trans_taxi, false),
             PictureOption("u22_s1_p1_opt3", "kereta", "", R.drawable.ic_trans_train, false),
             PictureOption("u22_s1_p1_opt4", "stasiun", "", R.drawable.ic_trans_train_station, false)
@@ -108,8 +108,8 @@ val bab22Stage1Part1Exercises = listOf(
         correctAnswer = "kereta bawah tanah / MRT",
         audioToSpeak = "地铁",
         pictureOptions = listOf(
-            PictureOption("u22_s1_p1_opt7_1", "MRT", "", R.drawable.ic_trans_train, true),
-            PictureOption("u22_s1_p1_opt7_2", "bus", "", R.drawable.ic_trans_car, false),
+            PictureOption("u22_s1_p1_opt7_1", "MRT", "", R.drawable.ic_trans_subway, true),
+            PictureOption("u22_s1_p1_opt7_2", "bus", "", R.drawable.ic_trans_bus, false),
             PictureOption("u22_s1_p1_opt7_3", "taksi", "", R.drawable.ic_trans_taxi, false),
             PictureOption("u22_s1_p1_opt7_4", "stasiun", "", R.drawable.ic_trans_train_station, false)
         )
@@ -169,8 +169,8 @@ val bab22Stage1Part2Exercises = listOf(
         correctAnswer = "halte / stasiun",
         audioToSpeak = "车站",
         pictureOptions = listOf(
-            PictureOption("u22_s1_p2_opt1", "halte", "", R.drawable.ic_place_station, true),
-            PictureOption("u22_s1_p2_opt2", "bus", "", R.drawable.ic_trans_car, false),
+            PictureOption("u22_s1_p2_opt1", "halte", "", R.drawable.ic_trans_bus_stop, true),
+            PictureOption("u22_s1_p2_opt2", "bus", "", R.drawable.ic_trans_bus, false),
             PictureOption("u22_s1_p2_opt3", "taksi", "", R.drawable.ic_trans_taxi, false),
             PictureOption("u22_s1_p2_opt4", "kereta", "", R.drawable.ic_trans_train, false)
         )
@@ -259,7 +259,7 @@ val bab22Stage1Part2Exercises = listOf(
         correctAnswer = "stasiun / halte",
         audioToSpeak = "站",
         pictureOptions = listOf(
-            PictureOption("u22_s1_p2_opt7_1", "halte", "", R.drawable.ic_place_station, true),
+            PictureOption("u22_s1_p2_opt7_1", "halte", "", R.drawable.ic_trans_bus_stop, true),
             PictureOption("u22_s1_p2_opt2", "kereta", "", R.drawable.ic_trans_train, false),
             PictureOption("u22_s1_p2_opt3", "mobil", "", R.drawable.ic_trans_car, false),
             PictureOption("u22_s1_p2_opt4", "taksi", "", R.drawable.ic_trans_taxi, false)
