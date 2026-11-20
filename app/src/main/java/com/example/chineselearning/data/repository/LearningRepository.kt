@@ -4693,6 +4693,101 @@ object LearningRepository {
                     exercisesPart2 = bab18Stage5Part2Exercises
                 )
             )
+        ),
+
+        // BAB 19: Kuliner Restoran, Ragam Minuman & Cita Rasa (餐馆寻味、茶饮咖啡与味蕾体验)
+        UnitCourse(
+            id = "unit_19",
+            unitNumber = 19,
+            title = "Kuliner & Restoran",
+            subtitle = "Restoran, memesan makanan, daging, ikan, aneka teh, kopi, dan rasa",
+            bannerTitle = "Kuliner & Cita Rasa",
+            emoji = "🍜",
+            level = "Level 19 (HSK 2)",
+            story = stories[18],
+            nodes = listOf(
+                PathNode("u19_n1", "Restoran & Pesan", Color(0xFFFFC107), NodeIconType.CAP, isCompleted = false, lessonId = "u19_l1"),
+                PathNode("u19_n2", "Daging & Ikan", Color(0xFFFFC107), NodeIconType.DUMBBELL, isCompleted = false, lessonId = "u19_l2"),
+                PathNode("u19_n3", "Teh & Kopi", Color(0xFFFFC107), NodeIconType.CAP, isCompleted = false, lessonId = "u19_l3"),
+                PathNode("u19_n4", "Evaluasi Rasa", Color(0xFFFFC107), NodeIconType.DUMBBELL, isCompleted = false, lessonId = "u19_l4"),
+                PathNode("u19_n5", "Kebersihan & Toilet", Color(0xFFFFC107), NodeIconType.SHUFFLE, isCompleted = false, lessonId = "u19_l5"),
+                PathNode("u19_n6", "Kuis Cerita Bab 19", Color(0xFFFFC107), NodeIconType.BOOK, isCompleted = false, lessonId = "u19_l1"),
+                PathNode("u19_n7", "Checkpoint Peti", Color(0xFFFFB300), NodeIconType.CHEST, isCompleted = false, lessonId = "u19_l1"),
+                PathNode("u19_n8", "Rest area", Color(0xFF03A9F4), NodeIconType.REST_AREA, isCompleted = false, lessonId = "u19_l1")
+            ),
+            lessons = listOf(
+                Lesson(
+                    id = "u19_l1",
+                    title = "Suasana Restoran & Memesan",
+                    subtitle = "Kosakata 饭馆 dan 点",
+                    grammarNote = "Fasilitas makan: 饭馆 (fànguǎn - restoran/rumah makan). Kata kerja memesan: 点 (diǎn - 点菜 = pesan makan).",
+                    newWords = listOf(
+                        Word("w19_1", "饭馆", "fànguǎn", "Restoran", "Tempat", "学校旁边有一家新饭馆。", "Xuéxiào pángbiān yǒu yì jiā xīn fànguǎn.", "Di samping sekolah ada restoran baru."),
+                        Word("w19_2", "点", "diǎn", "Memesan", "Kata Kerja", "服务员，我们要点菜。", "Fúwùyuán, wǒmen yào diǎn cài.", "Pelayan, kami ingin pesan makan.")
+                    ),
+                    exercises = bab19Stage1Part1Exercises,
+                    exercisesPart1 = bab19Stage1Part1Exercises,
+                    exercisesPart2 = bab19Stage1Part2Exercises
+                ),
+                Lesson(
+                    id = "u19_l2",
+                    title = "Hidangan Daging & Ikan",
+                    subtitle = "Kosakata 肉 dan 鱼",
+                    grammarNote = "Bahan pangan protein: 肉 (ròu - daging: 牛肉, 羊肉) dan 鱼 (yú - ikan: 新鲜的鱼).",
+                    newWords = listOf(
+                        Word("w19_3", "肉", "ròu", "Daging", "Makanan", "我不常吃肉。", "Wǒ bù cháng chī ròu.", "Saya tidak sering makan daging."),
+                        Word("w19_4", "鱼", "yú", "Ikan", "Makanan", "这家饭馆的鱼很新鲜。", "Zhè jiā fànguǎn de yú hěn xīnxiān.", "Ikan di restoran ini sangat segar.")
+                    ),
+                    exercises = bab19Stage2Part1Exercises,
+                    exercisesPart1 = bab19Stage2Part1Exercises,
+                    exercisesPart2 = bab19Stage2Part2Exercises
+                ),
+                Lesson(
+                    id = "u19_l3",
+                    title = "Aneka Teh & Kopi Favorit",
+                    subtitle = "Kosakata 红茶, 绿茶, 奶茶, dan 咖啡",
+                    grammarNote = "Ragam minuman santai: 红茶 (hóngchá - teh hitam), 绿茶 (lǜchá - teh hijau), 奶茶 (nǎichá - milk tea), 咖啡 (kāfēi - kopi).",
+                    newWords = listOf(
+                        Word("w19_5", "红茶", "hóngchá", "Teh hitam", "Minuman", "请给我一杯热红茶。", "Qǐng gěi wǒ yì bēi rè hóngchá.", "Tolong beri saya segelas teh hitam."),
+                        Word("w19_6", "绿茶", "lǜchá", "Teh hijau", "Minuman", "喝绿茶对身体很好。", "Hē lǜchá duì shēntǐ hěn hǎo.", "Minum teh hijau sangat baik untuk tubuh."),
+                        Word("w19_7", "奶茶", "nǎichá", "Teh susu / boba", "Minuman", "年轻人喜欢喝奶茶。", "Niánqīngrén xǐhuan hē nǎichá.", "Anak muda suka minum teh susu."),
+                        Word("w19_8", "咖啡", "kāfēi", "Kopi", "Minuman", "早上我喝了一杯黑咖啡。", "Zǎoshang wǒ hē le yì bēi hēi kāfēi.", "Pagi hari saya minum kopi hitam.")
+                    ),
+                    exercises = bab19Stage3Part1Exercises,
+                    exercisesPart1 = bab19Stage3Part1Exercises,
+                    exercisesPart2 = bab19Stage3Part2Exercises
+                ),
+                Lesson(
+                    id = "u19_l4",
+                    title = "Evaluasi Rasa & Pengalaman",
+                    subtitle = "Kosakata 不错, 有意思, 没意思, dan 坏",
+                    grammarNote = "Evaluasi positif: 不错 (búcuò - lumayan/mantap), 有意思 (yǒuyìsi - menarik). Negatif: 没意思 (membosankan), 坏 (huài - rusak/basi).",
+                    newWords = listOf(
+                        Word("w19_9", "不错", "búcuò", "Bagus / mantap", "Sifat", "这道菜味道真不错！", "Zhè dào cài wèidao zhēn búcuò!", "Cita rasa hidangan ini sungguh mantap!"),
+                        Word("w19_10", "有意思", "yǒuyìsi", "Menarik / asyik", "Ungkapan", "看这本书很有意思。", "Kàn zhè běn shū hěn yǒuyìsi.", "Membaca buku ini sangat menarik."),
+                        Word("w19_11", "没意思", "méiyìsi", "Membosankan", "Ungkapan", "这个电影一点也没意思。", "Zhège diànyǐng yìdiǎn yě méiyìsi.", "Film ini membosankan."),
+                        Word("w19_12", "坏", "huài", "Rusak / basi", "Sifat", "菜坏了不能吃。", "Cài huài le bù néng chī.", "Masakannya basi tidak bisa dimakan.")
+                    ),
+                    exercises = bab19Stage4Part1Exercises,
+                    exercisesPart1 = bab19Stage4Part1Exercises,
+                    exercisesPart2 = bab19Stage4Part2Exercises
+                ),
+                Lesson(
+                    id = "u19_l5",
+                    title = "Kebersihan & Fasilitas Toilet",
+                    subtitle = "Kosakata 洗 dan 洗手间",
+                    grammarNote = "Tindakan mencuci: 洗 (xǐ - 洗手 = cuci tangan). Fasilitas sanitasi: 洗手间 (xǐshǒujiān - toilet/kamar kecil: 洗手间在哪儿？).",
+                    newWords = listOf(
+                        Word("w19_13", "洗", "xǐ", "Mencuci", "Kata Kerja", "吃水果前要先洗一洗。", "Chī shuǐguǒ qián yào xiān xǐ yi xǐ.", "Sebelum makan buah harus dicuci dulu."),
+                        Word("w19_14", "洗手间", "xǐshǒujiān", "Toilet", "Tempat", "请问洗手间在几楼？", "Qǐngwèn xǐshǒujiān zài jǐ lóu?", "Permisi toilet di lantai berapa?"),
+                        Word("w19_1", "饭馆", "fànguǎn", "Restoran", "Tempat", "在饭馆吃饭。", "Zài fànguǎn chīfàn.", "Makan di restoran."),
+                        Word("w19_9", "不错", "búcuò", "Mantap", "Sifat", "味道真不错。", "Wèidao zhēn búcuò.", "Rasanya sungguh mantap.")
+                    ),
+                    exercises = bab19Stage5Part1Exercises,
+                    exercisesPart1 = bab19Stage5Part1Exercises,
+                    exercisesPart2 = bab19Stage5Part2Exercises
+                )
+            )
         )
     )
 }
