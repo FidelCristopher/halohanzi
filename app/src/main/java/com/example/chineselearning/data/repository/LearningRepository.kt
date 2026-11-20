@@ -4596,6 +4596,103 @@ object LearningRepository {
                     exercisesPart2 = bab17Stage5Part2Exercises
                 )
             )
+        ),
+
+        // BAB 18: Warna, Pakaian & Ciri Fisik Penampilan (色彩光谱、穿戴服饰与身材外貌)
+        UnitCourse(
+            id = "unit_18",
+            unitNumber = 18,
+            title = "Warna, Pakaian & Fisik",
+            subtitle = "Warna dasar, pakaian celana, arloji, tinggi badan, mata, dan tangan",
+            bannerTitle = "Warna, Pakaian & Penampilan",
+            emoji = "👔",
+            level = "Level 18 (HSK 2)",
+            story = stories[17],
+            nodes = listOf(
+                PathNode("u18_n1", "Spektrum Warna", Color(0xFFFFC107), NodeIconType.CAP, isCompleted = false, lessonId = "u18_l1"),
+                PathNode("u18_n2", "Pakaian & Aksesoris", Color(0xFFFFC107), NodeIconType.DUMBBELL, isCompleted = false, lessonId = "u18_l2"),
+                PathNode("u18_n3", "Postur & Tinggi", Color(0xFFFFC107), NodeIconType.CAP, isCompleted = false, lessonId = "u18_l3"),
+                PathNode("u18_n4", "Mata & Tangan", Color(0xFFFFC107), NodeIconType.DUMBBELL, isCompleted = false, lessonId = "u18_l4"),
+                PathNode("u18_n5", "Evaluasi Penampilan", Color(0xFFFFC107), NodeIconType.SHUFFLE, isCompleted = false, lessonId = "u18_l5"),
+                PathNode("u18_n6", "Kuis Cerita Bab 18", Color(0xFFFFC107), NodeIconType.BOOK, isCompleted = false, lessonId = "u18_l1"),
+                PathNode("u18_n7", "Checkpoint Peti", Color(0xFFFFB300), NodeIconType.CHEST, isCompleted = false, lessonId = "u18_l1"),
+                PathNode("u18_n8", "Rest area", Color(0xFF03A9F4), NodeIconType.REST_AREA, isCompleted = false, lessonId = "u18_l1")
+            ),
+            lessons = listOf(
+                Lesson(
+                    id = "u18_l1",
+                    title = "Spektrum Warna Dasar",
+                    subtitle = "Kosakata 颜色, 红色, 白色, 黑色, dan 绿色",
+                    grammarNote = "Frasa warna: Kata Sifat Warna + 色 (sè) + 的 + Kata Benda (红色的衣服, 白色的车). Menanyakan preferensi: 你喜欢什么颜色？",
+                    newWords = listOf(
+                        Word("w18_1", "颜色", "yánsè", "Warna", "Warna", "你喜欢什么颜色？", "Nǐ xǐhuan shénme yánsè?", "Kamu suka warna apa?"),
+                        Word("w18_2", "红色", "hóngsè", "Warna merah", "Warna", "我买了一件红色的衣服。", "Wǒ mǎi le yí jiàn hóngsè de yīfu.", "Saya membeli baju warna merah."),
+                        Word("w18_3", "白色", "báisè", "Warna putih", "Warna", "那辆白色的车很漂亮。", "Nà liàng báisè de chē hěn piàoliang.", "Mobil putih itu sangat indah."),
+                        Word("w18_4", "黑色", "hēisè", "Warna hitam", "Warna", "他戴着黑色的手表。", "Tā dài zhe hēisè de shǒubiǎo.", "Dia memakai jam tangan hitam."),
+                        Word("w18_5", "绿色", "lǜsè", "Warna hijau", "Warna", "春天树上都是绿色的。", "Chūntiān shùshang dōushì lǜsè de.", "Musim semi dedaunan hijau.")
+                    ),
+                    exercises = bab18Stage1Part1Exercises,
+                    exercisesPart1 = bab18Stage1Part1Exercises,
+                    exercisesPart2 = bab18Stage1Part2Exercises
+                ),
+                Lesson(
+                    id = "u18_l2",
+                    title = "Pakaian & Aksesoris",
+                    subtitle = "Kosakata 裤子, 条, 包, dan 手表",
+                    grammarNote = "Kata penggolong benda panjang/celana: 条 (tiáo - 一条裤子). Aksesoris pribadi: 包 (bāo - tas) dan 手表 (shǒubiǎo - arloji/jam tangan).",
+                    newWords = listOf(
+                        Word("w18_6", "裤子", "kùzi", "Celana", "Pakaian", "这条裤子很便宜。", "Zhè tiáo kùzi hěn piányi.", "Celana ini sangat murah."),
+                        Word("w18_7", "条", "tiáo", "Helai (panjang)", "Penggolong", "我想买一条新裤子。", "Wǒ xiǎng mǎi yì tiáo xīn kùzi.", "Saya mau beli celana baru."),
+                        Word("w18_8", "包", "bāo", "Tas", "Barang", "红色的包真漂亮。", "Hóngsè de bāo zhēn piàoliang.", "Tas merah sungguh cantik."),
+                        Word("w18_9", "手表", "shǒubiǎo", "Jam tangan", "Aksesoris", "这块手表太贵了。", "Zhè kuài shǒubiǎo tài guì le.", "Jam tangan ini terlalu mahal.")
+                    ),
+                    exercises = bab18Stage2Part1Exercises,
+                    exercisesPart1 = bab18Stage2Part1Exercises,
+                    exercisesPart2 = bab18Stage2Part2Exercises
+                ),
+                Lesson(
+                    id = "u18_l3",
+                    title = "Postur & Tinggi Tubuh",
+                    subtitle = "Kosakata 个子, 高, dan 长",
+                    grammarNote = "Deskripsi tinggi badan: 个子 (gèzi) + 很高 (hěn gāo). Sifat panjang: 长 (cháng - 头发很长 / 这条路很长).",
+                    newWords = listOf(
+                        Word("w18_10", "个子", "gèzi", "Tinggi badan", "Fisik", "他的个子很高。", "Tā de gèzi hěn gāo.", "Tinggi badannya sangat tinggi."),
+                        Word("w18_11", "高", "gāo", "Tinggi", "Kata Sifat", "姚明的个子非常高。", "Yáo Míng de gèzi fēicháng gāo.", "Postur Yao Ming sangat tinggi."),
+                        Word("w18_12", "长", "cháng", "Panjang", "Kata Sifat", "妹妹的头发很长。", "Mèimei de tóufa hěn cháng.", "Rambut adik perempuan panjang.")
+                    ),
+                    exercises = bab18Stage3Part1Exercises,
+                    exercisesPart1 = bab18Stage3Part1Exercises,
+                    exercisesPart2 = bab18Stage3Part2Exercises
+                ),
+                Lesson(
+                    id = "u18_l4",
+                    title = "Mata & Tangan",
+                    subtitle = "Kosakata 眼睛 dan 手",
+                    grammarNote = "Ciri fisik wajah: 眼睛 (yǎnjing - mata: 大眼睛). Anggota gerak: 手 (shǒu - tangan: 洗手 = mencuci tangan).",
+                    newWords = listOf(
+                        Word("w18_13", "眼睛", "yǎnjing", "Mata", "Tubuh", "妹妹的眼睛很大。", "Mèimei de yǎnjing hěn dà.", "Mata adik perempuan besar."),
+                        Word("w18_14", "手", "shǒu", "Tangan", "Tubuh", "吃饭前要洗手。", "Chīfàn qián yào xǐ shǒu.", "Sebelum makan harus cuci tangan.")
+                    ),
+                    exercises = bab18Stage4Part1Exercises,
+                    exercisesPart1 = bab18Stage4Part1Exercises,
+                    exercisesPart2 = bab18Stage4Part2Exercises
+                ),
+                Lesson(
+                    id = "u18_l5",
+                    title = "Evaluasi Komprehensif Busana & Fisik",
+                    subtitle = "Review seluruh 14 kosakata warna, pakaian, dan ciri fisik",
+                    grammarNote = "Evaluasi menyeluruh Bab 18: memadukan warna pakaian, celana baru, arloji, tas, postur tubuh tinggi, mata besar, dan kebersihan tangan.",
+                    newWords = listOf(
+                        Word("w18_1", "颜色", "yánsè", "Warna", "Warna", "漂亮颜色的衣服。", "Piàoliang yánsè de yīfu.", "Baju dengan warna indah."),
+                        Word("w18_6", "裤子", "kùzi", "Celana", "Pakaian", "一条白色裤子。", "Yì tiáo báisè kùzi.", "Sehelai celana putih."),
+                        Word("w18_10", "个子", "gèzi", "Tinggi badan", "Fisik", "个子很高。", "Gèzi hěn gāo.", "Tinggi badannya tinggi."),
+                        Word("w18_13", "眼睛", "yǎnjing", "Mata", "Tubuh", "小男孩儿的眼睛。", "Xiǎo nánháiér de yǎnjing.", "Mata anak laki-laki kecil.")
+                    ),
+                    exercises = bab18Stage5Part1Exercises,
+                    exercisesPart1 = bab18Stage5Part1Exercises,
+                    exercisesPart2 = bab18Stage5Part2Exercises
+                )
+            )
         )
     )
 }
