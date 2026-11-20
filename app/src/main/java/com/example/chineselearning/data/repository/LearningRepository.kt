@@ -5563,6 +5563,99 @@ object LearningRepository {
                     exercisesPart2 = bab27Stage5Part2Exercises
                 )
             )
+        ),
+
+        // BAB 28: Pola Komparasi, Superlatif & Keterangan Waktu (比较句式、极值程度与时态副词)
+        UnitCourse(
+            id = "unit_28",
+            unitNumber = 28,
+            title = "Komparasi & Waktu",
+            subtitle = "Pola perbandingan 比, superlatif 最, partikel 得 dan 地, demonstratif derajat, dan penanda waktu",
+            bannerTitle = "Komparasi, Derajat & Waktu",
+            emoji = "⚖️",
+            level = "Level 28 (HSK 2)",
+            story = stories[27],
+            nodes = listOf(
+                PathNode("u28_n1", "Komparasi Dasar", Color(0xFFFFC107), NodeIconType.CAP, isCompleted = false, lessonId = "u28_l1"),
+                PathNode("u28_n2", "Partikel Hasil & Cara", Color(0xFFFFC107), NodeIconType.DUMBBELL, isCompleted = false, lessonId = "u28_l2"),
+                PathNode("u28_n3", "Derajat & Ragam Cara", Color(0xFFFFC107), NodeIconType.CAP, isCompleted = false, lessonId = "u28_l3"),
+                PathNode("u28_n4", "Frekuensi Rutinitas", Color(0xFFFFC107), NodeIconType.DUMBBELL, isCompleted = false, lessonId = "u28_l4"),
+                PathNode("u28_n5", "Evaluasi Komparasi", Color(0xFFFFC107), NodeIconType.SHUFFLE, isCompleted = false, lessonId = "u28_l5"),
+                PathNode("u28_n6", "Kuis Cerita Bab 28", Color(0xFFFFC107), NodeIconType.BOOK, isCompleted = false, lessonId = "u28_l1"),
+                PathNode("u28_n7", "Checkpoint Peti", Color(0xFFFFB300), NodeIconType.CHEST, isCompleted = false, lessonId = "u28_l1"),
+                PathNode("u28_n8", "Rest area", Color(0xFF03A9F4), NodeIconType.REST_AREA, isCompleted = false, lessonId = "u28_l1")
+            ),
+            lessons = listOf(
+                Lesson(
+                    id = "u28_l1",
+                    title = "Pola Komparasi Dasar A 比 B",
+                    subtitle = "Kosakata 比 dan 最",
+                    grammarNote = "Pola perbandingan komparatif: A + 比 (bǐ) + B + Kata Sifat (哥哥比弟弟高). Superlatif ekstrem: 最 (zuì - paling: 最好, 最喜欢).",
+                    newWords = listOf(
+                        Word("w28_1", "比", "bǐ", "Dibandingkan / daripada", "Tata Bahasa", "今天天气比昨天好。", "Jīntiān tiānqì bǐ zuótiān hǎo.", "Hari ini cuaca lebih baik dari kemarin."),
+                        Word("w28_2", "最", "zuì", "Paling / ter-", "Keterangan", "他汉语说得最好。", "Tā Hànyǔ shuō de zuì hǎo.", "Dia bicara Mandarin paling bagus.")
+                    ),
+                    exercises = bab28Stage1Part1Exercises,
+                    exercisesPart1 = bab28Stage1Part1Exercises,
+                    exercisesPart2 = bab28Stage1Part2Exercises
+                ),
+                Lesson(
+                    id = "u28_l2",
+                    title = "Partikel Struktural Hasil & Cara",
+                    subtitle = "Kosakata 得 dan 地",
+                    grammarNote = "Partikel komplemen hasil derajat: Kata Kerja + 得 (de) + Kata Sifat (写得很漂亮). Partikel penanda adverbial cara: Kata Sifat + 地 (de) + Kata Kerja (慢慢地走).",
+                    newWords = listOf(
+                        Word("w28_3", "得", "de", "Partikel derajat hasil", "Partikel", "小明汉字写得非常漂亮。", "Xiǎomíng Hànzì xiě de fēicháng piàoliang.", "Xiao Ming menulis Hanzi sangat indah."),
+                        Word("w28_4", "地", "de", "Partikel keterangan cara", "Partikel", "同学们认真地听课。", "Tóngxuémen rènzhēn de tīngkè.", "Siswa mendengarkan dengan sungguh-sungguh.")
+                    ),
+                    exercises = bab28Stage2Part1Exercises,
+                    exercisesPart1 = bab28Stage2Part1Exercises,
+                    exercisesPart2 = bab28Stage2Part2Exercises
+                ),
+                Lesson(
+                    id = "u28_l3",
+                    title = "Demonstratif Derajat & Ragam Cara",
+                    subtitle = "Kosakata 那么, 那样, 这么, dan 这样",
+                    grammarNote = "Derajat: 这么 (zhème - sebegini), 那么 (nàme - sebegitu). Ragam cara: 这样 (zhèyàng - cara begini), 那样 (nàyàng - cara begitu).",
+                    newWords = listOf(
+                        Word("w28_5", "那么", "nàme", "Sebegitu / kalau begitu", "Keterangan", "天气那么好，去公园吧。", "Tiānqì nàme hǎo, qù gōngyuán ba.", "Cuaca begitu bagus, ayo ke taman."),
+                        Word("w28_6", "那样", "nàyàng", "Seperti itu", "Kata Ganti", "你不用那样做。", "Nǐ bú yòng nàyàng zuò.", "Kamu tak usah berbuat seperti itu."),
+                        Word("w28_7", "这么", "zhème", "Sebegini / begitu", "Keterangan", "怎么这么便宜？", "Zěnme zhème piányi?", "Kenapa begitu murah?"),
+                        Word("w28_8", "这样", "zhèyàng", "Seperti ini / begini", "Kata Ganti", "这样做才能学好汉语。", "Zhèyàng zuò cáinéng xuéhǎo Hànyǔ.", "Berbuat begini baru bisa belajar Mandarin.")
+                    ),
+                    exercises = bab28Stage3Part1Exercises,
+                    exercisesPart1 = bab28Stage3Part1Exercises,
+                    exercisesPart2 = bab28Stage3Part2Exercises
+                ),
+                Lesson(
+                    id = "u28_l4",
+                    title = "Frekuensi Rutinitas & Durasi Sejenak",
+                    subtitle = "Kosakata 经常, 有时, dan 一会儿",
+                    grammarNote = "Frekuensi waktu: 经常 (jīngcháng - sering/kerap), 有时 (yǒushí - kadang-kadang). Durasi sekejap: 一会儿 (yíhuìér - sebentar: 等我一会儿).",
+                    newWords = listOf(
+                        Word("w28_9", "经常", "jīngcháng", "Sering / kerap kali", "Keterangan", "周末我经常去图书馆。", "Zhōumò wǒ jīngcháng qù túshūguǎn.", "Akhir pekan saya sering ke perpustakaan."),
+                        Word("w28_10", "有时", "yǒushí", "Kadang-kadang / terkadang", "Keterangan", "他有时跑步，有时游泳。", "Tā yǒushí pǎobù, yǒushí yóuyǒng.", "Dia kadang jogging, kadang renang."),
+                        Word("w28_11", "一会儿", "yíhuìér", "Sebentar / sejenak", "Waktu", "请在门口等我一会儿。", "Qǐng zài ménkǒu děng wǒ yíhuìér.", "Tolong tunggu saya sebentar di pintu.")
+                    ),
+                    exercises = bab28Stage4Part1Exercises,
+                    exercisesPart1 = bab28Stage4Part1Exercises,
+                    exercisesPart2 = bab28Stage4Part2Exercises
+                ),
+                Lesson(
+                    id = "u28_l5",
+                    title = "Aspek Waktu Progresif & Sudah Terjadi",
+                    subtitle = "Kosakata 已经, 快要, dan 正",
+                    grammarNote = "Penanda temporal: 已经 (yǐjīng - sudah/telah), 快要...了 (kuàiyào...le - sebentar lagi akan), 正 (zhèng - sedang/tepat saat).",
+                    newWords = listOf(
+                        Word("w28_12", "已经", "yǐjīng", "Sudah / telah", "Keterangan", "电影已经开始了。", "Diànyǐng yǐjīng kāishǐ le.", "Film sudah dimulai."),
+                        Word("w28_13", "快要", "kuàiyào", "Sebentar lagi akan", "Keterangan", "火车快要开了。", "Huǒchē kuàiyào kāi le.", "Kereta sebentar lagi berangkat."),
+                        Word("w28_14", "正", "zhèng", "Sedang / tepat", "Keterangan", "我正想打电话给你。", "Wǒ zhèng xiǎng dǎ diànhuà gěi nǐ.", "Saya tepat sedang mau teleponmu.")
+                    ),
+                    exercises = bab28Stage5Part1Exercises,
+                    exercisesPart1 = bab28Stage5Part1Exercises,
+                    exercisesPart2 = bab28Stage5Part2Exercises
+                )
+            )
         )
     )
 }
