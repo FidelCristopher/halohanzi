@@ -18,8 +18,8 @@ val bab17Stage1Part1Exercises = listOf(
         correctAnswer = "kakek",
         audioToSpeak = "爷爷",
         pictureOptions = listOf(
-            PictureOption("u17_s1_p1_opt1", "kakek", "", R.drawable.ic_fam_grandfather, true),
-            PictureOption("u17_s1_p1_opt2", "nenek", "", R.drawable.ic_fam_grandmother, false),
+            PictureOption("u17_s1_p1_opt1", "kakek", "", R.drawable.art_fam_grandfather, true),
+            PictureOption("u17_s1_p1_opt2", "nenek", "", R.drawable.art_fam_grandmother, false),
             PictureOption("u17_s1_p1_opt3", "anak", "", R.drawable.ic_fam_child, false),
             PictureOption("u17_s1_p1_opt4", "rumah", "", R.drawable.ic_fam_home, false)
         )
@@ -108,8 +108,8 @@ val bab17Stage1Part1Exercises = listOf(
         correctAnswer = "nenek",
         audioToSpeak = "奶奶",
         pictureOptions = listOf(
-            PictureOption("u17_s1_p1_opt7_1", "nenek", "", R.drawable.ic_fam_grandmother, true),
-            PictureOption("u17_s1_p1_opt7_2", "kakek", "", R.drawable.ic_fam_grandfather, false),
+            PictureOption("u17_s1_p1_opt7_1", "nenek", "", R.drawable.art_fam_grandmother, true),
+            PictureOption("u17_s1_p1_opt7_2", "kakek", "", R.drawable.art_fam_grandfather, false),
             PictureOption("u17_s1_p1_opt7_3", "anak", "", R.drawable.ic_fam_child, false),
             PictureOption("u17_s1_p1_opt7_4", "rumah", "", R.drawable.ic_fam_home, false)
         )

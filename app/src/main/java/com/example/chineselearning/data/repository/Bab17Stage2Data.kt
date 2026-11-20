@@ -18,8 +18,8 @@ val bab17Stage2Part1Exercises = listOf(
         correctAnswer = "anak laki-laki",
         audioToSpeak = "男孩儿",
         pictureOptions = listOf(
-            PictureOption("u17_s2_p1_opt1", "anak laki-laki", "", R.drawable.ic_child_boy, true),
-            PictureOption("u17_s2_p1_opt2", "anak perempuan", "", R.drawable.ic_child_girl, false),
+            PictureOption("u17_s2_p1_opt1", "anak laki-laki", "", R.drawable.art_child_boy, true),
+            PictureOption("u17_s2_p1_opt2", "anak perempuan", "", R.drawable.art_child_girl, false),
             PictureOption("u17_s2_p1_opt3", "ayah", "", R.drawable.ic_fam_father, false),
             PictureOption("u17_s2_p1_opt4", "ibu", "", R.drawable.ic_fam_mother, false)
         )
@@ -108,8 +108,8 @@ val bab17Stage2Part1Exercises = listOf(
         correctAnswer = "anak perempuan",
         audioToSpeak = "女孩儿",
         pictureOptions = listOf(
-            PictureOption("u17_s2_p1_opt7_1", "anak perempuan", "", R.drawable.ic_child_girl, true),
-            PictureOption("u17_s2_p1_opt7_2", "anak laki-laki", "", R.drawable.ic_child_boy, false),
+            PictureOption("u17_s2_p1_opt7_1", "anak perempuan", "", R.drawable.art_child_girl, true),
+            PictureOption("u17_s2_p1_opt7_2", "anak laki-laki", "", R.drawable.art_child_boy, false),
             PictureOption("u17_s2_p1_opt7_3", "ayah", "", R.drawable.ic_fam_father, false),
             PictureOption("u17_s2_p1_opt7_4", "ibu", "", R.drawable.ic_fam_mother, false)
         )
