@@ -1,0 +1,98 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Soft Sky Indigo) -->
+    <path
+        android:fillColor="#EEF2FF"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Campus Ground & Lawn Steps -->
+    <path
+        android:fillColor="#CBD5E1"
+        android:pathData="M14,78 L82,78 L82,82 L14,82 Z" />
+    <path
+        android:fillColor="#10B981"
+        android:pathData="M16,77 L34,77 L34,79 L16,79 Z M62,77 L80,77 L80,79 L62,79 Z" />
+
+    <!-- Left Classroom Wing (2-Story Brick High School - 高中) -->
+    <path
+        android:fillColor="#475569"
+        android:pathData="M18,44 L38,44 L38,78 L18,78 Z" />
+    <path
+        android:fillColor="#334155"
+        android:pathData="M16,42 L40,42 L40,45 L16,45 Z" />
+    <!-- Left Wing Classroom Windows -->
+    <path
+        android:fillColor="#BAE6FD"
+        android:pathData="M22,48 L27,48 L27,56 L22,56 Z M30,48 L35,48 L35,56 L30,56 Z M22,62 L27,62 L27,70 L22,70 Z M30,62 L35,62 L35,70 L30,70 Z" />
+
+    <!-- Right Classroom Wing -->
+    <path
+        android:fillColor="#475569"
+        android:pathData="M58,44 L78,44 L78,78 L58,78 Z" />
+    <path
+        android:fillColor="#334155"
+        android:pathData="M56,42 L80,42 L80,45 L56,45 Z" />
+    <!-- Right Wing Classroom Windows -->
+    <path
+        android:fillColor="#BAE6FD"
+        android:pathData="M61,48 L66,48 L66,56 L61,56 Z M69,48 L74,48 L74,56 L69,56 Z M61,62 L66,62 L66,70 L61,70 Z M69,62 L74,62 L74,70 L69,70 Z" />
+
+    <!-- Central Clock Tower Structure (Heart of High School Campus) -->
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="M36,26 L60,26 L60,78 L36,78 Z" />
+    <path
+        android:fillColor="#334155"
+        android:pathData="M38,28 L58,28 L58,78 L38,78 Z" />
+
+    <!-- Tower Roof Pyramid Spire -->
+    <path
+        android:fillColor="#0F172A"
+        android:pathData="M34,26 L48,16 L62,26 Z" />
+    <!-- Flagpole on Spire -->
+    <path
+        android:fillColor="#94A3B8"
+        android:pathData="M47.5,10 L48.5,10 L48.5,16 L47.5,16 Z" />
+    <!-- Red School Flag Fluttering -->
+    <path
+        android:fillColor="#EF4444"
+        android:pathData="M48.5,10 L56,13 L48.5,16 Z" />
+
+    <!-- School Clock Face (Round Dial at 8:00 AM Class Time) -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M48,32 A7,7 0 1,0 48,46 A7,7 0 1,0 48,32 Z" />
+    <path
+        android:fillColor="#E2E8F0"
+        android:pathData="M48,33.5 A5.5,5.5 0 1,0 48,44.5 A5.5,5.5 0 1,0 48,33.5 Z" />
+    <!-- Clock Hands (Hour Hand pointing to 8, Minute Hand pointing to 12) -->
+    <path
+        android:fillColor="#0F172A"
+        android:pathData="M47.5,35 L48.5,35 L48.5,39 L47.5,39 Z" />
+    <path
+        android:fillColor="#EF4444"
+        android:pathData="M45,41 L48,39 L48.8,40 L45.8,42 Z" />
+    <path
+        android:fillColor="#0F172A"
+        android:pathData="M48,38.5 A0.8,0.8 0 1,0 48,40.1 A0.8,0.8 0 1,0 48,38.5 Z" />
+
+    <!-- Central Hall Windows (Floor 2) -->
+    <path
+        android:fillColor="#BAE6FD"
+        android:pathData="M42,50 L46,50 L46,58 L42,58 Z M50,50 L54,50 L54,58 L50,58 Z" />
+
+    <!-- High School Grand Entrance Doors (Ground Floor) -->
+    <path
+        android:fillColor="#0284C7"
+        android:pathData="M43,64 L53,64 C54.1,64 55,64.9 55,66 L55,78 L41,78 L41,66 C41,64.9 41.9,64 43,64 Z" />
+    <path
+        android:fillColor="#38BDF8"
+        android:pathData="M44,66 L47,66 L47,75 L44,75 Z M49,66 L52,66 L52,75 L49,75 Z" />
+    <!-- Door Center Seam -->
+    <path
+        android:fillColor="#0369A1"
+        android:pathData="M47.5,64 L48.5,64 L48.5,78 L47.5,78 Z" />
+</vector>

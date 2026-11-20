@@ -1,0 +1,93 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Soft Sky Blue) -->
+    <path
+        android:fillColor="#E0F2FE"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Classic Yellow Student Pencil (Slanted from Top-Left to Bottom-Right) -->
+    <!-- Pink Eraser Top -->
+    <path
+        android:fillColor="#FDA4AF"
+        android:pathData="M22,22 L27,17 L32,22 L27,27 Z" />
+    <!-- Metal Ferrule Ring -->
+    <path
+        android:fillColor="#94A3B8"
+        android:pathData="M26,26 L31,21 L34,24 L29,29 Z" />
+
+    <!-- Yellow Hexagonal Pencil Shaft -->
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M29,29 L60,60 L57,63 L26,32 Z" />
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M31,27 L62,58 L60,60 L29,29 Z" />
+
+    <!-- Sharpened Wooden Tip -->
+    <path
+        android:fillColor="#FED7AA"
+        android:pathData="M57,63 L60,60 L70,70 L65,72 Z" />
+    <!-- Dark Graphite Lead Core -->
+    <path
+        android:fillColor="#0F172A"
+        android:pathData="M66,69 L70,70 L68,74 Z" />
+
+    <!-- Executive Fountain Pen (Crossing from Top-Right to Bottom-Left - 笔) -->
+    <!-- Pen Cap / Top Finial -->
+    <path
+        android:fillColor="#0F172A"
+        android:pathData="M70,18 L76,24 L73,27 L67,21 Z" />
+    <!-- Gold Pocket Clip -->
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M71,21 L65,33 L62,32 L69,19 Z" />
+
+    <!-- Main Midnight Blue Pen Barrel -->
+    <path
+        android:fillColor="#1E3A8A"
+        android:pathData="M67,21 L38,50 L34,46 L63,17 Z" />
+    <path
+        android:fillColor="#2563EB"
+        android:pathData="M66,22 L39,49 L37,47 L64,20 Z" />
+
+    <!-- Gold Center Band Accent -->
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M52,36 L55,39 L53,41 L50,38 Z" />
+
+    <!-- Pen Grip Section (Slate Grey) -->
+    <path
+        android:fillColor="#334155"
+        android:pathData="M38,50 L31,57 L27,53 L34,46 Z" />
+
+    <!-- Two-Tone Gold & Steel Fountain Pen Nib -->
+    <path
+        android:fillColor="#CBD5E1"
+        android:pathData="M31,57 L23,65 L19,77 L31,73 L39,65 Z" />
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M29,59 L24,64 L21,73 L30,70 L35,65 Z" />
+    <!-- Nib Ink Breathing Hole & Slit -->
+    <path
+        android:fillColor="#0F172A"
+        android:pathData="M27.5,65.5 A1,1 0 1,0 27.5,67.5 A1,1 0 1,0 27.5,65.5 Z" />
+    <path
+        android:fillColor="#0F172A"
+        android:pathData="M27,67 L19,77 L20,78 L28,68 Z" />
+
+    <!-- Glossy Cyan Blue Ink Droplet & Drawn Calligraphic Stroke -->
+    <path
+        android:fillColor="#0284C7"
+        android:pathData="M16,78 C14,78 12,80 12,82 C12,84.2 13.8,86 16,86 C18.2,86 20,84.2 20,82 C20,80 18,78 16,78 Z" />
+    <path
+        android:fillColor="#38BDF8"
+        android:pathData="M15,80 A1,1 0 1,0 15,82 A1,1 0 1,0 15,80 Z" />
+
+    <!-- Calligraphic Flourish Swirl Line -->
+    <path
+        android:fillColor="#0284C7"
+        android:pathData="M20,78 C30,74 44,78 52,74 L51,72 C43,76 31,72 20,76 Z" />
+</vector>

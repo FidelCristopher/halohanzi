@@ -1,0 +1,88 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Soft Mint Sage) -->
+    <path
+        android:fillColor="#F0FDF4"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Classroom Wooden Floor Line -->
+    <path
+        android:fillColor="#CBD5E1"
+        android:pathData="M14,78 L82,78 L82,82 L14,82 Z" />
+
+    <!-- Large Green Chalkboard Frame (教室黑板 - Classroom Board) -->
+    <path
+        android:fillColor="#78350F"
+        android:pathData="M18,18 L78,18 C79.1,18 80,18.9 80,20 L80,54 C80,55.1 79.1,56 78,56 L18,56 C16.9,56 16,55.1 16,54 L16,20 C16,18.9 16.9,18 18,18 Z" />
+    <!-- Classic Deep Forest Green Blackboard Surface -->
+    <path
+        android:fillColor="#065F46"
+        android:pathData="M20,20 L76,20 L76,52 L20,52 Z" />
+
+    <!-- White Chalk Writings on Blackboard ("A + B = C" & Math Diagram) -->
+    <!-- Math Formula -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M26,26 L29,26 L30,34 L28,34 L27.5,31 L25.5,31 L25,34 L23,34 Z M26,28 L27,30 L25,30 Z M33,29 L37,29 L37,31 L33,31 Z M35,27 L35,33 L33.5,33 L33.5,27 Z M41,26 L44,26 C45,26 46,27 46,28 C46,29 45,29.5 44,29.5 C45,30 46,31 46,32 C46,33 45,34 44,34 L41,34 Z M43,27.5 L43,29 L44,29 C44.5,29 45,28.8 45,28.2 C45,27.8 44.5,27.5 44,27.5 Z M43,30.5 L43,32.5 L44,32.5 C44.5,32.5 45,32.2 45,31.5 C45,30.8 44.5,30.5 44,30.5 Z" />
+    <path
+        android:fillColor="#FEF08A"
+        android:pathData="M50,29 L54,29 L54,30.5 L50,30.5 Z M50,32 L54,32 L54,33.5 L50,33.5 Z M58,26 L63,26 L63,28 L60,28 L60,34 L58,34 Z" />
+
+    <!-- Geometric Triangle Diagram in Chalk -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M66,48 L74,48 L70,38 Z M67.5,46.5 L70,40.5 L72.5,46.5 Z" />
+
+    <!-- Chalk Tray with Chalk Sticks & Eraser at Bottom of Board -->
+    <path
+        android:fillColor="#92400E"
+        android:pathData="M16,52 L80,52 L80,56 L16,56 Z" />
+    <!-- White Chalk Sticks -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M48,53 L54,53 L54,55 L48,55 Z M56,53 L60,53 L60,55 L56,55 Z" />
+    <!-- Felt Eraser -->
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="M34,51 L44,51 L44,55 L34,55 Z" />
+    <path
+        android:fillColor="#D97706"
+        android:pathData="M34,53 L44,53 L44,55 L34,55 Z" />
+
+    <!-- Wooden Student Study Desk in Foreground -->
+    <!-- Desk Surface Top -->
+    <path
+        android:fillColor="#B45309"
+        android:pathData="M24,62 L72,62 L72,66 L24,66 Z" />
+    <path
+        android:fillColor="#D97706"
+        android:pathData="M24,60 L72,60 C73.1,60 74,60.9 74,62 L74,64 L22,64 L22,62 C22,60.9 22.9,60 24,60 Z" />
+
+    <!-- Desk Steel Legs -->
+    <path
+        android:fillColor="#475569"
+        android:pathData="M26,66 L29,66 L29,80 L26,80 Z M67,66 L70,66 L70,80 L67,80 Z" />
+    <!-- Desk Support Crossbar -->
+    <path
+        android:fillColor="#64748B"
+        android:pathData="M29,72 L67,72 L67,74 L29,74 Z" />
+
+    <!-- Open Textbook / Notebook on Student Desk -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M36,58 L46,58 L45,62 L35,62 Z M47,58 L57,58 L58,62 L48,62 Z" />
+    <path
+        android:fillColor="#0284C7"
+        android:pathData="M37,59 L44,59 L43,60 L36,60 Z M49,59 L56,59 L57,60 L50,60 Z" />
+
+    <!-- Yellow Pencil on Desk Beside Book -->
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M61,59 L68,59 L68,61 L61,61 Z" />
+    <path
+        android:fillColor="#EF4444"
+        android:pathData="M67,59 L69,59 L69,61 L67,61 Z" />
+</vector>
