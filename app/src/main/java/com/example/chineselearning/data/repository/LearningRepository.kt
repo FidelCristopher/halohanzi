@@ -5077,6 +5077,104 @@ object LearningRepository {
                     exercisesPart2 = bab22Stage5Part2Exercises
                 )
             )
+        ),
+
+        // BAB 23: Perjalanan Wisata, Tiket & Berlibur ke Luar Negeri (假日长途游、票务预订与出境见闻)
+        UnitCourse(
+            id = "unit_23",
+            unitNumber = 23,
+            title = "Wisata & Luar Negeri",
+            subtitle = "Wisata, luar negeri, bandara, tiket pesawat, hotel, perayaan Imlek, dan oleh-oleh",
+            bannerTitle = "Wisata & Liburan Internasional",
+            emoji = "✈️",
+            level = "Level 23 (HSK 2)",
+            story = stories[22],
+            nodes = listOf(
+                PathNode("u23_n1", "Rencana Berlibur", Color(0xFFFFC107), NodeIconType.CAP, isCompleted = false, lessonId = "u23_l1"),
+                PathNode("u23_n2", "Bandara & Tiket", Color(0xFFFFC107), NodeIconType.DUMBBELL, isCompleted = false, lessonId = "u23_l2"),
+                PathNode("u23_n3", "Hotel & Imlek", Color(0xFFFFC107), NodeIconType.CAP, isCompleted = false, lessonId = "u23_l3"),
+                PathNode("u23_n4", "Hadiah & Pernah", Color(0xFFFFC107), NodeIconType.DUMBBELL, isCompleted = false, lessonId = "u23_l4"),
+                PathNode("u23_n5", "Evaluasi Wisata", Color(0xFFFFC107), NodeIconType.SHUFFLE, isCompleted = false, lessonId = "u23_l5"),
+                PathNode("u23_n6", "Kuis Cerita Bab 23", Color(0xFFFFC107), NodeIconType.BOOK, isCompleted = false, lessonId = "u23_l1"),
+                PathNode("u23_n7", "Checkpoint Peti", Color(0xFFFFB300), NodeIconType.CHEST, isCompleted = false, lessonId = "u23_l1"),
+                PathNode("u23_n8", "Rest area", Color(0xFF03A9F4), NodeIconType.REST_AREA, isCompleted = false, lessonId = "u23_l1")
+            ),
+            lessons = listOf(
+                Lesson(
+                    id = "u23_l1",
+                    title = "Rencana Berlibur ke Luar Negeri",
+                    subtitle = "Kosakata 旅游, 外国, dan 出国",
+                    grammarNote = "Aktivitas wisata: 旅游 (lǚyóu - berwisata), 外国 (wàiguó - luar negeri), 出国 (chūguó - pergi ke luar negeri).",
+                    newWords = listOf(
+                        Word("w23_1", "旅游", "lǚyóu", "Berwisata / berlibur", "Wisata", "今年冬天我想去北京旅游。", "Jīnnián dōngtiān wǒ xiǎng qù Běijīng lǚyóu.", "Musim dingin ini saya mau ke Beijing berlibur."),
+                        Word("w23_2", "外国", "wàiguó", "Luar negeri", "Tempat", "有很多外国朋友在学中文。", "Yǒu hěn duō wàiguó péngyou zài xué Zhōngwén.", "Banyak teman luar negeri belajar Mandarin."),
+                        Word("w23_3", "出国", "chūguó", "Pergi ke luar negeri", "Kata Kerja", "他打算明年出国读大学。", "Tā míngnián dǎsuan chūguó dú dàxué.", "Dia berencana tahun depan kuliah di luar negeri.")
+                    ),
+                    exercises = bab23Stage1Part1Exercises,
+                    exercisesPart1 = bab23Stage1Part1Exercises,
+                    exercisesPart2 = bab23Stage1Part2Exercises
+                ),
+                Lesson(
+                    id = "u23_l2",
+                    title = "Bandara & Tiket Pesawat",
+                    subtitle = "Kosakata 机场, 机票, 飞, 票, dan 门票",
+                    grammarNote = "Fasilitas penerbangan: 机场 (bandara), 机票 (tiket pesawat), 飞 (terbang). Karcis: 票 (tiket), 门票 (tiket masuk wisata).",
+                    newWords = listOf(
+                        Word("w23_4", "机场", "jīchǎng", "Bandara", "Tempat", "明天早上我得去机场接朋友。", "Míngtiān zǎoshang wǒ děi qù jīchǎng jiē péngyou.", "Besok pagi saya ke bandara jemput kawan."),
+                        Word("w23_5", "机票", "jīpiào", "Tiket pesawat", "Barang", "春节前的机票非常贵。", "Chūnjié qián de jīpiào fēicháng guì.", "Tiket pesawat sebelum Imlek mahal."),
+                        Word("w23_6", "飞", "fēi", "Terbang", "Kata Kerja", "飞机飞得很高。", "Fēijī fēi de hěn gāo.", "Pesawat terbang sangat tinggi."),
+                        Word("w23_7", "票", "piào", "Tiket / karcis", "Barang", "电影票已经卖完了。", "Diànyǐngpiào yǐjīng mài wán le.", "Tiket bioskop sudah habis."),
+                        Word("w23_8", "门票", "ménpiào", "Tiket masuk", "Barang", "公园的门票一张五十块。", "Gōngyuán de ménpiào yì zhāng wǔshí kuài.", "Tiket masuk taman 50 yuan per lembar.")
+                    ),
+                    exercises = bab23Stage2Part1Exercises,
+                    exercisesPart1 = bab23Stage2Part1Exercises,
+                    exercisesPart2 = bab23Stage2Part2Exercises
+                ),
+                Lesson(
+                    id = "u23_l3",
+                    title = "Hotel & Perayaan Imlek",
+                    subtitle = "Kosakata 酒店, 过, 过年, dan 准备",
+                    grammarNote = "Penginapan: 酒店 (hotel). Melewati waktu: 过 (guò). Perayaan tahun baru: 过年 (guònián). Kesiapan rencana: 准备 (zhǔnbèi).",
+                    newWords = listOf(
+                        Word("w23_9", "酒店", "jiǔdiàn", "Hotel", "Tempat", "我们住在海边的酒店。", "Wǒmen zhù zài hǎibiān de jiǔdiàn.", "Kami tinggal di hotel tepi laut."),
+                        Word("w23_10", "过", "guò", "Melewati / merayakan", "Kata Kerja", "今天我过得很开心。", "Jīntiān wǒ guò de hěn kāixīn.", "Hari ini saya lalui dengan senang."),
+                        Word("w23_11", "过年", "guònián", "Merayakan Imlek", "Kata Kerja", "过年全家团聚在一起。", "Guònián quánjiā tuánjù zài yìqǐ.", "Saat Imlek sekeluarga berkumpul."),
+                        Word("w23_12", "准备", "zhǔnbèi", "Mempersiapkan", "Kata Kerja", "我已经准备好去旅游了。", "Wǒ yǐjīng zhǔnbèi hǎo qù lǚyóu le.", "Saya sudah siap berangkat berlibur.")
+                    ),
+                    exercises = bab23Stage3Part1Exercises,
+                    exercisesPart1 = bab23Stage3Part1Exercises,
+                    exercisesPart2 = bab23Stage3Part2Exercises
+                ),
+                Lesson(
+                    id = "u23_l4",
+                    title = "Memberi Hadiah & Aspek Pernah",
+                    subtitle = "Kosakata 送, 拿, dan 过 (guo)",
+                    grammarNote = "Pemindahan objek: 送 (sòng - menghadiahi/mengantar) dan 拿 (ná - membawa/mengambil). Aspek pengalaman: Kata Kerja + 过 (guo - pernah).",
+                    newWords = listOf(
+                        Word("w23_13", "送", "sòng", "Mengantar / memberi hadiah", "Kata Kerja", "朋友送我一本好书。", "Péngyou sòng wǒ yì běn hǎoshū.", "Teman menghadiahkan saya buku bagus."),
+                        Word("w23_14", "拿", "ná", "Membawa / memegang", "Kata Kerja", "请帮我拿一下这个包。", "Qǐng bāng wǒ ná yíxià zhège bāo.", "Tolong bantu saya membawa tas ini."),
+                        Word("w23_15", "过", "guo", "Pernah (aspek pengalaman)", "Partikel", "你吃过北京烤鸭吗？", "Nǐ chī guo Běijīng kǎoyā ma?", "Apakah kamu pernah makan bebek panggang?")
+                    ),
+                    exercises = bab23Stage4Part1Exercises,
+                    exercisesPart1 = bab23Stage4Part1Exercises,
+                    exercisesPart2 = bab23Stage4Part2Exercises
+                ),
+                Lesson(
+                    id = "u23_l5",
+                    title = "Evaluasi Komprehensif Wisata & Tiket",
+                    subtitle = "Review seluruh 15 kosakata wisata, bandara, hotel, dan tiket",
+                    grammarNote = "Evaluasi menyeluruh Bab 23: perencanaan perjalanan ke luar negeri, pembelian tiket pesawat, reservasi hotel, dan pengalaman berwisata.",
+                    newWords = listOf(
+                        Word("w23_1", "旅游", "lǚyóu", "Berwisata", "Wisata", "买机票飞去北京旅游。", "Mǎi jīpiào fēi qù Běijīng lǚyóu.", "Beli tiket terbang liburan ke Beijing."),
+                        Word("w23_5", "机票", "jīpiào", "Tiket pesawat", "Barang", "准备好机票。", "Zhǔnbèi hǎo jīpiào.", "Siapkan tiket pesawat."),
+                        Word("w23_9", "酒店", "jiǔdiàn", "Hotel", "Tempat", "住在机场旁的酒店。", "Zhù zài jīchǎng páng de jiǔdiàn.", "Menginap di hotel samping bandara."),
+                        Word("w23_3", "出国", "chūguó", "Ke luar negeri", "Kata Kerja", "出国旅游。", "Chūguó lǚyóu.", "Berwisata ke luar negeri.")
+                    ),
+                    exercises = bab23Stage5Part1Exercises,
+                    exercisesPart1 = bab23Stage5Part1Exercises,
+                    exercisesPart2 = bab23Stage5Part2Exercises
+                )
+            )
         )
     )
 }
