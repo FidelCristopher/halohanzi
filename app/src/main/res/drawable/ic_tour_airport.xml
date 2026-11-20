@@ -1,0 +1,79 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Soft Sky Blue) -->
+    <path
+        android:fillColor="#E0F2FE"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Runway Tarmac Strip (Airport Ground Level) -->
+    <path
+        android:fillColor="#334155"
+        android:pathData="M14,76 L82,76 L82,82 L14,82 Z" />
+    <!-- Yellow Runway Centerline Markings -->
+    <path
+        android:fillColor="#FEF08A"
+        android:pathData="M18,78.5 L28,78.5 L28,79.5 L18,79.5 Z M36,78.5 L46,78.5 L46,79.5 L36,79.5 Z M54,78.5 L64,78.5 L64,79.5 L54,79.5 Z M72,78.5 L80,78.5 L80,79.5 L72,79.5 Z" />
+
+    <!-- Jet Airplane Climbing High in Sky (Top Right) -->
+    <path
+        android:fillColor="#0284C7"
+        android:pathData="M66,22 L76,16 L80,19 L74,25 L78,28 L76,30 L71,27 L66,32 L64,30 L67,26 L60,25 L61,22 Z" />
+
+    <!-- Airport Terminal Concourse Building (Right Wing) -->
+    <path
+        android:fillColor="#94A3B8"
+        android:pathData="M40,54 L80,54 L80,76 L40,76 Z" />
+    <path
+        android:fillColor="#CBD5E1"
+        android:pathData="M42,56 L78,56 L78,76 L42,76 Z" />
+
+    <!-- Terminal Curved Aerodynamic Glass Roof Canopy -->
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="M38,54 C46,48 74,48 82,54 L82,56 L38,56 Z" />
+
+    <!-- Panoramic Glass Terminal Windows (Reflecting Blue Sky) -->
+    <path
+        android:fillColor="#38BDF8"
+        android:pathData="M46,60 L54,60 L54,72 L46,72 Z M58,60 L66,60 L66,72 L58,72 Z M70,60 L76,60 L76,72 L70,72 Z" />
+    <!-- Window Frames -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M49.5,60 L50.5,60 L50.5,72 L49.5,72 Z M61.5,60 L62.5,60 L62.5,72 L61.5,72 Z" />
+
+    <!-- Air Traffic Control (ATC) Tower (Left Side - 机场塔台) -->
+    <!-- Tower Main Shaft (Tapered Concrete Pylon) -->
+    <path
+        android:fillColor="#475569"
+        android:pathData="M24,38 L32,38 L34,76 L22,76 Z" />
+    <path
+        android:fillColor="#64748B"
+        android:pathData="M25,38 L31,38 L33,76 L23,76 Z" />
+
+    <!-- ATC Control Cab (Wide 360-degree Glass Observation Room) -->
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="M20,28 L36,28 L38,38 L18,38 Z" />
+    <!-- Control Room Slanted Windows -->
+    <path
+        android:fillColor="#38BDF8"
+        android:pathData="M21,30 L35,30 L36,36 L20,36 Z" />
+    <!-- Window Mullions -->
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="M25,30 L26,30 L26,36 L25,36 Z M30,30 L31,30 L31,36 L30,36 Z" />
+
+    <!-- Radar Dome & Antenna Mast on Tower Roof -->
+    <path
+        android:fillColor="#CBD5E1"
+        android:pathData="M24,24 A4,4 0 0,1 32,24 Z" />
+    <path
+        android:fillColor="#EF4444"
+        android:pathData="M27.5,18 L28.5,18 L28.5,24 L27.5,24 Z" />
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M28,17 A1.5,1.5 0 1,0 28,20 A1.5,1.5 0 1,0 28,17 Z" />
+</vector>

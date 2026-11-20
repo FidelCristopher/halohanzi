@@ -1,0 +1,58 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Soft Mint Sage) -->
+    <path
+        android:fillColor="#ECFDF5"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Flight Ticket Card Shadow -->
+    <path
+        android:fillColor="#A7F3D0"
+        android:pathData="M24,20 L72,20 C75.3,20 78,22.7 78,26 L78,50 C76,50 74,52 74,54 C74,56 76,58 78,58 L78,74 C78,77.3 75.3,80 72,80 L24,80 C20.7,80 18,77.3 18,74 L18,58 C20,58 22,56 22,54 C22,52 20,50 18,50 L18,26 C18,22.7 20.7,20 24,20 Z" />
+
+    <!-- Main Airline Boarding Pass Ticket Body (机票) -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M22,18 L70,18 C73.3,18 76,20.7 76,24 L76,48 C73.8,48 72,49.8 72,52 C72,54.2 73.8,56 76,56 L76,72 C76,75.3 73.3,78 70,78 L22,78 C18.7,78 16,75.3 16,72 L16,56 C18.2,56 20,54.2 20,52 C20,49.8 18.2,48 16,48 L16,24 C16,20.7 18.7,18 22,18 Z" />
+
+    <!-- Top Airline Header Banner (Aviation Blue) -->
+    <path
+        android:fillColor="#0284C7"
+        android:pathData="M22,18 L70,18 C73.3,18 76,20.7 76,24 L76,34 L16,34 L16,24 C16,20.7 18.7,18 22,18 Z" />
+
+    <!-- Airplane Takeoff Icon on Header -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M24,25 L29,22 L31,23.5 L28,26.5 L31,28 L30,29.5 L26.5,28 L24,30.5 L23,29.5 L24.5,27.5 L21,27 L21.5,25.5 Z" />
+    <!-- Header Airline Name Line -->
+    <path
+        android:fillColor="#BAE6FD"
+        android:pathData="M35,24 L56,24 L56,26 L35,26 Z M35,28 L48,28 L48,29.5 L35,29.5 Z" />
+
+    <!-- Flight Route Codes (PEK -> SHA) -->
+    <path
+        android:fillColor="#0F172A"
+        android:pathData="M22,40 L34,40 L34,44 L22,44 Z M58,40 L70,40 L70,44 L58,44 Z" />
+    <!-- Center Flight Direction Arrow -->
+    <path
+        android:fillColor="#0284C7"
+        android:pathData="M42,41 L47,41 L47,39 L51,42 L47,45 L47,43 L42,43 Z" />
+
+    <!-- Perforated Tear Notch Line (Horizontal Dotted Line) -->
+    <path
+        android:fillColor="#CBD5E1"
+        android:pathData="M24,51.5 L28,51.5 L28,52.5 L24,52.5 Z M32,51.5 L36,51.5 L36,52.5 L32,52.5 Z M40,51.5 L44,51.5 L44,52.5 L40,52.5 Z M48,51.5 L52,51.5 L52,52.5 L48,52.5 Z M56,51.5 L60,51.5 L60,52.5 L56,52.5 Z M64,51.5 L68,51.5 L68,52.5 L64,52.5 Z" />
+
+    <!-- Flight Info Details (Gate & Seat) -->
+    <path
+        android:fillColor="#64748B"
+        android:pathData="M22,57 L32,57 L32,59 L22,59 Z M44,57 L54,57 L54,59 L44,59 Z M60,57 L70,57 L70,59 L60,59 Z" />
+
+    <!-- Barcode Stripes at Bottom (Machine-Readable Boarding Barcode) -->
+    <path
+        android:fillColor="#0F172A"
+        android:pathData="M22,64 L24,64 L24,73 L22,73 Z M26,64 L27,64 L27,73 L26,73 Z M29,64 L32,64 L32,73 L29,73 Z M34,64 L35,64 L35,73 L34,73 Z M37,64 L39,64 L39,73 L37,73 Z M41,64 L43,64 L43,73 L41,73 Z M45,64 L46,64 L46,73 L45,73 Z M48,64 L51,64 L51,73 L48,73 Z M53,64 L54,64 L54,73 L53,73 Z M56,64 L59,64 L59,73 L56,73 Z M61,64 L62,64 L62,73 L61,73 Z M64,64 L67,64 L67,73 L64,73 Z M69,64 L70,64 L70,73 L69,73 Z" />
+</vector>

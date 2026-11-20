@@ -1,0 +1,86 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Soft Warm Peach) -->
+    <path
+        android:fillColor="#FFF7ED"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Street Ground Line -->
+    <path
+        android:fillColor="#CBD5E1"
+        android:pathData="M14,80 L82,80 L82,83 L14,83 Z" />
+
+    <!-- Main Hotel Building Structure (宾馆 / 饭店 - Grand Hotel) -->
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="M24,24 L72,24 C73.1,24 74,24.9 74,26 L74,80 L22,80 L22,26 C22,24.9 22.9,24 24,24 Z" />
+    <path
+        android:fillColor="#334155"
+        android:pathData="M25,26 L71,26 L71,80 L25,80 Z" />
+
+    <!-- Rooftop Cornice / Hotel Signboard Crown -->
+    <path
+        android:fillColor="#0F172A"
+        android:pathData="M20,20 L76,20 C77.1,20 78,20.9 78,22 L78,25 L18,25 L18,22 C18,20.9 18.9,20 20,20 Z" />
+
+    <!-- Rooftop Five Golden Hotel Stars -->
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M32,15 L33,17 L35,17 L33.5,18.5 L34,20.5 L32,19 L30,20.5 L30.5,18.5 L29,17 L31,17 Z M40,14 L41,16 L43,16 L41.5,17.5 L42,19.5 L40,18 L38,19.5 L38.5,17.5 L37,16 L39,16 Z M48,13 L49,15 L51,15 L49.5,16.5 L50,18.5 L48,17 L46,18.5 L46.5,16.5 L45,15 L47,15 Z M56,14 L57,16 L59,16 L57.5,17.5 L58,19.5 L56,18 L54,19.5 L54.5,17.5 L53,16 L55,16 Z M64,15 L65,17 L67,17 L65.5,18.5 L66,20.5 L64,19 L62,20.5 L62.5,18.5 L61,17 L63,17 Z" />
+
+    <!-- Rooftop Hotel Sign Panel -->
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M38,22 L58,22 L58,23.5 L38,23.5 Z" />
+
+    <!-- Illuminated Hotel Room Windows (Warm Glowing Light) -->
+    <!-- Floor 4 Windows -->
+    <path
+        android:fillColor="#FEF08A"
+        android:pathData="M29,30 L36,30 L36,37 L29,37 Z M41,30 L48,30 L48,37 L41,37 Z M53,30 L60,30 L60,37 L53,37 Z M65,30 L67,30 L67,37 L65,37 Z" />
+    <path
+        android:fillColor="#0284C7"
+        android:pathData="M65,30 L71,30 L71,37 L65,37 Z" />
+
+    <!-- Floor 3 Windows -->
+    <path
+        android:fillColor="#FEF08A"
+        android:pathData="M29,42 L36,42 L36,49 L29,49 Z M53,42 L60,42 L60,49 L53,49 Z M65,42 L71,42 L71,49 L65,49 Z" />
+    <path
+        android:fillColor="#0284C7"
+        android:pathData="M41,42 L48,42 L48,49 L41,49 Z" />
+
+    <!-- Floor 2 Windows -->
+    <path
+        android:fillColor="#FEF08A"
+        android:pathData="M29,54 L36,54 L36,61 L29,61 Z M41,54 L48,54 L48,61 L41,61 Z M65,54 L71,54 L71,61 L65,61 Z" />
+    <path
+        android:fillColor="#0284C7"
+        android:pathData="M53,54 L60,54 L60,61 L53,61 Z" />
+
+    <!-- Ground Floor Grand Entrance Awning / Canopy -->
+    <path
+        android:fillColor="#EA580C"
+        android:pathData="M36,66 L60,66 L64,71 L32,71 Z" />
+    <!-- Awning Scallop Trim Stripes -->
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M38,66 L42,66 L43,71 L37,71 Z M46,66 L50,66 L51,71 L45,71 Z M54,66 L58,66 L59,71 L53,71 Z" />
+
+    <!-- Revolving Glass Entrance Doors (Front Lobby) -->
+    <path
+        android:fillColor="#BAE6FD"
+        android:pathData="M40,71 L56,71 L56,80 L40,80 Z" />
+    <!-- Door Center Mullion -->
+    <path
+        android:fillColor="#334155"
+        android:pathData="M47.5,71 L48.5,71 L48.5,80 L47.5,80 Z" />
+
+    <!-- Red Carpet Entrance Steps -->
+    <path
+        android:fillColor="#DC2626"
+        android:pathData="M42,78 L54,78 L56,82 L40,82 Z" />
+</vector>
