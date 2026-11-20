@@ -1,0 +1,83 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Soft Mint Sage) -->
+    <path
+        android:fillColor="#ECFDF5"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Sidewalk Ground Path -->
+    <path
+        android:fillColor="#CBD5E1"
+        android:pathData="M16,80 L80,80 L80,83 L16,83 Z" />
+
+    <!-- Stepping Stone / Pavement Dash Lines -->
+    <path
+        android:fillColor="#94A3B8"
+        android:pathData="M22,81 L32,81 L32,82 L22,82 Z M38,81 L48,81 L48,82 L38,82 Z M54,81 L64,81 L64,82 L54,82 Z M70,81 L78,81 L78,82 L70,82 Z" />
+
+    <!-- Walking Character Figure (走 - Walk) -->
+    <!-- Head -->
+    <path
+        android:fillColor="#FFD1A4"
+        android:pathData="M48,16 A7,7 0 1,0 48,30 A7,7 0 1,0 48,16 Z" />
+    <!-- Hair -->
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="M42,22 C42,16 45,14 49,14 C54,14 56,16 56,22 C53,19 50,19 47,21 C45,22 43,22 42,22 Z" />
+
+    <!-- Back Arm (Swinging Backward) -->
+    <path
+        android:fillColor="#0F766E"
+        android:pathData="M42,35 L33,44 L35,46 L44,37 Z" />
+    <path
+        android:fillColor="#FFD1A4"
+        android:pathData="M31,43 A2.5,2.5 0 1,0 31,48 A2.5,2.5 0 1,0 31,43 Z" />
+
+    <!-- Torso / Teal Polo T-shirt -->
+    <path
+        android:fillColor="#0D9488"
+        android:pathData="M43,31 L53,31 C55.2,31 57,32.8 57,35 L57,54 L39,54 L39,35 C39,32.8 40.8,31 43,31 Z" />
+    <path
+        android:fillColor="#14B8A6"
+        android:pathData="M47,31 L50,31 L49,38 L48,38 Z" />
+
+    <!-- Front Arm (Swinging Forward in Walking Rhythm) -->
+    <path
+        android:fillColor="#0D9488"
+        android:pathData="M51,35 L61,43 L59,45 L49,37 Z" />
+    <path
+        android:fillColor="#FFD1A4"
+        android:pathData="M61,43 A2.5,2.5 0 1,0 61,48 A2.5,2.5 0 1,0 61,43 Z" />
+
+    <!-- Trailing Back Leg (Knee Flexed, Heel Lifting) -->
+    <path
+        android:fillColor="#1E3A8A"
+        android:pathData="M43,53 L33,68 L37,70 L48,54 Z" />
+    <!-- Back Foot / Sneaker -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M31,69 L38,72 L36,75 L29,72 Z" />
+    <path
+        android:fillColor="#0F172A"
+        android:pathData="M32,71 L37,73 L35,75 L30,73 Z" />
+
+    <!-- Leading Front Leg (Stepping Forward Firmly) -->
+    <path
+        android:fillColor="#1E3A8A"
+        android:pathData="M48,54 L59,69 L55,71 L44,55 Z" />
+    <!-- Front Foot / Sneaker (Planted on Ground) -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M54,77 L65,77 C66.1,77 67,77.9 67,79 L67,80 L54,80 Z" />
+    <path
+        android:fillColor="#0F172A"
+        android:pathData="M57,78 L65,78 L65,80 L57,80 Z" />
+
+    <!-- Gentle Walking Breeze Motion Streaks -->
+    <path
+        android:fillColor="#5EEAD4"
+        android:pathData="M66,32 L74,32 L74,33.5 L66,33.5 Z M68,36 L78,36 L78,37.5 L68,37.5 Z M65,40 L72,40 L72,41.5 L65,41.5 Z" />
+</vector>

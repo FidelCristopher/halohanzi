@@ -1,0 +1,83 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Soft Mint Sage) -->
+    <path
+        android:fillColor="#ECFDF5"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Road Ground Line -->
+    <path
+        android:fillColor="#CBD5E1"
+        android:pathData="M14,76 L82,76 L82,78 L14,78 Z" />
+
+    <!-- Bus Wheels (Heavy Duty Transit Wheels) -->
+    <!-- Rear Dual Wheel -->
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="M30,62 A9,9 0 1,0 30,80 A9,9 0 1,0 30,62 Z" />
+    <path
+        android:fillColor="#94A3B8"
+        android:pathData="M30,66 A5,5 0 1,0 30,76 A5,5 0 1,0 30,66 Z" />
+    <!-- Front Wheel -->
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="M66,62 A9,9 0 1,0 66,80 A9,9 0 1,0 66,62 Z" />
+    <path
+        android:fillColor="#94A3B8"
+        android:pathData="M66,66 A5,5 0 1,0 66,76 A5,5 0 1,0 66,66 Z" />
+
+    <!-- Main Bus Body Chassis (Urban Emerald Transit Bus - 公交车) -->
+    <path
+        android:fillColor="#047857"
+        android:pathData="M16,28 C16,24.7 18.7,22 22,22 L72,22 C77.5,22 82,26.5 82,32 L82,68 L76,68 C76,64 71,64 71,68 L25,68 C25,64 20,64 20,68 L16,68 Z" />
+    <path
+        android:fillColor="#059669"
+        android:pathData="M18,24 L72,24 C76.4,24 80,27.6 80,32 L80,66 L18,66 Z" />
+
+    <!-- White Accent Racing Livery Stripe Along Bus Side -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M18,52 L80,52 L80,56 L18,56 Z" />
+
+    <!-- Route Destination Display LED Board (Top Windshield Header) -->
+    <path
+        android:fillColor="#0F172A"
+        android:pathData="M50,26 L76,26 C77.1,26 78,26.9 78,28 L78,32 L50,32 Z" />
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M54,28 L74,28 L74,30 L54,30 Z" />
+
+    <!-- Passenger Panoramic Windows (Tinted Cyan Glass) -->
+    <!-- Rear Window -->
+    <path
+        android:fillColor="#BAE6FD"
+        android:pathData="M22,34 L32,34 L32,48 L22,48 Z" />
+    <!-- Middle Windows -->
+    <path
+        android:fillColor="#BAE6FD"
+        android:pathData="M35,34 L47,34 L47,48 L35,48 Z M50,34 L62,34 L62,48 L50,48 Z" />
+    <!-- Front Panoramic Windshield -->
+    <path
+        android:fillColor="#BAE6FD"
+        android:pathData="M65,34 L77,34 C78.5,34 79.5,35 79.5,37 L79,48 L65,48 Z" />
+
+    <!-- Center Passenger Folding Door (Split Glass Panels) -->
+    <path
+        android:fillColor="#047857"
+        android:pathData="M48,34 L52,34 L52,66 L48,66 Z" />
+    <path
+        android:fillColor="#BAE6FD"
+        android:pathData="M48.5,36 L51.5,36 L51.5,48 L48.5,48 Z M48.5,52 L51.5,52 L51.5,62 L48.5,62 Z" />
+
+    <!-- Front Headlight (Bright Gold Beam) -->
+    <path
+        android:fillColor="#FEF08A"
+        android:pathData="M78,58 L82,58 L82,64 L78,64 Z" />
+    <!-- Rear Taillight -->
+    <path
+        android:fillColor="#EF4444"
+        android:pathData="M16,58 L18,58 L18,64 L16,64 Z" />
+</vector>

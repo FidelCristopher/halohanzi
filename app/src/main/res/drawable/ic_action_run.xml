@@ -1,0 +1,88 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Soft Coral Tangerine) -->
+    <path
+        android:fillColor="#FEF2F2"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Running Ground Track Line -->
+    <path
+        android:fillColor="#CBD5E1"
+        android:pathData="M14,80 L82,80 L82,83 L14,83 Z" />
+
+    <!-- Trailing Foot Dust Puff (Kinetic Launch - 跑) -->
+    <path
+        android:fillColor="#E2E8F0"
+        android:pathData="M18,72 A4,4 0 1,0 18,80 A4,4 0 1,0 18,72 Z M23,75 A3,3 0 1,0 23,81 A3,3 0 1,0 23,75 Z" />
+
+    <!-- Dynamic Speed Sprint Wind Streaks Behind Runner -->
+    <path
+        android:fillColor="#FDA4AF"
+        android:pathData="M16,40 L30,40 L30,41.5 L16,41.5 Z M14,46 L34,46 L34,47.5 L14,47.5 Z M18,52 L28,52 L28,53.5 L18,53.5 Z" />
+
+    <!-- Back Pumping Arm (Bent High at Elbow) -->
+    <path
+        android:fillColor="#B91C1C"
+        android:pathData="M48,34 L36,36 L34,26 L38,25 L40,32 L49,31 Z" />
+    <path
+        android:fillColor="#FFD1A4"
+        android:pathData="M37,23 A2.5,2.5 0 1,0 37,28 A2.5,2.5 0 1,0 37,23 Z" />
+
+    <!-- Running Figure (Forward-Leaning Athletic Sprint) -->
+    <!-- Head Leaning Forward -->
+    <path
+        android:fillColor="#FFD1A4"
+        android:pathData="M56,15 A7,7 0 1,0 56,29 A7,7 0 1,0 56,15 Z" />
+    <!-- Windblown Dark Hair -->
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="M49,20 C47,15 52,13 58,13 C63,13 65,15 63,20 C60,18 56,18 53,20 C51,21 50,21 49,20 Z" />
+
+    <!-- Torso / Red Sporty Singlet / T-shirt (Angled Forward at 45 Degrees) -->
+    <path
+        android:fillColor="#EF4444"
+        android:pathData="M47,28 L60,28 L54,50 L41,50 Z" />
+    <path
+        android:fillColor="#F87171"
+        android:pathData="M51,28 L56,28 L52,48 L47,48 Z" />
+
+    <!-- Front Driving Arm (Pumping Forward & Upward) -->
+    <path
+        android:fillColor="#DC2626"
+        android:pathData="M56,33 L67,37 L72,28 L69,27 L65,34 L55,31 Z" />
+    <path
+        android:fillColor="#FFD1A4"
+        android:pathData="M70,25 A2.5,2.5 0 1,0 70,30 A2.5,2.5 0 1,0 70,25 Z" />
+
+    <!-- Running Shorts (Dark Slate Athletic Shorts) -->
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="M40,50 L55,50 L58,58 L39,58 Z" />
+
+    <!-- Back Trailing Leg (Kicking High in Full Extension) -->
+    <path
+        android:fillColor="#FFD1A4"
+        android:pathData="M42,56 L24,66 L26,70 L46,58 Z" />
+    <!-- Back Running Shoe / Sneaker -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M20,68 L28,68 L26,74 L18,74 Z" />
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M21,72 L27,72 L26,74 L20,74 Z" />
+
+    <!-- Front Leading Leg (Driving High Knee Forward) -->
+    <path
+        android:fillColor="#FFD1A4"
+        android:pathData="M53,56 L68,60 L62,76 L57,75 L62,63 L51,59 Z" />
+    <!-- Front Running Shoe / Sneaker (About to Strike Ground) -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M57,76 L66,76 C67,76 68,77 68,78 L68,79 L57,79 Z" />
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M60,77 L67,77 L67,79 L60,79 Z" />
+</vector>

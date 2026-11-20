@@ -1,0 +1,93 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Soft Amber Cream) -->
+    <path
+        android:fillColor="#FEF3C7"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Road Ground Line -->
+    <path
+        android:fillColor="#CBD5E1"
+        android:pathData="M14,78 L82,78 L82,81 L14,81 Z" />
+
+    <!-- Passenger Standing on Sidewalk Hailing Taxi (打车) -->
+    <!-- Head -->
+    <path
+        android:fillColor="#FFD1A4"
+        android:pathData="M24,25 A5.5,5.5 0 1,0 24,36 A5.5,5.5 0 1,0 24,25 Z" />
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="M20,28 C20,23 23,21 26,21 C29,21 30,23 30,27 C28,25 25,25 24,27 C22,28 21,28 20,28 Z" />
+
+    <!-- Torso / Blue Casual Jacket -->
+    <path
+        android:fillColor="#0284C7"
+        android:pathData="M20,37 L28,37 C29.7,37 31,38.3 31,40 L31,56 L18,56 L18,40 C18,38.3 19.3,37 20,37 Z" />
+
+    <!-- Raised Right Arm (Hailing Taxi Motion - Up and Forward) -->
+    <path
+        android:fillColor="#0284C7"
+        android:pathData="M27,38 L38,24 L41,26 L30,42 Z" />
+    <path
+        android:fillColor="#FFD1A4"
+        android:pathData="M39,23 A2.5,2.5 0 1,0 39,28 A2.5,2.5 0 1,0 39,23 Z" />
+
+    <!-- Legs / Dark Trousers Standing at Curb -->
+    <path
+        android:fillColor="#1E3A8A"
+        android:pathData="M19,56 L23,56 L23,78 L19,78 Z M25,56 L29,56 L29,78 L25,78 Z" />
+    <path
+        android:fillColor="#0F172A"
+        android:pathData="M18,76 L23,76 L23,79 L18,79 Z M24,76 L30,76 L30,79 L24,79 Z" />
+
+    <!-- Taxi Hail Signal Energy Waves -->
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M42,18 C44,19 45,22 45,24 L43,24 C43,23 42,21 41,20 Z M46,15 C49,17 50,21 50,25 L48,25 C48,22 47,19 45,17 Z" />
+
+    <!-- Approaching Yellow Taxi (Right Side) -->
+    <!-- Taxi Roof Light ("TAXI") -->
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="M56,40 L64,40 C64.6,40 65,40.4 65,41 L65,44 L55,44 L55,41 C55,40.4 55.4,40 56,40 Z" />
+    <path
+        android:fillColor="#FEF08A"
+        android:pathData="M57,41 L63,41 L63,43 L57,43 Z" />
+
+    <!-- Taxi Wheels -->
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="M50,68 A6,6 0 1,0 50,80 A6,6 0 1,0 50,68 Z M74,68 A6,6 0 1,0 74,80 A6,6 0 1,0 74,68 Z" />
+    <path
+        android:fillColor="#CBD5E1"
+        android:pathData="M50,71 A3,3 0 1,0 50,77 A3,3 0 1,0 50,71 Z M74,71 A3,3 0 1,0 74,77 A3,3 0 1,0 74,71 Z" />
+
+    <!-- Taxi Body (Vibrant Yellow / Amber) -->
+    <path
+        android:fillColor="#D97706"
+        android:pathData="M44,60 C44,57 46,55 49,55 L78,55 C80.5,55 82,57 82,60 L82,72 L78,72 C78,69 75,69 75,72 L50,72 C50,69 47,69 47,72 L44,72 Z" />
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M45,58 L80,58 C81,58 81.5,59 81.5,61 L81.5,70 L45,70 Z" />
+
+    <!-- Checkered Taxi Decal Strip -->
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="M50,61 L54,61 L54,64 L50,64 Z M58,61 L62,61 L62,64 L58,64 Z M66,61 L70,61 L70,64 L66,64 Z M74,61 L78,61 L78,64 L74,64 Z" />
+
+    <!-- Taxi Roof Cabin & Windshield -->
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M52,55 L57,44 C57.5,43 58.5,42.5 60,42.5 L70,42.5 C71.5,42.5 72.5,43 73,44 L77,55 Z" />
+    <path
+        android:fillColor="#BAE6FD"
+        android:pathData="M58,45 L62,45 L62,54 L54,54 Z M65,45 L69,45 L74,54 L65,54 Z" />
+
+    <!-- Headlight Beam (Illuminating Road) -->
+    <path
+        android:fillColor="#FEF08A"
+        android:pathData="M44,62 L38,64 L38,67 L44,65 Z" />
+</vector>
