@@ -1,0 +1,113 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Soft Rose Coral) -->
+    <path
+        android:fillColor="#FFF1F2"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Celebratory Gift Blessing Sparkles Overhead (送礼 - Gift Presentation) -->
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M48,10 L50,15 L55,17 L50,19 L48,24 L46,19 L41,17 L46,15 Z" />
+    <path
+        android:fillColor="#FEF08A"
+        android:pathData="M48,12 L49.2,15.5 L52,17 L49.2,18.5 L48,22 L46.8,18.5 L44,17 L46.8,15.5 Z" />
+    <!-- Secondary Sparkles Left & Right -->
+    <path
+        android:fillColor="#38BDF8"
+        android:pathData="M28,24 L29.5,27 L32.5,28 L29.5,29 L28,32 L26.5,29 L23.5,28 L26.5,27 Z" />
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M68,24 L69.5,27 L72.5,28 L69.5,29 L68,32 L66.5,29 L63.5,28 L66.5,27 Z" />
+
+    <!-- Lush Red Satin Bow on Top of Gift Box -->
+    <!-- Left Ribbon Loop -->
+    <path
+        android:fillColor="#B91C1C"
+        android:pathData="M48,31 C40,24 32,24 31,30 C30,36 38,36 48,33 Z" />
+    <path
+        android:fillColor="#EF4444"
+        android:pathData="M47,30 C41,25 34,25 33,29 C32,34 39,34 47,32 Z" />
+    <!-- Right Ribbon Loop -->
+    <path
+        android:fillColor="#B91C1C"
+        android:pathData="M48,31 C56,24 64,24 65,30 C66,36 58,36 48,33 Z" />
+    <path
+        android:fillColor="#EF4444"
+        android:pathData="M49,30 C55,25 62,25 63,29 C64,34 57,34 49,32 Z" />
+    <!-- Central Ribbon Knot -->
+    <path
+        android:fillColor="#DC2626"
+        android:pathData="M48,28 A4,4 0 1,0 48,36 A4,4 0 1,0 48,28 Z" />
+    <path
+        android:fillColor="#F87171"
+        android:pathData="M48,29 A2.5,2.5 0 1,0 48,34 A2.5,2.5 0 1,0 48,29 Z" />
+
+    <!-- Gift Box Lid (Warm Golden Ivory Box) -->
+    <!-- Lid Shadow -->
+    <path
+        android:fillColor="#B45309"
+        android:pathData="M24,36 L72,36 C74.2,36 76,37.8 76,40 L76,46 L20,46 L20,40 C20,37.8 21.8,36 24,36 Z" />
+    <path
+        android:fillColor="#FDE68A"
+        android:pathData="M25,37 L71,37 C72.8,37 74.5,38.5 74.5,40.5 L74.5,45 L21.5,45 L21.5,40.5 C21.5,38.5 23.2,37 25,37 Z" />
+    <!-- Red Ribbon Stripe Across Lid (Vertical Center) -->
+    <path
+        android:fillColor="#DC2626"
+        android:pathData="M44,36 L52,36 L52,46 L44,46 Z" />
+    <path
+        android:fillColor="#EF4444"
+        android:pathData="M45,36 L51,36 L51,46 L45,46 Z" />
+
+    <!-- Main Gift Box Lower Body -->
+    <path
+        android:fillColor="#D97706"
+        android:pathData="M24,46 L72,46 L70,72 C70,74.2 68.2,76 66,76 L30,76 C27.8,76 26,74.2 26,72 Z" />
+    <path
+        android:fillColor="#FEF3C7"
+        android:pathData="M26,46 L70,46 L68,71 C68,73 66.5,74.5 64.5,74.5 L31.5,74.5 C29.5,74.5 28,73 28,71 Z" />
+
+    <!-- Vertical Red Ribbon on Box Body -->
+    <path
+        android:fillColor="#DC2626"
+        android:pathData="M44,46 L52,46 L52,75 L44,75 Z" />
+    <path
+        android:fillColor="#EF4444"
+        android:pathData="M45,46 L51,46 L51,75 L45,75 Z" />
+
+    <!-- Horizontal Red Ribbon on Box Body -->
+    <path
+        android:fillColor="#DC2626"
+        android:pathData="M25,56 L71,56 L70.5,62 L25.5,62 Z" />
+    <path
+        android:fillColor="#EF4444"
+        android:pathData="M25,57 L71,57 L70.5,61 L25.5,61 Z" />
+
+    <!-- Polite Two-Handed Gift Presentation (双手呈送 - Etiquette) -->
+    <!-- Left Presenting Hand (Cupping Left Side of Box) -->
+    <path
+        android:fillColor="#0D9488"
+        android:pathData="M14,76 L22,66 L27,70 L20,82 L12,82 Z" />
+    <path
+        android:fillColor="#FFD1A4"
+        android:pathData="M20,68 C22,62 26,60 30,62 L32,68 C30,72 26,74 22,72 Z" />
+    <!-- Left Hand Fingers Supporting Box Base -->
+    <path
+        android:fillColor="#FDBA74"
+        android:pathData="M26,65 L32,67 L31,71 L25,69 Z M27,70 L33,72 L32,75 L26,73 Z" />
+
+    <!-- Right Presenting Hand (Cupping Right Side of Box) -->
+    <path
+        android:fillColor="#0D9488"
+        android:pathData="M82,76 L74,66 L69,70 L76,82 L84,82 Z" />
+    <path
+        android:fillColor="#FFD1A4"
+        android:pathData="M76,68 C74,62 70,60 66,62 L64,68 C66,72 70,74 74,72 Z" />
+    <!-- Right Hand Fingers Supporting Box Base -->
+    <path
+        android:fillColor="#FDBA74"
+        android:pathData="M70,65 L64,67 L65,71 L71,69 Z M69,70 L63,72 L64,75 L70,73 Z" />
+</vector>

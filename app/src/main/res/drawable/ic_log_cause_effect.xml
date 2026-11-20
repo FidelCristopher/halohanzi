@@ -1,0 +1,85 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Soft Mint Sage) -->
+    <path
+        android:fillColor="#ECFDF5"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Floor Perspective Plane (Domino Chain Reaction Surface) -->
+    <path
+        android:fillColor="#CBD5E1"
+        android:pathData="M14,76 L82,76 L82,80 L14,80 Z" />
+
+    <!-- Domino 1 (The Cause: Standing & Tipping Right - 因为 / Cause) -->
+    <!-- Domino 1 Shadow -->
+    <path
+        android:fillColor="#0F766E"
+        android:pathData="M18,48 L26,44 L32,74 L24,78 Z" />
+    <!-- Domino 1 Body (Vibrant Teal / Primary Trigger) -->
+    <path
+        android:fillColor="#0D9488"
+        android:pathData="M20,44 L28,40 C29.1,40 30,40.9 30.5,42 L34.5,72 C34.8,73.1 34.2,74 33,74 L25,78 C23.9,78 23,77.1 22.5,76 L18.5,46 C18.2,44.9 18.8,44 20,44 Z" />
+    <path
+        android:fillColor="#14B8A6"
+        android:pathData="M22,43 L29,39.5 L33,71.5 L26,75 Z" />
+    <!-- White Domino Dots on Domino 1 -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M25,48 A2,2 0 1,0 25,52 A2,2 0 1,0 25,48 Z M29,64 A2,2 0 1,0 29,68 A2,2 0 1,0 29,64 Z" />
+
+    <!-- Domino 2 (Tipping Mid-Fall Chain Reaction) -->
+    <!-- Domino 2 Shadow -->
+    <path
+        android:fillColor="#0369A1"
+        android:pathData="M34,54 L42,50 L52,73 L44,77 Z" />
+    <!-- Domino 2 Body (Pacific Blue) -->
+    <path
+        android:fillColor="#0284C7"
+        android:pathData="M36,50 L44,46 C45.1,46 46,46.9 46.8,48 L54.8,71 C55.2,72.1 54.5,73 53.5,73 L45.5,77 C44.4,77 43.5,76.1 42.8,75 L34.8,52 C34.4,50.9 35.1,50 36,50 Z" />
+    <path
+        android:fillColor="#38BDF8"
+        android:pathData="M38,49 L45,45.5 L53,70.5 L46,74 Z" />
+    <!-- White Domino Dots on Domino 2 -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M42,54 A2,2 0 1,0 42,58 A2,2 0 1,0 42,54 Z M48,64 A2,2 0 1,0 48,68 A2,2 0 1,0 48,64 Z" />
+
+    <!-- Domino 3 (Fallen Flat Triggering Outcome - 所以 / Effect) -->
+    <!-- Domino 3 Body (Deep Indigo) -->
+    <path
+        android:fillColor="#1E3A8A"
+        android:pathData="M50,65 L66,57 C67.1,57 68.2,57.6 68.6,58.7 L72.6,70 C73,71.1 72.3,72 71.3,72 L55.3,80 C54.2,80 53.1,79.4 52.7,78.3 L48.7,67 C48.3,65.9 49,65 50,65 Z" />
+    <path
+        android:fillColor="#2563EB"
+        android:pathData="M52,64 L67,56.5 L71,69.5 L56,77 Z" />
+    <!-- White Domino Dot on Domino 3 -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M61,63 A2,2 0 1,0 61,67 A2,2 0 1,0 61,63 Z" />
+
+    <!-- Dynamic Curved Causality Arrow (Demonstrating "因为 A -> 所以 B") -->
+    <!-- Arc Motion Stroke -->
+    <path
+        android:fillColor="#047857"
+        android:pathData="M24,34 C36,20 62,20 74,32 L71,34.5 C60,24 38,24 27,37 Z" />
+    <!-- Arrowhead Pointing at Final Consequence -->
+    <path
+        android:fillColor="#059669"
+        android:pathData="M70,28 L78,35 L68,39 L71,34 L66,31 Z" />
+
+    <!-- Radiant Result Consequence Starburst (The "所以" Fruit / Outcome) -->
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M76,40 L78,46 L84,48 L78,50 L76,56 L74,50 L68,48 L74,46 Z" />
+    <path
+        android:fillColor="#FEF08A"
+        android:pathData="M76,43 L77.5,47 L81,48 L77.5,49 L76,53 L74.5,49 L71,48 L74.5,47 Z" />
+
+    <!-- Kinetic Push Sparks at First Domino (Initial Catalyst Trigger) -->
+    <path
+        android:fillColor="#EF4444"
+        android:pathData="M16,36 L18,40 L22,41 L18,42 L16,46 L14,42 L10,41 L14,40 Z" />
+</vector>

@@ -1,0 +1,137 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Soft Warm Peach Cream) -->
+    <path
+        android:fillColor="#FFF7ED"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Courtyard Ground Level -->
+    <path
+        android:fillColor="#CBD5E1"
+        android:pathData="M14,80 L82,80 L82,83 L14,83 Z" />
+
+    <!-- Red Welcome Carpet Runner Leading Through Doorway (欢迎红毯) -->
+    <path
+        android:fillColor="#B91C1C"
+        android:pathData="M34,58 L54,58 L58,82 L30,82 Z" />
+    <path
+        android:fillColor="#DC2626"
+        android:pathData="M35,59 L53,59 L57,81 L31,81 Z" />
+    <!-- Gold Fringe Border on Carpet -->
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M31,80.5 L57,80.5 L57,81.5 L31,81.5 Z" />
+
+    <!-- Traditional Entrance Gate Doorframe (大门 / 迎客) -->
+    <!-- Lintel Beam Top -->
+    <path
+        android:fillColor="#451A03"
+        android:pathData="M18,22 L72,22 C73.1,22 74,22.9 74,24 L74,28 L16,28 L16,24 C16,22.9 16.9,22 18,22 Z" />
+    <path
+        android:fillColor="#78350F"
+        android:pathData="M19,23 L71,23 L71,27 L19,27 Z" />
+
+    <!-- Left & Right Doorframe Pillars -->
+    <path
+        android:fillColor="#451A03"
+        android:pathData="M18,28 L23,28 L23,80 L18,80 Z M67,28 L72,28 L72,80 L67,80 Z" />
+
+    <!-- Open Double Doors (Swung Inward Welcoming Guests) -->
+    <!-- Left Open Door (Angled Inward Left) -->
+    <path
+        android:fillColor="#991B1B"
+        android:pathData="M23,28 L35,34 L35,76 L23,78 Z" />
+    <path
+        android:fillColor="#DC2626"
+        android:pathData="M24,29 L34,34.5 L34,75 L24,77 Z" />
+    <!-- Left Brass Door Knocker Ring -->
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M30,50 A2.5,2.5 0 1,0 30,55 A2.5,2.5 0 1,0 30,50 Z" />
+
+    <!-- Right Open Door (Angled Inward Right) -->
+    <path
+        android:fillColor="#991B1B"
+        android:pathData="M67,28 L55,34 L55,76 L67,78 Z" />
+    <path
+        android:fillColor="#DC2626"
+        android:pathData="M66,29 L56,34.5 L56,75 L66,77 Z" />
+    <!-- Right Brass Door Knocker Ring -->
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M60,50 A2.5,2.5 0 1,0 60,55 A2.5,2.5 0 1,0 60,50 Z" />
+
+    <!-- Welcoming Chinese Lantern Overhead (Hanging from Lintel - 喜庆灯笼) -->
+    <!-- Lantern Cord -->
+    <path
+        android:fillColor="#B45309"
+        android:pathData="M44.5,14 L45.5,14 L45.5,22 L44.5,22 Z" />
+    <!-- Lantern Body (Warm Crimson / Amber Oval) -->
+    <path
+        android:fillColor="#DC2626"
+        android:pathData="M45,22 A6,8 0 1,0 45,38 A6,8 0 1,0 45,22 Z" />
+    <path
+        android:fillColor="#EF4444"
+        android:pathData="M45,23 A5,7 0 1,0 45,37 A5,7 0 1,0 45,23 Z" />
+    <path
+        android:fillColor="#FEF08A"
+        android:pathData="M45,26 A2,4 0 1,0 45,34 A2,4 0 1,0 45,26 Z" />
+    <!-- Lantern Gold Ribs & Bottom Tassel -->
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M42,22 L48,22 L48,23.5 L42,23.5 Z M42,36.5 L48,36.5 L48,38 L42,38 Z" />
+    <path
+        android:fillColor="#EF4444"
+        android:pathData="M44,38 L46,38 L46,44 L44,44 Z" />
+
+    <!-- Welcoming Host Figure (Standing by Doorway Waving Welcoming Hand - 热情欢迎) -->
+    <!-- Host Lower Body & Navy Trousers -->
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="M68,58 L77,58 L77,80 L68,80 Z" />
+    <!-- Shoes -->
+    <path
+        android:fillColor="#0F172A"
+        android:pathData="M67,78 L78,78 L78,81 L67,81 Z" />
+
+    <!-- Host Torso (Cyan Blue Hospitality Vest/Jacket) -->
+    <path
+        android:fillColor="#0284C7"
+        android:pathData="M66,42 L76,42 C77.5,42 79,43.5 79,45 L79,59 L65,59 L65,45 C65,43.5 66.5,42 66,42 Z" />
+
+    <!-- Host Head & Friendly Smile -->
+    <path
+        android:fillColor="#FFD1A4"
+        android:pathData="M71,32 A6,6 0 1,0 71,44 A6,6 0 1,0 71,32 Z" />
+    <!-- Neat Hair -->
+    <path
+        android:fillColor="#0F172A"
+        android:pathData="M66,35 C66,30 69,28 72,28 C75,28 77,30 77,35 C75,33 72,33 70,34 Z" />
+    <!-- Friendly Smiling Eye -->
+    <path
+        android:fillColor="#0F172A"
+        android:pathData="M69,36 C70,38 72,38 73,36 Z" />
+    <!-- Broad Welcoming Smile -->
+    <path
+        android:fillColor="#E11D48"
+        android:pathData="M69,40 C70,42.5 73,42.5 74,40 Z" />
+
+    <!-- Raised Waving Welcome Hand (Waving Arm & Hand) -->
+    <path
+        android:fillColor="#0284C7"
+        android:pathData="M76,44 L83,32 L86,34 L78,48 Z" />
+    <path
+        android:fillColor="#FFD1A4"
+        android:pathData="M83,28 C85,28 87,29 87,31 C87,34 85,36 83,36 L81,32 Z" />
+    <path
+        android:fillColor="#FDBA74"
+        android:pathData="M84,30 A1,1 0 1,0 84,32 A1,1 0 1,0 84,30 Z" />
+
+    <!-- Hand Wave Radiating Motion Arcs -->
+    <path
+        android:fillColor="#38BDF8"
+        android:pathData="M86,24 C89,26 90,30 90,34 L88.5,33.5 C88.5,30.5 87.5,27.5 85,25.5 Z M88,20 C92,23 93,29 93,35 L91.5,34.5 C91.5,29.5 90.5,24.5 87,21.5 Z" />
+</vector>
