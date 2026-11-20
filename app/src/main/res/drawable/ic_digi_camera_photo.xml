@@ -1,0 +1,112 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Soft Warm Amber Peach) -->
+    <path
+        android:fillColor="#FFF7ED"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Instant Photo Print Card in Background (Tilted Up on Right - 照片) -->
+    <!-- Photo Card Shadow -->
+    <path
+        android:fillColor="#CBD5E1"
+        android:pathData="M48,16 L78,22 C80.2,22.4 81.6,24.5 81.2,26.7 L74,62 C73.6,64.2 71.5,65.6 69.3,65.2 L39,59 Z" />
+    <!-- White Polaroid Photo Border -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M50,18 L76,23 C77.5,23.3 78.5,24.8 78.2,26.3 L72,58 C71.7,59.5 70.2,60.5 68.7,60.2 L42,55 Z" />
+
+    <!-- Photo Picture Area (Scenic Blue Sky, Green Mountain & Golden Sun) -->
+    <path
+        android:fillColor="#38BDF8"
+        android:pathData="M52,22 L74,26.5 L70,46 L48,41.5 Z" />
+    <!-- Golden Sun in Photo -->
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M66,30 A3.5,3.5 0 1,0 66,37 A3.5,3.5 0 1,0 66,30 Z" />
+    <!-- Green Mountain Peak in Photo -->
+    <path
+        android:fillColor="#10B981"
+        android:pathData="M50,42 L58,34 L66,45 Z" />
+    <path
+        android:fillColor="#059669"
+        android:pathData="M60,44 L66,37 L72,46.5 Z" />
+
+    <!-- Compact Camera Main Body in Foreground (拍照 / 照相机) -->
+    <!-- Camera Body Shadow -->
+    <path
+        android:fillColor="#0F172A"
+        android:pathData="M18,36 L70,36 C72.2,36 74,37.8 74,40 L74,78 C74,80.2 72.2,82 70,82 L18,82 C15.8,82 14,80.2 14,78 L14,40 C14,37.8 15.8,36 18,36 Z" />
+
+    <!-- Textured Dark Charcoal Leather Lower Body -->
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="M16,46 L72,46 L72,78 C72,79.1 71.1,80 70,80 L18,80 C16.9,80 16,79.1 16,78 Z" />
+
+    <!-- Brushed Aluminum Silver Top Plate -->
+    <path
+        android:fillColor="#E2E8F0"
+        android:pathData="M18,34 L70,34 C71.1,34 72,34.9 72,36 L72,46 L16,46 L16,36 C16,34.9 16.9,34 18,34 Z" />
+    <path
+        android:fillColor="#CBD5E1"
+        android:pathData="M16,45 L72,45 L72,46 L16,46 Z" />
+
+    <!-- Red Shutter Release Button on Top Plate -->
+    <path
+        android:fillColor="#EF4444"
+        android:pathData="M24,30 L30,30 L30,34 L24,34 Z" />
+    <!-- Mode Dial Knob -->
+    <path
+        android:fillColor="#64748B"
+        android:pathData="M58,31 L66,31 L66,34 L58,34 Z" />
+
+    <!-- Optical Viewfinder Window on Front -->
+    <path
+        android:fillColor="#0F172A"
+        android:pathData="M24,38 L30,38 L30,42 L24,42 Z" />
+    <path
+        android:fillColor="#38BDF8"
+        android:pathData="M25,39 L29,39 L29,41 L25,41 Z" />
+
+    <!-- Electronic Camera Flash Window with Radiant Flash Beam -->
+    <path
+        android:fillColor="#FEF08A"
+        android:pathData="M58,38 L66,38 L66,42 L58,42 Z" />
+    <!-- Flash Sparkle Star -->
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M62,32 L63.5,35 L67,36.5 L63.5,38 L62,41 L60.5,38 L57,36.5 L60.5,35 Z" />
+
+    <!-- Large Multi-Coated Camera Glass Lens Assembly -->
+    <!-- Outer Lens Barrel (Black Metal) -->
+    <path
+        android:fillColor="#0F172A"
+        android:pathData="M44,44 A18,18 0 1,0 44,80 A18,18 0 1,0 44,44 Z" />
+    <!-- Silver Aperture Ring -->
+    <path
+        android:fillColor="#CBD5E1"
+        android:pathData="M44,46 A16,16 0 1,0 44,78 A16,16 0 1,0 44,46 Z" />
+
+    <!-- Deep Blue Multi-Coated Glass Optical Element -->
+    <path
+        android:fillColor="#0369A1"
+        android:pathData="M44,48 A14,14 0 1,0 44,76 A14,14 0 1,0 44,48 Z" />
+    <path
+        android:fillColor="#0284C7"
+        android:pathData="M44,50 A12,12 0 1,0 44,74 A12,12 0 1,0 44,50 Z" />
+
+    <!-- Center Aperture Pupil (Black Core) -->
+    <path
+        android:fillColor="#0F172A"
+        android:pathData="M44,56 A6,6 0 1,0 44,68 A6,6 0 1,0 44,56 Z" />
+
+    <!-- Lens Glossy Curved Specular Glare -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M38,52 C42,49 48,49 52,52 L50.5,53.5 C47,51.5 42,51.5 39.5,53.5 Z" />
+    <path
+        android:fillColor="#38BDF8"
+        android:pathData="M51,68 A2,2 0 1,0 51,72 A2,2 0 1,0 51,68 Z" />
+</vector>

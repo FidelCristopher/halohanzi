@@ -1,0 +1,109 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Soft Lavender Indigo) -->
+    <path
+        android:fillColor="#EEF2FF"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Acoustic Sound Waves Radiating from Microphone (唱歌 - Singing Voice Waves) -->
+    <path
+        android:fillColor="#818CF8"
+        android:pathData="M48,16 C42,20 38,26 36,34 L38.5,35 C40,28 44,22 49.5,18.5 Z M56,12 C48,16 42,24 40,34 L42.5,35 C44,26 49.5,19 57.5,14.5 Z" />
+    <path
+        android:fillColor="#A5B4FC"
+        android:pathData="M64,10 C54,14 46,24 44,36 L46.5,37 C48,26 55.5,17 65.5,12.5 Z" />
+
+    <!-- Joyful Dancing Musical Notes (Melodi Gembira) -->
+    <!-- Note 1: Pink Double Beamed Notes (Top Right) -->
+    <path
+        android:fillColor="#EC4899"
+        android:pathData="M66,22 A2.5,2.5 0 1,0 66,27 A2.5,2.5 0 1,0 66,22 Z M76,18 A2.5,2.5 0 1,0 76,23 A2.5,2.5 0 1,0 76,18 Z" />
+    <path
+        android:fillColor="#EC4899"
+        android:pathData="M67,14 L70,14 L70,24 L67,24 Z M77,10 L80,10 L80,20 L77,20 Z M67,14 L80,10 L80,13 L67,17 Z" />
+
+    <!-- Note 2: Purple Eighth Note (Right Center) -->
+    <path
+        android:fillColor="#4F46E5"
+        android:pathData="M74,38 A3,3 0 1,0 74,44 A3,3 0 1,0 74,38 Z" />
+    <path
+        android:fillColor="#4F46E5"
+        android:pathData="M75,30 L78,30 L78,41 L75,41 Z M78,30 C82,30 84,32 84,35 L81.5,35 C81.5,33 80,32 78,32 Z" />
+
+    <!-- Note 3: Golden Sparkle Melody Star -->
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M78,48 L80,51 L83,52 L80,53 L78,56 L76,53 L73,52 L76,51 Z" />
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M62,34 L63,36 L65,37 L63,38 L62,40 L61,38 L59,37 L61,36 Z" />
+
+    <!-- Dynamic Stage Vocal Microphone (Angled at 45 Degrees) -->
+    <!-- Cable / XLR Base at Bottom-Left -->
+    <path
+        android:fillColor="#0F172A"
+        android:pathData="M18,78 L22,74 L25,77 L21,81 Z" />
+    <path
+        android:fillColor="#64748B"
+        android:pathData="M16,84 C18,80 18,81 20,80 L21,81 C19,83 17,84 15,86 Z" />
+
+    <!-- Tapered Microphone Handle (Sleek Midnight Slate) -->
+    <path
+        android:fillColor="#0F172A"
+        android:pathData="M21,75 L43,53 L47,57 L25,79 Z" />
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="M22,74 L42,54 L45,57 L25,77 Z" />
+    <path
+        android:fillColor="#334155"
+        android:pathData="M23,73 L41,55 L43,57 L25,75 Z" />
+
+    <!-- Brand Cyan Ring Band on Handle -->
+    <path
+        android:fillColor="#0284C7"
+        android:pathData="M40,56 L43,53 L45,55 L42,58 Z" />
+
+    <!-- Chrome Collar Ring Supporting Grille -->
+    <path
+        android:fillColor="#CBD5E1"
+        android:pathData="M43,53 L48,48 L53,53 L48,58 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M44,52 L48,48 L51,51 L47,55 Z" />
+
+    <!-- Spherical Mesh Grille (Metallic Dynamic Vocal Ball) -->
+    <!-- Grille Base Outer Dome -->
+    <path
+        android:fillColor="#334155"
+        android:pathData="M47,47 A15,15 0 1,0 67,27 A15,15 0 1,0 47,47 Z" />
+    <path
+        android:fillColor="#475569"
+        android:pathData="M48,46 A13.5,13.5 0 1,0 66,28 A13.5,13.5 0 1,0 48,46 Z" />
+
+    <!-- Chrome Central Mesh Center Ribbon Band -->
+    <path
+        android:fillColor="#64748B"
+        android:pathData="M49,43 L63,29 L66,32 L52,46 Z" />
+    <path
+        android:fillColor="#CBD5E1"
+        android:pathData="M50,42 L62,30 L64,32 L52,44 Z" />
+
+    <!-- Grille Metallic Wire Mesh Texture Lattice -->
+    <path
+        android:fillColor="#64748B"
+        android:pathData="M46,36 L64,18 L65.5,19.5 L47.5,37.5 Z M56,46 L74,28 L75.5,29.5 L57.5,47.5 Z" />
+    <path
+        android:fillColor="#64748B"
+        android:pathData="M54,18 L72,36 L70.5,37.5 L52.5,19.5 Z M46,26 L64,44 L62.5,45.5 L44.5,27.5 Z" />
+
+    <!-- Specular Highlight Curve on Mesh Sphere -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M54,26 C57,23 63,23 66,26 L64.5,27.5 C62.5,25.5 57.5,25.5 55.5,27.5 Z" />
+    <path
+        android:fillColor="#BAE6FD"
+        android:pathData="M59,31 A1.5,1.5 0 1,0 59,34 A1.5,1.5 0 1,0 59,31 Z" />
+</vector>

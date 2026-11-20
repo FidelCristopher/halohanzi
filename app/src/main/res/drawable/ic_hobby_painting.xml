@@ -1,0 +1,116 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Soft Warm Amber Peach) -->
+    <path
+        android:fillColor="#FEF3C7"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Artist's Wooden Palette Shadow -->
+    <path
+        android:fillColor="#92400E"
+        android:pathData="M32,24 C44,20 66,22 74,32 C82,42 80,62 68,74 C58,82 40,82 28,76 C18,70 16,52 20,40 C22,34 24,28 32,24 Z" />
+
+    <!-- Artist's Wooden Palette Body (Classic Kidney Shape - 画板) -->
+    <path
+        android:fillColor="#B45309"
+        android:pathData="M32,22 C44,18 66,20 74,30 C82,40 80,60 68,72 C58,80 40,80 28,74 C18,68 16,50 20,38 C22,32 24,26 32,22 Z" />
+    <path
+        android:fillColor="#D97706"
+        android:pathData="M33,23.5 C44,20 64,22 72,31 C79,40 77,58 66,70 C57,77 41,77 30,72 C21,66 19,50 22,39 C24,33 26,27 33,23.5 Z" />
+
+    <!-- Palette Thumb Grip Hole (Bottom-Left) -->
+    <path
+        android:fillColor="#FEF3C7"
+        android:pathData="M28,52 A5,7 0 1,0 28,66 A5,7 0 1,0 28,52 Z" />
+    <path
+        android:fillColor="#92400E"
+        android:pathData="M27.5,52 C25,55 25,63 27.5,66 L26.5,66 C24,63 24,55 26.5,52 Z" />
+
+    <!-- Vibrant Colorful Paint Dollops Arranged Along Palette Edge -->
+    <!-- Crimson Red Paint Dollop -->
+    <path
+        android:fillColor="#DC2626"
+        android:pathData="M36,26 A5,5 0 1,0 36,36 A5,5 0 1,0 36,26 Z" />
+    <path
+        android:fillColor="#EF4444"
+        android:pathData="M35.5,27 A3.5,3.5 0 1,0 35.5,34 A3.5,3.5 0 1,0 35.5,27 Z" />
+    <path
+        android:fillColor="#FCA5A5"
+        android:pathData="M34,28 A1.2,1.2 0 1,0 34,30.4 A1.2,1.2 0 1,0 34,28 Z" />
+
+    <!-- Bright Warm Yellow Paint Dollop -->
+    <path
+        android:fillColor="#D97706"
+        android:pathData="M50,25 A5,5 0 1,0 50,35 A5,5 0 1,0 50,25 Z" />
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M49.5,26 A3.5,3.5 0 1,0 49.5,33 A3.5,3.5 0 1,0 49.5,26 Z" />
+    <path
+        android:fillColor="#FEF08A"
+        android:pathData="M48,27 A1.2,1.2 0 1,0 48,29.4 A1.2,1.2 0 1,0 48,27 Z" />
+
+    <!-- Fresh Emerald Green Paint Dollop -->
+    <path
+        android:fillColor="#047857"
+        android:pathData="M63,31 A5,5 0 1,0 63,41 A5,5 0 1,0 63,31 Z" />
+    <path
+        android:fillColor="#10B981"
+        android:pathData="M62.5,32 A3.5,3.5 0 1,0 62.5,39 A3.5,3.5 0 1,0 62.5,32 Z" />
+    <path
+        android:fillColor="#6EE7B7"
+        android:pathData="M61,33 A1.2,1.2 0 1,0 61,35.4 A1.2,1.2 0 1,0 61,33 Z" />
+
+    <!-- Vivid Cobalt Blue Paint Dollop -->
+    <path
+        android:fillColor="#0369A1"
+        android:pathData="M69,46 A5,5 0 1,0 69,56 A5,5 0 1,0 69,46 Z" />
+    <path
+        android:fillColor="#0284C7"
+        android:pathData="M68.5,47 A3.5,3.5 0 1,0 68.5,54 A3.5,3.5 0 1,0 68.5,47 Z" />
+    <path
+        android:fillColor="#7DD3FC"
+        android:pathData="M67,48 A1.2,1.2 0 1,0 67,50.4 A1.2,1.2 0 1,0 67,48 Z" />
+
+    <!-- Purple Violet Paint Dollop -->
+    <path
+        android:fillColor="#6B21A8"
+        android:pathData="M62,60 A5,5 0 1,0 62,70 A5,5 0 1,0 62,60 Z" />
+    <path
+        android:fillColor="#8B5CF6"
+        android:pathData="M61.5,61 A3.5,3.5 0 1,0 61.5,68 A3.5,3.5 0 1,0 61.5,61 Z" />
+    <path
+        android:fillColor="#C4B5FD"
+        android:pathData="M60,62 A1.2,1.2 0 1,0 60,64.4 A1.2,1.2 0 1,0 60,62 Z" />
+
+    <!-- Professional Artist's Paintbrush Resting Across Palette (毛笔 / 画笔) -->
+    <!-- Wooden Long Handle (Slanted from Bottom-Left to Top-Right) -->
+    <path
+        android:fillColor="#451A03"
+        android:pathData="M19,77 L65,31 L68,34 L22,80 Z" />
+    <path
+        android:fillColor="#78350F"
+        android:pathData="M20,76.5 L64.5,32 L66.5,34 L22,78.5 Z" />
+
+    <!-- Silver Metallic Ferrule Band -->
+    <path
+        android:fillColor="#64748B"
+        android:pathData="M65,31 L71,25 L74,28 L68,34 Z" />
+    <path
+        android:fillColor="#CBD5E1"
+        android:pathData="M66,30 L71,25 L73,27 L68,32 Z" />
+
+    <!-- Tapered Bristle Tuft Dipped in Cyan Paint -->
+    <path
+        android:fillColor="#D97706"
+        android:pathData="M71,25 C73,21 75,18 78,14 C81,18 80,24 74,28 Z" />
+    <path
+        android:fillColor="#0284C7"
+        android:pathData="M74,21 C76,18 77,15 78,14 C79,16 79,20 76,23 Z" />
+    <!-- Fresh Paint Drip from Brush -->
+    <path
+        android:fillColor="#38BDF8"
+        android:pathData="M80,13 A1.5,1.5 0 1,0 80,16 A1.5,1.5 0 1,0 80,13 Z" />
+</vector>

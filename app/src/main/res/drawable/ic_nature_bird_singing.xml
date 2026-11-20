@@ -1,0 +1,107 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Soft Mint Sage) -->
+    <path
+        android:fillColor="#ECFDF5"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Tree Branch for Perching (Dahan Ranting Pohon) -->
+    <path
+        android:fillColor="#451A03"
+        android:pathData="M14,70 C30,68 50,67 82,72 L82,76 C50,71 30,72 14,74 Z" />
+    <path
+        android:fillColor="#78350F"
+        android:pathData="M14,69 C30,67 50,66 82,71 L82,74 C50,69 30,70 14,72 Z" />
+
+    <!-- Sprouting Green Leaves on Branch -->
+    <path
+        android:fillColor="#16A34A"
+        android:pathData="M20,68 C22,60 28,58 32,60 C30,68 24,70 20,68 Z" />
+    <path
+        android:fillColor="#22C55E"
+        android:pathData="M21,67 C23,61 27,60 30,61 C28,66 24,68 21,67 Z" />
+    <path
+        android:fillColor="#16A34A"
+        android:pathData="M70,72 C74,66 80,66 82,70 C78,74 72,75 70,72 Z" />
+
+    <!-- Little Songbird Body (Plump Azure Blue & Warm Gold - 鸟儿 / 叫) -->
+    <!-- Pointed Tail Feathers (Tilted Up on Left) -->
+    <path
+        android:fillColor="#0369A1"
+        android:pathData="M22,46 L38,53 L32,62 L18,52 Z" />
+    <path
+        android:fillColor="#0284C7"
+        android:pathData="M20,47 L36,53 L31,60 L18,52 Z" />
+
+    <!-- Main Bird Body (Round & Plump Silhouette) -->
+    <path
+        android:fillColor="#0284C7"
+        android:pathData="M32,48 C32,38 40,32 50,32 C60,32 68,40 68,52 C68,64 56,68 46,68 C36,68 32,58 32,48 Z" />
+    <path
+        android:fillColor="#38BDF8"
+        android:pathData="M34,48 C34,39 41,34 50,34 C58,34 66,41 66,52 C66,63 55,66 46,66 C38,66 34,57 34,48 Z" />
+
+    <!-- Warm Sunny Yellow / Golden Breast Feathers (Front Chest) -->
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M48,46 C52,40 62,42 66,50 C67,56 64,64 54,66 C48,64 45,56 48,46 Z" />
+    <path
+        android:fillColor="#FEF08A"
+        android:pathData="M50,47 C53,42 61,43 64,50 C65,55 62,62 54,64 C49,62 47,56 50,47 Z" />
+
+    <!-- Folded Wing on Side -->
+    <path
+        android:fillColor="#0369A1"
+        android:pathData="M36,46 C42,42 48,44 48,52 C48,60 38,63 32,56 C32,52 34,48 36,46 Z" />
+    <path
+        android:fillColor="#0284C7"
+        android:pathData="M37,47 C41,44 46,45 46,52 C46,58 38,61 34,55 C34,52 35,49 37,47 Z" />
+
+    <!-- Bird Feet / Claws Gripping Branch -->
+    <path
+        android:fillColor="#D97706"
+        android:pathData="M42,68 L42,72 L40,73 L42,70 L44,73 L44,68 Z M48,67 L48,71 L46,72 L48,69 L50,72 L50,67 Z" />
+
+    <!-- Bird Head & Face -->
+    <!-- Sweet Round Eye -->
+    <path
+        android:fillColor="#0F172A"
+        android:pathData="M58,38 A3.5,3.5 0 1,0 58,45 A3.5,3.5 0 1,0 58,38 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M57.5,39.5 A1.2,1.2 0 1,0 57.5,41.9 A1.2,1.2 0 1,0 57.5,39.5 Z" />
+
+    <!-- Open Beak Singing Joyfully (Tilted Upward) -->
+    <!-- Upper Beak -->
+    <path
+        android:fillColor="#F97316"
+        android:pathData="M66,41 L76,37 L67,44 Z" />
+    <!-- Lower Beak (Open Singing Mouth) -->
+    <path
+        android:fillColor="#EA580C"
+        android:pathData="M66,44 L73,46 L65,47 Z" />
+    <!-- Inside Mouth -->
+    <path
+        android:fillColor="#EF4444"
+        android:pathData="M66,43 L70,44 L66,45 Z" />
+
+    <!-- Floating Melodic Musical Notes (Floating Up from Beak - 唱歌/叫) -->
+    <!-- Note 1: Eighth Note (Bottom) -->
+    <path
+        android:fillColor="#0D9488"
+        android:pathData="M73,28 A2.5,2.5 0 1,0 73,33 A2.5,2.5 0 1,0 73,28 Z" />
+    <path
+        android:fillColor="#0D9488"
+        android:pathData="M74,22 L76,22 L76,30 L74,30 Z M76,22 L80,24 L80,26 L76,24 Z" />
+
+    <!-- Note 2: Beamed Double Notes (Top) -->
+    <path
+        android:fillColor="#0284C7"
+        android:pathData="M62,18 A2.2,2.2 0 1,0 62,22.4 A2.2,2.2 0 1,0 62,18 Z M70,15 A2.2,2.2 0 1,0 70,19.4 A2.2,2.2 0 1,0 70,15 Z" />
+    <path
+        android:fillColor="#0284C7"
+        android:pathData="M63,12 L65,12 L65,20 L63,20 Z M71,9 L73,9 L73,17 L71,17 Z M63,12 L73,9 L73,11.5 L63,14.5 Z" />
+</vector>
