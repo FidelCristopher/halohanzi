@@ -5467,6 +5467,102 @@ object LearningRepository {
                     exercisesPart2 = bab26Stage5Part2Exercises
                 )
             )
+        ),
+
+        // BAB 27: Hobi Kreatif, Alam & Dunia Maya Digital (闲暇雅趣、自然生灵与网络冲浪)
+        UnitCourse(
+            id = "unit_27",
+            unitNumber = 27,
+            title = "Hobi, Alam & Internet",
+            subtitle = "Melukis, bunga, burung, berselancar daring, menyalakan, senyum, bahagia, dan urusan",
+            bannerTitle = "Hobi Kreatif & Dunia Digital",
+            emoji = "🎨",
+            level = "Level 27 (HSK 2)",
+            story = stories[26],
+            nodes = listOf(
+                PathNode("u27_n1", "Bakat Seni & Lukis", Color(0xFFFFC107), NodeIconType.CAP, isCompleted = false, lessonId = "u27_l1"),
+                PathNode("u27_n2", "Bunga & Burung", Color(0xFFFFC107), NodeIconType.DUMBBELL, isCompleted = false, lessonId = "u27_l2"),
+                PathNode("u27_n3", "Internet & Buka", Color(0xFFFFC107), NodeIconType.CAP, isCompleted = false, lessonId = "u27_l3"),
+                PathNode("u27_n4", "Senyum & Urusan", Color(0xFFFFC107), NodeIconType.DUMBBELL, isCompleted = false, lessonId = "u27_l4"),
+                PathNode("u27_n5", "Evaluasi Hobi", Color(0xFFFFC107), NodeIconType.SHUFFLE, isCompleted = false, lessonId = "u27_l5"),
+                PathNode("u27_n6", "Kuis Cerita Bab 27", Color(0xFFFFC107), NodeIconType.BOOK, isCompleted = false, lessonId = "u27_l1"),
+                PathNode("u27_n7", "Checkpoint Peti", Color(0xFFFFB300), NodeIconType.CHEST, isCompleted = false, lessonId = "u27_l1"),
+                PathNode("u27_n8", "Rest area", Color(0xFF03A9F4), NodeIconType.REST_AREA, isCompleted = false, lessonId = "u27_l1")
+            ),
+            lessons = listOf(
+                Lesson(
+                    id = "u27_l1",
+                    title = "Bakat Seni & Melukis",
+                    subtitle = "Kosakata 爱好 dan 画",
+                    grammarNote = "Kegemaran kreatif: 爱好 (àihào - hobi), 画 (huà - melukis/gambar: 画画).",
+                    newWords = listOf(
+                        Word("w27_1", "爱好", "àihào", "Hobi / kegemaran", "Hobi", "我的爱好是画画。", "Wǒ de àihào shì huàhuà.", "Hobi saya adalah melukis."),
+                        Word("w27_2", "画", "huà", "Menggambar / melukis", "Seni", "妹妹画的小猫真可爱。", "Mèimei huà de xiǎomāo zhēn kě'ài.", "Kucing yang digambar adik lucu.")
+                    ),
+                    exercises = bab27Stage1Part1Exercises,
+                    exercisesPart1 = bab27Stage1Part1Exercises,
+                    exercisesPart2 = bab27Stage1Part2Exercises
+                ),
+                Lesson(
+                    id = "u27_l2",
+                    title = "Bunga, Burung & Pengeluaran",
+                    subtitle = "Kosakata 花 (bunga), 花 (menghabiskan), dan 鸟",
+                    grammarNote = "Keindahan alam: 花 (huā - bunga), 鸟 (niǎo - burung). Penggunaan kerja: 花 (huā - menghabiskan uang/waktu: 花时间, 花钱).",
+                    newWords = listOf(
+                        Word("w27_3", "花", "huā", "Bunga", "Alam", "花园里开满了花。", "Huāyuán lǐ kāi mǎn le huā.", "Di taman penuh dengan bunga."),
+                        Word("w27_4", "花", "huā", "Menghabiskan (biaya/waktu)", "Kata Kerja", "修车花了我五百块钱。", "Xiū chē huā le wǒ wǔbǎi kuài qián.", "Perbaiki mobil habis 500 yuan."),
+                        Word("w27_5", "鸟", "niǎo", "Burung", "Alam", "树上有小鸟在唱歌。", "Shùshang yǒu xiǎoniǎo zài chànggē.", "Di atas pohon ada burung berkicau.")
+                    ),
+                    exercises = bab27Stage2Part1Exercises,
+                    exercisesPart1 = bab27Stage2Part1Exercises,
+                    exercisesPart2 = bab27Stage2Part2Exercises
+                ),
+                Lesson(
+                    id = "u27_l3",
+                    title = "Internet & Membuka Aplikasi",
+                    subtitle = "Kosakata 上网, 网上, dan 打开",
+                    grammarNote = "Dunia maya digital: 上网 (shàngwǎng - berselancar internet), 网上 (wǎngshang - secara online). Operasi: 打开 (dǎkāi - membuka/menyalakan: 打开电脑).",
+                    newWords = listOf(
+                        Word("w27_6", "上网", "shàngwǎng", "Berselancar di internet", "Digital", "现在大家每天上网查资料。", "Xiànzài dàjiā měitiān shàngwǎng chá zīliào.", "Sekarang tiap hari semua internetan."),
+                        Word("w27_7", "网上", "wǎngshang", "Di internet / daring", "Digital", "网上买东西比商场便宜。", "Wǎngshang mǎi dōngxi bǐ shāngchǎng piányi.", "Beli di internet lebih murah."),
+                        Word("w27_8", "打开", "dǎkāi", "Membuka / menyalakan", "Kata Kerja", "请把书打开到三十页。", "Qǐng bǎ shū dǎkāi dào sānshí yè.", "Silakan buka buku ke halaman 30.")
+                    ),
+                    exercises = bab27Stage3Part1Exercises,
+                    exercisesPart1 = bab27Stage3Part1Exercises,
+                    exercisesPart2 = bab27Stage3Part2Exercises
+                ),
+                Lesson(
+                    id = "u27_l4",
+                    title = "Senyuman Gembira, Urusan & Ingatan",
+                    subtitle = "Kosakata 笑, 快乐, 每, 事情, dan 忘",
+                    grammarNote = "Ekspresi kebahagiaan: 笑 (xiào - senyum), 快乐 (kuàilè - bahagia). Kuantitas & perkara: 每 (setiap), 事情 (urusan), 忘 (lupa: 别忘了).",
+                    newWords = listOf(
+                        Word("w27_9", "笑", "xiào", "Tersenyum / tertawa", "Ekspresi", "看到朋友她高兴地笑了。", "Kàndào péngyou tā gāoxìng de xiào le.", "Melihat kawan dia tersenyum gembira."),
+                        Word("w27_10", "快乐", "kuàilè", "Bahagia / gembira", "Kata Sifat", "祝大家新年快乐！", "Zhù dàjiā xīnnián kuàilè!", "Semoga kalian semua bahagia!"),
+                        Word("w27_11", "每", "měi", "Setiap", "Kata Ganti", "我每天早上都喝牛奶。", "Wǒ měitiān zǎoshang dōu hē niúnǎi.", "Saya setiap pagi minum susu."),
+                        Word("w27_12", "事情", "shìqing", "Urusan / persoalan", "Benda", "今天公司有很多事情。", "Jīntiān gōngsī yǒu hěn duō shìqing.", "Hari ini kantor banyak urusan."),
+                        Word("w27_13", "忘", "wàng", "Lupa", "Kata Kerja", "对不起，我忘了带课本。", "Duìbuqǐ, wǒ wàng le dài kèběn.", "Maaf, saya lupa membawa buku.")
+                    ),
+                    exercises = bab27Stage4Part1Exercises,
+                    exercisesPart1 = bab27Stage4Part1Exercises,
+                    exercisesPart2 = bab27Stage4Part2Exercises
+                ),
+                Lesson(
+                    id = "u27_l5",
+                    title = "Evaluasi Komprehensif Hobi & Digital",
+                    subtitle = "Review seluruh 13 kosakata hobi, seni, bunga & internet",
+                    grammarNote = "Evaluasi menyeluruh Bab 27: hobi melukis, menikmati keindahan bunga dan burung, berselancar daring, senyum gembira, dan mengingat urusan.",
+                    newWords = listOf(
+                        Word("w27_1", "爱好", "àihào", "Hobi", "Hobi", "爱好是画花。", "Àihào shì huà huā.", "Hobi adalah melukis bunga."),
+                        Word("w27_3", "花", "huā", "Bunga", "Alam", "花园里的花真美丽。", "Huāyuán lǐ de huā zhēn měilì.", "Bunga di taman sungguh cantik."),
+                        Word("w27_6", "上网", "shàngwǎng", "Online", "Digital", "打开电脑上网。", "Dǎkāi diànnǎo shàngwǎng.", "Nyalakan komputer internetan."),
+                        Word("w27_10", "快乐", "kuàilè", "Bahagia", "Kata Sifat", "每天都要快乐生活。", "Měitiān dōu yào kuàilè shēnghuó.", "Setiap hari hiduplah bahagia.")
+                    ),
+                    exercises = bab27Stage5Part1Exercises,
+                    exercisesPart1 = bab27Stage5Part1Exercises,
+                    exercisesPart2 = bab27Stage5Part2Exercises
+                )
+            )
         )
     )
 }
