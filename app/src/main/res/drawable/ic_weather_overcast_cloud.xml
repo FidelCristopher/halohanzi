@@ -1,0 +1,55 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Soft Slate Gray) -->
+    <path
+        android:fillColor="#F1F5F9"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Subtle Golden Sun Rim Barely Peeking Behind Dense Cloud (Hidden Sun - 阴天) -->
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M48,16 A16,16 0 1,0 48,48 A16,16 0 1,0 48,16 Z" />
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M48,18 A14,14 0 1,0 48,46 A14,14 0 1,0 48,18 Z" />
+    <path
+        android:fillColor="#FEF08A"
+        android:pathData="M48,20 A12,12 0 1,0 48,44 A12,12 0 1,0 48,20 Z" />
+
+    <!-- Back Heavy Overcast Cloud Layer (Dark Slate Grey - 乌云密布) -->
+    <path
+        android:fillColor="#334155"
+        android:pathData="M38,48 C38,38 46,30 56,30 C64,30 71,36 73,44 C78,44 82,48 82,54 C82,60 77,64 71,64 L36,64 C30,64 25,59 25,53 C25,48 29,43 34,43 C35,43 36,43 38,48 Z" />
+    <path
+        android:fillColor="#475569"
+        android:pathData="M38,46 C38,37 46,29 56,29 C63.5,29 70,34.5 72,42 C77,42 81,46 81,52 C81,58 76.5,62 70.5,62 L36,62 C30.5,62 26,57.5 26,52 C26,47 30,42.5 35,42.5 C36,42.5 37,42.8 38,46 Z" />
+
+    <!-- Middle Overcast Cloud Layer (Cool Silvery Slate) -->
+    <path
+        android:fillColor="#64748B"
+        android:pathData="M24,58 C24,48 32,42 42,42 C45,36 52,32 60,35 C66,33 74,37 76,44 C81,45 85,50 85,56 C85,62 80,68 74,68 L24,68 C18,68 14,64 14,58 C14,52 18,48 24,48 C24,52 24,54 24,58 Z" />
+    <path
+        android:fillColor="#94A3B8"
+        android:pathData="M24,56 C24,47 32,41 41,41 C44,35 51,31 59,34 C65,32 72.5,36 74.5,43 C79.5,44 83.5,48.5 83.5,54.5 C83.5,60.5 78.5,66 73,66 L24,66 C18.5,66 15,62 15,56.5 C15,51 18.5,47 24,47 C24,50 24,53 24,56 Z" />
+
+    <!-- Front Overcast Cloud Layer (Pale Volumetric Silvery Cloud) -->
+    <!-- Cloud Shadow -->
+    <path
+        android:fillColor="#CBD5E1"
+        android:pathData="M22,66 C22,56 30,50 38,50 C41,44 48,40 56,43 C61,42 68,45 70,51 C75,52 79,56 79,62 C79,68 74,72 68,72 L22,72 C16,72 12,68 12,62 C12,56 16,52 22,52 Z" />
+    <!-- Main Soft Overcast Cloud Body -->
+    <path
+        android:fillColor="#E2E8F0"
+        android:pathData="M22,64 C22,55 30,49 38,49 C41,43 48,39 56,42 C61,41 68,44 70,50 C75,51 79,55 79,61 C79,67 74,71 68,71 L22,71 C16,71 12,67 12,61 C12,55 16,51 22,51 Z" />
+    <path
+        android:fillColor="#F8FAFC"
+        android:pathData="M24,62 C24,54 31,49 38,49 C41,44 47,41 54,43 C59,42 65,45 67,50 C71,51 75,54 75,59 C75,64 71,68 66,68 L24,68 C19,68 15,64 15,59 C15,54 19,50 24,50 Z" />
+
+    <!-- Overcast Cool Breeze Wind Streaks Drifting Below Clouds -->
+    <path
+        android:fillColor="#94A3B8"
+        android:pathData="M16,76 L40,76 L40,77.5 L16,77.5 Z M48,76 L76,76 L76,77.5 L48,77.5 Z M24,80 L56,80 L56,81.5 L24,81.5 Z M62,80 L80,80 L80,81.5 L62,81.5 Z" />
+</vector>

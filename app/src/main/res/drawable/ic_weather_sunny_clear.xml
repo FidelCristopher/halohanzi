@@ -1,0 +1,84 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Soft Sky Blue) -->
+    <path
+        android:fillColor="#E0F2FE"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Radiating Golden Sunbeam Rays (8 Major Triangular Rays - 晴天 / 阳光) -->
+    <!-- Top Ray -->
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M48,12 L51,22 L45,22 Z" />
+    <!-- Bottom Ray -->
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M48,74 L45,64 L51,64 Z" />
+    <!-- Left Ray -->
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M17,43 L27,46 L27,40 Z" />
+    <!-- Right Ray -->
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M79,43 L69,40 L69,46 Z" />
+    <!-- Top-Right Diagonal Ray -->
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M70,21 L61,28 L65,32 Z" />
+    <!-- Bottom-Right Diagonal Ray -->
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M70,65 L65,54 L61,58 Z" />
+    <!-- Bottom-Left Diagonal Ray -->
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M26,65 L35,58 L31,54 Z" />
+    <!-- Top-Left Diagonal Ray -->
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M26,21 L31,32 L35,28 Z" />
+
+    <!-- 8 Secondary Intermediate Sunbeam Flares (Shorter Rays) -->
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M48,15 L49.5,22 L46.5,22 Z M48,71 L46.5,64 L49.5,64 Z M20,43 L27,44.5 L27,41.5 Z M76,43 L69,41.5 L69,44.5 Z M66,25 L61,29 L63,31 Z M66,61 L63,55 L61,57 Z M30,61 L35,57 L33,55 Z M30,25 L33,31 L35,29 Z" />
+
+    <!-- Radiant Central Golden Sun Sphere (Matahari Keemasan) -->
+    <!-- Sun Outer Core -->
+    <path
+        android:fillColor="#D97706"
+        android:pathData="M48,25 A18,18 0 1,0 48,61 A18,18 0 1,0 48,25 Z" />
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M48,26 A17,17 0 1,0 48,60 A17,17 0 1,0 48,26 Z" />
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M48,27.5 A15.5,15.5 0 1,0 48,58.5 A15.5,15.5 0 1,0 48,27.5 Z" />
+
+    <!-- Sun Warm Inner Core & Specular Highlight -->
+    <path
+        android:fillColor="#FEF08A"
+        android:pathData="M48,29 A12,12 0 1,0 48,53 A12,12 0 1,0 48,29 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M43,32 A4,4 0 1,0 43,40 A4,4 0 1,0 43,32 Z" />
+
+    <!-- Gentle Fluffy Fair-Weather Cumulus Cloud Below Sun (Pure White Sky Cloud) -->
+    <!-- Cloud Shadow -->
+    <path
+        android:fillColor="#BAE6FD"
+        android:pathData="M24,72 C24,66 29,62 35,62 C37,58 42,56 47,59 C51,57 57,59 59,63 C64,63 68,67 68,72 L24,72 Z" />
+    <!-- Main White Cloud Body -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M24,70 C24,64 29,60 35,60 C37,56 42,54 47,57 C51,55 57,57 59,61 C64,61 68,65 68,70 L24,70 Z" />
+
+    <!-- Warm Clear-Sky Sparkles -->
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M78,68 L79.5,71 L82.5,72 L79.5,73 L78,76 L76.5,73 L73.5,72 L76.5,71 Z" />
+</vector>

@@ -1,0 +1,79 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Soft Mint Sage) -->
+    <path
+        android:fillColor="#ECFDF5"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Dynamic Weekly Circular Cycle Arrow Orbiting Calendar (周 / 星期 - 7-Day Cycle) -->
+    <!-- Orbit Arc Arrow Pathway -->
+    <path
+        android:fillColor="#10B981"
+        android:pathData="M48,12 C68,12 84,28 84,48 C84,68 68,84 48,84 L48,80 C65.5,80 80,65.5 80,48 C80,30.5 65.5,16 48,16 Z" />
+    <path
+        android:fillColor="#059669"
+        android:pathData="M48,12 C28,12 12,28 12,48 C12,58 16,67 23,73 L20,76 C13,68 8,58 8,48 C8,26 26,8 48,8 Z" />
+    <!-- Dynamic Arrowhead at Bottom Left (Closing the Cycle) -->
+    <path
+        android:fillColor="#10B981"
+        android:pathData="M26,68 L28,78 L18,74 Z" />
+
+    <!-- Desk Calendar Easel Stand Shadow (台历底座) -->
+    <path
+        android:fillColor="#CBD5E1"
+        android:pathData="M22,74 L74,74 L78,78 L18,78 Z" />
+    <path
+        android:fillColor="#334155"
+        android:pathData="M20,72 L76,72 L78,76 L18,76 Z" />
+
+    <!-- Calendar Sheet Body (Clean White Modern Calendar Card) -->
+    <path
+        android:fillColor="#E2E8F0"
+        android:pathData="M26,24 L70,24 C71.1,24 72,24.9 72,26 L72,72 L24,72 L24,26 C24,24.9 24.9,24 26,24 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M27,25 L69,25 C70.1,25 71,25.9 71,27 L71,71 L25,71 L25,27 C25,25.9 25.9,25 27,25 Z" />
+
+    <!-- Calendar Top Month / Header Bar (Pacific Ocean Blue) -->
+    <path
+        android:fillColor="#0284C7"
+        android:pathData="M25,25 L71,25 L71,36 L25,36 Z" />
+    <path
+        android:fillColor="#38BDF8"
+        android:pathData="M25,25 L71,25 L71,27 L25,27 Z" />
+
+    <!-- Spiral Ring Coils Across Top -->
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="M32,22 L36,22 L36,28 L32,28 Z M46,22 L50,22 L50,28 L46,28 Z M60,22 L64,22 L64,28 L60,28 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M33,23 L35,23 L35,27 L33,27 Z M47,23 L49,23 L49,27 L47,27 Z M61,23 L63,23 L63,27 L61,27 Z" />
+
+    <!-- Header Week Label Line on Blue Bar -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M40,30 L56,30 L56,32 L40,32 Z" />
+
+    <!-- Bold Central Numeral "7" (7 Days = 1 Week / 周) -->
+    <path
+        android:fillColor="#0F172A"
+        android:pathData="M38,42 L58,42 L58,46 L49,64 L43,64 L52,47 L38,47 Z" />
+
+    <!-- 7 Weekday Dots Row Along Bottom of Calendar (Mon-Sun Indicator) -->
+    <path
+        android:fillColor="#10B981"
+        android:pathData="M29,66 A1.5,1.5 0 1,0 29,69 A1.5,1.5 0 1,0 29,66 Z M35,66 A1.5,1.5 0 1,0 35,69 A1.5,1.5 0 1,0 35,66 Z M41,66 A1.5,1.5 0 1,0 41,69 A1.5,1.5 0 1,0 41,66 Z M47,66 A1.5,1.5 0 1,0 47,69 A1.5,1.5 0 1,0 47,66 Z M53,66 A1.5,1.5 0 1,0 53,69 A1.5,1.5 0 1,0 53,66 Z M59,66 A1.5,1.5 0 1,0 59,69 A1.5,1.5 0 1,0 59,66 Z" />
+    <!-- Sunday (Red Accent Dot) -->
+    <path
+        android:fillColor="#EF4444"
+        android:pathData="M65,66 A1.5,1.5 0 1,0 65,69 A1.5,1.5 0 1,0 65,66 Z" />
+
+    <!-- Sparkle of Cycle Completion -->
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M78,16 L79.5,19 L82.5,20 L79.5,21 L78,24 L76.5,21 L73.5,20 L76.5,19 Z" />
+</vector>
