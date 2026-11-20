@@ -20,8 +20,8 @@ val bab17Stage1Part1Exercises = listOf(
         pictureOptions = listOf(
             PictureOption("u17_s1_p1_opt1", "kakek", "", R.drawable.art_fam_grandfather, true),
             PictureOption("u17_s1_p1_opt2", "nenek", "", R.drawable.art_fam_grandmother, false),
-            PictureOption("u17_s1_p1_opt3", "anak", "", R.drawable.ic_fam_child, false),
-            PictureOption("u17_s1_p1_opt4", "rumah", "", R.drawable.ic_fam_home, false)
+            PictureOption("u17_s1_p1_opt3", "anak", "", R.drawable.art_child_boy, false),
+            PictureOption("u17_s1_p1_opt4", "rumah", "", R.drawable.art_fam_home, false)
         )
     ),
 
