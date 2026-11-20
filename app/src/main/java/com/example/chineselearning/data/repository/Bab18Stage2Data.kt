@@ -18,10 +18,10 @@ val bab18Stage2Part1Exercises = listOf(
         correctAnswer = "celana",
         audioToSpeak = "裤子",
         pictureOptions = listOf(
-            PictureOption("u18_s2_p1_opt1", "celana", "", R.drawable.ic_shop_clothes, true),
-            PictureOption("u18_s2_p1_opt2", "baju", "", R.drawable.ic_shop_piece_clothes, false),
-            PictureOption("u18_s2_p1_opt3", "jam tangan", "", R.drawable.ic_clock_analog, false),
-            PictureOption("u18_s2_p1_opt4", "tas", "", R.drawable.ic_shop_goods, false)
+            PictureOption("u18_s2_p1_opt1", "celana", "", R.drawable.ic_cloth_pants, true),
+            PictureOption("u18_s2_p1_opt2", "baju", "", R.drawable.ic_shop_clothes, false),
+            PictureOption("u18_s2_p1_opt3", "jam tangan", "", R.drawable.ic_acc_wristwatch, false),
+            PictureOption("u18_s2_p1_opt4", "tas", "", R.drawable.ic_cloth_bag, false)
         )
     ),
 
@@ -108,10 +108,10 @@ val bab18Stage2Part1Exercises = listOf(
         correctAnswer = "helai (benda panjang)",
         audioToSpeak = "条",
         pictureOptions = listOf(
-            PictureOption("u18_s2_p1_opt7_1", "helai celana", "", R.drawable.ic_shop_clothes, true),
-            PictureOption("u18_s2_p1_opt7_2", "baju", "", R.drawable.ic_shop_piece_clothes, false),
-            PictureOption("u18_s2_p1_opt7_3", "jam tangan", "", R.drawable.ic_clock_analog, false),
-            PictureOption("u18_s2_p1_opt7_4", "tas", "", R.drawable.ic_shop_goods, false)
+            PictureOption("u18_s2_p1_opt7_1", "helai celana", "", R.drawable.ic_cloth_pants, true),
+            PictureOption("u18_s2_p1_opt7_2", "baju", "", R.drawable.ic_shop_clothes, false),
+            PictureOption("u18_s2_p1_opt7_3", "jam tangan", "", R.drawable.ic_acc_wristwatch, false),
+            PictureOption("u18_s2_p1_opt7_4", "tas", "", R.drawable.ic_cloth_bag, false)
         )
     ),
 
@@ -169,10 +169,10 @@ val bab18Stage2Part2Exercises = listOf(
         correctAnswer = "tas",
         audioToSpeak = "包",
         pictureOptions = listOf(
-            PictureOption("u18_s2_p2_opt1", "tas", "", R.drawable.ic_shop_goods, true),
-            PictureOption("u18_s2_p2_opt2", "jam tangan", "", R.drawable.ic_clock_analog, false),
-            PictureOption("u18_s2_p2_opt3", "celana", "", R.drawable.ic_shop_clothes, false),
-            PictureOption("u18_s2_p2_opt4", "baju", "", R.drawable.ic_shop_piece_clothes, false)
+            PictureOption("u18_s2_p2_opt1", "tas", "", R.drawable.ic_cloth_bag, true),
+            PictureOption("u18_s2_p2_opt2", "jam tangan", "", R.drawable.ic_acc_wristwatch, false),
+            PictureOption("u18_s2_p2_opt3", "celana", "", R.drawable.ic_cloth_pants, false),
+            PictureOption("u18_s2_p2_opt4", "baju", "", R.drawable.ic_shop_clothes, false)
         )
     ),
 
@@ -259,10 +259,10 @@ val bab18Stage2Part2Exercises = listOf(
         correctAnswer = "jam tangan",
         audioToSpeak = "手表",
         pictureOptions = listOf(
-            PictureOption("u18_s2_p2_opt7_1", "jam tangan", "", R.drawable.ic_clock_analog, true),
-            PictureOption("u18_s2_p2_opt7_2", "tas", "", R.drawable.ic_shop_goods, false),
-            PictureOption("u18_s2_p2_opt7_3", "celana", "", R.drawable.ic_shop_clothes, false),
-            PictureOption("u18_s2_p2_opt7_4", "baju", "", R.drawable.ic_shop_piece_clothes, false)
+            PictureOption("u18_s2_p2_opt7_1", "jam tangan", "", R.drawable.ic_acc_wristwatch, true),
+            PictureOption("u18_s2_p2_opt7_2", "tas", "", R.drawable.ic_cloth_bag, false),
+            PictureOption("u18_s2_p2_opt7_3", "celana", "", R.drawable.ic_cloth_pants, false),
+            PictureOption("u18_s2_p2_opt7_4", "baju", "", R.drawable.ic_shop_clothes, false)
         )
     ),
 

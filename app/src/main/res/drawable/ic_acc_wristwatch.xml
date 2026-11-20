@@ -1,0 +1,70 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Soft Slate Indigo Tint) -->
+    <path
+        android:fillColor="#EEF2FF"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Top Watch Strap (Leather Band) -->
+    <path
+        android:fillColor="#334155"
+        android:pathData="M40,16 L56,16 C57.1,16 58,16.9 58,18 L58,34 L38,34 L38,18 C38,16.9 38.9,16 40,16 Z" />
+    <!-- Strap Stitching Details Top -->
+    <path
+        android:fillColor="#64748B"
+        android:pathData="M41,18 L43,18 L43,32 L41,32 Z M53,18 L55,18 L55,32 L53,32 Z" />
+
+    <!-- Bottom Watch Strap (Leather Band with Holes) -->
+    <path
+        android:fillColor="#334155"
+        android:pathData="M38,62 L58,62 L58,78 C58,79.1 57.1,80 56,80 L40,80 C38.9,80 38,79.1 38,78 Z" />
+    <!-- Strap Stitching Details Bottom -->
+    <path
+        android:fillColor="#64748B"
+        android:pathData="M41,64 L43,64 L43,78 L41,78 Z M53,64 L55,64 L55,78 L53,78 Z" />
+    <!-- Strap Adjustment Holes -->
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="M48,65 A1.5,1.5 0 1,0 48,68 A1.5,1.5 0 1,0 48,65 Z M48,70 A1.5,1.5 0 1,0 48,73 A1.5,1.5 0 1,0 48,70 Z M48,75 A1.5,1.5 0 1,0 48,78 A1.5,1.5 0 1,0 48,75 Z" />
+
+    <!-- Outer Bezel / Stainless Steel Watch Case -->
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="M48,26 A22,22 0 1,0 48,70 A22,22 0 1,0 48,26 Z" />
+    <path
+        android:fillColor="#64748B"
+        android:pathData="M48,28 A20,20 0 1,0 48,68 A20,20 0 1,0 48,28 Z" />
+
+    <!-- Watch Side Crown Knob -->
+    <path
+        android:fillColor="#475569"
+        android:pathData="M69,45 L73,45 C73.6,45 74,45.4 74,46 L74,50 C74,50.6 73.6,51 73,51 L69,51 Z" />
+
+    <!-- Clean Pristine Dial Face -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M48,31 A17,17 0 1,0 48,65 A17,17 0 1,0 48,31 Z" />
+
+    <!-- Hour Marker Ticks (12, 3, 6, 9) -->
+    <path
+        android:fillColor="#334155"
+        android:pathData="M47,33 L49,33 L49,37 L47,37 Z M47,59 L49,59 L49,63 L47,63 Z M59,47 L63,47 L63,49 L59,49 Z M33,47 L37,47 L37,49 L33,49 Z" />
+
+    <!-- Watch Hands (Pointing at elegant 10:10 time) -->
+    <!-- Hour Hand -->
+    <path
+        android:fillColor="#0284C7"
+        android:pathData="M48,48 L40,41 L41.5,39.5 L48.8,46.5 Z" />
+    <!-- Minute Hand -->
+    <path
+        android:fillColor="#0F172A"
+        android:pathData="M47.5,48.5 L57,38 L58.5,39.5 L48.5,49.5 Z" />
+
+    <!-- Golden Center Pivot Pin -->
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M48,46 A2.5,2.5 0 1,0 48,51 A2.5,2.5 0 1,0 48,46 Z" />
+</vector>

@@ -1,0 +1,50 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Soft Background Card Badge (Warm Peach/Tan Tint) -->
+    <path
+        android:fillColor="#FFF7ED"
+        android:pathData="M24,8 L72,8 C80.8,8 88,15.2 88,24 L88,72 C88,80.8 80.8,88 72,88 L24,88 C15.2,88 8,80.8 8,72 L8,24 C8,15.2 15.2,8 24,8 Z" />
+
+    <!-- Long Crossbody Shoulder Strap (Graceful Arc) -->
+    <path
+        android:fillColor="#92400E"
+        android:pathData="M30,44 C30,22 40,16 48,16 C56,16 66,22 66,44 L62,44 C62,24 54,20 48,20 C42,20 34,24 34,44 Z" />
+
+    <!-- Bag Main Body Shadow -->
+    <path
+        android:fillColor="#78350F"
+        android:pathData="M26,44 L70,44 C72.2,44 74,45.8 74,48 L72,74 C72,77.3 69.3,80 66,80 L30,80 C26.7,80 24,77.3 24,74 L22,48 C22,45.8 23.8,44 26,44 Z" />
+
+    <!-- Bag Main Leather Body -->
+    <path
+        android:fillColor="#B45309"
+        android:pathData="M26,43 L70,43 C72.2,43 74,44.8 74,47 L72,73 C72,76.3 69.3,79 66,79 L30,79 C26.7,79 24,76.3 24,73 L22,47 C22,44.8 23.8,43 26,43 Z" />
+
+    <!-- Bag Flap (Top Overlap Cover) -->
+    <path
+        android:fillColor="#D97706"
+        android:pathData="M22,43 L74,43 C74,43 74,62 70,64 C66,66 54,66 48,66 C42,66 30,66 26,64 C22,62 22,43 22,43 Z" />
+
+    <!-- Saddle Stitch Accent Along Flap -->
+    <path
+        android:fillColor="#FDE68A"
+        android:pathData="M25,46 L71,46 L71,48 L25,48 Z" />
+
+    <!-- Flap Center Buckle Strap -->
+    <path
+        android:fillColor="#92400E"
+        android:pathData="M45,43 L51,43 L51,70 C51,71.1 50.1,72 49,72 L47,72 C45.9,72 45,71.1 45,70 Z" />
+
+    <!-- Golden Metallic Buckle & Clasp -->
+    <path
+        android:fillColor="#FBBF24"
+        android:pathData="M43,60 L53,60 C54.1,60 55,60.9 55,62 L55,68 C55,69.1 54.1,70 53,70 L43,70 C41.9,70 41,69.1 41,68 L41,62 C41,60.9 41.9,60 43,60 Z M45,63 L51,63 L51,67 L45,67 Z" />
+
+    <!-- Side Strap Brass Rings (D-rings) -->
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M21,44 A2.5,2.5 0 1,0 21,49 A2.5,2.5 0 1,0 21,44 Z M75,44 A2.5,2.5 0 1,0 75,49 A2.5,2.5 0 1,0 75,44 Z" />
+</vector>
